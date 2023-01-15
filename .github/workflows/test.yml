@@ -11,10 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3.6.0
+        with:
+          node-version: 16.x
+          check-latest: true
+          cache: yarn
+      - run: corepack enable
+      - run: corepack prepare yarn@1.19.22 --activate
       - run: |
-          npm install
+          yarn install
       - run: |
-          npm run all
+          yarn run all
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
