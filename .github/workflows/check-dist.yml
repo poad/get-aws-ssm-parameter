@@ -30,11 +30,13 @@ jobs:
           check-latest: true
           cache: yarn
 
-      - run: corepack enable
-      - run: corepack prepare yarn@1.19.22 --activate
+      - name: Setup yarn
+        run: |
+          corepack enable
+          corepack prepare yarn@1.22.19 --activate
 
       - name: Install dependencies
-        run: yarn ci
+        run: yarn install
 
       - name: Rebuild the dist/ directory
         run: |
