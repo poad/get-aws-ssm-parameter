@@ -5,16 +5,17 @@
   "description": "TypeScript template action",
   "main": "lib/main.js",
   "scripts": {
-    "build": "tsc",
-    "format-check": "rome format src",
-    "format": "rome format --write src",
-    "check": "rome check src",
-    "check-fix": "rome check --apply-suggested src",
+    "build": "swc --delete-dir-on-start --extensions .ts src -d lib",
+    "format-check": "rome format src __tests__",
+    "format": "rome format --write src __tests__",
+    "check": "rome check src __tests__",
+    "check-fix": "rome check --apply-suggested src __tests__",
     "lint": "yarn format-check && yarn check",
     "lint-fix": "yarn format && yarn check-fix",
     "package": "ncc build --source-map --license licenses.txt",
+    "pretest": "yarn build",
     "test": "jest",
-    "all": "yarn build && yarn format && yarn lint && yarn package && npm test"
+    "all": "yarn build && yarn format && yarn lint && yarn package && yarn test"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "*",
+    "@aws-sdk/client-ssm": "*",
     "source-map-support": "*"
   },
   "devDependencies": {
