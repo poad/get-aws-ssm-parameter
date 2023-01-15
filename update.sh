@@ -12,7 +12,17 @@ if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
   exit $result
 fi
+echo ""
+pwd
+yarn install && yarn upgrade && yarn lint-fix && rm -rf dist && yarn all && rm -rf node_modules && yarn install --production && rm -rf node_modules/.yarn-integrity && git add dist node_modules -f
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}" || exit
+  exit $result
+fi
 
+cd "${CURRENT}/get-aws-ssm-parameter/__tests__/cdk" || exit
+git pull --prune
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
@@ -20,13 +30,12 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-yarn install && yarn upgrade && yarn lint-fix && rm -rf dist && yarn build && yarn package && rm -rf node_modules && yarn install --production && git add dist node_modules -f
+yarn install && yarn upgrade
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
   exit $result
 fi
-
 cd "${CURRENT}" || exit
 result=$?
 if [ $result -ne 0 ]; then

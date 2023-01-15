@@ -1,17 +1,27 @@
+import 'source-map-support/register';
 import * as core from '@actions/core';
-import { wait } from './wait';
+import createClient from './client';
 
-async function run(): Promise<void> {
+function run(): void {
   try {
-    const ms: string = core.getInput('milliseconds');
-    core.debug(`Waiting ${ms} milliseconds ...`); // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+    const parameterName: string = core.getInput('parameter-name', {
+      required: true,
+      trimWhitespace: true,
+    });
+    core.debug(`Parameter name is ${parameterName}.`);
 
-    core.debug(new Date().toTimeString());
-    await wait(parseInt(ms, 10));
-    core.debug(new Date().toTimeString());
+    const region: string = core.getInput('aws-region');
+    core.debug(region ? `region is ${region} ` : "Use the credential's region");
 
-    core.setOutput('time', new Date().toTimeString());
+    const client = createClient(region);
+    client
+      .getParameterValue(parameterName)
+      .then((value) => core.setOutput('value', value))
+      .catch((error) => {
+        if (error instanceof Error) core.setFailed(error.message);
+      });
   } catch (error) {
+    console.error(error);
     if (error instanceof Error) core.setFailed(error.message);
   }
 }

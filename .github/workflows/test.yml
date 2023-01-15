@@ -1,34 +1,70 @@
-name: 'build-test'
-on: # rebuild any PRs and main branch changes
+name: 'build and test'
+on:
   pull_request:
   push:
     branches:
       - main
       - 'releases/*'
 
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
-  build: # make sure build/ci work properly
+  setup:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v3.6.0
-        with:
-          node-version: 16.x
-          check-latest: true
-          cache: yarn
-      - name: Setup yarn
-        run: |
-          corepack enable
-          corepack prepare yarn@1.22.19 --activate
-      - run: |
-          yarn install
-      - run: |
-          yarn all
-  test: # make sure the action works on a clean machine without building
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
+        role-session-name: GitHubActions
+        aws-region: us-west-2
+    - uses: actions/checkout@v3
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        check-latest: true
+        cache: 'yarn'
+    - name: Setup yarn
+      run: |
+        corepack enable
+        corepack prepare yarn@1.22.19 --activate
+    - run: |
+        yarn global add aws-cdk
+    - name: Create for testing parameter
+      working-directory: __tests__/cdk
+      run: |
+        yarn install
+        cdk deploy --all
+
+  build:
+    needs: [setup]
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        region: [us-west-2, ap-northeast-1]
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./
-        with:
-          milliseconds: 1000
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
+        role-session-name: GitHubActions
+        aws-region: ${{ matrix.region }}
+    - uses: actions/checkout@v3
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        check-latest: true
+        cache: 'yarn'
+    - name: Setup yarn
+      run: |
+        corepack enable
+        corepack prepare yarn@1.22.19 --activate
+    - name: Build and test
+      run: |
+        yarn install && yarn all
+

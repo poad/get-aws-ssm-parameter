@@ -1,0 +1,32 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "decorators": true,
+      "dynamicImport": false
+    },
+    "target": "es2022",
+    "loose": true,
+    "transform": {
+      "legacyDecorator": true,
+      "decoratorMetadata": true,
+      "optimizer": {
+        "jsonify": {
+          "minCost": 0
+        }
+      }
+    },
+    "keepClassNames": true
+  },
+  "sourceMaps": true,
+  "inlineSourcesContent": true,
+  "minify": true,
+  "module": {
+    "type": "commonjs",
+    "strict": true,
+    "strictMode": true,
+    "lazy": false,
+    "noInterop": false
+  }
+}

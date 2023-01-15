@@ -2,10 +2,12 @@ name: 'Your name here'
 description: 'Provide a description here'
 author: 'Your name or organization here'
 inputs:
-  milliseconds: # change this
+  parameter-name:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Parameter name'
+  aws-region:
+    required: true
+    description: 'AWS region'
 runs:
   using: 'node16'
   main: 'dist/index.js'

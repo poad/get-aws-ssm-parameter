@@ -1,0 +1,78 @@
+name: E2E Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        check-latest: true
+        cache: 'yarn'
+    - name: Setup yarn
+      run: |
+        corepack enable
+        corepack prepare yarn@1.22.19 --activate
+    - run: |
+        yarn global add aws-cdk
+    - run: |
+        yarn install
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
+        role-session-name: GitHubActions
+        aws-region: us-west-2
+    - name: Create for testing table
+      working-directory: __tests__/cdk
+      run: |
+        yarn install
+        cdk deploy --all
+
+  build:
+    needs: [setup]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        region: [us-west-2, ap-northeast-1]
+
+    steps:
+    - name: configure aws credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
+        role-session-name: GitHubActions
+        aws-region: ${{ matrix.region }}
+    - uses: actions/checkout@v3
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+        check-latest: true
+        cache: 'yarn'
+    - name: Setup yarn
+      run: |
+        corepack enable
+        corepack prepare yarn@1.22.19 --activate
+    - name: Run E2E test
+      id: test
+      uses: ./
+      with:
+        parameter-name: /get-aws-ssm-parameter/test
+        aws-region: ${{ matrix.region }}
+    - name: verify value
+      run: if [ ${{ steps.test.outputs.value }} != 'test' ]; then exit 1; fi
