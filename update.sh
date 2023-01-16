@@ -21,7 +21,7 @@ if [ $result -ne 0 ]; then
   exit $result
 fi
 
-cd "${CURRENT}/get-aws-ssm-parameter/__tests__/cdk" || exit
+cd "${CURRENT}/__tests__/cdk" || exit
 git pull --prune
 result=$?
 if [ $result -ne 0 ]; then
