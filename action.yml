@@ -1,6 +1,6 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Get value from AWS Systems Manager Parameter Store'
+description: 'Retrieves the value of the specified parameter from the AWS Systems Manager Parameter Store.'
+author: 'Kenji Saito'
 inputs:
   parameter-name:
     required: true
