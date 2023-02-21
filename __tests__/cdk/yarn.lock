@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.65":
-  version "2.2.70"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.70.tgz#23c39879ca5c66ffd97f5990e6a8493c9488b7f7"
-  integrity sha512-Ni6z15ucIoTiAZEZCCs7EuvdVFza8q0kfnLb42X1fSmGORUVOiWiuO9VUgJpURe9VfC16sozg4fhiZKnLClCKg==
+  version "2.2.74"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.74.tgz#60c40b65b618131c34f754015700e698b3ee54fe"
+  integrity sha512-YoLl74xG1q5byb7iY2enz809j9Vc4aAAe+w0OsGZdRPR1iXipnPXLGGJxiM3uCB8UNIfqzs+gw8HMU9tECsBVA==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -13,9 +13,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.54":
-  version "2.0.59"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.59.tgz#9c00a212ccdd64507aee985acc5e574ea533d166"
-  integrity sha512-SbHIZsDe+Ore64tkJjlaSvyWdlq/NTOhIvZ0KnhsRPLaKV6c3SeWsK6l5w3l6YSzsOcw8COSrruVsE8X0WhUBA==
+  version "2.0.63"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.63.tgz#e9ffce7882fa9b63421c3a0f4e74b75a41129c33"
+  integrity sha512-2FC27PQC6Twy9MIVGhb44F2JuWgyF+cwWBbpB/sbVAFY72RmYA3GmDJpvjjrWBsXjPVZ+sUq9e2wn9/V15mh6g==
 
 "@balena/dockerignore@^1.0.2":
   version "1.0.2"
@@ -68,9 +68,9 @@
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
 "@types/node@*":
-  version "18.13.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.13.0.tgz#0400d1e6ce87e9d3032c19eb6c58205b0d3f7850"
-  integrity sha512-gC3TazRzGoOnoKAhUx+Q0t8S9Tzs74z7m0ipwGpSqQrleP14hKxP4/JUeEQcD3W1/aIpnWl8pHowI7WokuZpXg==
+  version "18.14.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.0.tgz#94c47b9217bbac49d4a67a967fdcdeed89ebb7d0"
+  integrity sha512-5EWrvLmglK+imbCJY0+INViFWUHg1AHel1sq4ZVSfdcNqGy9Edv3UB9IIzzg+xPaUcAgZYcfVs2fBcwDeZzU0A==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
@@ -146,9 +146,9 @@ concat-map@0.0.1:
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
 constructs@*:
-  version "10.1.253"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.253.tgz#b404fdfc2dc2cce4c4bb83b01489ecc04131eee3"
-  integrity sha512-AW0mEbOVQ4yCapwax/4vvyIgdeX6JGED8ClZvqOvlpjID7o/fCpRnOsiDn3AmL+/747naFixmuusFKNa6ngc0g==
+  version "10.1.256"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.1.256.tgz#c2e1b1bc93e1b06e885a6b097c78b311242b4792"
+  integrity sha512-R9mPHqGo+Y2mkaBeQc2+fTC3SZgr8a39tpy3hXT70yvpbxSrTcqPqukksm7ZltDDr2osLjv5Xwt5x/SqjHtATw==
 
 create-require@^1.1.0:
   version "1.1.1"
