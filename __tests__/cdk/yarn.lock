@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.69":
-  version "2.2.86"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.86.tgz#2dd443e58559e4c44a7a080779afdf1e0e6fb855"
-  integrity sha512-O9jRUV41sVRTL0Fw2ShiBy7pjsVIt7s/4Svo3XWZSGbPCVxPiE7jEu+dbve2PRuXTnoOX8dJrDhgGKYzUexL/A==
+  version "2.2.88"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.88.tgz#777e0e94b050e19c54e9670b3374e8fe0dde63a1"
+  integrity sha512-0A64KW2OIB1tGMx7uV7Vdc88G2WGIf0TIFYPH6bU+9tI5iB5Erw9Tu2Mo2w7lmMI0j7dRlMBtAXQMQkKEP1liA==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -68,9 +68,9 @@
   integrity sha512-yOlFc+7UtL/89t2ZhjPvvB/DeAr3r+Dq58IgzsFkOAvVC6NMJXmCGjbptdXdR9qsX7pKcTL+s87FtYREi2dEEQ==
 
 "@types/node@*":
-  version "18.14.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.2.tgz#c076ed1d7b6095078ad3cf21dfeea951842778b1"
-  integrity sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA==
+  version "18.14.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.4.tgz#0e64ec0b35a772e1e3d849f9a0ff61782d0cb647"
+  integrity sha512-VhCw7I7qO2X49+jaKcAUwi3rR+hbxT5VcYF493+Z5kMLI0DL568b7JI4IDJaxWFH0D/xwmGJNoXisyX+w7GH/g==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
