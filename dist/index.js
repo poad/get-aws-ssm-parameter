@@ -15936,13 +15936,9 @@ exports.GetOpsSummaryRequestFilterSensitiveLog = GetOpsSummaryRequestFilterSensi
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeActivations = void 0;
 const DescribeActivationsCommand_1 = __nccwpck_require__(99158);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeActivationsCommand_1.DescribeActivationsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeActivations(input, ...args);
 };
 async function* paginateDescribeActivations(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -15951,10 +15947,7 @@ async function* paginateDescribeActivations(config, input, ...additionalArgument
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -15980,13 +15973,9 @@ exports.paginateDescribeActivations = paginateDescribeActivations;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAssociationExecutionTargets = void 0;
 const DescribeAssociationExecutionTargetsCommand_1 = __nccwpck_require__(89459);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeAssociationExecutionTargetsCommand_1.DescribeAssociationExecutionTargetsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeAssociationExecutionTargets(input, ...args);
 };
 async function* paginateDescribeAssociationExecutionTargets(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -15995,10 +15984,7 @@ async function* paginateDescribeAssociationExecutionTargets(config, input, ...ad
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16024,13 +16010,9 @@ exports.paginateDescribeAssociationExecutionTargets = paginateDescribeAssociatio
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAssociationExecutions = void 0;
 const DescribeAssociationExecutionsCommand_1 = __nccwpck_require__(3119);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeAssociationExecutionsCommand_1.DescribeAssociationExecutionsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeAssociationExecutions(input, ...args);
 };
 async function* paginateDescribeAssociationExecutions(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16039,10 +16021,7 @@ async function* paginateDescribeAssociationExecutions(config, input, ...addition
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16068,13 +16047,9 @@ exports.paginateDescribeAssociationExecutions = paginateDescribeAssociationExecu
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAutomationExecutions = void 0;
 const DescribeAutomationExecutionsCommand_1 = __nccwpck_require__(70342);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeAutomationExecutionsCommand_1.DescribeAutomationExecutionsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeAutomationExecutions(input, ...args);
 };
 async function* paginateDescribeAutomationExecutions(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16083,10 +16058,7 @@ async function* paginateDescribeAutomationExecutions(config, input, ...additiona
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16112,13 +16084,9 @@ exports.paginateDescribeAutomationExecutions = paginateDescribeAutomationExecuti
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAutomationStepExecutions = void 0;
 const DescribeAutomationStepExecutionsCommand_1 = __nccwpck_require__(50626);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeAutomationStepExecutionsCommand_1.DescribeAutomationStepExecutionsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeAutomationStepExecutions(input, ...args);
 };
 async function* paginateDescribeAutomationStepExecutions(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16127,10 +16095,7 @@ async function* paginateDescribeAutomationStepExecutions(config, input, ...addit
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16156,13 +16121,9 @@ exports.paginateDescribeAutomationStepExecutions = paginateDescribeAutomationSte
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAvailablePatches = void 0;
 const DescribeAvailablePatchesCommand_1 = __nccwpck_require__(73378);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeAvailablePatchesCommand_1.DescribeAvailablePatchesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeAvailablePatches(input, ...args);
 };
 async function* paginateDescribeAvailablePatches(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16171,10 +16132,7 @@ async function* paginateDescribeAvailablePatches(config, input, ...additionalArg
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16200,13 +16158,9 @@ exports.paginateDescribeAvailablePatches = paginateDescribeAvailablePatches;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeEffectiveInstanceAssociations = void 0;
 const DescribeEffectiveInstanceAssociationsCommand_1 = __nccwpck_require__(48907);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeEffectiveInstanceAssociationsCommand_1.DescribeEffectiveInstanceAssociationsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeEffectiveInstanceAssociations(input, ...args);
 };
 async function* paginateDescribeEffectiveInstanceAssociations(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16215,10 +16169,7 @@ async function* paginateDescribeEffectiveInstanceAssociations(config, input, ...
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16244,13 +16195,9 @@ exports.paginateDescribeEffectiveInstanceAssociations = paginateDescribeEffectiv
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeEffectivePatchesForPatchBaseline = void 0;
 const DescribeEffectivePatchesForPatchBaselineCommand_1 = __nccwpck_require__(11074);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeEffectivePatchesForPatchBaselineCommand_1.DescribeEffectivePatchesForPatchBaselineCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeEffectivePatchesForPatchBaseline(input, ...args);
 };
 async function* paginateDescribeEffectivePatchesForPatchBaseline(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16259,10 +16206,7 @@ async function* paginateDescribeEffectivePatchesForPatchBaseline(config, input, 
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16288,13 +16232,9 @@ exports.paginateDescribeEffectivePatchesForPatchBaseline = paginateDescribeEffec
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstanceAssociationsStatus = void 0;
 const DescribeInstanceAssociationsStatusCommand_1 = __nccwpck_require__(50546);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeInstanceAssociationsStatusCommand_1.DescribeInstanceAssociationsStatusCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeInstanceAssociationsStatus(input, ...args);
 };
 async function* paginateDescribeInstanceAssociationsStatus(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16303,10 +16243,7 @@ async function* paginateDescribeInstanceAssociationsStatus(config, input, ...add
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16332,13 +16269,9 @@ exports.paginateDescribeInstanceAssociationsStatus = paginateDescribeInstanceAss
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstanceInformation = void 0;
 const DescribeInstanceInformationCommand_1 = __nccwpck_require__(72297);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeInstanceInformationCommand_1.DescribeInstanceInformationCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeInstanceInformation(input, ...args);
 };
 async function* paginateDescribeInstanceInformation(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16347,10 +16280,7 @@ async function* paginateDescribeInstanceInformation(config, input, ...additional
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16376,13 +16306,9 @@ exports.paginateDescribeInstanceInformation = paginateDescribeInstanceInformatio
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstancePatchStatesForPatchGroup = void 0;
 const DescribeInstancePatchStatesForPatchGroupCommand_1 = __nccwpck_require__(50028);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeInstancePatchStatesForPatchGroupCommand_1.DescribeInstancePatchStatesForPatchGroupCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeInstancePatchStatesForPatchGroup(input, ...args);
 };
 async function* paginateDescribeInstancePatchStatesForPatchGroup(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16391,10 +16317,7 @@ async function* paginateDescribeInstancePatchStatesForPatchGroup(config, input, 
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16420,13 +16343,9 @@ exports.paginateDescribeInstancePatchStatesForPatchGroup = paginateDescribeInsta
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstancePatchStates = void 0;
 const DescribeInstancePatchStatesCommand_1 = __nccwpck_require__(96994);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeInstancePatchStatesCommand_1.DescribeInstancePatchStatesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeInstancePatchStates(input, ...args);
 };
 async function* paginateDescribeInstancePatchStates(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16435,10 +16354,7 @@ async function* paginateDescribeInstancePatchStates(config, input, ...additional
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16464,13 +16380,9 @@ exports.paginateDescribeInstancePatchStates = paginateDescribeInstancePatchState
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstancePatches = void 0;
 const DescribeInstancePatchesCommand_1 = __nccwpck_require__(45672);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeInstancePatchesCommand_1.DescribeInstancePatchesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeInstancePatches(input, ...args);
 };
 async function* paginateDescribeInstancePatches(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16479,10 +16391,7 @@ async function* paginateDescribeInstancePatches(config, input, ...additionalArgu
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16508,13 +16417,9 @@ exports.paginateDescribeInstancePatches = paginateDescribeInstancePatches;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInventoryDeletions = void 0;
 const DescribeInventoryDeletionsCommand_1 = __nccwpck_require__(51289);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeInventoryDeletionsCommand_1.DescribeInventoryDeletionsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeInventoryDeletions(input, ...args);
 };
 async function* paginateDescribeInventoryDeletions(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16523,10 +16428,7 @@ async function* paginateDescribeInventoryDeletions(config, input, ...additionalA
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16552,13 +16454,9 @@ exports.paginateDescribeInventoryDeletions = paginateDescribeInventoryDeletions;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowExecutionTaskInvocations = void 0;
 const DescribeMaintenanceWindowExecutionTaskInvocationsCommand_1 = __nccwpck_require__(71741);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeMaintenanceWindowExecutionTaskInvocationsCommand_1.DescribeMaintenanceWindowExecutionTaskInvocationsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeMaintenanceWindowExecutionTaskInvocations(input, ...args);
 };
 async function* paginateDescribeMaintenanceWindowExecutionTaskInvocations(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16567,10 +16465,7 @@ async function* paginateDescribeMaintenanceWindowExecutionTaskInvocations(config
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16596,13 +16491,9 @@ exports.paginateDescribeMaintenanceWindowExecutionTaskInvocations = paginateDesc
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowExecutionTasks = void 0;
 const DescribeMaintenanceWindowExecutionTasksCommand_1 = __nccwpck_require__(19495);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeMaintenanceWindowExecutionTasksCommand_1.DescribeMaintenanceWindowExecutionTasksCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeMaintenanceWindowExecutionTasks(input, ...args);
 };
 async function* paginateDescribeMaintenanceWindowExecutionTasks(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16611,10 +16502,7 @@ async function* paginateDescribeMaintenanceWindowExecutionTasks(config, input, .
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16640,13 +16528,9 @@ exports.paginateDescribeMaintenanceWindowExecutionTasks = paginateDescribeMainte
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowExecutions = void 0;
 const DescribeMaintenanceWindowExecutionsCommand_1 = __nccwpck_require__(66016);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeMaintenanceWindowExecutionsCommand_1.DescribeMaintenanceWindowExecutionsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeMaintenanceWindowExecutions(input, ...args);
 };
 async function* paginateDescribeMaintenanceWindowExecutions(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16655,10 +16539,7 @@ async function* paginateDescribeMaintenanceWindowExecutions(config, input, ...ad
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16684,13 +16565,9 @@ exports.paginateDescribeMaintenanceWindowExecutions = paginateDescribeMaintenanc
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowSchedule = void 0;
 const DescribeMaintenanceWindowScheduleCommand_1 = __nccwpck_require__(83598);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeMaintenanceWindowScheduleCommand_1.DescribeMaintenanceWindowScheduleCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeMaintenanceWindowSchedule(input, ...args);
 };
 async function* paginateDescribeMaintenanceWindowSchedule(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16699,10 +16576,7 @@ async function* paginateDescribeMaintenanceWindowSchedule(config, input, ...addi
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16728,13 +16602,9 @@ exports.paginateDescribeMaintenanceWindowSchedule = paginateDescribeMaintenanceW
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowTargets = void 0;
 const DescribeMaintenanceWindowTargetsCommand_1 = __nccwpck_require__(78871);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeMaintenanceWindowTargetsCommand_1.DescribeMaintenanceWindowTargetsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeMaintenanceWindowTargets(input, ...args);
 };
 async function* paginateDescribeMaintenanceWindowTargets(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16743,10 +16613,7 @@ async function* paginateDescribeMaintenanceWindowTargets(config, input, ...addit
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16772,13 +16639,9 @@ exports.paginateDescribeMaintenanceWindowTargets = paginateDescribeMaintenanceWi
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowTasks = void 0;
 const DescribeMaintenanceWindowTasksCommand_1 = __nccwpck_require__(26677);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeMaintenanceWindowTasksCommand_1.DescribeMaintenanceWindowTasksCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeMaintenanceWindowTasks(input, ...args);
 };
 async function* paginateDescribeMaintenanceWindowTasks(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16787,10 +16650,7 @@ async function* paginateDescribeMaintenanceWindowTasks(config, input, ...additio
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16816,13 +16676,9 @@ exports.paginateDescribeMaintenanceWindowTasks = paginateDescribeMaintenanceWind
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowsForTarget = void 0;
 const DescribeMaintenanceWindowsForTargetCommand_1 = __nccwpck_require__(41025);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeMaintenanceWindowsForTargetCommand_1.DescribeMaintenanceWindowsForTargetCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeMaintenanceWindowsForTarget(input, ...args);
 };
 async function* paginateDescribeMaintenanceWindowsForTarget(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16831,10 +16687,7 @@ async function* paginateDescribeMaintenanceWindowsForTarget(config, input, ...ad
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16860,13 +16713,9 @@ exports.paginateDescribeMaintenanceWindowsForTarget = paginateDescribeMaintenanc
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindows = void 0;
 const DescribeMaintenanceWindowsCommand_1 = __nccwpck_require__(99482);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeMaintenanceWindowsCommand_1.DescribeMaintenanceWindowsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeMaintenanceWindows(input, ...args);
 };
 async function* paginateDescribeMaintenanceWindows(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16875,10 +16724,7 @@ async function* paginateDescribeMaintenanceWindows(config, input, ...additionalA
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16904,13 +16750,9 @@ exports.paginateDescribeMaintenanceWindows = paginateDescribeMaintenanceWindows;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeOpsItems = void 0;
 const DescribeOpsItemsCommand_1 = __nccwpck_require__(76177);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeOpsItemsCommand_1.DescribeOpsItemsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeOpsItems(input, ...args);
 };
 async function* paginateDescribeOpsItems(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16919,10 +16761,7 @@ async function* paginateDescribeOpsItems(config, input, ...additionalArguments) 
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16948,13 +16787,9 @@ exports.paginateDescribeOpsItems = paginateDescribeOpsItems;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeParameters = void 0;
 const DescribeParametersCommand_1 = __nccwpck_require__(45975);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeParametersCommand_1.DescribeParametersCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeParameters(input, ...args);
 };
 async function* paginateDescribeParameters(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -16963,10 +16798,7 @@ async function* paginateDescribeParameters(config, input, ...additionalArguments
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -16992,13 +16824,9 @@ exports.paginateDescribeParameters = paginateDescribeParameters;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribePatchBaselines = void 0;
 const DescribePatchBaselinesCommand_1 = __nccwpck_require__(83186);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribePatchBaselinesCommand_1.DescribePatchBaselinesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describePatchBaselines(input, ...args);
 };
 async function* paginateDescribePatchBaselines(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17007,10 +16835,7 @@ async function* paginateDescribePatchBaselines(config, input, ...additionalArgum
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17036,13 +16861,9 @@ exports.paginateDescribePatchBaselines = paginateDescribePatchBaselines;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribePatchGroups = void 0;
 const DescribePatchGroupsCommand_1 = __nccwpck_require__(45192);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribePatchGroupsCommand_1.DescribePatchGroupsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describePatchGroups(input, ...args);
 };
 async function* paginateDescribePatchGroups(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17051,10 +16872,7 @@ async function* paginateDescribePatchGroups(config, input, ...additionalArgument
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17080,13 +16898,9 @@ exports.paginateDescribePatchGroups = paginateDescribePatchGroups;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribePatchProperties = void 0;
 const DescribePatchPropertiesCommand_1 = __nccwpck_require__(36964);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribePatchPropertiesCommand_1.DescribePatchPropertiesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describePatchProperties(input, ...args);
 };
 async function* paginateDescribePatchProperties(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17095,10 +16909,7 @@ async function* paginateDescribePatchProperties(config, input, ...additionalArgu
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17124,13 +16935,9 @@ exports.paginateDescribePatchProperties = paginateDescribePatchProperties;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeSessions = void 0;
 const DescribeSessionsCommand_1 = __nccwpck_require__(43787);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new DescribeSessionsCommand_1.DescribeSessionsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.describeSessions(input, ...args);
 };
 async function* paginateDescribeSessions(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17139,10 +16946,7 @@ async function* paginateDescribeSessions(config, input, ...additionalArguments) 
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17168,13 +16972,9 @@ exports.paginateDescribeSessions = paginateDescribeSessions;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetInventory = void 0;
 const GetInventoryCommand_1 = __nccwpck_require__(93690);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new GetInventoryCommand_1.GetInventoryCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.getInventory(input, ...args);
 };
 async function* paginateGetInventory(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17183,10 +16983,7 @@ async function* paginateGetInventory(config, input, ...additionalArguments) {
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17212,13 +17009,9 @@ exports.paginateGetInventory = paginateGetInventory;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetInventorySchema = void 0;
 const GetInventorySchemaCommand_1 = __nccwpck_require__(88675);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new GetInventorySchemaCommand_1.GetInventorySchemaCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.getInventorySchema(input, ...args);
 };
 async function* paginateGetInventorySchema(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17227,10 +17020,7 @@ async function* paginateGetInventorySchema(config, input, ...additionalArguments
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17256,13 +17046,9 @@ exports.paginateGetInventorySchema = paginateGetInventorySchema;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetOpsSummary = void 0;
 const GetOpsSummaryCommand_1 = __nccwpck_require__(19458);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new GetOpsSummaryCommand_1.GetOpsSummaryCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.getOpsSummary(input, ...args);
 };
 async function* paginateGetOpsSummary(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17271,10 +17057,7 @@ async function* paginateGetOpsSummary(config, input, ...additionalArguments) {
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17300,13 +17083,9 @@ exports.paginateGetOpsSummary = paginateGetOpsSummary;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetParameterHistory = void 0;
 const GetParameterHistoryCommand_1 = __nccwpck_require__(30108);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new GetParameterHistoryCommand_1.GetParameterHistoryCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.getParameterHistory(input, ...args);
 };
 async function* paginateGetParameterHistory(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17315,10 +17094,7 @@ async function* paginateGetParameterHistory(config, input, ...additionalArgument
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17344,13 +17120,9 @@ exports.paginateGetParameterHistory = paginateGetParameterHistory;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetParametersByPath = void 0;
 const GetParametersByPathCommand_1 = __nccwpck_require__(22164);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new GetParametersByPathCommand_1.GetParametersByPathCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.getParametersByPath(input, ...args);
 };
 async function* paginateGetParametersByPath(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17359,10 +17131,7 @@ async function* paginateGetParametersByPath(config, input, ...additionalArgument
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17388,13 +17157,9 @@ exports.paginateGetParametersByPath = paginateGetParametersByPath;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetResourcePolicies = void 0;
 const GetResourcePoliciesCommand_1 = __nccwpck_require__(6745);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new GetResourcePoliciesCommand_1.GetResourcePoliciesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.getResourcePolicies(input, ...args);
 };
 async function* paginateGetResourcePolicies(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17403,10 +17168,7 @@ async function* paginateGetResourcePolicies(config, input, ...additionalArgument
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17442,13 +17204,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListAssociationVersions = void 0;
 const ListAssociationVersionsCommand_1 = __nccwpck_require__(40838);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListAssociationVersionsCommand_1.ListAssociationVersionsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listAssociationVersions(input, ...args);
 };
 async function* paginateListAssociationVersions(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17457,10 +17215,7 @@ async function* paginateListAssociationVersions(config, input, ...additionalArgu
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17486,13 +17241,9 @@ exports.paginateListAssociationVersions = paginateListAssociationVersions;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListAssociations = void 0;
 const ListAssociationsCommand_1 = __nccwpck_require__(29074);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListAssociationsCommand_1.ListAssociationsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listAssociations(input, ...args);
 };
 async function* paginateListAssociations(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17501,10 +17252,7 @@ async function* paginateListAssociations(config, input, ...additionalArguments) 
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17530,13 +17278,9 @@ exports.paginateListAssociations = paginateListAssociations;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListCommandInvocations = void 0;
 const ListCommandInvocationsCommand_1 = __nccwpck_require__(27002);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListCommandInvocationsCommand_1.ListCommandInvocationsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listCommandInvocations(input, ...args);
 };
 async function* paginateListCommandInvocations(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17545,10 +17289,7 @@ async function* paginateListCommandInvocations(config, input, ...additionalArgum
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17574,13 +17315,9 @@ exports.paginateListCommandInvocations = paginateListCommandInvocations;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListCommands = void 0;
 const ListCommandsCommand_1 = __nccwpck_require__(56883);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListCommandsCommand_1.ListCommandsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listCommands(input, ...args);
 };
 async function* paginateListCommands(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17589,10 +17326,7 @@ async function* paginateListCommands(config, input, ...additionalArguments) {
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17618,13 +17352,9 @@ exports.paginateListCommands = paginateListCommands;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListComplianceItems = void 0;
 const ListComplianceItemsCommand_1 = __nccwpck_require__(29771);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListComplianceItemsCommand_1.ListComplianceItemsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listComplianceItems(input, ...args);
 };
 async function* paginateListComplianceItems(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17633,10 +17363,7 @@ async function* paginateListComplianceItems(config, input, ...additionalArgument
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17662,13 +17389,9 @@ exports.paginateListComplianceItems = paginateListComplianceItems;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListComplianceSummaries = void 0;
 const ListComplianceSummariesCommand_1 = __nccwpck_require__(93331);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListComplianceSummariesCommand_1.ListComplianceSummariesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listComplianceSummaries(input, ...args);
 };
 async function* paginateListComplianceSummaries(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17677,10 +17400,7 @@ async function* paginateListComplianceSummaries(config, input, ...additionalArgu
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17706,13 +17426,9 @@ exports.paginateListComplianceSummaries = paginateListComplianceSummaries;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListDocumentVersions = void 0;
 const ListDocumentVersionsCommand_1 = __nccwpck_require__(41473);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListDocumentVersionsCommand_1.ListDocumentVersionsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listDocumentVersions(input, ...args);
 };
 async function* paginateListDocumentVersions(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17721,10 +17437,7 @@ async function* paginateListDocumentVersions(config, input, ...additionalArgumen
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17750,13 +17463,9 @@ exports.paginateListDocumentVersions = paginateListDocumentVersions;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListDocuments = void 0;
 const ListDocumentsCommand_1 = __nccwpck_require__(37018);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListDocumentsCommand_1.ListDocumentsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listDocuments(input, ...args);
 };
 async function* paginateListDocuments(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17765,10 +17474,7 @@ async function* paginateListDocuments(config, input, ...additionalArguments) {
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17794,13 +17500,9 @@ exports.paginateListDocuments = paginateListDocuments;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListOpsItemEvents = void 0;
 const ListOpsItemEventsCommand_1 = __nccwpck_require__(23927);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListOpsItemEventsCommand_1.ListOpsItemEventsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listOpsItemEvents(input, ...args);
 };
 async function* paginateListOpsItemEvents(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17809,10 +17511,7 @@ async function* paginateListOpsItemEvents(config, input, ...additionalArguments)
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17838,13 +17537,9 @@ exports.paginateListOpsItemEvents = paginateListOpsItemEvents;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListOpsItemRelatedItems = void 0;
 const ListOpsItemRelatedItemsCommand_1 = __nccwpck_require__(95342);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListOpsItemRelatedItemsCommand_1.ListOpsItemRelatedItemsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listOpsItemRelatedItems(input, ...args);
 };
 async function* paginateListOpsItemRelatedItems(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17853,10 +17548,7 @@ async function* paginateListOpsItemRelatedItems(config, input, ...additionalArgu
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17882,13 +17574,9 @@ exports.paginateListOpsItemRelatedItems = paginateListOpsItemRelatedItems;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListOpsMetadata = void 0;
 const ListOpsMetadataCommand_1 = __nccwpck_require__(93770);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListOpsMetadataCommand_1.ListOpsMetadataCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listOpsMetadata(input, ...args);
 };
 async function* paginateListOpsMetadata(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17897,10 +17585,7 @@ async function* paginateListOpsMetadata(config, input, ...additionalArguments) {
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17926,13 +17611,9 @@ exports.paginateListOpsMetadata = paginateListOpsMetadata;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListResourceComplianceSummaries = void 0;
 const ListResourceComplianceSummariesCommand_1 = __nccwpck_require__(25219);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListResourceComplianceSummariesCommand_1.ListResourceComplianceSummariesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listResourceComplianceSummaries(input, ...args);
 };
 async function* paginateListResourceComplianceSummaries(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17941,10 +17622,7 @@ async function* paginateListResourceComplianceSummaries(config, input, ...additi
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -17970,13 +17648,9 @@ exports.paginateListResourceComplianceSummaries = paginateListResourceCompliance
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListResourceDataSync = void 0;
 const ListResourceDataSyncCommand_1 = __nccwpck_require__(30788);
-const SSM_1 = __nccwpck_require__(24046);
 const SSMClient_1 = __nccwpck_require__(13440);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListResourceDataSyncCommand_1.ListResourceDataSyncCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listResourceDataSync(input, ...args);
 };
 async function* paginateListResourceDataSync(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -17985,10 +17659,7 @@ async function* paginateListResourceDataSync(config, input, ...additionalArgumen
     while (hasNext) {
         input.NextToken = token;
         input["MaxResults"] = config.pageSize;
-        if (config.client instanceof SSM_1.SSM) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSMClient_1.SSMClient) {
+        if (config.client instanceof SSMClient_1.SSMClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -35657,13 +35328,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListAccountRoles = void 0;
 const ListAccountRolesCommand_1 = __nccwpck_require__(1513);
-const SSO_1 = __nccwpck_require__(69838);
 const SSOClient_1 = __nccwpck_require__(71057);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListAccountRolesCommand_1.ListAccountRolesCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listAccountRoles(input, ...args);
 };
 async function* paginateListAccountRoles(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -35672,10 +35339,7 @@ async function* paginateListAccountRoles(config, input, ...additionalArguments) 
     while (hasNext) {
         input.nextToken = token;
         input["maxResults"] = config.pageSize;
-        if (config.client instanceof SSO_1.SSO) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSOClient_1.SSOClient) {
+        if (config.client instanceof SSOClient_1.SSOClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -35701,13 +35365,9 @@ exports.paginateListAccountRoles = paginateListAccountRoles;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListAccounts = void 0;
 const ListAccountsCommand_1 = __nccwpck_require__(64296);
-const SSO_1 = __nccwpck_require__(69838);
 const SSOClient_1 = __nccwpck_require__(71057);
 const makePagedClientRequest = async (client, input, ...args) => {
     return await client.send(new ListAccountsCommand_1.ListAccountsCommand(input), ...args);
-};
-const makePagedRequest = async (client, input, ...args) => {
-    return await client.listAccounts(input, ...args);
 };
 async function* paginateListAccounts(config, input, ...additionalArguments) {
     let token = config.startingToken || undefined;
@@ -35716,10 +35376,7 @@ async function* paginateListAccounts(config, input, ...additionalArguments) {
     while (hasNext) {
         input.nextToken = token;
         input["maxResults"] = config.pageSize;
-        if (config.client instanceof SSO_1.SSO) {
-            page = await makePagedRequest(config.client, input, ...additionalArguments);
-        }
-        else if (config.client instanceof SSOClient_1.SSOClient) {
+        if (config.client instanceof SSOClient_1.SSOClient) {
             page = await makePagedClientRequest(config.client, input, ...additionalArguments);
         }
         else {
@@ -40621,23 +40278,33 @@ tslib_1.__exportStar(__nccwpck_require__(9754), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getLoggerPlugin = exports.loggerMiddlewareOptions = exports.loggerMiddleware = void 0;
 const loggerMiddleware = () => (next, context) => async (args) => {
-    const response = await next(args);
-    const { clientName, commandName, logger, inputFilterSensitiveLog, outputFilterSensitiveLog, dynamoDbDocumentClientOptions = {}, } = context;
+    var _a, _b;
+    const { clientName, commandName, logger, dynamoDbDocumentClientOptions = {} } = context;
     const { overrideInputFilterSensitiveLog, overrideOutputFilterSensitiveLog } = dynamoDbDocumentClientOptions;
-    if (!logger) {
-        return response;
-    }
-    if (typeof logger.info === "function") {
+    const inputFilterSensitiveLog = overrideInputFilterSensitiveLog !== null && overrideInputFilterSensitiveLog !== void 0 ? overrideInputFilterSensitiveLog : context.inputFilterSensitiveLog;
+    const outputFilterSensitiveLog = overrideOutputFilterSensitiveLog !== null && overrideOutputFilterSensitiveLog !== void 0 ? overrideOutputFilterSensitiveLog : context.outputFilterSensitiveLog;
+    try {
+        const response = await next(args);
         const { $metadata, ...outputWithoutMetadata } = response.output;
-        logger.info({
+        (_a = logger === null || logger === void 0 ? void 0 : logger.info) === null || _a === void 0 ? void 0 : _a.call(logger, {
             clientName,
             commandName,
-            input: (overrideInputFilterSensitiveLog !== null && overrideInputFilterSensitiveLog !== void 0 ? overrideInputFilterSensitiveLog : inputFilterSensitiveLog)(args.input),
-            output: (overrideOutputFilterSensitiveLog !== null && overrideOutputFilterSensitiveLog !== void 0 ? overrideOutputFilterSensitiveLog : outputFilterSensitiveLog)(outputWithoutMetadata),
+            input: inputFilterSensitiveLog(args.input),
+            output: outputFilterSensitiveLog(outputWithoutMetadata),
             metadata: $metadata,
         });
+        return response;
     }
-    return response;
+    catch (error) {
+        (_b = logger === null || logger === void 0 ? void 0 : logger.error) === null || _b === void 0 ? void 0 : _b.call(logger, {
+            clientName,
+            commandName,
+            input: inputFilterSensitiveLog(args.input),
+            error,
+            metadata: error.$metadata,
+        });
+        throw error;
+    }
 };
 exports.loggerMiddleware = loggerMiddleware;
 exports.loggerMiddlewareOptions = {
@@ -43142,8 +42809,17 @@ const swallowError = () => ({});
 const loadSharedConfigFiles = async (init = {}) => {
     const { filepath = (0, getCredentialsFilepath_1.getCredentialsFilepath)(), configFilepath = (0, getConfigFilepath_1.getConfigFilepath)() } = init;
     const parsedFiles = await Promise.all([
-        (0, slurpFile_1.slurpFile)(configFilepath).then(parseIni_1.parseIni).then(getProfileData_1.getProfileData).catch(swallowError),
-        (0, slurpFile_1.slurpFile)(filepath).then(parseIni_1.parseIni).catch(swallowError),
+        (0, slurpFile_1.slurpFile)(configFilepath, {
+            ignoreCache: init.ignoreCache,
+        })
+            .then(parseIni_1.parseIni)
+            .then(getProfileData_1.getProfileData)
+            .catch(swallowError),
+        (0, slurpFile_1.slurpFile)(filepath, {
+            ignoreCache: init.ignoreCache,
+        })
+            .then(parseIni_1.parseIni)
+            .catch(swallowError),
     ]);
     return {
         configFile: parsedFiles[0],
@@ -43251,8 +42927,8 @@ exports.slurpFile = void 0;
 const fs_1 = __nccwpck_require__(57147);
 const { readFile } = fs_1.promises;
 const filePromisesHash = {};
-const slurpFile = (path) => {
-    if (!filePromisesHash[path]) {
+const slurpFile = (path, options) => {
+    if (!filePromisesHash[path] || (options === null || options === void 0 ? void 0 : options.ignoreCache)) {
         filePromisesHash[path] = readFile(path, "utf8");
     }
     return filePromisesHash[path];
@@ -54941,7 +54617,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.282.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.282.0","@aws-sdk/config-resolver":"3.282.0","@aws-sdk/credential-provider-node":"3.282.0","@aws-sdk/fetch-http-handler":"3.282.0","@aws-sdk/hash-node":"3.272.0","@aws-sdk/invalid-dependency":"3.272.0","@aws-sdk/middleware-content-length":"3.282.0","@aws-sdk/middleware-endpoint":"3.282.0","@aws-sdk/middleware-host-header":"3.282.0","@aws-sdk/middleware-logger":"3.272.0","@aws-sdk/middleware-recursion-detection":"3.282.0","@aws-sdk/middleware-retry":"3.282.0","@aws-sdk/middleware-serde":"3.272.0","@aws-sdk/middleware-signing":"3.282.0","@aws-sdk/middleware-stack":"3.272.0","@aws-sdk/middleware-user-agent":"3.282.0","@aws-sdk/node-config-provider":"3.272.0","@aws-sdk/node-http-handler":"3.282.0","@aws-sdk/protocol-http":"3.282.0","@aws-sdk/smithy-client":"3.279.0","@aws-sdk/types":"3.272.0","@aws-sdk/url-parser":"3.272.0","@aws-sdk/util-base64":"3.208.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.208.0","@aws-sdk/util-defaults-mode-browser":"3.279.0","@aws-sdk/util-defaults-mode-node":"3.282.0","@aws-sdk/util-endpoints":"3.272.0","@aws-sdk/util-retry":"3.272.0","@aws-sdk/util-user-agent-browser":"3.282.0","@aws-sdk/util-user-agent-node":"3.282.0","@aws-sdk/util-utf8":"3.254.0","@aws-sdk/util-waiter":"3.272.0","tslib":"^2.3.1","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.208.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.287.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.287.0","@aws-sdk/config-resolver":"3.287.0","@aws-sdk/credential-provider-node":"3.287.0","@aws-sdk/fetch-http-handler":"3.282.0","@aws-sdk/hash-node":"3.272.0","@aws-sdk/invalid-dependency":"3.272.0","@aws-sdk/middleware-content-length":"3.282.0","@aws-sdk/middleware-endpoint":"3.282.0","@aws-sdk/middleware-host-header":"3.282.0","@aws-sdk/middleware-logger":"3.287.0","@aws-sdk/middleware-recursion-detection":"3.282.0","@aws-sdk/middleware-retry":"3.287.0","@aws-sdk/middleware-serde":"3.272.0","@aws-sdk/middleware-signing":"3.282.0","@aws-sdk/middleware-stack":"3.272.0","@aws-sdk/middleware-user-agent":"3.282.0","@aws-sdk/node-config-provider":"3.287.0","@aws-sdk/node-http-handler":"3.282.0","@aws-sdk/protocol-http":"3.282.0","@aws-sdk/smithy-client":"3.279.0","@aws-sdk/types":"3.272.0","@aws-sdk/url-parser":"3.272.0","@aws-sdk/util-base64":"3.208.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.208.0","@aws-sdk/util-defaults-mode-browser":"3.279.0","@aws-sdk/util-defaults-mode-node":"3.287.0","@aws-sdk/util-endpoints":"3.272.0","@aws-sdk/util-retry":"3.272.0","@aws-sdk/util-user-agent-browser":"3.282.0","@aws-sdk/util-user-agent-node":"3.287.0","@aws-sdk/util-utf8":"3.254.0","@aws-sdk/util-waiter":"3.272.0","tslib":"^2.3.1","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.208.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
 
 /***/ }),
 
@@ -54949,7 +54625,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.282.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.282.0","@aws-sdk/fetch-http-handler":"3.282.0","@aws-sdk/hash-node":"3.272.0","@aws-sdk/invalid-dependency":"3.272.0","@aws-sdk/middleware-content-length":"3.282.0","@aws-sdk/middleware-endpoint":"3.282.0","@aws-sdk/middleware-host-header":"3.282.0","@aws-sdk/middleware-logger":"3.272.0","@aws-sdk/middleware-recursion-detection":"3.282.0","@aws-sdk/middleware-retry":"3.282.0","@aws-sdk/middleware-serde":"3.272.0","@aws-sdk/middleware-stack":"3.272.0","@aws-sdk/middleware-user-agent":"3.282.0","@aws-sdk/node-config-provider":"3.272.0","@aws-sdk/node-http-handler":"3.282.0","@aws-sdk/protocol-http":"3.282.0","@aws-sdk/smithy-client":"3.279.0","@aws-sdk/types":"3.272.0","@aws-sdk/url-parser":"3.272.0","@aws-sdk/util-base64":"3.208.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.208.0","@aws-sdk/util-defaults-mode-browser":"3.279.0","@aws-sdk/util-defaults-mode-node":"3.282.0","@aws-sdk/util-endpoints":"3.272.0","@aws-sdk/util-retry":"3.272.0","@aws-sdk/util-user-agent-browser":"3.282.0","@aws-sdk/util-user-agent-node":"3.282.0","@aws-sdk/util-utf8":"3.254.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.208.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.287.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.287.0","@aws-sdk/fetch-http-handler":"3.282.0","@aws-sdk/hash-node":"3.272.0","@aws-sdk/invalid-dependency":"3.272.0","@aws-sdk/middleware-content-length":"3.282.0","@aws-sdk/middleware-endpoint":"3.282.0","@aws-sdk/middleware-host-header":"3.282.0","@aws-sdk/middleware-logger":"3.287.0","@aws-sdk/middleware-recursion-detection":"3.282.0","@aws-sdk/middleware-retry":"3.287.0","@aws-sdk/middleware-serde":"3.272.0","@aws-sdk/middleware-stack":"3.272.0","@aws-sdk/middleware-user-agent":"3.282.0","@aws-sdk/node-config-provider":"3.287.0","@aws-sdk/node-http-handler":"3.282.0","@aws-sdk/protocol-http":"3.282.0","@aws-sdk/smithy-client":"3.279.0","@aws-sdk/types":"3.272.0","@aws-sdk/url-parser":"3.272.0","@aws-sdk/util-base64":"3.208.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.208.0","@aws-sdk/util-defaults-mode-browser":"3.279.0","@aws-sdk/util-defaults-mode-node":"3.287.0","@aws-sdk/util-endpoints":"3.272.0","@aws-sdk/util-retry":"3.272.0","@aws-sdk/util-user-agent-browser":"3.282.0","@aws-sdk/util-user-agent-node":"3.287.0","@aws-sdk/util-utf8":"3.254.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.208.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
 
 /***/ }),
 
@@ -54957,7 +54633,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"A
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.282.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.282.0","@aws-sdk/fetch-http-handler":"3.282.0","@aws-sdk/hash-node":"3.272.0","@aws-sdk/invalid-dependency":"3.272.0","@aws-sdk/middleware-content-length":"3.282.0","@aws-sdk/middleware-endpoint":"3.282.0","@aws-sdk/middleware-host-header":"3.282.0","@aws-sdk/middleware-logger":"3.272.0","@aws-sdk/middleware-recursion-detection":"3.282.0","@aws-sdk/middleware-retry":"3.282.0","@aws-sdk/middleware-serde":"3.272.0","@aws-sdk/middleware-stack":"3.272.0","@aws-sdk/middleware-user-agent":"3.282.0","@aws-sdk/node-config-provider":"3.272.0","@aws-sdk/node-http-handler":"3.282.0","@aws-sdk/protocol-http":"3.282.0","@aws-sdk/smithy-client":"3.279.0","@aws-sdk/types":"3.272.0","@aws-sdk/url-parser":"3.272.0","@aws-sdk/util-base64":"3.208.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.208.0","@aws-sdk/util-defaults-mode-browser":"3.279.0","@aws-sdk/util-defaults-mode-node":"3.282.0","@aws-sdk/util-endpoints":"3.272.0","@aws-sdk/util-retry":"3.272.0","@aws-sdk/util-user-agent-browser":"3.282.0","@aws-sdk/util-user-agent-node":"3.282.0","@aws-sdk/util-utf8":"3.254.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.208.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.287.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.287.0","@aws-sdk/fetch-http-handler":"3.282.0","@aws-sdk/hash-node":"3.272.0","@aws-sdk/invalid-dependency":"3.272.0","@aws-sdk/middleware-content-length":"3.282.0","@aws-sdk/middleware-endpoint":"3.282.0","@aws-sdk/middleware-host-header":"3.282.0","@aws-sdk/middleware-logger":"3.287.0","@aws-sdk/middleware-recursion-detection":"3.282.0","@aws-sdk/middleware-retry":"3.287.0","@aws-sdk/middleware-serde":"3.272.0","@aws-sdk/middleware-stack":"3.272.0","@aws-sdk/middleware-user-agent":"3.282.0","@aws-sdk/node-config-provider":"3.287.0","@aws-sdk/node-http-handler":"3.282.0","@aws-sdk/protocol-http":"3.282.0","@aws-sdk/smithy-client":"3.279.0","@aws-sdk/types":"3.272.0","@aws-sdk/url-parser":"3.272.0","@aws-sdk/util-base64":"3.208.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.208.0","@aws-sdk/util-defaults-mode-browser":"3.279.0","@aws-sdk/util-defaults-mode-node":"3.287.0","@aws-sdk/util-endpoints":"3.272.0","@aws-sdk/util-retry":"3.272.0","@aws-sdk/util-user-agent-browser":"3.282.0","@aws-sdk/util-user-agent-node":"3.287.0","@aws-sdk/util-utf8":"3.254.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.208.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -54965,7 +54641,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.282.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.282.0","@aws-sdk/credential-provider-node":"3.282.0","@aws-sdk/fetch-http-handler":"3.282.0","@aws-sdk/hash-node":"3.272.0","@aws-sdk/invalid-dependency":"3.272.0","@aws-sdk/middleware-content-length":"3.282.0","@aws-sdk/middleware-endpoint":"3.282.0","@aws-sdk/middleware-host-header":"3.282.0","@aws-sdk/middleware-logger":"3.272.0","@aws-sdk/middleware-recursion-detection":"3.282.0","@aws-sdk/middleware-retry":"3.282.0","@aws-sdk/middleware-sdk-sts":"3.282.0","@aws-sdk/middleware-serde":"3.272.0","@aws-sdk/middleware-signing":"3.282.0","@aws-sdk/middleware-stack":"3.272.0","@aws-sdk/middleware-user-agent":"3.282.0","@aws-sdk/node-config-provider":"3.272.0","@aws-sdk/node-http-handler":"3.282.0","@aws-sdk/protocol-http":"3.282.0","@aws-sdk/smithy-client":"3.279.0","@aws-sdk/types":"3.272.0","@aws-sdk/url-parser":"3.272.0","@aws-sdk/util-base64":"3.208.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.208.0","@aws-sdk/util-defaults-mode-browser":"3.279.0","@aws-sdk/util-defaults-mode-node":"3.282.0","@aws-sdk/util-endpoints":"3.272.0","@aws-sdk/util-retry":"3.272.0","@aws-sdk/util-user-agent-browser":"3.282.0","@aws-sdk/util-user-agent-node":"3.282.0","@aws-sdk/util-utf8":"3.254.0","fast-xml-parser":"4.1.2","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.208.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.287.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.287.0","@aws-sdk/credential-provider-node":"3.287.0","@aws-sdk/fetch-http-handler":"3.282.0","@aws-sdk/hash-node":"3.272.0","@aws-sdk/invalid-dependency":"3.272.0","@aws-sdk/middleware-content-length":"3.282.0","@aws-sdk/middleware-endpoint":"3.282.0","@aws-sdk/middleware-host-header":"3.282.0","@aws-sdk/middleware-logger":"3.287.0","@aws-sdk/middleware-recursion-detection":"3.282.0","@aws-sdk/middleware-retry":"3.287.0","@aws-sdk/middleware-sdk-sts":"3.282.0","@aws-sdk/middleware-serde":"3.272.0","@aws-sdk/middleware-signing":"3.282.0","@aws-sdk/middleware-stack":"3.272.0","@aws-sdk/middleware-user-agent":"3.282.0","@aws-sdk/node-config-provider":"3.287.0","@aws-sdk/node-http-handler":"3.282.0","@aws-sdk/protocol-http":"3.282.0","@aws-sdk/smithy-client":"3.279.0","@aws-sdk/types":"3.272.0","@aws-sdk/url-parser":"3.272.0","@aws-sdk/util-base64":"3.208.0","@aws-sdk/util-body-length-browser":"3.188.0","@aws-sdk/util-body-length-node":"3.208.0","@aws-sdk/util-defaults-mode-browser":"3.279.0","@aws-sdk/util-defaults-mode-node":"3.287.0","@aws-sdk/util-endpoints":"3.272.0","@aws-sdk/util-retry":"3.272.0","@aws-sdk/util-user-agent-browser":"3.282.0","@aws-sdk/util-user-agent-node":"3.287.0","@aws-sdk/util-utf8":"3.254.0","fast-xml-parser":"4.1.2","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.208.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.19.2","typescript":"~4.6.2"},"overrides":{"typedoc":{"typescript":"~4.6.2"}},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
