@@ -3932,10 +3932,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class AddTagsToResourceCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -3943,6 +3939,10 @@ class AddTagsToResourceCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -3986,10 +3986,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class AssociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -3997,6 +3993,10 @@ class AssociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4040,10 +4040,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CancelCommandCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4051,6 +4047,10 @@ class CancelCommandCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4094,10 +4094,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CancelMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4105,6 +4101,10 @@ class CancelMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4148,10 +4148,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateActivationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4159,6 +4155,10 @@ class CreateActivationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4202,10 +4202,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateAssociationBatchCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4213,6 +4209,10 @@ class CreateAssociationBatchCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4256,10 +4256,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateAssociationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4267,6 +4263,10 @@ class CreateAssociationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4310,10 +4310,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateDocumentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4321,6 +4317,10 @@ class CreateDocumentCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4364,10 +4364,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateMaintenanceWindowCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4375,6 +4371,10 @@ class CreateMaintenanceWindowCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4418,10 +4418,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateOpsItemCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4429,6 +4425,10 @@ class CreateOpsItemCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4472,10 +4472,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateOpsMetadataCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4483,6 +4479,10 @@ class CreateOpsMetadataCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4526,10 +4526,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreatePatchBaselineCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4537,6 +4533,10 @@ class CreatePatchBaselineCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4580,10 +4580,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateResourceDataSyncCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4591,6 +4587,10 @@ class CreateResourceDataSyncCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4634,10 +4634,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteActivationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4645,6 +4641,10 @@ class DeleteActivationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4688,10 +4688,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteAssociationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4699,6 +4695,10 @@ class DeleteAssociationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4742,10 +4742,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteDocumentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4753,6 +4749,10 @@ class DeleteDocumentCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4796,10 +4796,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteInventoryCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4807,6 +4803,10 @@ class DeleteInventoryCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4850,10 +4850,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteMaintenanceWindowCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4861,6 +4857,10 @@ class DeleteMaintenanceWindowCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4904,10 +4904,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteOpsMetadataCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4915,6 +4911,10 @@ class DeleteOpsMetadataCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -4958,10 +4958,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteParameterCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -4969,6 +4965,10 @@ class DeleteParameterCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5012,10 +5012,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteParametersCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5023,6 +5019,10 @@ class DeleteParametersCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5066,10 +5066,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeletePatchBaselineCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5077,6 +5073,10 @@ class DeletePatchBaselineCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5120,10 +5120,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteResourceDataSyncCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5131,6 +5127,10 @@ class DeleteResourceDataSyncCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5174,10 +5174,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteResourcePolicyCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5185,6 +5181,10 @@ class DeleteResourcePolicyCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5228,10 +5228,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeregisterManagedInstanceCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5239,6 +5235,10 @@ class DeregisterManagedInstanceCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5282,10 +5282,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeregisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5293,6 +5289,10 @@ class DeregisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Comman
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5336,10 +5336,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeregisterTargetFromMaintenanceWindowCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5347,6 +5343,10 @@ class DeregisterTargetFromMaintenanceWindowCommand extends smithy_client_1.Comma
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5390,10 +5390,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeregisterTaskFromMaintenanceWindowCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5401,6 +5397,10 @@ class DeregisterTaskFromMaintenanceWindowCommand extends smithy_client_1.Command
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5444,10 +5444,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeActivationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5455,6 +5451,10 @@ class DescribeActivationsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5498,10 +5498,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAssociationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5509,6 +5505,10 @@ class DescribeAssociationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5552,10 +5552,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAssociationExecutionTargetsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5563,6 +5559,10 @@ class DescribeAssociationExecutionTargetsCommand extends smithy_client_1.Command
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5606,10 +5606,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAssociationExecutionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5617,6 +5613,10 @@ class DescribeAssociationExecutionsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5660,10 +5660,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAutomationExecutionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5671,6 +5667,10 @@ class DescribeAutomationExecutionsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5714,10 +5714,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAutomationStepExecutionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5725,6 +5721,10 @@ class DescribeAutomationStepExecutionsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5768,10 +5768,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAvailablePatchesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5779,6 +5775,10 @@ class DescribeAvailablePatchesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5822,10 +5822,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeDocumentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5833,6 +5829,10 @@ class DescribeDocumentCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5876,10 +5876,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeDocumentPermissionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5887,6 +5883,10 @@ class DescribeDocumentPermissionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5930,10 +5930,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeEffectiveInstanceAssociationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5941,6 +5937,10 @@ class DescribeEffectiveInstanceAssociationsCommand extends smithy_client_1.Comma
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -5984,10 +5984,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeEffectivePatchesForPatchBaselineCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -5995,6 +5991,10 @@ class DescribeEffectivePatchesForPatchBaselineCommand extends smithy_client_1.Co
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6038,10 +6038,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInstanceAssociationsStatusCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6049,6 +6045,10 @@ class DescribeInstanceAssociationsStatusCommand extends smithy_client_1.Command 
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6092,10 +6092,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInstanceInformationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6103,6 +6099,10 @@ class DescribeInstanceInformationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6146,10 +6146,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInstancePatchStatesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6157,6 +6153,10 @@ class DescribeInstancePatchStatesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6200,10 +6200,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInstancePatchStatesForPatchGroupCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6211,6 +6207,10 @@ class DescribeInstancePatchStatesForPatchGroupCommand extends smithy_client_1.Co
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6254,10 +6254,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInstancePatchesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6265,6 +6261,10 @@ class DescribeInstancePatchesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6308,10 +6308,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInventoryDeletionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6319,6 +6315,10 @@ class DescribeInventoryDeletionsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6362,10 +6362,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowExecutionTaskInvocationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6373,6 +6369,10 @@ class DescribeMaintenanceWindowExecutionTaskInvocationsCommand extends smithy_cl
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6416,10 +6416,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowExecutionTasksCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6427,6 +6423,10 @@ class DescribeMaintenanceWindowExecutionTasksCommand extends smithy_client_1.Com
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6470,10 +6470,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowExecutionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6481,6 +6477,10 @@ class DescribeMaintenanceWindowExecutionsCommand extends smithy_client_1.Command
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6524,10 +6524,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowScheduleCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6535,6 +6531,10 @@ class DescribeMaintenanceWindowScheduleCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6578,10 +6578,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowTargetsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6589,6 +6585,10 @@ class DescribeMaintenanceWindowTargetsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6632,10 +6632,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowTasksCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6643,6 +6639,10 @@ class DescribeMaintenanceWindowTasksCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6686,10 +6686,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6697,6 +6693,10 @@ class DescribeMaintenanceWindowsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6740,10 +6740,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowsForTargetCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6751,6 +6747,10 @@ class DescribeMaintenanceWindowsForTargetCommand extends smithy_client_1.Command
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6794,10 +6794,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeOpsItemsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6805,6 +6801,10 @@ class DescribeOpsItemsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6848,10 +6848,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeParametersCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6859,6 +6855,10 @@ class DescribeParametersCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6902,10 +6902,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribePatchBaselinesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6913,6 +6909,10 @@ class DescribePatchBaselinesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -6956,10 +6956,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribePatchGroupStateCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -6967,6 +6963,10 @@ class DescribePatchGroupStateCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7010,10 +7010,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribePatchGroupsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7021,6 +7017,10 @@ class DescribePatchGroupsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7064,10 +7064,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribePatchPropertiesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7075,6 +7071,10 @@ class DescribePatchPropertiesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7118,10 +7118,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeSessionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7129,6 +7125,10 @@ class DescribeSessionsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7172,10 +7172,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DisassociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7183,6 +7179,10 @@ class DisassociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7226,10 +7226,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetAutomationExecutionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7237,6 +7233,10 @@ class GetAutomationExecutionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7280,10 +7280,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetCalendarStateCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7291,6 +7287,10 @@ class GetCalendarStateCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7334,10 +7334,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetCommandInvocationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7345,6 +7341,10 @@ class GetCommandInvocationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7388,10 +7388,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetConnectionStatusCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7399,6 +7395,10 @@ class GetConnectionStatusCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7442,10 +7442,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetDefaultPatchBaselineCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7453,6 +7449,10 @@ class GetDefaultPatchBaselineCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7496,10 +7496,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetDeployablePatchSnapshotForInstanceCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7507,6 +7503,10 @@ class GetDeployablePatchSnapshotForInstanceCommand extends smithy_client_1.Comma
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7550,10 +7550,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetDocumentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7561,6 +7557,10 @@ class GetDocumentCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7605,10 +7605,6 @@ const models_1_1 = __nccwpck_require__(9974);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetInventoryCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7616,6 +7612,10 @@ class GetInventoryCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7659,10 +7659,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetInventorySchemaCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7670,6 +7666,10 @@ class GetInventorySchemaCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7713,10 +7713,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetMaintenanceWindowCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7724,6 +7720,10 @@ class GetMaintenanceWindowCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7767,10 +7767,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7778,6 +7774,10 @@ class GetMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7821,10 +7821,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetMaintenanceWindowExecutionTaskCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7832,6 +7828,10 @@ class GetMaintenanceWindowExecutionTaskCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7875,10 +7875,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetMaintenanceWindowExecutionTaskInvocationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7886,6 +7882,10 @@ class GetMaintenanceWindowExecutionTaskInvocationCommand extends smithy_client_1
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7929,10 +7929,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetMaintenanceWindowTaskCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7940,6 +7936,10 @@ class GetMaintenanceWindowTaskCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -7983,10 +7983,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetOpsItemCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -7994,6 +7990,10 @@ class GetOpsItemCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8037,10 +8037,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetOpsMetadataCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8048,6 +8044,10 @@ class GetOpsMetadataCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8092,10 +8092,6 @@ const models_1_1 = __nccwpck_require__(9974);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetOpsSummaryCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8103,6 +8099,10 @@ class GetOpsSummaryCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8146,10 +8146,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetParameterCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8157,6 +8153,10 @@ class GetParameterCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8200,10 +8200,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetParameterHistoryCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8211,6 +8207,10 @@ class GetParameterHistoryCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8254,10 +8254,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetParametersByPathCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8265,6 +8261,10 @@ class GetParametersByPathCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8308,10 +8308,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetParametersCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8319,6 +8315,10 @@ class GetParametersCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8362,10 +8362,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetPatchBaselineCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8373,6 +8369,10 @@ class GetPatchBaselineCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8416,10 +8416,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8427,6 +8423,10 @@ class GetPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8470,10 +8470,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetResourcePoliciesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8481,6 +8477,10 @@ class GetResourcePoliciesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8524,10 +8524,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetServiceSettingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8535,6 +8531,10 @@ class GetServiceSettingCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8578,10 +8578,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class LabelParameterVersionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8589,6 +8585,10 @@ class LabelParameterVersionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8632,10 +8632,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListAssociationVersionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8643,6 +8639,10 @@ class ListAssociationVersionsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8686,10 +8686,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListAssociationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8697,6 +8693,10 @@ class ListAssociationsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8740,10 +8740,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListCommandInvocationsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8751,6 +8747,10 @@ class ListCommandInvocationsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8794,10 +8794,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListCommandsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8805,6 +8801,10 @@ class ListCommandsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8848,10 +8848,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListComplianceItemsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8859,6 +8855,10 @@ class ListComplianceItemsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8902,10 +8902,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListComplianceSummariesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8913,6 +8909,10 @@ class ListComplianceSummariesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -8956,10 +8956,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListDocumentMetadataHistoryCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -8967,6 +8963,10 @@ class ListDocumentMetadataHistoryCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9010,10 +9010,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListDocumentVersionsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9021,6 +9017,10 @@ class ListDocumentVersionsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9064,10 +9064,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListDocumentsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9075,6 +9071,10 @@ class ListDocumentsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9118,10 +9118,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListInventoryEntriesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9129,6 +9125,10 @@ class ListInventoryEntriesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9172,10 +9172,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListOpsItemEventsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9183,6 +9179,10 @@ class ListOpsItemEventsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9226,10 +9226,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListOpsItemRelatedItemsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9237,6 +9233,10 @@ class ListOpsItemRelatedItemsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9280,10 +9280,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListOpsMetadataCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9291,6 +9287,10 @@ class ListOpsMetadataCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9334,10 +9334,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListResourceComplianceSummariesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9345,6 +9341,10 @@ class ListResourceComplianceSummariesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9388,10 +9388,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListResourceDataSyncCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9399,6 +9395,10 @@ class ListResourceDataSyncCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9442,10 +9442,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListTagsForResourceCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9453,6 +9449,10 @@ class ListTagsForResourceCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9496,10 +9496,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ModifyDocumentPermissionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9507,6 +9503,10 @@ class ModifyDocumentPermissionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9550,10 +9550,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class PutComplianceItemsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9561,6 +9557,10 @@ class PutComplianceItemsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9604,10 +9604,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class PutInventoryCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9615,6 +9611,10 @@ class PutInventoryCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9658,10 +9658,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class PutParameterCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9669,6 +9665,10 @@ class PutParameterCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9712,10 +9712,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class PutResourcePolicyCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9723,6 +9719,10 @@ class PutResourcePolicyCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9766,10 +9766,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class RegisterDefaultPatchBaselineCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9777,6 +9773,10 @@ class RegisterDefaultPatchBaselineCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9820,10 +9820,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class RegisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9831,6 +9827,10 @@ class RegisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command 
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9874,10 +9874,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class RegisterTargetWithMaintenanceWindowCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9885,6 +9881,10 @@ class RegisterTargetWithMaintenanceWindowCommand extends smithy_client_1.Command
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9928,10 +9928,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class RegisterTaskWithMaintenanceWindowCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9939,6 +9935,10 @@ class RegisterTaskWithMaintenanceWindowCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -9982,10 +9982,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class RemoveTagsFromResourceCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -9993,6 +9989,10 @@ class RemoveTagsFromResourceCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10036,10 +10036,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ResetServiceSettingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10047,6 +10043,10 @@ class ResetServiceSettingCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10090,10 +10090,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ResumeSessionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10101,6 +10097,10 @@ class ResumeSessionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10144,10 +10144,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class SendAutomationSignalCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10155,6 +10151,10 @@ class SendAutomationSignalCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10198,10 +10198,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class SendCommandCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10209,6 +10205,10 @@ class SendCommandCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10252,10 +10252,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StartAssociationsOnceCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10263,6 +10259,10 @@ class StartAssociationsOnceCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10306,10 +10306,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StartAutomationExecutionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10317,6 +10313,10 @@ class StartAutomationExecutionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10360,10 +10360,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StartChangeRequestExecutionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10371,6 +10367,10 @@ class StartChangeRequestExecutionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10414,10 +10414,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StartSessionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10425,6 +10421,10 @@ class StartSessionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10468,10 +10468,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StopAutomationExecutionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10479,6 +10475,10 @@ class StopAutomationExecutionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10522,10 +10522,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class TerminateSessionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10533,6 +10529,10 @@ class TerminateSessionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10576,10 +10576,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UnlabelParameterVersionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10587,6 +10583,10 @@ class UnlabelParameterVersionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10630,10 +10630,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateAssociationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10641,6 +10637,10 @@ class UpdateAssociationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10684,10 +10684,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateAssociationStatusCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10695,6 +10691,10 @@ class UpdateAssociationStatusCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10738,10 +10738,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateDocumentCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10749,6 +10745,10 @@ class UpdateDocumentCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10792,10 +10792,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateDocumentDefaultVersionCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10803,6 +10799,10 @@ class UpdateDocumentDefaultVersionCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10846,10 +10846,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateDocumentMetadataCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10857,6 +10853,10 @@ class UpdateDocumentMetadataCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10900,10 +10900,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateMaintenanceWindowCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10911,6 +10907,10 @@ class UpdateMaintenanceWindowCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -10954,10 +10954,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateMaintenanceWindowTargetCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -10965,6 +10961,10 @@ class UpdateMaintenanceWindowTargetCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -11008,10 +11008,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateMaintenanceWindowTaskCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -11019,6 +11015,10 @@ class UpdateMaintenanceWindowTaskCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -11062,10 +11062,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateManagedInstanceRoleCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -11073,6 +11069,10 @@ class UpdateManagedInstanceRoleCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -11116,10 +11116,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateOpsItemCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -11127,6 +11123,10 @@ class UpdateOpsItemCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -11170,10 +11170,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateOpsMetadataCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -11181,6 +11177,10 @@ class UpdateOpsMetadataCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -11224,10 +11224,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdatePatchBaselineCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -11235,6 +11231,10 @@ class UpdatePatchBaselineCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -11278,10 +11278,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateResourceDataSyncCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -11289,6 +11285,10 @@ class UpdateResourceDataSyncCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -11332,10 +11332,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateServiceSettingCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -11343,6 +11339,10 @@ class UpdateServiceSettingCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -33647,10 +33647,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class CreateTokenCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -33658,6 +33654,10 @@ class CreateTokenCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -33701,10 +33701,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class RegisterClientCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -33712,6 +33708,10 @@ class RegisterClientCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -33755,10 +33755,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class StartDeviceAuthorizationCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -33766,6 +33762,10 @@ class StartDeviceAuthorizationCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -34875,10 +34875,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const Aws_restJson1_1 = __nccwpck_require__(98507);
 class GetRoleCredentialsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -34886,6 +34882,10 @@ class GetRoleCredentialsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -34929,10 +34929,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const Aws_restJson1_1 = __nccwpck_require__(98507);
 class ListAccountRolesCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -34940,6 +34936,10 @@ class ListAccountRolesCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -34983,10 +34983,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const Aws_restJson1_1 = __nccwpck_require__(98507);
 class ListAccountsCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -34994,6 +34990,10 @@ class ListAccountsCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -35037,10 +35037,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(66390);
 const Aws_restJson1_1 = __nccwpck_require__(98507);
 class LogoutCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
@@ -35048,6 +35044,10 @@ class LogoutCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -36111,10 +36111,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -36123,6 +36119,10 @@ class AssumeRoleCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -36167,10 +36167,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -36179,6 +36175,10 @@ class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -36222,10 +36222,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -36234,6 +36230,10 @@ class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -36278,10 +36278,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -36290,6 +36286,10 @@ class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -36335,10 +36335,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetAccessKeyInfoCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -36347,6 +36343,10 @@ class GetAccessKeyInfoCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -36392,10 +36392,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetCallerIdentityCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -36404,6 +36400,10 @@ class GetCallerIdentityCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -36449,10 +36449,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetFederationTokenCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -36461,6 +36457,10 @@ class GetFederationTokenCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -36506,10 +36506,6 @@ const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetSessionTokenCommand extends smithy_client_1.Command {
-    constructor(input) {
-        super();
-        this.input = input;
-    }
     static getEndpointParameterInstructions() {
         return {
             UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
@@ -36518,6 +36514,10 @@ class GetSessionTokenCommand extends smithy_client_1.Command {
             Region: { type: "builtInParams", name: "region" },
             UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
         };
+    }
+    constructor(input) {
+        super();
+        this.input = input;
     }
     resolveMiddleware(clientStack, configuration, options) {
         this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
@@ -54634,7 +54634,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.293.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.293.0","@aws-sdk/config-resolver":"3.292.0","@aws-sdk/credential-provider-node":"3.293.0","@aws-sdk/fetch-http-handler":"3.292.0","@aws-sdk/hash-node":"3.292.0","@aws-sdk/invalid-dependency":"3.292.0","@aws-sdk/middleware-content-length":"3.292.0","@aws-sdk/middleware-endpoint":"3.292.0","@aws-sdk/middleware-host-header":"3.292.0","@aws-sdk/middleware-logger":"3.292.0","@aws-sdk/middleware-recursion-detection":"3.292.0","@aws-sdk/middleware-retry":"3.293.0","@aws-sdk/middleware-serde":"3.292.0","@aws-sdk/middleware-signing":"3.292.0","@aws-sdk/middleware-stack":"3.292.0","@aws-sdk/middleware-user-agent":"3.293.0","@aws-sdk/node-config-provider":"3.292.0","@aws-sdk/node-http-handler":"3.292.0","@aws-sdk/protocol-http":"3.292.0","@aws-sdk/smithy-client":"3.292.0","@aws-sdk/types":"3.292.0","@aws-sdk/url-parser":"3.292.0","@aws-sdk/util-base64":"3.292.0","@aws-sdk/util-body-length-browser":"3.292.0","@aws-sdk/util-body-length-node":"3.292.0","@aws-sdk/util-defaults-mode-browser":"3.292.0","@aws-sdk/util-defaults-mode-node":"3.292.0","@aws-sdk/util-endpoints":"3.293.0","@aws-sdk/util-retry":"3.292.0","@aws-sdk/util-user-agent-browser":"3.292.0","@aws-sdk/util-user-agent-node":"3.292.0","@aws-sdk/util-utf8":"3.292.0","@aws-sdk/util-waiter":"3.292.0","tslib":"^2.3.1","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.293.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.6.2"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.295.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.295.0","@aws-sdk/config-resolver":"3.295.0","@aws-sdk/credential-provider-node":"3.295.0","@aws-sdk/fetch-http-handler":"3.295.0","@aws-sdk/hash-node":"3.295.0","@aws-sdk/invalid-dependency":"3.295.0","@aws-sdk/middleware-content-length":"3.295.0","@aws-sdk/middleware-endpoint":"3.295.0","@aws-sdk/middleware-host-header":"3.295.0","@aws-sdk/middleware-logger":"3.295.0","@aws-sdk/middleware-recursion-detection":"3.295.0","@aws-sdk/middleware-retry":"3.295.0","@aws-sdk/middleware-serde":"3.295.0","@aws-sdk/middleware-signing":"3.295.0","@aws-sdk/middleware-stack":"3.295.0","@aws-sdk/middleware-user-agent":"3.295.0","@aws-sdk/node-config-provider":"3.295.0","@aws-sdk/node-http-handler":"3.295.0","@aws-sdk/protocol-http":"3.295.0","@aws-sdk/smithy-client":"3.295.0","@aws-sdk/types":"3.295.0","@aws-sdk/url-parser":"3.295.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.295.0","@aws-sdk/util-defaults-mode-node":"3.295.0","@aws-sdk/util-endpoints":"3.295.0","@aws-sdk/util-retry":"3.295.0","@aws-sdk/util-user-agent-browser":"3.295.0","@aws-sdk/util-user-agent-node":"3.295.0","@aws-sdk/util-utf8":"3.295.0","@aws-sdk/util-waiter":"3.295.0","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
 
 /***/ }),
 
@@ -54642,7 +54642,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.293.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.292.0","@aws-sdk/fetch-http-handler":"3.292.0","@aws-sdk/hash-node":"3.292.0","@aws-sdk/invalid-dependency":"3.292.0","@aws-sdk/middleware-content-length":"3.292.0","@aws-sdk/middleware-endpoint":"3.292.0","@aws-sdk/middleware-host-header":"3.292.0","@aws-sdk/middleware-logger":"3.292.0","@aws-sdk/middleware-recursion-detection":"3.292.0","@aws-sdk/middleware-retry":"3.293.0","@aws-sdk/middleware-serde":"3.292.0","@aws-sdk/middleware-stack":"3.292.0","@aws-sdk/middleware-user-agent":"3.293.0","@aws-sdk/node-config-provider":"3.292.0","@aws-sdk/node-http-handler":"3.292.0","@aws-sdk/protocol-http":"3.292.0","@aws-sdk/smithy-client":"3.292.0","@aws-sdk/types":"3.292.0","@aws-sdk/url-parser":"3.292.0","@aws-sdk/util-base64":"3.292.0","@aws-sdk/util-body-length-browser":"3.292.0","@aws-sdk/util-body-length-node":"3.292.0","@aws-sdk/util-defaults-mode-browser":"3.292.0","@aws-sdk/util-defaults-mode-node":"3.292.0","@aws-sdk/util-endpoints":"3.293.0","@aws-sdk/util-retry":"3.292.0","@aws-sdk/util-user-agent-browser":"3.292.0","@aws-sdk/util-user-agent-node":"3.292.0","@aws-sdk/util-utf8":"3.292.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.293.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.6.2"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.295.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.295.0","@aws-sdk/fetch-http-handler":"3.295.0","@aws-sdk/hash-node":"3.295.0","@aws-sdk/invalid-dependency":"3.295.0","@aws-sdk/middleware-content-length":"3.295.0","@aws-sdk/middleware-endpoint":"3.295.0","@aws-sdk/middleware-host-header":"3.295.0","@aws-sdk/middleware-logger":"3.295.0","@aws-sdk/middleware-recursion-detection":"3.295.0","@aws-sdk/middleware-retry":"3.295.0","@aws-sdk/middleware-serde":"3.295.0","@aws-sdk/middleware-stack":"3.295.0","@aws-sdk/middleware-user-agent":"3.295.0","@aws-sdk/node-config-provider":"3.295.0","@aws-sdk/node-http-handler":"3.295.0","@aws-sdk/protocol-http":"3.295.0","@aws-sdk/smithy-client":"3.295.0","@aws-sdk/types":"3.295.0","@aws-sdk/url-parser":"3.295.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.295.0","@aws-sdk/util-defaults-mode-node":"3.295.0","@aws-sdk/util-endpoints":"3.295.0","@aws-sdk/util-retry":"3.295.0","@aws-sdk/util-user-agent-browser":"3.295.0","@aws-sdk/util-user-agent-node":"3.295.0","@aws-sdk/util-utf8":"3.295.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
 
 /***/ }),
 
@@ -54650,7 +54650,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"A
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.293.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.292.0","@aws-sdk/fetch-http-handler":"3.292.0","@aws-sdk/hash-node":"3.292.0","@aws-sdk/invalid-dependency":"3.292.0","@aws-sdk/middleware-content-length":"3.292.0","@aws-sdk/middleware-endpoint":"3.292.0","@aws-sdk/middleware-host-header":"3.292.0","@aws-sdk/middleware-logger":"3.292.0","@aws-sdk/middleware-recursion-detection":"3.292.0","@aws-sdk/middleware-retry":"3.293.0","@aws-sdk/middleware-serde":"3.292.0","@aws-sdk/middleware-stack":"3.292.0","@aws-sdk/middleware-user-agent":"3.293.0","@aws-sdk/node-config-provider":"3.292.0","@aws-sdk/node-http-handler":"3.292.0","@aws-sdk/protocol-http":"3.292.0","@aws-sdk/smithy-client":"3.292.0","@aws-sdk/types":"3.292.0","@aws-sdk/url-parser":"3.292.0","@aws-sdk/util-base64":"3.292.0","@aws-sdk/util-body-length-browser":"3.292.0","@aws-sdk/util-body-length-node":"3.292.0","@aws-sdk/util-defaults-mode-browser":"3.292.0","@aws-sdk/util-defaults-mode-node":"3.292.0","@aws-sdk/util-endpoints":"3.293.0","@aws-sdk/util-retry":"3.292.0","@aws-sdk/util-user-agent-browser":"3.292.0","@aws-sdk/util-user-agent-node":"3.292.0","@aws-sdk/util-utf8":"3.292.0","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.293.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.6.2"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.295.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.295.0","@aws-sdk/fetch-http-handler":"3.295.0","@aws-sdk/hash-node":"3.295.0","@aws-sdk/invalid-dependency":"3.295.0","@aws-sdk/middleware-content-length":"3.295.0","@aws-sdk/middleware-endpoint":"3.295.0","@aws-sdk/middleware-host-header":"3.295.0","@aws-sdk/middleware-logger":"3.295.0","@aws-sdk/middleware-recursion-detection":"3.295.0","@aws-sdk/middleware-retry":"3.295.0","@aws-sdk/middleware-serde":"3.295.0","@aws-sdk/middleware-stack":"3.295.0","@aws-sdk/middleware-user-agent":"3.295.0","@aws-sdk/node-config-provider":"3.295.0","@aws-sdk/node-http-handler":"3.295.0","@aws-sdk/protocol-http":"3.295.0","@aws-sdk/smithy-client":"3.295.0","@aws-sdk/types":"3.295.0","@aws-sdk/url-parser":"3.295.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.295.0","@aws-sdk/util-defaults-mode-node":"3.295.0","@aws-sdk/util-endpoints":"3.295.0","@aws-sdk/util-retry":"3.295.0","@aws-sdk/util-user-agent-browser":"3.295.0","@aws-sdk/util-user-agent-node":"3.295.0","@aws-sdk/util-utf8":"3.295.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -54658,7 +54658,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.293.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.292.0","@aws-sdk/credential-provider-node":"3.293.0","@aws-sdk/fetch-http-handler":"3.292.0","@aws-sdk/hash-node":"3.292.0","@aws-sdk/invalid-dependency":"3.292.0","@aws-sdk/middleware-content-length":"3.292.0","@aws-sdk/middleware-endpoint":"3.292.0","@aws-sdk/middleware-host-header":"3.292.0","@aws-sdk/middleware-logger":"3.292.0","@aws-sdk/middleware-recursion-detection":"3.292.0","@aws-sdk/middleware-retry":"3.293.0","@aws-sdk/middleware-sdk-sts":"3.292.0","@aws-sdk/middleware-serde":"3.292.0","@aws-sdk/middleware-signing":"3.292.0","@aws-sdk/middleware-stack":"3.292.0","@aws-sdk/middleware-user-agent":"3.293.0","@aws-sdk/node-config-provider":"3.292.0","@aws-sdk/node-http-handler":"3.292.0","@aws-sdk/protocol-http":"3.292.0","@aws-sdk/smithy-client":"3.292.0","@aws-sdk/types":"3.292.0","@aws-sdk/url-parser":"3.292.0","@aws-sdk/util-base64":"3.292.0","@aws-sdk/util-body-length-browser":"3.292.0","@aws-sdk/util-body-length-node":"3.292.0","@aws-sdk/util-defaults-mode-browser":"3.292.0","@aws-sdk/util-defaults-mode-node":"3.292.0","@aws-sdk/util-endpoints":"3.293.0","@aws-sdk/util-retry":"3.292.0","@aws-sdk/util-user-agent-browser":"3.292.0","@aws-sdk/util-user-agent-node":"3.292.0","@aws-sdk/util-utf8":"3.292.0","fast-xml-parser":"4.1.2","tslib":"^2.3.1"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.293.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.6.2"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.295.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.295.0","@aws-sdk/credential-provider-node":"3.295.0","@aws-sdk/fetch-http-handler":"3.295.0","@aws-sdk/hash-node":"3.295.0","@aws-sdk/invalid-dependency":"3.295.0","@aws-sdk/middleware-content-length":"3.295.0","@aws-sdk/middleware-endpoint":"3.295.0","@aws-sdk/middleware-host-header":"3.295.0","@aws-sdk/middleware-logger":"3.295.0","@aws-sdk/middleware-recursion-detection":"3.295.0","@aws-sdk/middleware-retry":"3.295.0","@aws-sdk/middleware-sdk-sts":"3.295.0","@aws-sdk/middleware-serde":"3.295.0","@aws-sdk/middleware-signing":"3.295.0","@aws-sdk/middleware-stack":"3.295.0","@aws-sdk/middleware-user-agent":"3.295.0","@aws-sdk/node-config-provider":"3.295.0","@aws-sdk/node-http-handler":"3.295.0","@aws-sdk/protocol-http":"3.295.0","@aws-sdk/smithy-client":"3.295.0","@aws-sdk/types":"3.295.0","@aws-sdk/url-parser":"3.295.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.295.0","@aws-sdk/util-defaults-mode-node":"3.295.0","@aws-sdk/util-endpoints":"3.295.0","@aws-sdk/util-retry":"3.295.0","@aws-sdk/util-user-agent-browser":"3.295.0","@aws-sdk/util-user-agent-node":"3.295.0","@aws-sdk/util-utf8":"3.295.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
