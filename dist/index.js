@@ -3929,7 +3929,6 @@ exports.AddTagsToResourceCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class AddTagsToResourceCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -3955,8 +3954,8 @@ class AddTagsToResourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AddTagsToResourceRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AddTagsToResourceResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -3983,7 +3982,6 @@ exports.AssociateOpsItemRelatedItemCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class AssociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4009,8 +4007,8 @@ class AssociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssociateOpsItemRelatedItemRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssociateOpsItemRelatedItemResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4037,7 +4035,6 @@ exports.CancelCommandCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CancelCommandCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4063,8 +4060,8 @@ class CancelCommandCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CancelCommandRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CancelCommandResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4091,7 +4088,6 @@ exports.CancelMaintenanceWindowExecutionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CancelMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4117,8 +4113,8 @@ class CancelMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CancelMaintenanceWindowExecutionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CancelMaintenanceWindowExecutionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4145,7 +4141,6 @@ exports.CreateActivationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateActivationCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4171,8 +4166,8 @@ class CreateActivationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateActivationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateActivationResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4307,7 +4302,6 @@ exports.CreateDocumentCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateDocumentCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4333,8 +4327,8 @@ class CreateDocumentCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateDocumentRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateDocumentResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4388,7 +4382,7 @@ class CreateMaintenanceWindowCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.CreateMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateMaintenanceWindowResultFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4415,7 +4409,6 @@ exports.CreateOpsItemCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateOpsItemCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4441,8 +4434,8 @@ class CreateOpsItemCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateOpsItemRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateOpsItemResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4469,7 +4462,6 @@ exports.CreateOpsMetadataCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateOpsMetadataCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4495,8 +4487,8 @@ class CreateOpsMetadataCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateOpsMetadataRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateOpsMetadataResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4550,7 +4542,7 @@ class CreatePatchBaselineCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.CreatePatchBaselineRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreatePatchBaselineResultFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4577,7 +4569,6 @@ exports.CreateResourceDataSyncCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class CreateResourceDataSyncCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4603,8 +4594,8 @@ class CreateResourceDataSyncCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateResourceDataSyncRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateResourceDataSyncResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4631,7 +4622,6 @@ exports.DeleteActivationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteActivationCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4657,8 +4647,8 @@ class DeleteActivationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteActivationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteActivationResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4685,7 +4675,6 @@ exports.DeleteAssociationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteAssociationCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4711,8 +4700,8 @@ class DeleteAssociationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteAssociationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteAssociationResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4739,7 +4728,6 @@ exports.DeleteDocumentCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteDocumentCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4765,8 +4753,8 @@ class DeleteDocumentCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteDocumentRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteDocumentResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4793,7 +4781,6 @@ exports.DeleteInventoryCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteInventoryCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4819,8 +4806,8 @@ class DeleteInventoryCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteInventoryRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteInventoryResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4847,7 +4834,6 @@ exports.DeleteMaintenanceWindowCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteMaintenanceWindowCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4873,8 +4859,8 @@ class DeleteMaintenanceWindowCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteMaintenanceWindowResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4901,7 +4887,6 @@ exports.DeleteOpsMetadataCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteOpsMetadataCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4927,8 +4912,8 @@ class DeleteOpsMetadataCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteOpsMetadataRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteOpsMetadataResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -4955,7 +4940,6 @@ exports.DeleteParameterCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteParameterCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -4981,8 +4965,8 @@ class DeleteParameterCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteParameterRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteParameterResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5009,7 +4993,6 @@ exports.DeleteParametersCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteParametersCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5035,8 +5018,8 @@ class DeleteParametersCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteParametersRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteParametersResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5063,7 +5046,6 @@ exports.DeletePatchBaselineCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeletePatchBaselineCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5089,8 +5071,8 @@ class DeletePatchBaselineCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeletePatchBaselineRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeletePatchBaselineResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5117,7 +5099,6 @@ exports.DeleteResourceDataSyncCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteResourceDataSyncCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5143,8 +5124,8 @@ class DeleteResourceDataSyncCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteResourceDataSyncRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteResourceDataSyncResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5171,7 +5152,6 @@ exports.DeleteResourcePolicyCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeleteResourcePolicyCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5197,8 +5177,8 @@ class DeleteResourcePolicyCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeleteResourcePolicyRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeleteResourcePolicyResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5225,7 +5205,6 @@ exports.DeregisterManagedInstanceCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeregisterManagedInstanceCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5251,8 +5230,8 @@ class DeregisterManagedInstanceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeregisterManagedInstanceRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeregisterManagedInstanceResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5279,7 +5258,6 @@ exports.DeregisterPatchBaselineForPatchGroupCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeregisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5305,8 +5283,8 @@ class DeregisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Comman
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeregisterPatchBaselineForPatchGroupRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeregisterPatchBaselineForPatchGroupResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5333,7 +5311,6 @@ exports.DeregisterTargetFromMaintenanceWindowCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeregisterTargetFromMaintenanceWindowCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5359,8 +5336,8 @@ class DeregisterTargetFromMaintenanceWindowCommand extends smithy_client_1.Comma
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeregisterTargetFromMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeregisterTargetFromMaintenanceWindowResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5387,7 +5364,6 @@ exports.DeregisterTaskFromMaintenanceWindowCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DeregisterTaskFromMaintenanceWindowCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5413,8 +5389,8 @@ class DeregisterTaskFromMaintenanceWindowCommand extends smithy_client_1.Command
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DeregisterTaskFromMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DeregisterTaskFromMaintenanceWindowResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5441,7 +5417,6 @@ exports.DescribeActivationsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeActivationsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5467,8 +5442,8 @@ class DescribeActivationsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeActivationsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeActivationsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5521,7 +5496,7 @@ class DescribeAssociationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeAssociationRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.DescribeAssociationResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -5549,7 +5524,6 @@ exports.DescribeAssociationExecutionTargetsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAssociationExecutionTargetsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5575,8 +5549,8 @@ class DescribeAssociationExecutionTargetsCommand extends smithy_client_1.Command
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeAssociationExecutionTargetsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeAssociationExecutionTargetsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5603,7 +5577,6 @@ exports.DescribeAssociationExecutionsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAssociationExecutionsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5629,8 +5602,8 @@ class DescribeAssociationExecutionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeAssociationExecutionsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeAssociationExecutionsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5657,7 +5630,6 @@ exports.DescribeAutomationExecutionsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAutomationExecutionsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5683,8 +5655,8 @@ class DescribeAutomationExecutionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeAutomationExecutionsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeAutomationExecutionsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5711,7 +5683,6 @@ exports.DescribeAutomationStepExecutionsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAutomationStepExecutionsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5737,8 +5708,8 @@ class DescribeAutomationStepExecutionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeAutomationStepExecutionsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeAutomationStepExecutionsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5765,7 +5736,6 @@ exports.DescribeAvailablePatchesCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeAvailablePatchesCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5791,8 +5761,8 @@ class DescribeAvailablePatchesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeAvailablePatchesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeAvailablePatchesResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5819,7 +5789,6 @@ exports.DescribeDocumentCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeDocumentCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5845,8 +5814,8 @@ class DescribeDocumentCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeDocumentRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeDocumentResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5873,7 +5842,6 @@ exports.DescribeDocumentPermissionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeDocumentPermissionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5899,8 +5867,8 @@ class DescribeDocumentPermissionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeDocumentPermissionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeDocumentPermissionResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5927,7 +5895,6 @@ exports.DescribeEffectiveInstanceAssociationsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeEffectiveInstanceAssociationsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -5953,8 +5920,8 @@ class DescribeEffectiveInstanceAssociationsCommand extends smithy_client_1.Comma
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeEffectiveInstanceAssociationsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeEffectiveInstanceAssociationsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -5981,7 +5948,6 @@ exports.DescribeEffectivePatchesForPatchBaselineCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeEffectivePatchesForPatchBaselineCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6007,8 +5973,8 @@ class DescribeEffectivePatchesForPatchBaselineCommand extends smithy_client_1.Co
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeEffectivePatchesForPatchBaselineRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeEffectivePatchesForPatchBaselineResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6035,7 +6001,6 @@ exports.DescribeInstanceAssociationsStatusCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInstanceAssociationsStatusCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6061,8 +6026,8 @@ class DescribeInstanceAssociationsStatusCommand extends smithy_client_1.Command 
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeInstanceAssociationsStatusRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeInstanceAssociationsStatusResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6089,7 +6054,6 @@ exports.DescribeInstanceInformationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInstanceInformationCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6115,8 +6079,8 @@ class DescribeInstanceInformationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeInstanceInformationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeInstanceInformationResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6169,7 +6133,7 @@ class DescribeInstancePatchStatesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeInstancePatchStatesRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.DescribeInstancePatchStatesResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -6223,7 +6187,7 @@ class DescribeInstancePatchStatesForPatchGroupCommand extends smithy_client_1.Co
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeInstancePatchStatesForPatchGroupRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -6251,7 +6215,6 @@ exports.DescribeInstancePatchesCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInstancePatchesCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6277,8 +6240,8 @@ class DescribeInstancePatchesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeInstancePatchesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeInstancePatchesResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6305,7 +6268,6 @@ exports.DescribeInventoryDeletionsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeInventoryDeletionsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6331,8 +6293,8 @@ class DescribeInventoryDeletionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeInventoryDeletionsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeInventoryDeletionsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6385,7 +6347,7 @@ class DescribeMaintenanceWindowExecutionTaskInvocationsCommand extends smithy_cl
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowExecutionTaskInvocationsRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -6413,7 +6375,6 @@ exports.DescribeMaintenanceWindowExecutionTasksCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowExecutionTasksCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6439,8 +6400,8 @@ class DescribeMaintenanceWindowExecutionTasksCommand extends smithy_client_1.Com
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowExecutionTasksRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowExecutionTasksResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6467,7 +6428,6 @@ exports.DescribeMaintenanceWindowExecutionsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowExecutionsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6493,8 +6453,8 @@ class DescribeMaintenanceWindowExecutionsCommand extends smithy_client_1.Command
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowExecutionsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowExecutionsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6521,7 +6481,6 @@ exports.DescribeMaintenanceWindowScheduleCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowScheduleCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6547,8 +6506,8 @@ class DescribeMaintenanceWindowScheduleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowScheduleRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowScheduleResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6601,7 +6560,7 @@ class DescribeMaintenanceWindowTargetsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowTargetsRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowTargetsResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -6655,7 +6614,7 @@ class DescribeMaintenanceWindowTasksCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowTasksRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowTasksResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -6709,7 +6668,7 @@ class DescribeMaintenanceWindowsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowsRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowsResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -6737,7 +6696,6 @@ exports.DescribeMaintenanceWindowsForTargetCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(82053);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeMaintenanceWindowsForTargetCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6763,8 +6721,8 @@ class DescribeMaintenanceWindowsForTargetCommand extends smithy_client_1.Command
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowsForTargetRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowsForTargetResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6791,7 +6749,6 @@ exports.DescribeOpsItemsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeOpsItemsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6817,8 +6774,8 @@ class DescribeOpsItemsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.DescribeOpsItemsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.DescribeOpsItemsResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6845,7 +6802,6 @@ exports.DescribeParametersCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeParametersCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6871,8 +6827,8 @@ class DescribeParametersCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.DescribeParametersRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.DescribeParametersResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6899,7 +6855,6 @@ exports.DescribePatchBaselinesCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribePatchBaselinesCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6925,8 +6880,8 @@ class DescribePatchBaselinesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.DescribePatchBaselinesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.DescribePatchBaselinesResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -6953,7 +6908,6 @@ exports.DescribePatchGroupStateCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribePatchGroupStateCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -6979,8 +6933,8 @@ class DescribePatchGroupStateCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.DescribePatchGroupStateRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.DescribePatchGroupStateResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7007,7 +6961,6 @@ exports.DescribePatchGroupsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribePatchGroupsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7033,8 +6986,8 @@ class DescribePatchGroupsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.DescribePatchGroupsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.DescribePatchGroupsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7061,7 +7014,6 @@ exports.DescribePatchPropertiesCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribePatchPropertiesCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7087,8 +7039,8 @@ class DescribePatchPropertiesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.DescribePatchPropertiesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.DescribePatchPropertiesResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7115,7 +7067,6 @@ exports.DescribeSessionsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DescribeSessionsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7141,8 +7092,8 @@ class DescribeSessionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.DescribeSessionsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.DescribeSessionsResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7169,7 +7120,6 @@ exports.DisassociateOpsItemRelatedItemCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class DisassociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7195,8 +7145,8 @@ class DisassociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.DisassociateOpsItemRelatedItemRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.DisassociateOpsItemRelatedItemResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7223,7 +7173,6 @@ exports.GetAutomationExecutionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetAutomationExecutionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7249,8 +7198,8 @@ class GetAutomationExecutionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetAutomationExecutionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetAutomationExecutionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7277,7 +7226,6 @@ exports.GetCalendarStateCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetCalendarStateCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7303,8 +7251,8 @@ class GetCalendarStateCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetCalendarStateRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetCalendarStateResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7331,7 +7279,6 @@ exports.GetCommandInvocationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetCommandInvocationCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7357,8 +7304,8 @@ class GetCommandInvocationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetCommandInvocationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetCommandInvocationResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7385,7 +7332,6 @@ exports.GetConnectionStatusCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetConnectionStatusCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7411,8 +7357,8 @@ class GetConnectionStatusCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetConnectionStatusRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetConnectionStatusResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7439,7 +7385,6 @@ exports.GetDefaultPatchBaselineCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetDefaultPatchBaselineCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7465,8 +7410,8 @@ class GetDefaultPatchBaselineCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetDefaultPatchBaselineRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetDefaultPatchBaselineResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7520,7 +7465,7 @@ class GetDeployablePatchSnapshotForInstanceCommand extends smithy_client_1.Comma
             clientName,
             commandName,
             inputFilterSensitiveLog: models_1_1.GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetDeployablePatchSnapshotForInstanceResultFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7547,7 +7492,6 @@ exports.GetDocumentCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetDocumentCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7573,8 +7517,8 @@ class GetDocumentCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetDocumentRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetDocumentResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7601,8 +7545,6 @@ exports.GetInventoryCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetInventoryCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7628,8 +7570,8 @@ class GetInventoryCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.GetInventoryRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetInventoryResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7656,7 +7598,6 @@ exports.GetInventorySchemaCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetInventorySchemaCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7682,8 +7623,8 @@ class GetInventorySchemaCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetInventorySchemaRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetInventorySchemaResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7736,7 +7677,7 @@ class GetMaintenanceWindowCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetMaintenanceWindowRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -7764,7 +7705,6 @@ exports.GetMaintenanceWindowExecutionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -7790,8 +7730,8 @@ class GetMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetMaintenanceWindowExecutionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowExecutionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -7844,7 +7784,7 @@ class GetMaintenanceWindowExecutionTaskCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetMaintenanceWindowExecutionTaskRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -7898,7 +7838,7 @@ class GetMaintenanceWindowExecutionTaskInvocationCommand extends smithy_client_1
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetMaintenanceWindowExecutionTaskInvocationRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -7952,7 +7892,7 @@ class GetMaintenanceWindowTaskCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetMaintenanceWindowTaskRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowTaskResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -7980,7 +7920,6 @@ exports.GetOpsItemCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetOpsItemCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8006,8 +7945,8 @@ class GetOpsItemCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetOpsItemRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetOpsItemResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8034,7 +7973,6 @@ exports.GetOpsMetadataCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetOpsMetadataCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8060,8 +7998,8 @@ class GetOpsMetadataCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetOpsMetadataRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetOpsMetadataResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8088,8 +8026,6 @@ exports.GetOpsSummaryCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetOpsSummaryCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8115,8 +8051,8 @@ class GetOpsSummaryCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.GetOpsSummaryRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetOpsSummaryResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8169,7 +8105,7 @@ class GetParameterCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetParameterRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetParameterResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -8223,7 +8159,7 @@ class GetParameterHistoryCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetParameterHistoryRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetParameterHistoryResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -8277,7 +8213,7 @@ class GetParametersByPathCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetParametersByPathRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetParametersByPathResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -8331,7 +8267,7 @@ class GetParametersCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetParametersRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetParametersResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -8385,7 +8321,7 @@ class GetPatchBaselineCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetPatchBaselineRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.GetPatchBaselineResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -8413,7 +8349,6 @@ exports.GetPatchBaselineForPatchGroupCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8439,8 +8374,8 @@ class GetPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetPatchBaselineForPatchGroupRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetPatchBaselineForPatchGroupResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8467,7 +8402,6 @@ exports.GetResourcePoliciesCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetResourcePoliciesCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8493,8 +8427,8 @@ class GetResourcePoliciesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetResourcePoliciesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetResourcePoliciesResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8521,7 +8455,6 @@ exports.GetServiceSettingCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class GetServiceSettingCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8547,8 +8480,8 @@ class GetServiceSettingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.GetServiceSettingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.GetServiceSettingResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8575,7 +8508,6 @@ exports.LabelParameterVersionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class LabelParameterVersionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8601,8 +8533,8 @@ class LabelParameterVersionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.LabelParameterVersionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.LabelParameterVersionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8655,7 +8587,7 @@ class ListAssociationVersionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListAssociationVersionsRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.ListAssociationVersionsResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -8683,7 +8615,6 @@ exports.ListAssociationsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListAssociationsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8709,8 +8640,8 @@ class ListAssociationsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListAssociationsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListAssociationsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8737,7 +8668,6 @@ exports.ListCommandInvocationsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListCommandInvocationsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8763,8 +8693,8 @@ class ListCommandInvocationsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListCommandInvocationsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListCommandInvocationsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8817,7 +8747,7 @@ class ListCommandsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListCommandsRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_1_1.ListCommandsResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -8845,7 +8775,6 @@ exports.ListComplianceItemsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListComplianceItemsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8871,8 +8800,8 @@ class ListComplianceItemsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListComplianceItemsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListComplianceItemsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8899,7 +8828,6 @@ exports.ListComplianceSummariesCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListComplianceSummariesCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8925,8 +8853,8 @@ class ListComplianceSummariesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListComplianceSummariesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListComplianceSummariesResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -8953,7 +8881,6 @@ exports.ListDocumentMetadataHistoryCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListDocumentMetadataHistoryCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -8979,8 +8906,8 @@ class ListDocumentMetadataHistoryCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListDocumentMetadataHistoryRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListDocumentMetadataHistoryResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9007,7 +8934,6 @@ exports.ListDocumentVersionsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListDocumentVersionsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9033,8 +8959,8 @@ class ListDocumentVersionsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListDocumentVersionsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListDocumentVersionsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9061,7 +8987,6 @@ exports.ListDocumentsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListDocumentsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9087,8 +9012,8 @@ class ListDocumentsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListDocumentsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListDocumentsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9115,7 +9040,6 @@ exports.ListInventoryEntriesCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListInventoryEntriesCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9141,8 +9065,8 @@ class ListInventoryEntriesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListInventoryEntriesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListInventoryEntriesResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9169,7 +9093,6 @@ exports.ListOpsItemEventsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListOpsItemEventsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9195,8 +9118,8 @@ class ListOpsItemEventsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListOpsItemEventsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListOpsItemEventsResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9223,7 +9146,6 @@ exports.ListOpsItemRelatedItemsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListOpsItemRelatedItemsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9249,8 +9171,8 @@ class ListOpsItemRelatedItemsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListOpsItemRelatedItemsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListOpsItemRelatedItemsResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9277,7 +9199,6 @@ exports.ListOpsMetadataCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListOpsMetadataCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9303,8 +9224,8 @@ class ListOpsMetadataCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListOpsMetadataRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListOpsMetadataResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9331,7 +9252,6 @@ exports.ListResourceComplianceSummariesCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListResourceComplianceSummariesCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9357,8 +9277,8 @@ class ListResourceComplianceSummariesCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListResourceComplianceSummariesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListResourceComplianceSummariesResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9385,7 +9305,6 @@ exports.ListResourceDataSyncCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListResourceDataSyncCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9411,8 +9330,8 @@ class ListResourceDataSyncCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListResourceDataSyncRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListResourceDataSyncResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9439,7 +9358,6 @@ exports.ListTagsForResourceCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ListTagsForResourceCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9465,8 +9383,8 @@ class ListTagsForResourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ListTagsForResourceRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ListTagsForResourceResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9493,7 +9411,6 @@ exports.ModifyDocumentPermissionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ModifyDocumentPermissionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9519,8 +9436,8 @@ class ModifyDocumentPermissionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ModifyDocumentPermissionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ModifyDocumentPermissionResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9547,7 +9464,6 @@ exports.PutComplianceItemsCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class PutComplianceItemsCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9573,8 +9489,8 @@ class PutComplianceItemsCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.PutComplianceItemsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.PutComplianceItemsResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9601,7 +9517,6 @@ exports.PutInventoryCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class PutInventoryCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9627,8 +9542,8 @@ class PutInventoryCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.PutInventoryRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.PutInventoryResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9682,7 +9597,7 @@ class PutParameterCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_1_1.PutParameterRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.PutParameterResultFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9709,7 +9624,6 @@ exports.PutResourcePolicyCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class PutResourcePolicyCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9735,8 +9649,8 @@ class PutResourcePolicyCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.PutResourcePolicyRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.PutResourcePolicyResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9763,7 +9677,6 @@ exports.RegisterDefaultPatchBaselineCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class RegisterDefaultPatchBaselineCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9789,8 +9702,8 @@ class RegisterDefaultPatchBaselineCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.RegisterDefaultPatchBaselineRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.RegisterDefaultPatchBaselineResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9817,7 +9730,6 @@ exports.RegisterPatchBaselineForPatchGroupCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class RegisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -9843,8 +9755,8 @@ class RegisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command 
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.RegisterPatchBaselineForPatchGroupRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.RegisterPatchBaselineForPatchGroupResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9898,7 +9810,7 @@ class RegisterTargetWithMaintenanceWindowCommand extends smithy_client_1.Command
             clientName,
             commandName,
             inputFilterSensitiveLog: models_1_1.RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.RegisterTargetWithMaintenanceWindowResultFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9952,7 +9864,7 @@ class RegisterTaskWithMaintenanceWindowCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_1_1.RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.RegisterTaskWithMaintenanceWindowResultFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -9979,7 +9891,6 @@ exports.RemoveTagsFromResourceCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class RemoveTagsFromResourceCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10005,8 +9916,8 @@ class RemoveTagsFromResourceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.RemoveTagsFromResourceRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.RemoveTagsFromResourceResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10033,7 +9944,6 @@ exports.ResetServiceSettingCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ResetServiceSettingCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10059,8 +9969,8 @@ class ResetServiceSettingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ResetServiceSettingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ResetServiceSettingResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10087,7 +9997,6 @@ exports.ResumeSessionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class ResumeSessionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10113,8 +10022,8 @@ class ResumeSessionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.ResumeSessionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.ResumeSessionResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10141,7 +10050,6 @@ exports.SendAutomationSignalCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class SendAutomationSignalCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10167,8 +10075,8 @@ class SendAutomationSignalCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.SendAutomationSignalRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.SendAutomationSignalResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10249,7 +10157,6 @@ exports.StartAssociationsOnceCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StartAssociationsOnceCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10275,8 +10182,8 @@ class StartAssociationsOnceCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.StartAssociationsOnceRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.StartAssociationsOnceResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10303,7 +10210,6 @@ exports.StartAutomationExecutionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StartAutomationExecutionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10329,8 +10235,8 @@ class StartAutomationExecutionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.StartAutomationExecutionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.StartAutomationExecutionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10357,7 +10263,6 @@ exports.StartChangeRequestExecutionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StartChangeRequestExecutionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10383,8 +10288,8 @@ class StartChangeRequestExecutionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.StartChangeRequestExecutionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.StartChangeRequestExecutionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10411,7 +10316,6 @@ exports.StartSessionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StartSessionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10437,8 +10341,8 @@ class StartSessionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.StartSessionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.StartSessionResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10465,7 +10369,6 @@ exports.StopAutomationExecutionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class StopAutomationExecutionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10491,8 +10394,8 @@ class StopAutomationExecutionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.StopAutomationExecutionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.StopAutomationExecutionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10519,7 +10422,6 @@ exports.TerminateSessionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class TerminateSessionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10545,8 +10447,8 @@ class TerminateSessionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.TerminateSessionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.TerminateSessionResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10573,7 +10475,6 @@ exports.UnlabelParameterVersionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_1_1 = __nccwpck_require__(9974);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UnlabelParameterVersionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10599,8 +10500,8 @@ class UnlabelParameterVersionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_1_1.UnlabelParameterVersionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.UnlabelParameterVersionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10707,7 +10608,7 @@ class UpdateAssociationStatusCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateAssociationStatusRequestFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
             outputFilterSensitiveLog: models_2_1.UpdateAssociationStatusResultFilterSensitiveLog,
         };
         const { requestHandler } = configuration;
@@ -10735,7 +10636,6 @@ exports.UpdateDocumentCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateDocumentCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10761,8 +10661,8 @@ class UpdateDocumentCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateDocumentRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateDocumentResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10789,7 +10689,6 @@ exports.UpdateDocumentDefaultVersionCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateDocumentDefaultVersionCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10815,8 +10714,8 @@ class UpdateDocumentDefaultVersionCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateDocumentDefaultVersionRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateDocumentDefaultVersionResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -10843,7 +10742,6 @@ exports.UpdateDocumentMetadataCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateDocumentMetadataCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -10869,8 +10767,8 @@ class UpdateDocumentMetadataCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateDocumentMetadataRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateDocumentMetadataResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -11059,7 +10957,6 @@ exports.UpdateManagedInstanceRoleCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateManagedInstanceRoleCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -11085,8 +10982,8 @@ class UpdateManagedInstanceRoleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateManagedInstanceRoleRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateManagedInstanceRoleResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -11113,7 +11010,6 @@ exports.UpdateOpsItemCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateOpsItemCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -11139,8 +11035,8 @@ class UpdateOpsItemCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateOpsItemRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateOpsItemResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -11167,7 +11063,6 @@ exports.UpdateOpsMetadataCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateOpsMetadataCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -11193,8 +11088,8 @@ class UpdateOpsMetadataCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateOpsMetadataRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateOpsMetadataResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -11275,7 +11170,6 @@ exports.UpdateResourceDataSyncCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateResourceDataSyncCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -11301,8 +11195,8 @@ class UpdateResourceDataSyncCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateResourceDataSyncRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateResourceDataSyncResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -11329,7 +11223,6 @@ exports.UpdateServiceSettingCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_2_1 = __nccwpck_require__(33439);
 const Aws_json1_1_1 = __nccwpck_require__(95750);
 class UpdateServiceSettingCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -11355,8 +11248,8 @@ class UpdateServiceSettingCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateServiceSettingRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateServiceSettingResultFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -11638,10 +11531,7 @@ tslib_1.__exportStar(__nccwpck_require__(33439), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OpsMetadataAlreadyExistsException = exports.OpsItemAlreadyExistsException = exports.OpsItemAccessDeniedException = exports.OpsItemDataType = exports.ResourceLimitExceededException = exports.IdempotentParameterMismatch = exports.MaxDocumentSizeExceeded = exports.InvalidDocumentSchemaVersion = exports.InvalidDocumentContent = exports.DocumentLimitExceeded = exports.DocumentAlreadyExists = exports.DocumentStatus = exports.ReviewStatus = exports.PlatformType = exports.DocumentParameterType = exports.DocumentHashType = exports.DocumentType = exports.DocumentFormat = exports.AttachmentsSourceKey = exports.Fault = exports.UnsupportedPlatformType = exports.InvalidTargetMaps = exports.InvalidTarget = exports.InvalidTag = exports.InvalidSchedule = exports.InvalidOutputLocation = exports.InvalidDocumentVersion = exports.InvalidDocument = exports.AssociationStatusName = exports.AssociationSyncCompliance = exports.AssociationComplianceSeverity = exports.AssociationLimitExceeded = exports.AssociationAlreadyExists = exports.InvalidParameters = exports.DoesNotExistException = exports.InvalidInstanceId = exports.InvalidCommandId = exports.DuplicateInstanceId = exports.OpsItemRelatedItemAlreadyExistsException = exports.OpsItemNotFoundException = exports.OpsItemLimitExceededException = exports.OpsItemInvalidParameterException = exports.AlreadyExistsException = exports.ExternalAlarmState = exports.TooManyUpdates = exports.TooManyTagsError = exports.InvalidResourceType = exports.InvalidResourceId = exports.InternalServerError = exports.ResourceTypeForTagging = void 0;
 exports.InstanceInformationFilterKey = exports.UnsupportedOperatingSystem = exports.PatchDeploymentStatus = exports.InvalidPermissionType = exports.DocumentPermissionType = exports.StepExecutionFilterKey = exports.AutomationExecutionNotFoundException = exports.InvalidFilterValue = exports.InvalidFilterKey = exports.ExecutionMode = exports.AutomationType = exports.AutomationSubtype = exports.AutomationExecutionStatus = exports.AutomationExecutionFilterKey = exports.AssociationExecutionTargetsFilterKey = exports.AssociationExecutionDoesNotExist = exports.AssociationFilterOperatorType = exports.AssociationExecutionFilterKey = exports.InvalidAssociationVersion = exports.InvalidNextToken = exports.InvalidFilter = exports.DescribeActivationsFilterKeys = exports.TargetInUseException = exports.ResourcePolicyInvalidParameterException = exports.ResourcePolicyConflictException = exports.ResourceDataSyncNotFoundException = exports.ResourceInUseException = exports.ParameterNotFound = exports.OpsMetadataNotFoundException = exports.InvalidTypeNameException = exports.InvalidOptionException = exports.InvalidInventoryRequestException = exports.InvalidDeleteInventoryParametersException = exports.InventorySchemaDeleteOption = exports.InvalidDocumentOperation = exports.AssociatedInstances = exports.AssociationDoesNotExist = exports.InvalidActivationId = exports.InvalidActivation = exports.ResourceDataSyncInvalidConfigurationException = exports.ResourceDataSyncCountExceededException = exports.ResourceDataSyncAlreadyExistsException = exports.ResourceDataSyncS3Format = exports.PatchAction = exports.OperatingSystem = exports.PatchFilterKey = exports.PatchComplianceLevel = exports.OpsMetadataTooManyUpdatesException = exports.OpsMetadataLimitExceededException = exports.OpsMetadataInvalidArgumentException = void 0;
-exports.AttachmentInformationFilterSensitiveLog = exports.CreateDocumentRequestFilterSensitiveLog = exports.DocumentRequiresFilterSensitiveLog = exports.AttachmentsSourceFilterSensitiveLog = exports.CreateAssociationBatchResultFilterSensitiveLog = exports.FailedCreateAssociationFilterSensitiveLog = exports.CreateAssociationBatchRequestFilterSensitiveLog = exports.CreateAssociationBatchRequestEntryFilterSensitiveLog = exports.CreateAssociationResultFilterSensitiveLog = exports.AssociationDescriptionFilterSensitiveLog = exports.AssociationStatusFilterSensitiveLog = exports.AssociationOverviewFilterSensitiveLog = exports.CreateAssociationRequestFilterSensitiveLog = exports.TargetFilterSensitiveLog = exports.TargetLocationFilterSensitiveLog = exports.InstanceAssociationOutputLocationFilterSensitiveLog = exports.S3OutputLocationFilterSensitiveLog = exports.CreateActivationResultFilterSensitiveLog = exports.CreateActivationRequestFilterSensitiveLog = exports.RegistrationMetadataItemFilterSensitiveLog = exports.CancelMaintenanceWindowExecutionResultFilterSensitiveLog = exports.CancelMaintenanceWindowExecutionRequestFilterSensitiveLog = exports.CancelCommandResultFilterSensitiveLog = exports.CancelCommandRequestFilterSensitiveLog = exports.AssociateOpsItemRelatedItemResponseFilterSensitiveLog = exports.AssociateOpsItemRelatedItemRequestFilterSensitiveLog = exports.AlarmStateInformationFilterSensitiveLog = exports.AlarmConfigurationFilterSensitiveLog = exports.AlarmFilterSensitiveLog = exports.AddTagsToResourceResultFilterSensitiveLog = exports.AddTagsToResourceRequestFilterSensitiveLog = exports.ActivationFilterSensitiveLog = exports.TagFilterSensitiveLog = exports.AccountSharingInfoFilterSensitiveLog = exports.OpsItemFilterOperator = exports.OpsItemFilterKey = exports.MaintenanceWindowTaskCutoffBehavior = exports.MaintenanceWindowResourceType = exports.MaintenanceWindowTaskType = exports.MaintenanceWindowExecutionStatus = exports.InvalidDeletionIdException = exports.InventoryDeletionStatus = exports.InstancePatchStateOperatorType = exports.RebootOption = exports.PatchOperationType = exports.PatchComplianceDataState = exports.InvalidInstanceInformationFilterValue = exports.SourceType = exports.ResourceType = exports.PingStatus = void 0;
-exports.DeleteResourceDataSyncResultFilterSensitiveLog = exports.DeleteResourceDataSyncRequestFilterSensitiveLog = exports.DeletePatchBaselineResultFilterSensitiveLog = exports.DeletePatchBaselineRequestFilterSensitiveLog = exports.DeleteParametersResultFilterSensitiveLog = exports.DeleteParametersRequestFilterSensitiveLog = exports.DeleteParameterResultFilterSensitiveLog = exports.DeleteParameterRequestFilterSensitiveLog = exports.DeleteOpsMetadataResultFilterSensitiveLog = exports.DeleteOpsMetadataRequestFilterSensitiveLog = exports.DeleteMaintenanceWindowResultFilterSensitiveLog = exports.DeleteMaintenanceWindowRequestFilterSensitiveLog = exports.DeleteInventoryResultFilterSensitiveLog = exports.InventoryDeletionSummaryFilterSensitiveLog = exports.InventoryDeletionSummaryItemFilterSensitiveLog = exports.DeleteInventoryRequestFilterSensitiveLog = exports.DeleteDocumentResultFilterSensitiveLog = exports.DeleteDocumentRequestFilterSensitiveLog = exports.DeleteAssociationResultFilterSensitiveLog = exports.DeleteAssociationRequestFilterSensitiveLog = exports.DeleteActivationResultFilterSensitiveLog = exports.DeleteActivationRequestFilterSensitiveLog = exports.CreateResourceDataSyncResultFilterSensitiveLog = exports.CreateResourceDataSyncRequestFilterSensitiveLog = exports.ResourceDataSyncSourceFilterSensitiveLog = exports.ResourceDataSyncAwsOrganizationsSourceFilterSensitiveLog = exports.ResourceDataSyncOrganizationalUnitFilterSensitiveLog = exports.ResourceDataSyncS3DestinationFilterSensitiveLog = exports.ResourceDataSyncDestinationDataSharingFilterSensitiveLog = exports.CreatePatchBaselineResultFilterSensitiveLog = exports.CreatePatchBaselineRequestFilterSensitiveLog = exports.PatchSourceFilterSensitiveLog = exports.PatchRuleGroupFilterSensitiveLog = exports.PatchRuleFilterSensitiveLog = exports.PatchFilterGroupFilterSensitiveLog = exports.PatchFilterFilterSensitiveLog = exports.CreateOpsMetadataResultFilterSensitiveLog = exports.CreateOpsMetadataRequestFilterSensitiveLog = exports.MetadataValueFilterSensitiveLog = exports.CreateOpsItemResponseFilterSensitiveLog = exports.CreateOpsItemRequestFilterSensitiveLog = exports.RelatedOpsItemFilterSensitiveLog = exports.OpsItemDataValueFilterSensitiveLog = exports.OpsItemNotificationFilterSensitiveLog = exports.CreateMaintenanceWindowResultFilterSensitiveLog = exports.CreateMaintenanceWindowRequestFilterSensitiveLog = exports.CreateDocumentResultFilterSensitiveLog = exports.DocumentDescriptionFilterSensitiveLog = exports.ReviewInformationFilterSensitiveLog = exports.DocumentParameterFilterSensitiveLog = void 0;
-exports.DescribeEffectivePatchesForPatchBaselineResultFilterSensitiveLog = exports.EffectivePatchFilterSensitiveLog = exports.PatchStatusFilterSensitiveLog = exports.DescribeEffectivePatchesForPatchBaselineRequestFilterSensitiveLog = exports.DescribeEffectiveInstanceAssociationsResultFilterSensitiveLog = exports.InstanceAssociationFilterSensitiveLog = exports.DescribeEffectiveInstanceAssociationsRequestFilterSensitiveLog = exports.DescribeDocumentPermissionResponseFilterSensitiveLog = exports.DescribeDocumentPermissionRequestFilterSensitiveLog = exports.DescribeDocumentResultFilterSensitiveLog = exports.DescribeDocumentRequestFilterSensitiveLog = exports.DescribeAvailablePatchesResultFilterSensitiveLog = exports.PatchFilterSensitiveLog = exports.DescribeAvailablePatchesRequestFilterSensitiveLog = exports.PatchOrchestratorFilterFilterSensitiveLog = exports.DescribeAutomationStepExecutionsResultFilterSensitiveLog = exports.StepExecutionFilterSensitiveLog = exports.FailureDetailsFilterSensitiveLog = exports.DescribeAutomationStepExecutionsRequestFilterSensitiveLog = exports.StepExecutionFilterFilterSensitiveLog = exports.DescribeAutomationExecutionsResultFilterSensitiveLog = exports.AutomationExecutionMetadataFilterSensitiveLog = exports.RunbookFilterSensitiveLog = exports.ResolvedTargetsFilterSensitiveLog = exports.DescribeAutomationExecutionsRequestFilterSensitiveLog = exports.AutomationExecutionFilterFilterSensitiveLog = exports.DescribeAssociationExecutionTargetsResultFilterSensitiveLog = exports.AssociationExecutionTargetFilterSensitiveLog = exports.OutputSourceFilterSensitiveLog = exports.DescribeAssociationExecutionTargetsRequestFilterSensitiveLog = exports.AssociationExecutionTargetsFilterFilterSensitiveLog = exports.DescribeAssociationExecutionsResultFilterSensitiveLog = exports.AssociationExecutionFilterSensitiveLog = exports.DescribeAssociationExecutionsRequestFilterSensitiveLog = exports.AssociationExecutionFilterFilterSensitiveLog = exports.DescribeAssociationResultFilterSensitiveLog = exports.DescribeAssociationRequestFilterSensitiveLog = exports.DescribeActivationsResultFilterSensitiveLog = exports.DescribeActivationsRequestFilterSensitiveLog = exports.DescribeActivationsFilterFilterSensitiveLog = exports.DeregisterTaskFromMaintenanceWindowResultFilterSensitiveLog = exports.DeregisterTaskFromMaintenanceWindowRequestFilterSensitiveLog = exports.DeregisterTargetFromMaintenanceWindowResultFilterSensitiveLog = exports.DeregisterTargetFromMaintenanceWindowRequestFilterSensitiveLog = exports.DeregisterPatchBaselineForPatchGroupResultFilterSensitiveLog = exports.DeregisterPatchBaselineForPatchGroupRequestFilterSensitiveLog = exports.DeregisterManagedInstanceResultFilterSensitiveLog = exports.DeregisterManagedInstanceRequestFilterSensitiveLog = exports.DeleteResourcePolicyResponseFilterSensitiveLog = exports.DeleteResourcePolicyRequestFilterSensitiveLog = void 0;
-exports.DescribeMaintenanceWindowTasksResultFilterSensitiveLog = exports.MaintenanceWindowTaskFilterSensitiveLog = exports.MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = exports.LoggingInfoFilterSensitiveLog = exports.DescribeMaintenanceWindowTasksRequestFilterSensitiveLog = exports.DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = exports.MaintenanceWindowTargetFilterSensitiveLog = exports.DescribeMaintenanceWindowTargetsRequestFilterSensitiveLog = exports.DescribeMaintenanceWindowsForTargetResultFilterSensitiveLog = exports.MaintenanceWindowIdentityForTargetFilterSensitiveLog = exports.DescribeMaintenanceWindowsForTargetRequestFilterSensitiveLog = exports.DescribeMaintenanceWindowScheduleResultFilterSensitiveLog = exports.ScheduledWindowExecutionFilterSensitiveLog = exports.DescribeMaintenanceWindowScheduleRequestFilterSensitiveLog = exports.DescribeMaintenanceWindowsResultFilterSensitiveLog = exports.MaintenanceWindowIdentityFilterSensitiveLog = exports.DescribeMaintenanceWindowsRequestFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionTasksResultFilterSensitiveLog = exports.MaintenanceWindowExecutionTaskIdentityFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionTasksRequestFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog = exports.MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionTaskInvocationsRequestFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionsResultFilterSensitiveLog = exports.MaintenanceWindowExecutionFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionsRequestFilterSensitiveLog = exports.MaintenanceWindowFilterFilterSensitiveLog = exports.DescribeInventoryDeletionsResultFilterSensitiveLog = exports.InventoryDeletionStatusItemFilterSensitiveLog = exports.DescribeInventoryDeletionsRequestFilterSensitiveLog = exports.DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = exports.DescribeInstancePatchStatesForPatchGroupRequestFilterSensitiveLog = exports.InstancePatchStateFilterFilterSensitiveLog = exports.DescribeInstancePatchStatesResultFilterSensitiveLog = exports.InstancePatchStateFilterSensitiveLog = exports.DescribeInstancePatchStatesRequestFilterSensitiveLog = exports.DescribeInstancePatchesResultFilterSensitiveLog = exports.PatchComplianceDataFilterSensitiveLog = exports.DescribeInstancePatchesRequestFilterSensitiveLog = exports.DescribeInstanceInformationResultFilterSensitiveLog = exports.InstanceInformationFilterSensitiveLog = exports.InstanceAggregatedAssociationOverviewFilterSensitiveLog = exports.DescribeInstanceInformationRequestFilterSensitiveLog = exports.InstanceInformationFilterFilterSensitiveLog = exports.InstanceInformationStringFilterFilterSensitiveLog = exports.DescribeInstanceAssociationsStatusResultFilterSensitiveLog = exports.InstanceAssociationStatusInfoFilterSensitiveLog = exports.InstanceAssociationOutputUrlFilterSensitiveLog = exports.S3OutputUrlFilterSensitiveLog = exports.DescribeInstanceAssociationsStatusRequestFilterSensitiveLog = void 0;
+exports.DescribeMaintenanceWindowTasksResultFilterSensitiveLog = exports.MaintenanceWindowTaskFilterSensitiveLog = exports.MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = exports.DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = exports.MaintenanceWindowTargetFilterSensitiveLog = exports.DescribeMaintenanceWindowsResultFilterSensitiveLog = exports.MaintenanceWindowIdentityFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog = exports.MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog = exports.DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = exports.DescribeInstancePatchStatesResultFilterSensitiveLog = exports.InstancePatchStateFilterSensitiveLog = exports.DescribeAssociationResultFilterSensitiveLog = exports.CreatePatchBaselineRequestFilterSensitiveLog = exports.PatchSourceFilterSensitiveLog = exports.CreateMaintenanceWindowRequestFilterSensitiveLog = exports.CreateAssociationBatchResultFilterSensitiveLog = exports.FailedCreateAssociationFilterSensitiveLog = exports.CreateAssociationBatchRequestFilterSensitiveLog = exports.CreateAssociationBatchRequestEntryFilterSensitiveLog = exports.CreateAssociationResultFilterSensitiveLog = exports.AssociationDescriptionFilterSensitiveLog = exports.CreateAssociationRequestFilterSensitiveLog = exports.OpsItemFilterOperator = exports.OpsItemFilterKey = exports.MaintenanceWindowTaskCutoffBehavior = exports.MaintenanceWindowResourceType = exports.MaintenanceWindowTaskType = exports.MaintenanceWindowExecutionStatus = exports.InvalidDeletionIdException = exports.InventoryDeletionStatus = exports.InstancePatchStateOperatorType = exports.RebootOption = exports.PatchOperationType = exports.PatchComplianceDataState = exports.InvalidInstanceInformationFilterValue = exports.SourceType = exports.ResourceType = exports.PingStatus = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const SSMServiceException_1 = __nccwpck_require__(97777);
 var ResourceTypeForTagging;
@@ -12981,103 +12871,11 @@ var OpsItemFilterOperator;
     OpsItemFilterOperator["GREATER_THAN"] = "GreaterThan";
     OpsItemFilterOperator["LESS_THAN"] = "LessThan";
 })(OpsItemFilterOperator = exports.OpsItemFilterOperator || (exports.OpsItemFilterOperator = {}));
-const AccountSharingInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AccountSharingInfoFilterSensitiveLog = AccountSharingInfoFilterSensitiveLog;
-const TagFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TagFilterSensitiveLog = TagFilterSensitiveLog;
-const ActivationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ActivationFilterSensitiveLog = ActivationFilterSensitiveLog;
-const AddTagsToResourceRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AddTagsToResourceRequestFilterSensitiveLog = AddTagsToResourceRequestFilterSensitiveLog;
-const AddTagsToResourceResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AddTagsToResourceResultFilterSensitiveLog = AddTagsToResourceResultFilterSensitiveLog;
-const AlarmFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AlarmFilterSensitiveLog = AlarmFilterSensitiveLog;
-const AlarmConfigurationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AlarmConfigurationFilterSensitiveLog = AlarmConfigurationFilterSensitiveLog;
-const AlarmStateInformationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AlarmStateInformationFilterSensitiveLog = AlarmStateInformationFilterSensitiveLog;
-const AssociateOpsItemRelatedItemRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociateOpsItemRelatedItemRequestFilterSensitiveLog = AssociateOpsItemRelatedItemRequestFilterSensitiveLog;
-const AssociateOpsItemRelatedItemResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociateOpsItemRelatedItemResponseFilterSensitiveLog = AssociateOpsItemRelatedItemResponseFilterSensitiveLog;
-const CancelCommandRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CancelCommandRequestFilterSensitiveLog = CancelCommandRequestFilterSensitiveLog;
-const CancelCommandResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CancelCommandResultFilterSensitiveLog = CancelCommandResultFilterSensitiveLog;
-const CancelMaintenanceWindowExecutionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CancelMaintenanceWindowExecutionRequestFilterSensitiveLog = CancelMaintenanceWindowExecutionRequestFilterSensitiveLog;
-const CancelMaintenanceWindowExecutionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CancelMaintenanceWindowExecutionResultFilterSensitiveLog = CancelMaintenanceWindowExecutionResultFilterSensitiveLog;
-const RegistrationMetadataItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegistrationMetadataItemFilterSensitiveLog = RegistrationMetadataItemFilterSensitiveLog;
-const CreateActivationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateActivationRequestFilterSensitiveLog = CreateActivationRequestFilterSensitiveLog;
-const CreateActivationResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateActivationResultFilterSensitiveLog = CreateActivationResultFilterSensitiveLog;
-const S3OutputLocationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.S3OutputLocationFilterSensitiveLog = S3OutputLocationFilterSensitiveLog;
-const InstanceAssociationOutputLocationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstanceAssociationOutputLocationFilterSensitiveLog = InstanceAssociationOutputLocationFilterSensitiveLog;
-const TargetLocationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TargetLocationFilterSensitiveLog = TargetLocationFilterSensitiveLog;
-const TargetFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TargetFilterSensitiveLog = TargetFilterSensitiveLog;
 const CreateAssociationRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.CreateAssociationRequestFilterSensitiveLog = CreateAssociationRequestFilterSensitiveLog;
-const AssociationOverviewFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociationOverviewFilterSensitiveLog = AssociationOverviewFilterSensitiveLog;
-const AssociationStatusFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociationStatusFilterSensitiveLog = AssociationStatusFilterSensitiveLog;
 const AssociationDescriptionFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
@@ -13113,95 +12911,11 @@ const CreateAssociationBatchResultFilterSensitiveLog = (obj) => ({
     ...(obj.Failed && { Failed: obj.Failed.map((item) => (0, exports.FailedCreateAssociationFilterSensitiveLog)(item)) }),
 });
 exports.CreateAssociationBatchResultFilterSensitiveLog = CreateAssociationBatchResultFilterSensitiveLog;
-const AttachmentsSourceFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AttachmentsSourceFilterSensitiveLog = AttachmentsSourceFilterSensitiveLog;
-const DocumentRequiresFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentRequiresFilterSensitiveLog = DocumentRequiresFilterSensitiveLog;
-const CreateDocumentRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateDocumentRequestFilterSensitiveLog = CreateDocumentRequestFilterSensitiveLog;
-const AttachmentInformationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AttachmentInformationFilterSensitiveLog = AttachmentInformationFilterSensitiveLog;
-const DocumentParameterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentParameterFilterSensitiveLog = DocumentParameterFilterSensitiveLog;
-const ReviewInformationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ReviewInformationFilterSensitiveLog = ReviewInformationFilterSensitiveLog;
-const DocumentDescriptionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentDescriptionFilterSensitiveLog = DocumentDescriptionFilterSensitiveLog;
-const CreateDocumentResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateDocumentResultFilterSensitiveLog = CreateDocumentResultFilterSensitiveLog;
 const CreateMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Description && { Description: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.CreateMaintenanceWindowRequestFilterSensitiveLog = CreateMaintenanceWindowRequestFilterSensitiveLog;
-const CreateMaintenanceWindowResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateMaintenanceWindowResultFilterSensitiveLog = CreateMaintenanceWindowResultFilterSensitiveLog;
-const OpsItemNotificationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemNotificationFilterSensitiveLog = OpsItemNotificationFilterSensitiveLog;
-const OpsItemDataValueFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemDataValueFilterSensitiveLog = OpsItemDataValueFilterSensitiveLog;
-const RelatedOpsItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RelatedOpsItemFilterSensitiveLog = RelatedOpsItemFilterSensitiveLog;
-const CreateOpsItemRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateOpsItemRequestFilterSensitiveLog = CreateOpsItemRequestFilterSensitiveLog;
-const CreateOpsItemResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateOpsItemResponseFilterSensitiveLog = CreateOpsItemResponseFilterSensitiveLog;
-const MetadataValueFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MetadataValueFilterSensitiveLog = MetadataValueFilterSensitiveLog;
-const CreateOpsMetadataRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateOpsMetadataRequestFilterSensitiveLog = CreateOpsMetadataRequestFilterSensitiveLog;
-const CreateOpsMetadataResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateOpsMetadataResultFilterSensitiveLog = CreateOpsMetadataResultFilterSensitiveLog;
-const PatchFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchFilterFilterSensitiveLog = PatchFilterFilterSensitiveLog;
-const PatchFilterGroupFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchFilterGroupFilterSensitiveLog = PatchFilterGroupFilterSensitiveLog;
-const PatchRuleFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchRuleFilterSensitiveLog = PatchRuleFilterSensitiveLog;
-const PatchRuleGroupFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchRuleGroupFilterSensitiveLog = PatchRuleGroupFilterSensitiveLog;
 const PatchSourceFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Configuration && { Configuration: smithy_client_1.SENSITIVE_STRING }),
@@ -13212,182 +12926,6 @@ const CreatePatchBaselineRequestFilterSensitiveLog = (obj) => ({
     ...(obj.Sources && { Sources: obj.Sources.map((item) => (0, exports.PatchSourceFilterSensitiveLog)(item)) }),
 });
 exports.CreatePatchBaselineRequestFilterSensitiveLog = CreatePatchBaselineRequestFilterSensitiveLog;
-const CreatePatchBaselineResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreatePatchBaselineResultFilterSensitiveLog = CreatePatchBaselineResultFilterSensitiveLog;
-const ResourceDataSyncDestinationDataSharingFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResourceDataSyncDestinationDataSharingFilterSensitiveLog = ResourceDataSyncDestinationDataSharingFilterSensitiveLog;
-const ResourceDataSyncS3DestinationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResourceDataSyncS3DestinationFilterSensitiveLog = ResourceDataSyncS3DestinationFilterSensitiveLog;
-const ResourceDataSyncOrganizationalUnitFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResourceDataSyncOrganizationalUnitFilterSensitiveLog = ResourceDataSyncOrganizationalUnitFilterSensitiveLog;
-const ResourceDataSyncAwsOrganizationsSourceFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResourceDataSyncAwsOrganizationsSourceFilterSensitiveLog = ResourceDataSyncAwsOrganizationsSourceFilterSensitiveLog;
-const ResourceDataSyncSourceFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResourceDataSyncSourceFilterSensitiveLog = ResourceDataSyncSourceFilterSensitiveLog;
-const CreateResourceDataSyncRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateResourceDataSyncRequestFilterSensitiveLog = CreateResourceDataSyncRequestFilterSensitiveLog;
-const CreateResourceDataSyncResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateResourceDataSyncResultFilterSensitiveLog = CreateResourceDataSyncResultFilterSensitiveLog;
-const DeleteActivationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteActivationRequestFilterSensitiveLog = DeleteActivationRequestFilterSensitiveLog;
-const DeleteActivationResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteActivationResultFilterSensitiveLog = DeleteActivationResultFilterSensitiveLog;
-const DeleteAssociationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteAssociationRequestFilterSensitiveLog = DeleteAssociationRequestFilterSensitiveLog;
-const DeleteAssociationResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteAssociationResultFilterSensitiveLog = DeleteAssociationResultFilterSensitiveLog;
-const DeleteDocumentRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteDocumentRequestFilterSensitiveLog = DeleteDocumentRequestFilterSensitiveLog;
-const DeleteDocumentResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteDocumentResultFilterSensitiveLog = DeleteDocumentResultFilterSensitiveLog;
-const DeleteInventoryRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteInventoryRequestFilterSensitiveLog = DeleteInventoryRequestFilterSensitiveLog;
-const InventoryDeletionSummaryItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryDeletionSummaryItemFilterSensitiveLog = InventoryDeletionSummaryItemFilterSensitiveLog;
-const InventoryDeletionSummaryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryDeletionSummaryFilterSensitiveLog = InventoryDeletionSummaryFilterSensitiveLog;
-const DeleteInventoryResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteInventoryResultFilterSensitiveLog = DeleteInventoryResultFilterSensitiveLog;
-const DeleteMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteMaintenanceWindowRequestFilterSensitiveLog = DeleteMaintenanceWindowRequestFilterSensitiveLog;
-const DeleteMaintenanceWindowResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteMaintenanceWindowResultFilterSensitiveLog = DeleteMaintenanceWindowResultFilterSensitiveLog;
-const DeleteOpsMetadataRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteOpsMetadataRequestFilterSensitiveLog = DeleteOpsMetadataRequestFilterSensitiveLog;
-const DeleteOpsMetadataResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteOpsMetadataResultFilterSensitiveLog = DeleteOpsMetadataResultFilterSensitiveLog;
-const DeleteParameterRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteParameterRequestFilterSensitiveLog = DeleteParameterRequestFilterSensitiveLog;
-const DeleteParameterResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteParameterResultFilterSensitiveLog = DeleteParameterResultFilterSensitiveLog;
-const DeleteParametersRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteParametersRequestFilterSensitiveLog = DeleteParametersRequestFilterSensitiveLog;
-const DeleteParametersResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteParametersResultFilterSensitiveLog = DeleteParametersResultFilterSensitiveLog;
-const DeletePatchBaselineRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeletePatchBaselineRequestFilterSensitiveLog = DeletePatchBaselineRequestFilterSensitiveLog;
-const DeletePatchBaselineResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeletePatchBaselineResultFilterSensitiveLog = DeletePatchBaselineResultFilterSensitiveLog;
-const DeleteResourceDataSyncRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteResourceDataSyncRequestFilterSensitiveLog = DeleteResourceDataSyncRequestFilterSensitiveLog;
-const DeleteResourceDataSyncResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteResourceDataSyncResultFilterSensitiveLog = DeleteResourceDataSyncResultFilterSensitiveLog;
-const DeleteResourcePolicyRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteResourcePolicyRequestFilterSensitiveLog = DeleteResourcePolicyRequestFilterSensitiveLog;
-const DeleteResourcePolicyResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeleteResourcePolicyResponseFilterSensitiveLog = DeleteResourcePolicyResponseFilterSensitiveLog;
-const DeregisterManagedInstanceRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeregisterManagedInstanceRequestFilterSensitiveLog = DeregisterManagedInstanceRequestFilterSensitiveLog;
-const DeregisterManagedInstanceResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeregisterManagedInstanceResultFilterSensitiveLog = DeregisterManagedInstanceResultFilterSensitiveLog;
-const DeregisterPatchBaselineForPatchGroupRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeregisterPatchBaselineForPatchGroupRequestFilterSensitiveLog = DeregisterPatchBaselineForPatchGroupRequestFilterSensitiveLog;
-const DeregisterPatchBaselineForPatchGroupResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeregisterPatchBaselineForPatchGroupResultFilterSensitiveLog = DeregisterPatchBaselineForPatchGroupResultFilterSensitiveLog;
-const DeregisterTargetFromMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeregisterTargetFromMaintenanceWindowRequestFilterSensitiveLog = DeregisterTargetFromMaintenanceWindowRequestFilterSensitiveLog;
-const DeregisterTargetFromMaintenanceWindowResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeregisterTargetFromMaintenanceWindowResultFilterSensitiveLog = DeregisterTargetFromMaintenanceWindowResultFilterSensitiveLog;
-const DeregisterTaskFromMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeregisterTaskFromMaintenanceWindowRequestFilterSensitiveLog = DeregisterTaskFromMaintenanceWindowRequestFilterSensitiveLog;
-const DeregisterTaskFromMaintenanceWindowResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DeregisterTaskFromMaintenanceWindowResultFilterSensitiveLog = DeregisterTaskFromMaintenanceWindowResultFilterSensitiveLog;
-const DescribeActivationsFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeActivationsFilterFilterSensitiveLog = DescribeActivationsFilterFilterSensitiveLog;
-const DescribeActivationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeActivationsRequestFilterSensitiveLog = DescribeActivationsRequestFilterSensitiveLog;
-const DescribeActivationsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeActivationsResultFilterSensitiveLog = DescribeActivationsResultFilterSensitiveLog;
-const DescribeAssociationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAssociationRequestFilterSensitiveLog = DescribeAssociationRequestFilterSensitiveLog;
 const DescribeAssociationResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.AssociationDescription && {
@@ -13395,206 +12933,6 @@ const DescribeAssociationResultFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.DescribeAssociationResultFilterSensitiveLog = DescribeAssociationResultFilterSensitiveLog;
-const AssociationExecutionFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociationExecutionFilterFilterSensitiveLog = AssociationExecutionFilterFilterSensitiveLog;
-const DescribeAssociationExecutionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAssociationExecutionsRequestFilterSensitiveLog = DescribeAssociationExecutionsRequestFilterSensitiveLog;
-const AssociationExecutionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociationExecutionFilterSensitiveLog = AssociationExecutionFilterSensitiveLog;
-const DescribeAssociationExecutionsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAssociationExecutionsResultFilterSensitiveLog = DescribeAssociationExecutionsResultFilterSensitiveLog;
-const AssociationExecutionTargetsFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociationExecutionTargetsFilterFilterSensitiveLog = AssociationExecutionTargetsFilterFilterSensitiveLog;
-const DescribeAssociationExecutionTargetsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAssociationExecutionTargetsRequestFilterSensitiveLog = DescribeAssociationExecutionTargetsRequestFilterSensitiveLog;
-const OutputSourceFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OutputSourceFilterSensitiveLog = OutputSourceFilterSensitiveLog;
-const AssociationExecutionTargetFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociationExecutionTargetFilterSensitiveLog = AssociationExecutionTargetFilterSensitiveLog;
-const DescribeAssociationExecutionTargetsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAssociationExecutionTargetsResultFilterSensitiveLog = DescribeAssociationExecutionTargetsResultFilterSensitiveLog;
-const AutomationExecutionFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AutomationExecutionFilterFilterSensitiveLog = AutomationExecutionFilterFilterSensitiveLog;
-const DescribeAutomationExecutionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAutomationExecutionsRequestFilterSensitiveLog = DescribeAutomationExecutionsRequestFilterSensitiveLog;
-const ResolvedTargetsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResolvedTargetsFilterSensitiveLog = ResolvedTargetsFilterSensitiveLog;
-const RunbookFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RunbookFilterSensitiveLog = RunbookFilterSensitiveLog;
-const AutomationExecutionMetadataFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AutomationExecutionMetadataFilterSensitiveLog = AutomationExecutionMetadataFilterSensitiveLog;
-const DescribeAutomationExecutionsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAutomationExecutionsResultFilterSensitiveLog = DescribeAutomationExecutionsResultFilterSensitiveLog;
-const StepExecutionFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StepExecutionFilterFilterSensitiveLog = StepExecutionFilterFilterSensitiveLog;
-const DescribeAutomationStepExecutionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAutomationStepExecutionsRequestFilterSensitiveLog = DescribeAutomationStepExecutionsRequestFilterSensitiveLog;
-const FailureDetailsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.FailureDetailsFilterSensitiveLog = FailureDetailsFilterSensitiveLog;
-const StepExecutionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StepExecutionFilterSensitiveLog = StepExecutionFilterSensitiveLog;
-const DescribeAutomationStepExecutionsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAutomationStepExecutionsResultFilterSensitiveLog = DescribeAutomationStepExecutionsResultFilterSensitiveLog;
-const PatchOrchestratorFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchOrchestratorFilterFilterSensitiveLog = PatchOrchestratorFilterFilterSensitiveLog;
-const DescribeAvailablePatchesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAvailablePatchesRequestFilterSensitiveLog = DescribeAvailablePatchesRequestFilterSensitiveLog;
-const PatchFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchFilterSensitiveLog = PatchFilterSensitiveLog;
-const DescribeAvailablePatchesResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeAvailablePatchesResultFilterSensitiveLog = DescribeAvailablePatchesResultFilterSensitiveLog;
-const DescribeDocumentRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeDocumentRequestFilterSensitiveLog = DescribeDocumentRequestFilterSensitiveLog;
-const DescribeDocumentResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeDocumentResultFilterSensitiveLog = DescribeDocumentResultFilterSensitiveLog;
-const DescribeDocumentPermissionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeDocumentPermissionRequestFilterSensitiveLog = DescribeDocumentPermissionRequestFilterSensitiveLog;
-const DescribeDocumentPermissionResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeDocumentPermissionResponseFilterSensitiveLog = DescribeDocumentPermissionResponseFilterSensitiveLog;
-const DescribeEffectiveInstanceAssociationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeEffectiveInstanceAssociationsRequestFilterSensitiveLog = DescribeEffectiveInstanceAssociationsRequestFilterSensitiveLog;
-const InstanceAssociationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstanceAssociationFilterSensitiveLog = InstanceAssociationFilterSensitiveLog;
-const DescribeEffectiveInstanceAssociationsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeEffectiveInstanceAssociationsResultFilterSensitiveLog = DescribeEffectiveInstanceAssociationsResultFilterSensitiveLog;
-const DescribeEffectivePatchesForPatchBaselineRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeEffectivePatchesForPatchBaselineRequestFilterSensitiveLog = DescribeEffectivePatchesForPatchBaselineRequestFilterSensitiveLog;
-const PatchStatusFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchStatusFilterSensitiveLog = PatchStatusFilterSensitiveLog;
-const EffectivePatchFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.EffectivePatchFilterSensitiveLog = EffectivePatchFilterSensitiveLog;
-const DescribeEffectivePatchesForPatchBaselineResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeEffectivePatchesForPatchBaselineResultFilterSensitiveLog = DescribeEffectivePatchesForPatchBaselineResultFilterSensitiveLog;
-const DescribeInstanceAssociationsStatusRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInstanceAssociationsStatusRequestFilterSensitiveLog = DescribeInstanceAssociationsStatusRequestFilterSensitiveLog;
-const S3OutputUrlFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.S3OutputUrlFilterSensitiveLog = S3OutputUrlFilterSensitiveLog;
-const InstanceAssociationOutputUrlFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstanceAssociationOutputUrlFilterSensitiveLog = InstanceAssociationOutputUrlFilterSensitiveLog;
-const InstanceAssociationStatusInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstanceAssociationStatusInfoFilterSensitiveLog = InstanceAssociationStatusInfoFilterSensitiveLog;
-const DescribeInstanceAssociationsStatusResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInstanceAssociationsStatusResultFilterSensitiveLog = DescribeInstanceAssociationsStatusResultFilterSensitiveLog;
-const InstanceInformationStringFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstanceInformationStringFilterFilterSensitiveLog = InstanceInformationStringFilterFilterSensitiveLog;
-const InstanceInformationFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstanceInformationFilterFilterSensitiveLog = InstanceInformationFilterFilterSensitiveLog;
-const DescribeInstanceInformationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInstanceInformationRequestFilterSensitiveLog = DescribeInstanceInformationRequestFilterSensitiveLog;
-const InstanceAggregatedAssociationOverviewFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstanceAggregatedAssociationOverviewFilterSensitiveLog = InstanceAggregatedAssociationOverviewFilterSensitiveLog;
-const InstanceInformationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstanceInformationFilterSensitiveLog = InstanceInformationFilterSensitiveLog;
-const DescribeInstanceInformationResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInstanceInformationResultFilterSensitiveLog = DescribeInstanceInformationResultFilterSensitiveLog;
-const DescribeInstancePatchesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInstancePatchesRequestFilterSensitiveLog = DescribeInstancePatchesRequestFilterSensitiveLog;
-const PatchComplianceDataFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchComplianceDataFilterSensitiveLog = PatchComplianceDataFilterSensitiveLog;
-const DescribeInstancePatchesResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInstancePatchesResultFilterSensitiveLog = DescribeInstancePatchesResultFilterSensitiveLog;
-const DescribeInstancePatchStatesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInstancePatchStatesRequestFilterSensitiveLog = DescribeInstancePatchStatesRequestFilterSensitiveLog;
 const InstancePatchStateFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.OwnerInformation && { OwnerInformation: smithy_client_1.SENSITIVE_STRING }),
@@ -13607,14 +12945,6 @@ const DescribeInstancePatchStatesResultFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.DescribeInstancePatchStatesResultFilterSensitiveLog = DescribeInstancePatchStatesResultFilterSensitiveLog;
-const InstancePatchStateFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InstancePatchStateFilterFilterSensitiveLog = InstancePatchStateFilterFilterSensitiveLog;
-const DescribeInstancePatchStatesForPatchGroupRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInstancePatchStatesForPatchGroupRequestFilterSensitiveLog = DescribeInstancePatchStatesForPatchGroupRequestFilterSensitiveLog;
 const DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.InstancePatchStates && {
@@ -13622,38 +12952,6 @@ const DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = (obj) =
     }),
 });
 exports.DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog;
-const DescribeInventoryDeletionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInventoryDeletionsRequestFilterSensitiveLog = DescribeInventoryDeletionsRequestFilterSensitiveLog;
-const InventoryDeletionStatusItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryDeletionStatusItemFilterSensitiveLog = InventoryDeletionStatusItemFilterSensitiveLog;
-const DescribeInventoryDeletionsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeInventoryDeletionsResultFilterSensitiveLog = DescribeInventoryDeletionsResultFilterSensitiveLog;
-const MaintenanceWindowFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MaintenanceWindowFilterFilterSensitiveLog = MaintenanceWindowFilterFilterSensitiveLog;
-const DescribeMaintenanceWindowExecutionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowExecutionsRequestFilterSensitiveLog = DescribeMaintenanceWindowExecutionsRequestFilterSensitiveLog;
-const MaintenanceWindowExecutionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MaintenanceWindowExecutionFilterSensitiveLog = MaintenanceWindowExecutionFilterSensitiveLog;
-const DescribeMaintenanceWindowExecutionsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowExecutionsResultFilterSensitiveLog = DescribeMaintenanceWindowExecutionsResultFilterSensitiveLog;
-const DescribeMaintenanceWindowExecutionTaskInvocationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowExecutionTaskInvocationsRequestFilterSensitiveLog = DescribeMaintenanceWindowExecutionTaskInvocationsRequestFilterSensitiveLog;
 const MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
@@ -13667,22 +12965,6 @@ const DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog 
     }),
 });
 exports.DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog = DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog;
-const DescribeMaintenanceWindowExecutionTasksRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowExecutionTasksRequestFilterSensitiveLog = DescribeMaintenanceWindowExecutionTasksRequestFilterSensitiveLog;
-const MaintenanceWindowExecutionTaskIdentityFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MaintenanceWindowExecutionTaskIdentityFilterSensitiveLog = MaintenanceWindowExecutionTaskIdentityFilterSensitiveLog;
-const DescribeMaintenanceWindowExecutionTasksResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowExecutionTasksResultFilterSensitiveLog = DescribeMaintenanceWindowExecutionTasksResultFilterSensitiveLog;
-const DescribeMaintenanceWindowsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowsRequestFilterSensitiveLog = DescribeMaintenanceWindowsRequestFilterSensitiveLog;
 const MaintenanceWindowIdentityFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Description && { Description: smithy_client_1.SENSITIVE_STRING }),
@@ -13695,34 +12977,6 @@ const DescribeMaintenanceWindowsResultFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.DescribeMaintenanceWindowsResultFilterSensitiveLog = DescribeMaintenanceWindowsResultFilterSensitiveLog;
-const DescribeMaintenanceWindowScheduleRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowScheduleRequestFilterSensitiveLog = DescribeMaintenanceWindowScheduleRequestFilterSensitiveLog;
-const ScheduledWindowExecutionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ScheduledWindowExecutionFilterSensitiveLog = ScheduledWindowExecutionFilterSensitiveLog;
-const DescribeMaintenanceWindowScheduleResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowScheduleResultFilterSensitiveLog = DescribeMaintenanceWindowScheduleResultFilterSensitiveLog;
-const DescribeMaintenanceWindowsForTargetRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowsForTargetRequestFilterSensitiveLog = DescribeMaintenanceWindowsForTargetRequestFilterSensitiveLog;
-const MaintenanceWindowIdentityForTargetFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MaintenanceWindowIdentityForTargetFilterSensitiveLog = MaintenanceWindowIdentityForTargetFilterSensitiveLog;
-const DescribeMaintenanceWindowsForTargetResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowsForTargetResultFilterSensitiveLog = DescribeMaintenanceWindowsForTargetResultFilterSensitiveLog;
-const DescribeMaintenanceWindowTargetsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowTargetsRequestFilterSensitiveLog = DescribeMaintenanceWindowTargetsRequestFilterSensitiveLog;
 const MaintenanceWindowTargetFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.OwnerInformation && { OwnerInformation: smithy_client_1.SENSITIVE_STRING }),
@@ -13734,14 +12988,6 @@ const DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = (obj) => ({
     ...(obj.Targets && { Targets: obj.Targets.map((item) => (0, exports.MaintenanceWindowTargetFilterSensitiveLog)(item)) }),
 });
 exports.DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = DescribeMaintenanceWindowTargetsResultFilterSensitiveLog;
-const DescribeMaintenanceWindowTasksRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeMaintenanceWindowTasksRequestFilterSensitiveLog = DescribeMaintenanceWindowTasksRequestFilterSensitiveLog;
-const LoggingInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.LoggingInfoFilterSensitiveLog = LoggingInfoFilterSensitiveLog;
 const MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Values && { Values: smithy_client_1.SENSITIVE_STRING }),
@@ -13769,11 +13015,8 @@ exports.DescribeMaintenanceWindowTasksResultFilterSensitiveLog = DescribeMainten
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.InvalidItemContentException = exports.ComplianceTypeCountLimitExceededException = exports.DocumentPermissionLimit = exports.LastResourceDataSyncStatus = exports.OpsItemRelatedItemsFilterOperator = exports.OpsItemRelatedItemsFilterKey = exports.OpsItemEventFilterOperator = exports.OpsItemEventFilterKey = exports.DocumentFilterKey = exports.DocumentReviewCommentType = exports.DocumentMetadataEnum = exports.ComplianceStatus = exports.ComplianceSeverity = exports.ComplianceQueryOperatorType = exports.CommandStatus = exports.CommandPluginStatus = exports.CommandFilterKey = exports.AssociationFilterKey = exports.ParameterVersionLabelLimitExceeded = exports.ServiceSettingNotFound = exports.ParameterVersionNotFound = exports.InvalidKeyId = exports.OpsFilterOperatorType = exports.NotificationType = exports.NotificationEvent = exports.InventoryAttributeDataType = exports.InvalidResultAttributeException = exports.InvalidInventoryGroupException = exports.InvalidAggregatorException = exports.InventoryQueryOperatorType = exports.AttachmentHashType = exports.UnsupportedFeatureRequiredException = exports.ConnectionStatus = exports.InvocationDoesNotExist = exports.InvalidPluginName = exports.CommandInvocationStatus = exports.UnsupportedCalendarException = exports.InvalidDocumentType = exports.CalendarState = exports.OpsItemRelatedItemAssociationNotFoundException = exports.SessionStatus = exports.SessionState = exports.SessionFilterKey = exports.PatchProperty = exports.PatchSet = exports.InvalidFilterOption = exports.ParameterType = exports.ParameterTier = exports.ParametersFilterKey = exports.OpsItemStatus = void 0;
-exports.DescribePatchBaselinesRequestFilterSensitiveLog = exports.DescribeParametersResultFilterSensitiveLog = exports.ParameterMetadataFilterSensitiveLog = exports.ParameterInlinePolicyFilterSensitiveLog = exports.DescribeParametersRequestFilterSensitiveLog = exports.ParameterStringFilterFilterSensitiveLog = exports.ParametersFilterFilterSensitiveLog = exports.DescribeOpsItemsResponseFilterSensitiveLog = exports.OpsItemSummaryFilterSensitiveLog = exports.DescribeOpsItemsRequestFilterSensitiveLog = exports.OpsItemFilterFilterSensitiveLog = exports.AssociationVersionLimitExceeded = exports.StopType = exports.InvalidAutomationStatusUpdateException = exports.TargetNotConnected = exports.AutomationDefinitionNotApprovedException = exports.InvalidAutomationExecutionParametersException = exports.AutomationExecutionLimitExceededException = exports.AutomationDefinitionVersionNotFoundException = exports.AutomationDefinitionNotFoundException = exports.InvalidAssociation = exports.InvalidRole = exports.InvalidOutputFolder = exports.InvalidNotificationConfig = exports.SignalType = exports.InvalidAutomationSignalException = exports.AutomationStepNotFoundException = exports.FeatureNotAvailableException = exports.ResourcePolicyLimitExceededException = exports.UnsupportedParameterType = exports.PoliciesLimitExceededException = exports.ParameterPatternMismatchException = exports.ParameterMaxVersionLimitExceeded = exports.ParameterLimitExceeded = exports.ParameterAlreadyExists = exports.InvalidPolicyTypeException = exports.InvalidPolicyAttributeException = exports.InvalidAllowedPatternException = exports.IncompatiblePolicyException = exports.HierarchyTypeMismatchException = exports.HierarchyLevelLimitExceededException = exports.UnsupportedInventorySchemaVersionException = exports.UnsupportedInventoryItemContextException = exports.SubTypeCountLimitExceededException = exports.ItemContentMismatchException = exports.InvalidInventoryItemContextException = exports.CustomSchemaCountLimitExceededException = exports.TotalSizeLimitExceededException = exports.ComplianceUploadType = exports.ItemSizeLimitExceededException = void 0;
-exports.GetMaintenanceWindowExecutionTaskRequestFilterSensitiveLog = exports.GetMaintenanceWindowExecutionResultFilterSensitiveLog = exports.GetMaintenanceWindowExecutionRequestFilterSensitiveLog = exports.GetMaintenanceWindowResultFilterSensitiveLog = exports.GetMaintenanceWindowRequestFilterSensitiveLog = exports.GetInventorySchemaResultFilterSensitiveLog = exports.InventoryItemSchemaFilterSensitiveLog = exports.InventoryItemAttributeFilterSensitiveLog = exports.GetInventorySchemaRequestFilterSensitiveLog = exports.GetInventoryResultFilterSensitiveLog = exports.InventoryResultEntityFilterSensitiveLog = exports.InventoryResultItemFilterSensitiveLog = exports.ResultAttributeFilterSensitiveLog = exports.InventoryGroupFilterSensitiveLog = exports.InventoryFilterFilterSensitiveLog = exports.GetDocumentResultFilterSensitiveLog = exports.AttachmentContentFilterSensitiveLog = exports.GetDocumentRequestFilterSensitiveLog = exports.GetDeployablePatchSnapshotForInstanceResultFilterSensitiveLog = exports.GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog = exports.BaselineOverrideFilterSensitiveLog = exports.GetDefaultPatchBaselineResultFilterSensitiveLog = exports.GetDefaultPatchBaselineRequestFilterSensitiveLog = exports.GetConnectionStatusResponseFilterSensitiveLog = exports.GetConnectionStatusRequestFilterSensitiveLog = exports.GetCommandInvocationResultFilterSensitiveLog = exports.CloudWatchOutputConfigFilterSensitiveLog = exports.GetCommandInvocationRequestFilterSensitiveLog = exports.GetCalendarStateResponseFilterSensitiveLog = exports.GetCalendarStateRequestFilterSensitiveLog = exports.GetAutomationExecutionResultFilterSensitiveLog = exports.AutomationExecutionFilterSensitiveLog = exports.ProgressCountersFilterSensitiveLog = exports.GetAutomationExecutionRequestFilterSensitiveLog = exports.DisassociateOpsItemRelatedItemResponseFilterSensitiveLog = exports.DisassociateOpsItemRelatedItemRequestFilterSensitiveLog = exports.DescribeSessionsResponseFilterSensitiveLog = exports.SessionFilterSensitiveLog = exports.SessionManagerOutputUrlFilterSensitiveLog = exports.DescribeSessionsRequestFilterSensitiveLog = exports.SessionFilterFilterSensitiveLog = exports.DescribePatchPropertiesResultFilterSensitiveLog = exports.DescribePatchPropertiesRequestFilterSensitiveLog = exports.DescribePatchGroupStateResultFilterSensitiveLog = exports.DescribePatchGroupStateRequestFilterSensitiveLog = exports.DescribePatchGroupsResultFilterSensitiveLog = exports.PatchGroupPatchBaselineMappingFilterSensitiveLog = exports.DescribePatchGroupsRequestFilterSensitiveLog = exports.DescribePatchBaselinesResultFilterSensitiveLog = exports.PatchBaselineIdentityFilterSensitiveLog = void 0;
-exports.ListAssociationVersionsResultFilterSensitiveLog = exports.AssociationVersionInfoFilterSensitiveLog = exports.ListAssociationVersionsRequestFilterSensitiveLog = exports.ListAssociationsResultFilterSensitiveLog = exports.AssociationFilterSensitiveLog = exports.ListAssociationsRequestFilterSensitiveLog = exports.AssociationFilterFilterSensitiveLog = exports.LabelParameterVersionResultFilterSensitiveLog = exports.LabelParameterVersionRequestFilterSensitiveLog = exports.GetServiceSettingResultFilterSensitiveLog = exports.ServiceSettingFilterSensitiveLog = exports.GetServiceSettingRequestFilterSensitiveLog = exports.GetResourcePoliciesResponseFilterSensitiveLog = exports.GetResourcePoliciesResponseEntryFilterSensitiveLog = exports.GetResourcePoliciesRequestFilterSensitiveLog = exports.GetPatchBaselineForPatchGroupResultFilterSensitiveLog = exports.GetPatchBaselineForPatchGroupRequestFilterSensitiveLog = exports.GetPatchBaselineResultFilterSensitiveLog = exports.GetPatchBaselineRequestFilterSensitiveLog = exports.GetParametersByPathResultFilterSensitiveLog = exports.GetParametersByPathRequestFilterSensitiveLog = exports.GetParametersResultFilterSensitiveLog = exports.GetParametersRequestFilterSensitiveLog = exports.GetParameterHistoryResultFilterSensitiveLog = exports.ParameterHistoryFilterSensitiveLog = exports.GetParameterHistoryRequestFilterSensitiveLog = exports.GetParameterResultFilterSensitiveLog = exports.ParameterFilterSensitiveLog = exports.GetParameterRequestFilterSensitiveLog = exports.GetOpsSummaryResultFilterSensitiveLog = exports.OpsEntityFilterSensitiveLog = exports.OpsEntityItemFilterSensitiveLog = exports.OpsResultAttributeFilterSensitiveLog = exports.OpsFilterFilterSensitiveLog = exports.GetOpsMetadataResultFilterSensitiveLog = exports.GetOpsMetadataRequestFilterSensitiveLog = exports.GetOpsItemResponseFilterSensitiveLog = exports.OpsItemFilterSensitiveLog = exports.GetOpsItemRequestFilterSensitiveLog = exports.GetMaintenanceWindowTaskResultFilterSensitiveLog = exports.MaintenanceWindowTaskInvocationParametersFilterSensitiveLog = exports.MaintenanceWindowStepFunctionsParametersFilterSensitiveLog = exports.MaintenanceWindowRunCommandParametersFilterSensitiveLog = exports.NotificationConfigFilterSensitiveLog = exports.MaintenanceWindowLambdaParametersFilterSensitiveLog = exports.MaintenanceWindowAutomationParametersFilterSensitiveLog = exports.GetMaintenanceWindowTaskRequestFilterSensitiveLog = exports.GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog = exports.GetMaintenanceWindowExecutionTaskInvocationRequestFilterSensitiveLog = exports.GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = void 0;
-exports.ListResourceComplianceSummariesResultFilterSensitiveLog = exports.ResourceComplianceSummaryItemFilterSensitiveLog = exports.ListResourceComplianceSummariesRequestFilterSensitiveLog = exports.ListOpsMetadataResultFilterSensitiveLog = exports.OpsMetadataFilterSensitiveLog = exports.ListOpsMetadataRequestFilterSensitiveLog = exports.OpsMetadataFilterFilterSensitiveLog = exports.ListOpsItemRelatedItemsResponseFilterSensitiveLog = exports.OpsItemRelatedItemSummaryFilterSensitiveLog = exports.ListOpsItemRelatedItemsRequestFilterSensitiveLog = exports.OpsItemRelatedItemsFilterFilterSensitiveLog = exports.ListOpsItemEventsResponseFilterSensitiveLog = exports.OpsItemEventSummaryFilterSensitiveLog = exports.OpsItemIdentityFilterSensitiveLog = exports.ListOpsItemEventsRequestFilterSensitiveLog = exports.OpsItemEventFilterFilterSensitiveLog = exports.ListInventoryEntriesResultFilterSensitiveLog = exports.ListInventoryEntriesRequestFilterSensitiveLog = exports.ListDocumentVersionsResultFilterSensitiveLog = exports.DocumentVersionInfoFilterSensitiveLog = exports.ListDocumentVersionsRequestFilterSensitiveLog = exports.ListDocumentsResultFilterSensitiveLog = exports.DocumentIdentifierFilterSensitiveLog = exports.ListDocumentsRequestFilterSensitiveLog = exports.DocumentKeyValuesFilterFilterSensitiveLog = exports.DocumentFilterFilterSensitiveLog = exports.ListDocumentMetadataHistoryResponseFilterSensitiveLog = exports.DocumentMetadataResponseInfoFilterSensitiveLog = exports.DocumentReviewerResponseSourceFilterSensitiveLog = exports.DocumentReviewCommentSourceFilterSensitiveLog = exports.ListDocumentMetadataHistoryRequestFilterSensitiveLog = exports.ListComplianceSummariesResultFilterSensitiveLog = exports.ComplianceSummaryItemFilterSensitiveLog = exports.NonCompliantSummaryFilterSensitiveLog = exports.CompliantSummaryFilterSensitiveLog = exports.SeveritySummaryFilterSensitiveLog = exports.ListComplianceSummariesRequestFilterSensitiveLog = exports.ListComplianceItemsResultFilterSensitiveLog = exports.ComplianceItemFilterSensitiveLog = exports.ComplianceExecutionSummaryFilterSensitiveLog = exports.ListComplianceItemsRequestFilterSensitiveLog = exports.ComplianceStringFilterFilterSensitiveLog = exports.ListCommandsResultFilterSensitiveLog = exports.CommandFilterSensitiveLog = exports.ListCommandsRequestFilterSensitiveLog = exports.ListCommandInvocationsResultFilterSensitiveLog = exports.CommandInvocationFilterSensitiveLog = exports.CommandPluginFilterSensitiveLog = exports.ListCommandInvocationsRequestFilterSensitiveLog = exports.CommandFilterFilterSensitiveLog = void 0;
-exports.UnlabelParameterVersionResultFilterSensitiveLog = exports.UnlabelParameterVersionRequestFilterSensitiveLog = exports.TerminateSessionResponseFilterSensitiveLog = exports.TerminateSessionRequestFilterSensitiveLog = exports.StopAutomationExecutionResultFilterSensitiveLog = exports.StopAutomationExecutionRequestFilterSensitiveLog = exports.StartSessionResponseFilterSensitiveLog = exports.StartSessionRequestFilterSensitiveLog = exports.StartChangeRequestExecutionResultFilterSensitiveLog = exports.StartChangeRequestExecutionRequestFilterSensitiveLog = exports.StartAutomationExecutionResultFilterSensitiveLog = exports.StartAutomationExecutionRequestFilterSensitiveLog = exports.StartAssociationsOnceResultFilterSensitiveLog = exports.StartAssociationsOnceRequestFilterSensitiveLog = exports.SendCommandResultFilterSensitiveLog = exports.SendCommandRequestFilterSensitiveLog = exports.SendAutomationSignalResultFilterSensitiveLog = exports.SendAutomationSignalRequestFilterSensitiveLog = exports.ResumeSessionResponseFilterSensitiveLog = exports.ResumeSessionRequestFilterSensitiveLog = exports.ResetServiceSettingResultFilterSensitiveLog = exports.ResetServiceSettingRequestFilterSensitiveLog = exports.RemoveTagsFromResourceResultFilterSensitiveLog = exports.RemoveTagsFromResourceRequestFilterSensitiveLog = exports.RegisterTaskWithMaintenanceWindowResultFilterSensitiveLog = exports.RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = exports.RegisterTargetWithMaintenanceWindowResultFilterSensitiveLog = exports.RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = exports.RegisterPatchBaselineForPatchGroupResultFilterSensitiveLog = exports.RegisterPatchBaselineForPatchGroupRequestFilterSensitiveLog = exports.RegisterDefaultPatchBaselineResultFilterSensitiveLog = exports.RegisterDefaultPatchBaselineRequestFilterSensitiveLog = exports.PutResourcePolicyResponseFilterSensitiveLog = exports.PutResourcePolicyRequestFilterSensitiveLog = exports.PutParameterResultFilterSensitiveLog = exports.PutParameterRequestFilterSensitiveLog = exports.PutInventoryResultFilterSensitiveLog = exports.PutInventoryRequestFilterSensitiveLog = exports.InventoryItemFilterSensitiveLog = exports.PutComplianceItemsResultFilterSensitiveLog = exports.PutComplianceItemsRequestFilterSensitiveLog = exports.ComplianceItemEntryFilterSensitiveLog = exports.ModifyDocumentPermissionResponseFilterSensitiveLog = exports.ModifyDocumentPermissionRequestFilterSensitiveLog = exports.ListTagsForResourceResultFilterSensitiveLog = exports.ListTagsForResourceRequestFilterSensitiveLog = exports.ListResourceDataSyncResultFilterSensitiveLog = exports.ResourceDataSyncItemFilterSensitiveLog = exports.ResourceDataSyncSourceWithStateFilterSensitiveLog = exports.ListResourceDataSyncRequestFilterSensitiveLog = void 0;
+exports.ParameterFilterSensitiveLog = exports.GetMaintenanceWindowTaskResultFilterSensitiveLog = exports.MaintenanceWindowTaskInvocationParametersFilterSensitiveLog = exports.MaintenanceWindowStepFunctionsParametersFilterSensitiveLog = exports.MaintenanceWindowRunCommandParametersFilterSensitiveLog = exports.MaintenanceWindowLambdaParametersFilterSensitiveLog = exports.GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog = exports.GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = exports.GetMaintenanceWindowResultFilterSensitiveLog = exports.GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog = exports.BaselineOverrideFilterSensitiveLog = exports.AssociationVersionLimitExceeded = exports.StopType = exports.InvalidAutomationStatusUpdateException = exports.TargetNotConnected = exports.AutomationDefinitionNotApprovedException = exports.InvalidAutomationExecutionParametersException = exports.AutomationExecutionLimitExceededException = exports.AutomationDefinitionVersionNotFoundException = exports.AutomationDefinitionNotFoundException = exports.InvalidAssociation = exports.InvalidRole = exports.InvalidOutputFolder = exports.InvalidNotificationConfig = exports.SignalType = exports.InvalidAutomationSignalException = exports.AutomationStepNotFoundException = exports.FeatureNotAvailableException = exports.ResourcePolicyLimitExceededException = exports.UnsupportedParameterType = exports.PoliciesLimitExceededException = exports.ParameterPatternMismatchException = exports.ParameterMaxVersionLimitExceeded = exports.ParameterLimitExceeded = exports.ParameterAlreadyExists = exports.InvalidPolicyTypeException = exports.InvalidPolicyAttributeException = exports.InvalidAllowedPatternException = exports.IncompatiblePolicyException = exports.HierarchyTypeMismatchException = exports.HierarchyLevelLimitExceededException = exports.UnsupportedInventorySchemaVersionException = exports.UnsupportedInventoryItemContextException = exports.SubTypeCountLimitExceededException = exports.ItemContentMismatchException = exports.InvalidInventoryItemContextException = exports.CustomSchemaCountLimitExceededException = exports.TotalSizeLimitExceededException = exports.ComplianceUploadType = exports.ItemSizeLimitExceededException = void 0;
+exports.SendCommandResultFilterSensitiveLog = exports.SendCommandRequestFilterSensitiveLog = exports.RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = exports.RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = exports.PutParameterRequestFilterSensitiveLog = exports.ListCommandsResultFilterSensitiveLog = exports.CommandFilterSensitiveLog = exports.ListAssociationVersionsResultFilterSensitiveLog = exports.AssociationVersionInfoFilterSensitiveLog = exports.GetPatchBaselineResultFilterSensitiveLog = exports.GetParametersByPathResultFilterSensitiveLog = exports.GetParametersResultFilterSensitiveLog = exports.GetParameterHistoryResultFilterSensitiveLog = exports.ParameterHistoryFilterSensitiveLog = exports.GetParameterResultFilterSensitiveLog = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const SSMServiceException_1 = __nccwpck_require__(97777);
@@ -14762,166 +14005,6 @@ class AssociationVersionLimitExceeded extends SSMServiceException_1.SSMServiceEx
     }
 }
 exports.AssociationVersionLimitExceeded = AssociationVersionLimitExceeded;
-const OpsItemFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemFilterFilterSensitiveLog = OpsItemFilterFilterSensitiveLog;
-const DescribeOpsItemsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeOpsItemsRequestFilterSensitiveLog = DescribeOpsItemsRequestFilterSensitiveLog;
-const OpsItemSummaryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemSummaryFilterSensitiveLog = OpsItemSummaryFilterSensitiveLog;
-const DescribeOpsItemsResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeOpsItemsResponseFilterSensitiveLog = DescribeOpsItemsResponseFilterSensitiveLog;
-const ParametersFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ParametersFilterFilterSensitiveLog = ParametersFilterFilterSensitiveLog;
-const ParameterStringFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ParameterStringFilterFilterSensitiveLog = ParameterStringFilterFilterSensitiveLog;
-const DescribeParametersRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeParametersRequestFilterSensitiveLog = DescribeParametersRequestFilterSensitiveLog;
-const ParameterInlinePolicyFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ParameterInlinePolicyFilterSensitiveLog = ParameterInlinePolicyFilterSensitiveLog;
-const ParameterMetadataFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ParameterMetadataFilterSensitiveLog = ParameterMetadataFilterSensitiveLog;
-const DescribeParametersResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeParametersResultFilterSensitiveLog = DescribeParametersResultFilterSensitiveLog;
-const DescribePatchBaselinesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribePatchBaselinesRequestFilterSensitiveLog = DescribePatchBaselinesRequestFilterSensitiveLog;
-const PatchBaselineIdentityFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchBaselineIdentityFilterSensitiveLog = PatchBaselineIdentityFilterSensitiveLog;
-const DescribePatchBaselinesResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribePatchBaselinesResultFilterSensitiveLog = DescribePatchBaselinesResultFilterSensitiveLog;
-const DescribePatchGroupsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribePatchGroupsRequestFilterSensitiveLog = DescribePatchGroupsRequestFilterSensitiveLog;
-const PatchGroupPatchBaselineMappingFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PatchGroupPatchBaselineMappingFilterSensitiveLog = PatchGroupPatchBaselineMappingFilterSensitiveLog;
-const DescribePatchGroupsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribePatchGroupsResultFilterSensitiveLog = DescribePatchGroupsResultFilterSensitiveLog;
-const DescribePatchGroupStateRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribePatchGroupStateRequestFilterSensitiveLog = DescribePatchGroupStateRequestFilterSensitiveLog;
-const DescribePatchGroupStateResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribePatchGroupStateResultFilterSensitiveLog = DescribePatchGroupStateResultFilterSensitiveLog;
-const DescribePatchPropertiesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribePatchPropertiesRequestFilterSensitiveLog = DescribePatchPropertiesRequestFilterSensitiveLog;
-const DescribePatchPropertiesResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribePatchPropertiesResultFilterSensitiveLog = DescribePatchPropertiesResultFilterSensitiveLog;
-const SessionFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SessionFilterFilterSensitiveLog = SessionFilterFilterSensitiveLog;
-const DescribeSessionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeSessionsRequestFilterSensitiveLog = DescribeSessionsRequestFilterSensitiveLog;
-const SessionManagerOutputUrlFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SessionManagerOutputUrlFilterSensitiveLog = SessionManagerOutputUrlFilterSensitiveLog;
-const SessionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SessionFilterSensitiveLog = SessionFilterSensitiveLog;
-const DescribeSessionsResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DescribeSessionsResponseFilterSensitiveLog = DescribeSessionsResponseFilterSensitiveLog;
-const DisassociateOpsItemRelatedItemRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DisassociateOpsItemRelatedItemRequestFilterSensitiveLog = DisassociateOpsItemRelatedItemRequestFilterSensitiveLog;
-const DisassociateOpsItemRelatedItemResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DisassociateOpsItemRelatedItemResponseFilterSensitiveLog = DisassociateOpsItemRelatedItemResponseFilterSensitiveLog;
-const GetAutomationExecutionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetAutomationExecutionRequestFilterSensitiveLog = GetAutomationExecutionRequestFilterSensitiveLog;
-const ProgressCountersFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ProgressCountersFilterSensitiveLog = ProgressCountersFilterSensitiveLog;
-const AutomationExecutionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AutomationExecutionFilterSensitiveLog = AutomationExecutionFilterSensitiveLog;
-const GetAutomationExecutionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetAutomationExecutionResultFilterSensitiveLog = GetAutomationExecutionResultFilterSensitiveLog;
-const GetCalendarStateRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetCalendarStateRequestFilterSensitiveLog = GetCalendarStateRequestFilterSensitiveLog;
-const GetCalendarStateResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetCalendarStateResponseFilterSensitiveLog = GetCalendarStateResponseFilterSensitiveLog;
-const GetCommandInvocationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetCommandInvocationRequestFilterSensitiveLog = GetCommandInvocationRequestFilterSensitiveLog;
-const CloudWatchOutputConfigFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CloudWatchOutputConfigFilterSensitiveLog = CloudWatchOutputConfigFilterSensitiveLog;
-const GetCommandInvocationResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetCommandInvocationResultFilterSensitiveLog = GetCommandInvocationResultFilterSensitiveLog;
-const GetConnectionStatusRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetConnectionStatusRequestFilterSensitiveLog = GetConnectionStatusRequestFilterSensitiveLog;
-const GetConnectionStatusResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetConnectionStatusResponseFilterSensitiveLog = GetConnectionStatusResponseFilterSensitiveLog;
-const GetDefaultPatchBaselineRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetDefaultPatchBaselineRequestFilterSensitiveLog = GetDefaultPatchBaselineRequestFilterSensitiveLog;
-const GetDefaultPatchBaselineResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetDefaultPatchBaselineResultFilterSensitiveLog = GetDefaultPatchBaselineResultFilterSensitiveLog;
 const BaselineOverrideFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Sources && { Sources: obj.Sources.map((item) => (0, models_0_1.PatchSourceFilterSensitiveLog)(item)) }),
@@ -14931,115 +14014,27 @@ const GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog = (obj) => 
     ...obj,
 });
 exports.GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog = GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog;
-const GetDeployablePatchSnapshotForInstanceResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetDeployablePatchSnapshotForInstanceResultFilterSensitiveLog = GetDeployablePatchSnapshotForInstanceResultFilterSensitiveLog;
-const GetDocumentRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetDocumentRequestFilterSensitiveLog = GetDocumentRequestFilterSensitiveLog;
-const AttachmentContentFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AttachmentContentFilterSensitiveLog = AttachmentContentFilterSensitiveLog;
-const GetDocumentResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetDocumentResultFilterSensitiveLog = GetDocumentResultFilterSensitiveLog;
-const InventoryFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryFilterFilterSensitiveLog = InventoryFilterFilterSensitiveLog;
-const InventoryGroupFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryGroupFilterSensitiveLog = InventoryGroupFilterSensitiveLog;
-const ResultAttributeFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResultAttributeFilterSensitiveLog = ResultAttributeFilterSensitiveLog;
-const InventoryResultItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryResultItemFilterSensitiveLog = InventoryResultItemFilterSensitiveLog;
-const InventoryResultEntityFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryResultEntityFilterSensitiveLog = InventoryResultEntityFilterSensitiveLog;
-const GetInventoryResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetInventoryResultFilterSensitiveLog = GetInventoryResultFilterSensitiveLog;
-const GetInventorySchemaRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetInventorySchemaRequestFilterSensitiveLog = GetInventorySchemaRequestFilterSensitiveLog;
-const InventoryItemAttributeFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryItemAttributeFilterSensitiveLog = InventoryItemAttributeFilterSensitiveLog;
-const InventoryItemSchemaFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryItemSchemaFilterSensitiveLog = InventoryItemSchemaFilterSensitiveLog;
-const GetInventorySchemaResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetInventorySchemaResultFilterSensitiveLog = GetInventorySchemaResultFilterSensitiveLog;
-const GetMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetMaintenanceWindowRequestFilterSensitiveLog = GetMaintenanceWindowRequestFilterSensitiveLog;
 const GetMaintenanceWindowResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Description && { Description: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.GetMaintenanceWindowResultFilterSensitiveLog = GetMaintenanceWindowResultFilterSensitiveLog;
-const GetMaintenanceWindowExecutionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetMaintenanceWindowExecutionRequestFilterSensitiveLog = GetMaintenanceWindowExecutionRequestFilterSensitiveLog;
-const GetMaintenanceWindowExecutionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetMaintenanceWindowExecutionResultFilterSensitiveLog = GetMaintenanceWindowExecutionResultFilterSensitiveLog;
-const GetMaintenanceWindowExecutionTaskRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetMaintenanceWindowExecutionTaskRequestFilterSensitiveLog = GetMaintenanceWindowExecutionTaskRequestFilterSensitiveLog;
 const GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.TaskParameters && { TaskParameters: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog;
-const GetMaintenanceWindowExecutionTaskInvocationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetMaintenanceWindowExecutionTaskInvocationRequestFilterSensitiveLog = GetMaintenanceWindowExecutionTaskInvocationRequestFilterSensitiveLog;
 const GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
     ...(obj.OwnerInformation && { OwnerInformation: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog = GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog;
-const GetMaintenanceWindowTaskRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetMaintenanceWindowTaskRequestFilterSensitiveLog = GetMaintenanceWindowTaskRequestFilterSensitiveLog;
-const MaintenanceWindowAutomationParametersFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.MaintenanceWindowAutomationParametersFilterSensitiveLog = MaintenanceWindowAutomationParametersFilterSensitiveLog;
 const MaintenanceWindowLambdaParametersFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Payload && { Payload: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.MaintenanceWindowLambdaParametersFilterSensitiveLog = MaintenanceWindowLambdaParametersFilterSensitiveLog;
-const NotificationConfigFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.NotificationConfigFilterSensitiveLog = NotificationConfigFilterSensitiveLog;
 const MaintenanceWindowRunCommandParametersFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
@@ -15068,50 +14063,6 @@ const GetMaintenanceWindowTaskResultFilterSensitiveLog = (obj) => ({
     ...(obj.Description && { Description: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.GetMaintenanceWindowTaskResultFilterSensitiveLog = GetMaintenanceWindowTaskResultFilterSensitiveLog;
-const GetOpsItemRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetOpsItemRequestFilterSensitiveLog = GetOpsItemRequestFilterSensitiveLog;
-const OpsItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemFilterSensitiveLog = OpsItemFilterSensitiveLog;
-const GetOpsItemResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetOpsItemResponseFilterSensitiveLog = GetOpsItemResponseFilterSensitiveLog;
-const GetOpsMetadataRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetOpsMetadataRequestFilterSensitiveLog = GetOpsMetadataRequestFilterSensitiveLog;
-const GetOpsMetadataResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetOpsMetadataResultFilterSensitiveLog = GetOpsMetadataResultFilterSensitiveLog;
-const OpsFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsFilterFilterSensitiveLog = OpsFilterFilterSensitiveLog;
-const OpsResultAttributeFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsResultAttributeFilterSensitiveLog = OpsResultAttributeFilterSensitiveLog;
-const OpsEntityItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsEntityItemFilterSensitiveLog = OpsEntityItemFilterSensitiveLog;
-const OpsEntityFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsEntityFilterSensitiveLog = OpsEntityFilterSensitiveLog;
-const GetOpsSummaryResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetOpsSummaryResultFilterSensitiveLog = GetOpsSummaryResultFilterSensitiveLog;
-const GetParameterRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetParameterRequestFilterSensitiveLog = GetParameterRequestFilterSensitiveLog;
 const ParameterFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Value && { Value: smithy_client_1.SENSITIVE_STRING }),
@@ -15122,10 +14073,6 @@ const GetParameterResultFilterSensitiveLog = (obj) => ({
     ...(obj.Parameter && { Parameter: (0, exports.ParameterFilterSensitiveLog)(obj.Parameter) }),
 });
 exports.GetParameterResultFilterSensitiveLog = GetParameterResultFilterSensitiveLog;
-const GetParameterHistoryRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetParameterHistoryRequestFilterSensitiveLog = GetParameterHistoryRequestFilterSensitiveLog;
 const ParameterHistoryFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Value && { Value: smithy_client_1.SENSITIVE_STRING }),
@@ -15136,93 +14083,21 @@ const GetParameterHistoryResultFilterSensitiveLog = (obj) => ({
     ...(obj.Parameters && { Parameters: obj.Parameters.map((item) => (0, exports.ParameterHistoryFilterSensitiveLog)(item)) }),
 });
 exports.GetParameterHistoryResultFilterSensitiveLog = GetParameterHistoryResultFilterSensitiveLog;
-const GetParametersRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetParametersRequestFilterSensitiveLog = GetParametersRequestFilterSensitiveLog;
 const GetParametersResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: obj.Parameters.map((item) => (0, exports.ParameterFilterSensitiveLog)(item)) }),
 });
 exports.GetParametersResultFilterSensitiveLog = GetParametersResultFilterSensitiveLog;
-const GetParametersByPathRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetParametersByPathRequestFilterSensitiveLog = GetParametersByPathRequestFilterSensitiveLog;
 const GetParametersByPathResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: obj.Parameters.map((item) => (0, exports.ParameterFilterSensitiveLog)(item)) }),
 });
 exports.GetParametersByPathResultFilterSensitiveLog = GetParametersByPathResultFilterSensitiveLog;
-const GetPatchBaselineRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetPatchBaselineRequestFilterSensitiveLog = GetPatchBaselineRequestFilterSensitiveLog;
 const GetPatchBaselineResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Sources && { Sources: obj.Sources.map((item) => (0, models_0_1.PatchSourceFilterSensitiveLog)(item)) }),
 });
 exports.GetPatchBaselineResultFilterSensitiveLog = GetPatchBaselineResultFilterSensitiveLog;
-const GetPatchBaselineForPatchGroupRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetPatchBaselineForPatchGroupRequestFilterSensitiveLog = GetPatchBaselineForPatchGroupRequestFilterSensitiveLog;
-const GetPatchBaselineForPatchGroupResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetPatchBaselineForPatchGroupResultFilterSensitiveLog = GetPatchBaselineForPatchGroupResultFilterSensitiveLog;
-const GetResourcePoliciesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetResourcePoliciesRequestFilterSensitiveLog = GetResourcePoliciesRequestFilterSensitiveLog;
-const GetResourcePoliciesResponseEntryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetResourcePoliciesResponseEntryFilterSensitiveLog = GetResourcePoliciesResponseEntryFilterSensitiveLog;
-const GetResourcePoliciesResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetResourcePoliciesResponseFilterSensitiveLog = GetResourcePoliciesResponseFilterSensitiveLog;
-const GetServiceSettingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetServiceSettingRequestFilterSensitiveLog = GetServiceSettingRequestFilterSensitiveLog;
-const ServiceSettingFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ServiceSettingFilterSensitiveLog = ServiceSettingFilterSensitiveLog;
-const GetServiceSettingResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetServiceSettingResultFilterSensitiveLog = GetServiceSettingResultFilterSensitiveLog;
-const LabelParameterVersionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.LabelParameterVersionRequestFilterSensitiveLog = LabelParameterVersionRequestFilterSensitiveLog;
-const LabelParameterVersionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.LabelParameterVersionResultFilterSensitiveLog = LabelParameterVersionResultFilterSensitiveLog;
-const AssociationFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociationFilterFilterSensitiveLog = AssociationFilterFilterSensitiveLog;
-const ListAssociationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListAssociationsRequestFilterSensitiveLog = ListAssociationsRequestFilterSensitiveLog;
-const AssociationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssociationFilterSensitiveLog = AssociationFilterSensitiveLog;
-const ListAssociationsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListAssociationsResultFilterSensitiveLog = ListAssociationsResultFilterSensitiveLog;
-const ListAssociationVersionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListAssociationVersionsRequestFilterSensitiveLog = ListAssociationVersionsRequestFilterSensitiveLog;
 const AssociationVersionInfoFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
@@ -15235,30 +14110,6 @@ const ListAssociationVersionsResultFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.ListAssociationVersionsResultFilterSensitiveLog = ListAssociationVersionsResultFilterSensitiveLog;
-const CommandFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CommandFilterFilterSensitiveLog = CommandFilterFilterSensitiveLog;
-const ListCommandInvocationsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListCommandInvocationsRequestFilterSensitiveLog = ListCommandInvocationsRequestFilterSensitiveLog;
-const CommandPluginFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CommandPluginFilterSensitiveLog = CommandPluginFilterSensitiveLog;
-const CommandInvocationFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CommandInvocationFilterSensitiveLog = CommandInvocationFilterSensitiveLog;
-const ListCommandInvocationsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListCommandInvocationsResultFilterSensitiveLog = ListCommandInvocationsResultFilterSensitiveLog;
-const ListCommandsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListCommandsRequestFilterSensitiveLog = ListCommandsRequestFilterSensitiveLog;
 const CommandFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
@@ -15269,273 +14120,17 @@ const ListCommandsResultFilterSensitiveLog = (obj) => ({
     ...(obj.Commands && { Commands: obj.Commands.map((item) => (0, exports.CommandFilterSensitiveLog)(item)) }),
 });
 exports.ListCommandsResultFilterSensitiveLog = ListCommandsResultFilterSensitiveLog;
-const ComplianceStringFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ComplianceStringFilterFilterSensitiveLog = ComplianceStringFilterFilterSensitiveLog;
-const ListComplianceItemsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListComplianceItemsRequestFilterSensitiveLog = ListComplianceItemsRequestFilterSensitiveLog;
-const ComplianceExecutionSummaryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ComplianceExecutionSummaryFilterSensitiveLog = ComplianceExecutionSummaryFilterSensitiveLog;
-const ComplianceItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ComplianceItemFilterSensitiveLog = ComplianceItemFilterSensitiveLog;
-const ListComplianceItemsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListComplianceItemsResultFilterSensitiveLog = ListComplianceItemsResultFilterSensitiveLog;
-const ListComplianceSummariesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListComplianceSummariesRequestFilterSensitiveLog = ListComplianceSummariesRequestFilterSensitiveLog;
-const SeveritySummaryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SeveritySummaryFilterSensitiveLog = SeveritySummaryFilterSensitiveLog;
-const CompliantSummaryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CompliantSummaryFilterSensitiveLog = CompliantSummaryFilterSensitiveLog;
-const NonCompliantSummaryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.NonCompliantSummaryFilterSensitiveLog = NonCompliantSummaryFilterSensitiveLog;
-const ComplianceSummaryItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ComplianceSummaryItemFilterSensitiveLog = ComplianceSummaryItemFilterSensitiveLog;
-const ListComplianceSummariesResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListComplianceSummariesResultFilterSensitiveLog = ListComplianceSummariesResultFilterSensitiveLog;
-const ListDocumentMetadataHistoryRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListDocumentMetadataHistoryRequestFilterSensitiveLog = ListDocumentMetadataHistoryRequestFilterSensitiveLog;
-const DocumentReviewCommentSourceFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentReviewCommentSourceFilterSensitiveLog = DocumentReviewCommentSourceFilterSensitiveLog;
-const DocumentReviewerResponseSourceFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentReviewerResponseSourceFilterSensitiveLog = DocumentReviewerResponseSourceFilterSensitiveLog;
-const DocumentMetadataResponseInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentMetadataResponseInfoFilterSensitiveLog = DocumentMetadataResponseInfoFilterSensitiveLog;
-const ListDocumentMetadataHistoryResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListDocumentMetadataHistoryResponseFilterSensitiveLog = ListDocumentMetadataHistoryResponseFilterSensitiveLog;
-const DocumentFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentFilterFilterSensitiveLog = DocumentFilterFilterSensitiveLog;
-const DocumentKeyValuesFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentKeyValuesFilterFilterSensitiveLog = DocumentKeyValuesFilterFilterSensitiveLog;
-const ListDocumentsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListDocumentsRequestFilterSensitiveLog = ListDocumentsRequestFilterSensitiveLog;
-const DocumentIdentifierFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentIdentifierFilterSensitiveLog = DocumentIdentifierFilterSensitiveLog;
-const ListDocumentsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListDocumentsResultFilterSensitiveLog = ListDocumentsResultFilterSensitiveLog;
-const ListDocumentVersionsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListDocumentVersionsRequestFilterSensitiveLog = ListDocumentVersionsRequestFilterSensitiveLog;
-const DocumentVersionInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentVersionInfoFilterSensitiveLog = DocumentVersionInfoFilterSensitiveLog;
-const ListDocumentVersionsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListDocumentVersionsResultFilterSensitiveLog = ListDocumentVersionsResultFilterSensitiveLog;
-const ListInventoryEntriesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListInventoryEntriesRequestFilterSensitiveLog = ListInventoryEntriesRequestFilterSensitiveLog;
-const ListInventoryEntriesResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListInventoryEntriesResultFilterSensitiveLog = ListInventoryEntriesResultFilterSensitiveLog;
-const OpsItemEventFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemEventFilterFilterSensitiveLog = OpsItemEventFilterFilterSensitiveLog;
-const ListOpsItemEventsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListOpsItemEventsRequestFilterSensitiveLog = ListOpsItemEventsRequestFilterSensitiveLog;
-const OpsItemIdentityFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemIdentityFilterSensitiveLog = OpsItemIdentityFilterSensitiveLog;
-const OpsItemEventSummaryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemEventSummaryFilterSensitiveLog = OpsItemEventSummaryFilterSensitiveLog;
-const ListOpsItemEventsResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListOpsItemEventsResponseFilterSensitiveLog = ListOpsItemEventsResponseFilterSensitiveLog;
-const OpsItemRelatedItemsFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemRelatedItemsFilterFilterSensitiveLog = OpsItemRelatedItemsFilterFilterSensitiveLog;
-const ListOpsItemRelatedItemsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListOpsItemRelatedItemsRequestFilterSensitiveLog = ListOpsItemRelatedItemsRequestFilterSensitiveLog;
-const OpsItemRelatedItemSummaryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsItemRelatedItemSummaryFilterSensitiveLog = OpsItemRelatedItemSummaryFilterSensitiveLog;
-const ListOpsItemRelatedItemsResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListOpsItemRelatedItemsResponseFilterSensitiveLog = ListOpsItemRelatedItemsResponseFilterSensitiveLog;
-const OpsMetadataFilterFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsMetadataFilterFilterSensitiveLog = OpsMetadataFilterFilterSensitiveLog;
-const ListOpsMetadataRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListOpsMetadataRequestFilterSensitiveLog = ListOpsMetadataRequestFilterSensitiveLog;
-const OpsMetadataFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsMetadataFilterSensitiveLog = OpsMetadataFilterSensitiveLog;
-const ListOpsMetadataResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListOpsMetadataResultFilterSensitiveLog = ListOpsMetadataResultFilterSensitiveLog;
-const ListResourceComplianceSummariesRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListResourceComplianceSummariesRequestFilterSensitiveLog = ListResourceComplianceSummariesRequestFilterSensitiveLog;
-const ResourceComplianceSummaryItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResourceComplianceSummaryItemFilterSensitiveLog = ResourceComplianceSummaryItemFilterSensitiveLog;
-const ListResourceComplianceSummariesResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListResourceComplianceSummariesResultFilterSensitiveLog = ListResourceComplianceSummariesResultFilterSensitiveLog;
-const ListResourceDataSyncRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListResourceDataSyncRequestFilterSensitiveLog = ListResourceDataSyncRequestFilterSensitiveLog;
-const ResourceDataSyncSourceWithStateFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResourceDataSyncSourceWithStateFilterSensitiveLog = ResourceDataSyncSourceWithStateFilterSensitiveLog;
-const ResourceDataSyncItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResourceDataSyncItemFilterSensitiveLog = ResourceDataSyncItemFilterSensitiveLog;
-const ListResourceDataSyncResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListResourceDataSyncResultFilterSensitiveLog = ListResourceDataSyncResultFilterSensitiveLog;
-const ListTagsForResourceRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListTagsForResourceRequestFilterSensitiveLog = ListTagsForResourceRequestFilterSensitiveLog;
-const ListTagsForResourceResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListTagsForResourceResultFilterSensitiveLog = ListTagsForResourceResultFilterSensitiveLog;
-const ModifyDocumentPermissionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ModifyDocumentPermissionRequestFilterSensitiveLog = ModifyDocumentPermissionRequestFilterSensitiveLog;
-const ModifyDocumentPermissionResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ModifyDocumentPermissionResponseFilterSensitiveLog = ModifyDocumentPermissionResponseFilterSensitiveLog;
-const ComplianceItemEntryFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ComplianceItemEntryFilterSensitiveLog = ComplianceItemEntryFilterSensitiveLog;
-const PutComplianceItemsRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutComplianceItemsRequestFilterSensitiveLog = PutComplianceItemsRequestFilterSensitiveLog;
-const PutComplianceItemsResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutComplianceItemsResultFilterSensitiveLog = PutComplianceItemsResultFilterSensitiveLog;
-const InventoryItemFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryItemFilterSensitiveLog = InventoryItemFilterSensitiveLog;
-const PutInventoryRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutInventoryRequestFilterSensitiveLog = PutInventoryRequestFilterSensitiveLog;
-const PutInventoryResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutInventoryResultFilterSensitiveLog = PutInventoryResultFilterSensitiveLog;
 const PutParameterRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Value && { Value: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.PutParameterRequestFilterSensitiveLog = PutParameterRequestFilterSensitiveLog;
-const PutParameterResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutParameterResultFilterSensitiveLog = PutParameterResultFilterSensitiveLog;
-const PutResourcePolicyRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutResourcePolicyRequestFilterSensitiveLog = PutResourcePolicyRequestFilterSensitiveLog;
-const PutResourcePolicyResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PutResourcePolicyResponseFilterSensitiveLog = PutResourcePolicyResponseFilterSensitiveLog;
-const RegisterDefaultPatchBaselineRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterDefaultPatchBaselineRequestFilterSensitiveLog = RegisterDefaultPatchBaselineRequestFilterSensitiveLog;
-const RegisterDefaultPatchBaselineResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterDefaultPatchBaselineResultFilterSensitiveLog = RegisterDefaultPatchBaselineResultFilterSensitiveLog;
-const RegisterPatchBaselineForPatchGroupRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterPatchBaselineForPatchGroupRequestFilterSensitiveLog = RegisterPatchBaselineForPatchGroupRequestFilterSensitiveLog;
-const RegisterPatchBaselineForPatchGroupResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterPatchBaselineForPatchGroupResultFilterSensitiveLog = RegisterPatchBaselineForPatchGroupResultFilterSensitiveLog;
 const RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.OwnerInformation && { OwnerInformation: smithy_client_1.SENSITIVE_STRING }),
     ...(obj.Description && { Description: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog;
-const RegisterTargetWithMaintenanceWindowResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterTargetWithMaintenanceWindowResultFilterSensitiveLog = RegisterTargetWithMaintenanceWindowResultFilterSensitiveLog;
 const RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.TaskParameters && { TaskParameters: smithy_client_1.SENSITIVE_STRING }),
@@ -15545,42 +14140,6 @@ const RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
     ...(obj.Description && { Description: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog;
-const RegisterTaskWithMaintenanceWindowResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterTaskWithMaintenanceWindowResultFilterSensitiveLog = RegisterTaskWithMaintenanceWindowResultFilterSensitiveLog;
-const RemoveTagsFromResourceRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RemoveTagsFromResourceRequestFilterSensitiveLog = RemoveTagsFromResourceRequestFilterSensitiveLog;
-const RemoveTagsFromResourceResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RemoveTagsFromResourceResultFilterSensitiveLog = RemoveTagsFromResourceResultFilterSensitiveLog;
-const ResetServiceSettingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResetServiceSettingRequestFilterSensitiveLog = ResetServiceSettingRequestFilterSensitiveLog;
-const ResetServiceSettingResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResetServiceSettingResultFilterSensitiveLog = ResetServiceSettingResultFilterSensitiveLog;
-const ResumeSessionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResumeSessionRequestFilterSensitiveLog = ResumeSessionRequestFilterSensitiveLog;
-const ResumeSessionResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ResumeSessionResponseFilterSensitiveLog = ResumeSessionResponseFilterSensitiveLog;
-const SendAutomationSignalRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SendAutomationSignalRequestFilterSensitiveLog = SendAutomationSignalRequestFilterSensitiveLog;
-const SendAutomationSignalResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.SendAutomationSignalResultFilterSensitiveLog = SendAutomationSignalResultFilterSensitiveLog;
 const SendCommandRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
@@ -15591,62 +14150,6 @@ const SendCommandResultFilterSensitiveLog = (obj) => ({
     ...(obj.Command && { Command: (0, exports.CommandFilterSensitiveLog)(obj.Command) }),
 });
 exports.SendCommandResultFilterSensitiveLog = SendCommandResultFilterSensitiveLog;
-const StartAssociationsOnceRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartAssociationsOnceRequestFilterSensitiveLog = StartAssociationsOnceRequestFilterSensitiveLog;
-const StartAssociationsOnceResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartAssociationsOnceResultFilterSensitiveLog = StartAssociationsOnceResultFilterSensitiveLog;
-const StartAutomationExecutionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartAutomationExecutionRequestFilterSensitiveLog = StartAutomationExecutionRequestFilterSensitiveLog;
-const StartAutomationExecutionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartAutomationExecutionResultFilterSensitiveLog = StartAutomationExecutionResultFilterSensitiveLog;
-const StartChangeRequestExecutionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartChangeRequestExecutionRequestFilterSensitiveLog = StartChangeRequestExecutionRequestFilterSensitiveLog;
-const StartChangeRequestExecutionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartChangeRequestExecutionResultFilterSensitiveLog = StartChangeRequestExecutionResultFilterSensitiveLog;
-const StartSessionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartSessionRequestFilterSensitiveLog = StartSessionRequestFilterSensitiveLog;
-const StartSessionResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartSessionResponseFilterSensitiveLog = StartSessionResponseFilterSensitiveLog;
-const StopAutomationExecutionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StopAutomationExecutionRequestFilterSensitiveLog = StopAutomationExecutionRequestFilterSensitiveLog;
-const StopAutomationExecutionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StopAutomationExecutionResultFilterSensitiveLog = StopAutomationExecutionResultFilterSensitiveLog;
-const TerminateSessionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TerminateSessionRequestFilterSensitiveLog = TerminateSessionRequestFilterSensitiveLog;
-const TerminateSessionResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TerminateSessionResponseFilterSensitiveLog = TerminateSessionResponseFilterSensitiveLog;
-const UnlabelParameterVersionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UnlabelParameterVersionRequestFilterSensitiveLog = UnlabelParameterVersionRequestFilterSensitiveLog;
-const UnlabelParameterVersionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UnlabelParameterVersionResultFilterSensitiveLog = UnlabelParameterVersionResultFilterSensitiveLog;
 
 
 /***/ }),
@@ -15657,7 +14160,7 @@ exports.UnlabelParameterVersionResultFilterSensitiveLog = UnlabelParameterVersio
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.GetOpsSummaryRequestFilterSensitiveLog = exports.GetInventoryRequestFilterSensitiveLog = exports.OpsAggregatorFilterSensitiveLog = exports.InventoryAggregatorFilterSensitiveLog = exports.UpdateServiceSettingResultFilterSensitiveLog = exports.UpdateServiceSettingRequestFilterSensitiveLog = exports.UpdateResourceDataSyncResultFilterSensitiveLog = exports.UpdateResourceDataSyncRequestFilterSensitiveLog = exports.UpdatePatchBaselineResultFilterSensitiveLog = exports.UpdatePatchBaselineRequestFilterSensitiveLog = exports.UpdateOpsMetadataResultFilterSensitiveLog = exports.UpdateOpsMetadataRequestFilterSensitiveLog = exports.UpdateOpsItemResponseFilterSensitiveLog = exports.UpdateOpsItemRequestFilterSensitiveLog = exports.UpdateManagedInstanceRoleResultFilterSensitiveLog = exports.UpdateManagedInstanceRoleRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowTaskResultFilterSensitiveLog = exports.UpdateMaintenanceWindowTaskRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowTargetResultFilterSensitiveLog = exports.UpdateMaintenanceWindowTargetRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowResultFilterSensitiveLog = exports.UpdateMaintenanceWindowRequestFilterSensitiveLog = exports.UpdateDocumentMetadataResponseFilterSensitiveLog = exports.UpdateDocumentMetadataRequestFilterSensitiveLog = exports.DocumentReviewsFilterSensitiveLog = exports.UpdateDocumentDefaultVersionResultFilterSensitiveLog = exports.DocumentDefaultVersionDescriptionFilterSensitiveLog = exports.UpdateDocumentDefaultVersionRequestFilterSensitiveLog = exports.UpdateDocumentResultFilterSensitiveLog = exports.UpdateDocumentRequestFilterSensitiveLog = exports.UpdateAssociationStatusResultFilterSensitiveLog = exports.UpdateAssociationStatusRequestFilterSensitiveLog = exports.UpdateAssociationResultFilterSensitiveLog = exports.UpdateAssociationRequestFilterSensitiveLog = exports.ResourceDataSyncConflictException = exports.OpsMetadataKeyLimitExceededException = exports.DocumentReviewAction = exports.DuplicateDocumentVersionName = exports.DuplicateDocumentContent = exports.DocumentVersionLimitExceeded = exports.StatusUnchanged = exports.InvalidUpdate = void 0;
+exports.UpdatePatchBaselineResultFilterSensitiveLog = exports.UpdatePatchBaselineRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowTaskResultFilterSensitiveLog = exports.UpdateMaintenanceWindowTaskRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowTargetResultFilterSensitiveLog = exports.UpdateMaintenanceWindowTargetRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowResultFilterSensitiveLog = exports.UpdateMaintenanceWindowRequestFilterSensitiveLog = exports.UpdateAssociationStatusResultFilterSensitiveLog = exports.UpdateAssociationResultFilterSensitiveLog = exports.UpdateAssociationRequestFilterSensitiveLog = exports.ResourceDataSyncConflictException = exports.OpsMetadataKeyLimitExceededException = exports.DocumentReviewAction = exports.DuplicateDocumentVersionName = exports.DuplicateDocumentContent = exports.DocumentVersionLimitExceeded = exports.StatusUnchanged = exports.InvalidUpdate = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const models_1_1 = __nccwpck_require__(9974);
@@ -15777,10 +14280,6 @@ const UpdateAssociationResultFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.UpdateAssociationResultFilterSensitiveLog = UpdateAssociationResultFilterSensitiveLog;
-const UpdateAssociationStatusRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateAssociationStatusRequestFilterSensitiveLog = UpdateAssociationStatusRequestFilterSensitiveLog;
 const UpdateAssociationStatusResultFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.AssociationDescription && {
@@ -15788,38 +14287,6 @@ const UpdateAssociationStatusResultFilterSensitiveLog = (obj) => ({
     }),
 });
 exports.UpdateAssociationStatusResultFilterSensitiveLog = UpdateAssociationStatusResultFilterSensitiveLog;
-const UpdateDocumentRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateDocumentRequestFilterSensitiveLog = UpdateDocumentRequestFilterSensitiveLog;
-const UpdateDocumentResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateDocumentResultFilterSensitiveLog = UpdateDocumentResultFilterSensitiveLog;
-const UpdateDocumentDefaultVersionRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateDocumentDefaultVersionRequestFilterSensitiveLog = UpdateDocumentDefaultVersionRequestFilterSensitiveLog;
-const DocumentDefaultVersionDescriptionFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentDefaultVersionDescriptionFilterSensitiveLog = DocumentDefaultVersionDescriptionFilterSensitiveLog;
-const UpdateDocumentDefaultVersionResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateDocumentDefaultVersionResultFilterSensitiveLog = UpdateDocumentDefaultVersionResultFilterSensitiveLog;
-const DocumentReviewsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DocumentReviewsFilterSensitiveLog = DocumentReviewsFilterSensitiveLog;
-const UpdateDocumentMetadataRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateDocumentMetadataRequestFilterSensitiveLog = UpdateDocumentMetadataRequestFilterSensitiveLog;
-const UpdateDocumentMetadataResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateDocumentMetadataResponseFilterSensitiveLog = UpdateDocumentMetadataResponseFilterSensitiveLog;
 const UpdateMaintenanceWindowRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Description && { Description: smithy_client_1.SENSITIVE_STRING }),
@@ -15860,30 +14327,6 @@ const UpdateMaintenanceWindowTaskResultFilterSensitiveLog = (obj) => ({
     ...(obj.Description && { Description: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.UpdateMaintenanceWindowTaskResultFilterSensitiveLog = UpdateMaintenanceWindowTaskResultFilterSensitiveLog;
-const UpdateManagedInstanceRoleRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateManagedInstanceRoleRequestFilterSensitiveLog = UpdateManagedInstanceRoleRequestFilterSensitiveLog;
-const UpdateManagedInstanceRoleResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateManagedInstanceRoleResultFilterSensitiveLog = UpdateManagedInstanceRoleResultFilterSensitiveLog;
-const UpdateOpsItemRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateOpsItemRequestFilterSensitiveLog = UpdateOpsItemRequestFilterSensitiveLog;
-const UpdateOpsItemResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateOpsItemResponseFilterSensitiveLog = UpdateOpsItemResponseFilterSensitiveLog;
-const UpdateOpsMetadataRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateOpsMetadataRequestFilterSensitiveLog = UpdateOpsMetadataRequestFilterSensitiveLog;
-const UpdateOpsMetadataResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateOpsMetadataResultFilterSensitiveLog = UpdateOpsMetadataResultFilterSensitiveLog;
 const UpdatePatchBaselineRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Sources && { Sources: obj.Sources.map((item) => (0, models_0_1.PatchSourceFilterSensitiveLog)(item)) }),
@@ -15894,38 +14337,6 @@ const UpdatePatchBaselineResultFilterSensitiveLog = (obj) => ({
     ...(obj.Sources && { Sources: obj.Sources.map((item) => (0, models_0_1.PatchSourceFilterSensitiveLog)(item)) }),
 });
 exports.UpdatePatchBaselineResultFilterSensitiveLog = UpdatePatchBaselineResultFilterSensitiveLog;
-const UpdateResourceDataSyncRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateResourceDataSyncRequestFilterSensitiveLog = UpdateResourceDataSyncRequestFilterSensitiveLog;
-const UpdateResourceDataSyncResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateResourceDataSyncResultFilterSensitiveLog = UpdateResourceDataSyncResultFilterSensitiveLog;
-const UpdateServiceSettingRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateServiceSettingRequestFilterSensitiveLog = UpdateServiceSettingRequestFilterSensitiveLog;
-const UpdateServiceSettingResultFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.UpdateServiceSettingResultFilterSensitiveLog = UpdateServiceSettingResultFilterSensitiveLog;
-const InventoryAggregatorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.InventoryAggregatorFilterSensitiveLog = InventoryAggregatorFilterSensitiveLog;
-const OpsAggregatorFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.OpsAggregatorFilterSensitiveLog = OpsAggregatorFilterSensitiveLog;
-const GetInventoryRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetInventoryRequestFilterSensitiveLog = GetInventoryRequestFilterSensitiveLog;
-const GetOpsSummaryRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetOpsSummaryRequestFilterSensitiveLog = GetOpsSummaryRequestFilterSensitiveLog;
 
 
 /***/ }),
@@ -33646,7 +32057,6 @@ exports.CreateTokenCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class CreateTokenCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -33672,8 +32082,8 @@ class CreateTokenCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.CreateTokenRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateTokenResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -33700,7 +32110,6 @@ exports.RegisterClientCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class RegisterClientCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -33726,8 +32135,8 @@ class RegisterClientCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.RegisterClientRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.RegisterClientResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -33754,7 +32163,6 @@ exports.StartDeviceAuthorizationCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(69374);
 const Aws_restJson1_1 = __nccwpck_require__(21518);
 class StartDeviceAuthorizationCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -33780,8 +32188,8 @@ class StartDeviceAuthorizationCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.StartDeviceAuthorizationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.StartDeviceAuthorizationResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -33922,7 +32330,7 @@ tslib_1.__exportStar(__nccwpck_require__(69374), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.StartDeviceAuthorizationResponseFilterSensitiveLog = exports.StartDeviceAuthorizationRequestFilterSensitiveLog = exports.RegisterClientResponseFilterSensitiveLog = exports.RegisterClientRequestFilterSensitiveLog = exports.CreateTokenResponseFilterSensitiveLog = exports.CreateTokenRequestFilterSensitiveLog = exports.InvalidClientMetadataException = exports.UnsupportedGrantTypeException = exports.UnauthorizedClientException = exports.SlowDownException = exports.InvalidScopeException = exports.InvalidRequestException = exports.InvalidGrantException = exports.InvalidClientException = exports.InternalServerException = exports.ExpiredTokenException = exports.AuthorizationPendingException = exports.AccessDeniedException = void 0;
+exports.InvalidClientMetadataException = exports.UnsupportedGrantTypeException = exports.UnauthorizedClientException = exports.SlowDownException = exports.InvalidScopeException = exports.InvalidRequestException = exports.InvalidGrantException = exports.InvalidClientException = exports.InternalServerException = exports.ExpiredTokenException = exports.AuthorizationPendingException = exports.AccessDeniedException = void 0;
 const SSOOIDCServiceException_1 = __nccwpck_require__(43026);
 class AccessDeniedException extends SSOOIDCServiceException_1.SSOOIDCServiceException {
     constructor(opts) {
@@ -34104,30 +32512,6 @@ class InvalidClientMetadataException extends SSOOIDCServiceException_1.SSOOIDCSe
     }
 }
 exports.InvalidClientMetadataException = InvalidClientMetadataException;
-const CreateTokenRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateTokenRequestFilterSensitiveLog = CreateTokenRequestFilterSensitiveLog;
-const CreateTokenResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CreateTokenResponseFilterSensitiveLog = CreateTokenResponseFilterSensitiveLog;
-const RegisterClientRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterClientRequestFilterSensitiveLog = RegisterClientRequestFilterSensitiveLog;
-const RegisterClientResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RegisterClientResponseFilterSensitiveLog = RegisterClientResponseFilterSensitiveLog;
-const StartDeviceAuthorizationRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartDeviceAuthorizationRequestFilterSensitiveLog = StartDeviceAuthorizationRequestFilterSensitiveLog;
-const StartDeviceAuthorizationResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.StartDeviceAuthorizationResponseFilterSensitiveLog = StartDeviceAuthorizationResponseFilterSensitiveLog;
 
 
 /***/ }),
@@ -34955,7 +33339,7 @@ class ListAccountRolesCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.ListAccountRolesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListAccountRolesResponseFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -35009,7 +33393,7 @@ class ListAccountsCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.ListAccountsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.ListAccountsResponseFilterSensitiveLog,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -35063,7 +33447,7 @@ class LogoutCommand extends smithy_client_1.Command {
             clientName,
             commandName,
             inputFilterSensitiveLog: models_0_1.LogoutRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (output) => output,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -35206,7 +33590,7 @@ tslib_1.__exportStar(__nccwpck_require__(66390), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.LogoutRequestFilterSensitiveLog = exports.ListAccountsResponseFilterSensitiveLog = exports.ListAccountsRequestFilterSensitiveLog = exports.ListAccountRolesResponseFilterSensitiveLog = exports.RoleInfoFilterSensitiveLog = exports.ListAccountRolesRequestFilterSensitiveLog = exports.GetRoleCredentialsResponseFilterSensitiveLog = exports.RoleCredentialsFilterSensitiveLog = exports.GetRoleCredentialsRequestFilterSensitiveLog = exports.AccountInfoFilterSensitiveLog = exports.UnauthorizedException = exports.TooManyRequestsException = exports.ResourceNotFoundException = exports.InvalidRequestException = void 0;
+exports.LogoutRequestFilterSensitiveLog = exports.ListAccountsRequestFilterSensitiveLog = exports.ListAccountRolesRequestFilterSensitiveLog = exports.GetRoleCredentialsResponseFilterSensitiveLog = exports.RoleCredentialsFilterSensitiveLog = exports.GetRoleCredentialsRequestFilterSensitiveLog = exports.UnauthorizedException = exports.TooManyRequestsException = exports.ResourceNotFoundException = exports.InvalidRequestException = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const SSOServiceException_1 = __nccwpck_require__(81517);
 class InvalidRequestException extends SSOServiceException_1.SSOServiceException {
@@ -35261,10 +33645,6 @@ class UnauthorizedException extends SSOServiceException_1.SSOServiceException {
     }
 }
 exports.UnauthorizedException = UnauthorizedException;
-const AccountInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AccountInfoFilterSensitiveLog = AccountInfoFilterSensitiveLog;
 const GetRoleCredentialsRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
@@ -35286,23 +33666,11 @@ const ListAccountRolesRequestFilterSensitiveLog = (obj) => ({
     ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.ListAccountRolesRequestFilterSensitiveLog = ListAccountRolesRequestFilterSensitiveLog;
-const RoleInfoFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.RoleInfoFilterSensitiveLog = RoleInfoFilterSensitiveLog;
-const ListAccountRolesResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListAccountRolesResponseFilterSensitiveLog = ListAccountRolesResponseFilterSensitiveLog;
 const ListAccountsRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
 });
 exports.ListAccountsRequestFilterSensitiveLog = ListAccountsRequestFilterSensitiveLog;
-const ListAccountsResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.ListAccountsResponseFilterSensitiveLog = ListAccountsResponseFilterSensitiveLog;
 const LogoutRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.accessToken && { accessToken: smithy_client_1.SENSITIVE_STRING }),
@@ -36110,7 +34478,6 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -36138,8 +34505,8 @@ class AssumeRoleCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -36166,7 +34533,6 @@ exports.AssumeRoleWithSAMLCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -36193,8 +34559,8 @@ class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -36221,7 +34587,6 @@ exports.AssumeRoleWithWebIdentityCommand = void 0;
 const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -36248,8 +34613,8 @@ class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -36277,7 +34642,6 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -36305,8 +34669,8 @@ class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.DecodeAuthorizationMessageRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.DecodeAuthorizationMessageResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -36334,7 +34698,6 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetAccessKeyInfoCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -36362,8 +34725,8 @@ class GetAccessKeyInfoCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetAccessKeyInfoRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetAccessKeyInfoResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -36391,7 +34754,6 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetCallerIdentityCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -36419,8 +34781,8 @@ class GetCallerIdentityCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetCallerIdentityRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetCallerIdentityResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -36448,7 +34810,6 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetFederationTokenCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -36476,8 +34837,8 @@ class GetFederationTokenCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetFederationTokenRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetFederationTokenResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -36505,7 +34866,6 @@ const middleware_endpoint_1 = __nccwpck_require__(5497);
 const middleware_serde_1 = __nccwpck_require__(93631);
 const middleware_signing_1 = __nccwpck_require__(14935);
 const smithy_client_1 = __nccwpck_require__(4963);
-const models_0_1 = __nccwpck_require__(21780);
 const Aws_query_1 = __nccwpck_require__(10740);
 class GetSessionTokenCommand extends smithy_client_1.Command {
     static getEndpointParameterInstructions() {
@@ -36533,8 +34893,8 @@ class GetSessionTokenCommand extends smithy_client_1.Command {
             logger,
             clientName,
             commandName,
-            inputFilterSensitiveLog: models_0_1.GetSessionTokenRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetSessionTokenResponseFilterSensitiveLog,
+            inputFilterSensitiveLog: (_) => _,
+            outputFilterSensitiveLog: (_) => _,
         };
         const { requestHandler } = configuration;
         return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
@@ -36802,7 +35162,7 @@ tslib_1.__exportStar(__nccwpck_require__(21780), exports);
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.GetSessionTokenResponseFilterSensitiveLog = exports.GetSessionTokenRequestFilterSensitiveLog = exports.GetFederationTokenResponseFilterSensitiveLog = exports.FederatedUserFilterSensitiveLog = exports.GetFederationTokenRequestFilterSensitiveLog = exports.GetCallerIdentityResponseFilterSensitiveLog = exports.GetCallerIdentityRequestFilterSensitiveLog = exports.GetAccessKeyInfoResponseFilterSensitiveLog = exports.GetAccessKeyInfoRequestFilterSensitiveLog = exports.DecodeAuthorizationMessageResponseFilterSensitiveLog = exports.DecodeAuthorizationMessageRequestFilterSensitiveLog = exports.AssumeRoleWithWebIdentityResponseFilterSensitiveLog = exports.AssumeRoleWithWebIdentityRequestFilterSensitiveLog = exports.AssumeRoleWithSAMLResponseFilterSensitiveLog = exports.AssumeRoleWithSAMLRequestFilterSensitiveLog = exports.AssumeRoleResponseFilterSensitiveLog = exports.CredentialsFilterSensitiveLog = exports.AssumeRoleRequestFilterSensitiveLog = exports.TagFilterSensitiveLog = exports.PolicyDescriptorTypeFilterSensitiveLog = exports.AssumedRoleUserFilterSensitiveLog = exports.InvalidAuthorizationMessageException = exports.IDPCommunicationErrorException = exports.InvalidIdentityTokenException = exports.IDPRejectedClaimException = exports.RegionDisabledException = exports.PackedPolicyTooLargeException = exports.MalformedPolicyDocumentException = exports.ExpiredTokenException = void 0;
+exports.InvalidAuthorizationMessageException = exports.IDPCommunicationErrorException = exports.InvalidIdentityTokenException = exports.IDPRejectedClaimException = exports.RegionDisabledException = exports.PackedPolicyTooLargeException = exports.MalformedPolicyDocumentException = exports.ExpiredTokenException = void 0;
 const STSServiceException_1 = __nccwpck_require__(26450);
 class ExpiredTokenException extends STSServiceException_1.STSServiceException {
     constructor(opts) {
@@ -36908,90 +35268,6 @@ class InvalidAuthorizationMessageException extends STSServiceException_1.STSServ
     }
 }
 exports.InvalidAuthorizationMessageException = InvalidAuthorizationMessageException;
-const AssumedRoleUserFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumedRoleUserFilterSensitiveLog = AssumedRoleUserFilterSensitiveLog;
-const PolicyDescriptorTypeFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.PolicyDescriptorTypeFilterSensitiveLog = PolicyDescriptorTypeFilterSensitiveLog;
-const TagFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.TagFilterSensitiveLog = TagFilterSensitiveLog;
-const AssumeRoleRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleRequestFilterSensitiveLog = AssumeRoleRequestFilterSensitiveLog;
-const CredentialsFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.CredentialsFilterSensitiveLog = CredentialsFilterSensitiveLog;
-const AssumeRoleResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleResponseFilterSensitiveLog = AssumeRoleResponseFilterSensitiveLog;
-const AssumeRoleWithSAMLRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleWithSAMLRequestFilterSensitiveLog = AssumeRoleWithSAMLRequestFilterSensitiveLog;
-const AssumeRoleWithSAMLResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleWithSAMLResponseFilterSensitiveLog = AssumeRoleWithSAMLResponseFilterSensitiveLog;
-const AssumeRoleWithWebIdentityRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleWithWebIdentityRequestFilterSensitiveLog = AssumeRoleWithWebIdentityRequestFilterSensitiveLog;
-const AssumeRoleWithWebIdentityResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.AssumeRoleWithWebIdentityResponseFilterSensitiveLog = AssumeRoleWithWebIdentityResponseFilterSensitiveLog;
-const DecodeAuthorizationMessageRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DecodeAuthorizationMessageRequestFilterSensitiveLog = DecodeAuthorizationMessageRequestFilterSensitiveLog;
-const DecodeAuthorizationMessageResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.DecodeAuthorizationMessageResponseFilterSensitiveLog = DecodeAuthorizationMessageResponseFilterSensitiveLog;
-const GetAccessKeyInfoRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetAccessKeyInfoRequestFilterSensitiveLog = GetAccessKeyInfoRequestFilterSensitiveLog;
-const GetAccessKeyInfoResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetAccessKeyInfoResponseFilterSensitiveLog = GetAccessKeyInfoResponseFilterSensitiveLog;
-const GetCallerIdentityRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetCallerIdentityRequestFilterSensitiveLog = GetCallerIdentityRequestFilterSensitiveLog;
-const GetCallerIdentityResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetCallerIdentityResponseFilterSensitiveLog = GetCallerIdentityResponseFilterSensitiveLog;
-const GetFederationTokenRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetFederationTokenRequestFilterSensitiveLog = GetFederationTokenRequestFilterSensitiveLog;
-const FederatedUserFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.FederatedUserFilterSensitiveLog = FederatedUserFilterSensitiveLog;
-const GetFederationTokenResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetFederationTokenResponseFilterSensitiveLog = GetFederationTokenResponseFilterSensitiveLog;
-const GetSessionTokenRequestFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetSessionTokenRequestFilterSensitiveLog = GetSessionTokenRequestFilterSensitiveLog;
-const GetSessionTokenResponseFilterSensitiveLog = (obj) => ({
-    ...obj,
-});
-exports.GetSessionTokenResponseFilterSensitiveLog = GetSessionTokenResponseFilterSensitiveLog;
 
 
 /***/ }),
@@ -54655,7 +52931,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.297.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.297.0","@aws-sdk/config-resolver":"3.296.0","@aws-sdk/credential-provider-node":"3.297.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.296.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.296.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-signing":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.296.0","@aws-sdk/node-config-provider":"3.296.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.296.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.296.0","@aws-sdk/util-user-agent-node":"3.296.0","@aws-sdk/util-utf8":"3.295.0","@aws-sdk/util-waiter":"3.296.0","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.298.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.298.0","@aws-sdk/config-resolver":"3.296.0","@aws-sdk/credential-provider-node":"3.298.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.296.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.296.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-signing":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.296.0","@aws-sdk/node-config-provider":"3.296.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.296.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.296.0","@aws-sdk/util-user-agent-node":"3.296.0","@aws-sdk/util-utf8":"3.295.0","@aws-sdk/util-waiter":"3.296.0","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
 
 /***/ }),
 
@@ -54663,7 +52939,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.297.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.296.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.296.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.296.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.296.0","@aws-sdk/node-config-provider":"3.296.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.296.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.296.0","@aws-sdk/util-user-agent-node":"3.296.0","@aws-sdk/util-utf8":"3.295.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.298.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.296.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.296.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.296.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.296.0","@aws-sdk/node-config-provider":"3.296.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.296.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.296.0","@aws-sdk/util-user-agent-node":"3.296.0","@aws-sdk/util-utf8":"3.295.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
 
 /***/ }),
 
@@ -54671,7 +52947,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"A
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.297.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.296.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.296.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.296.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.296.0","@aws-sdk/node-config-provider":"3.296.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.296.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.296.0","@aws-sdk/util-user-agent-node":"3.296.0","@aws-sdk/util-utf8":"3.295.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.298.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.296.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.296.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.296.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.296.0","@aws-sdk/node-config-provider":"3.296.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.296.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.296.0","@aws-sdk/util-user-agent-node":"3.296.0","@aws-sdk/util-utf8":"3.295.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -54679,7 +52955,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.297.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.296.0","@aws-sdk/credential-provider-node":"3.297.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.296.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.296.0","@aws-sdk/middleware-sdk-sts":"3.296.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-signing":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.296.0","@aws-sdk/node-config-provider":"3.296.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.296.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.296.0","@aws-sdk/util-user-agent-node":"3.296.0","@aws-sdk/util-utf8":"3.295.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.298.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.296.0","@aws-sdk/credential-provider-node":"3.298.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.296.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.296.0","@aws-sdk/middleware-sdk-sts":"3.296.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-signing":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.296.0","@aws-sdk/node-config-provider":"3.296.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.296.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.296.0","@aws-sdk/util-user-agent-node":"3.296.0","@aws-sdk/util-utf8":"3.295.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
