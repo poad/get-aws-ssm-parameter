@@ -9,7 +9,7 @@
     "format-check": "rome format src __tests__",
     "format": "rome format --write src __tests__",
     "check": "rome check src __tests__",
-    "check-fix": "rome check --apply-suggested src __tests__",
+    "check-fix": "rome check --apply src __tests__",
     "lint": "yarn format-check && yarn check",
     "lint-fix": "yarn format && yarn check-fix",
     "package": "ncc build --source-map --license licenses.txt",
