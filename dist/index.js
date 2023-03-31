@@ -11534,18 +11534,17 @@ exports.InstanceInformationFilterKey = exports.UnsupportedOperatingSystem = expo
 exports.DescribeMaintenanceWindowTasksResultFilterSensitiveLog = exports.MaintenanceWindowTaskFilterSensitiveLog = exports.MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = exports.DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = exports.MaintenanceWindowTargetFilterSensitiveLog = exports.DescribeMaintenanceWindowsResultFilterSensitiveLog = exports.MaintenanceWindowIdentityFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog = exports.MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog = exports.DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = exports.DescribeInstancePatchStatesResultFilterSensitiveLog = exports.InstancePatchStateFilterSensitiveLog = exports.DescribeAssociationResultFilterSensitiveLog = exports.CreatePatchBaselineRequestFilterSensitiveLog = exports.PatchSourceFilterSensitiveLog = exports.CreateMaintenanceWindowRequestFilterSensitiveLog = exports.CreateAssociationBatchResultFilterSensitiveLog = exports.FailedCreateAssociationFilterSensitiveLog = exports.CreateAssociationBatchRequestFilterSensitiveLog = exports.CreateAssociationBatchRequestEntryFilterSensitiveLog = exports.CreateAssociationResultFilterSensitiveLog = exports.AssociationDescriptionFilterSensitiveLog = exports.CreateAssociationRequestFilterSensitiveLog = exports.OpsItemFilterOperator = exports.OpsItemFilterKey = exports.MaintenanceWindowTaskCutoffBehavior = exports.MaintenanceWindowResourceType = exports.MaintenanceWindowTaskType = exports.MaintenanceWindowExecutionStatus = exports.InvalidDeletionIdException = exports.InventoryDeletionStatus = exports.InstancePatchStateOperatorType = exports.RebootOption = exports.PatchOperationType = exports.PatchComplianceDataState = exports.InvalidInstanceInformationFilterValue = exports.SourceType = exports.ResourceType = exports.PingStatus = void 0;
 const smithy_client_1 = __nccwpck_require__(4963);
 const SSMServiceException_1 = __nccwpck_require__(97777);
-var ResourceTypeForTagging;
-(function (ResourceTypeForTagging) {
-    ResourceTypeForTagging["ASSOCIATION"] = "Association";
-    ResourceTypeForTagging["AUTOMATION"] = "Automation";
-    ResourceTypeForTagging["DOCUMENT"] = "Document";
-    ResourceTypeForTagging["MAINTENANCE_WINDOW"] = "MaintenanceWindow";
-    ResourceTypeForTagging["MANAGED_INSTANCE"] = "ManagedInstance";
-    ResourceTypeForTagging["OPSMETADATA"] = "OpsMetadata";
-    ResourceTypeForTagging["OPS_ITEM"] = "OpsItem";
-    ResourceTypeForTagging["PARAMETER"] = "Parameter";
-    ResourceTypeForTagging["PATCH_BASELINE"] = "PatchBaseline";
-})(ResourceTypeForTagging = exports.ResourceTypeForTagging || (exports.ResourceTypeForTagging = {}));
+exports.ResourceTypeForTagging = {
+    ASSOCIATION: "Association",
+    AUTOMATION: "Automation",
+    DOCUMENT: "Document",
+    MAINTENANCE_WINDOW: "MaintenanceWindow",
+    MANAGED_INSTANCE: "ManagedInstance",
+    OPSMETADATA: "OpsMetadata",
+    OPS_ITEM: "OpsItem",
+    PARAMETER: "Parameter",
+    PATCH_BASELINE: "PatchBaseline",
+};
 class InternalServerError extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -11613,11 +11612,10 @@ class TooManyUpdates extends SSMServiceException_1.SSMServiceException {
     }
 }
 exports.TooManyUpdates = TooManyUpdates;
-var ExternalAlarmState;
-(function (ExternalAlarmState) {
-    ExternalAlarmState["ALARM"] = "ALARM";
-    ExternalAlarmState["UNKNOWN"] = "UNKNOWN";
-})(ExternalAlarmState = exports.ExternalAlarmState || (exports.ExternalAlarmState = {}));
+exports.ExternalAlarmState = {
+    ALARM: "ALARM",
+    UNKNOWN: "UNKNOWN",
+};
 class AlreadyExistsException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -11788,25 +11786,22 @@ class AssociationLimitExceeded extends SSMServiceException_1.SSMServiceException
     }
 }
 exports.AssociationLimitExceeded = AssociationLimitExceeded;
-var AssociationComplianceSeverity;
-(function (AssociationComplianceSeverity) {
-    AssociationComplianceSeverity["Critical"] = "CRITICAL";
-    AssociationComplianceSeverity["High"] = "HIGH";
-    AssociationComplianceSeverity["Low"] = "LOW";
-    AssociationComplianceSeverity["Medium"] = "MEDIUM";
-    AssociationComplianceSeverity["Unspecified"] = "UNSPECIFIED";
-})(AssociationComplianceSeverity = exports.AssociationComplianceSeverity || (exports.AssociationComplianceSeverity = {}));
-var AssociationSyncCompliance;
-(function (AssociationSyncCompliance) {
-    AssociationSyncCompliance["Auto"] = "AUTO";
-    AssociationSyncCompliance["Manual"] = "MANUAL";
-})(AssociationSyncCompliance = exports.AssociationSyncCompliance || (exports.AssociationSyncCompliance = {}));
-var AssociationStatusName;
-(function (AssociationStatusName) {
-    AssociationStatusName["Failed"] = "Failed";
-    AssociationStatusName["Pending"] = "Pending";
-    AssociationStatusName["Success"] = "Success";
-})(AssociationStatusName = exports.AssociationStatusName || (exports.AssociationStatusName = {}));
+exports.AssociationComplianceSeverity = {
+    Critical: "CRITICAL",
+    High: "HIGH",
+    Low: "LOW",
+    Medium: "MEDIUM",
+    Unspecified: "UNSPECIFIED",
+};
+exports.AssociationSyncCompliance = {
+    Auto: "AUTO",
+    Manual: "MANUAL",
+};
+exports.AssociationStatusName = {
+    Failed: "Failed",
+    Pending: "Pending",
+    Success: "Success",
+};
 class InvalidDocument extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -11918,73 +11913,64 @@ class UnsupportedPlatformType extends SSMServiceException_1.SSMServiceException 
     }
 }
 exports.UnsupportedPlatformType = UnsupportedPlatformType;
-var Fault;
-(function (Fault) {
-    Fault["Client"] = "Client";
-    Fault["Server"] = "Server";
-    Fault["Unknown"] = "Unknown";
-})(Fault = exports.Fault || (exports.Fault = {}));
-var AttachmentsSourceKey;
-(function (AttachmentsSourceKey) {
-    AttachmentsSourceKey["AttachmentReference"] = "AttachmentReference";
-    AttachmentsSourceKey["S3FileUrl"] = "S3FileUrl";
-    AttachmentsSourceKey["SourceUrl"] = "SourceUrl";
-})(AttachmentsSourceKey = exports.AttachmentsSourceKey || (exports.AttachmentsSourceKey = {}));
-var DocumentFormat;
-(function (DocumentFormat) {
-    DocumentFormat["JSON"] = "JSON";
-    DocumentFormat["TEXT"] = "TEXT";
-    DocumentFormat["YAML"] = "YAML";
-})(DocumentFormat = exports.DocumentFormat || (exports.DocumentFormat = {}));
-var DocumentType;
-(function (DocumentType) {
-    DocumentType["ApplicationConfiguration"] = "ApplicationConfiguration";
-    DocumentType["ApplicationConfigurationSchema"] = "ApplicationConfigurationSchema";
-    DocumentType["Automation"] = "Automation";
-    DocumentType["ChangeCalendar"] = "ChangeCalendar";
-    DocumentType["ChangeTemplate"] = "Automation.ChangeTemplate";
-    DocumentType["CloudFormation"] = "CloudFormation";
-    DocumentType["Command"] = "Command";
-    DocumentType["ConformancePackTemplate"] = "ConformancePackTemplate";
-    DocumentType["DeploymentStrategy"] = "DeploymentStrategy";
-    DocumentType["Package"] = "Package";
-    DocumentType["Policy"] = "Policy";
-    DocumentType["ProblemAnalysis"] = "ProblemAnalysis";
-    DocumentType["ProblemAnalysisTemplate"] = "ProblemAnalysisTemplate";
-    DocumentType["QuickSetup"] = "QuickSetup";
-    DocumentType["Session"] = "Session";
-})(DocumentType = exports.DocumentType || (exports.DocumentType = {}));
-var DocumentHashType;
-(function (DocumentHashType) {
-    DocumentHashType["SHA1"] = "Sha1";
-    DocumentHashType["SHA256"] = "Sha256";
-})(DocumentHashType = exports.DocumentHashType || (exports.DocumentHashType = {}));
-var DocumentParameterType;
-(function (DocumentParameterType) {
-    DocumentParameterType["String"] = "String";
-    DocumentParameterType["StringList"] = "StringList";
-})(DocumentParameterType = exports.DocumentParameterType || (exports.DocumentParameterType = {}));
-var PlatformType;
-(function (PlatformType) {
-    PlatformType["LINUX"] = "Linux";
-    PlatformType["MACOS"] = "MacOS";
-    PlatformType["WINDOWS"] = "Windows";
-})(PlatformType = exports.PlatformType || (exports.PlatformType = {}));
-var ReviewStatus;
-(function (ReviewStatus) {
-    ReviewStatus["APPROVED"] = "APPROVED";
-    ReviewStatus["NOT_REVIEWED"] = "NOT_REVIEWED";
-    ReviewStatus["PENDING"] = "PENDING";
-    ReviewStatus["REJECTED"] = "REJECTED";
-})(ReviewStatus = exports.ReviewStatus || (exports.ReviewStatus = {}));
-var DocumentStatus;
-(function (DocumentStatus) {
-    DocumentStatus["Active"] = "Active";
-    DocumentStatus["Creating"] = "Creating";
-    DocumentStatus["Deleting"] = "Deleting";
-    DocumentStatus["Failed"] = "Failed";
-    DocumentStatus["Updating"] = "Updating";
-})(DocumentStatus = exports.DocumentStatus || (exports.DocumentStatus = {}));
+exports.Fault = {
+    Client: "Client",
+    Server: "Server",
+    Unknown: "Unknown",
+};
+exports.AttachmentsSourceKey = {
+    AttachmentReference: "AttachmentReference",
+    S3FileUrl: "S3FileUrl",
+    SourceUrl: "SourceUrl",
+};
+exports.DocumentFormat = {
+    JSON: "JSON",
+    TEXT: "TEXT",
+    YAML: "YAML",
+};
+exports.DocumentType = {
+    ApplicationConfiguration: "ApplicationConfiguration",
+    ApplicationConfigurationSchema: "ApplicationConfigurationSchema",
+    Automation: "Automation",
+    ChangeCalendar: "ChangeCalendar",
+    ChangeTemplate: "Automation.ChangeTemplate",
+    CloudFormation: "CloudFormation",
+    Command: "Command",
+    ConformancePackTemplate: "ConformancePackTemplate",
+    DeploymentStrategy: "DeploymentStrategy",
+    Package: "Package",
+    Policy: "Policy",
+    ProblemAnalysis: "ProblemAnalysis",
+    ProblemAnalysisTemplate: "ProblemAnalysisTemplate",
+    QuickSetup: "QuickSetup",
+    Session: "Session",
+};
+exports.DocumentHashType = {
+    SHA1: "Sha1",
+    SHA256: "Sha256",
+};
+exports.DocumentParameterType = {
+    String: "String",
+    StringList: "StringList",
+};
+exports.PlatformType = {
+    LINUX: "Linux",
+    MACOS: "MacOS",
+    WINDOWS: "Windows",
+};
+exports.ReviewStatus = {
+    APPROVED: "APPROVED",
+    NOT_REVIEWED: "NOT_REVIEWED",
+    PENDING: "PENDING",
+    REJECTED: "REJECTED",
+};
+exports.DocumentStatus = {
+    Active: "Active",
+    Creating: "Creating",
+    Deleting: "Deleting",
+    Failed: "Failed",
+    Updating: "Updating",
+};
 class DocumentAlreadyExists extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12083,11 +12069,10 @@ class ResourceLimitExceededException extends SSMServiceException_1.SSMServiceExc
     }
 }
 exports.ResourceLimitExceededException = ResourceLimitExceededException;
-var OpsItemDataType;
-(function (OpsItemDataType) {
-    OpsItemDataType["SEARCHABLE_STRING"] = "SearchableString";
-    OpsItemDataType["STRING"] = "String";
-})(OpsItemDataType = exports.OpsItemDataType || (exports.OpsItemDataType = {}));
+exports.OpsItemDataType = {
+    SEARCHABLE_STRING: "SearchableString",
+    STRING: "String",
+};
 class OpsItemAccessDeniedException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12169,64 +12154,59 @@ class OpsMetadataTooManyUpdatesException extends SSMServiceException_1.SSMServic
     }
 }
 exports.OpsMetadataTooManyUpdatesException = OpsMetadataTooManyUpdatesException;
-var PatchComplianceLevel;
-(function (PatchComplianceLevel) {
-    PatchComplianceLevel["Critical"] = "CRITICAL";
-    PatchComplianceLevel["High"] = "HIGH";
-    PatchComplianceLevel["Informational"] = "INFORMATIONAL";
-    PatchComplianceLevel["Low"] = "LOW";
-    PatchComplianceLevel["Medium"] = "MEDIUM";
-    PatchComplianceLevel["Unspecified"] = "UNSPECIFIED";
-})(PatchComplianceLevel = exports.PatchComplianceLevel || (exports.PatchComplianceLevel = {}));
-var PatchFilterKey;
-(function (PatchFilterKey) {
-    PatchFilterKey["AdvisoryId"] = "ADVISORY_ID";
-    PatchFilterKey["Arch"] = "ARCH";
-    PatchFilterKey["BugzillaId"] = "BUGZILLA_ID";
-    PatchFilterKey["CVEId"] = "CVE_ID";
-    PatchFilterKey["Classification"] = "CLASSIFICATION";
-    PatchFilterKey["Epoch"] = "EPOCH";
-    PatchFilterKey["MsrcSeverity"] = "MSRC_SEVERITY";
-    PatchFilterKey["Name"] = "NAME";
-    PatchFilterKey["PatchId"] = "PATCH_ID";
-    PatchFilterKey["PatchSet"] = "PATCH_SET";
-    PatchFilterKey["Priority"] = "PRIORITY";
-    PatchFilterKey["Product"] = "PRODUCT";
-    PatchFilterKey["ProductFamily"] = "PRODUCT_FAMILY";
-    PatchFilterKey["Release"] = "RELEASE";
-    PatchFilterKey["Repository"] = "REPOSITORY";
-    PatchFilterKey["Section"] = "SECTION";
-    PatchFilterKey["Security"] = "SECURITY";
-    PatchFilterKey["Severity"] = "SEVERITY";
-    PatchFilterKey["Version"] = "VERSION";
-})(PatchFilterKey = exports.PatchFilterKey || (exports.PatchFilterKey = {}));
-var OperatingSystem;
-(function (OperatingSystem) {
-    OperatingSystem["AlmaLinux"] = "ALMA_LINUX";
-    OperatingSystem["AmazonLinux"] = "AMAZON_LINUX";
-    OperatingSystem["AmazonLinux2"] = "AMAZON_LINUX_2";
-    OperatingSystem["AmazonLinux2022"] = "AMAZON_LINUX_2022";
-    OperatingSystem["AmazonLinux2023"] = "AMAZON_LINUX_2023";
-    OperatingSystem["CentOS"] = "CENTOS";
-    OperatingSystem["Debian"] = "DEBIAN";
-    OperatingSystem["MacOS"] = "MACOS";
-    OperatingSystem["OracleLinux"] = "ORACLE_LINUX";
-    OperatingSystem["Raspbian"] = "RASPBIAN";
-    OperatingSystem["RedhatEnterpriseLinux"] = "REDHAT_ENTERPRISE_LINUX";
-    OperatingSystem["Rocky_Linux"] = "ROCKY_LINUX";
-    OperatingSystem["Suse"] = "SUSE";
-    OperatingSystem["Ubuntu"] = "UBUNTU";
-    OperatingSystem["Windows"] = "WINDOWS";
-})(OperatingSystem = exports.OperatingSystem || (exports.OperatingSystem = {}));
-var PatchAction;
-(function (PatchAction) {
-    PatchAction["AllowAsDependency"] = "ALLOW_AS_DEPENDENCY";
-    PatchAction["Block"] = "BLOCK";
-})(PatchAction = exports.PatchAction || (exports.PatchAction = {}));
-var ResourceDataSyncS3Format;
-(function (ResourceDataSyncS3Format) {
-    ResourceDataSyncS3Format["JSON_SERDE"] = "JsonSerDe";
-})(ResourceDataSyncS3Format = exports.ResourceDataSyncS3Format || (exports.ResourceDataSyncS3Format = {}));
+exports.PatchComplianceLevel = {
+    Critical: "CRITICAL",
+    High: "HIGH",
+    Informational: "INFORMATIONAL",
+    Low: "LOW",
+    Medium: "MEDIUM",
+    Unspecified: "UNSPECIFIED",
+};
+exports.PatchFilterKey = {
+    AdvisoryId: "ADVISORY_ID",
+    Arch: "ARCH",
+    BugzillaId: "BUGZILLA_ID",
+    CVEId: "CVE_ID",
+    Classification: "CLASSIFICATION",
+    Epoch: "EPOCH",
+    MsrcSeverity: "MSRC_SEVERITY",
+    Name: "NAME",
+    PatchId: "PATCH_ID",
+    PatchSet: "PATCH_SET",
+    Priority: "PRIORITY",
+    Product: "PRODUCT",
+    ProductFamily: "PRODUCT_FAMILY",
+    Release: "RELEASE",
+    Repository: "REPOSITORY",
+    Section: "SECTION",
+    Security: "SECURITY",
+    Severity: "SEVERITY",
+    Version: "VERSION",
+};
+exports.OperatingSystem = {
+    AlmaLinux: "ALMA_LINUX",
+    AmazonLinux: "AMAZON_LINUX",
+    AmazonLinux2: "AMAZON_LINUX_2",
+    AmazonLinux2022: "AMAZON_LINUX_2022",
+    AmazonLinux2023: "AMAZON_LINUX_2023",
+    CentOS: "CENTOS",
+    Debian: "DEBIAN",
+    MacOS: "MACOS",
+    OracleLinux: "ORACLE_LINUX",
+    Raspbian: "RASPBIAN",
+    RedhatEnterpriseLinux: "REDHAT_ENTERPRISE_LINUX",
+    Rocky_Linux: "ROCKY_LINUX",
+    Suse: "SUSE",
+    Ubuntu: "UBUNTU",
+    Windows: "WINDOWS",
+};
+exports.PatchAction = {
+    AllowAsDependency: "ALLOW_AS_DEPENDENCY",
+    Block: "BLOCK",
+};
+exports.ResourceDataSyncS3Format = {
+    JSON_SERDE: "JsonSerDe",
+};
 class ResourceDataSyncAlreadyExistsException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12338,11 +12318,10 @@ class InvalidDocumentOperation extends SSMServiceException_1.SSMServiceException
     }
 }
 exports.InvalidDocumentOperation = InvalidDocumentOperation;
-var InventorySchemaDeleteOption;
-(function (InventorySchemaDeleteOption) {
-    InventorySchemaDeleteOption["DELETE_SCHEMA"] = "DeleteSchema";
-    InventorySchemaDeleteOption["DISABLE_SCHEMA"] = "DisableSchema";
-})(InventorySchemaDeleteOption = exports.InventorySchemaDeleteOption || (exports.InventorySchemaDeleteOption = {}));
+exports.InventorySchemaDeleteOption = {
+    DELETE_SCHEMA: "DeleteSchema",
+    DISABLE_SCHEMA: "DisableSchema",
+};
 class InvalidDeleteInventoryParametersException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12498,12 +12477,11 @@ class TargetInUseException extends SSMServiceException_1.SSMServiceException {
     }
 }
 exports.TargetInUseException = TargetInUseException;
-var DescribeActivationsFilterKeys;
-(function (DescribeActivationsFilterKeys) {
-    DescribeActivationsFilterKeys["ACTIVATION_IDS"] = "ActivationIds";
-    DescribeActivationsFilterKeys["DEFAULT_INSTANCE_NAME"] = "DefaultInstanceName";
-    DescribeActivationsFilterKeys["IAM_ROLE"] = "IamRole";
-})(DescribeActivationsFilterKeys = exports.DescribeActivationsFilterKeys || (exports.DescribeActivationsFilterKeys = {}));
+exports.DescribeActivationsFilterKeys = {
+    ACTIVATION_IDS: "ActivationIds",
+    DEFAULT_INSTANCE_NAME: "DefaultInstanceName",
+    IAM_ROLE: "IamRole",
+};
 class InvalidFilter extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12546,18 +12524,16 @@ class InvalidAssociationVersion extends SSMServiceException_1.SSMServiceExceptio
     }
 }
 exports.InvalidAssociationVersion = InvalidAssociationVersion;
-var AssociationExecutionFilterKey;
-(function (AssociationExecutionFilterKey) {
-    AssociationExecutionFilterKey["CreatedTime"] = "CreatedTime";
-    AssociationExecutionFilterKey["ExecutionId"] = "ExecutionId";
-    AssociationExecutionFilterKey["Status"] = "Status";
-})(AssociationExecutionFilterKey = exports.AssociationExecutionFilterKey || (exports.AssociationExecutionFilterKey = {}));
-var AssociationFilterOperatorType;
-(function (AssociationFilterOperatorType) {
-    AssociationFilterOperatorType["Equal"] = "EQUAL";
-    AssociationFilterOperatorType["GreaterThan"] = "GREATER_THAN";
-    AssociationFilterOperatorType["LessThan"] = "LESS_THAN";
-})(AssociationFilterOperatorType = exports.AssociationFilterOperatorType || (exports.AssociationFilterOperatorType = {}));
+exports.AssociationExecutionFilterKey = {
+    CreatedTime: "CreatedTime",
+    ExecutionId: "ExecutionId",
+    Status: "Status",
+};
+exports.AssociationFilterOperatorType = {
+    Equal: "EQUAL",
+    GreaterThan: "GREATER_THAN",
+    LessThan: "LESS_THAN",
+};
 class AssociationExecutionDoesNotExist extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12572,62 +12548,56 @@ class AssociationExecutionDoesNotExist extends SSMServiceException_1.SSMServiceE
     }
 }
 exports.AssociationExecutionDoesNotExist = AssociationExecutionDoesNotExist;
-var AssociationExecutionTargetsFilterKey;
-(function (AssociationExecutionTargetsFilterKey) {
-    AssociationExecutionTargetsFilterKey["ResourceId"] = "ResourceId";
-    AssociationExecutionTargetsFilterKey["ResourceType"] = "ResourceType";
-    AssociationExecutionTargetsFilterKey["Status"] = "Status";
-})(AssociationExecutionTargetsFilterKey = exports.AssociationExecutionTargetsFilterKey || (exports.AssociationExecutionTargetsFilterKey = {}));
-var AutomationExecutionFilterKey;
-(function (AutomationExecutionFilterKey) {
-    AutomationExecutionFilterKey["AUTOMATION_SUBTYPE"] = "AutomationSubtype";
-    AutomationExecutionFilterKey["AUTOMATION_TYPE"] = "AutomationType";
-    AutomationExecutionFilterKey["CURRENT_ACTION"] = "CurrentAction";
-    AutomationExecutionFilterKey["DOCUMENT_NAME_PREFIX"] = "DocumentNamePrefix";
-    AutomationExecutionFilterKey["EXECUTION_ID"] = "ExecutionId";
-    AutomationExecutionFilterKey["EXECUTION_STATUS"] = "ExecutionStatus";
-    AutomationExecutionFilterKey["OPS_ITEM_ID"] = "OpsItemId";
-    AutomationExecutionFilterKey["PARENT_EXECUTION_ID"] = "ParentExecutionId";
-    AutomationExecutionFilterKey["START_TIME_AFTER"] = "StartTimeAfter";
-    AutomationExecutionFilterKey["START_TIME_BEFORE"] = "StartTimeBefore";
-    AutomationExecutionFilterKey["TAG_KEY"] = "TagKey";
-    AutomationExecutionFilterKey["TARGET_RESOURCE_GROUP"] = "TargetResourceGroup";
-})(AutomationExecutionFilterKey = exports.AutomationExecutionFilterKey || (exports.AutomationExecutionFilterKey = {}));
-var AutomationExecutionStatus;
-(function (AutomationExecutionStatus) {
-    AutomationExecutionStatus["APPROVED"] = "Approved";
-    AutomationExecutionStatus["CANCELLED"] = "Cancelled";
-    AutomationExecutionStatus["CANCELLING"] = "Cancelling";
-    AutomationExecutionStatus["CHANGE_CALENDAR_OVERRIDE_APPROVED"] = "ChangeCalendarOverrideApproved";
-    AutomationExecutionStatus["CHANGE_CALENDAR_OVERRIDE_REJECTED"] = "ChangeCalendarOverrideRejected";
-    AutomationExecutionStatus["COMPLETED_WITH_FAILURE"] = "CompletedWithFailure";
-    AutomationExecutionStatus["COMPLETED_WITH_SUCCESS"] = "CompletedWithSuccess";
-    AutomationExecutionStatus["FAILED"] = "Failed";
-    AutomationExecutionStatus["INPROGRESS"] = "InProgress";
-    AutomationExecutionStatus["PENDING"] = "Pending";
-    AutomationExecutionStatus["PENDING_APPROVAL"] = "PendingApproval";
-    AutomationExecutionStatus["PENDING_CHANGE_CALENDAR_OVERRIDE"] = "PendingChangeCalendarOverride";
-    AutomationExecutionStatus["REJECTED"] = "Rejected";
-    AutomationExecutionStatus["RUNBOOK_INPROGRESS"] = "RunbookInProgress";
-    AutomationExecutionStatus["SCHEDULED"] = "Scheduled";
-    AutomationExecutionStatus["SUCCESS"] = "Success";
-    AutomationExecutionStatus["TIMEDOUT"] = "TimedOut";
-    AutomationExecutionStatus["WAITING"] = "Waiting";
-})(AutomationExecutionStatus = exports.AutomationExecutionStatus || (exports.AutomationExecutionStatus = {}));
-var AutomationSubtype;
-(function (AutomationSubtype) {
-    AutomationSubtype["ChangeRequest"] = "ChangeRequest";
-})(AutomationSubtype = exports.AutomationSubtype || (exports.AutomationSubtype = {}));
-var AutomationType;
-(function (AutomationType) {
-    AutomationType["CrossAccount"] = "CrossAccount";
-    AutomationType["Local"] = "Local";
-})(AutomationType = exports.AutomationType || (exports.AutomationType = {}));
-var ExecutionMode;
-(function (ExecutionMode) {
-    ExecutionMode["Auto"] = "Auto";
-    ExecutionMode["Interactive"] = "Interactive";
-})(ExecutionMode = exports.ExecutionMode || (exports.ExecutionMode = {}));
+exports.AssociationExecutionTargetsFilterKey = {
+    ResourceId: "ResourceId",
+    ResourceType: "ResourceType",
+    Status: "Status",
+};
+exports.AutomationExecutionFilterKey = {
+    AUTOMATION_SUBTYPE: "AutomationSubtype",
+    AUTOMATION_TYPE: "AutomationType",
+    CURRENT_ACTION: "CurrentAction",
+    DOCUMENT_NAME_PREFIX: "DocumentNamePrefix",
+    EXECUTION_ID: "ExecutionId",
+    EXECUTION_STATUS: "ExecutionStatus",
+    OPS_ITEM_ID: "OpsItemId",
+    PARENT_EXECUTION_ID: "ParentExecutionId",
+    START_TIME_AFTER: "StartTimeAfter",
+    START_TIME_BEFORE: "StartTimeBefore",
+    TAG_KEY: "TagKey",
+    TARGET_RESOURCE_GROUP: "TargetResourceGroup",
+};
+exports.AutomationExecutionStatus = {
+    APPROVED: "Approved",
+    CANCELLED: "Cancelled",
+    CANCELLING: "Cancelling",
+    CHANGE_CALENDAR_OVERRIDE_APPROVED: "ChangeCalendarOverrideApproved",
+    CHANGE_CALENDAR_OVERRIDE_REJECTED: "ChangeCalendarOverrideRejected",
+    COMPLETED_WITH_FAILURE: "CompletedWithFailure",
+    COMPLETED_WITH_SUCCESS: "CompletedWithSuccess",
+    FAILED: "Failed",
+    INPROGRESS: "InProgress",
+    PENDING: "Pending",
+    PENDING_APPROVAL: "PendingApproval",
+    PENDING_CHANGE_CALENDAR_OVERRIDE: "PendingChangeCalendarOverride",
+    REJECTED: "Rejected",
+    RUNBOOK_INPROGRESS: "RunbookInProgress",
+    SCHEDULED: "Scheduled",
+    SUCCESS: "Success",
+    TIMEDOUT: "TimedOut",
+    WAITING: "Waiting",
+};
+exports.AutomationSubtype = {
+    ChangeRequest: "ChangeRequest",
+};
+exports.AutomationType = {
+    CrossAccount: "CrossAccount",
+    Local: "Local",
+};
+exports.ExecutionMode = {
+    Auto: "Auto",
+    Interactive: "Interactive",
+};
 class InvalidFilterKey extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12669,19 +12639,17 @@ class AutomationExecutionNotFoundException extends SSMServiceException_1.SSMServ
     }
 }
 exports.AutomationExecutionNotFoundException = AutomationExecutionNotFoundException;
-var StepExecutionFilterKey;
-(function (StepExecutionFilterKey) {
-    StepExecutionFilterKey["ACTION"] = "Action";
-    StepExecutionFilterKey["START_TIME_AFTER"] = "StartTimeAfter";
-    StepExecutionFilterKey["START_TIME_BEFORE"] = "StartTimeBefore";
-    StepExecutionFilterKey["STEP_EXECUTION_ID"] = "StepExecutionId";
-    StepExecutionFilterKey["STEP_EXECUTION_STATUS"] = "StepExecutionStatus";
-    StepExecutionFilterKey["STEP_NAME"] = "StepName";
-})(StepExecutionFilterKey = exports.StepExecutionFilterKey || (exports.StepExecutionFilterKey = {}));
-var DocumentPermissionType;
-(function (DocumentPermissionType) {
-    DocumentPermissionType["SHARE"] = "Share";
-})(DocumentPermissionType = exports.DocumentPermissionType || (exports.DocumentPermissionType = {}));
+exports.StepExecutionFilterKey = {
+    ACTION: "Action",
+    START_TIME_AFTER: "StartTimeAfter",
+    START_TIME_BEFORE: "StartTimeBefore",
+    STEP_EXECUTION_ID: "StepExecutionId",
+    STEP_EXECUTION_STATUS: "StepExecutionStatus",
+    STEP_NAME: "StepName",
+};
+exports.DocumentPermissionType = {
+    SHARE: "Share",
+};
 class InvalidPermissionType extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12696,13 +12664,12 @@ class InvalidPermissionType extends SSMServiceException_1.SSMServiceException {
     }
 }
 exports.InvalidPermissionType = InvalidPermissionType;
-var PatchDeploymentStatus;
-(function (PatchDeploymentStatus) {
-    PatchDeploymentStatus["Approved"] = "APPROVED";
-    PatchDeploymentStatus["ExplicitApproved"] = "EXPLICIT_APPROVED";
-    PatchDeploymentStatus["ExplicitRejected"] = "EXPLICIT_REJECTED";
-    PatchDeploymentStatus["PendingApproval"] = "PENDING_APPROVAL";
-})(PatchDeploymentStatus = exports.PatchDeploymentStatus || (exports.PatchDeploymentStatus = {}));
+exports.PatchDeploymentStatus = {
+    Approved: "APPROVED",
+    ExplicitApproved: "EXPLICIT_APPROVED",
+    ExplicitRejected: "EXPLICIT_REJECTED",
+    PendingApproval: "PENDING_APPROVAL",
+};
 class UnsupportedOperatingSystem extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12717,35 +12684,31 @@ class UnsupportedOperatingSystem extends SSMServiceException_1.SSMServiceExcepti
     }
 }
 exports.UnsupportedOperatingSystem = UnsupportedOperatingSystem;
-var InstanceInformationFilterKey;
-(function (InstanceInformationFilterKey) {
-    InstanceInformationFilterKey["ACTIVATION_IDS"] = "ActivationIds";
-    InstanceInformationFilterKey["AGENT_VERSION"] = "AgentVersion";
-    InstanceInformationFilterKey["ASSOCIATION_STATUS"] = "AssociationStatus";
-    InstanceInformationFilterKey["IAM_ROLE"] = "IamRole";
-    InstanceInformationFilterKey["INSTANCE_IDS"] = "InstanceIds";
-    InstanceInformationFilterKey["PING_STATUS"] = "PingStatus";
-    InstanceInformationFilterKey["PLATFORM_TYPES"] = "PlatformTypes";
-    InstanceInformationFilterKey["RESOURCE_TYPE"] = "ResourceType";
-})(InstanceInformationFilterKey = exports.InstanceInformationFilterKey || (exports.InstanceInformationFilterKey = {}));
-var PingStatus;
-(function (PingStatus) {
-    PingStatus["CONNECTION_LOST"] = "ConnectionLost";
-    PingStatus["INACTIVE"] = "Inactive";
-    PingStatus["ONLINE"] = "Online";
-})(PingStatus = exports.PingStatus || (exports.PingStatus = {}));
-var ResourceType;
-(function (ResourceType) {
-    ResourceType["DOCUMENT"] = "Document";
-    ResourceType["EC2_INSTANCE"] = "EC2Instance";
-    ResourceType["MANAGED_INSTANCE"] = "ManagedInstance";
-})(ResourceType = exports.ResourceType || (exports.ResourceType = {}));
-var SourceType;
-(function (SourceType) {
-    SourceType["AWS_EC2_INSTANCE"] = "AWS::EC2::Instance";
-    SourceType["AWS_IOT_THING"] = "AWS::IoT::Thing";
-    SourceType["AWS_SSM_MANAGEDINSTANCE"] = "AWS::SSM::ManagedInstance";
-})(SourceType = exports.SourceType || (exports.SourceType = {}));
+exports.InstanceInformationFilterKey = {
+    ACTIVATION_IDS: "ActivationIds",
+    AGENT_VERSION: "AgentVersion",
+    ASSOCIATION_STATUS: "AssociationStatus",
+    IAM_ROLE: "IamRole",
+    INSTANCE_IDS: "InstanceIds",
+    PING_STATUS: "PingStatus",
+    PLATFORM_TYPES: "PlatformTypes",
+    RESOURCE_TYPE: "ResourceType",
+};
+exports.PingStatus = {
+    CONNECTION_LOST: "ConnectionLost",
+    INACTIVE: "Inactive",
+    ONLINE: "Online",
+};
+exports.ResourceType = {
+    DOCUMENT: "Document",
+    EC2_INSTANCE: "EC2Instance",
+    MANAGED_INSTANCE: "ManagedInstance",
+};
+exports.SourceType = {
+    AWS_EC2_INSTANCE: "AWS::EC2::Instance",
+    AWS_IOT_THING: "AWS::IoT::Thing",
+    AWS_SSM_MANAGEDINSTANCE: "AWS::SSM::ManagedInstance",
+};
 class InvalidInstanceInformationFilterValue extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12759,38 +12722,33 @@ class InvalidInstanceInformationFilterValue extends SSMServiceException_1.SSMSer
     }
 }
 exports.InvalidInstanceInformationFilterValue = InvalidInstanceInformationFilterValue;
-var PatchComplianceDataState;
-(function (PatchComplianceDataState) {
-    PatchComplianceDataState["Failed"] = "FAILED";
-    PatchComplianceDataState["Installed"] = "INSTALLED";
-    PatchComplianceDataState["InstalledOther"] = "INSTALLED_OTHER";
-    PatchComplianceDataState["InstalledPendingReboot"] = "INSTALLED_PENDING_REBOOT";
-    PatchComplianceDataState["InstalledRejected"] = "INSTALLED_REJECTED";
-    PatchComplianceDataState["Missing"] = "MISSING";
-    PatchComplianceDataState["NotApplicable"] = "NOT_APPLICABLE";
-})(PatchComplianceDataState = exports.PatchComplianceDataState || (exports.PatchComplianceDataState = {}));
-var PatchOperationType;
-(function (PatchOperationType) {
-    PatchOperationType["INSTALL"] = "Install";
-    PatchOperationType["SCAN"] = "Scan";
-})(PatchOperationType = exports.PatchOperationType || (exports.PatchOperationType = {}));
-var RebootOption;
-(function (RebootOption) {
-    RebootOption["NO_REBOOT"] = "NoReboot";
-    RebootOption["REBOOT_IF_NEEDED"] = "RebootIfNeeded";
-})(RebootOption = exports.RebootOption || (exports.RebootOption = {}));
-var InstancePatchStateOperatorType;
-(function (InstancePatchStateOperatorType) {
-    InstancePatchStateOperatorType["EQUAL"] = "Equal";
-    InstancePatchStateOperatorType["GREATER_THAN"] = "GreaterThan";
-    InstancePatchStateOperatorType["LESS_THAN"] = "LessThan";
-    InstancePatchStateOperatorType["NOT_EQUAL"] = "NotEqual";
-})(InstancePatchStateOperatorType = exports.InstancePatchStateOperatorType || (exports.InstancePatchStateOperatorType = {}));
-var InventoryDeletionStatus;
-(function (InventoryDeletionStatus) {
-    InventoryDeletionStatus["COMPLETE"] = "Complete";
-    InventoryDeletionStatus["IN_PROGRESS"] = "InProgress";
-})(InventoryDeletionStatus = exports.InventoryDeletionStatus || (exports.InventoryDeletionStatus = {}));
+exports.PatchComplianceDataState = {
+    Failed: "FAILED",
+    Installed: "INSTALLED",
+    InstalledOther: "INSTALLED_OTHER",
+    InstalledPendingReboot: "INSTALLED_PENDING_REBOOT",
+    InstalledRejected: "INSTALLED_REJECTED",
+    Missing: "MISSING",
+    NotApplicable: "NOT_APPLICABLE",
+};
+exports.PatchOperationType = {
+    INSTALL: "Install",
+    SCAN: "Scan",
+};
+exports.RebootOption = {
+    NO_REBOOT: "NoReboot",
+    REBOOT_IF_NEEDED: "RebootIfNeeded",
+};
+exports.InstancePatchStateOperatorType = {
+    EQUAL: "Equal",
+    GREATER_THAN: "GreaterThan",
+    LESS_THAN: "LessThan",
+    NOT_EQUAL: "NotEqual",
+};
+exports.InventoryDeletionStatus = {
+    COMPLETE: "Complete",
+    IN_PROGRESS: "InProgress",
+};
 class InvalidDeletionIdException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -12805,72 +12763,66 @@ class InvalidDeletionIdException extends SSMServiceException_1.SSMServiceExcepti
     }
 }
 exports.InvalidDeletionIdException = InvalidDeletionIdException;
-var MaintenanceWindowExecutionStatus;
-(function (MaintenanceWindowExecutionStatus) {
-    MaintenanceWindowExecutionStatus["Cancelled"] = "CANCELLED";
-    MaintenanceWindowExecutionStatus["Cancelling"] = "CANCELLING";
-    MaintenanceWindowExecutionStatus["Failed"] = "FAILED";
-    MaintenanceWindowExecutionStatus["InProgress"] = "IN_PROGRESS";
-    MaintenanceWindowExecutionStatus["Pending"] = "PENDING";
-    MaintenanceWindowExecutionStatus["SkippedOverlapping"] = "SKIPPED_OVERLAPPING";
-    MaintenanceWindowExecutionStatus["Success"] = "SUCCESS";
-    MaintenanceWindowExecutionStatus["TimedOut"] = "TIMED_OUT";
-})(MaintenanceWindowExecutionStatus = exports.MaintenanceWindowExecutionStatus || (exports.MaintenanceWindowExecutionStatus = {}));
-var MaintenanceWindowTaskType;
-(function (MaintenanceWindowTaskType) {
-    MaintenanceWindowTaskType["Automation"] = "AUTOMATION";
-    MaintenanceWindowTaskType["Lambda"] = "LAMBDA";
-    MaintenanceWindowTaskType["RunCommand"] = "RUN_COMMAND";
-    MaintenanceWindowTaskType["StepFunctions"] = "STEP_FUNCTIONS";
-})(MaintenanceWindowTaskType = exports.MaintenanceWindowTaskType || (exports.MaintenanceWindowTaskType = {}));
-var MaintenanceWindowResourceType;
-(function (MaintenanceWindowResourceType) {
-    MaintenanceWindowResourceType["Instance"] = "INSTANCE";
-    MaintenanceWindowResourceType["ResourceGroup"] = "RESOURCE_GROUP";
-})(MaintenanceWindowResourceType = exports.MaintenanceWindowResourceType || (exports.MaintenanceWindowResourceType = {}));
-var MaintenanceWindowTaskCutoffBehavior;
-(function (MaintenanceWindowTaskCutoffBehavior) {
-    MaintenanceWindowTaskCutoffBehavior["CancelTask"] = "CANCEL_TASK";
-    MaintenanceWindowTaskCutoffBehavior["ContinueTask"] = "CONTINUE_TASK";
-})(MaintenanceWindowTaskCutoffBehavior = exports.MaintenanceWindowTaskCutoffBehavior || (exports.MaintenanceWindowTaskCutoffBehavior = {}));
-var OpsItemFilterKey;
-(function (OpsItemFilterKey) {
-    OpsItemFilterKey["ACCOUNT_ID"] = "AccountId";
-    OpsItemFilterKey["ACTUAL_END_TIME"] = "ActualEndTime";
-    OpsItemFilterKey["ACTUAL_START_TIME"] = "ActualStartTime";
-    OpsItemFilterKey["AUTOMATION_ID"] = "AutomationId";
-    OpsItemFilterKey["CATEGORY"] = "Category";
-    OpsItemFilterKey["CHANGE_REQUEST_APPROVER_ARN"] = "ChangeRequestByApproverArn";
-    OpsItemFilterKey["CHANGE_REQUEST_APPROVER_NAME"] = "ChangeRequestByApproverName";
-    OpsItemFilterKey["CHANGE_REQUEST_REQUESTER_ARN"] = "ChangeRequestByRequesterArn";
-    OpsItemFilterKey["CHANGE_REQUEST_REQUESTER_NAME"] = "ChangeRequestByRequesterName";
-    OpsItemFilterKey["CHANGE_REQUEST_TARGETS_RESOURCE_GROUP"] = "ChangeRequestByTargetsResourceGroup";
-    OpsItemFilterKey["CHANGE_REQUEST_TEMPLATE"] = "ChangeRequestByTemplate";
-    OpsItemFilterKey["CREATED_BY"] = "CreatedBy";
-    OpsItemFilterKey["CREATED_TIME"] = "CreatedTime";
-    OpsItemFilterKey["INSIGHT_TYPE"] = "InsightByType";
-    OpsItemFilterKey["LAST_MODIFIED_TIME"] = "LastModifiedTime";
-    OpsItemFilterKey["OPERATIONAL_DATA"] = "OperationalData";
-    OpsItemFilterKey["OPERATIONAL_DATA_KEY"] = "OperationalDataKey";
-    OpsItemFilterKey["OPERATIONAL_DATA_VALUE"] = "OperationalDataValue";
-    OpsItemFilterKey["OPSITEM_ID"] = "OpsItemId";
-    OpsItemFilterKey["OPSITEM_TYPE"] = "OpsItemType";
-    OpsItemFilterKey["PLANNED_END_TIME"] = "PlannedEndTime";
-    OpsItemFilterKey["PLANNED_START_TIME"] = "PlannedStartTime";
-    OpsItemFilterKey["PRIORITY"] = "Priority";
-    OpsItemFilterKey["RESOURCE_ID"] = "ResourceId";
-    OpsItemFilterKey["SEVERITY"] = "Severity";
-    OpsItemFilterKey["SOURCE"] = "Source";
-    OpsItemFilterKey["STATUS"] = "Status";
-    OpsItemFilterKey["TITLE"] = "Title";
-})(OpsItemFilterKey = exports.OpsItemFilterKey || (exports.OpsItemFilterKey = {}));
-var OpsItemFilterOperator;
-(function (OpsItemFilterOperator) {
-    OpsItemFilterOperator["CONTAINS"] = "Contains";
-    OpsItemFilterOperator["EQUAL"] = "Equal";
-    OpsItemFilterOperator["GREATER_THAN"] = "GreaterThan";
-    OpsItemFilterOperator["LESS_THAN"] = "LessThan";
-})(OpsItemFilterOperator = exports.OpsItemFilterOperator || (exports.OpsItemFilterOperator = {}));
+exports.MaintenanceWindowExecutionStatus = {
+    Cancelled: "CANCELLED",
+    Cancelling: "CANCELLING",
+    Failed: "FAILED",
+    InProgress: "IN_PROGRESS",
+    Pending: "PENDING",
+    SkippedOverlapping: "SKIPPED_OVERLAPPING",
+    Success: "SUCCESS",
+    TimedOut: "TIMED_OUT",
+};
+exports.MaintenanceWindowTaskType = {
+    Automation: "AUTOMATION",
+    Lambda: "LAMBDA",
+    RunCommand: "RUN_COMMAND",
+    StepFunctions: "STEP_FUNCTIONS",
+};
+exports.MaintenanceWindowResourceType = {
+    Instance: "INSTANCE",
+    ResourceGroup: "RESOURCE_GROUP",
+};
+exports.MaintenanceWindowTaskCutoffBehavior = {
+    CancelTask: "CANCEL_TASK",
+    ContinueTask: "CONTINUE_TASK",
+};
+exports.OpsItemFilterKey = {
+    ACCOUNT_ID: "AccountId",
+    ACTUAL_END_TIME: "ActualEndTime",
+    ACTUAL_START_TIME: "ActualStartTime",
+    AUTOMATION_ID: "AutomationId",
+    CATEGORY: "Category",
+    CHANGE_REQUEST_APPROVER_ARN: "ChangeRequestByApproverArn",
+    CHANGE_REQUEST_APPROVER_NAME: "ChangeRequestByApproverName",
+    CHANGE_REQUEST_REQUESTER_ARN: "ChangeRequestByRequesterArn",
+    CHANGE_REQUEST_REQUESTER_NAME: "ChangeRequestByRequesterName",
+    CHANGE_REQUEST_TARGETS_RESOURCE_GROUP: "ChangeRequestByTargetsResourceGroup",
+    CHANGE_REQUEST_TEMPLATE: "ChangeRequestByTemplate",
+    CREATED_BY: "CreatedBy",
+    CREATED_TIME: "CreatedTime",
+    INSIGHT_TYPE: "InsightByType",
+    LAST_MODIFIED_TIME: "LastModifiedTime",
+    OPERATIONAL_DATA: "OperationalData",
+    OPERATIONAL_DATA_KEY: "OperationalDataKey",
+    OPERATIONAL_DATA_VALUE: "OperationalDataValue",
+    OPSITEM_ID: "OpsItemId",
+    OPSITEM_TYPE: "OpsItemType",
+    PLANNED_END_TIME: "PlannedEndTime",
+    PLANNED_START_TIME: "PlannedStartTime",
+    PRIORITY: "Priority",
+    RESOURCE_ID: "ResourceId",
+    SEVERITY: "Severity",
+    SOURCE: "Source",
+    STATUS: "Status",
+    TITLE: "Title",
+};
+exports.OpsItemFilterOperator = {
+    CONTAINS: "Contains",
+    EQUAL: "Equal",
+    GREATER_THAN: "GreaterThan",
+    LESS_THAN: "LessThan",
+};
 const CreateAssociationRequestFilterSensitiveLog = (obj) => ({
     ...obj,
     ...(obj.Parameters && { Parameters: smithy_client_1.SENSITIVE_STRING }),
@@ -13020,46 +12972,42 @@ exports.SendCommandResultFilterSensitiveLog = exports.SendCommandRequestFilterSe
 const smithy_client_1 = __nccwpck_require__(4963);
 const models_0_1 = __nccwpck_require__(82053);
 const SSMServiceException_1 = __nccwpck_require__(97777);
-var OpsItemStatus;
-(function (OpsItemStatus) {
-    OpsItemStatus["APPROVED"] = "Approved";
-    OpsItemStatus["CANCELLED"] = "Cancelled";
-    OpsItemStatus["CANCELLING"] = "Cancelling";
-    OpsItemStatus["CHANGE_CALENDAR_OVERRIDE_APPROVED"] = "ChangeCalendarOverrideApproved";
-    OpsItemStatus["CHANGE_CALENDAR_OVERRIDE_REJECTED"] = "ChangeCalendarOverrideRejected";
-    OpsItemStatus["CLOSED"] = "Closed";
-    OpsItemStatus["COMPLETED_WITH_FAILURE"] = "CompletedWithFailure";
-    OpsItemStatus["COMPLETED_WITH_SUCCESS"] = "CompletedWithSuccess";
-    OpsItemStatus["FAILED"] = "Failed";
-    OpsItemStatus["IN_PROGRESS"] = "InProgress";
-    OpsItemStatus["OPEN"] = "Open";
-    OpsItemStatus["PENDING"] = "Pending";
-    OpsItemStatus["PENDING_APPROVAL"] = "PendingApproval";
-    OpsItemStatus["PENDING_CHANGE_CALENDAR_OVERRIDE"] = "PendingChangeCalendarOverride";
-    OpsItemStatus["REJECTED"] = "Rejected";
-    OpsItemStatus["RESOLVED"] = "Resolved";
-    OpsItemStatus["RUNBOOK_IN_PROGRESS"] = "RunbookInProgress";
-    OpsItemStatus["SCHEDULED"] = "Scheduled";
-    OpsItemStatus["TIMED_OUT"] = "TimedOut";
-})(OpsItemStatus = exports.OpsItemStatus || (exports.OpsItemStatus = {}));
-var ParametersFilterKey;
-(function (ParametersFilterKey) {
-    ParametersFilterKey["KEY_ID"] = "KeyId";
-    ParametersFilterKey["NAME"] = "Name";
-    ParametersFilterKey["TYPE"] = "Type";
-})(ParametersFilterKey = exports.ParametersFilterKey || (exports.ParametersFilterKey = {}));
-var ParameterTier;
-(function (ParameterTier) {
-    ParameterTier["ADVANCED"] = "Advanced";
-    ParameterTier["INTELLIGENT_TIERING"] = "Intelligent-Tiering";
-    ParameterTier["STANDARD"] = "Standard";
-})(ParameterTier = exports.ParameterTier || (exports.ParameterTier = {}));
-var ParameterType;
-(function (ParameterType) {
-    ParameterType["SECURE_STRING"] = "SecureString";
-    ParameterType["STRING"] = "String";
-    ParameterType["STRING_LIST"] = "StringList";
-})(ParameterType = exports.ParameterType || (exports.ParameterType = {}));
+exports.OpsItemStatus = {
+    APPROVED: "Approved",
+    CANCELLED: "Cancelled",
+    CANCELLING: "Cancelling",
+    CHANGE_CALENDAR_OVERRIDE_APPROVED: "ChangeCalendarOverrideApproved",
+    CHANGE_CALENDAR_OVERRIDE_REJECTED: "ChangeCalendarOverrideRejected",
+    CLOSED: "Closed",
+    COMPLETED_WITH_FAILURE: "CompletedWithFailure",
+    COMPLETED_WITH_SUCCESS: "CompletedWithSuccess",
+    FAILED: "Failed",
+    IN_PROGRESS: "InProgress",
+    OPEN: "Open",
+    PENDING: "Pending",
+    PENDING_APPROVAL: "PendingApproval",
+    PENDING_CHANGE_CALENDAR_OVERRIDE: "PendingChangeCalendarOverride",
+    REJECTED: "Rejected",
+    RESOLVED: "Resolved",
+    RUNBOOK_IN_PROGRESS: "RunbookInProgress",
+    SCHEDULED: "Scheduled",
+    TIMED_OUT: "TimedOut",
+};
+exports.ParametersFilterKey = {
+    KEY_ID: "KeyId",
+    NAME: "Name",
+    TYPE: "Type",
+};
+exports.ParameterTier = {
+    ADVANCED: "Advanced",
+    INTELLIGENT_TIERING: "Intelligent-Tiering",
+    STANDARD: "Standard",
+};
+exports.ParameterType = {
+    SECURE_STRING: "SecureString",
+    STRING: "String",
+    STRING_LIST: "StringList",
+};
 class InvalidFilterOption extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13073,43 +13021,38 @@ class InvalidFilterOption extends SSMServiceException_1.SSMServiceException {
     }
 }
 exports.InvalidFilterOption = InvalidFilterOption;
-var PatchSet;
-(function (PatchSet) {
-    PatchSet["Application"] = "APPLICATION";
-    PatchSet["Os"] = "OS";
-})(PatchSet = exports.PatchSet || (exports.PatchSet = {}));
-var PatchProperty;
-(function (PatchProperty) {
-    PatchProperty["PatchClassification"] = "CLASSIFICATION";
-    PatchProperty["PatchMsrcSeverity"] = "MSRC_SEVERITY";
-    PatchProperty["PatchPriority"] = "PRIORITY";
-    PatchProperty["PatchProductFamily"] = "PRODUCT_FAMILY";
-    PatchProperty["PatchSeverity"] = "SEVERITY";
-    PatchProperty["Product"] = "PRODUCT";
-})(PatchProperty = exports.PatchProperty || (exports.PatchProperty = {}));
-var SessionFilterKey;
-(function (SessionFilterKey) {
-    SessionFilterKey["INVOKED_AFTER"] = "InvokedAfter";
-    SessionFilterKey["INVOKED_BEFORE"] = "InvokedBefore";
-    SessionFilterKey["OWNER"] = "Owner";
-    SessionFilterKey["SESSION_ID"] = "SessionId";
-    SessionFilterKey["STATUS"] = "Status";
-    SessionFilterKey["TARGET_ID"] = "Target";
-})(SessionFilterKey = exports.SessionFilterKey || (exports.SessionFilterKey = {}));
-var SessionState;
-(function (SessionState) {
-    SessionState["ACTIVE"] = "Active";
-    SessionState["HISTORY"] = "History";
-})(SessionState = exports.SessionState || (exports.SessionState = {}));
-var SessionStatus;
-(function (SessionStatus) {
-    SessionStatus["CONNECTED"] = "Connected";
-    SessionStatus["CONNECTING"] = "Connecting";
-    SessionStatus["DISCONNECTED"] = "Disconnected";
-    SessionStatus["FAILED"] = "Failed";
-    SessionStatus["TERMINATED"] = "Terminated";
-    SessionStatus["TERMINATING"] = "Terminating";
-})(SessionStatus = exports.SessionStatus || (exports.SessionStatus = {}));
+exports.PatchSet = {
+    Application: "APPLICATION",
+    Os: "OS",
+};
+exports.PatchProperty = {
+    PatchClassification: "CLASSIFICATION",
+    PatchMsrcSeverity: "MSRC_SEVERITY",
+    PatchPriority: "PRIORITY",
+    PatchProductFamily: "PRODUCT_FAMILY",
+    PatchSeverity: "SEVERITY",
+    Product: "PRODUCT",
+};
+exports.SessionFilterKey = {
+    INVOKED_AFTER: "InvokedAfter",
+    INVOKED_BEFORE: "InvokedBefore",
+    OWNER: "Owner",
+    SESSION_ID: "SessionId",
+    STATUS: "Status",
+    TARGET_ID: "Target",
+};
+exports.SessionState = {
+    ACTIVE: "Active",
+    HISTORY: "History",
+};
+exports.SessionStatus = {
+    CONNECTED: "Connected",
+    CONNECTING: "Connecting",
+    DISCONNECTED: "Disconnected",
+    FAILED: "Failed",
+    TERMINATED: "Terminated",
+    TERMINATING: "Terminating",
+};
 class OpsItemRelatedItemAssociationNotFoundException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13124,11 +13067,10 @@ class OpsItemRelatedItemAssociationNotFoundException extends SSMServiceException
     }
 }
 exports.OpsItemRelatedItemAssociationNotFoundException = OpsItemRelatedItemAssociationNotFoundException;
-var CalendarState;
-(function (CalendarState) {
-    CalendarState["CLOSED"] = "CLOSED";
-    CalendarState["OPEN"] = "OPEN";
-})(CalendarState = exports.CalendarState || (exports.CalendarState = {}));
+exports.CalendarState = {
+    CLOSED: "CLOSED",
+    OPEN: "OPEN",
+};
 class InvalidDocumentType extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13157,17 +13099,16 @@ class UnsupportedCalendarException extends SSMServiceException_1.SSMServiceExcep
     }
 }
 exports.UnsupportedCalendarException = UnsupportedCalendarException;
-var CommandInvocationStatus;
-(function (CommandInvocationStatus) {
-    CommandInvocationStatus["CANCELLED"] = "Cancelled";
-    CommandInvocationStatus["CANCELLING"] = "Cancelling";
-    CommandInvocationStatus["DELAYED"] = "Delayed";
-    CommandInvocationStatus["FAILED"] = "Failed";
-    CommandInvocationStatus["IN_PROGRESS"] = "InProgress";
-    CommandInvocationStatus["PENDING"] = "Pending";
-    CommandInvocationStatus["SUCCESS"] = "Success";
-    CommandInvocationStatus["TIMED_OUT"] = "TimedOut";
-})(CommandInvocationStatus = exports.CommandInvocationStatus || (exports.CommandInvocationStatus = {}));
+exports.CommandInvocationStatus = {
+    CANCELLED: "Cancelled",
+    CANCELLING: "Cancelling",
+    DELAYED: "Delayed",
+    FAILED: "Failed",
+    IN_PROGRESS: "InProgress",
+    PENDING: "Pending",
+    SUCCESS: "Success",
+    TIMED_OUT: "TimedOut",
+};
 class InvalidPluginName extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13194,11 +13135,10 @@ class InvocationDoesNotExist extends SSMServiceException_1.SSMServiceException {
     }
 }
 exports.InvocationDoesNotExist = InvocationDoesNotExist;
-var ConnectionStatus;
-(function (ConnectionStatus) {
-    ConnectionStatus["CONNECTED"] = "Connected";
-    ConnectionStatus["NOT_CONNECTED"] = "NotConnected";
-})(ConnectionStatus = exports.ConnectionStatus || (exports.ConnectionStatus = {}));
+exports.ConnectionStatus = {
+    CONNECTED: "Connected",
+    NOT_CONNECTED: "NotConnected",
+};
 class UnsupportedFeatureRequiredException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13213,19 +13153,17 @@ class UnsupportedFeatureRequiredException extends SSMServiceException_1.SSMServi
     }
 }
 exports.UnsupportedFeatureRequiredException = UnsupportedFeatureRequiredException;
-var AttachmentHashType;
-(function (AttachmentHashType) {
-    AttachmentHashType["SHA256"] = "Sha256";
-})(AttachmentHashType = exports.AttachmentHashType || (exports.AttachmentHashType = {}));
-var InventoryQueryOperatorType;
-(function (InventoryQueryOperatorType) {
-    InventoryQueryOperatorType["BEGIN_WITH"] = "BeginWith";
-    InventoryQueryOperatorType["EQUAL"] = "Equal";
-    InventoryQueryOperatorType["EXISTS"] = "Exists";
-    InventoryQueryOperatorType["GREATER_THAN"] = "GreaterThan";
-    InventoryQueryOperatorType["LESS_THAN"] = "LessThan";
-    InventoryQueryOperatorType["NOT_EQUAL"] = "NotEqual";
-})(InventoryQueryOperatorType = exports.InventoryQueryOperatorType || (exports.InventoryQueryOperatorType = {}));
+exports.AttachmentHashType = {
+    SHA256: "Sha256",
+};
+exports.InventoryQueryOperatorType = {
+    BEGIN_WITH: "BeginWith",
+    EQUAL: "Equal",
+    EXISTS: "Exists",
+    GREATER_THAN: "GreaterThan",
+    LESS_THAN: "LessThan",
+    NOT_EQUAL: "NotEqual",
+};
 class InvalidAggregatorException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13268,34 +13206,30 @@ class InvalidResultAttributeException extends SSMServiceException_1.SSMServiceEx
     }
 }
 exports.InvalidResultAttributeException = InvalidResultAttributeException;
-var InventoryAttributeDataType;
-(function (InventoryAttributeDataType) {
-    InventoryAttributeDataType["NUMBER"] = "number";
-    InventoryAttributeDataType["STRING"] = "string";
-})(InventoryAttributeDataType = exports.InventoryAttributeDataType || (exports.InventoryAttributeDataType = {}));
-var NotificationEvent;
-(function (NotificationEvent) {
-    NotificationEvent["ALL"] = "All";
-    NotificationEvent["CANCELLED"] = "Cancelled";
-    NotificationEvent["FAILED"] = "Failed";
-    NotificationEvent["IN_PROGRESS"] = "InProgress";
-    NotificationEvent["SUCCESS"] = "Success";
-    NotificationEvent["TIMED_OUT"] = "TimedOut";
-})(NotificationEvent = exports.NotificationEvent || (exports.NotificationEvent = {}));
-var NotificationType;
-(function (NotificationType) {
-    NotificationType["Command"] = "Command";
-    NotificationType["Invocation"] = "Invocation";
-})(NotificationType = exports.NotificationType || (exports.NotificationType = {}));
-var OpsFilterOperatorType;
-(function (OpsFilterOperatorType) {
-    OpsFilterOperatorType["BEGIN_WITH"] = "BeginWith";
-    OpsFilterOperatorType["EQUAL"] = "Equal";
-    OpsFilterOperatorType["EXISTS"] = "Exists";
-    OpsFilterOperatorType["GREATER_THAN"] = "GreaterThan";
-    OpsFilterOperatorType["LESS_THAN"] = "LessThan";
-    OpsFilterOperatorType["NOT_EQUAL"] = "NotEqual";
-})(OpsFilterOperatorType = exports.OpsFilterOperatorType || (exports.OpsFilterOperatorType = {}));
+exports.InventoryAttributeDataType = {
+    NUMBER: "number",
+    STRING: "string",
+};
+exports.NotificationEvent = {
+    ALL: "All",
+    CANCELLED: "Cancelled",
+    FAILED: "Failed",
+    IN_PROGRESS: "InProgress",
+    SUCCESS: "Success",
+    TIMED_OUT: "TimedOut",
+};
+exports.NotificationType = {
+    Command: "Command",
+    Invocation: "Invocation",
+};
+exports.OpsFilterOperatorType = {
+    BEGIN_WITH: "BeginWith",
+    EQUAL: "Equal",
+    EXISTS: "Exists",
+    GREATER_THAN: "GreaterThan",
+    LESS_THAN: "LessThan",
+    NOT_EQUAL: "NotEqual",
+};
 class InvalidKeyId extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13349,105 +13283,90 @@ class ParameterVersionLabelLimitExceeded extends SSMServiceException_1.SSMServic
     }
 }
 exports.ParameterVersionLabelLimitExceeded = ParameterVersionLabelLimitExceeded;
-var AssociationFilterKey;
-(function (AssociationFilterKey) {
-    AssociationFilterKey["AssociationId"] = "AssociationId";
-    AssociationFilterKey["AssociationName"] = "AssociationName";
-    AssociationFilterKey["InstanceId"] = "InstanceId";
-    AssociationFilterKey["LastExecutedAfter"] = "LastExecutedAfter";
-    AssociationFilterKey["LastExecutedBefore"] = "LastExecutedBefore";
-    AssociationFilterKey["Name"] = "Name";
-    AssociationFilterKey["ResourceGroupName"] = "ResourceGroupName";
-    AssociationFilterKey["Status"] = "AssociationStatusName";
-})(AssociationFilterKey = exports.AssociationFilterKey || (exports.AssociationFilterKey = {}));
-var CommandFilterKey;
-(function (CommandFilterKey) {
-    CommandFilterKey["DOCUMENT_NAME"] = "DocumentName";
-    CommandFilterKey["EXECUTION_STAGE"] = "ExecutionStage";
-    CommandFilterKey["INVOKED_AFTER"] = "InvokedAfter";
-    CommandFilterKey["INVOKED_BEFORE"] = "InvokedBefore";
-    CommandFilterKey["STATUS"] = "Status";
-})(CommandFilterKey = exports.CommandFilterKey || (exports.CommandFilterKey = {}));
-var CommandPluginStatus;
-(function (CommandPluginStatus) {
-    CommandPluginStatus["CANCELLED"] = "Cancelled";
-    CommandPluginStatus["FAILED"] = "Failed";
-    CommandPluginStatus["IN_PROGRESS"] = "InProgress";
-    CommandPluginStatus["PENDING"] = "Pending";
-    CommandPluginStatus["SUCCESS"] = "Success";
-    CommandPluginStatus["TIMED_OUT"] = "TimedOut";
-})(CommandPluginStatus = exports.CommandPluginStatus || (exports.CommandPluginStatus = {}));
-var CommandStatus;
-(function (CommandStatus) {
-    CommandStatus["CANCELLED"] = "Cancelled";
-    CommandStatus["CANCELLING"] = "Cancelling";
-    CommandStatus["FAILED"] = "Failed";
-    CommandStatus["IN_PROGRESS"] = "InProgress";
-    CommandStatus["PENDING"] = "Pending";
-    CommandStatus["SUCCESS"] = "Success";
-    CommandStatus["TIMED_OUT"] = "TimedOut";
-})(CommandStatus = exports.CommandStatus || (exports.CommandStatus = {}));
-var ComplianceQueryOperatorType;
-(function (ComplianceQueryOperatorType) {
-    ComplianceQueryOperatorType["BeginWith"] = "BEGIN_WITH";
-    ComplianceQueryOperatorType["Equal"] = "EQUAL";
-    ComplianceQueryOperatorType["GreaterThan"] = "GREATER_THAN";
-    ComplianceQueryOperatorType["LessThan"] = "LESS_THAN";
-    ComplianceQueryOperatorType["NotEqual"] = "NOT_EQUAL";
-})(ComplianceQueryOperatorType = exports.ComplianceQueryOperatorType || (exports.ComplianceQueryOperatorType = {}));
-var ComplianceSeverity;
-(function (ComplianceSeverity) {
-    ComplianceSeverity["Critical"] = "CRITICAL";
-    ComplianceSeverity["High"] = "HIGH";
-    ComplianceSeverity["Informational"] = "INFORMATIONAL";
-    ComplianceSeverity["Low"] = "LOW";
-    ComplianceSeverity["Medium"] = "MEDIUM";
-    ComplianceSeverity["Unspecified"] = "UNSPECIFIED";
-})(ComplianceSeverity = exports.ComplianceSeverity || (exports.ComplianceSeverity = {}));
-var ComplianceStatus;
-(function (ComplianceStatus) {
-    ComplianceStatus["Compliant"] = "COMPLIANT";
-    ComplianceStatus["NonCompliant"] = "NON_COMPLIANT";
-})(ComplianceStatus = exports.ComplianceStatus || (exports.ComplianceStatus = {}));
-var DocumentMetadataEnum;
-(function (DocumentMetadataEnum) {
-    DocumentMetadataEnum["DocumentReviews"] = "DocumentReviews";
-})(DocumentMetadataEnum = exports.DocumentMetadataEnum || (exports.DocumentMetadataEnum = {}));
-var DocumentReviewCommentType;
-(function (DocumentReviewCommentType) {
-    DocumentReviewCommentType["Comment"] = "Comment";
-})(DocumentReviewCommentType = exports.DocumentReviewCommentType || (exports.DocumentReviewCommentType = {}));
-var DocumentFilterKey;
-(function (DocumentFilterKey) {
-    DocumentFilterKey["DocumentType"] = "DocumentType";
-    DocumentFilterKey["Name"] = "Name";
-    DocumentFilterKey["Owner"] = "Owner";
-    DocumentFilterKey["PlatformTypes"] = "PlatformTypes";
-})(DocumentFilterKey = exports.DocumentFilterKey || (exports.DocumentFilterKey = {}));
-var OpsItemEventFilterKey;
-(function (OpsItemEventFilterKey) {
-    OpsItemEventFilterKey["OPSITEM_ID"] = "OpsItemId";
-})(OpsItemEventFilterKey = exports.OpsItemEventFilterKey || (exports.OpsItemEventFilterKey = {}));
-var OpsItemEventFilterOperator;
-(function (OpsItemEventFilterOperator) {
-    OpsItemEventFilterOperator["EQUAL"] = "Equal";
-})(OpsItemEventFilterOperator = exports.OpsItemEventFilterOperator || (exports.OpsItemEventFilterOperator = {}));
-var OpsItemRelatedItemsFilterKey;
-(function (OpsItemRelatedItemsFilterKey) {
-    OpsItemRelatedItemsFilterKey["ASSOCIATION_ID"] = "AssociationId";
-    OpsItemRelatedItemsFilterKey["RESOURCE_TYPE"] = "ResourceType";
-    OpsItemRelatedItemsFilterKey["RESOURCE_URI"] = "ResourceUri";
-})(OpsItemRelatedItemsFilterKey = exports.OpsItemRelatedItemsFilterKey || (exports.OpsItemRelatedItemsFilterKey = {}));
-var OpsItemRelatedItemsFilterOperator;
-(function (OpsItemRelatedItemsFilterOperator) {
-    OpsItemRelatedItemsFilterOperator["EQUAL"] = "Equal";
-})(OpsItemRelatedItemsFilterOperator = exports.OpsItemRelatedItemsFilterOperator || (exports.OpsItemRelatedItemsFilterOperator = {}));
-var LastResourceDataSyncStatus;
-(function (LastResourceDataSyncStatus) {
-    LastResourceDataSyncStatus["FAILED"] = "Failed";
-    LastResourceDataSyncStatus["INPROGRESS"] = "InProgress";
-    LastResourceDataSyncStatus["SUCCESSFUL"] = "Successful";
-})(LastResourceDataSyncStatus = exports.LastResourceDataSyncStatus || (exports.LastResourceDataSyncStatus = {}));
+exports.AssociationFilterKey = {
+    AssociationId: "AssociationId",
+    AssociationName: "AssociationName",
+    InstanceId: "InstanceId",
+    LastExecutedAfter: "LastExecutedAfter",
+    LastExecutedBefore: "LastExecutedBefore",
+    Name: "Name",
+    ResourceGroupName: "ResourceGroupName",
+    Status: "AssociationStatusName",
+};
+exports.CommandFilterKey = {
+    DOCUMENT_NAME: "DocumentName",
+    EXECUTION_STAGE: "ExecutionStage",
+    INVOKED_AFTER: "InvokedAfter",
+    INVOKED_BEFORE: "InvokedBefore",
+    STATUS: "Status",
+};
+exports.CommandPluginStatus = {
+    CANCELLED: "Cancelled",
+    FAILED: "Failed",
+    IN_PROGRESS: "InProgress",
+    PENDING: "Pending",
+    SUCCESS: "Success",
+    TIMED_OUT: "TimedOut",
+};
+exports.CommandStatus = {
+    CANCELLED: "Cancelled",
+    CANCELLING: "Cancelling",
+    FAILED: "Failed",
+    IN_PROGRESS: "InProgress",
+    PENDING: "Pending",
+    SUCCESS: "Success",
+    TIMED_OUT: "TimedOut",
+};
+exports.ComplianceQueryOperatorType = {
+    BeginWith: "BEGIN_WITH",
+    Equal: "EQUAL",
+    GreaterThan: "GREATER_THAN",
+    LessThan: "LESS_THAN",
+    NotEqual: "NOT_EQUAL",
+};
+exports.ComplianceSeverity = {
+    Critical: "CRITICAL",
+    High: "HIGH",
+    Informational: "INFORMATIONAL",
+    Low: "LOW",
+    Medium: "MEDIUM",
+    Unspecified: "UNSPECIFIED",
+};
+exports.ComplianceStatus = {
+    Compliant: "COMPLIANT",
+    NonCompliant: "NON_COMPLIANT",
+};
+exports.DocumentMetadataEnum = {
+    DocumentReviews: "DocumentReviews",
+};
+exports.DocumentReviewCommentType = {
+    Comment: "Comment",
+};
+exports.DocumentFilterKey = {
+    DocumentType: "DocumentType",
+    Name: "Name",
+    Owner: "Owner",
+    PlatformTypes: "PlatformTypes",
+};
+exports.OpsItemEventFilterKey = {
+    OPSITEM_ID: "OpsItemId",
+};
+exports.OpsItemEventFilterOperator = {
+    EQUAL: "Equal",
+};
+exports.OpsItemRelatedItemsFilterKey = {
+    ASSOCIATION_ID: "AssociationId",
+    RESOURCE_TYPE: "ResourceType",
+    RESOURCE_URI: "ResourceUri",
+};
+exports.OpsItemRelatedItemsFilterOperator = {
+    EQUAL: "Equal",
+};
+exports.LastResourceDataSyncStatus = {
+    FAILED: "Failed",
+    INPROGRESS: "InProgress",
+    SUCCESSFUL: "Successful",
+};
 class DocumentPermissionLimit extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13506,11 +13425,10 @@ class ItemSizeLimitExceededException extends SSMServiceException_1.SSMServiceExc
     }
 }
 exports.ItemSizeLimitExceededException = ItemSizeLimitExceededException;
-var ComplianceUploadType;
-(function (ComplianceUploadType) {
-    ComplianceUploadType["Complete"] = "COMPLETE";
-    ComplianceUploadType["Partial"] = "PARTIAL";
-})(ComplianceUploadType = exports.ComplianceUploadType || (exports.ComplianceUploadType = {}));
+exports.ComplianceUploadType = {
+    Complete: "COMPLETE",
+    Partial: "PARTIAL",
+};
 class TotalSizeLimitExceededException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13825,14 +13743,13 @@ class InvalidAutomationSignalException extends SSMServiceException_1.SSMServiceE
     }
 }
 exports.InvalidAutomationSignalException = InvalidAutomationSignalException;
-var SignalType;
-(function (SignalType) {
-    SignalType["APPROVE"] = "Approve";
-    SignalType["REJECT"] = "Reject";
-    SignalType["RESUME"] = "Resume";
-    SignalType["START_STEP"] = "StartStep";
-    SignalType["STOP_STEP"] = "StopStep";
-})(SignalType = exports.SignalType || (exports.SignalType = {}));
+exports.SignalType = {
+    APPROVE: "Approve",
+    REJECT: "Reject",
+    RESUME: "Resume",
+    START_STEP: "StartStep",
+    STOP_STEP: "StopStep",
+};
 class InvalidNotificationConfig extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13986,11 +13903,10 @@ class InvalidAutomationStatusUpdateException extends SSMServiceException_1.SSMSe
     }
 }
 exports.InvalidAutomationStatusUpdateException = InvalidAutomationStatusUpdateException;
-var StopType;
-(function (StopType) {
-    StopType["CANCEL"] = "Cancel";
-    StopType["COMPLETE"] = "Complete";
-})(StopType = exports.StopType || (exports.StopType = {}));
+exports.StopType = {
+    CANCEL: "Cancel",
+    COMPLETE: "Complete",
+};
 class AssociationVersionLimitExceeded extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -14234,13 +14150,12 @@ class DuplicateDocumentVersionName extends SSMServiceException_1.SSMServiceExcep
     }
 }
 exports.DuplicateDocumentVersionName = DuplicateDocumentVersionName;
-var DocumentReviewAction;
-(function (DocumentReviewAction) {
-    DocumentReviewAction["Approve"] = "Approve";
-    DocumentReviewAction["Reject"] = "Reject";
-    DocumentReviewAction["SendForReview"] = "SendForReview";
-    DocumentReviewAction["UpdateReview"] = "UpdateReview";
-})(DocumentReviewAction = exports.DocumentReviewAction || (exports.DocumentReviewAction = {}));
+exports.DocumentReviewAction = {
+    Approve: "Approve",
+    Reject: "Reject",
+    SendForReview: "SendForReview",
+    UpdateReview: "UpdateReview",
+};
 class OpsMetadataKeyLimitExceededException extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -39087,6 +39002,10 @@ const deserializerMiddleware = (options, deserializer) => (next, context) => asy
         Object.defineProperty(error, "$response", {
             value: response,
         });
+        if (!('$metadata' in error)) {
+            const hint = `Deserialization error: to see the raw response, inspect the hidden field {error}.$response on this object.`;
+            error.message += "\n  " + hint;
+        }
         throw error;
     }
 };
@@ -52955,7 +52874,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.301.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.301.0","@aws-sdk/config-resolver":"3.300.0","@aws-sdk/credential-provider-node":"3.301.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.299.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.300.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-signing":"3.299.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.299.0","@aws-sdk/node-config-provider":"3.300.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.300.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.299.0","@aws-sdk/util-user-agent-node":"3.300.0","@aws-sdk/util-utf8":"3.295.0","@aws-sdk/util-waiter":"3.296.0","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.303.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.303.0","@aws-sdk/config-resolver":"3.303.0","@aws-sdk/credential-provider-node":"3.303.0","@aws-sdk/fetch-http-handler":"3.303.0","@aws-sdk/hash-node":"3.303.0","@aws-sdk/invalid-dependency":"3.303.0","@aws-sdk/middleware-content-length":"3.303.0","@aws-sdk/middleware-endpoint":"3.303.0","@aws-sdk/middleware-host-header":"3.303.0","@aws-sdk/middleware-logger":"3.303.0","@aws-sdk/middleware-recursion-detection":"3.303.0","@aws-sdk/middleware-retry":"3.303.0","@aws-sdk/middleware-serde":"3.303.0","@aws-sdk/middleware-signing":"3.303.0","@aws-sdk/middleware-stack":"3.303.0","@aws-sdk/middleware-user-agent":"3.303.0","@aws-sdk/node-config-provider":"3.303.0","@aws-sdk/node-http-handler":"3.303.0","@aws-sdk/protocol-http":"3.303.0","@aws-sdk/smithy-client":"3.303.0","@aws-sdk/types":"3.303.0","@aws-sdk/url-parser":"3.303.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.303.0","@aws-sdk/util-defaults-mode-node":"3.303.0","@aws-sdk/util-endpoints":"3.303.0","@aws-sdk/util-retry":"3.303.0","@aws-sdk/util-user-agent-browser":"3.303.0","@aws-sdk/util-user-agent-node":"3.303.0","@aws-sdk/util-utf8":"3.303.0","@aws-sdk/util-waiter":"3.303.0","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
 
 /***/ }),
 
@@ -52963,7 +52882,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.301.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.300.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.299.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.300.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.299.0","@aws-sdk/node-config-provider":"3.300.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.300.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.299.0","@aws-sdk/util-user-agent-node":"3.300.0","@aws-sdk/util-utf8":"3.295.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"AWS SDK for JavaScript Sso Oidc Client for Node.js, Browser and React Native","version":"3.303.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso-oidc"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.303.0","@aws-sdk/fetch-http-handler":"3.303.0","@aws-sdk/hash-node":"3.303.0","@aws-sdk/invalid-dependency":"3.303.0","@aws-sdk/middleware-content-length":"3.303.0","@aws-sdk/middleware-endpoint":"3.303.0","@aws-sdk/middleware-host-header":"3.303.0","@aws-sdk/middleware-logger":"3.303.0","@aws-sdk/middleware-recursion-detection":"3.303.0","@aws-sdk/middleware-retry":"3.303.0","@aws-sdk/middleware-serde":"3.303.0","@aws-sdk/middleware-stack":"3.303.0","@aws-sdk/middleware-user-agent":"3.303.0","@aws-sdk/node-config-provider":"3.303.0","@aws-sdk/node-http-handler":"3.303.0","@aws-sdk/protocol-http":"3.303.0","@aws-sdk/smithy-client":"3.303.0","@aws-sdk/types":"3.303.0","@aws-sdk/url-parser":"3.303.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.303.0","@aws-sdk/util-defaults-mode-node":"3.303.0","@aws-sdk/util-endpoints":"3.303.0","@aws-sdk/util-retry":"3.303.0","@aws-sdk/util-user-agent-browser":"3.303.0","@aws-sdk/util-user-agent-node":"3.303.0","@aws-sdk/util-utf8":"3.303.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso-oidc","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso-oidc"}}');
 
 /***/ }),
 
@@ -52971,7 +52890,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso-oidc","description":"A
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.301.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.300.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.299.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.300.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.299.0","@aws-sdk/node-config-provider":"3.300.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.300.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.299.0","@aws-sdk/util-user-agent-node":"3.300.0","@aws-sdk/util-utf8":"3.295.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.303.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.303.0","@aws-sdk/fetch-http-handler":"3.303.0","@aws-sdk/hash-node":"3.303.0","@aws-sdk/invalid-dependency":"3.303.0","@aws-sdk/middleware-content-length":"3.303.0","@aws-sdk/middleware-endpoint":"3.303.0","@aws-sdk/middleware-host-header":"3.303.0","@aws-sdk/middleware-logger":"3.303.0","@aws-sdk/middleware-recursion-detection":"3.303.0","@aws-sdk/middleware-retry":"3.303.0","@aws-sdk/middleware-serde":"3.303.0","@aws-sdk/middleware-stack":"3.303.0","@aws-sdk/middleware-user-agent":"3.303.0","@aws-sdk/node-config-provider":"3.303.0","@aws-sdk/node-http-handler":"3.303.0","@aws-sdk/protocol-http":"3.303.0","@aws-sdk/smithy-client":"3.303.0","@aws-sdk/types":"3.303.0","@aws-sdk/url-parser":"3.303.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.303.0","@aws-sdk/util-defaults-mode-node":"3.303.0","@aws-sdk/util-endpoints":"3.303.0","@aws-sdk/util-retry":"3.303.0","@aws-sdk/util-user-agent-browser":"3.303.0","@aws-sdk/util-user-agent-node":"3.303.0","@aws-sdk/util-utf8":"3.303.0","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
@@ -52979,7 +52898,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.301.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.300.0","@aws-sdk/credential-provider-node":"3.301.0","@aws-sdk/fetch-http-handler":"3.296.0","@aws-sdk/hash-node":"3.296.0","@aws-sdk/invalid-dependency":"3.296.0","@aws-sdk/middleware-content-length":"3.296.0","@aws-sdk/middleware-endpoint":"3.299.0","@aws-sdk/middleware-host-header":"3.296.0","@aws-sdk/middleware-logger":"3.296.0","@aws-sdk/middleware-recursion-detection":"3.296.0","@aws-sdk/middleware-retry":"3.300.0","@aws-sdk/middleware-sdk-sts":"3.299.0","@aws-sdk/middleware-serde":"3.296.0","@aws-sdk/middleware-signing":"3.299.0","@aws-sdk/middleware-stack":"3.296.0","@aws-sdk/middleware-user-agent":"3.299.0","@aws-sdk/node-config-provider":"3.300.0","@aws-sdk/node-http-handler":"3.296.0","@aws-sdk/protocol-http":"3.296.0","@aws-sdk/smithy-client":"3.296.0","@aws-sdk/types":"3.296.0","@aws-sdk/url-parser":"3.296.0","@aws-sdk/util-base64":"3.295.0","@aws-sdk/util-body-length-browser":"3.295.0","@aws-sdk/util-body-length-node":"3.295.0","@aws-sdk/util-defaults-mode-browser":"3.296.0","@aws-sdk/util-defaults-mode-node":"3.300.0","@aws-sdk/util-endpoints":"3.296.0","@aws-sdk/util-retry":"3.296.0","@aws-sdk/util-user-agent-browser":"3.299.0","@aws-sdk/util-user-agent-node":"3.300.0","@aws-sdk/util-utf8":"3.295.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.295.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.303.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.303.0","@aws-sdk/credential-provider-node":"3.303.0","@aws-sdk/fetch-http-handler":"3.303.0","@aws-sdk/hash-node":"3.303.0","@aws-sdk/invalid-dependency":"3.303.0","@aws-sdk/middleware-content-length":"3.303.0","@aws-sdk/middleware-endpoint":"3.303.0","@aws-sdk/middleware-host-header":"3.303.0","@aws-sdk/middleware-logger":"3.303.0","@aws-sdk/middleware-recursion-detection":"3.303.0","@aws-sdk/middleware-retry":"3.303.0","@aws-sdk/middleware-sdk-sts":"3.303.0","@aws-sdk/middleware-serde":"3.303.0","@aws-sdk/middleware-signing":"3.303.0","@aws-sdk/middleware-stack":"3.303.0","@aws-sdk/middleware-user-agent":"3.303.0","@aws-sdk/node-config-provider":"3.303.0","@aws-sdk/node-http-handler":"3.303.0","@aws-sdk/protocol-http":"3.303.0","@aws-sdk/smithy-client":"3.303.0","@aws-sdk/types":"3.303.0","@aws-sdk/url-parser":"3.303.0","@aws-sdk/util-base64":"3.303.0","@aws-sdk/util-body-length-browser":"3.303.0","@aws-sdk/util-body-length-node":"3.303.0","@aws-sdk/util-defaults-mode-browser":"3.303.0","@aws-sdk/util-defaults-mode-node":"3.303.0","@aws-sdk/util-endpoints":"3.303.0","@aws-sdk/util-retry":"3.303.0","@aws-sdk/util-user-agent-browser":"3.303.0","@aws-sdk/util-user-agent-node":"3.303.0","@aws-sdk/util-utf8":"3.303.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.303.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
