@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.97":
-  version "2.2.131"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.131.tgz#1b6f4f760a66696af8bd7f9daaeb1e515c8acace"
-  integrity sha512-rqArQWbEoBRU2jU61EaLxnMEu74bebflnhDyWoQtwI65PiqIKTb0f/laaKvpjm3WJ2pITssE6TstZD7L2eA7lQ==
+  version "2.2.135"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.135.tgz#ae1870bcecbd2fcbfa8ed5a2b4e38c34b99f323d"
+  integrity sha512-fdkrAjs/RQ9AmapA09cY5Gr9A+N+zYvUj0fuLYqeXjpl2BxLIpvkyfsL9IBxI/9lAUHHriLj6z84N6wZCgHscg==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -13,9 +13,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.77":
-  version "2.0.107"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.107.tgz#0de91f12c9c143498122b820e078787f4eb8b525"
-  integrity sha512-4UbI4+bH7+R+3R9S1td2Csrzrh6/swaEHNy2/2PSGPyleZZWsu7jCH57ZCdUSVQ1j0QR8S0XHrfjv6jsYMvrxQ==
+  version "2.0.111"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.111.tgz#eae9e6f12e27c6703516774df0b8a38ce477fab5"
+  integrity sha512-qfHTsN6E94gpAjc833KRoonZ+hN/n3IAvU5/LW1CLV0WGx56phThXo7rgUusOXI/Yna7K8FPgcmMDwSq0hD3WA==
 
 "@balena/dockerignore@^1.0.2":
   version "1.0.2"
