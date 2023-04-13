@@ -16084,1380 +16084,966 @@ const models_1_1 = __nccwpck_require__(9974);
 const models_2_1 = __nccwpck_require__(33439);
 const SSMServiceException_1 = __nccwpck_require__(97777);
 const se_AddTagsToResourceCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.AddTagsToResource",
-    };
+    const headers = sharedHeaders("AddTagsToResource");
     let body;
     body = JSON.stringify(se_AddTagsToResourceRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_AddTagsToResourceCommand = se_AddTagsToResourceCommand;
 const se_AssociateOpsItemRelatedItemCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.AssociateOpsItemRelatedItem",
-    };
+    const headers = sharedHeaders("AssociateOpsItemRelatedItem");
     let body;
     body = JSON.stringify(se_AssociateOpsItemRelatedItemRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_AssociateOpsItemRelatedItemCommand = se_AssociateOpsItemRelatedItemCommand;
 const se_CancelCommandCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CancelCommand",
-    };
+    const headers = sharedHeaders("CancelCommand");
     let body;
     body = JSON.stringify(se_CancelCommandRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CancelCommandCommand = se_CancelCommandCommand;
 const se_CancelMaintenanceWindowExecutionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CancelMaintenanceWindowExecution",
-    };
+    const headers = sharedHeaders("CancelMaintenanceWindowExecution");
     let body;
     body = JSON.stringify(se_CancelMaintenanceWindowExecutionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CancelMaintenanceWindowExecutionCommand = se_CancelMaintenanceWindowExecutionCommand;
 const se_CreateActivationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreateActivation",
-    };
+    const headers = sharedHeaders("CreateActivation");
     let body;
     body = JSON.stringify(se_CreateActivationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreateActivationCommand = se_CreateActivationCommand;
 const se_CreateAssociationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreateAssociation",
-    };
+    const headers = sharedHeaders("CreateAssociation");
     let body;
     body = JSON.stringify(se_CreateAssociationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreateAssociationCommand = se_CreateAssociationCommand;
 const se_CreateAssociationBatchCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreateAssociationBatch",
-    };
+    const headers = sharedHeaders("CreateAssociationBatch");
     let body;
     body = JSON.stringify(se_CreateAssociationBatchRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreateAssociationBatchCommand = se_CreateAssociationBatchCommand;
 const se_CreateDocumentCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreateDocument",
-    };
+    const headers = sharedHeaders("CreateDocument");
     let body;
     body = JSON.stringify(se_CreateDocumentRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreateDocumentCommand = se_CreateDocumentCommand;
 const se_CreateMaintenanceWindowCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreateMaintenanceWindow",
-    };
+    const headers = sharedHeaders("CreateMaintenanceWindow");
     let body;
     body = JSON.stringify(se_CreateMaintenanceWindowRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreateMaintenanceWindowCommand = se_CreateMaintenanceWindowCommand;
 const se_CreateOpsItemCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreateOpsItem",
-    };
+    const headers = sharedHeaders("CreateOpsItem");
     let body;
     body = JSON.stringify(se_CreateOpsItemRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreateOpsItemCommand = se_CreateOpsItemCommand;
 const se_CreateOpsMetadataCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreateOpsMetadata",
-    };
+    const headers = sharedHeaders("CreateOpsMetadata");
     let body;
     body = JSON.stringify(se_CreateOpsMetadataRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreateOpsMetadataCommand = se_CreateOpsMetadataCommand;
 const se_CreatePatchBaselineCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreatePatchBaseline",
-    };
+    const headers = sharedHeaders("CreatePatchBaseline");
     let body;
     body = JSON.stringify(se_CreatePatchBaselineRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreatePatchBaselineCommand = se_CreatePatchBaselineCommand;
 const se_CreateResourceDataSyncCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.CreateResourceDataSync",
-    };
+    const headers = sharedHeaders("CreateResourceDataSync");
     let body;
     body = JSON.stringify(se_CreateResourceDataSyncRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_CreateResourceDataSyncCommand = se_CreateResourceDataSyncCommand;
 const se_DeleteActivationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteActivation",
-    };
+    const headers = sharedHeaders("DeleteActivation");
     let body;
     body = JSON.stringify(se_DeleteActivationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteActivationCommand = se_DeleteActivationCommand;
 const se_DeleteAssociationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteAssociation",
-    };
+    const headers = sharedHeaders("DeleteAssociation");
     let body;
     body = JSON.stringify(se_DeleteAssociationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteAssociationCommand = se_DeleteAssociationCommand;
 const se_DeleteDocumentCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteDocument",
-    };
+    const headers = sharedHeaders("DeleteDocument");
     let body;
     body = JSON.stringify(se_DeleteDocumentRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteDocumentCommand = se_DeleteDocumentCommand;
 const se_DeleteInventoryCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteInventory",
-    };
+    const headers = sharedHeaders("DeleteInventory");
     let body;
     body = JSON.stringify(se_DeleteInventoryRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteInventoryCommand = se_DeleteInventoryCommand;
 const se_DeleteMaintenanceWindowCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteMaintenanceWindow",
-    };
+    const headers = sharedHeaders("DeleteMaintenanceWindow");
     let body;
     body = JSON.stringify(se_DeleteMaintenanceWindowRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteMaintenanceWindowCommand = se_DeleteMaintenanceWindowCommand;
 const se_DeleteOpsMetadataCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteOpsMetadata",
-    };
+    const headers = sharedHeaders("DeleteOpsMetadata");
     let body;
     body = JSON.stringify(se_DeleteOpsMetadataRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteOpsMetadataCommand = se_DeleteOpsMetadataCommand;
 const se_DeleteParameterCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteParameter",
-    };
+    const headers = sharedHeaders("DeleteParameter");
     let body;
     body = JSON.stringify(se_DeleteParameterRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteParameterCommand = se_DeleteParameterCommand;
 const se_DeleteParametersCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteParameters",
-    };
+    const headers = sharedHeaders("DeleteParameters");
     let body;
     body = JSON.stringify(se_DeleteParametersRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteParametersCommand = se_DeleteParametersCommand;
 const se_DeletePatchBaselineCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeletePatchBaseline",
-    };
+    const headers = sharedHeaders("DeletePatchBaseline");
     let body;
     body = JSON.stringify(se_DeletePatchBaselineRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeletePatchBaselineCommand = se_DeletePatchBaselineCommand;
 const se_DeleteResourceDataSyncCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteResourceDataSync",
-    };
+    const headers = sharedHeaders("DeleteResourceDataSync");
     let body;
     body = JSON.stringify(se_DeleteResourceDataSyncRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteResourceDataSyncCommand = se_DeleteResourceDataSyncCommand;
 const se_DeleteResourcePolicyCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeleteResourcePolicy",
-    };
+    const headers = sharedHeaders("DeleteResourcePolicy");
     let body;
     body = JSON.stringify(se_DeleteResourcePolicyRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeleteResourcePolicyCommand = se_DeleteResourcePolicyCommand;
 const se_DeregisterManagedInstanceCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeregisterManagedInstance",
-    };
+    const headers = sharedHeaders("DeregisterManagedInstance");
     let body;
     body = JSON.stringify(se_DeregisterManagedInstanceRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeregisterManagedInstanceCommand = se_DeregisterManagedInstanceCommand;
 const se_DeregisterPatchBaselineForPatchGroupCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeregisterPatchBaselineForPatchGroup",
-    };
+    const headers = sharedHeaders("DeregisterPatchBaselineForPatchGroup");
     let body;
     body = JSON.stringify(se_DeregisterPatchBaselineForPatchGroupRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeregisterPatchBaselineForPatchGroupCommand = se_DeregisterPatchBaselineForPatchGroupCommand;
 const se_DeregisterTargetFromMaintenanceWindowCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeregisterTargetFromMaintenanceWindow",
-    };
+    const headers = sharedHeaders("DeregisterTargetFromMaintenanceWindow");
     let body;
     body = JSON.stringify(se_DeregisterTargetFromMaintenanceWindowRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeregisterTargetFromMaintenanceWindowCommand = se_DeregisterTargetFromMaintenanceWindowCommand;
 const se_DeregisterTaskFromMaintenanceWindowCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DeregisterTaskFromMaintenanceWindow",
-    };
+    const headers = sharedHeaders("DeregisterTaskFromMaintenanceWindow");
     let body;
     body = JSON.stringify(se_DeregisterTaskFromMaintenanceWindowRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DeregisterTaskFromMaintenanceWindowCommand = se_DeregisterTaskFromMaintenanceWindowCommand;
 const se_DescribeActivationsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeActivations",
-    };
+    const headers = sharedHeaders("DescribeActivations");
     let body;
     body = JSON.stringify(se_DescribeActivationsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeActivationsCommand = se_DescribeActivationsCommand;
 const se_DescribeAssociationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeAssociation",
-    };
+    const headers = sharedHeaders("DescribeAssociation");
     let body;
     body = JSON.stringify(se_DescribeAssociationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeAssociationCommand = se_DescribeAssociationCommand;
 const se_DescribeAssociationExecutionsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeAssociationExecutions",
-    };
+    const headers = sharedHeaders("DescribeAssociationExecutions");
     let body;
     body = JSON.stringify(se_DescribeAssociationExecutionsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeAssociationExecutionsCommand = se_DescribeAssociationExecutionsCommand;
 const se_DescribeAssociationExecutionTargetsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeAssociationExecutionTargets",
-    };
+    const headers = sharedHeaders("DescribeAssociationExecutionTargets");
     let body;
     body = JSON.stringify(se_DescribeAssociationExecutionTargetsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeAssociationExecutionTargetsCommand = se_DescribeAssociationExecutionTargetsCommand;
 const se_DescribeAutomationExecutionsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeAutomationExecutions",
-    };
+    const headers = sharedHeaders("DescribeAutomationExecutions");
     let body;
     body = JSON.stringify(se_DescribeAutomationExecutionsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeAutomationExecutionsCommand = se_DescribeAutomationExecutionsCommand;
 const se_DescribeAutomationStepExecutionsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeAutomationStepExecutions",
-    };
+    const headers = sharedHeaders("DescribeAutomationStepExecutions");
     let body;
     body = JSON.stringify(se_DescribeAutomationStepExecutionsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeAutomationStepExecutionsCommand = se_DescribeAutomationStepExecutionsCommand;
 const se_DescribeAvailablePatchesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeAvailablePatches",
-    };
+    const headers = sharedHeaders("DescribeAvailablePatches");
     let body;
     body = JSON.stringify(se_DescribeAvailablePatchesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeAvailablePatchesCommand = se_DescribeAvailablePatchesCommand;
 const se_DescribeDocumentCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeDocument",
-    };
+    const headers = sharedHeaders("DescribeDocument");
     let body;
     body = JSON.stringify(se_DescribeDocumentRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeDocumentCommand = se_DescribeDocumentCommand;
 const se_DescribeDocumentPermissionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeDocumentPermission",
-    };
+    const headers = sharedHeaders("DescribeDocumentPermission");
     let body;
     body = JSON.stringify(se_DescribeDocumentPermissionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeDocumentPermissionCommand = se_DescribeDocumentPermissionCommand;
 const se_DescribeEffectiveInstanceAssociationsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeEffectiveInstanceAssociations",
-    };
+    const headers = sharedHeaders("DescribeEffectiveInstanceAssociations");
     let body;
     body = JSON.stringify(se_DescribeEffectiveInstanceAssociationsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeEffectiveInstanceAssociationsCommand = se_DescribeEffectiveInstanceAssociationsCommand;
 const se_DescribeEffectivePatchesForPatchBaselineCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeEffectivePatchesForPatchBaseline",
-    };
+    const headers = sharedHeaders("DescribeEffectivePatchesForPatchBaseline");
     let body;
     body = JSON.stringify(se_DescribeEffectivePatchesForPatchBaselineRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeEffectivePatchesForPatchBaselineCommand = se_DescribeEffectivePatchesForPatchBaselineCommand;
 const se_DescribeInstanceAssociationsStatusCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeInstanceAssociationsStatus",
-    };
+    const headers = sharedHeaders("DescribeInstanceAssociationsStatus");
     let body;
     body = JSON.stringify(se_DescribeInstanceAssociationsStatusRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeInstanceAssociationsStatusCommand = se_DescribeInstanceAssociationsStatusCommand;
 const se_DescribeInstanceInformationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeInstanceInformation",
-    };
+    const headers = sharedHeaders("DescribeInstanceInformation");
     let body;
     body = JSON.stringify(se_DescribeInstanceInformationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeInstanceInformationCommand = se_DescribeInstanceInformationCommand;
 const se_DescribeInstancePatchesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeInstancePatches",
-    };
+    const headers = sharedHeaders("DescribeInstancePatches");
     let body;
     body = JSON.stringify(se_DescribeInstancePatchesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeInstancePatchesCommand = se_DescribeInstancePatchesCommand;
 const se_DescribeInstancePatchStatesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeInstancePatchStates",
-    };
+    const headers = sharedHeaders("DescribeInstancePatchStates");
     let body;
     body = JSON.stringify(se_DescribeInstancePatchStatesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeInstancePatchStatesCommand = se_DescribeInstancePatchStatesCommand;
 const se_DescribeInstancePatchStatesForPatchGroupCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeInstancePatchStatesForPatchGroup",
-    };
+    const headers = sharedHeaders("DescribeInstancePatchStatesForPatchGroup");
     let body;
     body = JSON.stringify(se_DescribeInstancePatchStatesForPatchGroupRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeInstancePatchStatesForPatchGroupCommand = se_DescribeInstancePatchStatesForPatchGroupCommand;
 const se_DescribeInventoryDeletionsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeInventoryDeletions",
-    };
+    const headers = sharedHeaders("DescribeInventoryDeletions");
     let body;
     body = JSON.stringify(se_DescribeInventoryDeletionsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeInventoryDeletionsCommand = se_DescribeInventoryDeletionsCommand;
 const se_DescribeMaintenanceWindowExecutionsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeMaintenanceWindowExecutions",
-    };
+    const headers = sharedHeaders("DescribeMaintenanceWindowExecutions");
     let body;
     body = JSON.stringify(se_DescribeMaintenanceWindowExecutionsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeMaintenanceWindowExecutionsCommand = se_DescribeMaintenanceWindowExecutionsCommand;
 const se_DescribeMaintenanceWindowExecutionTaskInvocationsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeMaintenanceWindowExecutionTaskInvocations",
-    };
+    const headers = sharedHeaders("DescribeMaintenanceWindowExecutionTaskInvocations");
     let body;
     body = JSON.stringify(se_DescribeMaintenanceWindowExecutionTaskInvocationsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeMaintenanceWindowExecutionTaskInvocationsCommand = se_DescribeMaintenanceWindowExecutionTaskInvocationsCommand;
 const se_DescribeMaintenanceWindowExecutionTasksCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeMaintenanceWindowExecutionTasks",
-    };
+    const headers = sharedHeaders("DescribeMaintenanceWindowExecutionTasks");
     let body;
     body = JSON.stringify(se_DescribeMaintenanceWindowExecutionTasksRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeMaintenanceWindowExecutionTasksCommand = se_DescribeMaintenanceWindowExecutionTasksCommand;
 const se_DescribeMaintenanceWindowsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeMaintenanceWindows",
-    };
+    const headers = sharedHeaders("DescribeMaintenanceWindows");
     let body;
     body = JSON.stringify(se_DescribeMaintenanceWindowsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeMaintenanceWindowsCommand = se_DescribeMaintenanceWindowsCommand;
 const se_DescribeMaintenanceWindowScheduleCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeMaintenanceWindowSchedule",
-    };
+    const headers = sharedHeaders("DescribeMaintenanceWindowSchedule");
     let body;
     body = JSON.stringify(se_DescribeMaintenanceWindowScheduleRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeMaintenanceWindowScheduleCommand = se_DescribeMaintenanceWindowScheduleCommand;
 const se_DescribeMaintenanceWindowsForTargetCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeMaintenanceWindowsForTarget",
-    };
+    const headers = sharedHeaders("DescribeMaintenanceWindowsForTarget");
     let body;
     body = JSON.stringify(se_DescribeMaintenanceWindowsForTargetRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeMaintenanceWindowsForTargetCommand = se_DescribeMaintenanceWindowsForTargetCommand;
 const se_DescribeMaintenanceWindowTargetsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeMaintenanceWindowTargets",
-    };
+    const headers = sharedHeaders("DescribeMaintenanceWindowTargets");
     let body;
     body = JSON.stringify(se_DescribeMaintenanceWindowTargetsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeMaintenanceWindowTargetsCommand = se_DescribeMaintenanceWindowTargetsCommand;
 const se_DescribeMaintenanceWindowTasksCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeMaintenanceWindowTasks",
-    };
+    const headers = sharedHeaders("DescribeMaintenanceWindowTasks");
     let body;
     body = JSON.stringify(se_DescribeMaintenanceWindowTasksRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeMaintenanceWindowTasksCommand = se_DescribeMaintenanceWindowTasksCommand;
 const se_DescribeOpsItemsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeOpsItems",
-    };
+    const headers = sharedHeaders("DescribeOpsItems");
     let body;
     body = JSON.stringify(se_DescribeOpsItemsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeOpsItemsCommand = se_DescribeOpsItemsCommand;
 const se_DescribeParametersCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeParameters",
-    };
+    const headers = sharedHeaders("DescribeParameters");
     let body;
     body = JSON.stringify(se_DescribeParametersRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeParametersCommand = se_DescribeParametersCommand;
 const se_DescribePatchBaselinesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribePatchBaselines",
-    };
+    const headers = sharedHeaders("DescribePatchBaselines");
     let body;
     body = JSON.stringify(se_DescribePatchBaselinesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribePatchBaselinesCommand = se_DescribePatchBaselinesCommand;
 const se_DescribePatchGroupsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribePatchGroups",
-    };
+    const headers = sharedHeaders("DescribePatchGroups");
     let body;
     body = JSON.stringify(se_DescribePatchGroupsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribePatchGroupsCommand = se_DescribePatchGroupsCommand;
 const se_DescribePatchGroupStateCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribePatchGroupState",
-    };
+    const headers = sharedHeaders("DescribePatchGroupState");
     let body;
     body = JSON.stringify(se_DescribePatchGroupStateRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribePatchGroupStateCommand = se_DescribePatchGroupStateCommand;
 const se_DescribePatchPropertiesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribePatchProperties",
-    };
+    const headers = sharedHeaders("DescribePatchProperties");
     let body;
     body = JSON.stringify(se_DescribePatchPropertiesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribePatchPropertiesCommand = se_DescribePatchPropertiesCommand;
 const se_DescribeSessionsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DescribeSessions",
-    };
+    const headers = sharedHeaders("DescribeSessions");
     let body;
     body = JSON.stringify(se_DescribeSessionsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DescribeSessionsCommand = se_DescribeSessionsCommand;
 const se_DisassociateOpsItemRelatedItemCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.DisassociateOpsItemRelatedItem",
-    };
+    const headers = sharedHeaders("DisassociateOpsItemRelatedItem");
     let body;
     body = JSON.stringify(se_DisassociateOpsItemRelatedItemRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_DisassociateOpsItemRelatedItemCommand = se_DisassociateOpsItemRelatedItemCommand;
 const se_GetAutomationExecutionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetAutomationExecution",
-    };
+    const headers = sharedHeaders("GetAutomationExecution");
     let body;
     body = JSON.stringify(se_GetAutomationExecutionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetAutomationExecutionCommand = se_GetAutomationExecutionCommand;
 const se_GetCalendarStateCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetCalendarState",
-    };
+    const headers = sharedHeaders("GetCalendarState");
     let body;
     body = JSON.stringify(se_GetCalendarStateRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetCalendarStateCommand = se_GetCalendarStateCommand;
 const se_GetCommandInvocationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetCommandInvocation",
-    };
+    const headers = sharedHeaders("GetCommandInvocation");
     let body;
     body = JSON.stringify(se_GetCommandInvocationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetCommandInvocationCommand = se_GetCommandInvocationCommand;
 const se_GetConnectionStatusCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetConnectionStatus",
-    };
+    const headers = sharedHeaders("GetConnectionStatus");
     let body;
     body = JSON.stringify(se_GetConnectionStatusRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetConnectionStatusCommand = se_GetConnectionStatusCommand;
 const se_GetDefaultPatchBaselineCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetDefaultPatchBaseline",
-    };
+    const headers = sharedHeaders("GetDefaultPatchBaseline");
     let body;
     body = JSON.stringify(se_GetDefaultPatchBaselineRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetDefaultPatchBaselineCommand = se_GetDefaultPatchBaselineCommand;
 const se_GetDeployablePatchSnapshotForInstanceCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetDeployablePatchSnapshotForInstance",
-    };
+    const headers = sharedHeaders("GetDeployablePatchSnapshotForInstance");
     let body;
     body = JSON.stringify(se_GetDeployablePatchSnapshotForInstanceRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetDeployablePatchSnapshotForInstanceCommand = se_GetDeployablePatchSnapshotForInstanceCommand;
 const se_GetDocumentCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetDocument",
-    };
+    const headers = sharedHeaders("GetDocument");
     let body;
     body = JSON.stringify(se_GetDocumentRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetDocumentCommand = se_GetDocumentCommand;
 const se_GetInventoryCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetInventory",
-    };
+    const headers = sharedHeaders("GetInventory");
     let body;
     body = JSON.stringify(se_GetInventoryRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetInventoryCommand = se_GetInventoryCommand;
 const se_GetInventorySchemaCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetInventorySchema",
-    };
+    const headers = sharedHeaders("GetInventorySchema");
     let body;
     body = JSON.stringify(se_GetInventorySchemaRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetInventorySchemaCommand = se_GetInventorySchemaCommand;
 const se_GetMaintenanceWindowCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetMaintenanceWindow",
-    };
+    const headers = sharedHeaders("GetMaintenanceWindow");
     let body;
     body = JSON.stringify(se_GetMaintenanceWindowRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetMaintenanceWindowCommand = se_GetMaintenanceWindowCommand;
 const se_GetMaintenanceWindowExecutionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetMaintenanceWindowExecution",
-    };
+    const headers = sharedHeaders("GetMaintenanceWindowExecution");
     let body;
     body = JSON.stringify(se_GetMaintenanceWindowExecutionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetMaintenanceWindowExecutionCommand = se_GetMaintenanceWindowExecutionCommand;
 const se_GetMaintenanceWindowExecutionTaskCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetMaintenanceWindowExecutionTask",
-    };
+    const headers = sharedHeaders("GetMaintenanceWindowExecutionTask");
     let body;
     body = JSON.stringify(se_GetMaintenanceWindowExecutionTaskRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetMaintenanceWindowExecutionTaskCommand = se_GetMaintenanceWindowExecutionTaskCommand;
 const se_GetMaintenanceWindowExecutionTaskInvocationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetMaintenanceWindowExecutionTaskInvocation",
-    };
+    const headers = sharedHeaders("GetMaintenanceWindowExecutionTaskInvocation");
     let body;
     body = JSON.stringify(se_GetMaintenanceWindowExecutionTaskInvocationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetMaintenanceWindowExecutionTaskInvocationCommand = se_GetMaintenanceWindowExecutionTaskInvocationCommand;
 const se_GetMaintenanceWindowTaskCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetMaintenanceWindowTask",
-    };
+    const headers = sharedHeaders("GetMaintenanceWindowTask");
     let body;
     body = JSON.stringify(se_GetMaintenanceWindowTaskRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetMaintenanceWindowTaskCommand = se_GetMaintenanceWindowTaskCommand;
 const se_GetOpsItemCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetOpsItem",
-    };
+    const headers = sharedHeaders("GetOpsItem");
     let body;
     body = JSON.stringify(se_GetOpsItemRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetOpsItemCommand = se_GetOpsItemCommand;
 const se_GetOpsMetadataCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetOpsMetadata",
-    };
+    const headers = sharedHeaders("GetOpsMetadata");
     let body;
     body = JSON.stringify(se_GetOpsMetadataRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetOpsMetadataCommand = se_GetOpsMetadataCommand;
 const se_GetOpsSummaryCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetOpsSummary",
-    };
+    const headers = sharedHeaders("GetOpsSummary");
     let body;
     body = JSON.stringify(se_GetOpsSummaryRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetOpsSummaryCommand = se_GetOpsSummaryCommand;
 const se_GetParameterCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetParameter",
-    };
+    const headers = sharedHeaders("GetParameter");
     let body;
     body = JSON.stringify(se_GetParameterRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetParameterCommand = se_GetParameterCommand;
 const se_GetParameterHistoryCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetParameterHistory",
-    };
+    const headers = sharedHeaders("GetParameterHistory");
     let body;
     body = JSON.stringify(se_GetParameterHistoryRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetParameterHistoryCommand = se_GetParameterHistoryCommand;
 const se_GetParametersCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetParameters",
-    };
+    const headers = sharedHeaders("GetParameters");
     let body;
     body = JSON.stringify(se_GetParametersRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetParametersCommand = se_GetParametersCommand;
 const se_GetParametersByPathCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetParametersByPath",
-    };
+    const headers = sharedHeaders("GetParametersByPath");
     let body;
     body = JSON.stringify(se_GetParametersByPathRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetParametersByPathCommand = se_GetParametersByPathCommand;
 const se_GetPatchBaselineCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetPatchBaseline",
-    };
+    const headers = sharedHeaders("GetPatchBaseline");
     let body;
     body = JSON.stringify(se_GetPatchBaselineRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetPatchBaselineCommand = se_GetPatchBaselineCommand;
 const se_GetPatchBaselineForPatchGroupCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetPatchBaselineForPatchGroup",
-    };
+    const headers = sharedHeaders("GetPatchBaselineForPatchGroup");
     let body;
     body = JSON.stringify(se_GetPatchBaselineForPatchGroupRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetPatchBaselineForPatchGroupCommand = se_GetPatchBaselineForPatchGroupCommand;
 const se_GetResourcePoliciesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetResourcePolicies",
-    };
+    const headers = sharedHeaders("GetResourcePolicies");
     let body;
     body = JSON.stringify(se_GetResourcePoliciesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetResourcePoliciesCommand = se_GetResourcePoliciesCommand;
 const se_GetServiceSettingCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.GetServiceSetting",
-    };
+    const headers = sharedHeaders("GetServiceSetting");
     let body;
     body = JSON.stringify(se_GetServiceSettingRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_GetServiceSettingCommand = se_GetServiceSettingCommand;
 const se_LabelParameterVersionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.LabelParameterVersion",
-    };
+    const headers = sharedHeaders("LabelParameterVersion");
     let body;
     body = JSON.stringify(se_LabelParameterVersionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_LabelParameterVersionCommand = se_LabelParameterVersionCommand;
 const se_ListAssociationsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListAssociations",
-    };
+    const headers = sharedHeaders("ListAssociations");
     let body;
     body = JSON.stringify(se_ListAssociationsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListAssociationsCommand = se_ListAssociationsCommand;
 const se_ListAssociationVersionsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListAssociationVersions",
-    };
+    const headers = sharedHeaders("ListAssociationVersions");
     let body;
     body = JSON.stringify(se_ListAssociationVersionsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListAssociationVersionsCommand = se_ListAssociationVersionsCommand;
 const se_ListCommandInvocationsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListCommandInvocations",
-    };
+    const headers = sharedHeaders("ListCommandInvocations");
     let body;
     body = JSON.stringify(se_ListCommandInvocationsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListCommandInvocationsCommand = se_ListCommandInvocationsCommand;
 const se_ListCommandsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListCommands",
-    };
+    const headers = sharedHeaders("ListCommands");
     let body;
     body = JSON.stringify(se_ListCommandsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListCommandsCommand = se_ListCommandsCommand;
 const se_ListComplianceItemsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListComplianceItems",
-    };
+    const headers = sharedHeaders("ListComplianceItems");
     let body;
     body = JSON.stringify(se_ListComplianceItemsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListComplianceItemsCommand = se_ListComplianceItemsCommand;
 const se_ListComplianceSummariesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListComplianceSummaries",
-    };
+    const headers = sharedHeaders("ListComplianceSummaries");
     let body;
     body = JSON.stringify(se_ListComplianceSummariesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListComplianceSummariesCommand = se_ListComplianceSummariesCommand;
 const se_ListDocumentMetadataHistoryCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListDocumentMetadataHistory",
-    };
+    const headers = sharedHeaders("ListDocumentMetadataHistory");
     let body;
     body = JSON.stringify(se_ListDocumentMetadataHistoryRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListDocumentMetadataHistoryCommand = se_ListDocumentMetadataHistoryCommand;
 const se_ListDocumentsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListDocuments",
-    };
+    const headers = sharedHeaders("ListDocuments");
     let body;
     body = JSON.stringify(se_ListDocumentsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListDocumentsCommand = se_ListDocumentsCommand;
 const se_ListDocumentVersionsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListDocumentVersions",
-    };
+    const headers = sharedHeaders("ListDocumentVersions");
     let body;
     body = JSON.stringify(se_ListDocumentVersionsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListDocumentVersionsCommand = se_ListDocumentVersionsCommand;
 const se_ListInventoryEntriesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListInventoryEntries",
-    };
+    const headers = sharedHeaders("ListInventoryEntries");
     let body;
     body = JSON.stringify(se_ListInventoryEntriesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListInventoryEntriesCommand = se_ListInventoryEntriesCommand;
 const se_ListOpsItemEventsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListOpsItemEvents",
-    };
+    const headers = sharedHeaders("ListOpsItemEvents");
     let body;
     body = JSON.stringify(se_ListOpsItemEventsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListOpsItemEventsCommand = se_ListOpsItemEventsCommand;
 const se_ListOpsItemRelatedItemsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListOpsItemRelatedItems",
-    };
+    const headers = sharedHeaders("ListOpsItemRelatedItems");
     let body;
     body = JSON.stringify(se_ListOpsItemRelatedItemsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListOpsItemRelatedItemsCommand = se_ListOpsItemRelatedItemsCommand;
 const se_ListOpsMetadataCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListOpsMetadata",
-    };
+    const headers = sharedHeaders("ListOpsMetadata");
     let body;
     body = JSON.stringify(se_ListOpsMetadataRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListOpsMetadataCommand = se_ListOpsMetadataCommand;
 const se_ListResourceComplianceSummariesCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListResourceComplianceSummaries",
-    };
+    const headers = sharedHeaders("ListResourceComplianceSummaries");
     let body;
     body = JSON.stringify(se_ListResourceComplianceSummariesRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListResourceComplianceSummariesCommand = se_ListResourceComplianceSummariesCommand;
 const se_ListResourceDataSyncCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListResourceDataSync",
-    };
+    const headers = sharedHeaders("ListResourceDataSync");
     let body;
     body = JSON.stringify(se_ListResourceDataSyncRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListResourceDataSyncCommand = se_ListResourceDataSyncCommand;
 const se_ListTagsForResourceCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ListTagsForResource",
-    };
+    const headers = sharedHeaders("ListTagsForResource");
     let body;
     body = JSON.stringify(se_ListTagsForResourceRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ListTagsForResourceCommand = se_ListTagsForResourceCommand;
 const se_ModifyDocumentPermissionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ModifyDocumentPermission",
-    };
+    const headers = sharedHeaders("ModifyDocumentPermission");
     let body;
     body = JSON.stringify(se_ModifyDocumentPermissionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ModifyDocumentPermissionCommand = se_ModifyDocumentPermissionCommand;
 const se_PutComplianceItemsCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.PutComplianceItems",
-    };
+    const headers = sharedHeaders("PutComplianceItems");
     let body;
     body = JSON.stringify(se_PutComplianceItemsRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_PutComplianceItemsCommand = se_PutComplianceItemsCommand;
 const se_PutInventoryCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.PutInventory",
-    };
+    const headers = sharedHeaders("PutInventory");
     let body;
     body = JSON.stringify(se_PutInventoryRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_PutInventoryCommand = se_PutInventoryCommand;
 const se_PutParameterCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.PutParameter",
-    };
+    const headers = sharedHeaders("PutParameter");
     let body;
     body = JSON.stringify(se_PutParameterRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_PutParameterCommand = se_PutParameterCommand;
 const se_PutResourcePolicyCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.PutResourcePolicy",
-    };
+    const headers = sharedHeaders("PutResourcePolicy");
     let body;
     body = JSON.stringify(se_PutResourcePolicyRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_PutResourcePolicyCommand = se_PutResourcePolicyCommand;
 const se_RegisterDefaultPatchBaselineCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.RegisterDefaultPatchBaseline",
-    };
+    const headers = sharedHeaders("RegisterDefaultPatchBaseline");
     let body;
     body = JSON.stringify(se_RegisterDefaultPatchBaselineRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_RegisterDefaultPatchBaselineCommand = se_RegisterDefaultPatchBaselineCommand;
 const se_RegisterPatchBaselineForPatchGroupCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.RegisterPatchBaselineForPatchGroup",
-    };
+    const headers = sharedHeaders("RegisterPatchBaselineForPatchGroup");
     let body;
     body = JSON.stringify(se_RegisterPatchBaselineForPatchGroupRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_RegisterPatchBaselineForPatchGroupCommand = se_RegisterPatchBaselineForPatchGroupCommand;
 const se_RegisterTargetWithMaintenanceWindowCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.RegisterTargetWithMaintenanceWindow",
-    };
+    const headers = sharedHeaders("RegisterTargetWithMaintenanceWindow");
     let body;
     body = JSON.stringify(se_RegisterTargetWithMaintenanceWindowRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_RegisterTargetWithMaintenanceWindowCommand = se_RegisterTargetWithMaintenanceWindowCommand;
 const se_RegisterTaskWithMaintenanceWindowCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.RegisterTaskWithMaintenanceWindow",
-    };
+    const headers = sharedHeaders("RegisterTaskWithMaintenanceWindow");
     let body;
     body = JSON.stringify(se_RegisterTaskWithMaintenanceWindowRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_RegisterTaskWithMaintenanceWindowCommand = se_RegisterTaskWithMaintenanceWindowCommand;
 const se_RemoveTagsFromResourceCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.RemoveTagsFromResource",
-    };
+    const headers = sharedHeaders("RemoveTagsFromResource");
     let body;
     body = JSON.stringify(se_RemoveTagsFromResourceRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_RemoveTagsFromResourceCommand = se_RemoveTagsFromResourceCommand;
 const se_ResetServiceSettingCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ResetServiceSetting",
-    };
+    const headers = sharedHeaders("ResetServiceSetting");
     let body;
     body = JSON.stringify(se_ResetServiceSettingRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ResetServiceSettingCommand = se_ResetServiceSettingCommand;
 const se_ResumeSessionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.ResumeSession",
-    };
+    const headers = sharedHeaders("ResumeSession");
     let body;
     body = JSON.stringify(se_ResumeSessionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_ResumeSessionCommand = se_ResumeSessionCommand;
 const se_SendAutomationSignalCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.SendAutomationSignal",
-    };
+    const headers = sharedHeaders("SendAutomationSignal");
     let body;
     body = JSON.stringify(se_SendAutomationSignalRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_SendAutomationSignalCommand = se_SendAutomationSignalCommand;
 const se_SendCommandCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.SendCommand",
-    };
+    const headers = sharedHeaders("SendCommand");
     let body;
     body = JSON.stringify(se_SendCommandRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_SendCommandCommand = se_SendCommandCommand;
 const se_StartAssociationsOnceCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.StartAssociationsOnce",
-    };
+    const headers = sharedHeaders("StartAssociationsOnce");
     let body;
     body = JSON.stringify(se_StartAssociationsOnceRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_StartAssociationsOnceCommand = se_StartAssociationsOnceCommand;
 const se_StartAutomationExecutionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.StartAutomationExecution",
-    };
+    const headers = sharedHeaders("StartAutomationExecution");
     let body;
     body = JSON.stringify(se_StartAutomationExecutionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_StartAutomationExecutionCommand = se_StartAutomationExecutionCommand;
 const se_StartChangeRequestExecutionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.StartChangeRequestExecution",
-    };
+    const headers = sharedHeaders("StartChangeRequestExecution");
     let body;
     body = JSON.stringify(se_StartChangeRequestExecutionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_StartChangeRequestExecutionCommand = se_StartChangeRequestExecutionCommand;
 const se_StartSessionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.StartSession",
-    };
+    const headers = sharedHeaders("StartSession");
     let body;
     body = JSON.stringify(se_StartSessionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_StartSessionCommand = se_StartSessionCommand;
 const se_StopAutomationExecutionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.StopAutomationExecution",
-    };
+    const headers = sharedHeaders("StopAutomationExecution");
     let body;
     body = JSON.stringify(se_StopAutomationExecutionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_StopAutomationExecutionCommand = se_StopAutomationExecutionCommand;
 const se_TerminateSessionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.TerminateSession",
-    };
+    const headers = sharedHeaders("TerminateSession");
     let body;
     body = JSON.stringify(se_TerminateSessionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_TerminateSessionCommand = se_TerminateSessionCommand;
 const se_UnlabelParameterVersionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UnlabelParameterVersion",
-    };
+    const headers = sharedHeaders("UnlabelParameterVersion");
     let body;
     body = JSON.stringify(se_UnlabelParameterVersionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UnlabelParameterVersionCommand = se_UnlabelParameterVersionCommand;
 const se_UpdateAssociationCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateAssociation",
-    };
+    const headers = sharedHeaders("UpdateAssociation");
     let body;
     body = JSON.stringify(se_UpdateAssociationRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateAssociationCommand = se_UpdateAssociationCommand;
 const se_UpdateAssociationStatusCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateAssociationStatus",
-    };
+    const headers = sharedHeaders("UpdateAssociationStatus");
     let body;
     body = JSON.stringify(se_UpdateAssociationStatusRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateAssociationStatusCommand = se_UpdateAssociationStatusCommand;
 const se_UpdateDocumentCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateDocument",
-    };
+    const headers = sharedHeaders("UpdateDocument");
     let body;
     body = JSON.stringify(se_UpdateDocumentRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateDocumentCommand = se_UpdateDocumentCommand;
 const se_UpdateDocumentDefaultVersionCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateDocumentDefaultVersion",
-    };
+    const headers = sharedHeaders("UpdateDocumentDefaultVersion");
     let body;
     body = JSON.stringify(se_UpdateDocumentDefaultVersionRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateDocumentDefaultVersionCommand = se_UpdateDocumentDefaultVersionCommand;
 const se_UpdateDocumentMetadataCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateDocumentMetadata",
-    };
+    const headers = sharedHeaders("UpdateDocumentMetadata");
     let body;
     body = JSON.stringify(se_UpdateDocumentMetadataRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateDocumentMetadataCommand = se_UpdateDocumentMetadataCommand;
 const se_UpdateMaintenanceWindowCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateMaintenanceWindow",
-    };
+    const headers = sharedHeaders("UpdateMaintenanceWindow");
     let body;
     body = JSON.stringify(se_UpdateMaintenanceWindowRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateMaintenanceWindowCommand = se_UpdateMaintenanceWindowCommand;
 const se_UpdateMaintenanceWindowTargetCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateMaintenanceWindowTarget",
-    };
+    const headers = sharedHeaders("UpdateMaintenanceWindowTarget");
     let body;
     body = JSON.stringify(se_UpdateMaintenanceWindowTargetRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateMaintenanceWindowTargetCommand = se_UpdateMaintenanceWindowTargetCommand;
 const se_UpdateMaintenanceWindowTaskCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateMaintenanceWindowTask",
-    };
+    const headers = sharedHeaders("UpdateMaintenanceWindowTask");
     let body;
     body = JSON.stringify(se_UpdateMaintenanceWindowTaskRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateMaintenanceWindowTaskCommand = se_UpdateMaintenanceWindowTaskCommand;
 const se_UpdateManagedInstanceRoleCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateManagedInstanceRole",
-    };
+    const headers = sharedHeaders("UpdateManagedInstanceRole");
     let body;
     body = JSON.stringify(se_UpdateManagedInstanceRoleRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateManagedInstanceRoleCommand = se_UpdateManagedInstanceRoleCommand;
 const se_UpdateOpsItemCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateOpsItem",
-    };
+    const headers = sharedHeaders("UpdateOpsItem");
     let body;
     body = JSON.stringify(se_UpdateOpsItemRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateOpsItemCommand = se_UpdateOpsItemCommand;
 const se_UpdateOpsMetadataCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateOpsMetadata",
-    };
+    const headers = sharedHeaders("UpdateOpsMetadata");
     let body;
     body = JSON.stringify(se_UpdateOpsMetadataRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateOpsMetadataCommand = se_UpdateOpsMetadataCommand;
 const se_UpdatePatchBaselineCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdatePatchBaseline",
-    };
+    const headers = sharedHeaders("UpdatePatchBaseline");
     let body;
     body = JSON.stringify(se_UpdatePatchBaselineRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdatePatchBaselineCommand = se_UpdatePatchBaselineCommand;
 const se_UpdateResourceDataSyncCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateResourceDataSync",
-    };
+    const headers = sharedHeaders("UpdateResourceDataSync");
     let body;
     body = JSON.stringify(se_UpdateResourceDataSyncRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
 };
 exports.se_UpdateResourceDataSyncCommand = se_UpdateResourceDataSyncCommand;
 const se_UpdateServiceSettingCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-amz-json-1.1",
-        "x-amz-target": "AmazonSSM.UpdateServiceSetting",
-    };
+    const headers = sharedHeaders("UpdateServiceSetting");
     let body;
     body = JSON.stringify(se_UpdateServiceSettingRequest(input, context));
     return buildHttpRpcRequest(context, headers, "/", undefined, body);
@@ -31266,6 +30852,12 @@ const buildHttpRpcRequest = async (context, headers, path, resolvedHostname, bod
     }
     return new protocol_http_1.HttpRequest(contents);
 };
+function sharedHeaders(operation) {
+    return {
+        "content-type": "application/x-amz-json-1.1",
+        "x-amz-target": `AmazonSSM.${operation}`,
+    };
+}
 const parseBody = (streamBody, context) => collectBodyString(streamBody, context).then((encoded) => {
     if (encoded.length) {
         return JSON.parse(encoded);
@@ -34860,9 +34452,7 @@ const fast_xml_parser_1 = __nccwpck_require__(12603);
 const models_0_1 = __nccwpck_require__(21780);
 const STSServiceException_1 = __nccwpck_require__(26450);
 const se_AssumeRoleCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
         ...se_AssumeRoleRequest(input, context),
@@ -34873,9 +34463,7 @@ const se_AssumeRoleCommand = async (input, context) => {
 };
 exports.se_AssumeRoleCommand = se_AssumeRoleCommand;
 const se_AssumeRoleWithSAMLCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
         ...se_AssumeRoleWithSAMLRequest(input, context),
@@ -34886,9 +34474,7 @@ const se_AssumeRoleWithSAMLCommand = async (input, context) => {
 };
 exports.se_AssumeRoleWithSAMLCommand = se_AssumeRoleWithSAMLCommand;
 const se_AssumeRoleWithWebIdentityCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
         ...se_AssumeRoleWithWebIdentityRequest(input, context),
@@ -34899,9 +34485,7 @@ const se_AssumeRoleWithWebIdentityCommand = async (input, context) => {
 };
 exports.se_AssumeRoleWithWebIdentityCommand = se_AssumeRoleWithWebIdentityCommand;
 const se_DecodeAuthorizationMessageCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
         ...se_DecodeAuthorizationMessageRequest(input, context),
@@ -34912,9 +34496,7 @@ const se_DecodeAuthorizationMessageCommand = async (input, context) => {
 };
 exports.se_DecodeAuthorizationMessageCommand = se_DecodeAuthorizationMessageCommand;
 const se_GetAccessKeyInfoCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
         ...se_GetAccessKeyInfoRequest(input, context),
@@ -34925,9 +34507,7 @@ const se_GetAccessKeyInfoCommand = async (input, context) => {
 };
 exports.se_GetAccessKeyInfoCommand = se_GetAccessKeyInfoCommand;
 const se_GetCallerIdentityCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
         ...se_GetCallerIdentityRequest(input, context),
@@ -34938,9 +34518,7 @@ const se_GetCallerIdentityCommand = async (input, context) => {
 };
 exports.se_GetCallerIdentityCommand = se_GetCallerIdentityCommand;
 const se_GetFederationTokenCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
         ...se_GetFederationTokenRequest(input, context),
@@ -34951,9 +34529,7 @@ const se_GetFederationTokenCommand = async (input, context) => {
 };
 exports.se_GetFederationTokenCommand = se_GetFederationTokenCommand;
 const se_GetSessionTokenCommand = async (input, context) => {
-    const headers = {
-        "content-type": "application/x-www-form-urlencoded",
-    };
+    const headers = SHARED_HEADERS;
     let body;
     body = buildFormUrlencodedString({
         ...se_GetSessionTokenRequest(input, context),
@@ -35826,6 +35402,9 @@ const buildHttpRpcRequest = async (context, headers, path, resolvedHostname, bod
         contents.body = body;
     }
     return new protocol_http_1.HttpRequest(contents);
+};
+const SHARED_HEADERS = {
+    "content-type": "application/x-www-form-urlencoded",
 };
 const parseBody = (streamBody, context) => collectBodyString(streamBody, context).then((encoded) => {
     if (encoded.length) {
@@ -52603,7 +52182,7 @@ module.exports = require("util");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.310.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.310.0","@aws-sdk/config-resolver":"3.310.0","@aws-sdk/credential-provider-node":"3.310.0","@aws-sdk/fetch-http-handler":"3.310.0","@aws-sdk/hash-node":"3.310.0","@aws-sdk/invalid-dependency":"3.310.0","@aws-sdk/middleware-content-length":"3.310.0","@aws-sdk/middleware-endpoint":"3.310.0","@aws-sdk/middleware-host-header":"3.310.0","@aws-sdk/middleware-logger":"3.310.0","@aws-sdk/middleware-recursion-detection":"3.310.0","@aws-sdk/middleware-retry":"3.310.0","@aws-sdk/middleware-serde":"3.310.0","@aws-sdk/middleware-signing":"3.310.0","@aws-sdk/middleware-stack":"3.310.0","@aws-sdk/middleware-user-agent":"3.310.0","@aws-sdk/node-config-provider":"3.310.0","@aws-sdk/node-http-handler":"3.310.0","@aws-sdk/protocol-http":"3.310.0","@aws-sdk/smithy-client":"3.310.0","@aws-sdk/types":"3.310.0","@aws-sdk/url-parser":"3.310.0","@aws-sdk/util-base64":"3.310.0","@aws-sdk/util-body-length-browser":"3.310.0","@aws-sdk/util-body-length-node":"3.310.0","@aws-sdk/util-defaults-mode-browser":"3.310.0","@aws-sdk/util-defaults-mode-node":"3.310.0","@aws-sdk/util-endpoints":"3.310.0","@aws-sdk/util-retry":"3.310.0","@aws-sdk/util-user-agent-browser":"3.310.0","@aws-sdk/util-user-agent-node":"3.310.0","@aws-sdk/util-utf8":"3.310.0","@aws-sdk/util-waiter":"3.310.0","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.310.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.312.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.312.0","@aws-sdk/config-resolver":"3.310.0","@aws-sdk/credential-provider-node":"3.310.0","@aws-sdk/fetch-http-handler":"3.310.0","@aws-sdk/hash-node":"3.310.0","@aws-sdk/invalid-dependency":"3.310.0","@aws-sdk/middleware-content-length":"3.310.0","@aws-sdk/middleware-endpoint":"3.310.0","@aws-sdk/middleware-host-header":"3.310.0","@aws-sdk/middleware-logger":"3.310.0","@aws-sdk/middleware-recursion-detection":"3.310.0","@aws-sdk/middleware-retry":"3.310.0","@aws-sdk/middleware-serde":"3.310.0","@aws-sdk/middleware-signing":"3.310.0","@aws-sdk/middleware-stack":"3.310.0","@aws-sdk/middleware-user-agent":"3.310.0","@aws-sdk/node-config-provider":"3.310.0","@aws-sdk/node-http-handler":"3.310.0","@aws-sdk/protocol-http":"3.310.0","@aws-sdk/smithy-client":"3.310.0","@aws-sdk/types":"3.310.0","@aws-sdk/url-parser":"3.310.0","@aws-sdk/util-base64":"3.310.0","@aws-sdk/util-body-length-browser":"3.310.0","@aws-sdk/util-body-length-node":"3.310.0","@aws-sdk/util-defaults-mode-browser":"3.310.0","@aws-sdk/util-defaults-mode-node":"3.310.0","@aws-sdk/util-endpoints":"3.310.0","@aws-sdk/util-retry":"3.310.0","@aws-sdk/util-user-agent-browser":"3.310.0","@aws-sdk/util-user-agent-node":"3.310.0","@aws-sdk/util-utf8":"3.310.0","@aws-sdk/util-waiter":"3.310.0","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.310.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
 
 /***/ }),
 
@@ -52627,7 +52206,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.310.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.310.0","@aws-sdk/credential-provider-node":"3.310.0","@aws-sdk/fetch-http-handler":"3.310.0","@aws-sdk/hash-node":"3.310.0","@aws-sdk/invalid-dependency":"3.310.0","@aws-sdk/middleware-content-length":"3.310.0","@aws-sdk/middleware-endpoint":"3.310.0","@aws-sdk/middleware-host-header":"3.310.0","@aws-sdk/middleware-logger":"3.310.0","@aws-sdk/middleware-recursion-detection":"3.310.0","@aws-sdk/middleware-retry":"3.310.0","@aws-sdk/middleware-sdk-sts":"3.310.0","@aws-sdk/middleware-serde":"3.310.0","@aws-sdk/middleware-signing":"3.310.0","@aws-sdk/middleware-stack":"3.310.0","@aws-sdk/middleware-user-agent":"3.310.0","@aws-sdk/node-config-provider":"3.310.0","@aws-sdk/node-http-handler":"3.310.0","@aws-sdk/protocol-http":"3.310.0","@aws-sdk/smithy-client":"3.310.0","@aws-sdk/types":"3.310.0","@aws-sdk/url-parser":"3.310.0","@aws-sdk/util-base64":"3.310.0","@aws-sdk/util-body-length-browser":"3.310.0","@aws-sdk/util-body-length-node":"3.310.0","@aws-sdk/util-defaults-mode-browser":"3.310.0","@aws-sdk/util-defaults-mode-node":"3.310.0","@aws-sdk/util-endpoints":"3.310.0","@aws-sdk/util-retry":"3.310.0","@aws-sdk/util-user-agent-browser":"3.310.0","@aws-sdk/util-user-agent-node":"3.310.0","@aws-sdk/util-utf8":"3.310.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.310.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.312.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:docs":"typedoc","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/config-resolver":"3.310.0","@aws-sdk/credential-provider-node":"3.310.0","@aws-sdk/fetch-http-handler":"3.310.0","@aws-sdk/hash-node":"3.310.0","@aws-sdk/invalid-dependency":"3.310.0","@aws-sdk/middleware-content-length":"3.310.0","@aws-sdk/middleware-endpoint":"3.310.0","@aws-sdk/middleware-host-header":"3.310.0","@aws-sdk/middleware-logger":"3.310.0","@aws-sdk/middleware-recursion-detection":"3.310.0","@aws-sdk/middleware-retry":"3.310.0","@aws-sdk/middleware-sdk-sts":"3.310.0","@aws-sdk/middleware-serde":"3.310.0","@aws-sdk/middleware-signing":"3.310.0","@aws-sdk/middleware-stack":"3.310.0","@aws-sdk/middleware-user-agent":"3.310.0","@aws-sdk/node-config-provider":"3.310.0","@aws-sdk/node-http-handler":"3.310.0","@aws-sdk/protocol-http":"3.310.0","@aws-sdk/smithy-client":"3.310.0","@aws-sdk/types":"3.310.0","@aws-sdk/url-parser":"3.310.0","@aws-sdk/util-base64":"3.310.0","@aws-sdk/util-body-length-browser":"3.310.0","@aws-sdk/util-body-length-node":"3.310.0","@aws-sdk/util-defaults-mode-browser":"3.310.0","@aws-sdk/util-defaults-mode-node":"3.310.0","@aws-sdk/util-endpoints":"3.310.0","@aws-sdk/util-retry":"3.310.0","@aws-sdk/util-user-agent-browser":"3.310.0","@aws-sdk/util-user-agent-node":"3.310.0","@aws-sdk/util-utf8":"3.310.0","fast-xml-parser":"4.1.2","tslib":"^2.5.0"},"devDependencies":{"@aws-sdk/service-client-documentation-generator":"3.310.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typedoc":"0.23.23","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
