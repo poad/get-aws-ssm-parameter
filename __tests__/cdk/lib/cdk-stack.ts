@@ -4,6 +4,7 @@ import * as ssm from 'aws-cdk-lib/aws-ssm';
 
 export class CdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    // rome-ignore lint/correctness/noInvalidConstructorSuper: <explanation>
     super(scope, id, props);
 
     new ssm.StringParameter(this, 'StringParameter', {
