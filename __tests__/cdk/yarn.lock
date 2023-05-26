@@ -68,9 +68,9 @@
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
 "@types/node@*":
-  version "20.2.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.2.3.tgz#b31eb300610c3835ac008d690de6f87e28f9b878"
-  integrity sha512-pg9d0yC4rVNWQzX8U7xb4olIOFuuVL9za3bzMT2pu2SU0SNEi66i2qrvhE2qt0HvkhuCaWJu7pLNOt/Pj8BIrw==
+  version "20.2.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.2.4.tgz#e6c3345f7ed9c6df41fdc288a94e2633167bc15d"
+  integrity sha512-ni5f8Xlf4PwnT/Z3f0HURc3ZSw8UyrqMqmM3L5ysa7VjHu8c3FOmIo1nKCcLrV/OAmtf3N4kFna/aJqxsfEtnA==
 
 acorn-walk@^8.1.1:
   version "8.2.0"
@@ -115,9 +115,9 @@ astral-regex@^2.0.0:
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
 aws-cdk-lib@*:
-  version "2.80.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.80.0.tgz#1118860637d33fab8f646551c29a75728404b64e"
-  integrity sha512-PoqD3Yms5I0ajuTi071nTW/hpkH3XsdyZzn5gYsPv0qD7mqP3h6Qr+6RiGx+yQ1KcVFyxWdX15uK+DsC0KwvcQ==
+  version "2.81.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.81.0.tgz#44910309afcb2b1d9ed6985e63bfb090ceecfb0a"
+  integrity sha512-jnXvyhyRvoFTQcpZPtZOeOyY7k4Jb1+c83RLFic71KrwL6xxLxzImbS5rnoDOJHaX/otyfDxzQfziOQ7I0kt/g==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.177"
     "@aws-cdk/asset-kubectl-v20" "^2.1.1"
@@ -134,9 +134,9 @@ aws-cdk-lib@*:
     yaml "1.10.2"
 
 aws-cdk@*:
-  version "2.80.0"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.80.0.tgz#fef040f2b01df6551fba828a9df350c4c792baba"
-  integrity sha512-SKMZ/sGlNmFV37Lk40HHe4QJ2hJZmD0PrkScBmkr33xzEqjyKhN3jIHC4PYqTUeUK/qYemq3Y5OpXKQuWTCoKA==
+  version "2.81.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.81.0.tgz#4f2f205eaccd184a792f3d11ad1c156d224523f0"
+  integrity sha512-EEwacXaauxHmVBLQzbFDOcjJOAZw57vzUQDJ7eDl3MIDSrKG2dZ1XYHVuMbSloqJpgDW6xZ9vAZ45rXTTjdSzw==
   optionalDependencies:
     fsevents "2.3.2"
 
@@ -181,9 +181,9 @@ concat-map@0.0.1:
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
 constructs@*:
-  version "10.2.32"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.32.tgz#395ae9af2ac110052b84209664ff11e7a8eb53d1"
-  integrity sha512-84MhMvsroG3gu2zf43N3SUDlMKEGbauXK5z1qG/hA4X1kGZCzPbU3DslQJtLsHVctY7aYHIGU1axInDu9DvttA==
+  version "10.2.33"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.2.33.tgz#9b71248a466ed8ac69639e925d64014f89a29438"
+  integrity sha512-04mE3FHizhk/cjBkByEaT0dQKrvAA3o/pJAdJTKkMlpo1vk+8P8P0iXWvqiPdaz714EO9Opha1Fk5XnJi8tqiQ==
 
 create-require@^1.1.0:
   version "1.1.1"
