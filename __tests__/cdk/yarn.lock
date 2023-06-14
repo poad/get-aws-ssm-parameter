@@ -3,9 +3,9 @@
 
 
 "@aws-cdk/asset-awscli-v1@^2.2.177":
-  version "2.2.186"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.186.tgz#97e3145f1a9f341597b0e3f3463fd017d15d5fb6"
-  integrity sha512-2wSuOWQlrWc0AFuPCzXYn2Y8oK2vTfpNrVa8dxBxfswbwUrXMAirhpsP1f1J/4KEhA/4Hs4l27dKiC/IcDrvIQ==
+  version "2.2.190"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-awscli-v1/-/asset-awscli-v1-2.2.190.tgz#f6f7bf6a888ba829c10b1def847b9258de3a0716"
+  integrity sha512-Q/PiNMbs073DO0Qg5d/cs/X2qZylqiuOwAfTRMUgOqNrUEIwPnAHQNtH0gmYWsCSKkttQG929WmBtivlK6NRhA==
 
 "@aws-cdk/asset-kubectl-v20@^2.1.1":
   version "2.1.1"
@@ -13,9 +13,9 @@
   integrity sha512-U1ntiX8XiMRRRH5J1IdC+1t5CE89015cwyt5U63Cpk0GnMlN5+h9WsWMlKlPXZR4rdq/m806JRlBMRpBUB2Dhw==
 
 "@aws-cdk/asset-node-proxy-agent-v5@^2.0.148":
-  version "2.0.162"
-  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.162.tgz#988e7a1214516abc50977bcdbad560ae589c4cea"
-  integrity sha512-ynmtYyubkd3WoHAydtrjRAPMq4GbRcisU4esXVA59khic9C2r34qEyzBr/o8E+mfdnIe7NhS6kWtU58znJO7kA==
+  version "2.0.164"
+  resolved "https://registry.yarnpkg.com/@aws-cdk/asset-node-proxy-agent-v5/-/asset-node-proxy-agent-v5-2.0.164.tgz#a027bb93b29f2357f58ea45f751a1dd44c5ff573"
+  integrity sha512-mqK5sGcnjTuPLdhvGqSueSObGFMszYsfe1wKFlbeaoJWG47ngO8AQXnM7CboPUpvCajcig3aITuKvuZ27+FM+Q==
 
 "@balena/dockerignore@^1.0.2":
   version "1.0.2"
@@ -115,9 +115,9 @@ astral-regex@^2.0.0:
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
 aws-cdk-lib@*:
-  version "2.83.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.83.1.tgz#ee2a3dde7af0540cc091d5c9f3fb401470f830e7"
-  integrity sha512-bFYXJDRyuH9x/xmANucKiEzzAbF683XDKOEmSivEgIkGP3zYkZ6beWajSAOQqRsm1VOPjgcpFuJtggUOkdPVKg==
+  version "2.84.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk-lib/-/aws-cdk-lib-2.84.0.tgz#cb08033f5cfba5aed3c0b0cb11a46fc1cbe1586c"
+  integrity sha512-4zLtCLCIs5Ia4WRGqiXRwxSkpGaNy3NxMexO9qYHSuIYpqf4sHObzZ0tDHZCFL5Wkui3sCu3OLQWrRHrr93HvA==
   dependencies:
     "@aws-cdk/asset-awscli-v1" "^2.2.177"
     "@aws-cdk/asset-kubectl-v20" "^2.1.1"
@@ -134,9 +134,9 @@ aws-cdk-lib@*:
     yaml "1.10.2"
 
 aws-cdk@*:
-  version "2.83.1"
-  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.83.1.tgz#a71c226f806b2e2ccfff0a5b3c1037759b1c15ee"
-  integrity sha512-hM2fsHl2TXk3B0MTq7zRU/KqJiVrnTQ3SXbAfleQCfCf/Jpy6yD6nGqrEADFAYNLSPoA9iC3SLnO73SPqqjjRQ==
+  version "2.84.0"
+  resolved "https://registry.yarnpkg.com/aws-cdk/-/aws-cdk-2.84.0.tgz#59890df8555b0179630af72a131fbf201dc0967b"
+  integrity sha512-XypGsMW+H6DLLIPt4zG5KWv1FuUlpS6jqEROxg5maJFFsRaQnMkfgXP/ZT1IELyIWCYAZl6xD1rz7WRS3yMueA==
   optionalDependencies:
     fsevents "2.3.2"
 
