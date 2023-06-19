@@ -14,7 +14,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-yarn install && yarn upgrade && yarn lint-fix && rm -rf dist && yarn all && rm -rf node_modules && yarn install --production && rm -rf node_modules/.yarn-integrity && git add dist node_modules -f
+pnpm install -r && pnpm up -r && pnpm lint-fix && rm -rf dist && pnpm all && rm -rf node_modules && pnpm install --production && rm -rf node_modules/.pnpm-integrity && git add dist node_modules -f
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
@@ -30,7 +30,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-yarn install && yarn upgrade
+pnpm install -r && pnpm up -r
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit

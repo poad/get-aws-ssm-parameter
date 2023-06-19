@@ -23,25 +23,25 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 8.6.2
+          run_install: |
+            - recursive: true
+              args: [--no-frozen-lockfile, --strict-peer-dependencies]
+      
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3.6.0
         with:
           node-version: 16.x
           check-latest: true
-          cache: yarn
-
-      - name: Setup yarn
-        run: |
-          corepack enable
-          corepack prepare yarn@1.22.19 --activate
-
-      - name: Install dependencies
-        run: yarn install
 
       - name: Rebuild the dist/ directory
         run: |
-          yarn build
-          yarn package
+          pnpm build
+          pnpm package
 
       - name: Compare the expected and actual dist/ directories
         run: |

@@ -21,23 +21,25 @@ jobs:
         role-session-name: GitHubActions
         aws-region: us-west-2
     - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 8.6.2
+        run_install: |
+          - recursive: true
+            args: [--no-frozen-lockfile, --strict-peer-dependencies]
     - name: Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
         check-latest: true
-        cache: 'yarn'
-    - name: Setup yarn
-      run: |
-        corepack enable
-        corepack prepare yarn@1.22.19 --activate
-    - run: |
-        yarn global add aws-cdk
+
+    - name: Install AWS CDK
+      run: npm -g i aws-cdk
     - name: Create for testing parameter
       working-directory: __tests__/cdk
-      run: |
-        yarn install
-        cdk deploy --all
+      run: cdk deploy --all
 
   build:
     needs: [setup]
@@ -54,17 +56,19 @@ jobs:
         role-session-name: GitHubActions
         aws-region: ${{ matrix.region }}
     - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      name: Install pnpm
+      id: pnpm-install
+      with:
+        version: 8.6.2
+        run_install: |
+          - recursive: true
+            args: [--no-frozen-lockfile, --strict-peer-dependencies]
     - name: Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
         node-version: 16.x
         check-latest: true
-        cache: 'yarn'
-    - name: Setup yarn
-      run: |
-        corepack enable
-        corepack prepare yarn@1.22.19 --activate
     - name: Build and test
-      run: |
-        yarn install && yarn all
+      run: pnpm all
 
