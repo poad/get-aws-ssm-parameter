@@ -30,13 +30,13 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@aws-sdk/client-ssm": "^3.354.0",
+    "@aws-sdk/client-ssm": "^3.358.0",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
     "@jest/globals": "^29.5.0",
     "@swc/cli": "^0.1.62",
-    "@swc/core": "^1.3.65",
+    "@swc/core": "^1.3.66",
     "@swc/helpers": "^0.5.1",
     "@swc/jest": "^0.2.26",
     "@types/node": "^20.3.1",
