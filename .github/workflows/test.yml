@@ -20,7 +20,7 @@ jobs:
         role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
         role-session-name: GitHubActions
         aws-region: us-west-2
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v2
       name: Install pnpm
       id: pnpm-install
@@ -55,7 +55,7 @@ jobs:
         role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
         role-session-name: GitHubActions
         aws-region: ${{ matrix.region }}
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - uses: pnpm/action-setup@v2
       name: Install pnpm
       id: pnpm-install
