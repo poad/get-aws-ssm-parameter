@@ -9,8 +9,16 @@ updates:
     directory: /
     schedule:
       interval: daily
+    groups:
+      app:
+        patterns:
+          - '*'
 
   - package-ecosystem: npm
     directory: /__tests__/cdk/
     schedule:
       interval: daily
+    groups:
+      cdk:
+        patterns:
+          - '*'

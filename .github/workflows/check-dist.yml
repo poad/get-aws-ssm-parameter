@@ -27,15 +27,14 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8.6.2
           run_install: |
             - recursive: true
               args: [--no-frozen-lockfile, --strict-peer-dependencies]
       
-      - name: Use Node.js 16.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3.6.0
         with:
-          node-version: 16.x
+          node-version: 20.x
           check-latest: true
 
       - name: Rebuild the dist/ directory
