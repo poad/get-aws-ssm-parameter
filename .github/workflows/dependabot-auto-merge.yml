@@ -27,16 +27,5 @@ jobs:
 
       - uses: ahmadnassri/action-dependabot-auto-merge@v2
         with:
-          github-token: ${{ secrets.PERSONAL_TOKEN_FOR_GITHUB_ACTIONS }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           config: .github/dependabot-auto-merge.yml
-
-      - name: Slack Notification (not success)
-        uses: lazy-actions/slatify@master
-        if: ${{ ! success() }}
-        continue-on-error: true
-        with:
-          job_name: '*auto-merge*'
-          type: ${{ job.status }}
-          icon_emoji: ":octocat:"
-          url: ${{ secrets.SLACK_WEBHOOK }}
-          token: ${{ secrets.GITHUB_TOKEN }}

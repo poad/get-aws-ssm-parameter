@@ -23,10 +23,6 @@
   "inlineSourcesContent": true,
   "minify": true,
   "module": {
-    "type": "commonjs",
-    "strict": true,
-    "strictMode": true,
-    "lazy": false,
-    "noInterop": false
+    "type": "commonjs"
   }
 }

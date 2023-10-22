@@ -7,11 +7,19 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "outDir": "./lib",
-    "rootDir": "./src",
+    "lib": [
+      "esnext",
+      "DOM"
+    ],
     "strict": true,
-    "noImplicitAny": true,
-    "esModuleInterop": true
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "declaration": false,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSourceMap": true
   },
   "exclude": ["node_modules", "**/*.test.ts", "__tests__/**"]
 }
