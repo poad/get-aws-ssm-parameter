@@ -44,7 +44,7 @@ jobs:
       working-directory: __tests__/cdk
       run: cdk deploy --all
 
-  build:
+  test:
     needs: [setup]
     runs-on: ubuntu-latest
     strategy:
