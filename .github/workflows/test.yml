@@ -31,7 +31,7 @@ jobs:
             args: [--no-frozen-lockfile, --strict-peer-dependencies]
           - args: [--global, aws-cdk]
     - name: Use Node.js 20.x
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 20.x
         check-latest: true
@@ -63,7 +63,7 @@ jobs:
           - recursive: true
             args: [--no-frozen-lockfile, --strict-peer-dependencies]
     - name: Use Node.js 20.x
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: 20.x
         check-latest: true
