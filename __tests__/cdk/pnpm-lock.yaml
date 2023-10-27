@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   aws-cdk-lib:
-    specifier: ^2.103.0
-    version: 2.103.0(constructs@10.3.0)
+    specifier: ^2.103.1
+    version: 2.103.1(constructs@10.3.0)
   constructs:
     specifier: ^10.3.0
     version: 10.3.0
@@ -20,8 +20,8 @@ devDependencies:
     specifier: ^20.8.9
     version: 20.8.9
   aws-cdk:
-    specifier: ^2.103.0
-    version: 2.103.0
+    specifier: ^2.103.1
+    version: 2.103.1
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@types/node@20.8.9)(typescript@5.2.2)
@@ -31,8 +31,8 @@ devDependencies:
 
 packages:
 
-  /@aws-cdk/asset-awscli-v1@2.2.200:
-    resolution: {integrity: sha512-Kf5J8DfJK4wZFWT2Myca0lhwke7LwHcHBo+4TvWOGJrFVVKVuuiLCkzPPRBQQVDj0Vtn2NBokZAz8pfMpAqAKg==}
+  /@aws-cdk/asset-awscli-v1@2.2.201:
+    resolution: {integrity: sha512-INZqcwDinNaIdb5CtW3ez5s943nX5stGBQS6VOP2JDlOFP81hM3fds/9NDknipqfUkZM43dx+HgVvkXYXXARCQ==}
     dev: false
 
   /@aws-cdk/asset-kubectl-v20@2.1.2:
@@ -103,13 +103,13 @@ packages:
     resolution: {integrity: sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==}
     dev: true
 
-  /aws-cdk-lib@2.103.0(constructs@10.3.0):
-    resolution: {integrity: sha512-8shdI77+mq1VkpM6/OjlDh8wXMR2+G0pgL0eZ0UXmH6+oa8OQl/3LlA1OfJOZT90q71gzgL9huXGQC+wfw3hbA==}
+  /aws-cdk-lib@2.103.1(constructs@10.3.0):
+    resolution: {integrity: sha512-Y9P4dv+vdfTiqTGeYebajQ30OiPgsIDGonpaxjQYA1A4RYemYu62bX1J+QQBJh7FNd3amybD7YgJe3jKIUQuHw==}
     engines: {node: '>= 14.15.0'}
     peerDependencies:
       constructs: ^10.0.0
     dependencies:
-      '@aws-cdk/asset-awscli-v1': 2.2.200
+      '@aws-cdk/asset-awscli-v1': 2.2.201
       '@aws-cdk/asset-kubectl-v20': 2.1.2
       '@aws-cdk/asset-node-proxy-agent-v6': 2.0.1
       constructs: 10.3.0
@@ -126,8 +126,8 @@ packages:
       - table
       - yaml
 
-  /aws-cdk@2.103.0:
-    resolution: {integrity: sha512-M0WCCr3zHDK4zUM8hHhwPMWF6sZ/kBxn9SzREIANd8gYzukQq9eWKaqJZzsvZQ1IAhamb3PN/6i9WU4e4K4TGQ==}
+  /aws-cdk@2.103.1:
+    resolution: {integrity: sha512-5DXPlMi8Gf/a6fMqwY6uVwuR21PDDNGkAGkMVTTuaiulc4RsMjQUGq8I4xaPIYQRvR+VHFU+JQ5j5PnI5/gBrA==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
     optionalDependencies:
