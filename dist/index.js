@@ -5,7 +5,7 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", ({value:true}));Object.defineProperty(exports, "default", ({enumerable:true,get:function(){return _default}}));const _clientssm=_interop_require_wildcard(__nccwpck_require__(43718));__nccwpck_require__(49437);function _getRequireWildcardCache(nodeInterop){if(typeof WeakMap!=="function")return null;var cacheBabelInterop=new WeakMap;var cacheNodeInterop=new WeakMap;return(_getRequireWildcardCache=function(nodeInterop){return nodeInterop?cacheNodeInterop:cacheBabelInterop})(nodeInterop)}function _interop_require_wildcard(obj,nodeInterop){if(!nodeInterop&&obj&&obj.__esModule){return obj}if(obj===null||typeof obj!=="object"&&typeof obj!=="function"){return{default:obj}}var cache=_getRequireWildcardCache(nodeInterop);if(cache&&cache.has(obj)){return cache.get(obj)}var newObj={__proto__:null};var hasPropertyDescriptor=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var key in obj){if(key!=="default"&&Object.prototype.hasOwnProperty.call(obj,key)){var desc=hasPropertyDescriptor?Object.getOwnPropertyDescriptor(obj,key):null;if(desc&&(desc.get||desc.set)){Object.defineProperty(newObj,key,desc)}else{newObj[key]=obj[key]}}}newObj.default=obj;if(cache){cache.set(obj,newObj)}return newObj}const createClient=region=>{const client=new _clientssm.SSMClient({region});const getParameterValue=async(parameterName,secure)=>{const resp=await client.send(new _clientssm.GetParameterCommand({Name:parameterName,WithDecryption:secure}));if(resp.Parameter){return resp.Parameter.Value}return undefined};return{getParameterValue}};const _default=createClient;
+Object.defineProperty(exports, "__esModule", ({value:true}));Object.defineProperty(exports, "default", ({enumerable:true,get:function(){return _default}}));const _clientssm=_interop_require_wildcard(__nccwpck_require__(77342));__nccwpck_require__(49437);function _getRequireWildcardCache(nodeInterop){if(typeof WeakMap!=="function")return null;var cacheBabelInterop=new WeakMap;var cacheNodeInterop=new WeakMap;return(_getRequireWildcardCache=function(nodeInterop){return nodeInterop?cacheNodeInterop:cacheBabelInterop})(nodeInterop)}function _interop_require_wildcard(obj,nodeInterop){if(!nodeInterop&&obj&&obj.__esModule){return obj}if(obj===null||typeof obj!=="object"&&typeof obj!=="function"){return{default:obj}}var cache=_getRequireWildcardCache(nodeInterop);if(cache&&cache.has(obj)){return cache.get(obj)}var newObj={__proto__:null};var hasPropertyDescriptor=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var key in obj){if(key!=="default"&&Object.prototype.hasOwnProperty.call(obj,key)){var desc=hasPropertyDescriptor?Object.getOwnPropertyDescriptor(obj,key):null;if(desc&&(desc.get||desc.set)){Object.defineProperty(newObj,key,desc)}else{newObj[key]=obj[key]}}}newObj.default=obj;if(cache){cache.set(obj,newObj)}return newObj}const createClient=region=>{const client=new _clientssm.SSMClient({region});const getParameterValue=async(parameterName,secure)=>{const resp=await client.send(new _clientssm.GetParameterCommand({Name:parameterName,WithDecryption:secure}));if(resp.Parameter){return resp.Parameter.Value}return undefined};return{getParameterValue}};const _default=createClient;
 //# sourceMappingURL=client.js.map
 
 /***/ }),
@@ -2117,7 +2117,7 @@ exports.uint32ArrayFrom = uint32ArrayFrom;
 
 /***/ }),
 
-/***/ 93513:
+/***/ 3220:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2125,146 +2125,146 @@ exports.uint32ArrayFrom = uint32ArrayFrom;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SSM = void 0;
 const smithy_client_1 = __nccwpck_require__(55078);
-const AddTagsToResourceCommand_1 = __nccwpck_require__(14570);
-const AssociateOpsItemRelatedItemCommand_1 = __nccwpck_require__(1773);
-const CancelCommandCommand_1 = __nccwpck_require__(43319);
-const CancelMaintenanceWindowExecutionCommand_1 = __nccwpck_require__(60634);
-const CreateActivationCommand_1 = __nccwpck_require__(43243);
-const CreateAssociationBatchCommand_1 = __nccwpck_require__(25134);
-const CreateAssociationCommand_1 = __nccwpck_require__(42977);
-const CreateDocumentCommand_1 = __nccwpck_require__(95231);
-const CreateMaintenanceWindowCommand_1 = __nccwpck_require__(48546);
-const CreateOpsItemCommand_1 = __nccwpck_require__(35944);
-const CreateOpsMetadataCommand_1 = __nccwpck_require__(32455);
-const CreatePatchBaselineCommand_1 = __nccwpck_require__(35525);
-const CreateResourceDataSyncCommand_1 = __nccwpck_require__(57653);
-const DeleteActivationCommand_1 = __nccwpck_require__(99709);
-const DeleteAssociationCommand_1 = __nccwpck_require__(65042);
-const DeleteDocumentCommand_1 = __nccwpck_require__(92564);
-const DeleteInventoryCommand_1 = __nccwpck_require__(37807);
-const DeleteMaintenanceWindowCommand_1 = __nccwpck_require__(42541);
-const DeleteOpsItemCommand_1 = __nccwpck_require__(56207);
-const DeleteOpsMetadataCommand_1 = __nccwpck_require__(95759);
-const DeleteParameterCommand_1 = __nccwpck_require__(39951);
-const DeleteParametersCommand_1 = __nccwpck_require__(83672);
-const DeletePatchBaselineCommand_1 = __nccwpck_require__(45738);
-const DeleteResourceDataSyncCommand_1 = __nccwpck_require__(69080);
-const DeleteResourcePolicyCommand_1 = __nccwpck_require__(73684);
-const DeregisterManagedInstanceCommand_1 = __nccwpck_require__(14967);
-const DeregisterPatchBaselineForPatchGroupCommand_1 = __nccwpck_require__(78446);
-const DeregisterTargetFromMaintenanceWindowCommand_1 = __nccwpck_require__(1795);
-const DeregisterTaskFromMaintenanceWindowCommand_1 = __nccwpck_require__(16360);
-const DescribeActivationsCommand_1 = __nccwpck_require__(69690);
-const DescribeAssociationCommand_1 = __nccwpck_require__(51801);
-const DescribeAssociationExecutionsCommand_1 = __nccwpck_require__(9487);
-const DescribeAssociationExecutionTargetsCommand_1 = __nccwpck_require__(82172);
-const DescribeAutomationExecutionsCommand_1 = __nccwpck_require__(37676);
-const DescribeAutomationStepExecutionsCommand_1 = __nccwpck_require__(98361);
-const DescribeAvailablePatchesCommand_1 = __nccwpck_require__(57209);
-const DescribeDocumentCommand_1 = __nccwpck_require__(28359);
-const DescribeDocumentPermissionCommand_1 = __nccwpck_require__(55313);
-const DescribeEffectiveInstanceAssociationsCommand_1 = __nccwpck_require__(7553);
-const DescribeEffectivePatchesForPatchBaselineCommand_1 = __nccwpck_require__(68840);
-const DescribeInstanceAssociationsStatusCommand_1 = __nccwpck_require__(6092);
-const DescribeInstanceInformationCommand_1 = __nccwpck_require__(96238);
-const DescribeInstancePatchesCommand_1 = __nccwpck_require__(63313);
-const DescribeInstancePatchStatesCommand_1 = __nccwpck_require__(78300);
-const DescribeInstancePatchStatesForPatchGroupCommand_1 = __nccwpck_require__(69663);
-const DescribeInventoryDeletionsCommand_1 = __nccwpck_require__(31463);
-const DescribeMaintenanceWindowExecutionsCommand_1 = __nccwpck_require__(7985);
-const DescribeMaintenanceWindowExecutionTaskInvocationsCommand_1 = __nccwpck_require__(29371);
-const DescribeMaintenanceWindowExecutionTasksCommand_1 = __nccwpck_require__(74305);
-const DescribeMaintenanceWindowScheduleCommand_1 = __nccwpck_require__(90632);
-const DescribeMaintenanceWindowsCommand_1 = __nccwpck_require__(63698);
-const DescribeMaintenanceWindowsForTargetCommand_1 = __nccwpck_require__(91430);
-const DescribeMaintenanceWindowTargetsCommand_1 = __nccwpck_require__(32788);
-const DescribeMaintenanceWindowTasksCommand_1 = __nccwpck_require__(47930);
-const DescribeOpsItemsCommand_1 = __nccwpck_require__(63958);
-const DescribeParametersCommand_1 = __nccwpck_require__(91405);
-const DescribePatchBaselinesCommand_1 = __nccwpck_require__(18257);
-const DescribePatchGroupsCommand_1 = __nccwpck_require__(30272);
-const DescribePatchGroupStateCommand_1 = __nccwpck_require__(72880);
-const DescribePatchPropertiesCommand_1 = __nccwpck_require__(2466);
-const DescribeSessionsCommand_1 = __nccwpck_require__(39022);
-const DisassociateOpsItemRelatedItemCommand_1 = __nccwpck_require__(48689);
-const GetAutomationExecutionCommand_1 = __nccwpck_require__(57504);
-const GetCalendarStateCommand_1 = __nccwpck_require__(44358);
-const GetCommandInvocationCommand_1 = __nccwpck_require__(28174);
-const GetConnectionStatusCommand_1 = __nccwpck_require__(46303);
-const GetDefaultPatchBaselineCommand_1 = __nccwpck_require__(63479);
-const GetDeployablePatchSnapshotForInstanceCommand_1 = __nccwpck_require__(63011);
-const GetDocumentCommand_1 = __nccwpck_require__(79849);
-const GetInventoryCommand_1 = __nccwpck_require__(70381);
-const GetInventorySchemaCommand_1 = __nccwpck_require__(31683);
-const GetMaintenanceWindowCommand_1 = __nccwpck_require__(77477);
-const GetMaintenanceWindowExecutionCommand_1 = __nccwpck_require__(8926);
-const GetMaintenanceWindowExecutionTaskCommand_1 = __nccwpck_require__(54913);
-const GetMaintenanceWindowExecutionTaskInvocationCommand_1 = __nccwpck_require__(41580);
-const GetMaintenanceWindowTaskCommand_1 = __nccwpck_require__(48513);
-const GetOpsItemCommand_1 = __nccwpck_require__(38834);
-const GetOpsMetadataCommand_1 = __nccwpck_require__(83053);
-const GetOpsSummaryCommand_1 = __nccwpck_require__(39855);
-const GetParameterCommand_1 = __nccwpck_require__(54477);
-const GetParameterHistoryCommand_1 = __nccwpck_require__(13101);
-const GetParametersByPathCommand_1 = __nccwpck_require__(13303);
-const GetParametersCommand_1 = __nccwpck_require__(67320);
-const GetPatchBaselineCommand_1 = __nccwpck_require__(21799);
-const GetPatchBaselineForPatchGroupCommand_1 = __nccwpck_require__(63193);
-const GetResourcePoliciesCommand_1 = __nccwpck_require__(60533);
-const GetServiceSettingCommand_1 = __nccwpck_require__(90998);
-const LabelParameterVersionCommand_1 = __nccwpck_require__(32761);
-const ListAssociationsCommand_1 = __nccwpck_require__(16742);
-const ListAssociationVersionsCommand_1 = __nccwpck_require__(24065);
-const ListCommandInvocationsCommand_1 = __nccwpck_require__(26382);
-const ListCommandsCommand_1 = __nccwpck_require__(71454);
-const ListComplianceItemsCommand_1 = __nccwpck_require__(33822);
-const ListComplianceSummariesCommand_1 = __nccwpck_require__(28969);
-const ListDocumentMetadataHistoryCommand_1 = __nccwpck_require__(38743);
-const ListDocumentsCommand_1 = __nccwpck_require__(62465);
-const ListDocumentVersionsCommand_1 = __nccwpck_require__(45278);
-const ListInventoryEntriesCommand_1 = __nccwpck_require__(56342);
-const ListOpsItemEventsCommand_1 = __nccwpck_require__(82837);
-const ListOpsItemRelatedItemsCommand_1 = __nccwpck_require__(53568);
-const ListOpsMetadataCommand_1 = __nccwpck_require__(47863);
-const ListResourceComplianceSummariesCommand_1 = __nccwpck_require__(52196);
-const ListResourceDataSyncCommand_1 = __nccwpck_require__(34984);
-const ListTagsForResourceCommand_1 = __nccwpck_require__(10621);
-const ModifyDocumentPermissionCommand_1 = __nccwpck_require__(84962);
-const PutComplianceItemsCommand_1 = __nccwpck_require__(99746);
-const PutInventoryCommand_1 = __nccwpck_require__(50202);
-const PutParameterCommand_1 = __nccwpck_require__(86234);
-const PutResourcePolicyCommand_1 = __nccwpck_require__(3081);
-const RegisterDefaultPatchBaselineCommand_1 = __nccwpck_require__(4225);
-const RegisterPatchBaselineForPatchGroupCommand_1 = __nccwpck_require__(35509);
-const RegisterTargetWithMaintenanceWindowCommand_1 = __nccwpck_require__(37827);
-const RegisterTaskWithMaintenanceWindowCommand_1 = __nccwpck_require__(7532);
-const RemoveTagsFromResourceCommand_1 = __nccwpck_require__(27194);
-const ResetServiceSettingCommand_1 = __nccwpck_require__(71986);
-const ResumeSessionCommand_1 = __nccwpck_require__(16527);
-const SendAutomationSignalCommand_1 = __nccwpck_require__(23338);
-const SendCommandCommand_1 = __nccwpck_require__(22479);
-const StartAssociationsOnceCommand_1 = __nccwpck_require__(99165);
-const StartAutomationExecutionCommand_1 = __nccwpck_require__(61734);
-const StartChangeRequestExecutionCommand_1 = __nccwpck_require__(96859);
-const StartSessionCommand_1 = __nccwpck_require__(52641);
-const StopAutomationExecutionCommand_1 = __nccwpck_require__(23920);
-const TerminateSessionCommand_1 = __nccwpck_require__(46480);
-const UnlabelParameterVersionCommand_1 = __nccwpck_require__(96484);
-const UpdateAssociationCommand_1 = __nccwpck_require__(46352);
-const UpdateAssociationStatusCommand_1 = __nccwpck_require__(42142);
-const UpdateDocumentCommand_1 = __nccwpck_require__(9877);
-const UpdateDocumentDefaultVersionCommand_1 = __nccwpck_require__(63711);
-const UpdateDocumentMetadataCommand_1 = __nccwpck_require__(90172);
-const UpdateMaintenanceWindowCommand_1 = __nccwpck_require__(76494);
-const UpdateMaintenanceWindowTargetCommand_1 = __nccwpck_require__(20839);
-const UpdateMaintenanceWindowTaskCommand_1 = __nccwpck_require__(20952);
-const UpdateManagedInstanceRoleCommand_1 = __nccwpck_require__(82554);
-const UpdateOpsItemCommand_1 = __nccwpck_require__(62814);
-const UpdateOpsMetadataCommand_1 = __nccwpck_require__(32502);
-const UpdatePatchBaselineCommand_1 = __nccwpck_require__(48836);
-const UpdateResourceDataSyncCommand_1 = __nccwpck_require__(72866);
-const UpdateServiceSettingCommand_1 = __nccwpck_require__(67251);
-const SSMClient_1 = __nccwpck_require__(96272);
+const AddTagsToResourceCommand_1 = __nccwpck_require__(30331);
+const AssociateOpsItemRelatedItemCommand_1 = __nccwpck_require__(5805);
+const CancelCommandCommand_1 = __nccwpck_require__(99982);
+const CancelMaintenanceWindowExecutionCommand_1 = __nccwpck_require__(70438);
+const CreateActivationCommand_1 = __nccwpck_require__(75814);
+const CreateAssociationBatchCommand_1 = __nccwpck_require__(82493);
+const CreateAssociationCommand_1 = __nccwpck_require__(84206);
+const CreateDocumentCommand_1 = __nccwpck_require__(13501);
+const CreateMaintenanceWindowCommand_1 = __nccwpck_require__(98946);
+const CreateOpsItemCommand_1 = __nccwpck_require__(89895);
+const CreateOpsMetadataCommand_1 = __nccwpck_require__(34986);
+const CreatePatchBaselineCommand_1 = __nccwpck_require__(36383);
+const CreateResourceDataSyncCommand_1 = __nccwpck_require__(96);
+const DeleteActivationCommand_1 = __nccwpck_require__(69009);
+const DeleteAssociationCommand_1 = __nccwpck_require__(29983);
+const DeleteDocumentCommand_1 = __nccwpck_require__(32022);
+const DeleteInventoryCommand_1 = __nccwpck_require__(93563);
+const DeleteMaintenanceWindowCommand_1 = __nccwpck_require__(92987);
+const DeleteOpsItemCommand_1 = __nccwpck_require__(17878);
+const DeleteOpsMetadataCommand_1 = __nccwpck_require__(58455);
+const DeleteParameterCommand_1 = __nccwpck_require__(21054);
+const DeleteParametersCommand_1 = __nccwpck_require__(76868);
+const DeletePatchBaselineCommand_1 = __nccwpck_require__(65467);
+const DeleteResourceDataSyncCommand_1 = __nccwpck_require__(36000);
+const DeleteResourcePolicyCommand_1 = __nccwpck_require__(26021);
+const DeregisterManagedInstanceCommand_1 = __nccwpck_require__(76987);
+const DeregisterPatchBaselineForPatchGroupCommand_1 = __nccwpck_require__(25162);
+const DeregisterTargetFromMaintenanceWindowCommand_1 = __nccwpck_require__(42454);
+const DeregisterTaskFromMaintenanceWindowCommand_1 = __nccwpck_require__(55838);
+const DescribeActivationsCommand_1 = __nccwpck_require__(47211);
+const DescribeAssociationCommand_1 = __nccwpck_require__(33024);
+const DescribeAssociationExecutionsCommand_1 = __nccwpck_require__(79798);
+const DescribeAssociationExecutionTargetsCommand_1 = __nccwpck_require__(65104);
+const DescribeAutomationExecutionsCommand_1 = __nccwpck_require__(75529);
+const DescribeAutomationStepExecutionsCommand_1 = __nccwpck_require__(80736);
+const DescribeAvailablePatchesCommand_1 = __nccwpck_require__(7112);
+const DescribeDocumentCommand_1 = __nccwpck_require__(48557);
+const DescribeDocumentPermissionCommand_1 = __nccwpck_require__(69334);
+const DescribeEffectiveInstanceAssociationsCommand_1 = __nccwpck_require__(9951);
+const DescribeEffectivePatchesForPatchBaselineCommand_1 = __nccwpck_require__(91133);
+const DescribeInstanceAssociationsStatusCommand_1 = __nccwpck_require__(77842);
+const DescribeInstanceInformationCommand_1 = __nccwpck_require__(19967);
+const DescribeInstancePatchesCommand_1 = __nccwpck_require__(21888);
+const DescribeInstancePatchStatesCommand_1 = __nccwpck_require__(38216);
+const DescribeInstancePatchStatesForPatchGroupCommand_1 = __nccwpck_require__(53423);
+const DescribeInventoryDeletionsCommand_1 = __nccwpck_require__(39388);
+const DescribeMaintenanceWindowExecutionsCommand_1 = __nccwpck_require__(73343);
+const DescribeMaintenanceWindowExecutionTaskInvocationsCommand_1 = __nccwpck_require__(17795);
+const DescribeMaintenanceWindowExecutionTasksCommand_1 = __nccwpck_require__(63166);
+const DescribeMaintenanceWindowScheduleCommand_1 = __nccwpck_require__(19292);
+const DescribeMaintenanceWindowsCommand_1 = __nccwpck_require__(20551);
+const DescribeMaintenanceWindowsForTargetCommand_1 = __nccwpck_require__(67645);
+const DescribeMaintenanceWindowTargetsCommand_1 = __nccwpck_require__(31038);
+const DescribeMaintenanceWindowTasksCommand_1 = __nccwpck_require__(68502);
+const DescribeOpsItemsCommand_1 = __nccwpck_require__(53794);
+const DescribeParametersCommand_1 = __nccwpck_require__(3308);
+const DescribePatchBaselinesCommand_1 = __nccwpck_require__(26180);
+const DescribePatchGroupsCommand_1 = __nccwpck_require__(77838);
+const DescribePatchGroupStateCommand_1 = __nccwpck_require__(9176);
+const DescribePatchPropertiesCommand_1 = __nccwpck_require__(35079);
+const DescribeSessionsCommand_1 = __nccwpck_require__(97886);
+const DisassociateOpsItemRelatedItemCommand_1 = __nccwpck_require__(8851);
+const GetAutomationExecutionCommand_1 = __nccwpck_require__(31307);
+const GetCalendarStateCommand_1 = __nccwpck_require__(14229);
+const GetCommandInvocationCommand_1 = __nccwpck_require__(3881);
+const GetConnectionStatusCommand_1 = __nccwpck_require__(66370);
+const GetDefaultPatchBaselineCommand_1 = __nccwpck_require__(60890);
+const GetDeployablePatchSnapshotForInstanceCommand_1 = __nccwpck_require__(71793);
+const GetDocumentCommand_1 = __nccwpck_require__(28836);
+const GetInventoryCommand_1 = __nccwpck_require__(84662);
+const GetInventorySchemaCommand_1 = __nccwpck_require__(29404);
+const GetMaintenanceWindowCommand_1 = __nccwpck_require__(54868);
+const GetMaintenanceWindowExecutionCommand_1 = __nccwpck_require__(88503);
+const GetMaintenanceWindowExecutionTaskCommand_1 = __nccwpck_require__(56267);
+const GetMaintenanceWindowExecutionTaskInvocationCommand_1 = __nccwpck_require__(3352);
+const GetMaintenanceWindowTaskCommand_1 = __nccwpck_require__(34196);
+const GetOpsItemCommand_1 = __nccwpck_require__(64289);
+const GetOpsMetadataCommand_1 = __nccwpck_require__(24095);
+const GetOpsSummaryCommand_1 = __nccwpck_require__(90451);
+const GetParameterCommand_1 = __nccwpck_require__(93830);
+const GetParameterHistoryCommand_1 = __nccwpck_require__(72471);
+const GetParametersByPathCommand_1 = __nccwpck_require__(7247);
+const GetParametersCommand_1 = __nccwpck_require__(30033);
+const GetPatchBaselineCommand_1 = __nccwpck_require__(56690);
+const GetPatchBaselineForPatchGroupCommand_1 = __nccwpck_require__(21037);
+const GetResourcePoliciesCommand_1 = __nccwpck_require__(23653);
+const GetServiceSettingCommand_1 = __nccwpck_require__(8919);
+const LabelParameterVersionCommand_1 = __nccwpck_require__(30303);
+const ListAssociationsCommand_1 = __nccwpck_require__(27030);
+const ListAssociationVersionsCommand_1 = __nccwpck_require__(32752);
+const ListCommandInvocationsCommand_1 = __nccwpck_require__(93946);
+const ListCommandsCommand_1 = __nccwpck_require__(83602);
+const ListComplianceItemsCommand_1 = __nccwpck_require__(27341);
+const ListComplianceSummariesCommand_1 = __nccwpck_require__(1101);
+const ListDocumentMetadataHistoryCommand_1 = __nccwpck_require__(16973);
+const ListDocumentsCommand_1 = __nccwpck_require__(26224);
+const ListDocumentVersionsCommand_1 = __nccwpck_require__(75372);
+const ListInventoryEntriesCommand_1 = __nccwpck_require__(34660);
+const ListOpsItemEventsCommand_1 = __nccwpck_require__(83737);
+const ListOpsItemRelatedItemsCommand_1 = __nccwpck_require__(98757);
+const ListOpsMetadataCommand_1 = __nccwpck_require__(87694);
+const ListResourceComplianceSummariesCommand_1 = __nccwpck_require__(10149);
+const ListResourceDataSyncCommand_1 = __nccwpck_require__(72605);
+const ListTagsForResourceCommand_1 = __nccwpck_require__(76076);
+const ModifyDocumentPermissionCommand_1 = __nccwpck_require__(76991);
+const PutComplianceItemsCommand_1 = __nccwpck_require__(978);
+const PutInventoryCommand_1 = __nccwpck_require__(4453);
+const PutParameterCommand_1 = __nccwpck_require__(11520);
+const PutResourcePolicyCommand_1 = __nccwpck_require__(8173);
+const RegisterDefaultPatchBaselineCommand_1 = __nccwpck_require__(10431);
+const RegisterPatchBaselineForPatchGroupCommand_1 = __nccwpck_require__(67051);
+const RegisterTargetWithMaintenanceWindowCommand_1 = __nccwpck_require__(156);
+const RegisterTaskWithMaintenanceWindowCommand_1 = __nccwpck_require__(77978);
+const RemoveTagsFromResourceCommand_1 = __nccwpck_require__(45921);
+const ResetServiceSettingCommand_1 = __nccwpck_require__(53696);
+const ResumeSessionCommand_1 = __nccwpck_require__(76193);
+const SendAutomationSignalCommand_1 = __nccwpck_require__(87636);
+const SendCommandCommand_1 = __nccwpck_require__(69472);
+const StartAssociationsOnceCommand_1 = __nccwpck_require__(10615);
+const StartAutomationExecutionCommand_1 = __nccwpck_require__(29747);
+const StartChangeRequestExecutionCommand_1 = __nccwpck_require__(70801);
+const StartSessionCommand_1 = __nccwpck_require__(23775);
+const StopAutomationExecutionCommand_1 = __nccwpck_require__(34210);
+const TerminateSessionCommand_1 = __nccwpck_require__(13744);
+const UnlabelParameterVersionCommand_1 = __nccwpck_require__(27429);
+const UpdateAssociationCommand_1 = __nccwpck_require__(84246);
+const UpdateAssociationStatusCommand_1 = __nccwpck_require__(36748);
+const UpdateDocumentCommand_1 = __nccwpck_require__(99461);
+const UpdateDocumentDefaultVersionCommand_1 = __nccwpck_require__(99184);
+const UpdateDocumentMetadataCommand_1 = __nccwpck_require__(44334);
+const UpdateMaintenanceWindowCommand_1 = __nccwpck_require__(16690);
+const UpdateMaintenanceWindowTargetCommand_1 = __nccwpck_require__(6785);
+const UpdateMaintenanceWindowTaskCommand_1 = __nccwpck_require__(84393);
+const UpdateManagedInstanceRoleCommand_1 = __nccwpck_require__(96812);
+const UpdateOpsItemCommand_1 = __nccwpck_require__(5595);
+const UpdateOpsMetadataCommand_1 = __nccwpck_require__(57918);
+const UpdatePatchBaselineCommand_1 = __nccwpck_require__(10053);
+const UpdateResourceDataSyncCommand_1 = __nccwpck_require__(61089);
+const UpdateServiceSettingCommand_1 = __nccwpck_require__(25423);
+const SSMClient_1 = __nccwpck_require__(32394);
 const commands = {
     AddTagsToResourceCommand: AddTagsToResourceCommand_1.AddTagsToResourceCommand,
     AssociateOpsItemRelatedItemCommand: AssociateOpsItemRelatedItemCommand_1.AssociateOpsItemRelatedItemCommand,
@@ -2414,7 +2414,7 @@ exports.SSM = SSM;
 
 /***/ }),
 
-/***/ 96272:
+/***/ 32394:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2432,9 +2432,9 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_retry_1 = __nccwpck_require__(12620);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "__Client", ({ enumerable: true, get: function () { return smithy_client_1.Client; } }));
-const EndpointParameters_1 = __nccwpck_require__(36185);
-const runtimeConfig_1 = __nccwpck_require__(41138);
-const runtimeExtensions_1 = __nccwpck_require__(39761);
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const runtimeConfig_1 = __nccwpck_require__(66274);
+const runtimeExtensions_1 = __nccwpck_require__(53948);
 class SSMClient extends smithy_client_1.Client {
     constructor(...[configuration]) {
         const _config_0 = (0, runtimeConfig_1.getRuntimeConfig)(configuration || {});
@@ -2465,7 +2465,7 @@ exports.SSMClient = SSMClient;
 
 /***/ }),
 
-/***/ 14570:
+/***/ 30331:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2476,55 +2476,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class AddTagsToResourceCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, AddTagsToResourceCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "AddTagsToResourceCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "AddTagsToResource",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_AddTagsToResourceCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_AddTagsToResourceCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class AddTagsToResourceCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "AddTagsToResource", {})
+    .n("SSMClient", "AddTagsToResourceCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_AddTagsToResourceCommand)
+    .de(Aws_json1_1_1.de_AddTagsToResourceCommand)
+    .build() {
 }
 exports.AddTagsToResourceCommand = AddTagsToResourceCommand;
 
 
 /***/ }),
 
-/***/ 1773:
+/***/ 5805:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2535,55 +2512,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class AssociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, AssociateOpsItemRelatedItemCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "AssociateOpsItemRelatedItemCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "AssociateOpsItemRelatedItem",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_AssociateOpsItemRelatedItemCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_AssociateOpsItemRelatedItemCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class AssociateOpsItemRelatedItemCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "AssociateOpsItemRelatedItem", {})
+    .n("SSMClient", "AssociateOpsItemRelatedItemCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_AssociateOpsItemRelatedItemCommand)
+    .de(Aws_json1_1_1.de_AssociateOpsItemRelatedItemCommand)
+    .build() {
 }
 exports.AssociateOpsItemRelatedItemCommand = AssociateOpsItemRelatedItemCommand;
 
 
 /***/ }),
 
-/***/ 43319:
+/***/ 99982:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2594,55 +2548,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CancelCommandCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CancelCommandCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CancelCommandCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CancelCommand",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CancelCommandCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CancelCommandCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CancelCommandCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CancelCommand", {})
+    .n("SSMClient", "CancelCommandCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_CancelCommandCommand)
+    .de(Aws_json1_1_1.de_CancelCommandCommand)
+    .build() {
 }
 exports.CancelCommandCommand = CancelCommandCommand;
 
 
 /***/ }),
 
-/***/ 60634:
+/***/ 70438:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2653,55 +2584,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CancelMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CancelMaintenanceWindowExecutionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CancelMaintenanceWindowExecutionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CancelMaintenanceWindowExecution",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CancelMaintenanceWindowExecutionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CancelMaintenanceWindowExecutionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CancelMaintenanceWindowExecutionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CancelMaintenanceWindowExecution", {})
+    .n("SSMClient", "CancelMaintenanceWindowExecutionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_CancelMaintenanceWindowExecutionCommand)
+    .de(Aws_json1_1_1.de_CancelMaintenanceWindowExecutionCommand)
+    .build() {
 }
 exports.CancelMaintenanceWindowExecutionCommand = CancelMaintenanceWindowExecutionCommand;
 
 
 /***/ }),
 
-/***/ 43243:
+/***/ 75814:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2712,55 +2620,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreateActivationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateActivationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreateActivationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreateActivation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreateActivationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreateActivationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreateActivationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreateActivation", {})
+    .n("SSMClient", "CreateActivationCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_CreateActivationCommand)
+    .de(Aws_json1_1_1.de_CreateActivationCommand)
+    .build() {
 }
 exports.CreateActivationCommand = CreateActivationCommand;
 
 
 /***/ }),
 
-/***/ 25134:
+/***/ 82493:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2771,56 +2656,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreateAssociationBatchCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateAssociationBatchCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreateAssociationBatchCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.CreateAssociationBatchRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateAssociationBatchResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreateAssociationBatch",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreateAssociationBatchCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreateAssociationBatchCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreateAssociationBatchCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreateAssociationBatch", {})
+    .n("SSMClient", "CreateAssociationBatchCommand")
+    .f(models_0_1.CreateAssociationBatchRequestFilterSensitiveLog, models_0_1.CreateAssociationBatchResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_CreateAssociationBatchCommand)
+    .de(Aws_json1_1_1.de_CreateAssociationBatchCommand)
+    .build() {
 }
 exports.CreateAssociationBatchCommand = CreateAssociationBatchCommand;
 
 
 /***/ }),
 
-/***/ 42977:
+/***/ 84206:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2831,56 +2693,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreateAssociationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateAssociationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreateAssociationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.CreateAssociationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.CreateAssociationResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreateAssociation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreateAssociationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreateAssociationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreateAssociationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreateAssociation", {})
+    .n("SSMClient", "CreateAssociationCommand")
+    .f(models_0_1.CreateAssociationRequestFilterSensitiveLog, models_0_1.CreateAssociationResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_CreateAssociationCommand)
+    .de(Aws_json1_1_1.de_CreateAssociationCommand)
+    .build() {
 }
 exports.CreateAssociationCommand = CreateAssociationCommand;
 
 
 /***/ }),
 
-/***/ 95231:
+/***/ 13501:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2891,55 +2730,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreateDocumentCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateDocumentCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreateDocumentCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreateDocument",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreateDocumentCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreateDocumentCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreateDocumentCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreateDocument", {})
+    .n("SSMClient", "CreateDocumentCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_CreateDocumentCommand)
+    .de(Aws_json1_1_1.de_CreateDocumentCommand)
+    .build() {
 }
 exports.CreateDocumentCommand = CreateDocumentCommand;
 
 
 /***/ }),
 
-/***/ 48546:
+/***/ 98946:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2950,56 +2766,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreateMaintenanceWindowCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateMaintenanceWindowCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreateMaintenanceWindowCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.CreateMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreateMaintenanceWindow",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreateMaintenanceWindowCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreateMaintenanceWindowCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreateMaintenanceWindowCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreateMaintenanceWindow", {})
+    .n("SSMClient", "CreateMaintenanceWindowCommand")
+    .f(models_0_1.CreateMaintenanceWindowRequestFilterSensitiveLog, void 0)
+    .ser(Aws_json1_1_1.se_CreateMaintenanceWindowCommand)
+    .de(Aws_json1_1_1.de_CreateMaintenanceWindowCommand)
+    .build() {
 }
 exports.CreateMaintenanceWindowCommand = CreateMaintenanceWindowCommand;
 
 
 /***/ }),
 
-/***/ 35944:
+/***/ 89895:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3010,55 +2803,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreateOpsItemCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateOpsItemCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreateOpsItemCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreateOpsItem",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreateOpsItemCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreateOpsItemCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreateOpsItemCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreateOpsItem", {})
+    .n("SSMClient", "CreateOpsItemCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_CreateOpsItemCommand)
+    .de(Aws_json1_1_1.de_CreateOpsItemCommand)
+    .build() {
 }
 exports.CreateOpsItemCommand = CreateOpsItemCommand;
 
 
 /***/ }),
 
-/***/ 32455:
+/***/ 34986:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3069,55 +2839,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreateOpsMetadataCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateOpsMetadataCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreateOpsMetadataCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreateOpsMetadata",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreateOpsMetadataCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreateOpsMetadataCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreateOpsMetadataCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreateOpsMetadata", {})
+    .n("SSMClient", "CreateOpsMetadataCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_CreateOpsMetadataCommand)
+    .de(Aws_json1_1_1.de_CreateOpsMetadataCommand)
+    .build() {
 }
 exports.CreateOpsMetadataCommand = CreateOpsMetadataCommand;
 
 
 /***/ }),
 
-/***/ 35525:
+/***/ 36383:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3128,56 +2875,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreatePatchBaselineCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreatePatchBaselineCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreatePatchBaselineCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.CreatePatchBaselineRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreatePatchBaseline",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreatePatchBaselineCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreatePatchBaselineCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreatePatchBaselineCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreatePatchBaseline", {})
+    .n("SSMClient", "CreatePatchBaselineCommand")
+    .f(models_0_1.CreatePatchBaselineRequestFilterSensitiveLog, void 0)
+    .ser(Aws_json1_1_1.se_CreatePatchBaselineCommand)
+    .de(Aws_json1_1_1.de_CreatePatchBaselineCommand)
+    .build() {
 }
 exports.CreatePatchBaselineCommand = CreatePatchBaselineCommand;
 
 
 /***/ }),
 
-/***/ 57653:
+/***/ 96:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3188,55 +2912,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class CreateResourceDataSyncCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, CreateResourceDataSyncCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "CreateResourceDataSyncCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "CreateResourceDataSync",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_CreateResourceDataSyncCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_CreateResourceDataSyncCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class CreateResourceDataSyncCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "CreateResourceDataSync", {})
+    .n("SSMClient", "CreateResourceDataSyncCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_CreateResourceDataSyncCommand)
+    .de(Aws_json1_1_1.de_CreateResourceDataSyncCommand)
+    .build() {
 }
 exports.CreateResourceDataSyncCommand = CreateResourceDataSyncCommand;
 
 
 /***/ }),
 
-/***/ 99709:
+/***/ 69009:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3247,55 +2948,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteActivationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteActivationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteActivationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteActivation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteActivationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteActivationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteActivationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteActivation", {})
+    .n("SSMClient", "DeleteActivationCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteActivationCommand)
+    .de(Aws_json1_1_1.de_DeleteActivationCommand)
+    .build() {
 }
 exports.DeleteActivationCommand = DeleteActivationCommand;
 
 
 /***/ }),
 
-/***/ 65042:
+/***/ 29983:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3306,55 +2984,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteAssociationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteAssociationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteAssociationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteAssociation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteAssociationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteAssociationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteAssociationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteAssociation", {})
+    .n("SSMClient", "DeleteAssociationCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteAssociationCommand)
+    .de(Aws_json1_1_1.de_DeleteAssociationCommand)
+    .build() {
 }
 exports.DeleteAssociationCommand = DeleteAssociationCommand;
 
 
 /***/ }),
 
-/***/ 92564:
+/***/ 32022:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3365,55 +3020,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteDocumentCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteDocumentCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteDocumentCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteDocument",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteDocumentCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteDocumentCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteDocumentCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteDocument", {})
+    .n("SSMClient", "DeleteDocumentCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteDocumentCommand)
+    .de(Aws_json1_1_1.de_DeleteDocumentCommand)
+    .build() {
 }
 exports.DeleteDocumentCommand = DeleteDocumentCommand;
 
 
 /***/ }),
 
-/***/ 37807:
+/***/ 93563:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3424,55 +3056,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteInventoryCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteInventoryCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteInventoryCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteInventory",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteInventoryCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteInventoryCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteInventoryCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteInventory", {})
+    .n("SSMClient", "DeleteInventoryCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteInventoryCommand)
+    .de(Aws_json1_1_1.de_DeleteInventoryCommand)
+    .build() {
 }
 exports.DeleteInventoryCommand = DeleteInventoryCommand;
 
 
 /***/ }),
 
-/***/ 42541:
+/***/ 92987:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3483,55 +3092,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteMaintenanceWindowCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteMaintenanceWindowCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteMaintenanceWindowCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteMaintenanceWindow",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteMaintenanceWindowCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteMaintenanceWindowCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteMaintenanceWindowCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteMaintenanceWindow", {})
+    .n("SSMClient", "DeleteMaintenanceWindowCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteMaintenanceWindowCommand)
+    .de(Aws_json1_1_1.de_DeleteMaintenanceWindowCommand)
+    .build() {
 }
 exports.DeleteMaintenanceWindowCommand = DeleteMaintenanceWindowCommand;
 
 
 /***/ }),
 
-/***/ 56207:
+/***/ 17878:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3542,55 +3128,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteOpsItemCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteOpsItemCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteOpsItemCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteOpsItem",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteOpsItemCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteOpsItemCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteOpsItemCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteOpsItem", {})
+    .n("SSMClient", "DeleteOpsItemCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteOpsItemCommand)
+    .de(Aws_json1_1_1.de_DeleteOpsItemCommand)
+    .build() {
 }
 exports.DeleteOpsItemCommand = DeleteOpsItemCommand;
 
 
 /***/ }),
 
-/***/ 95759:
+/***/ 58455:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3601,55 +3164,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteOpsMetadataCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteOpsMetadataCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteOpsMetadataCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteOpsMetadata",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteOpsMetadataCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteOpsMetadataCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteOpsMetadataCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteOpsMetadata", {})
+    .n("SSMClient", "DeleteOpsMetadataCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteOpsMetadataCommand)
+    .de(Aws_json1_1_1.de_DeleteOpsMetadataCommand)
+    .build() {
 }
 exports.DeleteOpsMetadataCommand = DeleteOpsMetadataCommand;
 
 
 /***/ }),
 
-/***/ 39951:
+/***/ 21054:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3660,55 +3200,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteParameterCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteParameterCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteParameterCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteParameter",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteParameterCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteParameterCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteParameterCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteParameter", {})
+    .n("SSMClient", "DeleteParameterCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteParameterCommand)
+    .de(Aws_json1_1_1.de_DeleteParameterCommand)
+    .build() {
 }
 exports.DeleteParameterCommand = DeleteParameterCommand;
 
 
 /***/ }),
 
-/***/ 83672:
+/***/ 76868:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3719,55 +3236,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteParametersCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteParametersCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteParametersCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteParameters",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteParametersCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteParametersCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteParametersCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteParameters", {})
+    .n("SSMClient", "DeleteParametersCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteParametersCommand)
+    .de(Aws_json1_1_1.de_DeleteParametersCommand)
+    .build() {
 }
 exports.DeleteParametersCommand = DeleteParametersCommand;
 
 
 /***/ }),
 
-/***/ 45738:
+/***/ 65467:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3778,55 +3272,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeletePatchBaselineCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeletePatchBaselineCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeletePatchBaselineCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeletePatchBaseline",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeletePatchBaselineCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeletePatchBaselineCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeletePatchBaselineCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeletePatchBaseline", {})
+    .n("SSMClient", "DeletePatchBaselineCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeletePatchBaselineCommand)
+    .de(Aws_json1_1_1.de_DeletePatchBaselineCommand)
+    .build() {
 }
 exports.DeletePatchBaselineCommand = DeletePatchBaselineCommand;
 
 
 /***/ }),
 
-/***/ 69080:
+/***/ 36000:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3837,55 +3308,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteResourceDataSyncCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteResourceDataSyncCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteResourceDataSyncCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteResourceDataSync",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteResourceDataSyncCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteResourceDataSyncCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteResourceDataSyncCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteResourceDataSync", {})
+    .n("SSMClient", "DeleteResourceDataSyncCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteResourceDataSyncCommand)
+    .de(Aws_json1_1_1.de_DeleteResourceDataSyncCommand)
+    .build() {
 }
 exports.DeleteResourceDataSyncCommand = DeleteResourceDataSyncCommand;
 
 
 /***/ }),
 
-/***/ 73684:
+/***/ 26021:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3896,55 +3344,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeleteResourcePolicyCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeleteResourcePolicyCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeleteResourcePolicyCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeleteResourcePolicy",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeleteResourcePolicyCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeleteResourcePolicyCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeleteResourcePolicyCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeleteResourcePolicy", {})
+    .n("SSMClient", "DeleteResourcePolicyCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeleteResourcePolicyCommand)
+    .de(Aws_json1_1_1.de_DeleteResourcePolicyCommand)
+    .build() {
 }
 exports.DeleteResourcePolicyCommand = DeleteResourcePolicyCommand;
 
 
 /***/ }),
 
-/***/ 14967:
+/***/ 76987:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3955,55 +3380,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeregisterManagedInstanceCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeregisterManagedInstanceCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeregisterManagedInstanceCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeregisterManagedInstance",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeregisterManagedInstanceCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeregisterManagedInstanceCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeregisterManagedInstanceCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeregisterManagedInstance", {})
+    .n("SSMClient", "DeregisterManagedInstanceCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeregisterManagedInstanceCommand)
+    .de(Aws_json1_1_1.de_DeregisterManagedInstanceCommand)
+    .build() {
 }
 exports.DeregisterManagedInstanceCommand = DeregisterManagedInstanceCommand;
 
 
 /***/ }),
 
-/***/ 78446:
+/***/ 25162:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4014,55 +3416,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeregisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeregisterPatchBaselineForPatchGroupCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeregisterPatchBaselineForPatchGroupCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeregisterPatchBaselineForPatchGroup",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeregisterPatchBaselineForPatchGroupCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeregisterPatchBaselineForPatchGroupCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeregisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeregisterPatchBaselineForPatchGroup", {})
+    .n("SSMClient", "DeregisterPatchBaselineForPatchGroupCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeregisterPatchBaselineForPatchGroupCommand)
+    .de(Aws_json1_1_1.de_DeregisterPatchBaselineForPatchGroupCommand)
+    .build() {
 }
 exports.DeregisterPatchBaselineForPatchGroupCommand = DeregisterPatchBaselineForPatchGroupCommand;
 
 
 /***/ }),
 
-/***/ 1795:
+/***/ 42454:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4073,55 +3452,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeregisterTargetFromMaintenanceWindowCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeregisterTargetFromMaintenanceWindowCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeregisterTargetFromMaintenanceWindowCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeregisterTargetFromMaintenanceWindow",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeregisterTargetFromMaintenanceWindowCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeregisterTargetFromMaintenanceWindowCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeregisterTargetFromMaintenanceWindowCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeregisterTargetFromMaintenanceWindow", {})
+    .n("SSMClient", "DeregisterTargetFromMaintenanceWindowCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeregisterTargetFromMaintenanceWindowCommand)
+    .de(Aws_json1_1_1.de_DeregisterTargetFromMaintenanceWindowCommand)
+    .build() {
 }
 exports.DeregisterTargetFromMaintenanceWindowCommand = DeregisterTargetFromMaintenanceWindowCommand;
 
 
 /***/ }),
 
-/***/ 16360:
+/***/ 55838:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4132,55 +3488,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DeregisterTaskFromMaintenanceWindowCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DeregisterTaskFromMaintenanceWindowCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DeregisterTaskFromMaintenanceWindowCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DeregisterTaskFromMaintenanceWindow",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DeregisterTaskFromMaintenanceWindowCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DeregisterTaskFromMaintenanceWindowCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DeregisterTaskFromMaintenanceWindowCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DeregisterTaskFromMaintenanceWindow", {})
+    .n("SSMClient", "DeregisterTaskFromMaintenanceWindowCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DeregisterTaskFromMaintenanceWindowCommand)
+    .de(Aws_json1_1_1.de_DeregisterTaskFromMaintenanceWindowCommand)
+    .build() {
 }
 exports.DeregisterTaskFromMaintenanceWindowCommand = DeregisterTaskFromMaintenanceWindowCommand;
 
 
 /***/ }),
 
-/***/ 69690:
+/***/ 47211:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4191,55 +3524,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeActivationsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeActivationsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeActivationsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeActivations",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeActivationsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeActivationsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeActivationsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeActivations", {})
+    .n("SSMClient", "DescribeActivationsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeActivationsCommand)
+    .de(Aws_json1_1_1.de_DescribeActivationsCommand)
+    .build() {
 }
 exports.DescribeActivationsCommand = DescribeActivationsCommand;
 
 
 /***/ }),
 
-/***/ 51801:
+/***/ 33024:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4250,56 +3560,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeAssociationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeAssociationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeAssociationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.DescribeAssociationResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeAssociation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeAssociationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeAssociationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeAssociationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeAssociation", {})
+    .n("SSMClient", "DescribeAssociationCommand")
+    .f(void 0, models_0_1.DescribeAssociationResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_DescribeAssociationCommand)
+    .de(Aws_json1_1_1.de_DescribeAssociationCommand)
+    .build() {
 }
 exports.DescribeAssociationCommand = DescribeAssociationCommand;
 
 
 /***/ }),
 
-/***/ 82172:
+/***/ 65104:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4310,55 +3597,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeAssociationExecutionTargetsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeAssociationExecutionTargetsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeAssociationExecutionTargetsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeAssociationExecutionTargets",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeAssociationExecutionTargetsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeAssociationExecutionTargetsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeAssociationExecutionTargetsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeAssociationExecutionTargets", {})
+    .n("SSMClient", "DescribeAssociationExecutionTargetsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeAssociationExecutionTargetsCommand)
+    .de(Aws_json1_1_1.de_DescribeAssociationExecutionTargetsCommand)
+    .build() {
 }
 exports.DescribeAssociationExecutionTargetsCommand = DescribeAssociationExecutionTargetsCommand;
 
 
 /***/ }),
 
-/***/ 9487:
+/***/ 79798:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4369,55 +3633,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeAssociationExecutionsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeAssociationExecutionsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeAssociationExecutionsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeAssociationExecutions",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeAssociationExecutionsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeAssociationExecutionsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeAssociationExecutionsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeAssociationExecutions", {})
+    .n("SSMClient", "DescribeAssociationExecutionsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeAssociationExecutionsCommand)
+    .de(Aws_json1_1_1.de_DescribeAssociationExecutionsCommand)
+    .build() {
 }
 exports.DescribeAssociationExecutionsCommand = DescribeAssociationExecutionsCommand;
 
 
 /***/ }),
 
-/***/ 37676:
+/***/ 75529:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4428,55 +3669,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeAutomationExecutionsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeAutomationExecutionsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeAutomationExecutionsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeAutomationExecutions",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeAutomationExecutionsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeAutomationExecutionsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeAutomationExecutionsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeAutomationExecutions", {})
+    .n("SSMClient", "DescribeAutomationExecutionsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeAutomationExecutionsCommand)
+    .de(Aws_json1_1_1.de_DescribeAutomationExecutionsCommand)
+    .build() {
 }
 exports.DescribeAutomationExecutionsCommand = DescribeAutomationExecutionsCommand;
 
 
 /***/ }),
 
-/***/ 98361:
+/***/ 80736:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4487,55 +3705,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeAutomationStepExecutionsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeAutomationStepExecutionsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeAutomationStepExecutionsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeAutomationStepExecutions",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeAutomationStepExecutionsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeAutomationStepExecutionsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeAutomationStepExecutionsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeAutomationStepExecutions", {})
+    .n("SSMClient", "DescribeAutomationStepExecutionsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeAutomationStepExecutionsCommand)
+    .de(Aws_json1_1_1.de_DescribeAutomationStepExecutionsCommand)
+    .build() {
 }
 exports.DescribeAutomationStepExecutionsCommand = DescribeAutomationStepExecutionsCommand;
 
 
 /***/ }),
 
-/***/ 57209:
+/***/ 7112:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4546,55 +3741,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeAvailablePatchesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeAvailablePatchesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeAvailablePatchesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeAvailablePatches",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeAvailablePatchesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeAvailablePatchesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeAvailablePatchesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeAvailablePatches", {})
+    .n("SSMClient", "DescribeAvailablePatchesCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeAvailablePatchesCommand)
+    .de(Aws_json1_1_1.de_DescribeAvailablePatchesCommand)
+    .build() {
 }
 exports.DescribeAvailablePatchesCommand = DescribeAvailablePatchesCommand;
 
 
 /***/ }),
 
-/***/ 28359:
+/***/ 48557:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4605,55 +3777,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeDocumentCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeDocumentCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeDocumentCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeDocument",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeDocumentCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeDocumentCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeDocumentCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeDocument", {})
+    .n("SSMClient", "DescribeDocumentCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeDocumentCommand)
+    .de(Aws_json1_1_1.de_DescribeDocumentCommand)
+    .build() {
 }
 exports.DescribeDocumentCommand = DescribeDocumentCommand;
 
 
 /***/ }),
 
-/***/ 55313:
+/***/ 69334:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4664,55 +3813,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeDocumentPermissionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeDocumentPermissionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeDocumentPermissionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeDocumentPermission",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeDocumentPermissionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeDocumentPermissionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeDocumentPermissionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeDocumentPermission", {})
+    .n("SSMClient", "DescribeDocumentPermissionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeDocumentPermissionCommand)
+    .de(Aws_json1_1_1.de_DescribeDocumentPermissionCommand)
+    .build() {
 }
 exports.DescribeDocumentPermissionCommand = DescribeDocumentPermissionCommand;
 
 
 /***/ }),
 
-/***/ 7553:
+/***/ 9951:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4723,55 +3849,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeEffectiveInstanceAssociationsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeEffectiveInstanceAssociationsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeEffectiveInstanceAssociationsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeEffectiveInstanceAssociations",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeEffectiveInstanceAssociationsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeEffectiveInstanceAssociationsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeEffectiveInstanceAssociationsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeEffectiveInstanceAssociations", {})
+    .n("SSMClient", "DescribeEffectiveInstanceAssociationsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeEffectiveInstanceAssociationsCommand)
+    .de(Aws_json1_1_1.de_DescribeEffectiveInstanceAssociationsCommand)
+    .build() {
 }
 exports.DescribeEffectiveInstanceAssociationsCommand = DescribeEffectiveInstanceAssociationsCommand;
 
 
 /***/ }),
 
-/***/ 68840:
+/***/ 91133:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4782,55 +3885,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeEffectivePatchesForPatchBaselineCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeEffectivePatchesForPatchBaselineCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeEffectivePatchesForPatchBaselineCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeEffectivePatchesForPatchBaseline",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeEffectivePatchesForPatchBaselineCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeEffectivePatchesForPatchBaselineCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeEffectivePatchesForPatchBaselineCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeEffectivePatchesForPatchBaseline", {})
+    .n("SSMClient", "DescribeEffectivePatchesForPatchBaselineCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeEffectivePatchesForPatchBaselineCommand)
+    .de(Aws_json1_1_1.de_DescribeEffectivePatchesForPatchBaselineCommand)
+    .build() {
 }
 exports.DescribeEffectivePatchesForPatchBaselineCommand = DescribeEffectivePatchesForPatchBaselineCommand;
 
 
 /***/ }),
 
-/***/ 6092:
+/***/ 77842:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4841,55 +3921,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeInstanceAssociationsStatusCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeInstanceAssociationsStatusCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeInstanceAssociationsStatusCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeInstanceAssociationsStatus",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeInstanceAssociationsStatusCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeInstanceAssociationsStatusCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeInstanceAssociationsStatusCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeInstanceAssociationsStatus", {})
+    .n("SSMClient", "DescribeInstanceAssociationsStatusCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeInstanceAssociationsStatusCommand)
+    .de(Aws_json1_1_1.de_DescribeInstanceAssociationsStatusCommand)
+    .build() {
 }
 exports.DescribeInstanceAssociationsStatusCommand = DescribeInstanceAssociationsStatusCommand;
 
 
 /***/ }),
 
-/***/ 96238:
+/***/ 19967:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4900,55 +3957,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeInstanceInformationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeInstanceInformationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeInstanceInformationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeInstanceInformation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeInstanceInformationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeInstanceInformationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeInstanceInformationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeInstanceInformation", {})
+    .n("SSMClient", "DescribeInstanceInformationCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeInstanceInformationCommand)
+    .de(Aws_json1_1_1.de_DescribeInstanceInformationCommand)
+    .build() {
 }
 exports.DescribeInstanceInformationCommand = DescribeInstanceInformationCommand;
 
 
 /***/ }),
 
-/***/ 78300:
+/***/ 38216:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -4959,56 +3993,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeInstancePatchStatesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeInstancePatchStatesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeInstancePatchStatesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.DescribeInstancePatchStatesResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeInstancePatchStates",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeInstancePatchStatesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeInstancePatchStatesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeInstancePatchStatesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeInstancePatchStates", {})
+    .n("SSMClient", "DescribeInstancePatchStatesCommand")
+    .f(void 0, models_0_1.DescribeInstancePatchStatesResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_DescribeInstancePatchStatesCommand)
+    .de(Aws_json1_1_1.de_DescribeInstancePatchStatesCommand)
+    .build() {
 }
 exports.DescribeInstancePatchStatesCommand = DescribeInstancePatchStatesCommand;
 
 
 /***/ }),
 
-/***/ 69663:
+/***/ 53423:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5019,56 +4030,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeInstancePatchStatesForPatchGroupCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeInstancePatchStatesForPatchGroupCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeInstancePatchStatesForPatchGroupCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeInstancePatchStatesForPatchGroup",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeInstancePatchStatesForPatchGroupCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeInstancePatchStatesForPatchGroupCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeInstancePatchStatesForPatchGroupCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeInstancePatchStatesForPatchGroup", {})
+    .n("SSMClient", "DescribeInstancePatchStatesForPatchGroupCommand")
+    .f(void 0, models_0_1.DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_DescribeInstancePatchStatesForPatchGroupCommand)
+    .de(Aws_json1_1_1.de_DescribeInstancePatchStatesForPatchGroupCommand)
+    .build() {
 }
 exports.DescribeInstancePatchStatesForPatchGroupCommand = DescribeInstancePatchStatesForPatchGroupCommand;
 
 
 /***/ }),
 
-/***/ 63313:
+/***/ 21888:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5079,55 +4067,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeInstancePatchesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeInstancePatchesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeInstancePatchesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeInstancePatches",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeInstancePatchesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeInstancePatchesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeInstancePatchesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeInstancePatches", {})
+    .n("SSMClient", "DescribeInstancePatchesCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeInstancePatchesCommand)
+    .de(Aws_json1_1_1.de_DescribeInstancePatchesCommand)
+    .build() {
 }
 exports.DescribeInstancePatchesCommand = DescribeInstancePatchesCommand;
 
 
 /***/ }),
 
-/***/ 31463:
+/***/ 39388:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5138,55 +4103,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeInventoryDeletionsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeInventoryDeletionsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeInventoryDeletionsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeInventoryDeletions",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeInventoryDeletionsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeInventoryDeletionsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeInventoryDeletionsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeInventoryDeletions", {})
+    .n("SSMClient", "DescribeInventoryDeletionsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeInventoryDeletionsCommand)
+    .de(Aws_json1_1_1.de_DescribeInventoryDeletionsCommand)
+    .build() {
 }
 exports.DescribeInventoryDeletionsCommand = DescribeInventoryDeletionsCommand;
 
 
 /***/ }),
 
-/***/ 29371:
+/***/ 17795:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5197,56 +4139,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeMaintenanceWindowExecutionTaskInvocationsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeMaintenanceWindowExecutionTaskInvocationsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeMaintenanceWindowExecutionTaskInvocationsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeMaintenanceWindowExecutionTaskInvocations",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeMaintenanceWindowExecutionTaskInvocationsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeMaintenanceWindowExecutionTaskInvocationsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeMaintenanceWindowExecutionTaskInvocationsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeMaintenanceWindowExecutionTaskInvocations", {})
+    .n("SSMClient", "DescribeMaintenanceWindowExecutionTaskInvocationsCommand")
+    .f(void 0, models_0_1.DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_DescribeMaintenanceWindowExecutionTaskInvocationsCommand)
+    .de(Aws_json1_1_1.de_DescribeMaintenanceWindowExecutionTaskInvocationsCommand)
+    .build() {
 }
 exports.DescribeMaintenanceWindowExecutionTaskInvocationsCommand = DescribeMaintenanceWindowExecutionTaskInvocationsCommand;
 
 
 /***/ }),
 
-/***/ 74305:
+/***/ 63166:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5257,55 +4176,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeMaintenanceWindowExecutionTasksCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeMaintenanceWindowExecutionTasksCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeMaintenanceWindowExecutionTasksCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeMaintenanceWindowExecutionTasks",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeMaintenanceWindowExecutionTasksCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeMaintenanceWindowExecutionTasksCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeMaintenanceWindowExecutionTasksCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeMaintenanceWindowExecutionTasks", {})
+    .n("SSMClient", "DescribeMaintenanceWindowExecutionTasksCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeMaintenanceWindowExecutionTasksCommand)
+    .de(Aws_json1_1_1.de_DescribeMaintenanceWindowExecutionTasksCommand)
+    .build() {
 }
 exports.DescribeMaintenanceWindowExecutionTasksCommand = DescribeMaintenanceWindowExecutionTasksCommand;
 
 
 /***/ }),
 
-/***/ 7985:
+/***/ 73343:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5316,55 +4212,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeMaintenanceWindowExecutionsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeMaintenanceWindowExecutionsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeMaintenanceWindowExecutionsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeMaintenanceWindowExecutions",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeMaintenanceWindowExecutionsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeMaintenanceWindowExecutionsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeMaintenanceWindowExecutionsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeMaintenanceWindowExecutions", {})
+    .n("SSMClient", "DescribeMaintenanceWindowExecutionsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeMaintenanceWindowExecutionsCommand)
+    .de(Aws_json1_1_1.de_DescribeMaintenanceWindowExecutionsCommand)
+    .build() {
 }
 exports.DescribeMaintenanceWindowExecutionsCommand = DescribeMaintenanceWindowExecutionsCommand;
 
 
 /***/ }),
 
-/***/ 90632:
+/***/ 19292:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5375,55 +4248,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeMaintenanceWindowScheduleCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeMaintenanceWindowScheduleCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeMaintenanceWindowScheduleCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeMaintenanceWindowSchedule",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeMaintenanceWindowScheduleCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeMaintenanceWindowScheduleCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeMaintenanceWindowScheduleCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeMaintenanceWindowSchedule", {})
+    .n("SSMClient", "DescribeMaintenanceWindowScheduleCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeMaintenanceWindowScheduleCommand)
+    .de(Aws_json1_1_1.de_DescribeMaintenanceWindowScheduleCommand)
+    .build() {
 }
 exports.DescribeMaintenanceWindowScheduleCommand = DescribeMaintenanceWindowScheduleCommand;
 
 
 /***/ }),
 
-/***/ 32788:
+/***/ 31038:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5434,56 +4284,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeMaintenanceWindowTargetsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeMaintenanceWindowTargetsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeMaintenanceWindowTargetsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowTargetsResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeMaintenanceWindowTargets",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeMaintenanceWindowTargetsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeMaintenanceWindowTargetsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeMaintenanceWindowTargetsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeMaintenanceWindowTargets", {})
+    .n("SSMClient", "DescribeMaintenanceWindowTargetsCommand")
+    .f(void 0, models_0_1.DescribeMaintenanceWindowTargetsResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_DescribeMaintenanceWindowTargetsCommand)
+    .de(Aws_json1_1_1.de_DescribeMaintenanceWindowTargetsCommand)
+    .build() {
 }
 exports.DescribeMaintenanceWindowTargetsCommand = DescribeMaintenanceWindowTargetsCommand;
 
 
 /***/ }),
 
-/***/ 47930:
+/***/ 68502:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5494,56 +4321,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeMaintenanceWindowTasksCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeMaintenanceWindowTasksCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeMaintenanceWindowTasksCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.DescribeMaintenanceWindowTasksResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeMaintenanceWindowTasks",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeMaintenanceWindowTasksCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeMaintenanceWindowTasksCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeMaintenanceWindowTasksCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeMaintenanceWindowTasks", {})
+    .n("SSMClient", "DescribeMaintenanceWindowTasksCommand")
+    .f(void 0, models_1_1.DescribeMaintenanceWindowTasksResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_DescribeMaintenanceWindowTasksCommand)
+    .de(Aws_json1_1_1.de_DescribeMaintenanceWindowTasksCommand)
+    .build() {
 }
 exports.DescribeMaintenanceWindowTasksCommand = DescribeMaintenanceWindowTasksCommand;
 
 
 /***/ }),
 
-/***/ 63698:
+/***/ 20551:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5554,56 +4358,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(88739);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeMaintenanceWindowsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeMaintenanceWindowsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeMaintenanceWindowsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.DescribeMaintenanceWindowsResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeMaintenanceWindows",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeMaintenanceWindowsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeMaintenanceWindowsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_0_1 = __nccwpck_require__(21650);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeMaintenanceWindowsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeMaintenanceWindows", {})
+    .n("SSMClient", "DescribeMaintenanceWindowsCommand")
+    .f(void 0, models_0_1.DescribeMaintenanceWindowsResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_DescribeMaintenanceWindowsCommand)
+    .de(Aws_json1_1_1.de_DescribeMaintenanceWindowsCommand)
+    .build() {
 }
 exports.DescribeMaintenanceWindowsCommand = DescribeMaintenanceWindowsCommand;
 
 
 /***/ }),
 
-/***/ 91430:
+/***/ 67645:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5614,55 +4395,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeMaintenanceWindowsForTargetCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeMaintenanceWindowsForTargetCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeMaintenanceWindowsForTargetCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeMaintenanceWindowsForTarget",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeMaintenanceWindowsForTargetCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeMaintenanceWindowsForTargetCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeMaintenanceWindowsForTargetCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeMaintenanceWindowsForTarget", {})
+    .n("SSMClient", "DescribeMaintenanceWindowsForTargetCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeMaintenanceWindowsForTargetCommand)
+    .de(Aws_json1_1_1.de_DescribeMaintenanceWindowsForTargetCommand)
+    .build() {
 }
 exports.DescribeMaintenanceWindowsForTargetCommand = DescribeMaintenanceWindowsForTargetCommand;
 
 
 /***/ }),
 
-/***/ 63958:
+/***/ 53794:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5673,55 +4431,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeOpsItemsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeOpsItemsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeOpsItemsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeOpsItems",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeOpsItemsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeOpsItemsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeOpsItemsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeOpsItems", {})
+    .n("SSMClient", "DescribeOpsItemsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeOpsItemsCommand)
+    .de(Aws_json1_1_1.de_DescribeOpsItemsCommand)
+    .build() {
 }
 exports.DescribeOpsItemsCommand = DescribeOpsItemsCommand;
 
 
 /***/ }),
 
-/***/ 91405:
+/***/ 3308:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5732,55 +4467,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeParametersCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeParametersCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeParametersCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeParameters",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeParametersCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeParametersCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeParametersCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeParameters", {})
+    .n("SSMClient", "DescribeParametersCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeParametersCommand)
+    .de(Aws_json1_1_1.de_DescribeParametersCommand)
+    .build() {
 }
 exports.DescribeParametersCommand = DescribeParametersCommand;
 
 
 /***/ }),
 
-/***/ 18257:
+/***/ 26180:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5791,55 +4503,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribePatchBaselinesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribePatchBaselinesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribePatchBaselinesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribePatchBaselines",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribePatchBaselinesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribePatchBaselinesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribePatchBaselinesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribePatchBaselines", {})
+    .n("SSMClient", "DescribePatchBaselinesCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribePatchBaselinesCommand)
+    .de(Aws_json1_1_1.de_DescribePatchBaselinesCommand)
+    .build() {
 }
 exports.DescribePatchBaselinesCommand = DescribePatchBaselinesCommand;
 
 
 /***/ }),
 
-/***/ 72880:
+/***/ 9176:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5850,55 +4539,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribePatchGroupStateCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribePatchGroupStateCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribePatchGroupStateCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribePatchGroupState",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribePatchGroupStateCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribePatchGroupStateCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribePatchGroupStateCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribePatchGroupState", {})
+    .n("SSMClient", "DescribePatchGroupStateCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribePatchGroupStateCommand)
+    .de(Aws_json1_1_1.de_DescribePatchGroupStateCommand)
+    .build() {
 }
 exports.DescribePatchGroupStateCommand = DescribePatchGroupStateCommand;
 
 
 /***/ }),
 
-/***/ 30272:
+/***/ 77838:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5909,55 +4575,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribePatchGroupsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribePatchGroupsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribePatchGroupsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribePatchGroups",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribePatchGroupsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribePatchGroupsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribePatchGroupsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribePatchGroups", {})
+    .n("SSMClient", "DescribePatchGroupsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribePatchGroupsCommand)
+    .de(Aws_json1_1_1.de_DescribePatchGroupsCommand)
+    .build() {
 }
 exports.DescribePatchGroupsCommand = DescribePatchGroupsCommand;
 
 
 /***/ }),
 
-/***/ 2466:
+/***/ 35079:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -5968,55 +4611,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribePatchPropertiesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribePatchPropertiesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribePatchPropertiesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribePatchProperties",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribePatchPropertiesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribePatchPropertiesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribePatchPropertiesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribePatchProperties", {})
+    .n("SSMClient", "DescribePatchPropertiesCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribePatchPropertiesCommand)
+    .de(Aws_json1_1_1.de_DescribePatchPropertiesCommand)
+    .build() {
 }
 exports.DescribePatchPropertiesCommand = DescribePatchPropertiesCommand;
 
 
 /***/ }),
 
-/***/ 39022:
+/***/ 97886:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6027,55 +4647,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DescribeSessionsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DescribeSessionsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DescribeSessionsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DescribeSessions",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DescribeSessionsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DescribeSessionsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DescribeSessionsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DescribeSessions", {})
+    .n("SSMClient", "DescribeSessionsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DescribeSessionsCommand)
+    .de(Aws_json1_1_1.de_DescribeSessionsCommand)
+    .build() {
 }
 exports.DescribeSessionsCommand = DescribeSessionsCommand;
 
 
 /***/ }),
 
-/***/ 48689:
+/***/ 8851:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6086,55 +4683,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class DisassociateOpsItemRelatedItemCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DisassociateOpsItemRelatedItemCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "DisassociateOpsItemRelatedItemCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "DisassociateOpsItemRelatedItem",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_DisassociateOpsItemRelatedItemCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_DisassociateOpsItemRelatedItemCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class DisassociateOpsItemRelatedItemCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "DisassociateOpsItemRelatedItem", {})
+    .n("SSMClient", "DisassociateOpsItemRelatedItemCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_DisassociateOpsItemRelatedItemCommand)
+    .de(Aws_json1_1_1.de_DisassociateOpsItemRelatedItemCommand)
+    .build() {
 }
 exports.DisassociateOpsItemRelatedItemCommand = DisassociateOpsItemRelatedItemCommand;
 
 
 /***/ }),
 
-/***/ 57504:
+/***/ 31307:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6145,55 +4719,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetAutomationExecutionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetAutomationExecutionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetAutomationExecutionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetAutomationExecution",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetAutomationExecutionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetAutomationExecutionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetAutomationExecutionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetAutomationExecution", {})
+    .n("SSMClient", "GetAutomationExecutionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetAutomationExecutionCommand)
+    .de(Aws_json1_1_1.de_GetAutomationExecutionCommand)
+    .build() {
 }
 exports.GetAutomationExecutionCommand = GetAutomationExecutionCommand;
 
 
 /***/ }),
 
-/***/ 44358:
+/***/ 14229:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6204,55 +4755,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetCalendarStateCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetCalendarStateCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetCalendarStateCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetCalendarState",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetCalendarStateCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetCalendarStateCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetCalendarStateCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetCalendarState", {})
+    .n("SSMClient", "GetCalendarStateCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetCalendarStateCommand)
+    .de(Aws_json1_1_1.de_GetCalendarStateCommand)
+    .build() {
 }
 exports.GetCalendarStateCommand = GetCalendarStateCommand;
 
 
 /***/ }),
 
-/***/ 28174:
+/***/ 3881:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6263,55 +4791,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetCommandInvocationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetCommandInvocationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetCommandInvocationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetCommandInvocation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetCommandInvocationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetCommandInvocationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetCommandInvocationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetCommandInvocation", {})
+    .n("SSMClient", "GetCommandInvocationCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetCommandInvocationCommand)
+    .de(Aws_json1_1_1.de_GetCommandInvocationCommand)
+    .build() {
 }
 exports.GetCommandInvocationCommand = GetCommandInvocationCommand;
 
 
 /***/ }),
 
-/***/ 46303:
+/***/ 66370:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6322,55 +4827,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetConnectionStatusCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetConnectionStatusCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetConnectionStatusCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetConnectionStatus",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetConnectionStatusCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetConnectionStatusCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetConnectionStatusCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetConnectionStatus", {})
+    .n("SSMClient", "GetConnectionStatusCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetConnectionStatusCommand)
+    .de(Aws_json1_1_1.de_GetConnectionStatusCommand)
+    .build() {
 }
 exports.GetConnectionStatusCommand = GetConnectionStatusCommand;
 
 
 /***/ }),
 
-/***/ 63479:
+/***/ 60890:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6381,55 +4863,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetDefaultPatchBaselineCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetDefaultPatchBaselineCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetDefaultPatchBaselineCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetDefaultPatchBaseline",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetDefaultPatchBaselineCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetDefaultPatchBaselineCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetDefaultPatchBaselineCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetDefaultPatchBaseline", {})
+    .n("SSMClient", "GetDefaultPatchBaselineCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetDefaultPatchBaselineCommand)
+    .de(Aws_json1_1_1.de_GetDefaultPatchBaselineCommand)
+    .build() {
 }
 exports.GetDefaultPatchBaselineCommand = GetDefaultPatchBaselineCommand;
 
 
 /***/ }),
 
-/***/ 63011:
+/***/ 71793:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6440,56 +4899,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetDeployablePatchSnapshotForInstanceCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetDeployablePatchSnapshotForInstanceCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetDeployablePatchSnapshotForInstanceCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_1_1.GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetDeployablePatchSnapshotForInstance",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetDeployablePatchSnapshotForInstanceCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetDeployablePatchSnapshotForInstanceCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetDeployablePatchSnapshotForInstanceCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetDeployablePatchSnapshotForInstance", {})
+    .n("SSMClient", "GetDeployablePatchSnapshotForInstanceCommand")
+    .f(models_1_1.GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog, void 0)
+    .ser(Aws_json1_1_1.se_GetDeployablePatchSnapshotForInstanceCommand)
+    .de(Aws_json1_1_1.de_GetDeployablePatchSnapshotForInstanceCommand)
+    .build() {
 }
 exports.GetDeployablePatchSnapshotForInstanceCommand = GetDeployablePatchSnapshotForInstanceCommand;
 
 
 /***/ }),
 
-/***/ 79849:
+/***/ 28836:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6500,55 +4936,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetDocumentCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetDocumentCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetDocumentCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetDocument",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetDocumentCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetDocumentCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetDocumentCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetDocument", {})
+    .n("SSMClient", "GetDocumentCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetDocumentCommand)
+    .de(Aws_json1_1_1.de_GetDocumentCommand)
+    .build() {
 }
 exports.GetDocumentCommand = GetDocumentCommand;
 
 
 /***/ }),
 
-/***/ 70381:
+/***/ 84662:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6559,55 +4972,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetInventoryCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetInventoryCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetInventoryCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetInventory",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetInventoryCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetInventoryCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetInventoryCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetInventory", {})
+    .n("SSMClient", "GetInventoryCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetInventoryCommand)
+    .de(Aws_json1_1_1.de_GetInventoryCommand)
+    .build() {
 }
 exports.GetInventoryCommand = GetInventoryCommand;
 
 
 /***/ }),
 
-/***/ 31683:
+/***/ 29404:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6618,55 +5008,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetInventorySchemaCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetInventorySchemaCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetInventorySchemaCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetInventorySchema",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetInventorySchemaCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetInventorySchemaCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetInventorySchemaCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetInventorySchema", {})
+    .n("SSMClient", "GetInventorySchemaCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetInventorySchemaCommand)
+    .de(Aws_json1_1_1.de_GetInventorySchemaCommand)
+    .build() {
 }
 exports.GetInventorySchemaCommand = GetInventorySchemaCommand;
 
 
 /***/ }),
 
-/***/ 77477:
+/***/ 54868:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6677,56 +5044,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetMaintenanceWindowCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetMaintenanceWindowCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetMaintenanceWindowCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetMaintenanceWindow",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetMaintenanceWindowCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetMaintenanceWindowCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetMaintenanceWindowCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetMaintenanceWindow", {})
+    .n("SSMClient", "GetMaintenanceWindowCommand")
+    .f(void 0, models_1_1.GetMaintenanceWindowResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetMaintenanceWindowCommand)
+    .de(Aws_json1_1_1.de_GetMaintenanceWindowCommand)
+    .build() {
 }
 exports.GetMaintenanceWindowCommand = GetMaintenanceWindowCommand;
 
 
 /***/ }),
 
-/***/ 8926:
+/***/ 88503:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6737,55 +5081,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetMaintenanceWindowExecutionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetMaintenanceWindowExecutionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetMaintenanceWindowExecutionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetMaintenanceWindowExecution",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetMaintenanceWindowExecutionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetMaintenanceWindowExecutionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetMaintenanceWindowExecutionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetMaintenanceWindowExecution", {})
+    .n("SSMClient", "GetMaintenanceWindowExecutionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetMaintenanceWindowExecutionCommand)
+    .de(Aws_json1_1_1.de_GetMaintenanceWindowExecutionCommand)
+    .build() {
 }
 exports.GetMaintenanceWindowExecutionCommand = GetMaintenanceWindowExecutionCommand;
 
 
 /***/ }),
 
-/***/ 54913:
+/***/ 56267:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6796,56 +5117,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetMaintenanceWindowExecutionTaskCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetMaintenanceWindowExecutionTaskCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetMaintenanceWindowExecutionTaskCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetMaintenanceWindowExecutionTask",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetMaintenanceWindowExecutionTaskCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetMaintenanceWindowExecutionTaskCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetMaintenanceWindowExecutionTaskCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetMaintenanceWindowExecutionTask", {})
+    .n("SSMClient", "GetMaintenanceWindowExecutionTaskCommand")
+    .f(void 0, models_1_1.GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetMaintenanceWindowExecutionTaskCommand)
+    .de(Aws_json1_1_1.de_GetMaintenanceWindowExecutionTaskCommand)
+    .build() {
 }
 exports.GetMaintenanceWindowExecutionTaskCommand = GetMaintenanceWindowExecutionTaskCommand;
 
 
 /***/ }),
 
-/***/ 41580:
+/***/ 3352:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6856,56 +5154,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetMaintenanceWindowExecutionTaskInvocationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetMaintenanceWindowExecutionTaskInvocationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetMaintenanceWindowExecutionTaskInvocationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetMaintenanceWindowExecutionTaskInvocation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetMaintenanceWindowExecutionTaskInvocationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetMaintenanceWindowExecutionTaskInvocationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetMaintenanceWindowExecutionTaskInvocationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetMaintenanceWindowExecutionTaskInvocation", {})
+    .n("SSMClient", "GetMaintenanceWindowExecutionTaskInvocationCommand")
+    .f(void 0, models_1_1.GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetMaintenanceWindowExecutionTaskInvocationCommand)
+    .de(Aws_json1_1_1.de_GetMaintenanceWindowExecutionTaskInvocationCommand)
+    .build() {
 }
 exports.GetMaintenanceWindowExecutionTaskInvocationCommand = GetMaintenanceWindowExecutionTaskInvocationCommand;
 
 
 /***/ }),
 
-/***/ 48513:
+/***/ 34196:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6916,56 +5191,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetMaintenanceWindowTaskCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetMaintenanceWindowTaskCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetMaintenanceWindowTaskCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetMaintenanceWindowTaskResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetMaintenanceWindowTask",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetMaintenanceWindowTaskCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetMaintenanceWindowTaskCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetMaintenanceWindowTaskCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetMaintenanceWindowTask", {})
+    .n("SSMClient", "GetMaintenanceWindowTaskCommand")
+    .f(void 0, models_1_1.GetMaintenanceWindowTaskResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetMaintenanceWindowTaskCommand)
+    .de(Aws_json1_1_1.de_GetMaintenanceWindowTaskCommand)
+    .build() {
 }
 exports.GetMaintenanceWindowTaskCommand = GetMaintenanceWindowTaskCommand;
 
 
 /***/ }),
 
-/***/ 38834:
+/***/ 64289:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -6976,55 +5228,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetOpsItemCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetOpsItemCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetOpsItemCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetOpsItem",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetOpsItemCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetOpsItemCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetOpsItemCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetOpsItem", {})
+    .n("SSMClient", "GetOpsItemCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetOpsItemCommand)
+    .de(Aws_json1_1_1.de_GetOpsItemCommand)
+    .build() {
 }
 exports.GetOpsItemCommand = GetOpsItemCommand;
 
 
 /***/ }),
 
-/***/ 83053:
+/***/ 24095:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7035,55 +5264,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetOpsMetadataCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetOpsMetadataCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetOpsMetadataCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetOpsMetadata",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetOpsMetadataCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetOpsMetadataCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetOpsMetadataCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetOpsMetadata", {})
+    .n("SSMClient", "GetOpsMetadataCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetOpsMetadataCommand)
+    .de(Aws_json1_1_1.de_GetOpsMetadataCommand)
+    .build() {
 }
 exports.GetOpsMetadataCommand = GetOpsMetadataCommand;
 
 
 /***/ }),
 
-/***/ 39855:
+/***/ 90451:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7094,55 +5300,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetOpsSummaryCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetOpsSummaryCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetOpsSummaryCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetOpsSummary",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetOpsSummaryCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetOpsSummaryCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetOpsSummaryCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetOpsSummary", {})
+    .n("SSMClient", "GetOpsSummaryCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetOpsSummaryCommand)
+    .de(Aws_json1_1_1.de_GetOpsSummaryCommand)
+    .build() {
 }
 exports.GetOpsSummaryCommand = GetOpsSummaryCommand;
 
 
 /***/ }),
 
-/***/ 54477:
+/***/ 93830:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7153,56 +5336,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetParameterCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetParameterCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetParameterCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetParameterResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetParameter",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetParameterCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetParameterCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetParameterCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetParameter", {})
+    .n("SSMClient", "GetParameterCommand")
+    .f(void 0, models_1_1.GetParameterResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetParameterCommand)
+    .de(Aws_json1_1_1.de_GetParameterCommand)
+    .build() {
 }
 exports.GetParameterCommand = GetParameterCommand;
 
 
 /***/ }),
 
-/***/ 13101:
+/***/ 72471:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7213,56 +5373,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetParameterHistoryCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetParameterHistoryCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetParameterHistoryCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetParameterHistoryResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetParameterHistory",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetParameterHistoryCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetParameterHistoryCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetParameterHistoryCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetParameterHistory", {})
+    .n("SSMClient", "GetParameterHistoryCommand")
+    .f(void 0, models_1_1.GetParameterHistoryResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetParameterHistoryCommand)
+    .de(Aws_json1_1_1.de_GetParameterHistoryCommand)
+    .build() {
 }
 exports.GetParameterHistoryCommand = GetParameterHistoryCommand;
 
 
 /***/ }),
 
-/***/ 13303:
+/***/ 7247:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7273,56 +5410,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetParametersByPathCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetParametersByPathCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetParametersByPathCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetParametersByPathResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetParametersByPath",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetParametersByPathCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetParametersByPathCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetParametersByPathCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetParametersByPath", {})
+    .n("SSMClient", "GetParametersByPathCommand")
+    .f(void 0, models_1_1.GetParametersByPathResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetParametersByPathCommand)
+    .de(Aws_json1_1_1.de_GetParametersByPathCommand)
+    .build() {
 }
 exports.GetParametersByPathCommand = GetParametersByPathCommand;
 
 
 /***/ }),
 
-/***/ 67320:
+/***/ 30033:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7333,56 +5447,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetParametersCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetParametersCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetParametersCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetParametersResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetParameters",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetParametersCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetParametersCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetParametersCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetParameters", {})
+    .n("SSMClient", "GetParametersCommand")
+    .f(void 0, models_1_1.GetParametersResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetParametersCommand)
+    .de(Aws_json1_1_1.de_GetParametersCommand)
+    .build() {
 }
 exports.GetParametersCommand = GetParametersCommand;
 
 
 /***/ }),
 
-/***/ 21799:
+/***/ 56690:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7393,56 +5484,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetPatchBaselineCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetPatchBaselineCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetPatchBaselineCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.GetPatchBaselineResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetPatchBaseline",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetPatchBaselineCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetPatchBaselineCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetPatchBaselineCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetPatchBaseline", {})
+    .n("SSMClient", "GetPatchBaselineCommand")
+    .f(void 0, models_1_1.GetPatchBaselineResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_GetPatchBaselineCommand)
+    .de(Aws_json1_1_1.de_GetPatchBaselineCommand)
+    .build() {
 }
 exports.GetPatchBaselineCommand = GetPatchBaselineCommand;
 
 
 /***/ }),
 
-/***/ 63193:
+/***/ 21037:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7453,55 +5521,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetPatchBaselineForPatchGroupCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetPatchBaselineForPatchGroupCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetPatchBaselineForPatchGroup",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetPatchBaselineForPatchGroupCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetPatchBaselineForPatchGroupCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetPatchBaselineForPatchGroupCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetPatchBaselineForPatchGroup", {})
+    .n("SSMClient", "GetPatchBaselineForPatchGroupCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetPatchBaselineForPatchGroupCommand)
+    .de(Aws_json1_1_1.de_GetPatchBaselineForPatchGroupCommand)
+    .build() {
 }
 exports.GetPatchBaselineForPatchGroupCommand = GetPatchBaselineForPatchGroupCommand;
 
 
 /***/ }),
 
-/***/ 60533:
+/***/ 23653:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7512,55 +5557,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetResourcePoliciesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetResourcePoliciesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetResourcePoliciesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetResourcePolicies",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetResourcePoliciesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetResourcePoliciesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetResourcePoliciesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetResourcePolicies", {})
+    .n("SSMClient", "GetResourcePoliciesCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetResourcePoliciesCommand)
+    .de(Aws_json1_1_1.de_GetResourcePoliciesCommand)
+    .build() {
 }
 exports.GetResourcePoliciesCommand = GetResourcePoliciesCommand;
 
 
 /***/ }),
 
-/***/ 90998:
+/***/ 8919:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7571,55 +5593,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class GetServiceSettingCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetServiceSettingCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "GetServiceSettingCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "GetServiceSetting",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_GetServiceSettingCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_GetServiceSettingCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class GetServiceSettingCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "GetServiceSetting", {})
+    .n("SSMClient", "GetServiceSettingCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_GetServiceSettingCommand)
+    .de(Aws_json1_1_1.de_GetServiceSettingCommand)
+    .build() {
 }
 exports.GetServiceSettingCommand = GetServiceSettingCommand;
 
 
 /***/ }),
 
-/***/ 32761:
+/***/ 30303:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7630,55 +5629,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class LabelParameterVersionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, LabelParameterVersionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "LabelParameterVersionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "LabelParameterVersion",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_LabelParameterVersionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_LabelParameterVersionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class LabelParameterVersionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "LabelParameterVersion", {})
+    .n("SSMClient", "LabelParameterVersionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_LabelParameterVersionCommand)
+    .de(Aws_json1_1_1.de_LabelParameterVersionCommand)
+    .build() {
 }
 exports.LabelParameterVersionCommand = LabelParameterVersionCommand;
 
 
 /***/ }),
 
-/***/ 24065:
+/***/ 32752:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7689,56 +5665,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListAssociationVersionsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListAssociationVersionsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListAssociationVersionsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.ListAssociationVersionsResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListAssociationVersions",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListAssociationVersionsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListAssociationVersionsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListAssociationVersionsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListAssociationVersions", {})
+    .n("SSMClient", "ListAssociationVersionsCommand")
+    .f(void 0, models_1_1.ListAssociationVersionsResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_ListAssociationVersionsCommand)
+    .de(Aws_json1_1_1.de_ListAssociationVersionsCommand)
+    .build() {
 }
 exports.ListAssociationVersionsCommand = ListAssociationVersionsCommand;
 
 
 /***/ }),
 
-/***/ 16742:
+/***/ 27030:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7749,55 +5702,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListAssociationsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListAssociationsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListAssociationsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListAssociations",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListAssociationsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListAssociationsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListAssociationsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListAssociations", {})
+    .n("SSMClient", "ListAssociationsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListAssociationsCommand)
+    .de(Aws_json1_1_1.de_ListAssociationsCommand)
+    .build() {
 }
 exports.ListAssociationsCommand = ListAssociationsCommand;
 
 
 /***/ }),
 
-/***/ 26382:
+/***/ 93946:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7808,55 +5738,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListCommandInvocationsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListCommandInvocationsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListCommandInvocationsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListCommandInvocations",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListCommandInvocationsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListCommandInvocationsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListCommandInvocationsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListCommandInvocations", {})
+    .n("SSMClient", "ListCommandInvocationsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListCommandInvocationsCommand)
+    .de(Aws_json1_1_1.de_ListCommandInvocationsCommand)
+    .build() {
 }
 exports.ListCommandInvocationsCommand = ListCommandInvocationsCommand;
 
 
 /***/ }),
 
-/***/ 71454:
+/***/ 83602:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7867,56 +5774,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListCommandsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListCommandsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListCommandsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_1_1.ListCommandsResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListCommands",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListCommandsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListCommandsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListCommandsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListCommands", {})
+    .n("SSMClient", "ListCommandsCommand")
+    .f(void 0, models_1_1.ListCommandsResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_ListCommandsCommand)
+    .de(Aws_json1_1_1.de_ListCommandsCommand)
+    .build() {
 }
 exports.ListCommandsCommand = ListCommandsCommand;
 
 
 /***/ }),
 
-/***/ 33822:
+/***/ 27341:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7927,55 +5811,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListComplianceItemsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListComplianceItemsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListComplianceItemsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListComplianceItems",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListComplianceItemsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListComplianceItemsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListComplianceItemsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListComplianceItems", {})
+    .n("SSMClient", "ListComplianceItemsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListComplianceItemsCommand)
+    .de(Aws_json1_1_1.de_ListComplianceItemsCommand)
+    .build() {
 }
 exports.ListComplianceItemsCommand = ListComplianceItemsCommand;
 
 
 /***/ }),
 
-/***/ 28969:
+/***/ 1101:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -7986,55 +5847,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListComplianceSummariesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListComplianceSummariesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListComplianceSummariesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListComplianceSummaries",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListComplianceSummariesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListComplianceSummariesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListComplianceSummariesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListComplianceSummaries", {})
+    .n("SSMClient", "ListComplianceSummariesCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListComplianceSummariesCommand)
+    .de(Aws_json1_1_1.de_ListComplianceSummariesCommand)
+    .build() {
 }
 exports.ListComplianceSummariesCommand = ListComplianceSummariesCommand;
 
 
 /***/ }),
 
-/***/ 38743:
+/***/ 16973:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8045,55 +5883,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListDocumentMetadataHistoryCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListDocumentMetadataHistoryCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListDocumentMetadataHistoryCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListDocumentMetadataHistory",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListDocumentMetadataHistoryCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListDocumentMetadataHistoryCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListDocumentMetadataHistoryCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListDocumentMetadataHistory", {})
+    .n("SSMClient", "ListDocumentMetadataHistoryCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListDocumentMetadataHistoryCommand)
+    .de(Aws_json1_1_1.de_ListDocumentMetadataHistoryCommand)
+    .build() {
 }
 exports.ListDocumentMetadataHistoryCommand = ListDocumentMetadataHistoryCommand;
 
 
 /***/ }),
 
-/***/ 45278:
+/***/ 75372:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8104,55 +5919,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListDocumentVersionsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListDocumentVersionsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListDocumentVersionsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListDocumentVersions",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListDocumentVersionsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListDocumentVersionsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListDocumentVersionsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListDocumentVersions", {})
+    .n("SSMClient", "ListDocumentVersionsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListDocumentVersionsCommand)
+    .de(Aws_json1_1_1.de_ListDocumentVersionsCommand)
+    .build() {
 }
 exports.ListDocumentVersionsCommand = ListDocumentVersionsCommand;
 
 
 /***/ }),
 
-/***/ 62465:
+/***/ 26224:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8163,55 +5955,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListDocumentsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListDocumentsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListDocumentsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListDocuments",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListDocumentsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListDocumentsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListDocumentsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListDocuments", {})
+    .n("SSMClient", "ListDocumentsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListDocumentsCommand)
+    .de(Aws_json1_1_1.de_ListDocumentsCommand)
+    .build() {
 }
 exports.ListDocumentsCommand = ListDocumentsCommand;
 
 
 /***/ }),
 
-/***/ 56342:
+/***/ 34660:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8222,55 +5991,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListInventoryEntriesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListInventoryEntriesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListInventoryEntriesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListInventoryEntries",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListInventoryEntriesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListInventoryEntriesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListInventoryEntriesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListInventoryEntries", {})
+    .n("SSMClient", "ListInventoryEntriesCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListInventoryEntriesCommand)
+    .de(Aws_json1_1_1.de_ListInventoryEntriesCommand)
+    .build() {
 }
 exports.ListInventoryEntriesCommand = ListInventoryEntriesCommand;
 
 
 /***/ }),
 
-/***/ 82837:
+/***/ 83737:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8281,55 +6027,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListOpsItemEventsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListOpsItemEventsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListOpsItemEventsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListOpsItemEvents",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListOpsItemEventsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListOpsItemEventsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListOpsItemEventsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListOpsItemEvents", {})
+    .n("SSMClient", "ListOpsItemEventsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListOpsItemEventsCommand)
+    .de(Aws_json1_1_1.de_ListOpsItemEventsCommand)
+    .build() {
 }
 exports.ListOpsItemEventsCommand = ListOpsItemEventsCommand;
 
 
 /***/ }),
 
-/***/ 53568:
+/***/ 98757:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8340,55 +6063,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListOpsItemRelatedItemsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListOpsItemRelatedItemsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListOpsItemRelatedItemsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListOpsItemRelatedItems",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListOpsItemRelatedItemsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListOpsItemRelatedItemsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListOpsItemRelatedItemsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListOpsItemRelatedItems", {})
+    .n("SSMClient", "ListOpsItemRelatedItemsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListOpsItemRelatedItemsCommand)
+    .de(Aws_json1_1_1.de_ListOpsItemRelatedItemsCommand)
+    .build() {
 }
 exports.ListOpsItemRelatedItemsCommand = ListOpsItemRelatedItemsCommand;
 
 
 /***/ }),
 
-/***/ 47863:
+/***/ 87694:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8399,55 +6099,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListOpsMetadataCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListOpsMetadataCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListOpsMetadataCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListOpsMetadata",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListOpsMetadataCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListOpsMetadataCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListOpsMetadataCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListOpsMetadata", {})
+    .n("SSMClient", "ListOpsMetadataCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListOpsMetadataCommand)
+    .de(Aws_json1_1_1.de_ListOpsMetadataCommand)
+    .build() {
 }
 exports.ListOpsMetadataCommand = ListOpsMetadataCommand;
 
 
 /***/ }),
 
-/***/ 52196:
+/***/ 10149:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8458,55 +6135,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListResourceComplianceSummariesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListResourceComplianceSummariesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListResourceComplianceSummariesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListResourceComplianceSummaries",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListResourceComplianceSummariesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListResourceComplianceSummariesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListResourceComplianceSummariesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListResourceComplianceSummaries", {})
+    .n("SSMClient", "ListResourceComplianceSummariesCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListResourceComplianceSummariesCommand)
+    .de(Aws_json1_1_1.de_ListResourceComplianceSummariesCommand)
+    .build() {
 }
 exports.ListResourceComplianceSummariesCommand = ListResourceComplianceSummariesCommand;
 
 
 /***/ }),
 
-/***/ 34984:
+/***/ 72605:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8517,55 +6171,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListResourceDataSyncCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListResourceDataSyncCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListResourceDataSyncCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListResourceDataSync",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListResourceDataSyncCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListResourceDataSyncCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListResourceDataSyncCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListResourceDataSync", {})
+    .n("SSMClient", "ListResourceDataSyncCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListResourceDataSyncCommand)
+    .de(Aws_json1_1_1.de_ListResourceDataSyncCommand)
+    .build() {
 }
 exports.ListResourceDataSyncCommand = ListResourceDataSyncCommand;
 
 
 /***/ }),
 
-/***/ 10621:
+/***/ 76076:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8576,55 +6207,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ListTagsForResourceCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListTagsForResourceCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ListTagsForResourceCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ListTagsForResource",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ListTagsForResourceCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ListTagsForResourceCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ListTagsForResourceCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ListTagsForResource", {})
+    .n("SSMClient", "ListTagsForResourceCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ListTagsForResourceCommand)
+    .de(Aws_json1_1_1.de_ListTagsForResourceCommand)
+    .build() {
 }
 exports.ListTagsForResourceCommand = ListTagsForResourceCommand;
 
 
 /***/ }),
 
-/***/ 84962:
+/***/ 76991:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8635,55 +6243,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ModifyDocumentPermissionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ModifyDocumentPermissionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ModifyDocumentPermissionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ModifyDocumentPermission",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ModifyDocumentPermissionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ModifyDocumentPermissionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ModifyDocumentPermissionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ModifyDocumentPermission", {})
+    .n("SSMClient", "ModifyDocumentPermissionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ModifyDocumentPermissionCommand)
+    .de(Aws_json1_1_1.de_ModifyDocumentPermissionCommand)
+    .build() {
 }
 exports.ModifyDocumentPermissionCommand = ModifyDocumentPermissionCommand;
 
 
 /***/ }),
 
-/***/ 99746:
+/***/ 978:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8694,55 +6279,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class PutComplianceItemsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutComplianceItemsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "PutComplianceItemsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "PutComplianceItems",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_PutComplianceItemsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_PutComplianceItemsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class PutComplianceItemsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "PutComplianceItems", {})
+    .n("SSMClient", "PutComplianceItemsCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_PutComplianceItemsCommand)
+    .de(Aws_json1_1_1.de_PutComplianceItemsCommand)
+    .build() {
 }
 exports.PutComplianceItemsCommand = PutComplianceItemsCommand;
 
 
 /***/ }),
 
-/***/ 50202:
+/***/ 4453:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8753,55 +6315,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class PutInventoryCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutInventoryCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "PutInventoryCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "PutInventory",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_PutInventoryCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_PutInventoryCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class PutInventoryCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "PutInventory", {})
+    .n("SSMClient", "PutInventoryCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_PutInventoryCommand)
+    .de(Aws_json1_1_1.de_PutInventoryCommand)
+    .build() {
 }
 exports.PutInventoryCommand = PutInventoryCommand;
 
 
 /***/ }),
 
-/***/ 86234:
+/***/ 11520:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8812,56 +6351,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class PutParameterCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutParameterCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "PutParameterCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_1_1.PutParameterRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "PutParameter",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_PutParameterCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_PutParameterCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class PutParameterCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "PutParameter", {})
+    .n("SSMClient", "PutParameterCommand")
+    .f(models_1_1.PutParameterRequestFilterSensitiveLog, void 0)
+    .ser(Aws_json1_1_1.se_PutParameterCommand)
+    .de(Aws_json1_1_1.de_PutParameterCommand)
+    .build() {
 }
 exports.PutParameterCommand = PutParameterCommand;
 
 
 /***/ }),
 
-/***/ 3081:
+/***/ 8173:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8872,55 +6388,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class PutResourcePolicyCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, PutResourcePolicyCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "PutResourcePolicyCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "PutResourcePolicy",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_PutResourcePolicyCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_PutResourcePolicyCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class PutResourcePolicyCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "PutResourcePolicy", {})
+    .n("SSMClient", "PutResourcePolicyCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_PutResourcePolicyCommand)
+    .de(Aws_json1_1_1.de_PutResourcePolicyCommand)
+    .build() {
 }
 exports.PutResourcePolicyCommand = PutResourcePolicyCommand;
 
 
 /***/ }),
 
-/***/ 4225:
+/***/ 10431:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8931,55 +6424,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class RegisterDefaultPatchBaselineCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, RegisterDefaultPatchBaselineCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "RegisterDefaultPatchBaselineCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "RegisterDefaultPatchBaseline",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_RegisterDefaultPatchBaselineCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_RegisterDefaultPatchBaselineCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class RegisterDefaultPatchBaselineCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "RegisterDefaultPatchBaseline", {})
+    .n("SSMClient", "RegisterDefaultPatchBaselineCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_RegisterDefaultPatchBaselineCommand)
+    .de(Aws_json1_1_1.de_RegisterDefaultPatchBaselineCommand)
+    .build() {
 }
 exports.RegisterDefaultPatchBaselineCommand = RegisterDefaultPatchBaselineCommand;
 
 
 /***/ }),
 
-/***/ 35509:
+/***/ 67051:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -8990,55 +6460,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class RegisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, RegisterPatchBaselineForPatchGroupCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "RegisterPatchBaselineForPatchGroupCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "RegisterPatchBaselineForPatchGroup",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_RegisterPatchBaselineForPatchGroupCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_RegisterPatchBaselineForPatchGroupCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class RegisterPatchBaselineForPatchGroupCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "RegisterPatchBaselineForPatchGroup", {})
+    .n("SSMClient", "RegisterPatchBaselineForPatchGroupCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_RegisterPatchBaselineForPatchGroupCommand)
+    .de(Aws_json1_1_1.de_RegisterPatchBaselineForPatchGroupCommand)
+    .build() {
 }
 exports.RegisterPatchBaselineForPatchGroupCommand = RegisterPatchBaselineForPatchGroupCommand;
 
 
 /***/ }),
 
-/***/ 37827:
+/***/ 156:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9049,56 +6496,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class RegisterTargetWithMaintenanceWindowCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, RegisterTargetWithMaintenanceWindowCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "RegisterTargetWithMaintenanceWindowCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_1_1.RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "RegisterTargetWithMaintenanceWindow",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_RegisterTargetWithMaintenanceWindowCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_RegisterTargetWithMaintenanceWindowCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class RegisterTargetWithMaintenanceWindowCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "RegisterTargetWithMaintenanceWindow", {})
+    .n("SSMClient", "RegisterTargetWithMaintenanceWindowCommand")
+    .f(models_1_1.RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog, void 0)
+    .ser(Aws_json1_1_1.se_RegisterTargetWithMaintenanceWindowCommand)
+    .de(Aws_json1_1_1.de_RegisterTargetWithMaintenanceWindowCommand)
+    .build() {
 }
 exports.RegisterTargetWithMaintenanceWindowCommand = RegisterTargetWithMaintenanceWindowCommand;
 
 
 /***/ }),
 
-/***/ 7532:
+/***/ 77978:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9109,56 +6533,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class RegisterTaskWithMaintenanceWindowCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, RegisterTaskWithMaintenanceWindowCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "RegisterTaskWithMaintenanceWindowCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_1_1.RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "RegisterTaskWithMaintenanceWindow",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_RegisterTaskWithMaintenanceWindowCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_RegisterTaskWithMaintenanceWindowCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class RegisterTaskWithMaintenanceWindowCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "RegisterTaskWithMaintenanceWindow", {})
+    .n("SSMClient", "RegisterTaskWithMaintenanceWindowCommand")
+    .f(models_1_1.RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog, void 0)
+    .ser(Aws_json1_1_1.se_RegisterTaskWithMaintenanceWindowCommand)
+    .de(Aws_json1_1_1.de_RegisterTaskWithMaintenanceWindowCommand)
+    .build() {
 }
 exports.RegisterTaskWithMaintenanceWindowCommand = RegisterTaskWithMaintenanceWindowCommand;
 
 
 /***/ }),
 
-/***/ 27194:
+/***/ 45921:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9169,55 +6570,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class RemoveTagsFromResourceCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, RemoveTagsFromResourceCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "RemoveTagsFromResourceCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "RemoveTagsFromResource",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_RemoveTagsFromResourceCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_RemoveTagsFromResourceCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class RemoveTagsFromResourceCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "RemoveTagsFromResource", {})
+    .n("SSMClient", "RemoveTagsFromResourceCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_RemoveTagsFromResourceCommand)
+    .de(Aws_json1_1_1.de_RemoveTagsFromResourceCommand)
+    .build() {
 }
 exports.RemoveTagsFromResourceCommand = RemoveTagsFromResourceCommand;
 
 
 /***/ }),
 
-/***/ 71986:
+/***/ 53696:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9228,55 +6606,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ResetServiceSettingCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ResetServiceSettingCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ResetServiceSettingCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ResetServiceSetting",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ResetServiceSettingCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ResetServiceSettingCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ResetServiceSettingCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ResetServiceSetting", {})
+    .n("SSMClient", "ResetServiceSettingCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ResetServiceSettingCommand)
+    .de(Aws_json1_1_1.de_ResetServiceSettingCommand)
+    .build() {
 }
 exports.ResetServiceSettingCommand = ResetServiceSettingCommand;
 
 
 /***/ }),
 
-/***/ 16527:
+/***/ 76193:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9287,55 +6642,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class ResumeSessionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ResumeSessionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "ResumeSessionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "ResumeSession",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_ResumeSessionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_ResumeSessionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class ResumeSessionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "ResumeSession", {})
+    .n("SSMClient", "ResumeSessionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_ResumeSessionCommand)
+    .de(Aws_json1_1_1.de_ResumeSessionCommand)
+    .build() {
 }
 exports.ResumeSessionCommand = ResumeSessionCommand;
 
 
 /***/ }),
 
-/***/ 23338:
+/***/ 87636:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9346,55 +6678,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class SendAutomationSignalCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, SendAutomationSignalCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "SendAutomationSignalCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "SendAutomationSignal",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_SendAutomationSignalCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_SendAutomationSignalCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class SendAutomationSignalCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "SendAutomationSignal", {})
+    .n("SSMClient", "SendAutomationSignalCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_SendAutomationSignalCommand)
+    .de(Aws_json1_1_1.de_SendAutomationSignalCommand)
+    .build() {
 }
 exports.SendAutomationSignalCommand = SendAutomationSignalCommand;
 
 
 /***/ }),
 
-/***/ 22479:
+/***/ 69472:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9405,56 +6714,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_1_1 = __nccwpck_require__(79606);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class SendCommandCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, SendCommandCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "SendCommandCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_1_1.SendCommandRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_1_1.SendCommandResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "SendCommand",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_SendCommandCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_SendCommandCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_1_1 = __nccwpck_require__(68919);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class SendCommandCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "SendCommand", {})
+    .n("SSMClient", "SendCommandCommand")
+    .f(models_1_1.SendCommandRequestFilterSensitiveLog, models_1_1.SendCommandResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_SendCommandCommand)
+    .de(Aws_json1_1_1.de_SendCommandCommand)
+    .build() {
 }
 exports.SendCommandCommand = SendCommandCommand;
 
 
 /***/ }),
 
-/***/ 99165:
+/***/ 10615:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9465,55 +6751,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class StartAssociationsOnceCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, StartAssociationsOnceCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "StartAssociationsOnceCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "StartAssociationsOnce",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_StartAssociationsOnceCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_StartAssociationsOnceCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class StartAssociationsOnceCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "StartAssociationsOnce", {})
+    .n("SSMClient", "StartAssociationsOnceCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_StartAssociationsOnceCommand)
+    .de(Aws_json1_1_1.de_StartAssociationsOnceCommand)
+    .build() {
 }
 exports.StartAssociationsOnceCommand = StartAssociationsOnceCommand;
 
 
 /***/ }),
 
-/***/ 61734:
+/***/ 29747:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9524,55 +6787,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class StartAutomationExecutionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, StartAutomationExecutionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "StartAutomationExecutionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "StartAutomationExecution",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_StartAutomationExecutionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_StartAutomationExecutionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class StartAutomationExecutionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "StartAutomationExecution", {})
+    .n("SSMClient", "StartAutomationExecutionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_StartAutomationExecutionCommand)
+    .de(Aws_json1_1_1.de_StartAutomationExecutionCommand)
+    .build() {
 }
 exports.StartAutomationExecutionCommand = StartAutomationExecutionCommand;
 
 
 /***/ }),
 
-/***/ 96859:
+/***/ 70801:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9583,55 +6823,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class StartChangeRequestExecutionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, StartChangeRequestExecutionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "StartChangeRequestExecutionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "StartChangeRequestExecution",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_StartChangeRequestExecutionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_StartChangeRequestExecutionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class StartChangeRequestExecutionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "StartChangeRequestExecution", {})
+    .n("SSMClient", "StartChangeRequestExecutionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_StartChangeRequestExecutionCommand)
+    .de(Aws_json1_1_1.de_StartChangeRequestExecutionCommand)
+    .build() {
 }
 exports.StartChangeRequestExecutionCommand = StartChangeRequestExecutionCommand;
 
 
 /***/ }),
 
-/***/ 52641:
+/***/ 23775:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9642,55 +6859,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class StartSessionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, StartSessionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "StartSessionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "StartSession",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_StartSessionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_StartSessionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class StartSessionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "StartSession", {})
+    .n("SSMClient", "StartSessionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_StartSessionCommand)
+    .de(Aws_json1_1_1.de_StartSessionCommand)
+    .build() {
 }
 exports.StartSessionCommand = StartSessionCommand;
 
 
 /***/ }),
 
-/***/ 23920:
+/***/ 34210:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9701,55 +6895,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class StopAutomationExecutionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, StopAutomationExecutionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "StopAutomationExecutionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "StopAutomationExecution",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_StopAutomationExecutionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_StopAutomationExecutionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class StopAutomationExecutionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "StopAutomationExecution", {})
+    .n("SSMClient", "StopAutomationExecutionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_StopAutomationExecutionCommand)
+    .de(Aws_json1_1_1.de_StopAutomationExecutionCommand)
+    .build() {
 }
 exports.StopAutomationExecutionCommand = StopAutomationExecutionCommand;
 
 
 /***/ }),
 
-/***/ 46480:
+/***/ 13744:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9760,55 +6931,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class TerminateSessionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, TerminateSessionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "TerminateSessionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "TerminateSession",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_TerminateSessionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_TerminateSessionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class TerminateSessionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "TerminateSession", {})
+    .n("SSMClient", "TerminateSessionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_TerminateSessionCommand)
+    .de(Aws_json1_1_1.de_TerminateSessionCommand)
+    .build() {
 }
 exports.TerminateSessionCommand = TerminateSessionCommand;
 
 
 /***/ }),
 
-/***/ 96484:
+/***/ 27429:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9819,55 +6967,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UnlabelParameterVersionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UnlabelParameterVersionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UnlabelParameterVersionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UnlabelParameterVersion",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UnlabelParameterVersionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UnlabelParameterVersionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UnlabelParameterVersionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UnlabelParameterVersion", {})
+    .n("SSMClient", "UnlabelParameterVersionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UnlabelParameterVersionCommand)
+    .de(Aws_json1_1_1.de_UnlabelParameterVersionCommand)
+    .build() {
 }
 exports.UnlabelParameterVersionCommand = UnlabelParameterVersionCommand;
 
 
 /***/ }),
 
-/***/ 46352:
+/***/ 84246:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9878,56 +7003,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_2_1 = __nccwpck_require__(33713);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateAssociationCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateAssociationCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateAssociationCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateAssociationRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateAssociationResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateAssociation",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateAssociationCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateAssociationCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_2_1 = __nccwpck_require__(34217);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateAssociationCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateAssociation", {})
+    .n("SSMClient", "UpdateAssociationCommand")
+    .f(models_2_1.UpdateAssociationRequestFilterSensitiveLog, models_2_1.UpdateAssociationResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_UpdateAssociationCommand)
+    .de(Aws_json1_1_1.de_UpdateAssociationCommand)
+    .build() {
 }
 exports.UpdateAssociationCommand = UpdateAssociationCommand;
 
 
 /***/ }),
 
-/***/ 42142:
+/***/ 36748:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9938,56 +7040,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_2_1 = __nccwpck_require__(33713);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateAssociationStatusCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateAssociationStatusCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateAssociationStatusCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_2_1.UpdateAssociationStatusResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateAssociationStatus",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateAssociationStatusCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateAssociationStatusCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_2_1 = __nccwpck_require__(34217);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateAssociationStatusCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateAssociationStatus", {})
+    .n("SSMClient", "UpdateAssociationStatusCommand")
+    .f(void 0, models_2_1.UpdateAssociationStatusResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_UpdateAssociationStatusCommand)
+    .de(Aws_json1_1_1.de_UpdateAssociationStatusCommand)
+    .build() {
 }
 exports.UpdateAssociationStatusCommand = UpdateAssociationStatusCommand;
 
 
 /***/ }),
 
-/***/ 9877:
+/***/ 99461:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -9998,55 +7077,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateDocumentCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateDocumentCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateDocumentCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateDocument",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateDocumentCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateDocumentCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateDocumentCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateDocument", {})
+    .n("SSMClient", "UpdateDocumentCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UpdateDocumentCommand)
+    .de(Aws_json1_1_1.de_UpdateDocumentCommand)
+    .build() {
 }
 exports.UpdateDocumentCommand = UpdateDocumentCommand;
 
 
 /***/ }),
 
-/***/ 63711:
+/***/ 99184:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10057,55 +7113,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateDocumentDefaultVersionCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateDocumentDefaultVersionCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateDocumentDefaultVersionCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateDocumentDefaultVersion",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateDocumentDefaultVersionCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateDocumentDefaultVersionCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateDocumentDefaultVersionCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateDocumentDefaultVersion", {})
+    .n("SSMClient", "UpdateDocumentDefaultVersionCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UpdateDocumentDefaultVersionCommand)
+    .de(Aws_json1_1_1.de_UpdateDocumentDefaultVersionCommand)
+    .build() {
 }
 exports.UpdateDocumentDefaultVersionCommand = UpdateDocumentDefaultVersionCommand;
 
 
 /***/ }),
 
-/***/ 90172:
+/***/ 44334:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10116,55 +7149,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateDocumentMetadataCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateDocumentMetadataCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateDocumentMetadataCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateDocumentMetadata",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateDocumentMetadataCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateDocumentMetadataCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateDocumentMetadataCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateDocumentMetadata", {})
+    .n("SSMClient", "UpdateDocumentMetadataCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UpdateDocumentMetadataCommand)
+    .de(Aws_json1_1_1.de_UpdateDocumentMetadataCommand)
+    .build() {
 }
 exports.UpdateDocumentMetadataCommand = UpdateDocumentMetadataCommand;
 
 
 /***/ }),
 
-/***/ 76494:
+/***/ 16690:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10175,56 +7185,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_2_1 = __nccwpck_require__(33713);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateMaintenanceWindowCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateMaintenanceWindowCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateMaintenanceWindowCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateMaintenanceWindowRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateMaintenanceWindowResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateMaintenanceWindow",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateMaintenanceWindowCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateMaintenanceWindowCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_2_1 = __nccwpck_require__(34217);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateMaintenanceWindowCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateMaintenanceWindow", {})
+    .n("SSMClient", "UpdateMaintenanceWindowCommand")
+    .f(models_2_1.UpdateMaintenanceWindowRequestFilterSensitiveLog, models_2_1.UpdateMaintenanceWindowResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_UpdateMaintenanceWindowCommand)
+    .de(Aws_json1_1_1.de_UpdateMaintenanceWindowCommand)
+    .build() {
 }
 exports.UpdateMaintenanceWindowCommand = UpdateMaintenanceWindowCommand;
 
 
 /***/ }),
 
-/***/ 20839:
+/***/ 6785:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10235,56 +7222,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_2_1 = __nccwpck_require__(33713);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateMaintenanceWindowTargetCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateMaintenanceWindowTargetCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateMaintenanceWindowTargetCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateMaintenanceWindowTargetRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateMaintenanceWindowTargetResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateMaintenanceWindowTarget",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateMaintenanceWindowTargetCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateMaintenanceWindowTargetCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_2_1 = __nccwpck_require__(34217);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateMaintenanceWindowTargetCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateMaintenanceWindowTarget", {})
+    .n("SSMClient", "UpdateMaintenanceWindowTargetCommand")
+    .f(models_2_1.UpdateMaintenanceWindowTargetRequestFilterSensitiveLog, models_2_1.UpdateMaintenanceWindowTargetResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_UpdateMaintenanceWindowTargetCommand)
+    .de(Aws_json1_1_1.de_UpdateMaintenanceWindowTargetCommand)
+    .build() {
 }
 exports.UpdateMaintenanceWindowTargetCommand = UpdateMaintenanceWindowTargetCommand;
 
 
 /***/ }),
 
-/***/ 20952:
+/***/ 84393:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10295,56 +7259,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_2_1 = __nccwpck_require__(33713);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateMaintenanceWindowTaskCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateMaintenanceWindowTaskCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateMaintenanceWindowTaskCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_2_1.UpdateMaintenanceWindowTaskRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdateMaintenanceWindowTaskResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateMaintenanceWindowTask",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateMaintenanceWindowTaskCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateMaintenanceWindowTaskCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_2_1 = __nccwpck_require__(34217);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateMaintenanceWindowTaskCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateMaintenanceWindowTask", {})
+    .n("SSMClient", "UpdateMaintenanceWindowTaskCommand")
+    .f(models_2_1.UpdateMaintenanceWindowTaskRequestFilterSensitiveLog, models_2_1.UpdateMaintenanceWindowTaskResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_UpdateMaintenanceWindowTaskCommand)
+    .de(Aws_json1_1_1.de_UpdateMaintenanceWindowTaskCommand)
+    .build() {
 }
 exports.UpdateMaintenanceWindowTaskCommand = UpdateMaintenanceWindowTaskCommand;
 
 
 /***/ }),
 
-/***/ 82554:
+/***/ 96812:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10355,55 +7296,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateManagedInstanceRoleCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateManagedInstanceRoleCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateManagedInstanceRoleCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateManagedInstanceRole",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateManagedInstanceRoleCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateManagedInstanceRoleCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateManagedInstanceRoleCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateManagedInstanceRole", {})
+    .n("SSMClient", "UpdateManagedInstanceRoleCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UpdateManagedInstanceRoleCommand)
+    .de(Aws_json1_1_1.de_UpdateManagedInstanceRoleCommand)
+    .build() {
 }
 exports.UpdateManagedInstanceRoleCommand = UpdateManagedInstanceRoleCommand;
 
 
 /***/ }),
 
-/***/ 62814:
+/***/ 5595:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10414,55 +7332,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateOpsItemCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateOpsItemCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateOpsItemCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateOpsItem",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateOpsItemCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateOpsItemCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateOpsItemCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateOpsItem", {})
+    .n("SSMClient", "UpdateOpsItemCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UpdateOpsItemCommand)
+    .de(Aws_json1_1_1.de_UpdateOpsItemCommand)
+    .build() {
 }
 exports.UpdateOpsItemCommand = UpdateOpsItemCommand;
 
 
 /***/ }),
 
-/***/ 32502:
+/***/ 57918:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10473,55 +7368,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateOpsMetadataCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateOpsMetadataCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateOpsMetadataCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateOpsMetadata",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateOpsMetadataCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateOpsMetadataCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateOpsMetadataCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateOpsMetadata", {})
+    .n("SSMClient", "UpdateOpsMetadataCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UpdateOpsMetadataCommand)
+    .de(Aws_json1_1_1.de_UpdateOpsMetadataCommand)
+    .build() {
 }
 exports.UpdateOpsMetadataCommand = UpdateOpsMetadataCommand;
 
 
 /***/ }),
 
-/***/ 48836:
+/***/ 10053:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10532,56 +7404,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_2_1 = __nccwpck_require__(33713);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdatePatchBaselineCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdatePatchBaselineCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdatePatchBaselineCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_2_1.UpdatePatchBaselineRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_2_1.UpdatePatchBaselineResultFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdatePatchBaseline",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdatePatchBaselineCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdatePatchBaselineCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const models_2_1 = __nccwpck_require__(34217);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdatePatchBaselineCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdatePatchBaseline", {})
+    .n("SSMClient", "UpdatePatchBaselineCommand")
+    .f(models_2_1.UpdatePatchBaselineRequestFilterSensitiveLog, models_2_1.UpdatePatchBaselineResultFilterSensitiveLog)
+    .ser(Aws_json1_1_1.se_UpdatePatchBaselineCommand)
+    .de(Aws_json1_1_1.de_UpdatePatchBaselineCommand)
+    .build() {
 }
 exports.UpdatePatchBaselineCommand = UpdatePatchBaselineCommand;
 
 
 /***/ }),
 
-/***/ 72866:
+/***/ 61089:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10592,55 +7441,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateResourceDataSyncCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateResourceDataSyncCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateResourceDataSyncCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateResourceDataSync",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateResourceDataSyncCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateResourceDataSyncCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateResourceDataSyncCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateResourceDataSync", {})
+    .n("SSMClient", "UpdateResourceDataSyncCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UpdateResourceDataSyncCommand)
+    .de(Aws_json1_1_1.de_UpdateResourceDataSyncCommand)
+    .build() {
 }
 exports.UpdateResourceDataSyncCommand = UpdateResourceDataSyncCommand;
 
 
 /***/ }),
 
-/***/ 67251:
+/***/ 25423:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10651,211 +7477,188 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_json1_1_1 = __nccwpck_require__(63058);
-class UpdateServiceSettingCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, UpdateServiceSettingCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSMClient";
-        const commandName = "UpdateServiceSettingCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AmazonSSM",
-                operation: "UpdateServiceSetting",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_json1_1_1.se_UpdateServiceSettingCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_json1_1_1.de_UpdateServiceSettingCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(20590);
+const Aws_json1_1_1 = __nccwpck_require__(2540);
+class UpdateServiceSettingCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AmazonSSM", "UpdateServiceSetting", {})
+    .n("SSMClient", "UpdateServiceSettingCommand")
+    .f(void 0, void 0)
+    .ser(Aws_json1_1_1.se_UpdateServiceSettingCommand)
+    .de(Aws_json1_1_1.de_UpdateServiceSettingCommand)
+    .build() {
 }
 exports.UpdateServiceSettingCommand = UpdateServiceSettingCommand;
 
 
 /***/ }),
 
-/***/ 3579:
+/***/ 52228:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(14570), exports);
-tslib_1.__exportStar(__nccwpck_require__(1773), exports);
-tslib_1.__exportStar(__nccwpck_require__(43319), exports);
-tslib_1.__exportStar(__nccwpck_require__(60634), exports);
-tslib_1.__exportStar(__nccwpck_require__(43243), exports);
-tslib_1.__exportStar(__nccwpck_require__(25134), exports);
-tslib_1.__exportStar(__nccwpck_require__(42977), exports);
-tslib_1.__exportStar(__nccwpck_require__(95231), exports);
-tslib_1.__exportStar(__nccwpck_require__(48546), exports);
-tslib_1.__exportStar(__nccwpck_require__(35944), exports);
-tslib_1.__exportStar(__nccwpck_require__(32455), exports);
-tslib_1.__exportStar(__nccwpck_require__(35525), exports);
-tslib_1.__exportStar(__nccwpck_require__(57653), exports);
-tslib_1.__exportStar(__nccwpck_require__(99709), exports);
-tslib_1.__exportStar(__nccwpck_require__(65042), exports);
-tslib_1.__exportStar(__nccwpck_require__(92564), exports);
-tslib_1.__exportStar(__nccwpck_require__(37807), exports);
-tslib_1.__exportStar(__nccwpck_require__(42541), exports);
-tslib_1.__exportStar(__nccwpck_require__(56207), exports);
-tslib_1.__exportStar(__nccwpck_require__(95759), exports);
-tslib_1.__exportStar(__nccwpck_require__(39951), exports);
-tslib_1.__exportStar(__nccwpck_require__(83672), exports);
-tslib_1.__exportStar(__nccwpck_require__(45738), exports);
-tslib_1.__exportStar(__nccwpck_require__(69080), exports);
-tslib_1.__exportStar(__nccwpck_require__(73684), exports);
-tslib_1.__exportStar(__nccwpck_require__(14967), exports);
-tslib_1.__exportStar(__nccwpck_require__(78446), exports);
-tslib_1.__exportStar(__nccwpck_require__(1795), exports);
-tslib_1.__exportStar(__nccwpck_require__(16360), exports);
-tslib_1.__exportStar(__nccwpck_require__(69690), exports);
-tslib_1.__exportStar(__nccwpck_require__(51801), exports);
-tslib_1.__exportStar(__nccwpck_require__(82172), exports);
-tslib_1.__exportStar(__nccwpck_require__(9487), exports);
-tslib_1.__exportStar(__nccwpck_require__(37676), exports);
-tslib_1.__exportStar(__nccwpck_require__(98361), exports);
-tslib_1.__exportStar(__nccwpck_require__(57209), exports);
-tslib_1.__exportStar(__nccwpck_require__(28359), exports);
-tslib_1.__exportStar(__nccwpck_require__(55313), exports);
-tslib_1.__exportStar(__nccwpck_require__(7553), exports);
-tslib_1.__exportStar(__nccwpck_require__(68840), exports);
-tslib_1.__exportStar(__nccwpck_require__(6092), exports);
-tslib_1.__exportStar(__nccwpck_require__(96238), exports);
-tslib_1.__exportStar(__nccwpck_require__(78300), exports);
-tslib_1.__exportStar(__nccwpck_require__(69663), exports);
-tslib_1.__exportStar(__nccwpck_require__(63313), exports);
-tslib_1.__exportStar(__nccwpck_require__(31463), exports);
-tslib_1.__exportStar(__nccwpck_require__(29371), exports);
-tslib_1.__exportStar(__nccwpck_require__(74305), exports);
-tslib_1.__exportStar(__nccwpck_require__(7985), exports);
-tslib_1.__exportStar(__nccwpck_require__(90632), exports);
-tslib_1.__exportStar(__nccwpck_require__(32788), exports);
-tslib_1.__exportStar(__nccwpck_require__(47930), exports);
-tslib_1.__exportStar(__nccwpck_require__(63698), exports);
-tslib_1.__exportStar(__nccwpck_require__(91430), exports);
-tslib_1.__exportStar(__nccwpck_require__(63958), exports);
-tslib_1.__exportStar(__nccwpck_require__(91405), exports);
-tslib_1.__exportStar(__nccwpck_require__(18257), exports);
-tslib_1.__exportStar(__nccwpck_require__(72880), exports);
-tslib_1.__exportStar(__nccwpck_require__(30272), exports);
-tslib_1.__exportStar(__nccwpck_require__(2466), exports);
-tslib_1.__exportStar(__nccwpck_require__(39022), exports);
-tslib_1.__exportStar(__nccwpck_require__(48689), exports);
-tslib_1.__exportStar(__nccwpck_require__(57504), exports);
-tslib_1.__exportStar(__nccwpck_require__(44358), exports);
-tslib_1.__exportStar(__nccwpck_require__(28174), exports);
-tslib_1.__exportStar(__nccwpck_require__(46303), exports);
-tslib_1.__exportStar(__nccwpck_require__(63479), exports);
-tslib_1.__exportStar(__nccwpck_require__(63011), exports);
-tslib_1.__exportStar(__nccwpck_require__(79849), exports);
-tslib_1.__exportStar(__nccwpck_require__(70381), exports);
-tslib_1.__exportStar(__nccwpck_require__(31683), exports);
-tslib_1.__exportStar(__nccwpck_require__(77477), exports);
-tslib_1.__exportStar(__nccwpck_require__(8926), exports);
-tslib_1.__exportStar(__nccwpck_require__(54913), exports);
-tslib_1.__exportStar(__nccwpck_require__(41580), exports);
-tslib_1.__exportStar(__nccwpck_require__(48513), exports);
-tslib_1.__exportStar(__nccwpck_require__(38834), exports);
-tslib_1.__exportStar(__nccwpck_require__(83053), exports);
-tslib_1.__exportStar(__nccwpck_require__(39855), exports);
-tslib_1.__exportStar(__nccwpck_require__(54477), exports);
-tslib_1.__exportStar(__nccwpck_require__(13101), exports);
-tslib_1.__exportStar(__nccwpck_require__(13303), exports);
-tslib_1.__exportStar(__nccwpck_require__(67320), exports);
-tslib_1.__exportStar(__nccwpck_require__(21799), exports);
-tslib_1.__exportStar(__nccwpck_require__(63193), exports);
-tslib_1.__exportStar(__nccwpck_require__(60533), exports);
-tslib_1.__exportStar(__nccwpck_require__(90998), exports);
-tslib_1.__exportStar(__nccwpck_require__(32761), exports);
-tslib_1.__exportStar(__nccwpck_require__(24065), exports);
-tslib_1.__exportStar(__nccwpck_require__(16742), exports);
-tslib_1.__exportStar(__nccwpck_require__(26382), exports);
-tslib_1.__exportStar(__nccwpck_require__(71454), exports);
-tslib_1.__exportStar(__nccwpck_require__(33822), exports);
-tslib_1.__exportStar(__nccwpck_require__(28969), exports);
-tslib_1.__exportStar(__nccwpck_require__(38743), exports);
-tslib_1.__exportStar(__nccwpck_require__(45278), exports);
-tslib_1.__exportStar(__nccwpck_require__(62465), exports);
-tslib_1.__exportStar(__nccwpck_require__(56342), exports);
-tslib_1.__exportStar(__nccwpck_require__(82837), exports);
-tslib_1.__exportStar(__nccwpck_require__(53568), exports);
-tslib_1.__exportStar(__nccwpck_require__(47863), exports);
-tslib_1.__exportStar(__nccwpck_require__(52196), exports);
-tslib_1.__exportStar(__nccwpck_require__(34984), exports);
-tslib_1.__exportStar(__nccwpck_require__(10621), exports);
-tslib_1.__exportStar(__nccwpck_require__(84962), exports);
-tslib_1.__exportStar(__nccwpck_require__(99746), exports);
-tslib_1.__exportStar(__nccwpck_require__(50202), exports);
-tslib_1.__exportStar(__nccwpck_require__(86234), exports);
-tslib_1.__exportStar(__nccwpck_require__(3081), exports);
-tslib_1.__exportStar(__nccwpck_require__(4225), exports);
-tslib_1.__exportStar(__nccwpck_require__(35509), exports);
-tslib_1.__exportStar(__nccwpck_require__(37827), exports);
-tslib_1.__exportStar(__nccwpck_require__(7532), exports);
-tslib_1.__exportStar(__nccwpck_require__(27194), exports);
-tslib_1.__exportStar(__nccwpck_require__(71986), exports);
-tslib_1.__exportStar(__nccwpck_require__(16527), exports);
-tslib_1.__exportStar(__nccwpck_require__(23338), exports);
-tslib_1.__exportStar(__nccwpck_require__(22479), exports);
-tslib_1.__exportStar(__nccwpck_require__(99165), exports);
-tslib_1.__exportStar(__nccwpck_require__(61734), exports);
-tslib_1.__exportStar(__nccwpck_require__(96859), exports);
-tslib_1.__exportStar(__nccwpck_require__(52641), exports);
-tslib_1.__exportStar(__nccwpck_require__(23920), exports);
-tslib_1.__exportStar(__nccwpck_require__(46480), exports);
-tslib_1.__exportStar(__nccwpck_require__(96484), exports);
-tslib_1.__exportStar(__nccwpck_require__(46352), exports);
-tslib_1.__exportStar(__nccwpck_require__(42142), exports);
-tslib_1.__exportStar(__nccwpck_require__(9877), exports);
-tslib_1.__exportStar(__nccwpck_require__(63711), exports);
-tslib_1.__exportStar(__nccwpck_require__(90172), exports);
-tslib_1.__exportStar(__nccwpck_require__(76494), exports);
-tslib_1.__exportStar(__nccwpck_require__(20839), exports);
-tslib_1.__exportStar(__nccwpck_require__(20952), exports);
-tslib_1.__exportStar(__nccwpck_require__(82554), exports);
-tslib_1.__exportStar(__nccwpck_require__(62814), exports);
-tslib_1.__exportStar(__nccwpck_require__(32502), exports);
-tslib_1.__exportStar(__nccwpck_require__(48836), exports);
-tslib_1.__exportStar(__nccwpck_require__(72866), exports);
-tslib_1.__exportStar(__nccwpck_require__(67251), exports);
+tslib_1.__exportStar(__nccwpck_require__(30331), exports);
+tslib_1.__exportStar(__nccwpck_require__(5805), exports);
+tslib_1.__exportStar(__nccwpck_require__(99982), exports);
+tslib_1.__exportStar(__nccwpck_require__(70438), exports);
+tslib_1.__exportStar(__nccwpck_require__(75814), exports);
+tslib_1.__exportStar(__nccwpck_require__(82493), exports);
+tslib_1.__exportStar(__nccwpck_require__(84206), exports);
+tslib_1.__exportStar(__nccwpck_require__(13501), exports);
+tslib_1.__exportStar(__nccwpck_require__(98946), exports);
+tslib_1.__exportStar(__nccwpck_require__(89895), exports);
+tslib_1.__exportStar(__nccwpck_require__(34986), exports);
+tslib_1.__exportStar(__nccwpck_require__(36383), exports);
+tslib_1.__exportStar(__nccwpck_require__(96), exports);
+tslib_1.__exportStar(__nccwpck_require__(69009), exports);
+tslib_1.__exportStar(__nccwpck_require__(29983), exports);
+tslib_1.__exportStar(__nccwpck_require__(32022), exports);
+tslib_1.__exportStar(__nccwpck_require__(93563), exports);
+tslib_1.__exportStar(__nccwpck_require__(92987), exports);
+tslib_1.__exportStar(__nccwpck_require__(17878), exports);
+tslib_1.__exportStar(__nccwpck_require__(58455), exports);
+tslib_1.__exportStar(__nccwpck_require__(21054), exports);
+tslib_1.__exportStar(__nccwpck_require__(76868), exports);
+tslib_1.__exportStar(__nccwpck_require__(65467), exports);
+tslib_1.__exportStar(__nccwpck_require__(36000), exports);
+tslib_1.__exportStar(__nccwpck_require__(26021), exports);
+tslib_1.__exportStar(__nccwpck_require__(76987), exports);
+tslib_1.__exportStar(__nccwpck_require__(25162), exports);
+tslib_1.__exportStar(__nccwpck_require__(42454), exports);
+tslib_1.__exportStar(__nccwpck_require__(55838), exports);
+tslib_1.__exportStar(__nccwpck_require__(47211), exports);
+tslib_1.__exportStar(__nccwpck_require__(33024), exports);
+tslib_1.__exportStar(__nccwpck_require__(65104), exports);
+tslib_1.__exportStar(__nccwpck_require__(79798), exports);
+tslib_1.__exportStar(__nccwpck_require__(75529), exports);
+tslib_1.__exportStar(__nccwpck_require__(80736), exports);
+tslib_1.__exportStar(__nccwpck_require__(7112), exports);
+tslib_1.__exportStar(__nccwpck_require__(48557), exports);
+tslib_1.__exportStar(__nccwpck_require__(69334), exports);
+tslib_1.__exportStar(__nccwpck_require__(9951), exports);
+tslib_1.__exportStar(__nccwpck_require__(91133), exports);
+tslib_1.__exportStar(__nccwpck_require__(77842), exports);
+tslib_1.__exportStar(__nccwpck_require__(19967), exports);
+tslib_1.__exportStar(__nccwpck_require__(38216), exports);
+tslib_1.__exportStar(__nccwpck_require__(53423), exports);
+tslib_1.__exportStar(__nccwpck_require__(21888), exports);
+tslib_1.__exportStar(__nccwpck_require__(39388), exports);
+tslib_1.__exportStar(__nccwpck_require__(17795), exports);
+tslib_1.__exportStar(__nccwpck_require__(63166), exports);
+tslib_1.__exportStar(__nccwpck_require__(73343), exports);
+tslib_1.__exportStar(__nccwpck_require__(19292), exports);
+tslib_1.__exportStar(__nccwpck_require__(31038), exports);
+tslib_1.__exportStar(__nccwpck_require__(68502), exports);
+tslib_1.__exportStar(__nccwpck_require__(20551), exports);
+tslib_1.__exportStar(__nccwpck_require__(67645), exports);
+tslib_1.__exportStar(__nccwpck_require__(53794), exports);
+tslib_1.__exportStar(__nccwpck_require__(3308), exports);
+tslib_1.__exportStar(__nccwpck_require__(26180), exports);
+tslib_1.__exportStar(__nccwpck_require__(9176), exports);
+tslib_1.__exportStar(__nccwpck_require__(77838), exports);
+tslib_1.__exportStar(__nccwpck_require__(35079), exports);
+tslib_1.__exportStar(__nccwpck_require__(97886), exports);
+tslib_1.__exportStar(__nccwpck_require__(8851), exports);
+tslib_1.__exportStar(__nccwpck_require__(31307), exports);
+tslib_1.__exportStar(__nccwpck_require__(14229), exports);
+tslib_1.__exportStar(__nccwpck_require__(3881), exports);
+tslib_1.__exportStar(__nccwpck_require__(66370), exports);
+tslib_1.__exportStar(__nccwpck_require__(60890), exports);
+tslib_1.__exportStar(__nccwpck_require__(71793), exports);
+tslib_1.__exportStar(__nccwpck_require__(28836), exports);
+tslib_1.__exportStar(__nccwpck_require__(84662), exports);
+tslib_1.__exportStar(__nccwpck_require__(29404), exports);
+tslib_1.__exportStar(__nccwpck_require__(54868), exports);
+tslib_1.__exportStar(__nccwpck_require__(88503), exports);
+tslib_1.__exportStar(__nccwpck_require__(56267), exports);
+tslib_1.__exportStar(__nccwpck_require__(3352), exports);
+tslib_1.__exportStar(__nccwpck_require__(34196), exports);
+tslib_1.__exportStar(__nccwpck_require__(64289), exports);
+tslib_1.__exportStar(__nccwpck_require__(24095), exports);
+tslib_1.__exportStar(__nccwpck_require__(90451), exports);
+tslib_1.__exportStar(__nccwpck_require__(93830), exports);
+tslib_1.__exportStar(__nccwpck_require__(72471), exports);
+tslib_1.__exportStar(__nccwpck_require__(7247), exports);
+tslib_1.__exportStar(__nccwpck_require__(30033), exports);
+tslib_1.__exportStar(__nccwpck_require__(56690), exports);
+tslib_1.__exportStar(__nccwpck_require__(21037), exports);
+tslib_1.__exportStar(__nccwpck_require__(23653), exports);
+tslib_1.__exportStar(__nccwpck_require__(8919), exports);
+tslib_1.__exportStar(__nccwpck_require__(30303), exports);
+tslib_1.__exportStar(__nccwpck_require__(32752), exports);
+tslib_1.__exportStar(__nccwpck_require__(27030), exports);
+tslib_1.__exportStar(__nccwpck_require__(93946), exports);
+tslib_1.__exportStar(__nccwpck_require__(83602), exports);
+tslib_1.__exportStar(__nccwpck_require__(27341), exports);
+tslib_1.__exportStar(__nccwpck_require__(1101), exports);
+tslib_1.__exportStar(__nccwpck_require__(16973), exports);
+tslib_1.__exportStar(__nccwpck_require__(75372), exports);
+tslib_1.__exportStar(__nccwpck_require__(26224), exports);
+tslib_1.__exportStar(__nccwpck_require__(34660), exports);
+tslib_1.__exportStar(__nccwpck_require__(83737), exports);
+tslib_1.__exportStar(__nccwpck_require__(98757), exports);
+tslib_1.__exportStar(__nccwpck_require__(87694), exports);
+tslib_1.__exportStar(__nccwpck_require__(10149), exports);
+tslib_1.__exportStar(__nccwpck_require__(72605), exports);
+tslib_1.__exportStar(__nccwpck_require__(76076), exports);
+tslib_1.__exportStar(__nccwpck_require__(76991), exports);
+tslib_1.__exportStar(__nccwpck_require__(978), exports);
+tslib_1.__exportStar(__nccwpck_require__(4453), exports);
+tslib_1.__exportStar(__nccwpck_require__(11520), exports);
+tslib_1.__exportStar(__nccwpck_require__(8173), exports);
+tslib_1.__exportStar(__nccwpck_require__(10431), exports);
+tslib_1.__exportStar(__nccwpck_require__(67051), exports);
+tslib_1.__exportStar(__nccwpck_require__(156), exports);
+tslib_1.__exportStar(__nccwpck_require__(77978), exports);
+tslib_1.__exportStar(__nccwpck_require__(45921), exports);
+tslib_1.__exportStar(__nccwpck_require__(53696), exports);
+tslib_1.__exportStar(__nccwpck_require__(76193), exports);
+tslib_1.__exportStar(__nccwpck_require__(87636), exports);
+tslib_1.__exportStar(__nccwpck_require__(69472), exports);
+tslib_1.__exportStar(__nccwpck_require__(10615), exports);
+tslib_1.__exportStar(__nccwpck_require__(29747), exports);
+tslib_1.__exportStar(__nccwpck_require__(70801), exports);
+tslib_1.__exportStar(__nccwpck_require__(23775), exports);
+tslib_1.__exportStar(__nccwpck_require__(34210), exports);
+tslib_1.__exportStar(__nccwpck_require__(13744), exports);
+tslib_1.__exportStar(__nccwpck_require__(27429), exports);
+tslib_1.__exportStar(__nccwpck_require__(84246), exports);
+tslib_1.__exportStar(__nccwpck_require__(36748), exports);
+tslib_1.__exportStar(__nccwpck_require__(99461), exports);
+tslib_1.__exportStar(__nccwpck_require__(99184), exports);
+tslib_1.__exportStar(__nccwpck_require__(44334), exports);
+tslib_1.__exportStar(__nccwpck_require__(16690), exports);
+tslib_1.__exportStar(__nccwpck_require__(6785), exports);
+tslib_1.__exportStar(__nccwpck_require__(84393), exports);
+tslib_1.__exportStar(__nccwpck_require__(96812), exports);
+tslib_1.__exportStar(__nccwpck_require__(5595), exports);
+tslib_1.__exportStar(__nccwpck_require__(57918), exports);
+tslib_1.__exportStar(__nccwpck_require__(10053), exports);
+tslib_1.__exportStar(__nccwpck_require__(61089), exports);
+tslib_1.__exportStar(__nccwpck_require__(25423), exports);
 
 
 /***/ }),
 
-/***/ 36185:
+/***/ 20590:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.resolveClientEndpointParameters = void 0;
+exports.commonParams = exports.resolveClientEndpointParameters = void 0;
 const resolveClientEndpointParameters = (options) => {
     return {
         ...options,
@@ -10865,11 +7668,17 @@ const resolveClientEndpointParameters = (options) => {
     };
 };
 exports.resolveClientEndpointParameters = resolveClientEndpointParameters;
+exports.commonParams = {
+    UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
+    Endpoint: { type: "builtInParams", name: "endpoint" },
+    Region: { type: "builtInParams", name: "region" },
+    UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
+};
 
 
 /***/ }),
 
-/***/ 4004:
+/***/ 57216:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10877,7 +7686,7 @@ exports.resolveClientEndpointParameters = resolveClientEndpointParameters;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __nccwpck_require__(90976);
-const ruleset_1 = __nccwpck_require__(4119);
+const ruleset_1 = __nccwpck_require__(57136);
 const defaultEndpointResolver = (endpointParams, context = {}) => {
     return (0, util_endpoints_1.resolveEndpoint)(ruleset_1.ruleSet, {
         endpointParams: endpointParams,
@@ -10889,7 +7698,7 @@ exports.defaultEndpointResolver = defaultEndpointResolver;
 
 /***/ }),
 
-/***/ 4119:
+/***/ 57136:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -10904,7 +7713,7 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 43718:
+/***/ 77342:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10912,20 +7721,20 @@ exports.ruleSet = _data;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SSMServiceException = void 0;
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(96272), exports);
-tslib_1.__exportStar(__nccwpck_require__(93513), exports);
-tslib_1.__exportStar(__nccwpck_require__(3579), exports);
-tslib_1.__exportStar(__nccwpck_require__(58337), exports);
-tslib_1.__exportStar(__nccwpck_require__(36910), exports);
-tslib_1.__exportStar(__nccwpck_require__(61079), exports);
+tslib_1.__exportStar(__nccwpck_require__(32394), exports);
+tslib_1.__exportStar(__nccwpck_require__(3220), exports);
+tslib_1.__exportStar(__nccwpck_require__(52228), exports);
+tslib_1.__exportStar(__nccwpck_require__(85601), exports);
+tslib_1.__exportStar(__nccwpck_require__(53938), exports);
+tslib_1.__exportStar(__nccwpck_require__(52061), exports);
 __nccwpck_require__(58996);
-var SSMServiceException_1 = __nccwpck_require__(41103);
+var SSMServiceException_1 = __nccwpck_require__(11500);
 Object.defineProperty(exports, "SSMServiceException", ({ enumerable: true, get: function () { return SSMServiceException_1.SSMServiceException; } }));
 
 
 /***/ }),
 
-/***/ 41103:
+/***/ 11500:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10945,21 +7754,21 @@ exports.SSMServiceException = SSMServiceException;
 
 /***/ }),
 
-/***/ 61079:
+/***/ 52061:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(88739), exports);
-tslib_1.__exportStar(__nccwpck_require__(79606), exports);
-tslib_1.__exportStar(__nccwpck_require__(33713), exports);
+tslib_1.__exportStar(__nccwpck_require__(21650), exports);
+tslib_1.__exportStar(__nccwpck_require__(68919), exports);
+tslib_1.__exportStar(__nccwpck_require__(34217), exports);
 
 
 /***/ }),
 
-/***/ 88739:
+/***/ 21650:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -10969,7 +7778,7 @@ exports.OpsItemAlreadyExistsException = exports.OpsItemAccessDeniedException = e
 exports.UnsupportedOperatingSystem = exports.PatchDeploymentStatus = exports.InvalidPermissionType = exports.DocumentPermissionType = exports.StepExecutionFilterKey = exports.AutomationExecutionNotFoundException = exports.InvalidFilterValue = exports.InvalidFilterKey = exports.ExecutionMode = exports.AutomationType = exports.AutomationSubtype = exports.AutomationExecutionStatus = exports.AutomationExecutionFilterKey = exports.AssociationExecutionTargetsFilterKey = exports.AssociationExecutionDoesNotExist = exports.AssociationFilterOperatorType = exports.AssociationExecutionFilterKey = exports.InvalidAssociationVersion = exports.InvalidNextToken = exports.InvalidFilter = exports.DescribeActivationsFilterKeys = exports.TargetInUseException = exports.ResourcePolicyInvalidParameterException = exports.ResourcePolicyConflictException = exports.ResourceDataSyncNotFoundException = exports.ResourceInUseException = exports.ParameterNotFound = exports.OpsMetadataNotFoundException = exports.InvalidTypeNameException = exports.InvalidOptionException = exports.InvalidInventoryRequestException = exports.InvalidDeleteInventoryParametersException = exports.InventorySchemaDeleteOption = exports.InvalidDocumentOperation = exports.AssociatedInstances = exports.AssociationDoesNotExist = exports.InvalidActivationId = exports.InvalidActivation = exports.ResourceDataSyncInvalidConfigurationException = exports.ResourceDataSyncCountExceededException = exports.ResourceDataSyncAlreadyExistsException = exports.ResourceDataSyncS3Format = exports.PatchAction = exports.OperatingSystem = exports.PatchFilterKey = exports.PatchComplianceLevel = exports.OpsMetadataTooManyUpdatesException = exports.OpsMetadataLimitExceededException = exports.OpsMetadataInvalidArgumentException = exports.OpsMetadataAlreadyExistsException = void 0;
 exports.MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = exports.DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = exports.MaintenanceWindowTargetFilterSensitiveLog = exports.DescribeMaintenanceWindowsResultFilterSensitiveLog = exports.MaintenanceWindowIdentityFilterSensitiveLog = exports.DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog = exports.MaintenanceWindowExecutionTaskInvocationIdentityFilterSensitiveLog = exports.DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog = exports.DescribeInstancePatchStatesResultFilterSensitiveLog = exports.InstancePatchStateFilterSensitiveLog = exports.DescribeAssociationResultFilterSensitiveLog = exports.CreatePatchBaselineRequestFilterSensitiveLog = exports.PatchSourceFilterSensitiveLog = exports.CreateMaintenanceWindowRequestFilterSensitiveLog = exports.CreateAssociationBatchResultFilterSensitiveLog = exports.FailedCreateAssociationFilterSensitiveLog = exports.CreateAssociationBatchRequestFilterSensitiveLog = exports.CreateAssociationBatchRequestEntryFilterSensitiveLog = exports.CreateAssociationResultFilterSensitiveLog = exports.AssociationDescriptionFilterSensitiveLog = exports.CreateAssociationRequestFilterSensitiveLog = exports.MaintenanceWindowTaskCutoffBehavior = exports.MaintenanceWindowResourceType = exports.MaintenanceWindowTaskType = exports.MaintenanceWindowExecutionStatus = exports.InvalidDeletionIdException = exports.InventoryDeletionStatus = exports.InstancePatchStateOperatorType = exports.RebootOption = exports.PatchOperationType = exports.PatchComplianceDataState = exports.InvalidInstanceInformationFilterValue = exports.SourceType = exports.ResourceType = exports.PingStatus = exports.InstanceInformationFilterKey = void 0;
 const smithy_client_1 = __nccwpck_require__(55078);
-const SSMServiceException_1 = __nccwpck_require__(41103);
+const SSMServiceException_1 = __nccwpck_require__(11500);
 exports.ResourceTypeForTagging = {
     ASSOCIATION: "Association",
     AUTOMATION: "Automation",
@@ -12366,7 +9175,7 @@ exports.MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = Mainte
 
 /***/ }),
 
-/***/ 79606:
+/***/ 68919:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -12376,8 +9185,8 @@ exports.DocumentPermissionLimit = exports.LastResourceDataSyncStatus = exports.O
 exports.MaintenanceWindowStepFunctionsParametersFilterSensitiveLog = exports.MaintenanceWindowRunCommandParametersFilterSensitiveLog = exports.MaintenanceWindowLambdaParametersFilterSensitiveLog = exports.GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog = exports.GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = exports.GetMaintenanceWindowResultFilterSensitiveLog = exports.GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog = exports.BaselineOverrideFilterSensitiveLog = exports.DescribeMaintenanceWindowTasksResultFilterSensitiveLog = exports.MaintenanceWindowTaskFilterSensitiveLog = exports.StopType = exports.InvalidAutomationStatusUpdateException = exports.TargetNotConnected = exports.AutomationDefinitionNotApprovedException = exports.InvalidAutomationExecutionParametersException = exports.AutomationExecutionLimitExceededException = exports.AutomationDefinitionVersionNotFoundException = exports.AutomationDefinitionNotFoundException = exports.InvalidAssociation = exports.InvalidRole = exports.InvalidOutputFolder = exports.InvalidNotificationConfig = exports.SignalType = exports.InvalidAutomationSignalException = exports.AutomationStepNotFoundException = exports.FeatureNotAvailableException = exports.ResourcePolicyLimitExceededException = exports.UnsupportedParameterType = exports.PoliciesLimitExceededException = exports.ParameterPatternMismatchException = exports.ParameterMaxVersionLimitExceeded = exports.ParameterLimitExceeded = exports.ParameterAlreadyExists = exports.InvalidPolicyTypeException = exports.InvalidPolicyAttributeException = exports.InvalidAllowedPatternException = exports.IncompatiblePolicyException = exports.HierarchyTypeMismatchException = exports.HierarchyLevelLimitExceededException = exports.UnsupportedInventorySchemaVersionException = exports.UnsupportedInventoryItemContextException = exports.SubTypeCountLimitExceededException = exports.ItemContentMismatchException = exports.InvalidInventoryItemContextException = exports.CustomSchemaCountLimitExceededException = exports.TotalSizeLimitExceededException = exports.ComplianceUploadType = exports.ItemSizeLimitExceededException = exports.InvalidItemContentException = exports.ComplianceTypeCountLimitExceededException = void 0;
 exports.SendCommandResultFilterSensitiveLog = exports.SendCommandRequestFilterSensitiveLog = exports.RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = exports.RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = exports.PutParameterRequestFilterSensitiveLog = exports.ListCommandsResultFilterSensitiveLog = exports.CommandFilterSensitiveLog = exports.ListAssociationVersionsResultFilterSensitiveLog = exports.AssociationVersionInfoFilterSensitiveLog = exports.GetPatchBaselineResultFilterSensitiveLog = exports.GetParametersByPathResultFilterSensitiveLog = exports.GetParametersResultFilterSensitiveLog = exports.GetParameterHistoryResultFilterSensitiveLog = exports.ParameterHistoryFilterSensitiveLog = exports.GetParameterResultFilterSensitiveLog = exports.ParameterFilterSensitiveLog = exports.GetMaintenanceWindowTaskResultFilterSensitiveLog = exports.MaintenanceWindowTaskInvocationParametersFilterSensitiveLog = void 0;
 const smithy_client_1 = __nccwpck_require__(55078);
-const models_0_1 = __nccwpck_require__(88739);
-const SSMServiceException_1 = __nccwpck_require__(41103);
+const models_0_1 = __nccwpck_require__(21650);
+const SSMServiceException_1 = __nccwpck_require__(11500);
 exports.OpsItemFilterKey = {
     ACCOUNT_ID: "AccountId",
     ACTUAL_END_TIME: "ActualEndTime",
@@ -13509,7 +10318,7 @@ exports.SendCommandResultFilterSensitiveLog = SendCommandResultFilterSensitiveLo
 
 /***/ }),
 
-/***/ 33713:
+/***/ 34217:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13517,9 +10326,9 @@ exports.SendCommandResultFilterSensitiveLog = SendCommandResultFilterSensitiveLo
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.UpdatePatchBaselineResultFilterSensitiveLog = exports.UpdatePatchBaselineRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowTaskResultFilterSensitiveLog = exports.UpdateMaintenanceWindowTaskRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowTargetResultFilterSensitiveLog = exports.UpdateMaintenanceWindowTargetRequestFilterSensitiveLog = exports.UpdateMaintenanceWindowResultFilterSensitiveLog = exports.UpdateMaintenanceWindowRequestFilterSensitiveLog = exports.UpdateAssociationStatusResultFilterSensitiveLog = exports.UpdateAssociationResultFilterSensitiveLog = exports.UpdateAssociationRequestFilterSensitiveLog = exports.ResourceDataSyncConflictException = exports.OpsMetadataKeyLimitExceededException = exports.DocumentReviewAction = exports.DuplicateDocumentVersionName = exports.DuplicateDocumentContent = exports.DocumentVersionLimitExceeded = exports.StatusUnchanged = exports.InvalidUpdate = exports.AssociationVersionLimitExceeded = void 0;
 const smithy_client_1 = __nccwpck_require__(55078);
-const models_0_1 = __nccwpck_require__(88739);
-const models_1_1 = __nccwpck_require__(79606);
-const SSMServiceException_1 = __nccwpck_require__(41103);
+const models_0_1 = __nccwpck_require__(21650);
+const models_1_1 = __nccwpck_require__(68919);
+const SSMServiceException_1 = __nccwpck_require__(11500);
 class AssociationVersionLimitExceeded extends SSMServiceException_1.SSMServiceException {
     constructor(opts) {
         super({
@@ -13709,7 +10518,7 @@ exports.UpdatePatchBaselineResultFilterSensitiveLog = UpdatePatchBaselineResultF
 
 /***/ }),
 
-/***/ 84044:
+/***/ 94013:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13717,14 +10526,14 @@ exports.UpdatePatchBaselineResultFilterSensitiveLog = UpdatePatchBaselineResultF
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeActivations = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeActivationsCommand_1 = __nccwpck_require__(69690);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeActivationsCommand_1 = __nccwpck_require__(47211);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeActivations = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeActivationsCommand_1.DescribeActivationsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 71632:
+/***/ 36327:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13732,14 +10541,14 @@ exports.paginateDescribeActivations = (0, core_1.createPaginator)(SSMClient_1.SS
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAssociationExecutionTargets = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeAssociationExecutionTargetsCommand_1 = __nccwpck_require__(82172);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeAssociationExecutionTargetsCommand_1 = __nccwpck_require__(65104);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeAssociationExecutionTargets = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeAssociationExecutionTargetsCommand_1.DescribeAssociationExecutionTargetsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 46027:
+/***/ 34410:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13747,14 +10556,14 @@ exports.paginateDescribeAssociationExecutionTargets = (0, core_1.createPaginator
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAssociationExecutions = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeAssociationExecutionsCommand_1 = __nccwpck_require__(9487);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeAssociationExecutionsCommand_1 = __nccwpck_require__(79798);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeAssociationExecutions = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeAssociationExecutionsCommand_1.DescribeAssociationExecutionsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 58807:
+/***/ 68192:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13762,14 +10571,14 @@ exports.paginateDescribeAssociationExecutions = (0, core_1.createPaginator)(SSMC
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAutomationExecutions = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeAutomationExecutionsCommand_1 = __nccwpck_require__(37676);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeAutomationExecutionsCommand_1 = __nccwpck_require__(75529);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeAutomationExecutions = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeAutomationExecutionsCommand_1.DescribeAutomationExecutionsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 36090:
+/***/ 37985:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13777,14 +10586,14 @@ exports.paginateDescribeAutomationExecutions = (0, core_1.createPaginator)(SSMCl
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAutomationStepExecutions = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeAutomationStepExecutionsCommand_1 = __nccwpck_require__(98361);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeAutomationStepExecutionsCommand_1 = __nccwpck_require__(80736);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeAutomationStepExecutions = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeAutomationStepExecutionsCommand_1.DescribeAutomationStepExecutionsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 36680:
+/***/ 48881:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13792,14 +10601,14 @@ exports.paginateDescribeAutomationStepExecutions = (0, core_1.createPaginator)(S
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeAvailablePatches = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeAvailablePatchesCommand_1 = __nccwpck_require__(57209);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeAvailablePatchesCommand_1 = __nccwpck_require__(7112);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeAvailablePatches = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeAvailablePatchesCommand_1.DescribeAvailablePatchesCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 52265:
+/***/ 50528:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13807,14 +10616,14 @@ exports.paginateDescribeAvailablePatches = (0, core_1.createPaginator)(SSMClient
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeEffectiveInstanceAssociations = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeEffectiveInstanceAssociationsCommand_1 = __nccwpck_require__(7553);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeEffectiveInstanceAssociationsCommand_1 = __nccwpck_require__(9951);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeEffectiveInstanceAssociations = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeEffectiveInstanceAssociationsCommand_1.DescribeEffectiveInstanceAssociationsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 3060:
+/***/ 19208:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13822,14 +10631,14 @@ exports.paginateDescribeEffectiveInstanceAssociations = (0, core_1.createPaginat
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeEffectivePatchesForPatchBaseline = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeEffectivePatchesForPatchBaselineCommand_1 = __nccwpck_require__(68840);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeEffectivePatchesForPatchBaselineCommand_1 = __nccwpck_require__(91133);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeEffectivePatchesForPatchBaseline = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeEffectivePatchesForPatchBaselineCommand_1.DescribeEffectivePatchesForPatchBaselineCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 38005:
+/***/ 20508:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13837,14 +10646,14 @@ exports.paginateDescribeEffectivePatchesForPatchBaseline = (0, core_1.createPagi
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstanceAssociationsStatus = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeInstanceAssociationsStatusCommand_1 = __nccwpck_require__(6092);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeInstanceAssociationsStatusCommand_1 = __nccwpck_require__(77842);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeInstanceAssociationsStatus = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeInstanceAssociationsStatusCommand_1.DescribeInstanceAssociationsStatusCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 61035:
+/***/ 50581:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13852,14 +10661,14 @@ exports.paginateDescribeInstanceAssociationsStatus = (0, core_1.createPaginator)
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstanceInformation = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeInstanceInformationCommand_1 = __nccwpck_require__(96238);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeInstanceInformationCommand_1 = __nccwpck_require__(19967);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeInstanceInformation = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeInstanceInformationCommand_1.DescribeInstanceInformationCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 89948:
+/***/ 50403:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13867,14 +10676,14 @@ exports.paginateDescribeInstanceInformation = (0, core_1.createPaginator)(SSMCli
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstancePatchStatesForPatchGroup = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeInstancePatchStatesForPatchGroupCommand_1 = __nccwpck_require__(69663);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeInstancePatchStatesForPatchGroupCommand_1 = __nccwpck_require__(53423);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeInstancePatchStatesForPatchGroup = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeInstancePatchStatesForPatchGroupCommand_1.DescribeInstancePatchStatesForPatchGroupCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 21030:
+/***/ 10624:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13882,14 +10691,14 @@ exports.paginateDescribeInstancePatchStatesForPatchGroup = (0, core_1.createPagi
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstancePatchStates = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeInstancePatchStatesCommand_1 = __nccwpck_require__(78300);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeInstancePatchStatesCommand_1 = __nccwpck_require__(38216);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeInstancePatchStates = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeInstancePatchStatesCommand_1.DescribeInstancePatchStatesCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 3192:
+/***/ 26523:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13897,14 +10706,14 @@ exports.paginateDescribeInstancePatchStates = (0, core_1.createPaginator)(SSMCli
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInstancePatches = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeInstancePatchesCommand_1 = __nccwpck_require__(63313);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeInstancePatchesCommand_1 = __nccwpck_require__(21888);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeInstancePatches = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeInstancePatchesCommand_1.DescribeInstancePatchesCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 96583:
+/***/ 85472:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13912,14 +10721,14 @@ exports.paginateDescribeInstancePatches = (0, core_1.createPaginator)(SSMClient_
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeInventoryDeletions = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeInventoryDeletionsCommand_1 = __nccwpck_require__(31463);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeInventoryDeletionsCommand_1 = __nccwpck_require__(39388);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeInventoryDeletions = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeInventoryDeletionsCommand_1.DescribeInventoryDeletionsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 29656:
+/***/ 49881:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13927,14 +10736,14 @@ exports.paginateDescribeInventoryDeletions = (0, core_1.createPaginator)(SSMClie
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowExecutionTaskInvocations = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeMaintenanceWindowExecutionTaskInvocationsCommand_1 = __nccwpck_require__(29371);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeMaintenanceWindowExecutionTaskInvocationsCommand_1 = __nccwpck_require__(17795);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeMaintenanceWindowExecutionTaskInvocations = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeMaintenanceWindowExecutionTaskInvocationsCommand_1.DescribeMaintenanceWindowExecutionTaskInvocationsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 8805:
+/***/ 69703:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13942,14 +10751,14 @@ exports.paginateDescribeMaintenanceWindowExecutionTaskInvocations = (0, core_1.c
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowExecutionTasks = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeMaintenanceWindowExecutionTasksCommand_1 = __nccwpck_require__(74305);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeMaintenanceWindowExecutionTasksCommand_1 = __nccwpck_require__(63166);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeMaintenanceWindowExecutionTasks = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeMaintenanceWindowExecutionTasksCommand_1.DescribeMaintenanceWindowExecutionTasksCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 10009:
+/***/ 46451:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13957,14 +10766,14 @@ exports.paginateDescribeMaintenanceWindowExecutionTasks = (0, core_1.createPagin
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowExecutions = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeMaintenanceWindowExecutionsCommand_1 = __nccwpck_require__(7985);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeMaintenanceWindowExecutionsCommand_1 = __nccwpck_require__(73343);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeMaintenanceWindowExecutions = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeMaintenanceWindowExecutionsCommand_1.DescribeMaintenanceWindowExecutionsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 46671:
+/***/ 4621:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13972,14 +10781,14 @@ exports.paginateDescribeMaintenanceWindowExecutions = (0, core_1.createPaginator
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowSchedule = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeMaintenanceWindowScheduleCommand_1 = __nccwpck_require__(90632);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeMaintenanceWindowScheduleCommand_1 = __nccwpck_require__(19292);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeMaintenanceWindowSchedule = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeMaintenanceWindowScheduleCommand_1.DescribeMaintenanceWindowScheduleCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 7796:
+/***/ 18596:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -13987,14 +10796,14 @@ exports.paginateDescribeMaintenanceWindowSchedule = (0, core_1.createPaginator)(
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowTargets = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeMaintenanceWindowTargetsCommand_1 = __nccwpck_require__(32788);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeMaintenanceWindowTargetsCommand_1 = __nccwpck_require__(31038);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeMaintenanceWindowTargets = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeMaintenanceWindowTargetsCommand_1.DescribeMaintenanceWindowTargetsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 4411:
+/***/ 11266:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14002,14 +10811,14 @@ exports.paginateDescribeMaintenanceWindowTargets = (0, core_1.createPaginator)(S
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowTasks = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeMaintenanceWindowTasksCommand_1 = __nccwpck_require__(47930);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeMaintenanceWindowTasksCommand_1 = __nccwpck_require__(68502);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeMaintenanceWindowTasks = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeMaintenanceWindowTasksCommand_1.DescribeMaintenanceWindowTasksCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 7008:
+/***/ 94734:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14017,14 +10826,14 @@ exports.paginateDescribeMaintenanceWindowTasks = (0, core_1.createPaginator)(SSM
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindowsForTarget = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeMaintenanceWindowsForTargetCommand_1 = __nccwpck_require__(91430);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeMaintenanceWindowsForTargetCommand_1 = __nccwpck_require__(67645);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeMaintenanceWindowsForTarget = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeMaintenanceWindowsForTargetCommand_1.DescribeMaintenanceWindowsForTargetCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 64063:
+/***/ 24392:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14032,14 +10841,14 @@ exports.paginateDescribeMaintenanceWindowsForTarget = (0, core_1.createPaginator
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeMaintenanceWindows = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeMaintenanceWindowsCommand_1 = __nccwpck_require__(63698);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeMaintenanceWindowsCommand_1 = __nccwpck_require__(20551);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeMaintenanceWindows = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeMaintenanceWindowsCommand_1.DescribeMaintenanceWindowsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 50506:
+/***/ 81399:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14047,14 +10856,14 @@ exports.paginateDescribeMaintenanceWindows = (0, core_1.createPaginator)(SSMClie
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeOpsItems = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeOpsItemsCommand_1 = __nccwpck_require__(63958);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeOpsItemsCommand_1 = __nccwpck_require__(53794);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeOpsItems = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeOpsItemsCommand_1.DescribeOpsItemsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 86618:
+/***/ 17965:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14062,14 +10871,14 @@ exports.paginateDescribeOpsItems = (0, core_1.createPaginator)(SSMClient_1.SSMCl
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeParameters = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeParametersCommand_1 = __nccwpck_require__(91405);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeParametersCommand_1 = __nccwpck_require__(3308);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeParameters = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeParametersCommand_1.DescribeParametersCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 7857:
+/***/ 12644:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14077,14 +10886,14 @@ exports.paginateDescribeParameters = (0, core_1.createPaginator)(SSMClient_1.SSM
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribePatchBaselines = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribePatchBaselinesCommand_1 = __nccwpck_require__(18257);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribePatchBaselinesCommand_1 = __nccwpck_require__(26180);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribePatchBaselines = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribePatchBaselinesCommand_1.DescribePatchBaselinesCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 96535:
+/***/ 46546:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14092,14 +10901,14 @@ exports.paginateDescribePatchBaselines = (0, core_1.createPaginator)(SSMClient_1
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribePatchGroups = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribePatchGroupsCommand_1 = __nccwpck_require__(30272);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribePatchGroupsCommand_1 = __nccwpck_require__(77838);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribePatchGroups = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribePatchGroupsCommand_1.DescribePatchGroupsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 36369:
+/***/ 62960:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14107,14 +10916,14 @@ exports.paginateDescribePatchGroups = (0, core_1.createPaginator)(SSMClient_1.SS
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribePatchProperties = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribePatchPropertiesCommand_1 = __nccwpck_require__(2466);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribePatchPropertiesCommand_1 = __nccwpck_require__(35079);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribePatchProperties = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribePatchPropertiesCommand_1.DescribePatchPropertiesCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 71382:
+/***/ 62598:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14122,14 +10931,14 @@ exports.paginateDescribePatchProperties = (0, core_1.createPaginator)(SSMClient_
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateDescribeSessions = void 0;
 const core_1 = __nccwpck_require__(6442);
-const DescribeSessionsCommand_1 = __nccwpck_require__(39022);
-const SSMClient_1 = __nccwpck_require__(96272);
+const DescribeSessionsCommand_1 = __nccwpck_require__(97886);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateDescribeSessions = (0, core_1.createPaginator)(SSMClient_1.SSMClient, DescribeSessionsCommand_1.DescribeSessionsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 41350:
+/***/ 26859:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14137,14 +10946,14 @@ exports.paginateDescribeSessions = (0, core_1.createPaginator)(SSMClient_1.SSMCl
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetInventory = void 0;
 const core_1 = __nccwpck_require__(6442);
-const GetInventoryCommand_1 = __nccwpck_require__(70381);
-const SSMClient_1 = __nccwpck_require__(96272);
+const GetInventoryCommand_1 = __nccwpck_require__(84662);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateGetInventory = (0, core_1.createPaginator)(SSMClient_1.SSMClient, GetInventoryCommand_1.GetInventoryCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 2460:
+/***/ 74250:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14152,14 +10961,14 @@ exports.paginateGetInventory = (0, core_1.createPaginator)(SSMClient_1.SSMClient
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetInventorySchema = void 0;
 const core_1 = __nccwpck_require__(6442);
-const GetInventorySchemaCommand_1 = __nccwpck_require__(31683);
-const SSMClient_1 = __nccwpck_require__(96272);
+const GetInventorySchemaCommand_1 = __nccwpck_require__(29404);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateGetInventorySchema = (0, core_1.createPaginator)(SSMClient_1.SSMClient, GetInventorySchemaCommand_1.GetInventorySchemaCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 15150:
+/***/ 41040:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14167,14 +10976,14 @@ exports.paginateGetInventorySchema = (0, core_1.createPaginator)(SSMClient_1.SSM
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetOpsSummary = void 0;
 const core_1 = __nccwpck_require__(6442);
-const GetOpsSummaryCommand_1 = __nccwpck_require__(39855);
-const SSMClient_1 = __nccwpck_require__(96272);
+const GetOpsSummaryCommand_1 = __nccwpck_require__(90451);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateGetOpsSummary = (0, core_1.createPaginator)(SSMClient_1.SSMClient, GetOpsSummaryCommand_1.GetOpsSummaryCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 54612:
+/***/ 55137:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14182,14 +10991,14 @@ exports.paginateGetOpsSummary = (0, core_1.createPaginator)(SSMClient_1.SSMClien
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetParameterHistory = void 0;
 const core_1 = __nccwpck_require__(6442);
-const GetParameterHistoryCommand_1 = __nccwpck_require__(13101);
-const SSMClient_1 = __nccwpck_require__(96272);
+const GetParameterHistoryCommand_1 = __nccwpck_require__(72471);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateGetParameterHistory = (0, core_1.createPaginator)(SSMClient_1.SSMClient, GetParameterHistoryCommand_1.GetParameterHistoryCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 3663:
+/***/ 12502:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14197,14 +11006,14 @@ exports.paginateGetParameterHistory = (0, core_1.createPaginator)(SSMClient_1.SS
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetParametersByPath = void 0;
 const core_1 = __nccwpck_require__(6442);
-const GetParametersByPathCommand_1 = __nccwpck_require__(13303);
-const SSMClient_1 = __nccwpck_require__(96272);
+const GetParametersByPathCommand_1 = __nccwpck_require__(7247);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateGetParametersByPath = (0, core_1.createPaginator)(SSMClient_1.SSMClient, GetParametersByPathCommand_1.GetParametersByPathCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 509:
+/***/ 53335:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14212,14 +11021,14 @@ exports.paginateGetParametersByPath = (0, core_1.createPaginator)(SSMClient_1.SS
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateGetResourcePolicies = void 0;
 const core_1 = __nccwpck_require__(6442);
-const GetResourcePoliciesCommand_1 = __nccwpck_require__(60533);
-const SSMClient_1 = __nccwpck_require__(96272);
+const GetResourcePoliciesCommand_1 = __nccwpck_require__(23653);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateGetResourcePolicies = (0, core_1.createPaginator)(SSMClient_1.SSMClient, GetResourcePoliciesCommand_1.GetResourcePoliciesCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 1757:
+/***/ 84300:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -14229,7 +11038,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 41290:
+/***/ 47175:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14237,14 +11046,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListAssociationVersions = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListAssociationVersionsCommand_1 = __nccwpck_require__(24065);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListAssociationVersionsCommand_1 = __nccwpck_require__(32752);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListAssociationVersions = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListAssociationVersionsCommand_1.ListAssociationVersionsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 93824:
+/***/ 50055:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14252,14 +11061,14 @@ exports.paginateListAssociationVersions = (0, core_1.createPaginator)(SSMClient_
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListAssociations = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListAssociationsCommand_1 = __nccwpck_require__(16742);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListAssociationsCommand_1 = __nccwpck_require__(27030);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListAssociations = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListAssociationsCommand_1.ListAssociationsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 67709:
+/***/ 50868:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14267,14 +11076,14 @@ exports.paginateListAssociations = (0, core_1.createPaginator)(SSMClient_1.SSMCl
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListCommandInvocations = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListCommandInvocationsCommand_1 = __nccwpck_require__(26382);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListCommandInvocationsCommand_1 = __nccwpck_require__(93946);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListCommandInvocations = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListCommandInvocationsCommand_1.ListCommandInvocationsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 50613:
+/***/ 3660:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14282,14 +11091,14 @@ exports.paginateListCommandInvocations = (0, core_1.createPaginator)(SSMClient_1
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListCommands = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListCommandsCommand_1 = __nccwpck_require__(71454);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListCommandsCommand_1 = __nccwpck_require__(83602);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListCommands = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListCommandsCommand_1.ListCommandsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 94341:
+/***/ 58926:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14297,14 +11106,14 @@ exports.paginateListCommands = (0, core_1.createPaginator)(SSMClient_1.SSMClient
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListComplianceItems = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListComplianceItemsCommand_1 = __nccwpck_require__(33822);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListComplianceItemsCommand_1 = __nccwpck_require__(27341);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListComplianceItems = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListComplianceItemsCommand_1.ListComplianceItemsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 66188:
+/***/ 47852:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14312,14 +11121,14 @@ exports.paginateListComplianceItems = (0, core_1.createPaginator)(SSMClient_1.SS
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListComplianceSummaries = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListComplianceSummariesCommand_1 = __nccwpck_require__(28969);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListComplianceSummariesCommand_1 = __nccwpck_require__(1101);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListComplianceSummaries = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListComplianceSummariesCommand_1.ListComplianceSummariesCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 75266:
+/***/ 46827:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14327,14 +11136,14 @@ exports.paginateListComplianceSummaries = (0, core_1.createPaginator)(SSMClient_
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListDocumentVersions = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListDocumentVersionsCommand_1 = __nccwpck_require__(45278);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListDocumentVersionsCommand_1 = __nccwpck_require__(75372);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListDocumentVersions = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListDocumentVersionsCommand_1.ListDocumentVersionsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 98349:
+/***/ 14207:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14342,14 +11151,14 @@ exports.paginateListDocumentVersions = (0, core_1.createPaginator)(SSMClient_1.S
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListDocuments = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListDocumentsCommand_1 = __nccwpck_require__(62465);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListDocumentsCommand_1 = __nccwpck_require__(26224);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListDocuments = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListDocumentsCommand_1.ListDocumentsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 70535:
+/***/ 33661:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14357,14 +11166,14 @@ exports.paginateListDocuments = (0, core_1.createPaginator)(SSMClient_1.SSMClien
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListOpsItemEvents = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListOpsItemEventsCommand_1 = __nccwpck_require__(82837);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListOpsItemEventsCommand_1 = __nccwpck_require__(83737);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListOpsItemEvents = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListOpsItemEventsCommand_1.ListOpsItemEventsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 8906:
+/***/ 78885:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14372,14 +11181,14 @@ exports.paginateListOpsItemEvents = (0, core_1.createPaginator)(SSMClient_1.SSMC
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListOpsItemRelatedItems = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListOpsItemRelatedItemsCommand_1 = __nccwpck_require__(53568);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListOpsItemRelatedItemsCommand_1 = __nccwpck_require__(98757);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListOpsItemRelatedItems = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListOpsItemRelatedItemsCommand_1.ListOpsItemRelatedItemsCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 95816:
+/***/ 41643:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14387,14 +11196,14 @@ exports.paginateListOpsItemRelatedItems = (0, core_1.createPaginator)(SSMClient_
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListOpsMetadata = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListOpsMetadataCommand_1 = __nccwpck_require__(47863);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListOpsMetadataCommand_1 = __nccwpck_require__(87694);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListOpsMetadata = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListOpsMetadataCommand_1.ListOpsMetadataCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 60751:
+/***/ 89634:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14402,14 +11211,14 @@ exports.paginateListOpsMetadata = (0, core_1.createPaginator)(SSMClient_1.SSMCli
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListResourceComplianceSummaries = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListResourceComplianceSummariesCommand_1 = __nccwpck_require__(52196);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListResourceComplianceSummariesCommand_1 = __nccwpck_require__(10149);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListResourceComplianceSummaries = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListResourceComplianceSummariesCommand_1.ListResourceComplianceSummariesCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 56979:
+/***/ 89377:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14417,73 +11226,73 @@ exports.paginateListResourceComplianceSummaries = (0, core_1.createPaginator)(SS
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListResourceDataSync = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListResourceDataSyncCommand_1 = __nccwpck_require__(34984);
-const SSMClient_1 = __nccwpck_require__(96272);
+const ListResourceDataSyncCommand_1 = __nccwpck_require__(72605);
+const SSMClient_1 = __nccwpck_require__(32394);
 exports.paginateListResourceDataSync = (0, core_1.createPaginator)(SSMClient_1.SSMClient, ListResourceDataSyncCommand_1.ListResourceDataSyncCommand, "NextToken", "NextToken", "MaxResults");
 
 
 /***/ }),
 
-/***/ 58337:
+/***/ 85601:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(84044), exports);
-tslib_1.__exportStar(__nccwpck_require__(71632), exports);
-tslib_1.__exportStar(__nccwpck_require__(46027), exports);
-tslib_1.__exportStar(__nccwpck_require__(58807), exports);
-tslib_1.__exportStar(__nccwpck_require__(36090), exports);
-tslib_1.__exportStar(__nccwpck_require__(36680), exports);
-tslib_1.__exportStar(__nccwpck_require__(52265), exports);
-tslib_1.__exportStar(__nccwpck_require__(3060), exports);
-tslib_1.__exportStar(__nccwpck_require__(38005), exports);
-tslib_1.__exportStar(__nccwpck_require__(61035), exports);
-tslib_1.__exportStar(__nccwpck_require__(1757), exports);
-tslib_1.__exportStar(__nccwpck_require__(89948), exports);
-tslib_1.__exportStar(__nccwpck_require__(21030), exports);
-tslib_1.__exportStar(__nccwpck_require__(3192), exports);
-tslib_1.__exportStar(__nccwpck_require__(96583), exports);
-tslib_1.__exportStar(__nccwpck_require__(29656), exports);
-tslib_1.__exportStar(__nccwpck_require__(8805), exports);
-tslib_1.__exportStar(__nccwpck_require__(10009), exports);
-tslib_1.__exportStar(__nccwpck_require__(46671), exports);
-tslib_1.__exportStar(__nccwpck_require__(7796), exports);
-tslib_1.__exportStar(__nccwpck_require__(4411), exports);
-tslib_1.__exportStar(__nccwpck_require__(7008), exports);
-tslib_1.__exportStar(__nccwpck_require__(64063), exports);
-tslib_1.__exportStar(__nccwpck_require__(50506), exports);
-tslib_1.__exportStar(__nccwpck_require__(86618), exports);
-tslib_1.__exportStar(__nccwpck_require__(7857), exports);
-tslib_1.__exportStar(__nccwpck_require__(96535), exports);
-tslib_1.__exportStar(__nccwpck_require__(36369), exports);
-tslib_1.__exportStar(__nccwpck_require__(71382), exports);
-tslib_1.__exportStar(__nccwpck_require__(41350), exports);
-tslib_1.__exportStar(__nccwpck_require__(2460), exports);
-tslib_1.__exportStar(__nccwpck_require__(15150), exports);
-tslib_1.__exportStar(__nccwpck_require__(54612), exports);
-tslib_1.__exportStar(__nccwpck_require__(3663), exports);
-tslib_1.__exportStar(__nccwpck_require__(509), exports);
-tslib_1.__exportStar(__nccwpck_require__(41290), exports);
-tslib_1.__exportStar(__nccwpck_require__(93824), exports);
-tslib_1.__exportStar(__nccwpck_require__(67709), exports);
-tslib_1.__exportStar(__nccwpck_require__(50613), exports);
-tslib_1.__exportStar(__nccwpck_require__(94341), exports);
-tslib_1.__exportStar(__nccwpck_require__(66188), exports);
-tslib_1.__exportStar(__nccwpck_require__(75266), exports);
-tslib_1.__exportStar(__nccwpck_require__(98349), exports);
-tslib_1.__exportStar(__nccwpck_require__(70535), exports);
-tslib_1.__exportStar(__nccwpck_require__(8906), exports);
-tslib_1.__exportStar(__nccwpck_require__(95816), exports);
-tslib_1.__exportStar(__nccwpck_require__(60751), exports);
-tslib_1.__exportStar(__nccwpck_require__(56979), exports);
+tslib_1.__exportStar(__nccwpck_require__(94013), exports);
+tslib_1.__exportStar(__nccwpck_require__(36327), exports);
+tslib_1.__exportStar(__nccwpck_require__(34410), exports);
+tslib_1.__exportStar(__nccwpck_require__(68192), exports);
+tslib_1.__exportStar(__nccwpck_require__(37985), exports);
+tslib_1.__exportStar(__nccwpck_require__(48881), exports);
+tslib_1.__exportStar(__nccwpck_require__(50528), exports);
+tslib_1.__exportStar(__nccwpck_require__(19208), exports);
+tslib_1.__exportStar(__nccwpck_require__(20508), exports);
+tslib_1.__exportStar(__nccwpck_require__(50581), exports);
+tslib_1.__exportStar(__nccwpck_require__(84300), exports);
+tslib_1.__exportStar(__nccwpck_require__(50403), exports);
+tslib_1.__exportStar(__nccwpck_require__(10624), exports);
+tslib_1.__exportStar(__nccwpck_require__(26523), exports);
+tslib_1.__exportStar(__nccwpck_require__(85472), exports);
+tslib_1.__exportStar(__nccwpck_require__(49881), exports);
+tslib_1.__exportStar(__nccwpck_require__(69703), exports);
+tslib_1.__exportStar(__nccwpck_require__(46451), exports);
+tslib_1.__exportStar(__nccwpck_require__(4621), exports);
+tslib_1.__exportStar(__nccwpck_require__(18596), exports);
+tslib_1.__exportStar(__nccwpck_require__(11266), exports);
+tslib_1.__exportStar(__nccwpck_require__(94734), exports);
+tslib_1.__exportStar(__nccwpck_require__(24392), exports);
+tslib_1.__exportStar(__nccwpck_require__(81399), exports);
+tslib_1.__exportStar(__nccwpck_require__(17965), exports);
+tslib_1.__exportStar(__nccwpck_require__(12644), exports);
+tslib_1.__exportStar(__nccwpck_require__(46546), exports);
+tslib_1.__exportStar(__nccwpck_require__(62960), exports);
+tslib_1.__exportStar(__nccwpck_require__(62598), exports);
+tslib_1.__exportStar(__nccwpck_require__(26859), exports);
+tslib_1.__exportStar(__nccwpck_require__(74250), exports);
+tslib_1.__exportStar(__nccwpck_require__(41040), exports);
+tslib_1.__exportStar(__nccwpck_require__(55137), exports);
+tslib_1.__exportStar(__nccwpck_require__(12502), exports);
+tslib_1.__exportStar(__nccwpck_require__(53335), exports);
+tslib_1.__exportStar(__nccwpck_require__(47175), exports);
+tslib_1.__exportStar(__nccwpck_require__(50055), exports);
+tslib_1.__exportStar(__nccwpck_require__(50868), exports);
+tslib_1.__exportStar(__nccwpck_require__(3660), exports);
+tslib_1.__exportStar(__nccwpck_require__(58926), exports);
+tslib_1.__exportStar(__nccwpck_require__(47852), exports);
+tslib_1.__exportStar(__nccwpck_require__(46827), exports);
+tslib_1.__exportStar(__nccwpck_require__(14207), exports);
+tslib_1.__exportStar(__nccwpck_require__(33661), exports);
+tslib_1.__exportStar(__nccwpck_require__(78885), exports);
+tslib_1.__exportStar(__nccwpck_require__(41643), exports);
+tslib_1.__exportStar(__nccwpck_require__(89634), exports);
+tslib_1.__exportStar(__nccwpck_require__(89377), exports);
 
 
 /***/ }),
 
-/***/ 63058:
+/***/ 2540:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14498,10 +11307,10 @@ exports.de_UpdateServiceSettingCommand = exports.de_UpdateResourceDataSyncComman
 const protocol_http_1 = __nccwpck_require__(6249);
 const smithy_client_1 = __nccwpck_require__(55078);
 const uuid_1 = __nccwpck_require__(47338);
-const models_0_1 = __nccwpck_require__(88739);
-const models_1_1 = __nccwpck_require__(79606);
-const models_2_1 = __nccwpck_require__(33713);
-const SSMServiceException_1 = __nccwpck_require__(41103);
+const models_0_1 = __nccwpck_require__(21650);
+const models_1_1 = __nccwpck_require__(68919);
+const models_2_1 = __nccwpck_require__(34217);
+const SSMServiceException_1 = __nccwpck_require__(11500);
 const se_AddTagsToResourceCommand = async (input, context) => {
     const headers = sharedHeaders("AddTagsToResource");
     let body;
@@ -24183,7 +20992,7 @@ const loadRestJsonErrorCode = (output, data) => {
 
 /***/ }),
 
-/***/ 41138:
+/***/ 66274:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24191,10 +21000,10 @@ const loadRestJsonErrorCode = (output, data) => {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(83134);
-const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(9592));
-const client_sts_1 = __nccwpck_require__(55347);
-const core_1 = __nccwpck_require__(73696);
-const credential_provider_node_1 = __nccwpck_require__(47976);
+const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(6809));
+const client_sts_1 = __nccwpck_require__(87312);
+const core_1 = __nccwpck_require__(36693);
+const credential_provider_node_1 = __nccwpck_require__(28389);
 const util_user_agent_node_1 = __nccwpck_require__(68518);
 const config_resolver_1 = __nccwpck_require__(95375);
 const hash_node_1 = __nccwpck_require__(46969);
@@ -24203,7 +21012,7 @@ const node_config_provider_1 = __nccwpck_require__(20414);
 const node_http_handler_1 = __nccwpck_require__(18552);
 const util_body_length_node_1 = __nccwpck_require__(87358);
 const util_retry_1 = __nccwpck_require__(48168);
-const runtimeConfig_shared_1 = __nccwpck_require__(94595);
+const runtimeConfig_shared_1 = __nccwpck_require__(3265);
 const smithy_client_1 = __nccwpck_require__(55078);
 const util_defaults_mode_node_1 = __nccwpck_require__(33400);
 const smithy_client_2 = __nccwpck_require__(55078);
@@ -24241,7 +21050,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 94595:
+/***/ 3265:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24252,7 +21061,7 @@ const smithy_client_1 = __nccwpck_require__(55078);
 const url_parser_1 = __nccwpck_require__(37133);
 const util_base64_1 = __nccwpck_require__(78612);
 const util_utf8_1 = __nccwpck_require__(79374);
-const endpointResolver_1 = __nccwpck_require__(4004);
+const endpointResolver_1 = __nccwpck_require__(57216);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2014-11-06",
@@ -24273,7 +21082,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 39761:
+/***/ 53948:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24303,19 +21112,19 @@ exports.resolveRuntimeExtensions = resolveRuntimeExtensions;
 
 /***/ }),
 
-/***/ 36910:
+/***/ 53938:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(75291), exports);
+tslib_1.__exportStar(__nccwpck_require__(53764), exports);
 
 
 /***/ }),
 
-/***/ 75291:
+/***/ 53764:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24323,7 +21132,7 @@ tslib_1.__exportStar(__nccwpck_require__(75291), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.waitUntilCommandExecuted = exports.waitForCommandExecuted = void 0;
 const util_waiter_1 = __nccwpck_require__(13773);
-const GetCommandInvocationCommand_1 = __nccwpck_require__(28174);
+const GetCommandInvocationCommand_1 = __nccwpck_require__(3881);
 const checkState = async (client, input) => {
     let reason;
     try {
@@ -24425,7 +21234,7 @@ exports.waitUntilCommandExecuted = waitUntilCommandExecuted;
 
 /***/ }),
 
-/***/ 66009:
+/***/ 4709:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24433,11 +21242,11 @@ exports.waitUntilCommandExecuted = waitUntilCommandExecuted;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SSO = void 0;
 const smithy_client_1 = __nccwpck_require__(55078);
-const GetRoleCredentialsCommand_1 = __nccwpck_require__(69217);
-const ListAccountRolesCommand_1 = __nccwpck_require__(8481);
-const ListAccountsCommand_1 = __nccwpck_require__(94882);
-const LogoutCommand_1 = __nccwpck_require__(43423);
-const SSOClient_1 = __nccwpck_require__(50089);
+const GetRoleCredentialsCommand_1 = __nccwpck_require__(90444);
+const ListAccountRolesCommand_1 = __nccwpck_require__(23431);
+const ListAccountsCommand_1 = __nccwpck_require__(69281);
+const LogoutCommand_1 = __nccwpck_require__(83456);
+const SSOClient_1 = __nccwpck_require__(1213);
 const commands = {
     GetRoleCredentialsCommand: GetRoleCredentialsCommand_1.GetRoleCredentialsCommand,
     ListAccountRolesCommand: ListAccountRolesCommand_1.ListAccountRolesCommand,
@@ -24452,7 +21261,7 @@ exports.SSO = SSO;
 
 /***/ }),
 
-/***/ 50089:
+/***/ 1213:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24469,9 +21278,9 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_retry_1 = __nccwpck_require__(12620);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "__Client", ({ enumerable: true, get: function () { return smithy_client_1.Client; } }));
-const EndpointParameters_1 = __nccwpck_require__(3739);
-const runtimeConfig_1 = __nccwpck_require__(39430);
-const runtimeExtensions_1 = __nccwpck_require__(47649);
+const EndpointParameters_1 = __nccwpck_require__(98333);
+const runtimeConfig_1 = __nccwpck_require__(91674);
+const runtimeExtensions_1 = __nccwpck_require__(65262);
 class SSOClient extends smithy_client_1.Client {
     constructor(...[configuration]) {
         const _config_0 = (0, runtimeConfig_1.getRuntimeConfig)(configuration || {});
@@ -24500,7 +21309,7 @@ exports.SSOClient = SSOClient;
 
 /***/ }),
 
-/***/ 69217:
+/***/ 90444:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24511,56 +21320,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(75443);
-const Aws_restJson1_1 = __nccwpck_require__(34392);
-class GetRoleCredentialsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetRoleCredentialsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSOClient";
-        const commandName = "GetRoleCredentialsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.GetRoleCredentialsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.GetRoleCredentialsResponseFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "SWBPortalService",
-                operation: "GetRoleCredentials",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_restJson1_1.se_GetRoleCredentialsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_restJson1_1.de_GetRoleCredentialsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(98333);
+const models_0_1 = __nccwpck_require__(89086);
+const Aws_restJson1_1 = __nccwpck_require__(58675);
+class GetRoleCredentialsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("SWBPortalService", "GetRoleCredentials", {})
+    .n("SSOClient", "GetRoleCredentialsCommand")
+    .f(models_0_1.GetRoleCredentialsRequestFilterSensitiveLog, models_0_1.GetRoleCredentialsResponseFilterSensitiveLog)
+    .ser(Aws_restJson1_1.se_GetRoleCredentialsCommand)
+    .de(Aws_restJson1_1.de_GetRoleCredentialsCommand)
+    .build() {
 }
 exports.GetRoleCredentialsCommand = GetRoleCredentialsCommand;
 
 
 /***/ }),
 
-/***/ 8481:
+/***/ 23431:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24571,56 +21357,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(75443);
-const Aws_restJson1_1 = __nccwpck_require__(34392);
-class ListAccountRolesCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListAccountRolesCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSOClient";
-        const commandName = "ListAccountRolesCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.ListAccountRolesRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "SWBPortalService",
-                operation: "ListAccountRoles",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_restJson1_1.se_ListAccountRolesCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_restJson1_1.de_ListAccountRolesCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(98333);
+const models_0_1 = __nccwpck_require__(89086);
+const Aws_restJson1_1 = __nccwpck_require__(58675);
+class ListAccountRolesCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("SWBPortalService", "ListAccountRoles", {})
+    .n("SSOClient", "ListAccountRolesCommand")
+    .f(models_0_1.ListAccountRolesRequestFilterSensitiveLog, void 0)
+    .ser(Aws_restJson1_1.se_ListAccountRolesCommand)
+    .de(Aws_restJson1_1.de_ListAccountRolesCommand)
+    .build() {
 }
 exports.ListAccountRolesCommand = ListAccountRolesCommand;
 
 
 /***/ }),
 
-/***/ 94882:
+/***/ 69281:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24631,56 +21394,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(75443);
-const Aws_restJson1_1 = __nccwpck_require__(34392);
-class ListAccountsCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, ListAccountsCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSOClient";
-        const commandName = "ListAccountsCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.ListAccountsRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "SWBPortalService",
-                operation: "ListAccounts",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_restJson1_1.se_ListAccountsCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_restJson1_1.de_ListAccountsCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(98333);
+const models_0_1 = __nccwpck_require__(89086);
+const Aws_restJson1_1 = __nccwpck_require__(58675);
+class ListAccountsCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("SWBPortalService", "ListAccounts", {})
+    .n("SSOClient", "ListAccountsCommand")
+    .f(models_0_1.ListAccountsRequestFilterSensitiveLog, void 0)
+    .ser(Aws_restJson1_1.se_ListAccountsCommand)
+    .de(Aws_restJson1_1.de_ListAccountsCommand)
+    .build() {
 }
 exports.ListAccountsCommand = ListAccountsCommand;
 
 
 /***/ }),
 
-/***/ 43423:
+/***/ 83456:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24691,77 +21431,54 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(75443);
-const Aws_restJson1_1 = __nccwpck_require__(34392);
-class LogoutCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, LogoutCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "SSOClient";
-        const commandName = "LogoutCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.LogoutRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "SWBPortalService",
-                operation: "Logout",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_restJson1_1.se_LogoutCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_restJson1_1.de_LogoutCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(98333);
+const models_0_1 = __nccwpck_require__(89086);
+const Aws_restJson1_1 = __nccwpck_require__(58675);
+class LogoutCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("SWBPortalService", "Logout", {})
+    .n("SSOClient", "LogoutCommand")
+    .f(models_0_1.LogoutRequestFilterSensitiveLog, void 0)
+    .ser(Aws_restJson1_1.se_LogoutCommand)
+    .de(Aws_restJson1_1.de_LogoutCommand)
+    .build() {
 }
 exports.LogoutCommand = LogoutCommand;
 
 
 /***/ }),
 
-/***/ 10951:
+/***/ 49268:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(69217), exports);
-tslib_1.__exportStar(__nccwpck_require__(8481), exports);
-tslib_1.__exportStar(__nccwpck_require__(94882), exports);
-tslib_1.__exportStar(__nccwpck_require__(43423), exports);
+tslib_1.__exportStar(__nccwpck_require__(90444), exports);
+tslib_1.__exportStar(__nccwpck_require__(23431), exports);
+tslib_1.__exportStar(__nccwpck_require__(69281), exports);
+tslib_1.__exportStar(__nccwpck_require__(83456), exports);
 
 
 /***/ }),
 
-/***/ 3739:
+/***/ 98333:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.resolveClientEndpointParameters = void 0;
+exports.commonParams = exports.resolveClientEndpointParameters = void 0;
 const resolveClientEndpointParameters = (options) => {
     return {
         ...options,
@@ -24771,11 +21488,17 @@ const resolveClientEndpointParameters = (options) => {
     };
 };
 exports.resolveClientEndpointParameters = resolveClientEndpointParameters;
+exports.commonParams = {
+    UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
+    Endpoint: { type: "builtInParams", name: "endpoint" },
+    Region: { type: "builtInParams", name: "region" },
+    UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
+};
 
 
 /***/ }),
 
-/***/ 44106:
+/***/ 26259:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24783,7 +21506,7 @@ exports.resolveClientEndpointParameters = resolveClientEndpointParameters;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __nccwpck_require__(90976);
-const ruleset_1 = __nccwpck_require__(1461);
+const ruleset_1 = __nccwpck_require__(91863);
 const defaultEndpointResolver = (endpointParams, context = {}) => {
     return (0, util_endpoints_1.resolveEndpoint)(ruleset_1.ruleSet, {
         endpointParams: endpointParams,
@@ -24795,7 +21518,7 @@ exports.defaultEndpointResolver = defaultEndpointResolver;
 
 /***/ }),
 
-/***/ 1461:
+/***/ 91863:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -24810,7 +21533,7 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 49836:
+/***/ 40643:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24818,19 +21541,19 @@ exports.ruleSet = _data;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SSOServiceException = void 0;
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(50089), exports);
-tslib_1.__exportStar(__nccwpck_require__(66009), exports);
-tslib_1.__exportStar(__nccwpck_require__(10951), exports);
-tslib_1.__exportStar(__nccwpck_require__(11777), exports);
-tslib_1.__exportStar(__nccwpck_require__(51743), exports);
+tslib_1.__exportStar(__nccwpck_require__(1213), exports);
+tslib_1.__exportStar(__nccwpck_require__(4709), exports);
+tslib_1.__exportStar(__nccwpck_require__(49268), exports);
+tslib_1.__exportStar(__nccwpck_require__(50490), exports);
+tslib_1.__exportStar(__nccwpck_require__(48230), exports);
 __nccwpck_require__(58996);
-var SSOServiceException_1 = __nccwpck_require__(27970);
+var SSOServiceException_1 = __nccwpck_require__(79193);
 Object.defineProperty(exports, "SSOServiceException", ({ enumerable: true, get: function () { return SSOServiceException_1.SSOServiceException; } }));
 
 
 /***/ }),
 
-/***/ 27970:
+/***/ 79193:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24850,19 +21573,19 @@ exports.SSOServiceException = SSOServiceException;
 
 /***/ }),
 
-/***/ 51743:
+/***/ 48230:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(75443), exports);
+tslib_1.__exportStar(__nccwpck_require__(89086), exports);
 
 
 /***/ }),
 
-/***/ 75443:
+/***/ 89086:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24870,7 +21593,7 @@ tslib_1.__exportStar(__nccwpck_require__(75443), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LogoutRequestFilterSensitiveLog = exports.ListAccountsRequestFilterSensitiveLog = exports.ListAccountRolesRequestFilterSensitiveLog = exports.GetRoleCredentialsResponseFilterSensitiveLog = exports.RoleCredentialsFilterSensitiveLog = exports.GetRoleCredentialsRequestFilterSensitiveLog = exports.UnauthorizedException = exports.TooManyRequestsException = exports.ResourceNotFoundException = exports.InvalidRequestException = void 0;
 const smithy_client_1 = __nccwpck_require__(55078);
-const SSOServiceException_1 = __nccwpck_require__(27970);
+const SSOServiceException_1 = __nccwpck_require__(79193);
 class InvalidRequestException extends SSOServiceException_1.SSOServiceException {
     constructor(opts) {
         super({
@@ -24958,7 +21681,7 @@ exports.LogoutRequestFilterSensitiveLog = LogoutRequestFilterSensitiveLog;
 
 /***/ }),
 
-/***/ 77219:
+/***/ 87166:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -24968,7 +21691,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 97125:
+/***/ 47514:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24976,14 +21699,14 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListAccountRoles = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListAccountRolesCommand_1 = __nccwpck_require__(8481);
-const SSOClient_1 = __nccwpck_require__(50089);
+const ListAccountRolesCommand_1 = __nccwpck_require__(23431);
+const SSOClient_1 = __nccwpck_require__(1213);
 exports.paginateListAccountRoles = (0, core_1.createPaginator)(SSOClient_1.SSOClient, ListAccountRolesCommand_1.ListAccountRolesCommand, "nextToken", "nextToken", "maxResults");
 
 
 /***/ }),
 
-/***/ 3321:
+/***/ 38301:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24991,28 +21714,28 @@ exports.paginateListAccountRoles = (0, core_1.createPaginator)(SSOClient_1.SSOCl
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.paginateListAccounts = void 0;
 const core_1 = __nccwpck_require__(6442);
-const ListAccountsCommand_1 = __nccwpck_require__(94882);
-const SSOClient_1 = __nccwpck_require__(50089);
+const ListAccountsCommand_1 = __nccwpck_require__(69281);
+const SSOClient_1 = __nccwpck_require__(1213);
 exports.paginateListAccounts = (0, core_1.createPaginator)(SSOClient_1.SSOClient, ListAccountsCommand_1.ListAccountsCommand, "nextToken", "nextToken", "maxResults");
 
 
 /***/ }),
 
-/***/ 11777:
+/***/ 50490:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(77219), exports);
-tslib_1.__exportStar(__nccwpck_require__(97125), exports);
-tslib_1.__exportStar(__nccwpck_require__(3321), exports);
+tslib_1.__exportStar(__nccwpck_require__(87166), exports);
+tslib_1.__exportStar(__nccwpck_require__(47514), exports);
+tslib_1.__exportStar(__nccwpck_require__(38301), exports);
 
 
 /***/ }),
 
-/***/ 34392:
+/***/ 58675:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25021,8 +21744,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.de_LogoutCommand = exports.de_ListAccountsCommand = exports.de_ListAccountRolesCommand = exports.de_GetRoleCredentialsCommand = exports.se_LogoutCommand = exports.se_ListAccountsCommand = exports.se_ListAccountRolesCommand = exports.se_GetRoleCredentialsCommand = void 0;
 const core_1 = __nccwpck_require__(6442);
 const smithy_client_1 = __nccwpck_require__(55078);
-const models_0_1 = __nccwpck_require__(75443);
-const SSOServiceException_1 = __nccwpck_require__(27970);
+const models_0_1 = __nccwpck_require__(89086);
+const SSOServiceException_1 = __nccwpck_require__(79193);
 const se_GetRoleCredentialsCommand = async (input, context) => {
     const b = (0, core_1.requestBuilder)(input, context);
     const headers = (0, smithy_client_1.map)({}, isSerializableHeaderValue, {
@@ -25366,7 +22089,7 @@ const loadRestJsonErrorCode = (output, data) => {
 
 /***/ }),
 
-/***/ 39430:
+/***/ 91674:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25374,8 +22097,8 @@ const loadRestJsonErrorCode = (output, data) => {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(83134);
-const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(59676));
-const core_1 = __nccwpck_require__(73696);
+const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(55663));
+const core_1 = __nccwpck_require__(36693);
 const util_user_agent_node_1 = __nccwpck_require__(68518);
 const config_resolver_1 = __nccwpck_require__(95375);
 const hash_node_1 = __nccwpck_require__(46969);
@@ -25384,7 +22107,7 @@ const node_config_provider_1 = __nccwpck_require__(20414);
 const node_http_handler_1 = __nccwpck_require__(18552);
 const util_body_length_node_1 = __nccwpck_require__(87358);
 const util_retry_1 = __nccwpck_require__(48168);
-const runtimeConfig_shared_1 = __nccwpck_require__(9080);
+const runtimeConfig_shared_1 = __nccwpck_require__(91723);
 const smithy_client_1 = __nccwpck_require__(55078);
 const util_defaults_mode_node_1 = __nccwpck_require__(33400);
 const smithy_client_2 = __nccwpck_require__(55078);
@@ -25421,7 +22144,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 9080:
+/***/ 91723:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25432,7 +22155,7 @@ const smithy_client_1 = __nccwpck_require__(55078);
 const url_parser_1 = __nccwpck_require__(37133);
 const util_base64_1 = __nccwpck_require__(78612);
 const util_utf8_1 = __nccwpck_require__(79374);
-const endpointResolver_1 = __nccwpck_require__(44106);
+const endpointResolver_1 = __nccwpck_require__(26259);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2019-06-10",
@@ -25453,7 +22176,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 47649:
+/***/ 65262:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25483,7 +22206,7 @@ exports.resolveRuntimeExtensions = resolveRuntimeExtensions;
 
 /***/ }),
 
-/***/ 22922:
+/***/ 67683:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25491,15 +22214,15 @@ exports.resolveRuntimeExtensions = resolveRuntimeExtensions;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.STS = void 0;
 const smithy_client_1 = __nccwpck_require__(55078);
-const AssumeRoleCommand_1 = __nccwpck_require__(8611);
-const AssumeRoleWithSAMLCommand_1 = __nccwpck_require__(37637);
-const AssumeRoleWithWebIdentityCommand_1 = __nccwpck_require__(82834);
-const DecodeAuthorizationMessageCommand_1 = __nccwpck_require__(2491);
-const GetAccessKeyInfoCommand_1 = __nccwpck_require__(77542);
-const GetCallerIdentityCommand_1 = __nccwpck_require__(4852);
-const GetFederationTokenCommand_1 = __nccwpck_require__(6863);
-const GetSessionTokenCommand_1 = __nccwpck_require__(59522);
-const STSClient_1 = __nccwpck_require__(12529);
+const AssumeRoleCommand_1 = __nccwpck_require__(83251);
+const AssumeRoleWithSAMLCommand_1 = __nccwpck_require__(80737);
+const AssumeRoleWithWebIdentityCommand_1 = __nccwpck_require__(97278);
+const DecodeAuthorizationMessageCommand_1 = __nccwpck_require__(31444);
+const GetAccessKeyInfoCommand_1 = __nccwpck_require__(79379);
+const GetCallerIdentityCommand_1 = __nccwpck_require__(76418);
+const GetFederationTokenCommand_1 = __nccwpck_require__(89675);
+const GetSessionTokenCommand_1 = __nccwpck_require__(61925);
+const STSClient_1 = __nccwpck_require__(42063);
 const commands = {
     AssumeRoleCommand: AssumeRoleCommand_1.AssumeRoleCommand,
     AssumeRoleWithSAMLCommand: AssumeRoleWithSAMLCommand_1.AssumeRoleWithSAMLCommand,
@@ -25518,7 +22241,7 @@ exports.STS = STS;
 
 /***/ }),
 
-/***/ 12529:
+/***/ 42063:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25536,10 +22259,10 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_retry_1 = __nccwpck_require__(12620);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "__Client", ({ enumerable: true, get: function () { return smithy_client_1.Client; } }));
-const httpAuthSchemeProvider_1 = __nccwpck_require__(12891);
-const EndpointParameters_1 = __nccwpck_require__(91002);
-const runtimeConfig_1 = __nccwpck_require__(28998);
-const runtimeExtensions_1 = __nccwpck_require__(99643);
+const httpAuthSchemeProvider_1 = __nccwpck_require__(99343);
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const runtimeConfig_1 = __nccwpck_require__(65574);
+const runtimeExtensions_1 = __nccwpck_require__(19021);
 class STSClient extends smithy_client_1.Client {
     getDefaultHttpAuthSchemeParametersProvider() {
         return httpAuthSchemeProvider_1.defaultSTSHttpAuthSchemeParametersProvider;
@@ -25582,7 +22305,7 @@ exports.STSClient = STSClient;
 
 /***/ }),
 
-/***/ 98854:
+/***/ 15293:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -25633,16 +22356,16 @@ exports.resolveHttpAuthRuntimeConfig = resolveHttpAuthRuntimeConfig;
 
 /***/ }),
 
-/***/ 12891:
+/***/ 99343:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveHttpAuthSchemeConfig = exports.resolveStsAuthConfig = exports.defaultSTSHttpAuthSchemeProvider = exports.defaultSTSHttpAuthSchemeParametersProvider = void 0;
-const core_1 = __nccwpck_require__(73696);
+const core_1 = __nccwpck_require__(36693);
 const util_middleware_1 = __nccwpck_require__(23239);
-const STSClient_1 = __nccwpck_require__(12529);
+const STSClient_1 = __nccwpck_require__(42063);
 const defaultSTSHttpAuthSchemeParametersProvider = async (config, context, input) => {
     return {
         operation: (0, util_middleware_1.getSmithyContext)(context).operation,
@@ -25708,7 +22431,7 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 
 /***/ }),
 
-/***/ 8611:
+/***/ 83251:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25719,57 +22442,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(86128);
-const Aws_query_1 = __nccwpck_require__(21526);
-class AssumeRoleCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, AssumeRoleCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "STSClient";
-        const commandName = "AssumeRoleCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleResponseFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AWSSecurityTokenServiceV20110615",
-                operation: "AssumeRole",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_query_1.se_AssumeRoleCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_query_1.de_AssumeRoleCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const models_0_1 = __nccwpck_require__(63114);
+const Aws_query_1 = __nccwpck_require__(68200);
+class AssumeRoleCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AWSSecurityTokenServiceV20110615", "AssumeRole", {})
+    .n("STSClient", "AssumeRoleCommand")
+    .f(void 0, models_0_1.AssumeRoleResponseFilterSensitiveLog)
+    .ser(Aws_query_1.se_AssumeRoleCommand)
+    .de(Aws_query_1.de_AssumeRoleCommand)
+    .build() {
 }
 exports.AssumeRoleCommand = AssumeRoleCommand;
 
 
 /***/ }),
 
-/***/ 37637:
+/***/ 80737:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25780,57 +22479,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(86128);
-const Aws_query_1 = __nccwpck_require__(21526);
-class AssumeRoleWithSAMLCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, AssumeRoleWithSAMLCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "STSClient";
-        const commandName = "AssumeRoleWithSAMLCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleWithSAMLResponseFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AWSSecurityTokenServiceV20110615",
-                operation: "AssumeRoleWithSAML",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_query_1.se_AssumeRoleWithSAMLCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_query_1.de_AssumeRoleWithSAMLCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const models_0_1 = __nccwpck_require__(63114);
+const Aws_query_1 = __nccwpck_require__(68200);
+class AssumeRoleWithSAMLCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AWSSecurityTokenServiceV20110615", "AssumeRoleWithSAML", {})
+    .n("STSClient", "AssumeRoleWithSAMLCommand")
+    .f(models_0_1.AssumeRoleWithSAMLRequestFilterSensitiveLog, models_0_1.AssumeRoleWithSAMLResponseFilterSensitiveLog)
+    .ser(Aws_query_1.se_AssumeRoleWithSAMLCommand)
+    .de(Aws_query_1.de_AssumeRoleWithSAMLCommand)
+    .build() {
 }
 exports.AssumeRoleWithSAMLCommand = AssumeRoleWithSAMLCommand;
 
 
 /***/ }),
 
-/***/ 82834:
+/***/ 97278:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25841,57 +22516,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(86128);
-const Aws_query_1 = __nccwpck_require__(21526);
-class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, AssumeRoleWithWebIdentityCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "STSClient";
-        const commandName = "AssumeRoleWithWebIdentityCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityRequestFilterSensitiveLog,
-            outputFilterSensitiveLog: models_0_1.AssumeRoleWithWebIdentityResponseFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AWSSecurityTokenServiceV20110615",
-                operation: "AssumeRoleWithWebIdentity",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_query_1.se_AssumeRoleWithWebIdentityCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_query_1.de_AssumeRoleWithWebIdentityCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const models_0_1 = __nccwpck_require__(63114);
+const Aws_query_1 = __nccwpck_require__(68200);
+class AssumeRoleWithWebIdentityCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AWSSecurityTokenServiceV20110615", "AssumeRoleWithWebIdentity", {})
+    .n("STSClient", "AssumeRoleWithWebIdentityCommand")
+    .f(models_0_1.AssumeRoleWithWebIdentityRequestFilterSensitiveLog, models_0_1.AssumeRoleWithWebIdentityResponseFilterSensitiveLog)
+    .ser(Aws_query_1.se_AssumeRoleWithWebIdentityCommand)
+    .de(Aws_query_1.de_AssumeRoleWithWebIdentityCommand)
+    .build() {
 }
 exports.AssumeRoleWithWebIdentityCommand = AssumeRoleWithWebIdentityCommand;
 
 
 /***/ }),
 
-/***/ 2491:
+/***/ 31444:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25902,56 +22553,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_query_1 = __nccwpck_require__(21526);
-class DecodeAuthorizationMessageCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, DecodeAuthorizationMessageCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "STSClient";
-        const commandName = "DecodeAuthorizationMessageCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AWSSecurityTokenServiceV20110615",
-                operation: "DecodeAuthorizationMessage",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_query_1.se_DecodeAuthorizationMessageCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_query_1.de_DecodeAuthorizationMessageCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const Aws_query_1 = __nccwpck_require__(68200);
+class DecodeAuthorizationMessageCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AWSSecurityTokenServiceV20110615", "DecodeAuthorizationMessage", {})
+    .n("STSClient", "DecodeAuthorizationMessageCommand")
+    .f(void 0, void 0)
+    .ser(Aws_query_1.se_DecodeAuthorizationMessageCommand)
+    .de(Aws_query_1.de_DecodeAuthorizationMessageCommand)
+    .build() {
 }
 exports.DecodeAuthorizationMessageCommand = DecodeAuthorizationMessageCommand;
 
 
 /***/ }),
 
-/***/ 77542:
+/***/ 79379:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -25962,56 +22589,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_query_1 = __nccwpck_require__(21526);
-class GetAccessKeyInfoCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetAccessKeyInfoCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "STSClient";
-        const commandName = "GetAccessKeyInfoCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AWSSecurityTokenServiceV20110615",
-                operation: "GetAccessKeyInfo",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_query_1.se_GetAccessKeyInfoCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_query_1.de_GetAccessKeyInfoCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const Aws_query_1 = __nccwpck_require__(68200);
+class GetAccessKeyInfoCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AWSSecurityTokenServiceV20110615", "GetAccessKeyInfo", {})
+    .n("STSClient", "GetAccessKeyInfoCommand")
+    .f(void 0, void 0)
+    .ser(Aws_query_1.se_GetAccessKeyInfoCommand)
+    .de(Aws_query_1.de_GetAccessKeyInfoCommand)
+    .build() {
 }
 exports.GetAccessKeyInfoCommand = GetAccessKeyInfoCommand;
 
 
 /***/ }),
 
-/***/ 4852:
+/***/ 76418:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26022,56 +22625,32 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const Aws_query_1 = __nccwpck_require__(21526);
-class GetCallerIdentityCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetCallerIdentityCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "STSClient";
-        const commandName = "GetCallerIdentityCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: (_) => _,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AWSSecurityTokenServiceV20110615",
-                operation: "GetCallerIdentity",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_query_1.se_GetCallerIdentityCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_query_1.de_GetCallerIdentityCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const Aws_query_1 = __nccwpck_require__(68200);
+class GetCallerIdentityCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AWSSecurityTokenServiceV20110615", "GetCallerIdentity", {})
+    .n("STSClient", "GetCallerIdentityCommand")
+    .f(void 0, void 0)
+    .ser(Aws_query_1.se_GetCallerIdentityCommand)
+    .de(Aws_query_1.de_GetCallerIdentityCommand)
+    .build() {
 }
 exports.GetCallerIdentityCommand = GetCallerIdentityCommand;
 
 
 /***/ }),
 
-/***/ 6863:
+/***/ 89675:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26082,57 +22661,33 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(86128);
-const Aws_query_1 = __nccwpck_require__(21526);
-class GetFederationTokenCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetFederationTokenCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "STSClient";
-        const commandName = "GetFederationTokenCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.GetFederationTokenResponseFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AWSSecurityTokenServiceV20110615",
-                operation: "GetFederationToken",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_query_1.se_GetFederationTokenCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_query_1.de_GetFederationTokenCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const models_0_1 = __nccwpck_require__(63114);
+const Aws_query_1 = __nccwpck_require__(68200);
+class GetFederationTokenCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AWSSecurityTokenServiceV20110615", "GetFederationToken", {})
+    .n("STSClient", "GetFederationTokenCommand")
+    .f(void 0, models_0_1.GetFederationTokenResponseFilterSensitiveLog)
+    .ser(Aws_query_1.se_GetFederationTokenCommand)
+    .de(Aws_query_1.de_GetFederationTokenCommand)
+    .build() {
 }
 exports.GetFederationTokenCommand = GetFederationTokenCommand;
 
 
 /***/ }),
 
-/***/ 59522:
+/***/ 61925:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26143,84 +22698,60 @@ const middleware_endpoint_1 = __nccwpck_require__(40217);
 const middleware_serde_1 = __nccwpck_require__(77129);
 const smithy_client_1 = __nccwpck_require__(55078);
 Object.defineProperty(exports, "$Command", ({ enumerable: true, get: function () { return smithy_client_1.Command; } }));
-const types_1 = __nccwpck_require__(58640);
-const models_0_1 = __nccwpck_require__(86128);
-const Aws_query_1 = __nccwpck_require__(21526);
-class GetSessionTokenCommand extends smithy_client_1.Command {
-    static getEndpointParameterInstructions() {
-        return {
-            UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
-            UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
-            Endpoint: { type: "builtInParams", name: "endpoint" },
-            Region: { type: "builtInParams", name: "region" },
-            UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
-        };
-    }
-    constructor(input) {
-        super();
-        this.input = input;
-    }
-    resolveMiddleware(clientStack, configuration, options) {
-        this.middlewareStack.use((0, middleware_serde_1.getSerdePlugin)(configuration, this.serialize, this.deserialize));
-        this.middlewareStack.use((0, middleware_endpoint_1.getEndpointPlugin)(configuration, GetSessionTokenCommand.getEndpointParameterInstructions()));
-        const stack = clientStack.concat(this.middlewareStack);
-        const { logger } = configuration;
-        const clientName = "STSClient";
-        const commandName = "GetSessionTokenCommand";
-        const handlerExecutionContext = {
-            logger,
-            clientName,
-            commandName,
-            inputFilterSensitiveLog: (_) => _,
-            outputFilterSensitiveLog: models_0_1.GetSessionTokenResponseFilterSensitiveLog,
-            [types_1.SMITHY_CONTEXT_KEY]: {
-                service: "AWSSecurityTokenServiceV20110615",
-                operation: "GetSessionToken",
-            },
-        };
-        const { requestHandler } = configuration;
-        return stack.resolve((request) => requestHandler.handle(request.request, options || {}), handlerExecutionContext);
-    }
-    serialize(input, context) {
-        return (0, Aws_query_1.se_GetSessionTokenCommand)(input, context);
-    }
-    deserialize(output, context) {
-        return (0, Aws_query_1.de_GetSessionTokenCommand)(output, context);
-    }
+const EndpointParameters_1 = __nccwpck_require__(73131);
+const models_0_1 = __nccwpck_require__(63114);
+const Aws_query_1 = __nccwpck_require__(68200);
+class GetSessionTokenCommand extends smithy_client_1.Command
+    .classBuilder()
+    .ep({
+    ...EndpointParameters_1.commonParams,
+})
+    .m(function (Command, cs, config, o) {
+    return [
+        (0, middleware_serde_1.getSerdePlugin)(config, this.serialize, this.deserialize),
+        (0, middleware_endpoint_1.getEndpointPlugin)(config, Command.getEndpointParameterInstructions()),
+    ];
+})
+    .s("AWSSecurityTokenServiceV20110615", "GetSessionToken", {})
+    .n("STSClient", "GetSessionTokenCommand")
+    .f(void 0, models_0_1.GetSessionTokenResponseFilterSensitiveLog)
+    .ser(Aws_query_1.se_GetSessionTokenCommand)
+    .de(Aws_query_1.de_GetSessionTokenCommand)
+    .build() {
 }
 exports.GetSessionTokenCommand = GetSessionTokenCommand;
 
 
 /***/ }),
 
-/***/ 97892:
+/***/ 45016:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(8611), exports);
-tslib_1.__exportStar(__nccwpck_require__(37637), exports);
-tslib_1.__exportStar(__nccwpck_require__(82834), exports);
-tslib_1.__exportStar(__nccwpck_require__(2491), exports);
-tslib_1.__exportStar(__nccwpck_require__(77542), exports);
-tslib_1.__exportStar(__nccwpck_require__(4852), exports);
-tslib_1.__exportStar(__nccwpck_require__(6863), exports);
-tslib_1.__exportStar(__nccwpck_require__(59522), exports);
+tslib_1.__exportStar(__nccwpck_require__(83251), exports);
+tslib_1.__exportStar(__nccwpck_require__(80737), exports);
+tslib_1.__exportStar(__nccwpck_require__(97278), exports);
+tslib_1.__exportStar(__nccwpck_require__(31444), exports);
+tslib_1.__exportStar(__nccwpck_require__(79379), exports);
+tslib_1.__exportStar(__nccwpck_require__(76418), exports);
+tslib_1.__exportStar(__nccwpck_require__(89675), exports);
+tslib_1.__exportStar(__nccwpck_require__(61925), exports);
 
 
 /***/ }),
 
-/***/ 39281:
+/***/ 51540:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.decorateDefaultCredentialProvider = exports.getDefaultRoleAssumerWithWebIdentity = exports.getDefaultRoleAssumer = void 0;
-const defaultStsRoleAssumers_1 = __nccwpck_require__(93907);
-const STSClient_1 = __nccwpck_require__(12529);
+const defaultStsRoleAssumers_1 = __nccwpck_require__(3551);
+const STSClient_1 = __nccwpck_require__(42063);
 const getCustomizableStsClientCtor = (baseCtor, customizations) => {
     if (!customizations)
         return baseCtor;
@@ -26248,15 +22779,15 @@ exports.decorateDefaultCredentialProvider = decorateDefaultCredentialProvider;
 
 /***/ }),
 
-/***/ 93907:
+/***/ 3551:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.decorateDefaultCredentialProvider = exports.getDefaultRoleAssumerWithWebIdentity = exports.getDefaultRoleAssumer = void 0;
-const AssumeRoleCommand_1 = __nccwpck_require__(8611);
-const AssumeRoleWithWebIdentityCommand_1 = __nccwpck_require__(82834);
+const AssumeRoleCommand_1 = __nccwpck_require__(83251);
+const AssumeRoleWithWebIdentityCommand_1 = __nccwpck_require__(97278);
 const ASSUME_ROLE_DEFAULT_REGION = "us-east-1";
 const decorateDefaultRegion = (region) => {
     if (typeof region !== "function") {
@@ -26332,13 +22863,13 @@ exports.decorateDefaultCredentialProvider = decorateDefaultCredentialProvider;
 
 /***/ }),
 
-/***/ 91002:
+/***/ 73131:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.resolveClientEndpointParameters = void 0;
+exports.commonParams = exports.resolveClientEndpointParameters = void 0;
 const resolveClientEndpointParameters = (options) => {
     return {
         ...options,
@@ -26349,11 +22880,18 @@ const resolveClientEndpointParameters = (options) => {
     };
 };
 exports.resolveClientEndpointParameters = resolveClientEndpointParameters;
+exports.commonParams = {
+    UseGlobalEndpoint: { type: "builtInParams", name: "useGlobalEndpoint" },
+    UseFIPS: { type: "builtInParams", name: "useFipsEndpoint" },
+    Endpoint: { type: "builtInParams", name: "endpoint" },
+    Region: { type: "builtInParams", name: "region" },
+    UseDualStack: { type: "builtInParams", name: "useDualstackEndpoint" },
+};
 
 
 /***/ }),
 
-/***/ 34211:
+/***/ 21490:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26361,7 +22899,7 @@ exports.resolveClientEndpointParameters = resolveClientEndpointParameters;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __nccwpck_require__(90976);
-const ruleset_1 = __nccwpck_require__(9041);
+const ruleset_1 = __nccwpck_require__(62699);
 const defaultEndpointResolver = (endpointParams, context = {}) => {
     return (0, util_endpoints_1.resolveEndpoint)(ruleset_1.ruleSet, {
         endpointParams: endpointParams,
@@ -26373,7 +22911,7 @@ exports.defaultEndpointResolver = defaultEndpointResolver;
 
 /***/ }),
 
-/***/ 9041:
+/***/ 62699:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -26388,7 +22926,7 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 55347:
+/***/ 87312:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26396,19 +22934,19 @@ exports.ruleSet = _data;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.STSServiceException = void 0;
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(12529), exports);
-tslib_1.__exportStar(__nccwpck_require__(22922), exports);
-tslib_1.__exportStar(__nccwpck_require__(97892), exports);
-tslib_1.__exportStar(__nccwpck_require__(23669), exports);
+tslib_1.__exportStar(__nccwpck_require__(42063), exports);
+tslib_1.__exportStar(__nccwpck_require__(67683), exports);
+tslib_1.__exportStar(__nccwpck_require__(45016), exports);
+tslib_1.__exportStar(__nccwpck_require__(53195), exports);
 __nccwpck_require__(58996);
-tslib_1.__exportStar(__nccwpck_require__(39281), exports);
-var STSServiceException_1 = __nccwpck_require__(35409);
+tslib_1.__exportStar(__nccwpck_require__(51540), exports);
+var STSServiceException_1 = __nccwpck_require__(80489);
 Object.defineProperty(exports, "STSServiceException", ({ enumerable: true, get: function () { return STSServiceException_1.STSServiceException; } }));
 
 
 /***/ }),
 
-/***/ 35409:
+/***/ 80489:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26428,19 +22966,19 @@ exports.STSServiceException = STSServiceException;
 
 /***/ }),
 
-/***/ 23669:
+/***/ 53195:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(86128), exports);
+tslib_1.__exportStar(__nccwpck_require__(63114), exports);
 
 
 /***/ }),
 
-/***/ 86128:
+/***/ 63114:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26448,7 +22986,7 @@ tslib_1.__exportStar(__nccwpck_require__(86128), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.GetSessionTokenResponseFilterSensitiveLog = exports.GetFederationTokenResponseFilterSensitiveLog = exports.AssumeRoleWithWebIdentityResponseFilterSensitiveLog = exports.AssumeRoleWithWebIdentityRequestFilterSensitiveLog = exports.AssumeRoleWithSAMLResponseFilterSensitiveLog = exports.AssumeRoleWithSAMLRequestFilterSensitiveLog = exports.AssumeRoleResponseFilterSensitiveLog = exports.CredentialsFilterSensitiveLog = exports.InvalidAuthorizationMessageException = exports.IDPCommunicationErrorException = exports.InvalidIdentityTokenException = exports.IDPRejectedClaimException = exports.RegionDisabledException = exports.PackedPolicyTooLargeException = exports.MalformedPolicyDocumentException = exports.ExpiredTokenException = void 0;
 const smithy_client_1 = __nccwpck_require__(55078);
-const STSServiceException_1 = __nccwpck_require__(35409);
+const STSServiceException_1 = __nccwpck_require__(80489);
 class ExpiredTokenException extends STSServiceException_1.STSServiceException {
     constructor(opts) {
         super({
@@ -26597,7 +23135,7 @@ exports.GetSessionTokenResponseFilterSensitiveLog = GetSessionTokenResponseFilte
 
 /***/ }),
 
-/***/ 21526:
+/***/ 68200:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -26607,8 +23145,8 @@ exports.de_GetSessionTokenCommand = exports.de_GetFederationTokenCommand = expor
 const protocol_http_1 = __nccwpck_require__(6249);
 const smithy_client_1 = __nccwpck_require__(55078);
 const fast_xml_parser_1 = __nccwpck_require__(51282);
-const models_0_1 = __nccwpck_require__(86128);
-const STSServiceException_1 = __nccwpck_require__(35409);
+const models_0_1 = __nccwpck_require__(63114);
+const STSServiceException_1 = __nccwpck_require__(80489);
 const se_AssumeRoleCommand = async (input, context) => {
     const headers = SHARED_HEADERS;
     let body;
@@ -27689,7 +24227,7 @@ const loadQueryErrorCode = (output, data) => {
 
 /***/ }),
 
-/***/ 28998:
+/***/ 65574:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -27697,10 +24235,10 @@ const loadQueryErrorCode = (output, data) => {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(83134);
-const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(70653));
-const defaultStsRoleAssumers_1 = __nccwpck_require__(93907);
-const core_1 = __nccwpck_require__(73696);
-const credential_provider_node_1 = __nccwpck_require__(47976);
+const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(81639));
+const defaultStsRoleAssumers_1 = __nccwpck_require__(3551);
+const core_1 = __nccwpck_require__(36693);
+const credential_provider_node_1 = __nccwpck_require__(28389);
 const util_user_agent_node_1 = __nccwpck_require__(68518);
 const config_resolver_1 = __nccwpck_require__(95375);
 const core_2 = __nccwpck_require__(6442);
@@ -27710,7 +24248,7 @@ const node_config_provider_1 = __nccwpck_require__(20414);
 const node_http_handler_1 = __nccwpck_require__(18552);
 const util_body_length_node_1 = __nccwpck_require__(87358);
 const util_retry_1 = __nccwpck_require__(48168);
-const runtimeConfig_shared_1 = __nccwpck_require__(56686);
+const runtimeConfig_shared_1 = __nccwpck_require__(12939);
 const smithy_client_1 = __nccwpck_require__(55078);
 const util_defaults_mode_node_1 = __nccwpck_require__(33400);
 const smithy_client_2 = __nccwpck_require__(55078);
@@ -27761,21 +24299,21 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 56686:
+/***/ 12939:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const core_1 = __nccwpck_require__(73696);
+const core_1 = __nccwpck_require__(36693);
 const core_2 = __nccwpck_require__(6442);
 const smithy_client_1 = __nccwpck_require__(55078);
 const url_parser_1 = __nccwpck_require__(37133);
 const util_base64_1 = __nccwpck_require__(78612);
 const util_utf8_1 = __nccwpck_require__(79374);
-const httpAuthSchemeProvider_1 = __nccwpck_require__(12891);
-const endpointResolver_1 = __nccwpck_require__(34211);
+const httpAuthSchemeProvider_1 = __nccwpck_require__(99343);
+const endpointResolver_1 = __nccwpck_require__(21490);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2011-06-15",
@@ -27809,7 +24347,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 99643:
+/***/ 19021:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -27819,7 +24357,7 @@ exports.resolveRuntimeExtensions = void 0;
 const region_config_resolver_1 = __nccwpck_require__(47938);
 const protocol_http_1 = __nccwpck_require__(6249);
 const smithy_client_1 = __nccwpck_require__(55078);
-const httpAuthExtensionConfiguration_1 = __nccwpck_require__(98854);
+const httpAuthExtensionConfiguration_1 = __nccwpck_require__(15293);
 const asPartial = (t) => t;
 const resolveRuntimeExtensions = (runtimeConfig, extensions) => {
     const extensionConfiguration = {
@@ -27842,7 +24380,7 @@ exports.resolveRuntimeExtensions = resolveRuntimeExtensions;
 
 /***/ }),
 
-/***/ 81590:
+/***/ 54149:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -27867,19 +24405,19 @@ exports.emitWarningIfUnsupportedVersion = emitWarningIfUnsupportedVersion;
 
 /***/ }),
 
-/***/ 59131:
+/***/ 89516:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(81590), exports);
+tslib_1.__exportStar(__nccwpck_require__(54149), exports);
 
 
 /***/ }),
 
-/***/ 24919:
+/***/ 12151:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -27887,8 +24425,8 @@ tslib_1.__exportStar(__nccwpck_require__(81590), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AWSSDKSigV4Signer = void 0;
 const protocol_http_1 = __nccwpck_require__(6249);
-const utils_1 = __nccwpck_require__(38811);
-const throwAWSSDKSigningPropertyError_1 = __nccwpck_require__(10963);
+const utils_1 = __nccwpck_require__(77836);
+const throwAWSSDKSigningPropertyError_1 = __nccwpck_require__(19898);
 const validateSigningProperties = async (signingProperties) => {
     var _a, _b, _c;
     const context = (0, throwAWSSDKSigningPropertyError_1.throwAWSSDKSigningPropertyError)("context", signingProperties.context);
@@ -27942,20 +24480,20 @@ exports.AWSSDKSigV4Signer = AWSSDKSigV4Signer;
 
 /***/ }),
 
-/***/ 24725:
+/***/ 82888:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(24919), exports);
-tslib_1.__exportStar(__nccwpck_require__(30555), exports);
+tslib_1.__exportStar(__nccwpck_require__(12151), exports);
+tslib_1.__exportStar(__nccwpck_require__(67747), exports);
 
 
 /***/ }),
 
-/***/ 30555:
+/***/ 67747:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28044,7 +24582,7 @@ exports.resolveAWSSDKSigV4Config = resolveAWSSDKSigV4Config;
 
 /***/ }),
 
-/***/ 10963:
+/***/ 19898:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -28062,19 +24600,19 @@ exports.throwAWSSDKSigningPropertyError = throwAWSSDKSigningPropertyError;
 
 /***/ }),
 
-/***/ 74318:
+/***/ 40348:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(24725), exports);
+tslib_1.__exportStar(__nccwpck_require__(82888), exports);
 
 
 /***/ }),
 
-/***/ 72393:
+/***/ 45463:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28088,7 +24626,7 @@ exports.getDateHeader = getDateHeader;
 
 /***/ }),
 
-/***/ 30426:
+/***/ 10401:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -28101,14 +24639,14 @@ exports.getSkewCorrectedDate = getSkewCorrectedDate;
 
 /***/ }),
 
-/***/ 86865:
+/***/ 75632:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getUpdatedSystemClockOffset = void 0;
-const isClockSkewed_1 = __nccwpck_require__(74714);
+const isClockSkewed_1 = __nccwpck_require__(37091);
 const getUpdatedSystemClockOffset = (clockTime, currentSystemClockOffset) => {
     const clockTimeInMs = Date.parse(clockTime);
     if ((0, isClockSkewed_1.isClockSkewed)(clockTimeInMs, currentSystemClockOffset)) {
@@ -28121,49 +24659,49 @@ exports.getUpdatedSystemClockOffset = getUpdatedSystemClockOffset;
 
 /***/ }),
 
-/***/ 38811:
+/***/ 77836:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(72393), exports);
-tslib_1.__exportStar(__nccwpck_require__(30426), exports);
-tslib_1.__exportStar(__nccwpck_require__(86865), exports);
+tslib_1.__exportStar(__nccwpck_require__(45463), exports);
+tslib_1.__exportStar(__nccwpck_require__(10401), exports);
+tslib_1.__exportStar(__nccwpck_require__(75632), exports);
 
 
 /***/ }),
 
-/***/ 74714:
+/***/ 37091:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.isClockSkewed = void 0;
-const getSkewCorrectedDate_1 = __nccwpck_require__(30426);
+const getSkewCorrectedDate_1 = __nccwpck_require__(10401);
 const isClockSkewed = (clockTime, systemClockOffset) => Math.abs((0, getSkewCorrectedDate_1.getSkewCorrectedDate)(systemClockOffset).getTime() - clockTime) >= 300000;
 exports.isClockSkewed = isClockSkewed;
 
 
 /***/ }),
 
-/***/ 73696:
+/***/ 36693:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(59131), exports);
-tslib_1.__exportStar(__nccwpck_require__(74318), exports);
-tslib_1.__exportStar(__nccwpck_require__(66849), exports);
+tslib_1.__exportStar(__nccwpck_require__(89516), exports);
+tslib_1.__exportStar(__nccwpck_require__(40348), exports);
+tslib_1.__exportStar(__nccwpck_require__(62399), exports);
 
 
 /***/ }),
 
-/***/ 27506:
+/***/ 58705:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -28230,20 +24768,20 @@ exports._toNum = _toNum;
 
 /***/ }),
 
-/***/ 66849:
+/***/ 62399:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(27506), exports);
-tslib_1.__exportStar(__nccwpck_require__(83153), exports);
+tslib_1.__exportStar(__nccwpck_require__(58705), exports);
+tslib_1.__exportStar(__nccwpck_require__(2719), exports);
 
 
 /***/ }),
 
-/***/ 83153:
+/***/ 2719:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28309,7 +24847,7 @@ tslib_1.__exportStar(__nccwpck_require__(65303), exports);
 
 /***/ }),
 
-/***/ 85568:
+/***/ 52613:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28317,7 +24855,7 @@ tslib_1.__exportStar(__nccwpck_require__(65303), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromIni = void 0;
 const shared_ini_file_loader_1 = __nccwpck_require__(16793);
-const resolveProfileData_1 = __nccwpck_require__(15148);
+const resolveProfileData_1 = __nccwpck_require__(67895);
 const fromIni = (init = {}) => async () => {
     const profiles = await (0, shared_ini_file_loader_1.parseKnownFiles)(init);
     return (0, resolveProfileData_1.resolveProfileData)((0, shared_ini_file_loader_1.getProfileName)(init), profiles, init);
@@ -28327,19 +24865,19 @@ exports.fromIni = fromIni;
 
 /***/ }),
 
-/***/ 3827:
+/***/ 1123:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(85568), exports);
+tslib_1.__exportStar(__nccwpck_require__(52613), exports);
 
 
 /***/ }),
 
-/***/ 74623:
+/***/ 76289:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28348,8 +24886,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveAssumeRoleCredentials = exports.isAssumeRoleProfile = void 0;
 const property_provider_1 = __nccwpck_require__(99164);
 const shared_ini_file_loader_1 = __nccwpck_require__(16793);
-const resolveCredentialSource_1 = __nccwpck_require__(88621);
-const resolveProfileData_1 = __nccwpck_require__(15148);
+const resolveCredentialSource_1 = __nccwpck_require__(98354);
+const resolveProfileData_1 = __nccwpck_require__(67895);
 const isAssumeRoleProfile = (arg) => Boolean(arg) &&
     typeof arg === "object" &&
     typeof arg.role_arn === "string" &&
@@ -28399,7 +24937,7 @@ exports.resolveAssumeRoleCredentials = resolveAssumeRoleCredentials;
 
 /***/ }),
 
-/***/ 88621:
+/***/ 98354:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28428,7 +24966,7 @@ exports.resolveCredentialSource = resolveCredentialSource;
 
 /***/ }),
 
-/***/ 46247:
+/***/ 78706:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28447,7 +24985,7 @@ exports.resolveProcessCredentials = resolveProcessCredentials;
 
 /***/ }),
 
-/***/ 15148:
+/***/ 67895:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28455,11 +24993,11 @@ exports.resolveProcessCredentials = resolveProcessCredentials;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveProfileData = void 0;
 const property_provider_1 = __nccwpck_require__(99164);
-const resolveAssumeRoleCredentials_1 = __nccwpck_require__(74623);
-const resolveProcessCredentials_1 = __nccwpck_require__(46247);
-const resolveSsoCredentials_1 = __nccwpck_require__(59104);
-const resolveStaticCredentials_1 = __nccwpck_require__(58743);
-const resolveWebIdentityCredentials_1 = __nccwpck_require__(72896);
+const resolveAssumeRoleCredentials_1 = __nccwpck_require__(76289);
+const resolveProcessCredentials_1 = __nccwpck_require__(78706);
+const resolveSsoCredentials_1 = __nccwpck_require__(79334);
+const resolveStaticCredentials_1 = __nccwpck_require__(34542);
+const resolveWebIdentityCredentials_1 = __nccwpck_require__(34479);
 const resolveProfileData = async (profileName, profiles, options, visitedProfiles = {}) => {
     const data = profiles[profileName];
     if (Object.keys(visitedProfiles).length > 0 && (0, resolveStaticCredentials_1.isStaticCredsProfile)(data)) {
@@ -28487,15 +25025,15 @@ exports.resolveProfileData = resolveProfileData;
 
 /***/ }),
 
-/***/ 59104:
+/***/ 79334:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveSsoCredentials = exports.isSsoProfile = void 0;
-const credential_provider_sso_1 = __nccwpck_require__(7067);
-var credential_provider_sso_2 = __nccwpck_require__(7067);
+const credential_provider_sso_1 = __nccwpck_require__(19378);
+var credential_provider_sso_2 = __nccwpck_require__(19378);
 Object.defineProperty(exports, "isSsoProfile", ({ enumerable: true, get: function () { return credential_provider_sso_2.isSsoProfile; } }));
 const resolveSsoCredentials = (data) => {
     const { sso_start_url, sso_account_id, sso_session, sso_region, sso_role_name } = (0, credential_provider_sso_1.validateSsoProfile)(data);
@@ -28512,7 +25050,7 @@ exports.resolveSsoCredentials = resolveSsoCredentials;
 
 /***/ }),
 
-/***/ 58743:
+/***/ 34542:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -28535,7 +25073,7 @@ exports.resolveStaticCredentials = resolveStaticCredentials;
 
 /***/ }),
 
-/***/ 72896:
+/***/ 34479:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28560,7 +25098,7 @@ exports.resolveWebIdentityCredentials = resolveWebIdentityCredentials;
 
 /***/ }),
 
-/***/ 54985:
+/***/ 57538:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28568,13 +25106,13 @@ exports.resolveWebIdentityCredentials = resolveWebIdentityCredentials;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultProvider = void 0;
 const credential_provider_env_1 = __nccwpck_require__(88837);
-const credential_provider_ini_1 = __nccwpck_require__(3827);
+const credential_provider_ini_1 = __nccwpck_require__(1123);
 const credential_provider_process_1 = __nccwpck_require__(4139);
-const credential_provider_sso_1 = __nccwpck_require__(7067);
+const credential_provider_sso_1 = __nccwpck_require__(19378);
 const credential_provider_web_identity_1 = __nccwpck_require__(51698);
 const property_provider_1 = __nccwpck_require__(99164);
 const shared_ini_file_loader_1 = __nccwpck_require__(16793);
-const remoteProvider_1 = __nccwpck_require__(93881);
+const remoteProvider_1 = __nccwpck_require__(51823);
 const defaultProvider = (init = {}) => (0, property_provider_1.memoize)((0, property_provider_1.chain)(...(init.profile || process.env[shared_ini_file_loader_1.ENV_PROFILE] ? [] : [(0, credential_provider_env_1.fromEnv)()]), (0, credential_provider_sso_1.fromSSO)(init), (0, credential_provider_ini_1.fromIni)(init), (0, credential_provider_process_1.fromProcess)(init), (0, credential_provider_web_identity_1.fromTokenFile)(init), (0, remoteProvider_1.remoteProvider)(init), async () => {
     throw new property_provider_1.CredentialsProviderError("Could not load credentials from any providers", false);
 }), (credentials) => credentials.expiration !== undefined && credentials.expiration.getTime() - Date.now() < 300000, (credentials) => credentials.expiration !== undefined);
@@ -28583,19 +25121,19 @@ exports.defaultProvider = defaultProvider;
 
 /***/ }),
 
-/***/ 47976:
+/***/ 28389:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(54985), exports);
+tslib_1.__exportStar(__nccwpck_require__(57538), exports);
 
 
 /***/ }),
 
-/***/ 93881:
+/***/ 51823:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28729,7 +25267,7 @@ exports.resolveProcessCredentials = resolveProcessCredentials;
 
 /***/ }),
 
-/***/ 32721:
+/***/ 64063:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28738,9 +25276,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromSSO = void 0;
 const property_provider_1 = __nccwpck_require__(99164);
 const shared_ini_file_loader_1 = __nccwpck_require__(16793);
-const isSsoProfile_1 = __nccwpck_require__(42265);
-const resolveSSOCredentials_1 = __nccwpck_require__(64186);
-const validateSsoProfile_1 = __nccwpck_require__(83212);
+const isSsoProfile_1 = __nccwpck_require__(98435);
+const resolveSSOCredentials_1 = __nccwpck_require__(68204);
+const validateSsoProfile_1 = __nccwpck_require__(51744);
 const fromSSO = (init = {}) => async () => {
     const { ssoStartUrl, ssoAccountId, ssoRegion, ssoRoleName, ssoClient, ssoSession } = init;
     const profileName = (0, shared_ini_file_loader_1.getProfileName)(init);
@@ -28798,22 +25336,22 @@ exports.fromSSO = fromSSO;
 
 /***/ }),
 
-/***/ 7067:
+/***/ 19378:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(32721), exports);
-tslib_1.__exportStar(__nccwpck_require__(42265), exports);
-tslib_1.__exportStar(__nccwpck_require__(9933), exports);
-tslib_1.__exportStar(__nccwpck_require__(83212), exports);
+tslib_1.__exportStar(__nccwpck_require__(64063), exports);
+tslib_1.__exportStar(__nccwpck_require__(98435), exports);
+tslib_1.__exportStar(__nccwpck_require__(12257), exports);
+tslib_1.__exportStar(__nccwpck_require__(51744), exports);
 
 
 /***/ }),
 
-/***/ 42265:
+/***/ 98435:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -28831,15 +25369,15 @@ exports.isSsoProfile = isSsoProfile;
 
 /***/ }),
 
-/***/ 64186:
+/***/ 68204:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveSSOCredentials = void 0;
-const client_sso_1 = __nccwpck_require__(49836);
-const token_providers_1 = __nccwpck_require__(72221);
+const client_sso_1 = __nccwpck_require__(40643);
+const token_providers_1 = __nccwpck_require__(90424);
 const property_provider_1 = __nccwpck_require__(99164);
 const shared_ini_file_loader_1 = __nccwpck_require__(16793);
 const SHOULD_FAIL_CREDENTIAL_CHAIN = false;
@@ -28893,7 +25431,7 @@ exports.resolveSSOCredentials = resolveSSOCredentials;
 
 /***/ }),
 
-/***/ 9933:
+/***/ 12257:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -28903,7 +25441,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 
 /***/ }),
 
-/***/ 83212:
+/***/ 51744:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -29698,7 +26236,7 @@ exports.resolveRegionConfig = resolveRegionConfig;
 
 /***/ }),
 
-/***/ 50758:
+/***/ 11336:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -30600,7 +27138,7 @@ var loadRestJsonErrorCode = (output, data) => {
         return sanitizeErrorCode(data["__type"]);
     }
 };
-var CreateTokenCommand = class _CreateTokenCommand extends smithy_client_7.Command {
+class CreateTokenCommand extends smithy_client_7.Command {
     constructor(input) {
         super();
         this.input = input;
@@ -30640,13 +27178,13 @@ var CreateTokenCommand = class _CreateTokenCommand extends smithy_client_7.Comma
     deserialize(output, context) {
         return de_CreateTokenCommand(output, context);
     }
-};
+}
 exports.CreateTokenCommand = CreateTokenCommand;
 const middleware_endpoint_3 = __nccwpck_require__(40217);
 const middleware_serde_2 = __nccwpck_require__(77129);
 const smithy_client_10 = __nccwpck_require__(55078);
 const types_2 = __nccwpck_require__(58640);
-var RegisterClientCommand = class _RegisterClientCommand extends smithy_client_10.Command {
+class RegisterClientCommand extends smithy_client_10.Command {
     constructor(input) {
         super();
         this.input = input;
@@ -30686,12 +27224,12 @@ var RegisterClientCommand = class _RegisterClientCommand extends smithy_client_1
     deserialize(output, context) {
         return de_RegisterClientCommand(output, context);
     }
-};
+}
 const middleware_endpoint_4 = __nccwpck_require__(40217);
 const middleware_serde_3 = __nccwpck_require__(77129);
 const smithy_client_11 = __nccwpck_require__(55078);
 const types_3 = __nccwpck_require__(58640);
-var StartDeviceAuthorizationCommand = class _StartDeviceAuthorizationCommand extends smithy_client_11.Command {
+class StartDeviceAuthorizationCommand extends smithy_client_11.Command {
     constructor(input) {
         super();
         this.input = input;
@@ -30731,7 +27269,7 @@ var StartDeviceAuthorizationCommand = class _StartDeviceAuthorizationCommand ext
     deserialize(output, context) {
         return de_StartDeviceAuthorizationCommand(output, context);
     }
-};
+}
 var commands = {
     CreateTokenCommand,
     RegisterClientCommand,
@@ -30744,7 +27282,7 @@ var SSOOIDC = class extends SSOOIDCClient {
 
 /***/ }),
 
-/***/ 80235:
+/***/ 97107:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -30757,7 +27295,7 @@ exports.REFRESH_MESSAGE = `To refresh this SSO session run 'aws sso login' with 
 
 /***/ }),
 
-/***/ 16099:
+/***/ 12220:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -30766,11 +27304,11 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromSso = void 0;
 const property_provider_1 = __nccwpck_require__(99164);
 const shared_ini_file_loader_1 = __nccwpck_require__(16793);
-const constants_1 = __nccwpck_require__(80235);
-const getNewSsoOidcToken_1 = __nccwpck_require__(87928);
-const validateTokenExpiry_1 = __nccwpck_require__(6207);
-const validateTokenKey_1 = __nccwpck_require__(22261);
-const writeSSOTokenToFile_1 = __nccwpck_require__(62022);
+const constants_1 = __nccwpck_require__(97107);
+const getNewSsoOidcToken_1 = __nccwpck_require__(84745);
+const validateTokenExpiry_1 = __nccwpck_require__(91313);
+const validateTokenKey_1 = __nccwpck_require__(17449);
+const writeSSOTokenToFile_1 = __nccwpck_require__(42051);
 const lastRefreshAttemptTime = new Date(0);
 const fromSso = (init = {}) => async () => {
     const profiles = await (0, shared_ini_file_loader_1.parseKnownFiles)(init);
@@ -30847,7 +27385,7 @@ exports.fromSso = fromSso;
 
 /***/ }),
 
-/***/ 9688:
+/***/ 79301:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -30866,15 +27404,15 @@ exports.fromStatic = fromStatic;
 
 /***/ }),
 
-/***/ 87928:
+/***/ 84745:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getNewSsoOidcToken = void 0;
-const client_sso_oidc_node_1 = __nccwpck_require__(50758);
-const getSsoOidcClient_1 = __nccwpck_require__(25509);
+const client_sso_oidc_node_1 = __nccwpck_require__(11336);
+const getSsoOidcClient_1 = __nccwpck_require__(70109);
 const getNewSsoOidcToken = (ssoToken, ssoRegion) => {
     const ssoOidcClient = (0, getSsoOidcClient_1.getSsoOidcClient)(ssoRegion);
     return ssoOidcClient.send(new client_sso_oidc_node_1.CreateTokenCommand({
@@ -30889,14 +27427,14 @@ exports.getNewSsoOidcToken = getNewSsoOidcToken;
 
 /***/ }),
 
-/***/ 25509:
+/***/ 70109:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getSsoOidcClient = void 0;
-const client_sso_oidc_node_1 = __nccwpck_require__(50758);
+const client_sso_oidc_node_1 = __nccwpck_require__(11336);
 const ssoOidcClientsHash = {};
 const getSsoOidcClient = (ssoRegion) => {
     if (ssoOidcClientsHash[ssoRegion]) {
@@ -30911,22 +27449,22 @@ exports.getSsoOidcClient = getSsoOidcClient;
 
 /***/ }),
 
-/***/ 72221:
+/***/ 90424:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __nccwpck_require__(83134);
-tslib_1.__exportStar(__nccwpck_require__(50758), exports);
-tslib_1.__exportStar(__nccwpck_require__(16099), exports);
-tslib_1.__exportStar(__nccwpck_require__(9688), exports);
-tslib_1.__exportStar(__nccwpck_require__(15961), exports);
+tslib_1.__exportStar(__nccwpck_require__(11336), exports);
+tslib_1.__exportStar(__nccwpck_require__(12220), exports);
+tslib_1.__exportStar(__nccwpck_require__(79301), exports);
+tslib_1.__exportStar(__nccwpck_require__(18136), exports);
 
 
 /***/ }),
 
-/***/ 15961:
+/***/ 18136:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -30934,7 +27472,7 @@ tslib_1.__exportStar(__nccwpck_require__(15961), exports);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.nodeProvider = void 0;
 const property_provider_1 = __nccwpck_require__(99164);
-const fromSso_1 = __nccwpck_require__(16099);
+const fromSso_1 = __nccwpck_require__(12220);
 const nodeProvider = (init = {}) => (0, property_provider_1.memoize)((0, property_provider_1.chain)((0, fromSso_1.fromSso)(init), async () => {
     throw new property_provider_1.TokenProviderError("Could not load token from any providers", false);
 }), (token) => token.expiration !== undefined && token.expiration.getTime() - Date.now() < 300000, (token) => token.expiration !== undefined);
@@ -30943,7 +27481,7 @@ exports.nodeProvider = nodeProvider;
 
 /***/ }),
 
-/***/ 6207:
+/***/ 91313:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -30951,7 +27489,7 @@ exports.nodeProvider = nodeProvider;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.validateTokenExpiry = void 0;
 const property_provider_1 = __nccwpck_require__(99164);
-const constants_1 = __nccwpck_require__(80235);
+const constants_1 = __nccwpck_require__(97107);
 const validateTokenExpiry = (token) => {
     if (token.expiration && token.expiration.getTime() < Date.now()) {
         throw new property_provider_1.TokenProviderError(`Token is expired. ${constants_1.REFRESH_MESSAGE}`, false);
@@ -30962,7 +27500,7 @@ exports.validateTokenExpiry = validateTokenExpiry;
 
 /***/ }),
 
-/***/ 22261:
+/***/ 17449:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -30970,7 +27508,7 @@ exports.validateTokenExpiry = validateTokenExpiry;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.validateTokenKey = void 0;
 const property_provider_1 = __nccwpck_require__(99164);
-const constants_1 = __nccwpck_require__(80235);
+const constants_1 = __nccwpck_require__(97107);
 const validateTokenKey = (key, value, forRefresh = false) => {
     if (typeof value === "undefined") {
         throw new property_provider_1.TokenProviderError(`Value not present for '${key}' in SSO Token${forRefresh ? ". Cannot refresh" : ""}. ${constants_1.REFRESH_MESSAGE}`, false);
@@ -30981,7 +27519,7 @@ exports.validateTokenKey = validateTokenKey;
 
 /***/ }),
 
-/***/ 62022:
+/***/ 42051:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -72910,27 +69448,27 @@ module.exports = parseParams
 
 /***/ }),
 
-/***/ 9592:
+/***/ 6809:
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.478.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.478.0","@aws-sdk/core":"3.477.0","@aws-sdk/credential-provider-node":"3.478.0","@aws-sdk/middleware-host-header":"3.468.0","@aws-sdk/middleware-logger":"3.468.0","@aws-sdk/middleware-recursion-detection":"3.468.0","@aws-sdk/middleware-signing":"3.468.0","@aws-sdk/middleware-user-agent":"3.478.0","@aws-sdk/region-config-resolver":"3.470.0","@aws-sdk/types":"3.468.0","@aws-sdk/util-endpoints":"3.478.0","@aws-sdk/util-user-agent-browser":"3.468.0","@aws-sdk/util-user-agent-node":"3.470.0","@smithy/config-resolver":"^2.0.21","@smithy/core":"^1.2.0","@smithy/fetch-http-handler":"^2.3.1","@smithy/hash-node":"^2.0.17","@smithy/invalid-dependency":"^2.0.15","@smithy/middleware-content-length":"^2.0.17","@smithy/middleware-endpoint":"^2.2.3","@smithy/middleware-retry":"^2.0.24","@smithy/middleware-serde":"^2.0.15","@smithy/middleware-stack":"^2.0.9","@smithy/node-config-provider":"^2.1.8","@smithy/node-http-handler":"^2.2.1","@smithy/protocol-http":"^3.0.11","@smithy/smithy-client":"^2.1.18","@smithy/types":"^2.7.0","@smithy/url-parser":"^2.0.15","@smithy/util-base64":"^2.0.1","@smithy/util-body-length-browser":"^2.0.1","@smithy/util-body-length-node":"^2.1.0","@smithy/util-defaults-mode-browser":"^2.0.22","@smithy/util-defaults-mode-node":"^2.0.29","@smithy/util-endpoints":"^1.0.7","@smithy/util-retry":"^2.0.8","@smithy/util-utf8":"^2.0.2","@smithy/util-waiter":"^2.0.15","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@smithy/service-client-documentation-generator":"^2.0.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.481.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.481.0","@aws-sdk/core":"3.481.0","@aws-sdk/credential-provider-node":"3.481.0","@aws-sdk/middleware-host-header":"3.468.0","@aws-sdk/middleware-logger":"3.468.0","@aws-sdk/middleware-recursion-detection":"3.468.0","@aws-sdk/middleware-signing":"3.468.0","@aws-sdk/middleware-user-agent":"3.478.0","@aws-sdk/region-config-resolver":"3.470.0","@aws-sdk/types":"3.468.0","@aws-sdk/util-endpoints":"3.478.0","@aws-sdk/util-user-agent-browser":"3.468.0","@aws-sdk/util-user-agent-node":"3.470.0","@smithy/config-resolver":"^2.0.21","@smithy/core":"^1.2.1","@smithy/fetch-http-handler":"^2.3.1","@smithy/hash-node":"^2.0.17","@smithy/invalid-dependency":"^2.0.15","@smithy/middleware-content-length":"^2.0.17","@smithy/middleware-endpoint":"^2.2.3","@smithy/middleware-retry":"^2.0.25","@smithy/middleware-serde":"^2.0.15","@smithy/middleware-stack":"^2.0.9","@smithy/node-config-provider":"^2.1.8","@smithy/node-http-handler":"^2.2.1","@smithy/protocol-http":"^3.0.11","@smithy/smithy-client":"^2.2.0","@smithy/types":"^2.7.0","@smithy/url-parser":"^2.0.15","@smithy/util-base64":"^2.0.1","@smithy/util-body-length-browser":"^2.0.1","@smithy/util-body-length-node":"^2.1.0","@smithy/util-defaults-mode-browser":"^2.0.23","@smithy/util-defaults-mode-node":"^2.0.30","@smithy/util-endpoints":"^1.0.7","@smithy/util-retry":"^2.0.8","@smithy/util-utf8":"^2.0.2","@smithy/util-waiter":"^2.0.15","tslib":"^2.5.0","uuid":"^8.3.2"},"devDependencies":{"@smithy/service-client-documentation-generator":"^2.0.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^8.3.0","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
 
 /***/ }),
 
-/***/ 59676:
+/***/ 55663:
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.478.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/core":"3.477.0","@aws-sdk/middleware-host-header":"3.468.0","@aws-sdk/middleware-logger":"3.468.0","@aws-sdk/middleware-recursion-detection":"3.468.0","@aws-sdk/middleware-user-agent":"3.478.0","@aws-sdk/region-config-resolver":"3.470.0","@aws-sdk/types":"3.468.0","@aws-sdk/util-endpoints":"3.478.0","@aws-sdk/util-user-agent-browser":"3.468.0","@aws-sdk/util-user-agent-node":"3.470.0","@smithy/config-resolver":"^2.0.21","@smithy/core":"^1.2.0","@smithy/fetch-http-handler":"^2.3.1","@smithy/hash-node":"^2.0.17","@smithy/invalid-dependency":"^2.0.15","@smithy/middleware-content-length":"^2.0.17","@smithy/middleware-endpoint":"^2.2.3","@smithy/middleware-retry":"^2.0.24","@smithy/middleware-serde":"^2.0.15","@smithy/middleware-stack":"^2.0.9","@smithy/node-config-provider":"^2.1.8","@smithy/node-http-handler":"^2.2.1","@smithy/protocol-http":"^3.0.11","@smithy/smithy-client":"^2.1.18","@smithy/types":"^2.7.0","@smithy/url-parser":"^2.0.15","@smithy/util-base64":"^2.0.1","@smithy/util-body-length-browser":"^2.0.1","@smithy/util-body-length-node":"^2.1.0","@smithy/util-defaults-mode-browser":"^2.0.22","@smithy/util-defaults-mode-node":"^2.0.29","@smithy/util-endpoints":"^1.0.7","@smithy/util-retry":"^2.0.8","@smithy/util-utf8":"^2.0.2","tslib":"^2.5.0"},"devDependencies":{"@smithy/service-client-documentation-generator":"^2.0.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SDK for JavaScript Sso Client for Node.js, Browser and React Native","version":"3.481.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sso"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/core":"3.481.0","@aws-sdk/middleware-host-header":"3.468.0","@aws-sdk/middleware-logger":"3.468.0","@aws-sdk/middleware-recursion-detection":"3.468.0","@aws-sdk/middleware-user-agent":"3.478.0","@aws-sdk/region-config-resolver":"3.470.0","@aws-sdk/types":"3.468.0","@aws-sdk/util-endpoints":"3.478.0","@aws-sdk/util-user-agent-browser":"3.468.0","@aws-sdk/util-user-agent-node":"3.470.0","@smithy/config-resolver":"^2.0.21","@smithy/core":"^1.2.1","@smithy/fetch-http-handler":"^2.3.1","@smithy/hash-node":"^2.0.17","@smithy/invalid-dependency":"^2.0.15","@smithy/middleware-content-length":"^2.0.17","@smithy/middleware-endpoint":"^2.2.3","@smithy/middleware-retry":"^2.0.25","@smithy/middleware-serde":"^2.0.15","@smithy/middleware-stack":"^2.0.9","@smithy/node-config-provider":"^2.1.8","@smithy/node-http-handler":"^2.2.1","@smithy/protocol-http":"^3.0.11","@smithy/smithy-client":"^2.2.0","@smithy/types":"^2.7.0","@smithy/url-parser":"^2.0.15","@smithy/util-base64":"^2.0.1","@smithy/util-body-length-browser":"^2.0.1","@smithy/util-body-length-node":"^2.1.0","@smithy/util-defaults-mode-browser":"^2.0.23","@smithy/util-defaults-mode-node":"^2.0.30","@smithy/util-endpoints":"^1.0.7","@smithy/util-retry":"^2.0.8","@smithy/util-utf8":"^2.0.2","tslib":"^2.5.0"},"devDependencies":{"@smithy/service-client-documentation-generator":"^2.0.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sso","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sso"}}');
 
 /***/ }),
 
-/***/ 70653:
+/***/ 81639:
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.478.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/core":"3.477.0","@aws-sdk/credential-provider-node":"3.478.0","@aws-sdk/middleware-host-header":"3.468.0","@aws-sdk/middleware-logger":"3.468.0","@aws-sdk/middleware-recursion-detection":"3.468.0","@aws-sdk/middleware-user-agent":"3.478.0","@aws-sdk/region-config-resolver":"3.470.0","@aws-sdk/types":"3.468.0","@aws-sdk/util-endpoints":"3.478.0","@aws-sdk/util-user-agent-browser":"3.468.0","@aws-sdk/util-user-agent-node":"3.470.0","@smithy/config-resolver":"^2.0.21","@smithy/core":"^1.2.0","@smithy/fetch-http-handler":"^2.3.1","@smithy/hash-node":"^2.0.17","@smithy/invalid-dependency":"^2.0.15","@smithy/middleware-content-length":"^2.0.17","@smithy/middleware-endpoint":"^2.2.3","@smithy/middleware-retry":"^2.0.24","@smithy/middleware-serde":"^2.0.15","@smithy/middleware-stack":"^2.0.9","@smithy/node-config-provider":"^2.1.8","@smithy/node-http-handler":"^2.2.1","@smithy/protocol-http":"^3.0.11","@smithy/smithy-client":"^2.1.18","@smithy/types":"^2.7.0","@smithy/url-parser":"^2.0.15","@smithy/util-base64":"^2.0.1","@smithy/util-body-length-browser":"^2.0.1","@smithy/util-body-length-node":"^2.1.0","@smithy/util-defaults-mode-browser":"^2.0.22","@smithy/util-defaults-mode-node":"^2.0.29","@smithy/util-endpoints":"^1.0.7","@smithy/util-middleware":"^2.0.8","@smithy/util-retry":"^2.0.8","@smithy/util-utf8":"^2.0.2","fast-xml-parser":"4.2.5","tslib":"^2.5.0"},"devDependencies":{"@smithy/service-client-documentation-generator":"^2.0.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-sts","description":"AWS SDK for JavaScript Sts Client for Node.js, Browser and React Native","version":"3.481.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"tsc -p tsconfig.cjs.json","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo sts","test":"yarn test:unit","test:unit":"jest"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/core":"3.481.0","@aws-sdk/credential-provider-node":"3.481.0","@aws-sdk/middleware-host-header":"3.468.0","@aws-sdk/middleware-logger":"3.468.0","@aws-sdk/middleware-recursion-detection":"3.468.0","@aws-sdk/middleware-user-agent":"3.478.0","@aws-sdk/region-config-resolver":"3.470.0","@aws-sdk/types":"3.468.0","@aws-sdk/util-endpoints":"3.478.0","@aws-sdk/util-user-agent-browser":"3.468.0","@aws-sdk/util-user-agent-node":"3.470.0","@smithy/config-resolver":"^2.0.21","@smithy/core":"^1.2.1","@smithy/fetch-http-handler":"^2.3.1","@smithy/hash-node":"^2.0.17","@smithy/invalid-dependency":"^2.0.15","@smithy/middleware-content-length":"^2.0.17","@smithy/middleware-endpoint":"^2.2.3","@smithy/middleware-retry":"^2.0.25","@smithy/middleware-serde":"^2.0.15","@smithy/middleware-stack":"^2.0.9","@smithy/node-config-provider":"^2.1.8","@smithy/node-http-handler":"^2.2.1","@smithy/protocol-http":"^3.0.11","@smithy/smithy-client":"^2.2.0","@smithy/types":"^2.7.0","@smithy/url-parser":"^2.0.15","@smithy/util-base64":"^2.0.1","@smithy/util-body-length-browser":"^2.0.1","@smithy/util-body-length-node":"^2.1.0","@smithy/util-defaults-mode-browser":"^2.0.23","@smithy/util-defaults-mode-node":"^2.0.30","@smithy/util-endpoints":"^1.0.7","@smithy/util-middleware":"^2.0.8","@smithy/util-retry":"^2.0.8","@smithy/util-utf8":"^2.0.2","fast-xml-parser":"4.2.5","tslib":"^2.5.0"},"devDependencies":{"@smithy/service-client-documentation-generator":"^2.0.0","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-sts","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-sts"}}');
 
 /***/ }),
 
