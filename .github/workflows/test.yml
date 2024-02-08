@@ -21,7 +21,7 @@ jobs:
         role-session-name: GitHubActions
         aws-region: us-west-2
     - uses: actions/checkout@v4
-    - uses: pnpm/action-setup@v2
+    - uses: pnpm/action-setup@v3
       name: Install pnpm
       id: pnpm-install
       with:
@@ -55,7 +55,7 @@ jobs:
         role-session-name: GitHubActions
         aws-region: ${{ matrix.region }}
     - uses: actions/checkout@v4
-    - uses: pnpm/action-setup@v2
+    - uses: pnpm/action-setup@v3
       name: Install pnpm
       id: pnpm-install
       with:
