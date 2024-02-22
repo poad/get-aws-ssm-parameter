@@ -5,7 +5,7 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", ({value:true}));Object.defineProperty(exports, "default", ({enumerable:true,get:function(){return _default}}));const _clientssm=_interop_require_wildcard(__nccwpck_require__(2759));__nccwpck_require__(9437);function _getRequireWildcardCache(nodeInterop){if(typeof WeakMap!=="function")return null;var cacheBabelInterop=new WeakMap;var cacheNodeInterop=new WeakMap;return(_getRequireWildcardCache=function(nodeInterop){return nodeInterop?cacheNodeInterop:cacheBabelInterop})(nodeInterop)}function _interop_require_wildcard(obj,nodeInterop){if(!nodeInterop&&obj&&obj.__esModule){return obj}if(obj===null||typeof obj!=="object"&&typeof obj!=="function"){return{default:obj}}var cache=_getRequireWildcardCache(nodeInterop);if(cache&&cache.has(obj)){return cache.get(obj)}var newObj={__proto__:null};var hasPropertyDescriptor=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var key in obj){if(key!=="default"&&Object.prototype.hasOwnProperty.call(obj,key)){var desc=hasPropertyDescriptor?Object.getOwnPropertyDescriptor(obj,key):null;if(desc&&(desc.get||desc.set)){Object.defineProperty(newObj,key,desc)}else{newObj[key]=obj[key]}}}newObj.default=obj;if(cache){cache.set(obj,newObj)}return newObj}const createClient=region=>{const client=new _clientssm.SSMClient({region});const getParameterValue=async(parameterName,secure)=>{const resp=await client.send(new _clientssm.GetParameterCommand({Name:parameterName,WithDecryption:secure}));if(resp.Parameter){return resp.Parameter.Value}return undefined};return{getParameterValue}};const _default=createClient;
+Object.defineProperty(exports, "__esModule", ({value:true}));Object.defineProperty(exports, "default", ({enumerable:true,get:function(){return _default}}));const _clientssm=_interop_require_wildcard(__nccwpck_require__(3642));__nccwpck_require__(9437);function _getRequireWildcardCache(nodeInterop){if(typeof WeakMap!=="function")return null;var cacheBabelInterop=new WeakMap;var cacheNodeInterop=new WeakMap;return(_getRequireWildcardCache=function(nodeInterop){return nodeInterop?cacheNodeInterop:cacheBabelInterop})(nodeInterop)}function _interop_require_wildcard(obj,nodeInterop){if(!nodeInterop&&obj&&obj.__esModule){return obj}if(obj===null||typeof obj!=="object"&&typeof obj!=="function"){return{default:obj}}var cache=_getRequireWildcardCache(nodeInterop);if(cache&&cache.has(obj)){return cache.get(obj)}var newObj={__proto__:null};var hasPropertyDescriptor=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var key in obj){if(key!=="default"&&Object.prototype.hasOwnProperty.call(obj,key)){var desc=hasPropertyDescriptor?Object.getOwnPropertyDescriptor(obj,key):null;if(desc&&(desc.get||desc.set)){Object.defineProperty(newObj,key,desc)}else{newObj[key]=obj[key]}}}newObj.default=obj;if(cache){cache.set(obj,newObj)}return newObj}const createClient=region=>{const client=new _clientssm.SSMClient({region});const getParameterValue=async(parameterName,secure)=>{const resp=await client.send(new _clientssm.GetParameterCommand({Name:parameterName,WithDecryption:secure}));if(resp.Parameter){return resp.Parameter.Value}return undefined};return{getParameterValue}};const _default=createClient;
 //# sourceMappingURL=client.js.map
 
 /***/ }),
@@ -2117,7 +2117,7 @@ exports.uint32ArrayFrom = uint32ArrayFrom;
 
 /***/ }),
 
-/***/ 9794:
+/***/ 7260:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2172,7 +2172,7 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 
 /***/ }),
 
-/***/ 9227:
+/***/ 3492:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2180,7 +2180,7 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __nccwpck_require__(4493);
-const ruleset_1 = __nccwpck_require__(4168);
+const ruleset_1 = __nccwpck_require__(9900);
 const defaultEndpointResolver = (endpointParams, context = {}) => {
     return (0, util_endpoints_1.resolveEndpoint)(ruleset_1.ruleSet, {
         endpointParams: endpointParams,
@@ -2192,7 +2192,7 @@ exports.defaultEndpointResolver = defaultEndpointResolver;
 
 /***/ }),
 
-/***/ 4168:
+/***/ 9900:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -2207,7 +2207,7 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 2759:
+/***/ 3642:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -2508,6 +2508,7 @@ __export(src_exports, {
   MaintenanceWindowTaskInvocationParametersFilterSensitiveLog: () => MaintenanceWindowTaskInvocationParametersFilterSensitiveLog,
   MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog: () => MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog,
   MaintenanceWindowTaskType: () => MaintenanceWindowTaskType,
+  MalformedResourcePolicyDocumentException: () => MalformedResourcePolicyDocumentException,
   MaxDocumentSizeExceeded: () => MaxDocumentSizeExceeded,
   ModifyDocumentPermissionCommand: () => ModifyDocumentPermissionCommand,
   NotificationEvent: () => NotificationEvent,
@@ -2582,9 +2583,11 @@ __export(src_exports, {
   ResourceDataSyncS3Format: () => ResourceDataSyncS3Format,
   ResourceInUseException: () => ResourceInUseException,
   ResourceLimitExceededException: () => ResourceLimitExceededException,
+  ResourceNotFoundException: () => ResourceNotFoundException,
   ResourcePolicyConflictException: () => ResourcePolicyConflictException,
   ResourcePolicyInvalidParameterException: () => ResourcePolicyInvalidParameterException,
   ResourcePolicyLimitExceededException: () => ResourcePolicyLimitExceededException,
+  ResourcePolicyNotFoundException: () => ResourcePolicyNotFoundException,
   ResourceType: () => ResourceType,
   ResourceTypeForTagging: () => ResourceTypeForTagging,
   ResumeSessionCommand: () => ResumeSessionCommand,
@@ -2714,7 +2717,7 @@ var import_middleware_content_length = __nccwpck_require__(2493);
 var import_middleware_endpoint = __nccwpck_require__(6166);
 var import_middleware_retry = __nccwpck_require__(9561);
 
-var import_httpAuthSchemeProvider = __nccwpck_require__(9794);
+var import_httpAuthSchemeProvider = __nccwpck_require__(7260);
 
 // src/endpoint/EndpointParameters.ts
 var resolveClientEndpointParameters = /* @__PURE__ */ __name((options) => {
@@ -2733,7 +2736,7 @@ var commonParams = {
 };
 
 // src/SSMClient.ts
-var import_runtimeConfig = __nccwpck_require__(3832);
+var import_runtimeConfig = __nccwpck_require__(4092);
 
 // src/runtimeExtensions.ts
 var import_region_config_resolver = __nccwpck_require__(5632);
@@ -4012,6 +4015,42 @@ var _ResourceDataSyncNotFoundException = class _ResourceDataSyncNotFoundExceptio
 };
 __name(_ResourceDataSyncNotFoundException, "ResourceDataSyncNotFoundException");
 var ResourceDataSyncNotFoundException = _ResourceDataSyncNotFoundException;
+var _MalformedResourcePolicyDocumentException = class _MalformedResourcePolicyDocumentException extends SSMServiceException {
+  /**
+   * @internal
+   */
+  constructor(opts) {
+    super({
+      name: "MalformedResourcePolicyDocumentException",
+      $fault: "client",
+      ...opts
+    });
+    this.name = "MalformedResourcePolicyDocumentException";
+    this.$fault = "client";
+    Object.setPrototypeOf(this, _MalformedResourcePolicyDocumentException.prototype);
+    this.Message = opts.Message;
+  }
+};
+__name(_MalformedResourcePolicyDocumentException, "MalformedResourcePolicyDocumentException");
+var MalformedResourcePolicyDocumentException = _MalformedResourcePolicyDocumentException;
+var _ResourceNotFoundException = class _ResourceNotFoundException extends SSMServiceException {
+  /**
+   * @internal
+   */
+  constructor(opts) {
+    super({
+      name: "ResourceNotFoundException",
+      $fault: "client",
+      ...opts
+    });
+    this.name = "ResourceNotFoundException";
+    this.$fault = "client";
+    Object.setPrototypeOf(this, _ResourceNotFoundException.prototype);
+    this.Message = opts.Message;
+  }
+};
+__name(_ResourceNotFoundException, "ResourceNotFoundException");
+var ResourceNotFoundException = _ResourceNotFoundException;
 var _ResourcePolicyConflictException = class _ResourcePolicyConflictException extends SSMServiceException {
   /**
    * @internal
@@ -4049,6 +4088,24 @@ var _ResourcePolicyInvalidParameterException = class _ResourcePolicyInvalidParam
 };
 __name(_ResourcePolicyInvalidParameterException, "ResourcePolicyInvalidParameterException");
 var ResourcePolicyInvalidParameterException = _ResourcePolicyInvalidParameterException;
+var _ResourcePolicyNotFoundException = class _ResourcePolicyNotFoundException extends SSMServiceException {
+  /**
+   * @internal
+   */
+  constructor(opts) {
+    super({
+      name: "ResourcePolicyNotFoundException",
+      $fault: "client",
+      ...opts
+    });
+    this.name = "ResourcePolicyNotFoundException";
+    this.$fault = "client";
+    Object.setPrototypeOf(this, _ResourcePolicyNotFoundException.prototype);
+    this.Message = opts.Message;
+  }
+};
+__name(_ResourcePolicyNotFoundException, "ResourcePolicyNotFoundException");
+var ResourcePolicyNotFoundException = _ResourcePolicyNotFoundException;
 var _TargetInUseException = class _TargetInUseException extends SSMServiceException {
   /**
    * @internal
@@ -4420,10 +4477,6 @@ var MaintenanceWindowResourceType = {
   Instance: "INSTANCE",
   ResourceGroup: "RESOURCE_GROUP"
 };
-var MaintenanceWindowTaskCutoffBehavior = {
-  CancelTask: "CANCEL_TASK",
-  ContinueTask: "CONTINUE_TASK"
-};
 var CreateAssociationRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
   ...obj,
   ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
@@ -4523,13 +4576,13 @@ var DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = /* @__PURE__ */ _
   ...obj,
   ...obj.Targets && { Targets: obj.Targets.map((item) => MaintenanceWindowTargetFilterSensitiveLog(item)) }
 }), "DescribeMaintenanceWindowTargetsResultFilterSensitiveLog");
-var MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Values && { Values: import_smithy_client.SENSITIVE_STRING }
-}), "MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog");
 
 // src/models/models_1.ts
 
+var MaintenanceWindowTaskCutoffBehavior = {
+  CancelTask: "CANCEL_TASK",
+  ContinueTask: "CONTINUE_TASK"
+};
 var OpsItemFilterKey = {
   ACCOUNT_ID: "AccountId",
   ACTUAL_END_TIME: "ActualEndTime",
@@ -5709,6 +5762,10 @@ var StopType = {
   CANCEL: "Cancel",
   COMPLETE: "Complete"
 };
+var MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Values && { Values: import_smithy_client.SENSITIVE_STRING }
+}), "MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog");
 var MaintenanceWindowTaskFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
   ...obj,
   ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING },
@@ -8858,12 +8915,21 @@ var de_CommandError = /* @__PURE__ */ __name(async (output, context) => {
     case "ResourceDataSyncNotFoundException":
     case "com.amazonaws.ssm#ResourceDataSyncNotFoundException":
       throw await de_ResourceDataSyncNotFoundExceptionRes(parsedOutput, context);
+    case "MalformedResourcePolicyDocumentException":
+    case "com.amazonaws.ssm#MalformedResourcePolicyDocumentException":
+      throw await de_MalformedResourcePolicyDocumentExceptionRes(parsedOutput, context);
+    case "ResourceNotFoundException":
+    case "com.amazonaws.ssm#ResourceNotFoundException":
+      throw await de_ResourceNotFoundExceptionRes(parsedOutput, context);
     case "ResourcePolicyConflictException":
     case "com.amazonaws.ssm#ResourcePolicyConflictException":
       throw await de_ResourcePolicyConflictExceptionRes(parsedOutput, context);
     case "ResourcePolicyInvalidParameterException":
     case "com.amazonaws.ssm#ResourcePolicyInvalidParameterException":
       throw await de_ResourcePolicyInvalidParameterExceptionRes(parsedOutput, context);
+    case "ResourcePolicyNotFoundException":
+    case "com.amazonaws.ssm#ResourcePolicyNotFoundException":
+      throw await de_ResourcePolicyNotFoundExceptionRes(parsedOutput, context);
     case "TargetInUseException":
     case "com.amazonaws.ssm#TargetInUseException":
       throw await de_TargetInUseExceptionRes(parsedOutput, context);
@@ -9821,6 +9887,15 @@ var de_ItemSizeLimitExceededExceptionRes = /* @__PURE__ */ __name(async (parsedO
   });
   return (0, import_smithy_client.decorateServiceException)(exception, body);
 }, "de_ItemSizeLimitExceededExceptionRes");
+var de_MalformedResourcePolicyDocumentExceptionRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
+  const body = parsedOutput.body;
+  const deserialized = (0, import_smithy_client._json)(body);
+  const exception = new MalformedResourcePolicyDocumentException({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...deserialized
+  });
+  return (0, import_smithy_client.decorateServiceException)(exception, body);
+}, "de_MalformedResourcePolicyDocumentExceptionRes");
 var de_MaxDocumentSizeExceededRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
   const body = parsedOutput.body;
   const deserialized = (0, import_smithy_client._json)(body);
@@ -10091,6 +10166,15 @@ var de_ResourceLimitExceededExceptionRes = /* @__PURE__ */ __name(async (parsedO
   });
   return (0, import_smithy_client.decorateServiceException)(exception, body);
 }, "de_ResourceLimitExceededExceptionRes");
+var de_ResourceNotFoundExceptionRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
+  const body = parsedOutput.body;
+  const deserialized = (0, import_smithy_client._json)(body);
+  const exception = new ResourceNotFoundException({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...deserialized
+  });
+  return (0, import_smithy_client.decorateServiceException)(exception, body);
+}, "de_ResourceNotFoundExceptionRes");
 var de_ResourcePolicyConflictExceptionRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
   const body = parsedOutput.body;
   const deserialized = (0, import_smithy_client._json)(body);
@@ -10118,6 +10202,15 @@ var de_ResourcePolicyLimitExceededExceptionRes = /* @__PURE__ */ __name(async (p
   });
   return (0, import_smithy_client.decorateServiceException)(exception, body);
 }, "de_ResourcePolicyLimitExceededExceptionRes");
+var de_ResourcePolicyNotFoundExceptionRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
+  const body = parsedOutput.body;
+  const deserialized = (0, import_smithy_client._json)(body);
+  const exception = new ResourcePolicyNotFoundException({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...deserialized
+  });
+  return (0, import_smithy_client.decorateServiceException)(exception, body);
+}, "de_ResourcePolicyNotFoundExceptionRes");
 var de_ServiceSettingNotFoundRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
   const body = parsedOutput.body;
   const deserialized = (0, import_smithy_client._json)(body);
@@ -11671,6 +11764,7 @@ var de_ParameterList = /* @__PURE__ */ __name((output, context) => {
 }, "de_ParameterList");
 var de_ParameterMetadata = /* @__PURE__ */ __name((output, context) => {
   return (0, import_smithy_client.take)(output, {
+    ARN: import_smithy_client.expectString,
     AllowedPattern: import_smithy_client.expectString,
     DataType: import_smithy_client.expectString,
     Description: import_smithy_client.expectString,
@@ -14801,7 +14895,7 @@ var import_util_endpoints = __nccwpck_require__(7824);
 
 /***/ }),
 
-/***/ 3832:
+/***/ 4092:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14809,7 +14903,7 @@ var import_util_endpoints = __nccwpck_require__(7824);
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(3134);
-const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(9724));
+const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(2609));
 const core_1 = __nccwpck_require__(4818);
 const credential_provider_node_1 = __nccwpck_require__(3751);
 const util_user_agent_node_1 = __nccwpck_require__(3264);
@@ -14820,7 +14914,7 @@ const node_config_provider_1 = __nccwpck_require__(9607);
 const node_http_handler_1 = __nccwpck_require__(9567);
 const util_body_length_node_1 = __nccwpck_require__(3080);
 const util_retry_1 = __nccwpck_require__(6748);
-const runtimeConfig_shared_1 = __nccwpck_require__(8667);
+const runtimeConfig_shared_1 = __nccwpck_require__(2077);
 const smithy_client_1 = __nccwpck_require__(5460);
 const util_defaults_mode_node_1 = __nccwpck_require__(7227);
 const smithy_client_2 = __nccwpck_require__(5460);
@@ -14858,7 +14952,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 8667:
+/***/ 2077:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14870,8 +14964,8 @@ const smithy_client_1 = __nccwpck_require__(5460);
 const url_parser_1 = __nccwpck_require__(6636);
 const util_base64_1 = __nccwpck_require__(563);
 const util_utf8_1 = __nccwpck_require__(9612);
-const httpAuthSchemeProvider_1 = __nccwpck_require__(9794);
-const endpointResolver_1 = __nccwpck_require__(9227);
+const httpAuthSchemeProvider_1 = __nccwpck_require__(7260);
+const endpointResolver_1 = __nccwpck_require__(3492);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2014-11-06",
@@ -61948,11 +62042,11 @@ module.exports = parseParams
 
 /***/ }),
 
-/***/ 9724:
+/***/ 2609:
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.515.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline client-ssm","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.515.0","@aws-sdk/core":"3.513.0","@aws-sdk/credential-provider-node":"3.515.0","@aws-sdk/middleware-host-header":"3.515.0","@aws-sdk/middleware-logger":"3.515.0","@aws-sdk/middleware-recursion-detection":"3.515.0","@aws-sdk/middleware-user-agent":"3.515.0","@aws-sdk/region-config-resolver":"3.515.0","@aws-sdk/types":"3.515.0","@aws-sdk/util-endpoints":"3.515.0","@aws-sdk/util-user-agent-browser":"3.515.0","@aws-sdk/util-user-agent-node":"3.515.0","@smithy/config-resolver":"^2.1.1","@smithy/core":"^1.3.2","@smithy/fetch-http-handler":"^2.4.1","@smithy/hash-node":"^2.1.1","@smithy/invalid-dependency":"^2.1.1","@smithy/middleware-content-length":"^2.1.1","@smithy/middleware-endpoint":"^2.4.1","@smithy/middleware-retry":"^2.1.1","@smithy/middleware-serde":"^2.1.1","@smithy/middleware-stack":"^2.1.1","@smithy/node-config-provider":"^2.2.1","@smithy/node-http-handler":"^2.3.1","@smithy/protocol-http":"^3.1.1","@smithy/smithy-client":"^2.3.1","@smithy/types":"^2.9.1","@smithy/url-parser":"^2.1.1","@smithy/util-base64":"^2.1.1","@smithy/util-body-length-browser":"^2.1.1","@smithy/util-body-length-node":"^2.2.1","@smithy/util-defaults-mode-browser":"^2.1.1","@smithy/util-defaults-mode-node":"^2.2.0","@smithy/util-endpoints":"^1.1.1","@smithy/util-middleware":"^2.1.1","@smithy/util-retry":"^2.1.1","@smithy/util-utf8":"^2.1.1","@smithy/util-waiter":"^2.1.1","tslib":"^2.5.0","uuid":"^9.0.1"},"devDependencies":{"@smithy/service-client-documentation-generator":"^2.1.1","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^9.0.4","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
+module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.519.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline client-ssm","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"3.0.0","@aws-crypto/sha256-js":"3.0.0","@aws-sdk/client-sts":"3.515.0","@aws-sdk/core":"3.513.0","@aws-sdk/credential-provider-node":"3.515.0","@aws-sdk/middleware-host-header":"3.515.0","@aws-sdk/middleware-logger":"3.515.0","@aws-sdk/middleware-recursion-detection":"3.515.0","@aws-sdk/middleware-user-agent":"3.515.0","@aws-sdk/region-config-resolver":"3.515.0","@aws-sdk/types":"3.515.0","@aws-sdk/util-endpoints":"3.515.0","@aws-sdk/util-user-agent-browser":"3.515.0","@aws-sdk/util-user-agent-node":"3.515.0","@smithy/config-resolver":"^2.1.1","@smithy/core":"^1.3.2","@smithy/fetch-http-handler":"^2.4.1","@smithy/hash-node":"^2.1.1","@smithy/invalid-dependency":"^2.1.1","@smithy/middleware-content-length":"^2.1.1","@smithy/middleware-endpoint":"^2.4.1","@smithy/middleware-retry":"^2.1.1","@smithy/middleware-serde":"^2.1.1","@smithy/middleware-stack":"^2.1.1","@smithy/node-config-provider":"^2.2.1","@smithy/node-http-handler":"^2.3.1","@smithy/protocol-http":"^3.1.1","@smithy/smithy-client":"^2.3.1","@smithy/types":"^2.9.1","@smithy/url-parser":"^2.1.1","@smithy/util-base64":"^2.1.1","@smithy/util-body-length-browser":"^2.1.1","@smithy/util-body-length-node":"^2.2.1","@smithy/util-defaults-mode-browser":"^2.1.1","@smithy/util-defaults-mode-node":"^2.2.0","@smithy/util-endpoints":"^1.1.1","@smithy/util-middleware":"^2.1.1","@smithy/util-retry":"^2.1.1","@smithy/util-utf8":"^2.1.1","@smithy/util-waiter":"^2.1.1","tslib":"^2.5.0","uuid":"^9.0.1"},"devDependencies":{"@smithy/service-client-documentation-generator":"^2.1.1","@tsconfig/node14":"1.0.3","@types/node":"^14.14.31","@types/uuid":"^9.0.4","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=14.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
 
 /***/ }),
 
