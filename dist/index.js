@@ -14912,7 +14912,7 @@ const util_body_length_node_1 = __nccwpck_require__(3080);
 const util_retry_1 = __nccwpck_require__(8539);
 const runtimeConfig_shared_1 = __nccwpck_require__(3536);
 const smithy_client_1 = __nccwpck_require__(1167);
-const util_defaults_mode_node_1 = __nccwpck_require__(5246);
+const util_defaults_mode_node_1 = __nccwpck_require__(364);
 const smithy_client_2 = __nccwpck_require__(1167);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
@@ -16201,7 +16201,7 @@ const util_body_length_node_1 = __nccwpck_require__(3080);
 const util_retry_1 = __nccwpck_require__(8539);
 const runtimeConfig_shared_1 = __nccwpck_require__(3972);
 const smithy_client_1 = __nccwpck_require__(1167);
-const util_defaults_mode_node_1 = __nccwpck_require__(5246);
+const util_defaults_mode_node_1 = __nccwpck_require__(364);
 const smithy_client_2 = __nccwpck_require__(1167);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
@@ -17075,7 +17075,7 @@ const util_body_length_node_1 = __nccwpck_require__(3080);
 const util_retry_1 = __nccwpck_require__(8539);
 const runtimeConfig_shared_1 = __nccwpck_require__(9845);
 const smithy_client_1 = __nccwpck_require__(1167);
-const util_defaults_mode_node_1 = __nccwpck_require__(5246);
+const util_defaults_mode_node_1 = __nccwpck_require__(364);
 const smithy_client_2 = __nccwpck_require__(1167);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
@@ -18936,7 +18936,7 @@ const util_body_length_node_1 = __nccwpck_require__(3080);
 const util_retry_1 = __nccwpck_require__(8539);
 const runtimeConfig_shared_1 = __nccwpck_require__(1507);
 const smithy_client_1 = __nccwpck_require__(1167);
-const util_defaults_mode_node_1 = __nccwpck_require__(5246);
+const util_defaults_mode_node_1 = __nccwpck_require__(364);
 const smithy_client_2 = __nccwpck_require__(1167);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
@@ -19752,8 +19752,8 @@ var import_shared_ini_file_loader = __nccwpck_require__(9998);
 var import_property_provider = __nccwpck_require__(1114);
 var resolveCredentialSource = /* @__PURE__ */ __name((credentialSource, profileName) => {
   const sourceProvidersMap = {
-    EcsContainer: (options) => Promise.resolve().then(() => __toESM(__nccwpck_require__(9609))).then(({ fromContainerMetadata }) => fromContainerMetadata(options)),
-    Ec2InstanceMetadata: (options) => Promise.resolve().then(() => __toESM(__nccwpck_require__(9609))).then(({ fromInstanceMetadata }) => fromInstanceMetadata(options)),
+    EcsContainer: (options) => Promise.resolve().then(() => __toESM(__nccwpck_require__(8073))).then(({ fromContainerMetadata }) => fromContainerMetadata(options)),
+    Ec2InstanceMetadata: (options) => Promise.resolve().then(() => __toESM(__nccwpck_require__(8073))).then(({ fromInstanceMetadata }) => fromInstanceMetadata(options)),
     Environment: (options) => Promise.resolve().then(() => __toESM(__nccwpck_require__(4547))).then(({ fromEnv }) => fromEnv(options))
   };
   if (credentialSource in sourceProvidersMap) {
@@ -19950,7 +19950,7 @@ var import_property_provider = __nccwpck_require__(1114);
 var ENV_IMDS_DISABLED = "AWS_EC2_METADATA_DISABLED";
 var remoteProvider = /* @__PURE__ */ __name(async (init) => {
   var _a, _b;
-  const { ENV_CMDS_FULL_URI, ENV_CMDS_RELATIVE_URI, fromContainerMetadata, fromInstanceMetadata } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(9609)));
+  const { ENV_CMDS_FULL_URI, ENV_CMDS_RELATIVE_URI, fromContainerMetadata, fromInstanceMetadata } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(8073)));
   if (process.env[ENV_CMDS_RELATIVE_URI] || process.env[ENV_CMDS_FULL_URI]) {
     (_a = init.logger) == null ? void 0 : _a.debug("@aws-sdk/credential-provider-node", "remoteProvider::fromHttp/fromContainerMetadata");
     const { fromHttp } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(9671)));
@@ -22442,7 +22442,7 @@ var get = /* @__PURE__ */ __name((fromObject, path) => {
 
 /***/ }),
 
-/***/ 9609:
+/***/ 8073:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var __defProp = Object.defineProperty;
@@ -22472,6 +22472,7 @@ __export(src_exports, {
   ENV_CMDS_AUTH_TOKEN: () => ENV_CMDS_AUTH_TOKEN,
   ENV_CMDS_FULL_URI: () => ENV_CMDS_FULL_URI,
   ENV_CMDS_RELATIVE_URI: () => ENV_CMDS_RELATIVE_URI,
+  Endpoint: () => Endpoint,
   fromContainerMetadata: () => fromContainerMetadata,
   fromInstanceMetadata: () => fromInstanceMetadata,
   getInstanceMetadataEndpoint: () => getInstanceMetadataEndpoint,
@@ -22644,6 +22645,13 @@ var InstanceMetadataV1FallbackError = _InstanceMetadataV1FallbackError;
 var import_node_config_provider = __nccwpck_require__(7236);
 var import_url_parser = __nccwpck_require__(333);
 
+// src/config/Endpoint.ts
+var Endpoint = /* @__PURE__ */ ((Endpoint2) => {
+  Endpoint2["IPv4"] = "http://169.254.169.254";
+  Endpoint2["IPv6"] = "http://[fd00:ec2::254]";
+  return Endpoint2;
+})(Endpoint || {});
+
 // src/config/EndpointConfigOptions.ts
 var ENV_ENDPOINT_NAME = "AWS_EC2_METADATA_SERVICE_ENDPOINT";
 var CONFIG_ENDPOINT_NAME = "ec2_metadata_service_endpoint";
@@ -22692,7 +22700,8 @@ var getExtendedInstanceMetadataCredentials = /* @__PURE__ */ __name((credentials
   const refreshInterval = STATIC_STABILITY_REFRESH_INTERVAL_SECONDS + Math.floor(Math.random() * STATIC_STABILITY_REFRESH_INTERVAL_JITTER_WINDOW_SECONDS);
   const newExpiration = new Date(Date.now() + refreshInterval * 1e3);
   logger.warn(
-    "Attempting credential expiration extension due to a credential service availability issue. A refresh of these credentials will be attempted after ${new Date(newExpiration)}.\nFor more information, please visit: " + STATIC_STABILITY_DOC_URL
+    `Attempting credential expiration extension due to a credential service availability issue. A refresh of these credentials will be attempted after ${new Date(newExpiration)}.
+For more information, please visit: ` + STATIC_STABILITY_DOC_URL
   );
   const originalExpiration = credentials.originalExpiration ?? credentials.expiration;
   return {
@@ -28436,7 +28445,7 @@ var SelectorType = /* @__PURE__ */ ((SelectorType2) => {
 
 /***/ }),
 
-/***/ 5246:
+/***/ 364:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var __create = Object.create;
@@ -28545,7 +28554,7 @@ var inferPhysicalRegion = /* @__PURE__ */ __name(async () => {
   }
   if (!process.env[ENV_IMDS_DISABLED]) {
     try {
-      const { getInstanceMetadataEndpoint, httpRequest } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(9609)));
+      const { getInstanceMetadataEndpoint, httpRequest } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(8073)));
       const endpoint = await getInstanceMetadataEndpoint();
       return (await httpRequest({ ...endpoint, path: IMDS_REGION_PATH })).toString();
     } catch (e) {
