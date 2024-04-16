@@ -20,7 +20,15 @@ jobs:
         role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
         role-session-name: GitHubActions
         aws-region: us-west-2
+
     - uses: actions/checkout@v4
+
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        check-latest: true
+
     - uses: pnpm/action-setup@v3
       name: Install pnpm
       id: pnpm-install
@@ -30,12 +38,6 @@ jobs:
           - recursive: true
             args: [--no-frozen-lockfile, --strict-peer-dependencies]
           - args: [--global, aws-cdk]
-    - name: Use Node.js 20.x
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20.x
-        check-latest: true
-
     - name: Create for testing parameter
       working-directory: __tests__/cdk
       run: cdk deploy --all
