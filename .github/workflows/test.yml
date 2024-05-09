@@ -33,11 +33,11 @@ jobs:
       name: Install pnpm
       id: pnpm-install
       with:
-        version: latest
         run_install: |
           - recursive: true
             args: [--no-frozen-lockfile, --strict-peer-dependencies]
           - args: [--global, aws-cdk]
+
     - name: Create for testing parameter
       working-directory: __tests__/cdk
       run: cdk deploy --all
