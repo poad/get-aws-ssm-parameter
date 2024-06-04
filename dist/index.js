@@ -14721,7 +14721,7 @@ exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(3134);
 const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(7715));
 const core_1 = __nccwpck_require__(765);
-const credential_provider_node_1 = __nccwpck_require__(5896);
+const credential_provider_node_1 = __nccwpck_require__(7354);
 const util_user_agent_node_1 = __nccwpck_require__(5394);
 const config_resolver_1 = __nccwpck_require__(183);
 const hash_node_1 = __nccwpck_require__(7546);
@@ -14810,7 +14810,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 8841:
+/***/ 9311:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14882,7 +14882,7 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 
 /***/ }),
 
-/***/ 9682:
+/***/ 4135:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14891,7 +14891,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __nccwpck_require__(9423);
 const util_endpoints_2 = __nccwpck_require__(8380);
-const ruleset_1 = __nccwpck_require__(4016);
+const ruleset_1 = __nccwpck_require__(9571);
 const defaultEndpointResolver = (endpointParams, context = {}) => {
     return (0, util_endpoints_2.resolveEndpoint)(ruleset_1.ruleSet, {
         endpointParams: endpointParams,
@@ -14904,7 +14904,7 @@ util_endpoints_2.customEndpointFunctions.aws = util_endpoints_1.awsEndpointFunct
 
 /***/ }),
 
-/***/ 4016:
+/***/ 9571:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -14919,7 +14919,7 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 8015:
+/***/ 5753:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -14988,7 +14988,7 @@ var import_middleware_content_length = __nccwpck_require__(4654);
 var import_middleware_endpoint = __nccwpck_require__(5560);
 var import_middleware_retry = __nccwpck_require__(2465);
 
-var import_httpAuthSchemeProvider = __nccwpck_require__(8841);
+var import_httpAuthSchemeProvider = __nccwpck_require__(9311);
 
 // src/endpoint/EndpointParameters.ts
 var resolveClientEndpointParameters = /* @__PURE__ */ __name((options) => {
@@ -15007,7 +15007,7 @@ var commonParams = {
 };
 
 // src/SSOOIDCClient.ts
-var import_runtimeConfig = __nccwpck_require__(6939);
+var import_runtimeConfig = __nccwpck_require__(1256);
 
 // src/runtimeExtensions.ts
 var import_region_config_resolver = __nccwpck_require__(2919);
@@ -15967,7 +15967,7 @@ var SSOOIDC = _SSOOIDC;
 
 /***/ }),
 
-/***/ 6939:
+/***/ 1256:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -15975,9 +15975,9 @@ var SSOOIDC = _SSOOIDC;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(3134);
-const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(6445));
+const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(1546));
 const core_1 = __nccwpck_require__(765);
-const credential_provider_node_1 = __nccwpck_require__(5896);
+const credential_provider_node_1 = __nccwpck_require__(7354);
 const util_user_agent_node_1 = __nccwpck_require__(5394);
 const config_resolver_1 = __nccwpck_require__(183);
 const hash_node_1 = __nccwpck_require__(7546);
@@ -15986,7 +15986,7 @@ const node_config_provider_1 = __nccwpck_require__(6993);
 const node_http_handler_1 = __nccwpck_require__(9716);
 const util_body_length_node_1 = __nccwpck_require__(7340);
 const util_retry_1 = __nccwpck_require__(5491);
-const runtimeConfig_shared_1 = __nccwpck_require__(8905);
+const runtimeConfig_shared_1 = __nccwpck_require__(9917);
 const smithy_client_1 = __nccwpck_require__(5379);
 const util_defaults_mode_node_1 = __nccwpck_require__(5862);
 const smithy_client_2 = __nccwpck_require__(5379);
@@ -16024,7 +16024,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 8905:
+/***/ 9917:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -16037,8 +16037,8 @@ const smithy_client_1 = __nccwpck_require__(5379);
 const url_parser_1 = __nccwpck_require__(2758);
 const util_base64_1 = __nccwpck_require__(2199);
 const util_utf8_1 = __nccwpck_require__(141);
-const httpAuthSchemeProvider_1 = __nccwpck_require__(8841);
-const endpointResolver_1 = __nccwpck_require__(9682);
+const httpAuthSchemeProvider_1 = __nccwpck_require__(9311);
+const endpointResolver_1 = __nccwpck_require__(4135);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2019-06-10",
@@ -16904,7 +16904,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 1427:
+/***/ 1697:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -16922,10 +16922,10 @@ const middleware_endpoint_1 = __nccwpck_require__(5560);
 const middleware_retry_1 = __nccwpck_require__(2465);
 const smithy_client_1 = __nccwpck_require__(5379);
 Object.defineProperty(exports, "__Client", ({ enumerable: true, get: function () { return smithy_client_1.Client; } }));
-const httpAuthSchemeProvider_1 = __nccwpck_require__(1200);
-const EndpointParameters_1 = __nccwpck_require__(9766);
-const runtimeConfig_1 = __nccwpck_require__(5021);
-const runtimeExtensions_1 = __nccwpck_require__(4627);
+const httpAuthSchemeProvider_1 = __nccwpck_require__(2429);
+const EndpointParameters_1 = __nccwpck_require__(2715);
+const runtimeConfig_1 = __nccwpck_require__(8351);
+const runtimeExtensions_1 = __nccwpck_require__(8611);
 class STSClient extends smithy_client_1.Client {
     constructor(...[configuration]) {
         const _config_0 = (0, runtimeConfig_1.getRuntimeConfig)(configuration || {});
@@ -16968,7 +16968,7 @@ exports.STSClient = STSClient;
 
 /***/ }),
 
-/***/ 4984:
+/***/ 6283:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -17019,7 +17019,7 @@ exports.resolveHttpAuthRuntimeConfig = resolveHttpAuthRuntimeConfig;
 
 /***/ }),
 
-/***/ 1200:
+/***/ 2429:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -17028,7 +17028,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveHttpAuthSchemeConfig = exports.resolveStsAuthConfig = exports.defaultSTSHttpAuthSchemeProvider = exports.defaultSTSHttpAuthSchemeParametersProvider = void 0;
 const core_1 = __nccwpck_require__(765);
 const util_middleware_1 = __nccwpck_require__(1274);
-const STSClient_1 = __nccwpck_require__(1427);
+const STSClient_1 = __nccwpck_require__(1697);
 const defaultSTSHttpAuthSchemeParametersProvider = async (config, context, input) => {
     return {
         operation: (0, util_middleware_1.getSmithyContext)(context).operation,
@@ -17094,7 +17094,7 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 
 /***/ }),
 
-/***/ 9766:
+/***/ 2715:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -17122,7 +17122,7 @@ exports.commonParams = {
 
 /***/ }),
 
-/***/ 1608:
+/***/ 7862:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -17131,7 +17131,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __nccwpck_require__(9423);
 const util_endpoints_2 = __nccwpck_require__(8380);
-const ruleset_1 = __nccwpck_require__(1975);
+const ruleset_1 = __nccwpck_require__(3243);
 const defaultEndpointResolver = (endpointParams, context = {}) => {
     return (0, util_endpoints_2.resolveEndpoint)(ruleset_1.ruleSet, {
         endpointParams: endpointParams,
@@ -17144,7 +17144,7 @@ util_endpoints_2.customEndpointFunctions.aws = util_endpoints_1.awsEndpointFunct
 
 /***/ }),
 
-/***/ 1975:
+/***/ 3243:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -17159,7 +17159,7 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 7508:
+/***/ 8963:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -17220,7 +17220,7 @@ __export(src_exports, {
   getDefaultRoleAssumerWithWebIdentity: () => getDefaultRoleAssumerWithWebIdentity2
 });
 module.exports = __toCommonJS(src_exports);
-__reExport(src_exports, __nccwpck_require__(1427), module.exports);
+__reExport(src_exports, __nccwpck_require__(1697), module.exports);
 
 // src/STS.ts
 
@@ -17230,7 +17230,7 @@ var import_middleware_endpoint = __nccwpck_require__(5560);
 var import_middleware_serde = __nccwpck_require__(6971);
 
 var import_types = __nccwpck_require__(9676);
-var import_EndpointParameters = __nccwpck_require__(9766);
+var import_EndpointParameters = __nccwpck_require__(2715);
 
 // src/models/models_0.ts
 
@@ -18324,7 +18324,7 @@ var AssumeRoleCommand = _AssumeRoleCommand;
 
 
 
-var import_EndpointParameters2 = __nccwpck_require__(9766);
+var import_EndpointParameters2 = __nccwpck_require__(2715);
 var _AssumeRoleWithSAMLCommand = class _AssumeRoleWithSAMLCommand extends import_smithy_client.Command.classBuilder().ep({
   ...import_EndpointParameters2.commonParams
 }).m(function(Command, cs, config, o) {
@@ -18342,7 +18342,7 @@ var AssumeRoleWithSAMLCommand = _AssumeRoleWithSAMLCommand;
 
 
 
-var import_EndpointParameters3 = __nccwpck_require__(9766);
+var import_EndpointParameters3 = __nccwpck_require__(2715);
 var _AssumeRoleWithWebIdentityCommand = class _AssumeRoleWithWebIdentityCommand extends import_smithy_client.Command.classBuilder().ep({
   ...import_EndpointParameters3.commonParams
 }).m(function(Command, cs, config, o) {
@@ -18360,7 +18360,7 @@ var AssumeRoleWithWebIdentityCommand = _AssumeRoleWithWebIdentityCommand;
 
 
 
-var import_EndpointParameters4 = __nccwpck_require__(9766);
+var import_EndpointParameters4 = __nccwpck_require__(2715);
 var _DecodeAuthorizationMessageCommand = class _DecodeAuthorizationMessageCommand extends import_smithy_client.Command.classBuilder().ep({
   ...import_EndpointParameters4.commonParams
 }).m(function(Command, cs, config, o) {
@@ -18378,7 +18378,7 @@ var DecodeAuthorizationMessageCommand = _DecodeAuthorizationMessageCommand;
 
 
 
-var import_EndpointParameters5 = __nccwpck_require__(9766);
+var import_EndpointParameters5 = __nccwpck_require__(2715);
 var _GetAccessKeyInfoCommand = class _GetAccessKeyInfoCommand extends import_smithy_client.Command.classBuilder().ep({
   ...import_EndpointParameters5.commonParams
 }).m(function(Command, cs, config, o) {
@@ -18396,7 +18396,7 @@ var GetAccessKeyInfoCommand = _GetAccessKeyInfoCommand;
 
 
 
-var import_EndpointParameters6 = __nccwpck_require__(9766);
+var import_EndpointParameters6 = __nccwpck_require__(2715);
 var _GetCallerIdentityCommand = class _GetCallerIdentityCommand extends import_smithy_client.Command.classBuilder().ep({
   ...import_EndpointParameters6.commonParams
 }).m(function(Command, cs, config, o) {
@@ -18414,7 +18414,7 @@ var GetCallerIdentityCommand = _GetCallerIdentityCommand;
 
 
 
-var import_EndpointParameters7 = __nccwpck_require__(9766);
+var import_EndpointParameters7 = __nccwpck_require__(2715);
 var _GetFederationTokenCommand = class _GetFederationTokenCommand extends import_smithy_client.Command.classBuilder().ep({
   ...import_EndpointParameters7.commonParams
 }).m(function(Command, cs, config, o) {
@@ -18432,7 +18432,7 @@ var GetFederationTokenCommand = _GetFederationTokenCommand;
 
 
 
-var import_EndpointParameters8 = __nccwpck_require__(9766);
+var import_EndpointParameters8 = __nccwpck_require__(2715);
 var _GetSessionTokenCommand = class _GetSessionTokenCommand extends import_smithy_client.Command.classBuilder().ep({
   ...import_EndpointParameters8.commonParams
 }).m(function(Command, cs, config, o) {
@@ -18446,7 +18446,7 @@ __name(_GetSessionTokenCommand, "GetSessionTokenCommand");
 var GetSessionTokenCommand = _GetSessionTokenCommand;
 
 // src/STS.ts
-var import_STSClient = __nccwpck_require__(1427);
+var import_STSClient = __nccwpck_require__(1697);
 var commands = {
   AssumeRoleCommand,
   AssumeRoleWithSAMLCommand,
@@ -18464,8 +18464,8 @@ var STS = _STS;
 (0, import_smithy_client.createAggregatedClient)(commands, STS);
 
 // src/index.ts
-var import_EndpointParameters9 = __nccwpck_require__(9766);
-var import_runtimeExtensions = __nccwpck_require__(4627);
+var import_EndpointParameters9 = __nccwpck_require__(2715);
+var import_runtimeExtensions = __nccwpck_require__(8611);
 
 // src/defaultStsRoleAssumers.ts
 var ASSUME_ROLE_DEFAULT_REGION = "us-east-1";
@@ -18561,7 +18561,7 @@ var getDefaultRoleAssumerWithWebIdentity = /* @__PURE__ */ __name((stsOptions, s
 }, "getDefaultRoleAssumerWithWebIdentity");
 
 // src/defaultRoleAssumers.ts
-var import_STSClient2 = __nccwpck_require__(1427);
+var import_STSClient2 = __nccwpck_require__(1697);
 var getCustomizableStsClientCtor = /* @__PURE__ */ __name((baseCtor, customizations) => {
   var _a2;
   if (!customizations)
@@ -18591,7 +18591,7 @@ var decorateDefaultCredentialProvider = /* @__PURE__ */ __name((provider) => (in
 
 /***/ }),
 
-/***/ 5021:
+/***/ 8351:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -18599,9 +18599,9 @@ var decorateDefaultCredentialProvider = /* @__PURE__ */ __name((provider) => (in
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(3134);
-const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(9248));
+const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(4598));
 const core_1 = __nccwpck_require__(765);
-const credential_provider_node_1 = __nccwpck_require__(5896);
+const credential_provider_node_1 = __nccwpck_require__(7354);
 const util_user_agent_node_1 = __nccwpck_require__(5394);
 const config_resolver_1 = __nccwpck_require__(183);
 const core_2 = __nccwpck_require__(5536);
@@ -18611,7 +18611,7 @@ const node_config_provider_1 = __nccwpck_require__(6993);
 const node_http_handler_1 = __nccwpck_require__(9716);
 const util_body_length_node_1 = __nccwpck_require__(7340);
 const util_retry_1 = __nccwpck_require__(5491);
-const runtimeConfig_shared_1 = __nccwpck_require__(889);
+const runtimeConfig_shared_1 = __nccwpck_require__(202);
 const smithy_client_1 = __nccwpck_require__(5379);
 const util_defaults_mode_node_1 = __nccwpck_require__(5862);
 const smithy_client_2 = __nccwpck_require__(5379);
@@ -18662,7 +18662,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 889:
+/***/ 202:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -18675,8 +18675,8 @@ const smithy_client_1 = __nccwpck_require__(5379);
 const url_parser_1 = __nccwpck_require__(2758);
 const util_base64_1 = __nccwpck_require__(2199);
 const util_utf8_1 = __nccwpck_require__(141);
-const httpAuthSchemeProvider_1 = __nccwpck_require__(1200);
-const endpointResolver_1 = __nccwpck_require__(1608);
+const httpAuthSchemeProvider_1 = __nccwpck_require__(2429);
+const endpointResolver_1 = __nccwpck_require__(7862);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2011-06-15",
@@ -18710,7 +18710,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 4627:
+/***/ 8611:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -18720,7 +18720,7 @@ exports.resolveRuntimeExtensions = void 0;
 const region_config_resolver_1 = __nccwpck_require__(2919);
 const protocol_http_1 = __nccwpck_require__(199);
 const smithy_client_1 = __nccwpck_require__(5379);
-const httpAuthExtensionConfiguration_1 = __nccwpck_require__(4984);
+const httpAuthExtensionConfiguration_1 = __nccwpck_require__(6283);
 const asPartial = (t) => t;
 const resolveRuntimeExtensions = (runtimeConfig, extensions) => {
     const extensionConfiguration = {
@@ -19559,7 +19559,7 @@ Object.defineProperty(exports, "fromHttp", ({ enumerable: true, get: function ()
 
 /***/ }),
 
-/***/ 9386:
+/***/ 6712:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19666,7 +19666,7 @@ var resolveAssumeRoleCredentials = /* @__PURE__ */ __name(async (profileName, pr
   (_a = options.logger) == null ? void 0 : _a.debug("@aws-sdk/credential-provider-ini - resolveAssumeRoleCredentials (STS)");
   const data = profiles[profileName];
   if (!options.roleAssumer) {
-    const { getDefaultRoleAssumer } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(7508)));
+    const { getDefaultRoleAssumer } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(8963)));
     options.roleAssumer = getDefaultRoleAssumer(
       {
         ...options.clientConfig,
@@ -19736,7 +19736,7 @@ var resolveProcessCredentials = /* @__PURE__ */ __name(async (options, profile) 
 
 // src/resolveSsoCredentials.ts
 var resolveSsoCredentials = /* @__PURE__ */ __name(async (profile, options = {}) => {
-  const { fromSSO } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(130)));
+  const { fromSSO } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(4549)));
   return fromSSO({
     profile,
     logger: options.logger
@@ -19759,7 +19759,7 @@ var resolveStaticCredentials = /* @__PURE__ */ __name((profile, options) => {
 
 // src/resolveWebIdentityCredentials.ts
 var isWebIdentityProfile = /* @__PURE__ */ __name((arg) => Boolean(arg) && typeof arg === "object" && typeof arg.web_identity_token_file === "string" && typeof arg.role_arn === "string" && ["undefined", "string"].indexOf(typeof arg.role_session_name) > -1, "isWebIdentityProfile");
-var resolveWebIdentityCredentials = /* @__PURE__ */ __name(async (profile, options) => Promise.resolve().then(() => __toESM(__nccwpck_require__(3615))).then(
+var resolveWebIdentityCredentials = /* @__PURE__ */ __name(async (profile, options) => Promise.resolve().then(() => __toESM(__nccwpck_require__(5767))).then(
   ({ fromTokenFile }) => fromTokenFile({
     webIdentityTokenFile: profile.web_identity_token_file,
     roleArn: profile.role_arn,
@@ -19812,7 +19812,7 @@ var fromIni = /* @__PURE__ */ __name((init = {}) => async () => {
 
 /***/ }),
 
-/***/ 5896:
+/***/ 7354:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -19900,13 +19900,13 @@ var defaultProvider = /* @__PURE__ */ __name((init = {}) => (0, import_property_
           { logger: init.logger }
         );
       }
-      const { fromSSO } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(130)));
+      const { fromSSO } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(4549)));
       return fromSSO(init)();
     },
     async () => {
       var _a;
       (_a = init.logger) == null ? void 0 : _a.debug("@aws-sdk/credential-provider-node - defaultProvider::fromIni");
-      const { fromIni } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(9386)));
+      const { fromIni } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(6712)));
       return fromIni(init)();
     },
     async () => {
@@ -19918,7 +19918,7 @@ var defaultProvider = /* @__PURE__ */ __name((init = {}) => (0, import_property_
     async () => {
       var _a;
       (_a = init.logger) == null ? void 0 : _a.debug("@aws-sdk/credential-provider-node - defaultProvider::fromTokenFile");
-      const { fromTokenFile } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(3615)));
+      const { fromTokenFile } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(5767)));
       return fromTokenFile(init)();
     },
     async () => {
@@ -20053,7 +20053,7 @@ var fromProcess = /* @__PURE__ */ __name((init = {}) => async () => {
 
 /***/ }),
 
-/***/ 130:
+/***/ 4549:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -20111,7 +20111,7 @@ module.exports = __toCommonJS(src_exports);
 var isSsoProfile = /* @__PURE__ */ __name((arg) => arg && (typeof arg.sso_start_url === "string" || typeof arg.sso_account_id === "string" || typeof arg.sso_session === "string" || typeof arg.sso_region === "string" || typeof arg.sso_role_name === "string"), "isSsoProfile");
 
 // src/resolveSSOCredentials.ts
-var import_token_providers = __nccwpck_require__(3014);
+var import_token_providers = __nccwpck_require__(8514);
 var import_property_provider = __nccwpck_require__(5010);
 var import_shared_ini_file_loader = __nccwpck_require__(5214);
 var SHOULD_FAIL_CREDENTIAL_CHAIN = false;
@@ -20282,7 +20282,7 @@ var fromSSO = /* @__PURE__ */ __name((init = {}) => async () => {
 
 /***/ }),
 
-/***/ 391:
+/***/ 1162:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -20291,7 +20291,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromTokenFile = void 0;
 const property_provider_1 = __nccwpck_require__(5010);
 const fs_1 = __nccwpck_require__(7147);
-const fromWebToken_1 = __nccwpck_require__(4445);
+const fromWebToken_1 = __nccwpck_require__(9368);
 const ENV_TOKEN_FILE = "AWS_WEB_IDENTITY_TOKEN_FILE";
 const ENV_ROLE_ARN = "AWS_ROLE_ARN";
 const ENV_ROLE_SESSION_NAME = "AWS_ROLE_SESSION_NAME";
@@ -20317,7 +20317,7 @@ exports.fromTokenFile = fromTokenFile;
 
 /***/ }),
 
-/***/ 4445:
+/***/ 9368:
 /***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
 
 "use strict";
@@ -20352,7 +20352,7 @@ const fromWebToken = (init) => async () => {
     const { roleArn, roleSessionName, webIdentityToken, providerId, policyArns, policy, durationSeconds } = init;
     let { roleAssumerWithWebIdentity } = init;
     if (!roleAssumerWithWebIdentity) {
-        const { getDefaultRoleAssumerWithWebIdentity } = await Promise.resolve().then(() => __importStar(__nccwpck_require__(7508)));
+        const { getDefaultRoleAssumerWithWebIdentity } = await Promise.resolve().then(() => __importStar(__nccwpck_require__(8963)));
         roleAssumerWithWebIdentity = getDefaultRoleAssumerWithWebIdentity({
             ...init.clientConfig,
             credentialProviderLogger: init.logger,
@@ -20374,7 +20374,7 @@ exports.fromWebToken = fromWebToken;
 
 /***/ }),
 
-/***/ 3615:
+/***/ 5767:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -20397,8 +20397,8 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/index.ts
 var src_exports = {};
 module.exports = __toCommonJS(src_exports);
-__reExport(src_exports, __nccwpck_require__(391), module.exports);
-__reExport(src_exports, __nccwpck_require__(4445), module.exports);
+__reExport(src_exports, __nccwpck_require__(1162), module.exports);
+__reExport(src_exports, __nccwpck_require__(9368), module.exports);
 // Annotate the CommonJS export names for ESM import in node:
 
 0 && (0);
@@ -20879,7 +20879,7 @@ var resolveRegionConfig = /* @__PURE__ */ __name((input) => {
 
 /***/ }),
 
-/***/ 3014:
+/***/ 8514:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -20933,7 +20933,7 @@ var REFRESH_MESSAGE = `To refresh this SSO session run 'aws sso login' with the 
 // src/getSsoOidcClient.ts
 var ssoOidcClientsHash = {};
 var getSsoOidcClient = /* @__PURE__ */ __name(async (ssoRegion) => {
-  const { SSOOIDCClient } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(8015)));
+  const { SSOOIDCClient } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(5753)));
   if (ssoOidcClientsHash[ssoRegion]) {
     return ssoOidcClientsHash[ssoRegion];
   }
@@ -20944,7 +20944,7 @@ var getSsoOidcClient = /* @__PURE__ */ __name(async (ssoRegion) => {
 
 // src/getNewSsoOidcToken.ts
 var getNewSsoOidcToken = /* @__PURE__ */ __name(async (ssoToken, ssoRegion) => {
-  const { CreateTokenCommand } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(8015)));
+  const { CreateTokenCommand } = await Promise.resolve().then(() => __toESM(__nccwpck_require__(5753)));
   const ssoOidcClient = await getSsoOidcClient(ssoRegion);
   return ssoOidcClient.send(
     new CreateTokenCommand({
@@ -61991,7 +61991,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SD
 
 /***/ }),
 
-/***/ 6445:
+/***/ 1546:
 /***/ ((module) => {
 
 "use strict";
@@ -62007,7 +62007,7 @@ module.exports = JSON.parse('{"name":"@aws-sdk/client-sso","description":"AWS SD
 
 /***/ }),
 
-/***/ 9248:
+/***/ 4598:
 /***/ ((module) => {
 
 "use strict";
