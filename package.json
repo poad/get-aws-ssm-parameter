@@ -38,7 +38,7 @@
     "@jest/globals": "^29.7.0",
     "@swc/cli": "^0.1.65",
     "@swc/core": "^1.6.13",
-    "@swc/helpers": "^0.5.11",
+    "@swc/helpers": "^0.5.12",
     "@swc/jest": "^0.2.36",
     "@types/node": "^20.14.10",
     "@vercel/ncc": "^0.38.1",
