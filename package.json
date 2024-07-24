@@ -37,16 +37,16 @@
     "@biomejs/biome": "^1.8.3",
     "@jest/globals": "^29.7.0",
     "@swc/cli": "^0.1.65",
-    "@swc/core": "^1.7.0",
+    "@swc/core": "^1.7.1",
     "@swc/helpers": "^0.5.12",
     "@swc/jest": "^0.2.36",
-    "@types/node": "^20.14.11",
+    "@types/node": "^20.14.12",
     "@vercel/ncc": "^0.38.1",
     "jest": "^29.7.0",
     "js-yaml": "^4.1.0",
     "regenerator-runtime": "^0.14.1",
     "ts-jest": "^29.2.3",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "engines": {
     "npm": "use pnpm please!",
