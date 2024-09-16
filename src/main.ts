@@ -13,13 +13,8 @@ function run(): void {
     const region: string = core.getInput("aws-region");
     core.debug(region ? `region is ${region} ` : "Use the credential's region");
 
-    const decryption =
-      core.getBooleanInput("decryption", { required: false }) ?? false;
-    core.debug(
-      decryption !== undefined
-        ? `decryption is ${decryption} `
-        : "No decryption",
-    );
+    const decryption = core.getBooleanInput("decryption");
+    core.debug(`decryption is ${decryption} `);
 
     const client = createClient(region);
     client

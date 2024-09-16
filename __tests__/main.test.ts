@@ -20,6 +20,7 @@ test("Get Parameter", async () => {
 test("test runs", () => {
   process.env["INPUT_PARAMETER-NAME"] = "/get-aws-ssm-parameter/test";
   process.env["INPUT_AWS-REGION"] = "us-west-2";
+  process.env["INPUT_DECRYPTION"] = "false";
   const np = process.execPath;
   const ip = path.join(__dirname, "..", "lib", "main.js");
 

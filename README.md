@@ -13,10 +13,11 @@ jobs:
     steps:
     - name: 'Get value from Parameter Store'
       id: parameter
-      uses: poad/get-aws-ssm-parameter@v2.0.0
+      uses: poad/get-aws-ssm-parameter@v3.0.0
       with: 
         parameter-name: /example/parameter
         aws-region: us-west-2
+        decryption: false
   
     - name: 'Another example step'
       run: echo ${{ steps.parameter.outputs.value }}

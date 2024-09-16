@@ -77,13 +77,15 @@ jobs:
       with:
         parameter-name: /get-aws-ssm-parameter/test
         aws-region: ${{ matrix.region }}
+        decryption: false
+
     - name: verify value
       run: if [ ${{ steps.test.outputs.value }} != 'test' ]; then exit 1; fi
 
     - name: Prepare E2E test with decryption
       id: prepare-test-with-decryption
       run: |
-        aws ssm put-parameter --name /get-aws-ssm-parameter/test-with-decryption --value test-with-decryption --region: ${{ matrix.region }}
+        aws ssm put-parameter --name '/get-aws-ssm-parameter/test-with-decryption' --value 'test-with-decryption' --type String --region ${{ matrix.region }}
 
     - name: Run E2E test with decryption
       id: test-with-decryption
