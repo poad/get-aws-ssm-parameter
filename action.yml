@@ -8,6 +8,10 @@ inputs:
   aws-region:
     required: true
     description: 'AWS region'
+  decryption:
+    required: true
+    type: boolean
+    description: 'Value specified for WithDecryption. Detail: https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetParameter.html#systemsmanager-GetParameter-request-WithDecryption'
 runs:
   using: 'node20'
   main: 'dist/index.js'
