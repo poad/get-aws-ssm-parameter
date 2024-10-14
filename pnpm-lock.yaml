@@ -1710,8 +1710,8 @@ packages:
   path-parse@1.0.7:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
 
-  peek-readable@5.2.0:
-    resolution: {integrity: sha512-U94a+eXHzct7vAd19GH3UQ2dH4Satbng0MyYTMaQatL0pvYYL5CTPR25HBhKtecl+4bfu1/i3vC6k0hydO5Vcw==}
+  peek-readable@5.3.1:
+    resolution: {integrity: sha512-GVlENSDW6KHaXcd9zkZltB7tCLosKB/4Hg0fqBJkAoBgYG2Tn1xtMgXtSUuMU9AK/gCm/tTdT8mgAeF4YNeeqw==}
     engines: {node: '>=14.16'}
 
   picocolors@1.1.0:
@@ -4376,7 +4376,7 @@ snapshots:
 
   path-parse@1.0.7: {}
 
-  peek-readable@5.2.0: {}
+  peek-readable@5.3.1: {}
 
   picocolors@1.1.0: {}
 
@@ -4548,7 +4548,7 @@ snapshots:
   strtok3@7.1.1:
     dependencies:
       '@tokenizer/token': 0.3.0
-      peek-readable: 5.2.0
+      peek-readable: 5.3.1
 
   supports-color@5.5.0:
     dependencies:
