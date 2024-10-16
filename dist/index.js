@@ -15687,7 +15687,7 @@ var waitUntilCommandExecuted = /* @__PURE__ */ __name(async (params, input) => {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const tslib_1 = __nccwpck_require__(6084);
+const tslib_1 = __nccwpck_require__(527);
 const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(1522));
 const core_1 = __nccwpck_require__(4117);
 const credential_provider_node_1 = __nccwpck_require__(3420);
@@ -16930,7 +16930,7 @@ var SSOOIDC = _SSOOIDC;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const tslib_1 = __nccwpck_require__(6084);
+const tslib_1 = __nccwpck_require__(527);
 const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(630));
 const core_1 = __nccwpck_require__(4117);
 const credential_provider_node_1 = __nccwpck_require__(3420);
@@ -17750,7 +17750,7 @@ var paginateListAccounts = (0, import_core.createPaginator)(SSOClient, ListAccou
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const tslib_1 = __nccwpck_require__(6084);
+const tslib_1 = __nccwpck_require__(527);
 const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(5866));
 const core_1 = __nccwpck_require__(4117);
 const util_user_agent_node_1 = __nccwpck_require__(5123);
@@ -19540,7 +19540,7 @@ var decorateDefaultCredentialProvider = /* @__PURE__ */ __name((provider) => (in
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
-const tslib_1 = __nccwpck_require__(6084);
+const tslib_1 = __nccwpck_require__(527);
 const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(4968));
 const core_1 = __nccwpck_require__(4117);
 const credential_provider_node_1 = __nccwpck_require__(3420);
@@ -19692,7 +19692,7 @@ exports.resolveRuntimeExtensions = resolveRuntimeExtensions;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-const tslib_1 = __nccwpck_require__(6084);
+const tslib_1 = __nccwpck_require__(527);
 tslib_1.__exportStar(__nccwpck_require__(7141), exports);
 tslib_1.__exportStar(__nccwpck_require__(2456), exports);
 tslib_1.__exportStar(__nccwpck_require__(5179), exports);
@@ -20443,7 +20443,7 @@ exports.checkUrl = checkUrl;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromHttp = void 0;
-const tslib_1 = __nccwpck_require__(6084);
+const tslib_1 = __nccwpck_require__(527);
 const client_1 = __nccwpck_require__(7141);
 const node_http_handler_1 = __nccwpck_require__(3396);
 const property_provider_1 = __nccwpck_require__(3166);
@@ -37644,7 +37644,7 @@ module.exports = toNumber
 
 /***/ }),
 
-/***/ 6084:
+/***/ 527:
 /***/ ((module) => {
 
 /******************************************************************************
@@ -37693,6 +37693,7 @@ var __classPrivateFieldIn;
 var __createBinding;
 var __addDisposableResource;
 var __disposeResources;
+var __rewriteRelativeImportExtension;
 (function (factory) {
     var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
     if (typeof define === "function" && define.amd) {
@@ -38044,6 +38045,15 @@ var __disposeResources;
         return next();
     };
 
+    __rewriteRelativeImportExtension = function (path, preserveJsx) {
+        if (typeof path === "string" && /^\.\.?\//.test(path)) {
+            return path.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, function (m, tsx, d, ext, cm) {
+                return tsx ? preserveJsx ? ".jsx" : ".js" : d && (!ext || !cm) ? m : (d + ext + "." + cm.toLowerCase() + "js");
+            });
+        }
+        return path;
+    };
+
     exporter("__extends", __extends);
     exporter("__assign", __assign);
     exporter("__rest", __rest);
@@ -38075,7 +38085,10 @@ var __disposeResources;
     exporter("__classPrivateFieldIn", __classPrivateFieldIn);
     exporter("__addDisposableResource", __addDisposableResource);
     exporter("__disposeResources", __disposeResources);
+    exporter("__rewriteRelativeImportExtension", __rewriteRelativeImportExtension);
 });
+
+0 && (0);
 
 
 /***/ }),
