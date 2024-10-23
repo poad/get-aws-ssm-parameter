@@ -96,3 +96,4 @@ __tests__/runner/*
 lib/**/*
 
 node_modules
+.swc

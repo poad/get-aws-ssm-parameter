@@ -1,5 +1,5 @@
-import * as ssm from "@aws-sdk/client-ssm";
-import "source-map-support/register";
+import * as ssm from '@aws-sdk/client-ssm';
+import 'source-map-support/register';
 
 const createClient = (region: string) => {
   const client = new ssm.SSMClient({

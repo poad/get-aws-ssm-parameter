@@ -1,25 +1,25 @@
-import * as core from "@actions/core";
-import "source-map-support/register";
-import createClient from "./client";
+import * as core from '@actions/core';
+import 'source-map-support/register';
+import createClient from './client';
 
 function run(): void {
   try {
-    const parameterName: string = core.getInput("parameter-name", {
+    const parameterName: string = core.getInput('parameter-name', {
       required: true,
       trimWhitespace: true,
     });
     core.debug(`Parameter name is ${parameterName}.`);
 
-    const region: string = core.getInput("aws-region");
-    core.debug(region ? `region is ${region} ` : "Use the credential's region");
+    const region: string = core.getInput('aws-region');
+    core.debug(region ? `region is ${region} ` : 'Use the credential\'s region');
 
-    const decryption = core.getBooleanInput("decryption");
+    const decryption = core.getBooleanInput('decryption');
     core.debug(`decryption is ${decryption} `);
 
     const client = createClient(region);
     client
       .getParameterValue(parameterName, decryption)
-      .then((value) => core.setOutput("value", value))
+      .then((value) => core.setOutput('value', value))
       .catch((error) => {
         if (error instanceof Error) core.setFailed(error.message);
       });
