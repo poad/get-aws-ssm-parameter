@@ -5,7 +5,7 @@ require('./sourcemap-register.js');/******/ (() => { // webpackBootstrap
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", ({value:true}));Object.defineProperty(exports, "default", ({enumerable:true,get:function(){return _default}}));const _clientssm=/*#__PURE__*/_interop_require_wildcard(__nccwpck_require__(112));__nccwpck_require__(1985);function _getRequireWildcardCache(nodeInterop){if(typeof WeakMap!=="function")return null;var cacheBabelInterop=new WeakMap;var cacheNodeInterop=new WeakMap;return(_getRequireWildcardCache=function(nodeInterop){return nodeInterop?cacheNodeInterop:cacheBabelInterop})(nodeInterop)}function _interop_require_wildcard(obj,nodeInterop){if(!nodeInterop&&obj&&obj.__esModule){return obj}if(obj===null||typeof obj!=="object"&&typeof obj!=="function"){return{default:obj}}var cache=_getRequireWildcardCache(nodeInterop);if(cache&&cache.has(obj)){return cache.get(obj)}var newObj={__proto__:null};var hasPropertyDescriptor=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var key in obj){if(key!=="default"&&Object.prototype.hasOwnProperty.call(obj,key)){var desc=hasPropertyDescriptor?Object.getOwnPropertyDescriptor(obj,key):null;if(desc&&(desc.get||desc.set)){Object.defineProperty(newObj,key,desc)}else{newObj[key]=obj[key]}}}newObj.default=obj;if(cache){cache.set(obj,newObj)}return newObj}const createClient=region=>{const client=new _clientssm.SSMClient({region});const getParameterValue=async(parameterName,secure)=>{const resp=await client.send(new _clientssm.GetParameterCommand({Name:parameterName,WithDecryption:secure}));if(resp.Parameter){return resp.Parameter.Value}return undefined};return{getParameterValue}};const _default=createClient;
+Object.defineProperty(exports, "__esModule", ({value:true}));Object.defineProperty(exports, "default", ({enumerable:true,get:function(){return _default}}));const _clientssm=/*#__PURE__*/_interop_require_wildcard(__nccwpck_require__(586));__nccwpck_require__(1985);function _getRequireWildcardCache(nodeInterop){if(typeof WeakMap!=="function")return null;var cacheBabelInterop=new WeakMap;var cacheNodeInterop=new WeakMap;return(_getRequireWildcardCache=function(nodeInterop){return nodeInterop?cacheNodeInterop:cacheBabelInterop})(nodeInterop)}function _interop_require_wildcard(obj,nodeInterop){if(!nodeInterop&&obj&&obj.__esModule){return obj}if(obj===null||typeof obj!=="object"&&typeof obj!=="function"){return{default:obj}}var cache=_getRequireWildcardCache(nodeInterop);if(cache&&cache.has(obj)){return cache.get(obj)}var newObj={__proto__:null};var hasPropertyDescriptor=Object.defineProperty&&Object.getOwnPropertyDescriptor;for(var key in obj){if(key!=="default"&&Object.prototype.hasOwnProperty.call(obj,key)){var desc=hasPropertyDescriptor?Object.getOwnPropertyDescriptor(obj,key):null;if(desc&&(desc.get||desc.set)){Object.defineProperty(newObj,key,desc)}else{newObj[key]=obj[key]}}}newObj.default=obj;if(cache){cache.set(obj,newObj)}return newObj}const createClient=region=>{const client=new _clientssm.SSMClient({region});const getParameterValue=async(parameterName,secure)=>{const resp=await client.send(new _clientssm.GetParameterCommand({Name:parameterName,WithDecryption:secure}));if(resp.Parameter){return resp.Parameter.Value}return undefined};return{getParameterValue}};const _default=createClient;
 //# sourceMappingURL=client.js.map
 
 /***/ }),
@@ -3204,7 +3204,7 @@ function copyFile(srcFile, destFile, force) {
 
 /***/ }),
 
-/***/ 5787:
+/***/ 4565:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3259,7 +3259,7 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 
 /***/ }),
 
-/***/ 805:
+/***/ 5051:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3268,7 +3268,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __nccwpck_require__(5448);
 const util_endpoints_2 = __nccwpck_require__(4629);
-const ruleset_1 = __nccwpck_require__(806);
+const ruleset_1 = __nccwpck_require__(7776);
 const cache = new util_endpoints_2.EndpointCache({
     size: 50,
     params: ["Endpoint", "Region", "UseDualStack", "UseFIPS"],
@@ -3285,7 +3285,7 @@ util_endpoints_2.customEndpointFunctions.aws = util_endpoints_1.awsEndpointFunct
 
 /***/ }),
 
-/***/ 806:
+/***/ 7776:
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3300,7 +3300,7 @@ exports.ruleSet = _data;
 
 /***/ }),
 
-/***/ 112:
+/***/ 586:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 "use strict";
@@ -3467,7 +3467,10 @@ __export(src_exports, {
   DuplicateDocumentContent: () => DuplicateDocumentContent,
   DuplicateDocumentVersionName: () => DuplicateDocumentVersionName,
   DuplicateInstanceId: () => DuplicateInstanceId,
+  ExecutionInputs: () => ExecutionInputs,
   ExecutionMode: () => ExecutionMode,
+  ExecutionPreview: () => ExecutionPreview,
+  ExecutionPreviewStatus: () => ExecutionPreviewStatus,
   ExternalAlarmState: () => ExternalAlarmState,
   FailedCreateAssociationFilterSensitiveLog: () => FailedCreateAssociationFilterSensitiveLog,
   Fault: () => Fault,
@@ -3480,6 +3483,7 @@ __export(src_exports, {
   GetDeployablePatchSnapshotForInstanceCommand: () => GetDeployablePatchSnapshotForInstanceCommand,
   GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog: () => GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog,
   GetDocumentCommand: () => GetDocumentCommand,
+  GetExecutionPreviewCommand: () => GetExecutionPreviewCommand,
   GetInventoryCommand: () => GetInventoryCommand,
   GetInventorySchemaCommand: () => GetInventorySchemaCommand,
   GetMaintenanceWindowCommand: () => GetMaintenanceWindowCommand,
@@ -3510,7 +3514,9 @@ __export(src_exports, {
   HierarchyLevelLimitExceededException: () => HierarchyLevelLimitExceededException,
   HierarchyTypeMismatchException: () => HierarchyTypeMismatchException,
   IdempotentParameterMismatch: () => IdempotentParameterMismatch,
+  ImpactType: () => ImpactType,
   IncompatiblePolicyException: () => IncompatiblePolicyException,
+  InstanceInfoFilterSensitiveLog: () => InstanceInfoFilterSensitiveLog,
   InstanceInformationFilterKey: () => InstanceInformationFilterKey,
   InstanceInformationFilterSensitiveLog: () => InstanceInformationFilterSensitiveLog,
   InstancePatchStateFilterSensitiveLog: () => InstancePatchStateFilterSensitiveLog,
@@ -3590,6 +3596,9 @@ __export(src_exports, {
   ListDocumentVersionsCommand: () => ListDocumentVersionsCommand,
   ListDocumentsCommand: () => ListDocumentsCommand,
   ListInventoryEntriesCommand: () => ListInventoryEntriesCommand,
+  ListNodesCommand: () => ListNodesCommand,
+  ListNodesResultFilterSensitiveLog: () => ListNodesResultFilterSensitiveLog,
+  ListNodesSummaryCommand: () => ListNodesSummaryCommand,
   ListOpsItemEventsCommand: () => ListOpsItemEventsCommand,
   ListOpsItemRelatedItemsCommand: () => ListOpsItemRelatedItemsCommand,
   ListOpsMetadataCommand: () => ListOpsMetadataCommand,
@@ -3610,8 +3619,17 @@ __export(src_exports, {
   MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog: () => MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog,
   MaintenanceWindowTaskType: () => MaintenanceWindowTaskType,
   MalformedResourcePolicyDocumentException: () => MalformedResourcePolicyDocumentException,
+  ManagedStatus: () => ManagedStatus,
   MaxDocumentSizeExceeded: () => MaxDocumentSizeExceeded,
   ModifyDocumentPermissionCommand: () => ModifyDocumentPermissionCommand,
+  NodeAggregatorType: () => NodeAggregatorType,
+  NodeAttributeName: () => NodeAttributeName,
+  NodeFilterKey: () => NodeFilterKey,
+  NodeFilterOperatorType: () => NodeFilterOperatorType,
+  NodeFilterSensitiveLog: () => NodeFilterSensitiveLog,
+  NodeType: () => NodeType,
+  NodeTypeFilterSensitiveLog: () => NodeTypeFilterSensitiveLog,
+  NodeTypeName: () => NodeTypeName,
   NotificationEvent: () => NotificationEvent,
   NotificationType: () => NotificationType,
   OperatingSystem: () => OperatingSystem,
@@ -3709,6 +3727,7 @@ __export(src_exports, {
   StartAssociationsOnceCommand: () => StartAssociationsOnceCommand,
   StartAutomationExecutionCommand: () => StartAutomationExecutionCommand,
   StartChangeRequestExecutionCommand: () => StartChangeRequestExecutionCommand,
+  StartExecutionPreviewCommand: () => StartExecutionPreviewCommand,
   StartSessionCommand: () => StartSessionCommand,
   StatusUnchanged: () => StatusUnchanged,
   StepExecutionFilterKey: () => StepExecutionFilterKey,
@@ -3727,6 +3746,7 @@ __export(src_exports, {
   UnsupportedInventoryItemContextException: () => UnsupportedInventoryItemContextException,
   UnsupportedInventorySchemaVersionException: () => UnsupportedInventorySchemaVersionException,
   UnsupportedOperatingSystem: () => UnsupportedOperatingSystem,
+  UnsupportedOperationException: () => UnsupportedOperationException,
   UnsupportedParameterType: () => UnsupportedParameterType,
   UnsupportedPlatformType: () => UnsupportedPlatformType,
   UpdateAssociationCommand: () => UpdateAssociationCommand,
@@ -3754,6 +3774,7 @@ __export(src_exports, {
   UpdatePatchBaselineResultFilterSensitiveLog: () => UpdatePatchBaselineResultFilterSensitiveLog,
   UpdateResourceDataSyncCommand: () => UpdateResourceDataSyncCommand,
   UpdateServiceSettingCommand: () => UpdateServiceSettingCommand,
+  ValidationException: () => ValidationException,
   __Client: () => import_smithy_client.Client,
   paginateDescribeActivations: () => paginateDescribeActivations,
   paginateDescribeAssociationExecutionTargets: () => paginateDescribeAssociationExecutionTargets,
@@ -3798,6 +3819,8 @@ __export(src_exports, {
   paginateListComplianceSummaries: () => paginateListComplianceSummaries,
   paginateListDocumentVersions: () => paginateListDocumentVersions,
   paginateListDocuments: () => paginateListDocuments,
+  paginateListNodes: () => paginateListNodes,
+  paginateListNodesSummary: () => paginateListNodesSummary,
   paginateListOpsItemEvents: () => paginateListOpsItemEvents,
   paginateListOpsItemRelatedItems: () => paginateListOpsItemRelatedItems,
   paginateListOpsMetadata: () => paginateListOpsMetadata,
@@ -3814,12 +3837,12 @@ var import_middleware_logger = __nccwpck_require__(3260);
 var import_middleware_recursion_detection = __nccwpck_require__(6972);
 var import_middleware_user_agent = __nccwpck_require__(5492);
 var import_config_resolver = __nccwpck_require__(5932);
-var import_core = __nccwpck_require__(7316);
+var import_core = __nccwpck_require__(9839);
 var import_middleware_content_length = __nccwpck_require__(8748);
-var import_middleware_endpoint = __nccwpck_require__(4792);
-var import_middleware_retry = __nccwpck_require__(1600);
+var import_middleware_endpoint = __nccwpck_require__(8853);
+var import_middleware_retry = __nccwpck_require__(6319);
 
-var import_httpAuthSchemeProvider = __nccwpck_require__(5787);
+var import_httpAuthSchemeProvider = __nccwpck_require__(4565);
 
 // src/endpoint/EndpointParameters.ts
 var resolveClientEndpointParameters = /* @__PURE__ */ __name((options) => {
@@ -3838,12 +3861,12 @@ var commonParams = {
 };
 
 // src/SSMClient.ts
-var import_runtimeConfig = __nccwpck_require__(1890);
+var import_runtimeConfig = __nccwpck_require__(3036);
 
 // src/runtimeExtensions.ts
 var import_region_config_resolver = __nccwpck_require__(8838);
 var import_protocol_http = __nccwpck_require__(4502);
-var import_smithy_client = __nccwpck_require__(5131);
+var import_smithy_client = __nccwpck_require__(1568);
 
 // src/auth/httpAuthExtensionConfiguration.ts
 var getHttpAuthExtensionConfiguration = /* @__PURE__ */ __name((runtimeConfig) => {
@@ -5973,6 +5996,25 @@ var UnsupportedFeatureRequiredException = _UnsupportedFeatureRequiredException;
 var AttachmentHashType = {
   SHA256: "Sha256"
 };
+var ImpactType = {
+  MUTATING: "Mutating",
+  NON_MUTATING: "NonMutating",
+  UNDETERMINED: "Undetermined"
+};
+var ExecutionPreview;
+((ExecutionPreview2) => {
+  ExecutionPreview2.visit = /* @__PURE__ */ __name((value, visitor) => {
+    if (value.Automation !== void 0)
+      return visitor.Automation(value.Automation);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  }, "visit");
+})(ExecutionPreview || (ExecutionPreview = {}));
+var ExecutionPreviewStatus = {
+  FAILED: "Failed",
+  IN_PROGRESS: "InProgress",
+  PENDING: "Pending",
+  SUCCESS: "Success"
+};
 var InventoryQueryOperatorType = {
   BEGIN_WITH: "BeginWith",
   EQUAL: "Equal",
@@ -6192,6 +6234,73 @@ var DocumentFilterKey = {
   Name: "Name",
   Owner: "Owner",
   PlatformTypes: "PlatformTypes"
+};
+var NodeFilterKey = {
+  ACCOUNT_ID: "AccountId",
+  AGENT_TYPE: "AgentType",
+  AGENT_VERSION: "AgentVersion",
+  COMPUTER_NAME: "ComputerName",
+  INSTANCE_ID: "InstanceId",
+  INSTANCE_STATUS: "InstanceStatus",
+  IP_ADDRESS: "IpAddress",
+  MANAGED_STATUS: "ManagedStatus",
+  ORGANIZATIONAL_UNIT_ID: "OrganizationalUnitId",
+  ORGANIZATIONAL_UNIT_PATH: "OrganizationalUnitPath",
+  PLATFORM_NAME: "PlatformName",
+  PLATFORM_TYPE: "PlatformType",
+  PLATFORM_VERSION: "PlatformVersion",
+  REGION: "Region",
+  RESOURCE_TYPE: "ResourceType"
+};
+var NodeFilterOperatorType = {
+  BEGIN_WITH: "BeginWith",
+  EQUAL: "Equal",
+  NOT_EQUAL: "NotEqual"
+};
+var ManagedStatus = {
+  ALL: "All",
+  MANAGED: "Managed",
+  UNMANAGED: "Unmanaged"
+};
+var NodeType;
+((NodeType2) => {
+  NodeType2.visit = /* @__PURE__ */ __name((value, visitor) => {
+    if (value.Instance !== void 0)
+      return visitor.Instance(value.Instance);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  }, "visit");
+})(NodeType || (NodeType = {}));
+var _UnsupportedOperationException = class _UnsupportedOperationException extends SSMServiceException {
+  /**
+   * @internal
+   */
+  constructor(opts) {
+    super({
+      name: "UnsupportedOperationException",
+      $fault: "client",
+      ...opts
+    });
+    this.name = "UnsupportedOperationException";
+    this.$fault = "client";
+    Object.setPrototypeOf(this, _UnsupportedOperationException.prototype);
+    this.Message = opts.Message;
+  }
+};
+__name(_UnsupportedOperationException, "UnsupportedOperationException");
+var UnsupportedOperationException = _UnsupportedOperationException;
+var NodeAggregatorType = {
+  COUNT: "Count"
+};
+var NodeAttributeName = {
+  AGENT_VERSION: "AgentVersion",
+  PLATFORM_NAME: "PlatformName",
+  PLATFORM_TYPE: "PlatformType",
+  PLATFORM_VERSION: "PlatformVersion",
+  REGION: "Region",
+  RESOURCE_TYPE: "ResourceType"
+};
+var NodeTypeName = {
+  INSTANCE: "Instance"
 };
 var OpsItemEventFilterKey = {
   OPSITEM_ID: "OpsItemId"
@@ -6660,6 +6769,160 @@ var _FeatureNotAvailableException = class _FeatureNotAvailableException extends 
 };
 __name(_FeatureNotAvailableException, "FeatureNotAvailableException");
 var FeatureNotAvailableException = _FeatureNotAvailableException;
+var MaintenanceWindowTargetFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.OwnerInformation && { OwnerInformation: import_smithy_client.SENSITIVE_STRING },
+  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
+}), "MaintenanceWindowTargetFilterSensitiveLog");
+var DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Targets && { Targets: obj.Targets.map((item) => MaintenanceWindowTargetFilterSensitiveLog(item)) }
+}), "DescribeMaintenanceWindowTargetsResultFilterSensitiveLog");
+var MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Values && { Values: import_smithy_client.SENSITIVE_STRING }
+}), "MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog");
+var MaintenanceWindowTaskFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING },
+  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
+}), "MaintenanceWindowTaskFilterSensitiveLog");
+var DescribeMaintenanceWindowTasksResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Tasks && { Tasks: obj.Tasks.map((item) => MaintenanceWindowTaskFilterSensitiveLog(item)) }
+}), "DescribeMaintenanceWindowTasksResultFilterSensitiveLog");
+var BaselineOverrideFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Sources && { Sources: obj.Sources.map((item) => PatchSourceFilterSensitiveLog(item)) }
+}), "BaselineOverrideFilterSensitiveLog");
+var GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj
+}), "GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog");
+var GetMaintenanceWindowResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
+}), "GetMaintenanceWindowResultFilterSensitiveLog");
+var GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING }
+}), "GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog");
+var GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING },
+  ...obj.OwnerInformation && { OwnerInformation: import_smithy_client.SENSITIVE_STRING }
+}), "GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog");
+var MaintenanceWindowLambdaParametersFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Payload && { Payload: import_smithy_client.SENSITIVE_STRING }
+}), "MaintenanceWindowLambdaParametersFilterSensitiveLog");
+var MaintenanceWindowRunCommandParametersFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
+}), "MaintenanceWindowRunCommandParametersFilterSensitiveLog");
+var MaintenanceWindowStepFunctionsParametersFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Input && { Input: import_smithy_client.SENSITIVE_STRING }
+}), "MaintenanceWindowStepFunctionsParametersFilterSensitiveLog");
+var MaintenanceWindowTaskInvocationParametersFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.RunCommand && { RunCommand: MaintenanceWindowRunCommandParametersFilterSensitiveLog(obj.RunCommand) },
+  ...obj.StepFunctions && {
+    StepFunctions: MaintenanceWindowStepFunctionsParametersFilterSensitiveLog(obj.StepFunctions)
+  },
+  ...obj.Lambda && { Lambda: MaintenanceWindowLambdaParametersFilterSensitiveLog(obj.Lambda) }
+}), "MaintenanceWindowTaskInvocationParametersFilterSensitiveLog");
+var GetMaintenanceWindowTaskResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING },
+  ...obj.TaskInvocationParameters && {
+    TaskInvocationParameters: MaintenanceWindowTaskInvocationParametersFilterSensitiveLog(obj.TaskInvocationParameters)
+  },
+  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
+}), "GetMaintenanceWindowTaskResultFilterSensitiveLog");
+var ParameterFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Value && { Value: import_smithy_client.SENSITIVE_STRING }
+}), "ParameterFilterSensitiveLog");
+var GetParameterResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameter && { Parameter: ParameterFilterSensitiveLog(obj.Parameter) }
+}), "GetParameterResultFilterSensitiveLog");
+var ParameterHistoryFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Value && { Value: import_smithy_client.SENSITIVE_STRING }
+}), "ParameterHistoryFilterSensitiveLog");
+var GetParameterHistoryResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameters && { Parameters: obj.Parameters.map((item) => ParameterHistoryFilterSensitiveLog(item)) }
+}), "GetParameterHistoryResultFilterSensitiveLog");
+var GetParametersResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameters && { Parameters: obj.Parameters.map((item) => ParameterFilterSensitiveLog(item)) }
+}), "GetParametersResultFilterSensitiveLog");
+var GetParametersByPathResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameters && { Parameters: obj.Parameters.map((item) => ParameterFilterSensitiveLog(item)) }
+}), "GetParametersByPathResultFilterSensitiveLog");
+var GetPatchBaselineResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Sources && { Sources: obj.Sources.map((item) => PatchSourceFilterSensitiveLog(item)) }
+}), "GetPatchBaselineResultFilterSensitiveLog");
+var AssociationVersionInfoFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
+}), "AssociationVersionInfoFilterSensitiveLog");
+var ListAssociationVersionsResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.AssociationVersions && {
+    AssociationVersions: obj.AssociationVersions.map((item) => AssociationVersionInfoFilterSensitiveLog(item))
+  }
+}), "ListAssociationVersionsResultFilterSensitiveLog");
+var CommandFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
+}), "CommandFilterSensitiveLog");
+var ListCommandsResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Commands && { Commands: obj.Commands.map((item) => CommandFilterSensitiveLog(item)) }
+}), "ListCommandsResultFilterSensitiveLog");
+var InstanceInfoFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.IpAddress && { IpAddress: import_smithy_client.SENSITIVE_STRING }
+}), "InstanceInfoFilterSensitiveLog");
+var NodeTypeFilterSensitiveLog = /* @__PURE__ */ __name((obj) => {
+  if (obj.Instance !== void 0)
+    return { Instance: InstanceInfoFilterSensitiveLog(obj.Instance) };
+  if (obj.$unknown !== void 0)
+    return { [obj.$unknown[0]]: "UNKNOWN" };
+}, "NodeTypeFilterSensitiveLog");
+var NodeFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.NodeType && { NodeType: NodeTypeFilterSensitiveLog(obj.NodeType) }
+}), "NodeFilterSensitiveLog");
+var ListNodesResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Nodes && { Nodes: obj.Nodes.map((item) => NodeFilterSensitiveLog(item)) }
+}), "ListNodesResultFilterSensitiveLog");
+var PutParameterRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Value && { Value: import_smithy_client.SENSITIVE_STRING }
+}), "PutParameterRequestFilterSensitiveLog");
+var RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.OwnerInformation && { OwnerInformation: import_smithy_client.SENSITIVE_STRING },
+  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
+}), "RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog");
+var RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING },
+  ...obj.TaskInvocationParameters && {
+    TaskInvocationParameters: MaintenanceWindowTaskInvocationParametersFilterSensitiveLog(obj.TaskInvocationParameters)
+  },
+  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
+}), "RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog");
+
+// src/models/models_2.ts
+
 var _AutomationStepNotFoundException = class _AutomationStepNotFoundException extends SSMServiceException {
   /**
    * @internal
@@ -6846,150 +7109,6 @@ var _InvalidAutomationExecutionParametersException = class _InvalidAutomationExe
 };
 __name(_InvalidAutomationExecutionParametersException, "InvalidAutomationExecutionParametersException");
 var InvalidAutomationExecutionParametersException = _InvalidAutomationExecutionParametersException;
-var MaintenanceWindowTargetFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.OwnerInformation && { OwnerInformation: import_smithy_client.SENSITIVE_STRING },
-  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
-}), "MaintenanceWindowTargetFilterSensitiveLog");
-var DescribeMaintenanceWindowTargetsResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Targets && { Targets: obj.Targets.map((item) => MaintenanceWindowTargetFilterSensitiveLog(item)) }
-}), "DescribeMaintenanceWindowTargetsResultFilterSensitiveLog");
-var MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Values && { Values: import_smithy_client.SENSITIVE_STRING }
-}), "MaintenanceWindowTaskParameterValueExpressionFilterSensitiveLog");
-var MaintenanceWindowTaskFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING },
-  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
-}), "MaintenanceWindowTaskFilterSensitiveLog");
-var DescribeMaintenanceWindowTasksResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Tasks && { Tasks: obj.Tasks.map((item) => MaintenanceWindowTaskFilterSensitiveLog(item)) }
-}), "DescribeMaintenanceWindowTasksResultFilterSensitiveLog");
-var BaselineOverrideFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Sources && { Sources: obj.Sources.map((item) => PatchSourceFilterSensitiveLog(item)) }
-}), "BaselineOverrideFilterSensitiveLog");
-var GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj
-}), "GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog");
-var GetMaintenanceWindowResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
-}), "GetMaintenanceWindowResultFilterSensitiveLog");
-var GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING }
-}), "GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog");
-var GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING },
-  ...obj.OwnerInformation && { OwnerInformation: import_smithy_client.SENSITIVE_STRING }
-}), "GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog");
-var MaintenanceWindowLambdaParametersFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Payload && { Payload: import_smithy_client.SENSITIVE_STRING }
-}), "MaintenanceWindowLambdaParametersFilterSensitiveLog");
-var MaintenanceWindowRunCommandParametersFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
-}), "MaintenanceWindowRunCommandParametersFilterSensitiveLog");
-var MaintenanceWindowStepFunctionsParametersFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Input && { Input: import_smithy_client.SENSITIVE_STRING }
-}), "MaintenanceWindowStepFunctionsParametersFilterSensitiveLog");
-var MaintenanceWindowTaskInvocationParametersFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.RunCommand && { RunCommand: MaintenanceWindowRunCommandParametersFilterSensitiveLog(obj.RunCommand) },
-  ...obj.StepFunctions && {
-    StepFunctions: MaintenanceWindowStepFunctionsParametersFilterSensitiveLog(obj.StepFunctions)
-  },
-  ...obj.Lambda && { Lambda: MaintenanceWindowLambdaParametersFilterSensitiveLog(obj.Lambda) }
-}), "MaintenanceWindowTaskInvocationParametersFilterSensitiveLog");
-var GetMaintenanceWindowTaskResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING },
-  ...obj.TaskInvocationParameters && {
-    TaskInvocationParameters: MaintenanceWindowTaskInvocationParametersFilterSensitiveLog(obj.TaskInvocationParameters)
-  },
-  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
-}), "GetMaintenanceWindowTaskResultFilterSensitiveLog");
-var ParameterFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Value && { Value: import_smithy_client.SENSITIVE_STRING }
-}), "ParameterFilterSensitiveLog");
-var GetParameterResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameter && { Parameter: ParameterFilterSensitiveLog(obj.Parameter) }
-}), "GetParameterResultFilterSensitiveLog");
-var ParameterHistoryFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Value && { Value: import_smithy_client.SENSITIVE_STRING }
-}), "ParameterHistoryFilterSensitiveLog");
-var GetParameterHistoryResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameters && { Parameters: obj.Parameters.map((item) => ParameterHistoryFilterSensitiveLog(item)) }
-}), "GetParameterHistoryResultFilterSensitiveLog");
-var GetParametersResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameters && { Parameters: obj.Parameters.map((item) => ParameterFilterSensitiveLog(item)) }
-}), "GetParametersResultFilterSensitiveLog");
-var GetParametersByPathResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameters && { Parameters: obj.Parameters.map((item) => ParameterFilterSensitiveLog(item)) }
-}), "GetParametersByPathResultFilterSensitiveLog");
-var GetPatchBaselineResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Sources && { Sources: obj.Sources.map((item) => PatchSourceFilterSensitiveLog(item)) }
-}), "GetPatchBaselineResultFilterSensitiveLog");
-var AssociationVersionInfoFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
-}), "AssociationVersionInfoFilterSensitiveLog");
-var ListAssociationVersionsResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.AssociationVersions && {
-    AssociationVersions: obj.AssociationVersions.map((item) => AssociationVersionInfoFilterSensitiveLog(item))
-  }
-}), "ListAssociationVersionsResultFilterSensitiveLog");
-var CommandFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
-}), "CommandFilterSensitiveLog");
-var ListCommandsResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Commands && { Commands: obj.Commands.map((item) => CommandFilterSensitiveLog(item)) }
-}), "ListCommandsResultFilterSensitiveLog");
-var PutParameterRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Value && { Value: import_smithy_client.SENSITIVE_STRING }
-}), "PutParameterRequestFilterSensitiveLog");
-var RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.OwnerInformation && { OwnerInformation: import_smithy_client.SENSITIVE_STRING },
-  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
-}), "RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog");
-var RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.TaskParameters && { TaskParameters: import_smithy_client.SENSITIVE_STRING },
-  ...obj.TaskInvocationParameters && {
-    TaskInvocationParameters: MaintenanceWindowTaskInvocationParametersFilterSensitiveLog(obj.TaskInvocationParameters)
-  },
-  ...obj.Description && { Description: import_smithy_client.SENSITIVE_STRING }
-}), "RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog");
-var SendCommandRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
-}), "SendCommandRequestFilterSensitiveLog");
-var SendCommandResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
-  ...obj,
-  ...obj.Command && { Command: CommandFilterSensitiveLog(obj.Command) }
-}), "SendCommandResultFilterSensitiveLog");
-
-// src/models/models_2.ts
-
 var _AutomationDefinitionNotApprovedException = class _AutomationDefinitionNotApprovedException extends SSMServiceException {
   /**
    * @internal
@@ -7008,6 +7127,33 @@ var _AutomationDefinitionNotApprovedException = class _AutomationDefinitionNotAp
 };
 __name(_AutomationDefinitionNotApprovedException, "AutomationDefinitionNotApprovedException");
 var AutomationDefinitionNotApprovedException = _AutomationDefinitionNotApprovedException;
+var ExecutionInputs;
+((ExecutionInputs3) => {
+  ExecutionInputs3.visit = /* @__PURE__ */ __name((value, visitor) => {
+    if (value.Automation !== void 0)
+      return visitor.Automation(value.Automation);
+    return visitor._(value.$unknown[0], value.$unknown[1]);
+  }, "visit");
+})(ExecutionInputs || (ExecutionInputs = {}));
+var _ValidationException = class _ValidationException extends SSMServiceException {
+  /**
+   * @internal
+   */
+  constructor(opts) {
+    super({
+      name: "ValidationException",
+      $fault: "client",
+      ...opts
+    });
+    this.name = "ValidationException";
+    this.$fault = "client";
+    Object.setPrototypeOf(this, _ValidationException.prototype);
+    this.Message = opts.Message;
+    this.ReasonCode = opts.ReasonCode;
+  }
+};
+__name(_ValidationException, "ValidationException");
+var ValidationException = _ValidationException;
 var _TargetNotConnected = class _TargetNotConnected extends SSMServiceException {
   /**
    * @internal
@@ -7196,6 +7342,14 @@ var _ResourceDataSyncConflictException = class _ResourceDataSyncConflictExceptio
 };
 __name(_ResourceDataSyncConflictException, "ResourceDataSyncConflictException");
 var ResourceDataSyncConflictException = _ResourceDataSyncConflictException;
+var SendCommandRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
+}), "SendCommandRequestFilterSensitiveLog");
+var SendCommandResultFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
+  ...obj,
+  ...obj.Command && { Command: CommandFilterSensitiveLog(obj.Command) }
+}), "SendCommandResultFilterSensitiveLog");
 var UpdateAssociationRequestFilterSensitiveLog = /* @__PURE__ */ __name((obj) => ({
   ...obj,
   ...obj.Parameters && { Parameters: import_smithy_client.SENSITIVE_STRING }
@@ -7676,6 +7830,12 @@ var se_GetDocumentCommand = /* @__PURE__ */ __name(async (input, context) => {
   body = JSON.stringify((0, import_smithy_client._json)(input));
   return buildHttpRpcRequest(context, headers, "/", void 0, body);
 }, "se_GetDocumentCommand");
+var se_GetExecutionPreviewCommand = /* @__PURE__ */ __name(async (input, context) => {
+  const headers = sharedHeaders("GetExecutionPreview");
+  let body;
+  body = JSON.stringify((0, import_smithy_client._json)(input));
+  return buildHttpRpcRequest(context, headers, "/", void 0, body);
+}, "se_GetExecutionPreviewCommand");
 var se_GetInventoryCommand = /* @__PURE__ */ __name(async (input, context) => {
   const headers = sharedHeaders("GetInventory");
   let body;
@@ -7850,6 +8010,18 @@ var se_ListInventoryEntriesCommand = /* @__PURE__ */ __name(async (input, contex
   body = JSON.stringify((0, import_smithy_client._json)(input));
   return buildHttpRpcRequest(context, headers, "/", void 0, body);
 }, "se_ListInventoryEntriesCommand");
+var se_ListNodesCommand = /* @__PURE__ */ __name(async (input, context) => {
+  const headers = sharedHeaders("ListNodes");
+  let body;
+  body = JSON.stringify((0, import_smithy_client._json)(input));
+  return buildHttpRpcRequest(context, headers, "/", void 0, body);
+}, "se_ListNodesCommand");
+var se_ListNodesSummaryCommand = /* @__PURE__ */ __name(async (input, context) => {
+  const headers = sharedHeaders("ListNodesSummary");
+  let body;
+  body = JSON.stringify(se_ListNodesSummaryRequest(input, context));
+  return buildHttpRpcRequest(context, headers, "/", void 0, body);
+}, "se_ListNodesSummaryCommand");
 var se_ListOpsItemEventsCommand = /* @__PURE__ */ __name(async (input, context) => {
   const headers = sharedHeaders("ListOpsItemEvents");
   let body;
@@ -7988,6 +8160,12 @@ var se_StartChangeRequestExecutionCommand = /* @__PURE__ */ __name(async (input,
   body = JSON.stringify(se_StartChangeRequestExecutionRequest(input, context));
   return buildHttpRpcRequest(context, headers, "/", void 0, body);
 }, "se_StartChangeRequestExecutionCommand");
+var se_StartExecutionPreviewCommand = /* @__PURE__ */ __name(async (input, context) => {
+  const headers = sharedHeaders("StartExecutionPreview");
+  let body;
+  body = JSON.stringify((0, import_smithy_client._json)(input));
+  return buildHttpRpcRequest(context, headers, "/", void 0, body);
+}, "se_StartExecutionPreviewCommand");
 var se_StartSessionCommand = /* @__PURE__ */ __name(async (input, context) => {
   const headers = sharedHeaders("StartSession");
   let body;
@@ -9006,6 +9184,19 @@ var de_GetDocumentCommand = /* @__PURE__ */ __name(async (output, context) => {
   };
   return response;
 }, "de_GetDocumentCommand");
+var de_GetExecutionPreviewCommand = /* @__PURE__ */ __name(async (output, context) => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data = await (0, import_core2.parseJsonBody)(output.body, context);
+  let contents = {};
+  contents = de_GetExecutionPreviewResponse(data, context);
+  const response = {
+    $metadata: deserializeMetadata(output),
+    ...contents
+  };
+  return response;
+}, "de_GetExecutionPreviewCommand");
 var de_GetInventoryCommand = /* @__PURE__ */ __name(async (output, context) => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -9383,6 +9574,32 @@ var de_ListInventoryEntriesCommand = /* @__PURE__ */ __name(async (output, conte
   };
   return response;
 }, "de_ListInventoryEntriesCommand");
+var de_ListNodesCommand = /* @__PURE__ */ __name(async (output, context) => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data = await (0, import_core2.parseJsonBody)(output.body, context);
+  let contents = {};
+  contents = de_ListNodesResult(data, context);
+  const response = {
+    $metadata: deserializeMetadata(output),
+    ...contents
+  };
+  return response;
+}, "de_ListNodesCommand");
+var de_ListNodesSummaryCommand = /* @__PURE__ */ __name(async (output, context) => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data = await (0, import_core2.parseJsonBody)(output.body, context);
+  let contents = {};
+  contents = (0, import_smithy_client._json)(data);
+  const response = {
+    $metadata: deserializeMetadata(output),
+    ...contents
+  };
+  return response;
+}, "de_ListNodesSummaryCommand");
 var de_ListOpsItemEventsCommand = /* @__PURE__ */ __name(async (output, context) => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -9682,6 +9899,19 @@ var de_StartChangeRequestExecutionCommand = /* @__PURE__ */ __name(async (output
   };
   return response;
 }, "de_StartChangeRequestExecutionCommand");
+var de_StartExecutionPreviewCommand = /* @__PURE__ */ __name(async (output, context) => {
+  if (output.statusCode >= 300) {
+    return de_CommandError(output, context);
+  }
+  const data = await (0, import_core2.parseJsonBody)(output.body, context);
+  let contents = {};
+  contents = (0, import_smithy_client._json)(data);
+  const response = {
+    $metadata: deserializeMetadata(output),
+    ...contents
+  };
+  return response;
+}, "de_StartExecutionPreviewCommand");
 var de_StartSessionCommand = /* @__PURE__ */ __name(async (output, context) => {
   if (output.statusCode >= 300) {
     return de_CommandError(output, context);
@@ -10181,6 +10411,9 @@ var de_CommandError = /* @__PURE__ */ __name(async (output, context) => {
     case "ParameterVersionLabelLimitExceeded":
     case "com.amazonaws.ssm#ParameterVersionLabelLimitExceeded":
       throw await de_ParameterVersionLabelLimitExceededRes(parsedOutput, context);
+    case "UnsupportedOperationException":
+    case "com.amazonaws.ssm#UnsupportedOperationException":
+      throw await de_UnsupportedOperationExceptionRes(parsedOutput, context);
     case "DocumentPermissionLimit":
     case "com.amazonaws.ssm#DocumentPermissionLimit":
       throw await de_DocumentPermissionLimitRes(parsedOutput, context);
@@ -10292,6 +10525,9 @@ var de_CommandError = /* @__PURE__ */ __name(async (output, context) => {
     case "AutomationDefinitionNotApprovedException":
     case "com.amazonaws.ssm#AutomationDefinitionNotApprovedException":
       throw await de_AutomationDefinitionNotApprovedExceptionRes(parsedOutput, context);
+    case "ValidationException":
+    case "com.amazonaws.ssm#ValidationException":
+      throw await de_ValidationExceptionRes(parsedOutput, context);
     case "TargetNotConnected":
     case "com.amazonaws.ssm#TargetNotConnected":
       throw await de_TargetNotConnectedRes(parsedOutput, context);
@@ -11510,6 +11746,15 @@ var de_UnsupportedOperatingSystemRes = /* @__PURE__ */ __name(async (parsedOutpu
   });
   return (0, import_smithy_client.decorateServiceException)(exception, body);
 }, "de_UnsupportedOperatingSystemRes");
+var de_UnsupportedOperationExceptionRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
+  const body = parsedOutput.body;
+  const deserialized = (0, import_smithy_client._json)(body);
+  const exception = new UnsupportedOperationException({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...deserialized
+  });
+  return (0, import_smithy_client.decorateServiceException)(exception, body);
+}, "de_UnsupportedOperationExceptionRes");
 var de_UnsupportedParameterTypeRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
   const body = parsedOutput.body;
   const deserialized = (0, import_smithy_client._json)(body);
@@ -11528,6 +11773,15 @@ var de_UnsupportedPlatformTypeRes = /* @__PURE__ */ __name(async (parsedOutput, 
   });
   return (0, import_smithy_client.decorateServiceException)(exception, body);
 }, "de_UnsupportedPlatformTypeRes");
+var de_ValidationExceptionRes = /* @__PURE__ */ __name(async (parsedOutput, context) => {
+  const body = parsedOutput.body;
+  const deserialized = (0, import_smithy_client._json)(body);
+  const exception = new ValidationException({
+    $metadata: deserializeMetadata(parsedOutput),
+    ...deserialized
+  });
+  return (0, import_smithy_client.decorateServiceException)(exception, body);
+}, "de_ValidationExceptionRes");
 var se_AssociationStatus = /* @__PURE__ */ __name((input, context) => {
   return (0, import_smithy_client.take)(input, {
     AdditionalInfo: [],
@@ -11646,6 +11900,15 @@ var se_InventoryAggregatorList = /* @__PURE__ */ __name((input, context) => {
     return se_InventoryAggregator(entry, context);
   });
 }, "se_InventoryAggregatorList");
+var se_ListNodesSummaryRequest = /* @__PURE__ */ __name((input, context) => {
+  return (0, import_smithy_client.take)(input, {
+    Aggregators: (_) => se_NodeAggregatorList(_, context),
+    Filters: import_smithy_client._json,
+    MaxResults: [],
+    NextToken: [],
+    SyncName: []
+  });
+}, "se_ListNodesSummaryRequest");
 var se_MaintenanceWindowLambdaParameters = /* @__PURE__ */ __name((input, context) => {
   return (0, import_smithy_client.take)(input, {
     ClientContext: [],
@@ -11661,6 +11924,19 @@ var se_MaintenanceWindowTaskInvocationParameters = /* @__PURE__ */ __name((input
     StepFunctions: import_smithy_client._json
   });
 }, "se_MaintenanceWindowTaskInvocationParameters");
+var se_NodeAggregator = /* @__PURE__ */ __name((input, context) => {
+  return (0, import_smithy_client.take)(input, {
+    AggregatorType: [],
+    Aggregators: (_) => se_NodeAggregatorList(_, context),
+    AttributeName: [],
+    TypeName: []
+  });
+}, "se_NodeAggregator");
+var se_NodeAggregatorList = /* @__PURE__ */ __name((input, context) => {
+  return input.filter((e) => e != null).map((entry) => {
+    return se_NodeAggregator(entry, context);
+  });
+}, "se_NodeAggregatorList");
 var se_OpsAggregator = /* @__PURE__ */ __name((input, context) => {
   return (0, import_smithy_client.take)(input, {
     AggregatorType: [],
@@ -12408,6 +12684,15 @@ var de_GetDocumentResult = /* @__PURE__ */ __name((output, context) => {
     VersionName: import_smithy_client.expectString
   });
 }, "de_GetDocumentResult");
+var de_GetExecutionPreviewResponse = /* @__PURE__ */ __name((output, context) => {
+  return (0, import_smithy_client.take)(output, {
+    EndedAt: (_) => (0, import_smithy_client.expectNonNull)((0, import_smithy_client.parseEpochTimestamp)((0, import_smithy_client.expectNumber)(_))),
+    ExecutionPreview: (_) => (0, import_smithy_client._json)((0, import_core2.awsExpectUnion)(_)),
+    ExecutionPreviewId: import_smithy_client.expectString,
+    Status: import_smithy_client.expectString,
+    StatusMessage: import_smithy_client.expectString
+  });
+}, "de_GetExecutionPreviewResponse");
 var de_GetMaintenanceWindowExecutionResult = /* @__PURE__ */ __name((output, context) => {
   return (0, import_smithy_client.take)(output, {
     EndTime: (_) => (0, import_smithy_client.expectNonNull)((0, import_smithy_client.parseEpochTimestamp)((0, import_smithy_client.expectNumber)(_))),
@@ -12739,6 +13024,12 @@ var de_ListDocumentVersionsResult = /* @__PURE__ */ __name((output, context) => 
     NextToken: import_smithy_client.expectString
   });
 }, "de_ListDocumentVersionsResult");
+var de_ListNodesResult = /* @__PURE__ */ __name((output, context) => {
+  return (0, import_smithy_client.take)(output, {
+    NextToken: import_smithy_client.expectString,
+    Nodes: (_) => de_NodeList(_, context)
+  });
+}, "de_ListNodesResult");
 var de_ListOpsItemEventsResponse = /* @__PURE__ */ __name((output, context) => {
   return (0, import_smithy_client.take)(output, {
     NextToken: import_smithy_client.expectString,
@@ -12842,6 +13133,21 @@ var de_MaintenanceWindowTaskInvocationParameters = /* @__PURE__ */ __name((outpu
     StepFunctions: import_smithy_client._json
   });
 }, "de_MaintenanceWindowTaskInvocationParameters");
+var de_Node = /* @__PURE__ */ __name((output, context) => {
+  return (0, import_smithy_client.take)(output, {
+    CaptureTime: (_) => (0, import_smithy_client.expectNonNull)((0, import_smithy_client.parseEpochTimestamp)((0, import_smithy_client.expectNumber)(_))),
+    Id: import_smithy_client.expectString,
+    NodeType: (_) => (0, import_smithy_client._json)((0, import_core2.awsExpectUnion)(_)),
+    Owner: import_smithy_client._json,
+    Region: import_smithy_client.expectString
+  });
+}, "de_Node");
+var de_NodeList = /* @__PURE__ */ __name((output, context) => {
+  const retVal = (output || []).filter((e) => e != null).map((entry) => {
+    return de_Node(entry, context);
+  });
+  return retVal;
+}, "de_NodeList");
 var de_OpsItem = /* @__PURE__ */ __name((output, context) => {
   return (0, import_smithy_client.take)(output, {
     ActualEndTime: (_) => (0, import_smithy_client.expectNonNull)((0, import_smithy_client.parseEpochTimestamp)((0, import_smithy_client.expectNumber)(_))),
@@ -13279,10 +13585,10 @@ function sharedHeaders(operation) {
 __name(sharedHeaders, "sharedHeaders");
 
 // src/commands/AddTagsToResourceCommand.ts
-var _AddTagsToResourceCommand = class _AddTagsToResourceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _AddTagsToResourceCommand = class _AddTagsToResourceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "AddTagsToResource", {}).n("SSMClient", "AddTagsToResourceCommand").f(void 0, void 0).ser(se_AddTagsToResourceCommand).de(de_AddTagsToResourceCommand).build() {
 };
@@ -13293,10 +13599,10 @@ var AddTagsToResourceCommand = _AddTagsToResourceCommand;
 
 
 
-var _AssociateOpsItemRelatedItemCommand = class _AssociateOpsItemRelatedItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _AssociateOpsItemRelatedItemCommand = class _AssociateOpsItemRelatedItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "AssociateOpsItemRelatedItem", {}).n("SSMClient", "AssociateOpsItemRelatedItemCommand").f(void 0, void 0).ser(se_AssociateOpsItemRelatedItemCommand).de(de_AssociateOpsItemRelatedItemCommand).build() {
 };
@@ -13307,10 +13613,10 @@ var AssociateOpsItemRelatedItemCommand = _AssociateOpsItemRelatedItemCommand;
 
 
 
-var _CancelCommandCommand = class _CancelCommandCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CancelCommandCommand = class _CancelCommandCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CancelCommand", {}).n("SSMClient", "CancelCommandCommand").f(void 0, void 0).ser(se_CancelCommandCommand).de(de_CancelCommandCommand).build() {
 };
@@ -13321,10 +13627,10 @@ var CancelCommandCommand = _CancelCommandCommand;
 
 
 
-var _CancelMaintenanceWindowExecutionCommand = class _CancelMaintenanceWindowExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CancelMaintenanceWindowExecutionCommand = class _CancelMaintenanceWindowExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CancelMaintenanceWindowExecution", {}).n("SSMClient", "CancelMaintenanceWindowExecutionCommand").f(void 0, void 0).ser(se_CancelMaintenanceWindowExecutionCommand).de(de_CancelMaintenanceWindowExecutionCommand).build() {
 };
@@ -13335,10 +13641,10 @@ var CancelMaintenanceWindowExecutionCommand = _CancelMaintenanceWindowExecutionC
 
 
 
-var _CreateActivationCommand = class _CreateActivationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreateActivationCommand = class _CreateActivationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreateActivation", {}).n("SSMClient", "CreateActivationCommand").f(void 0, void 0).ser(se_CreateActivationCommand).de(de_CreateActivationCommand).build() {
 };
@@ -13349,10 +13655,10 @@ var CreateActivationCommand = _CreateActivationCommand;
 
 
 
-var _CreateAssociationBatchCommand = class _CreateAssociationBatchCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreateAssociationBatchCommand = class _CreateAssociationBatchCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreateAssociationBatch", {}).n("SSMClient", "CreateAssociationBatchCommand").f(CreateAssociationBatchRequestFilterSensitiveLog, CreateAssociationBatchResultFilterSensitiveLog).ser(se_CreateAssociationBatchCommand).de(de_CreateAssociationBatchCommand).build() {
 };
@@ -13363,10 +13669,10 @@ var CreateAssociationBatchCommand = _CreateAssociationBatchCommand;
 
 
 
-var _CreateAssociationCommand = class _CreateAssociationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreateAssociationCommand = class _CreateAssociationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreateAssociation", {}).n("SSMClient", "CreateAssociationCommand").f(CreateAssociationRequestFilterSensitiveLog, CreateAssociationResultFilterSensitiveLog).ser(se_CreateAssociationCommand).de(de_CreateAssociationCommand).build() {
 };
@@ -13377,10 +13683,10 @@ var CreateAssociationCommand = _CreateAssociationCommand;
 
 
 
-var _CreateDocumentCommand = class _CreateDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreateDocumentCommand = class _CreateDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreateDocument", {}).n("SSMClient", "CreateDocumentCommand").f(void 0, void 0).ser(se_CreateDocumentCommand).de(de_CreateDocumentCommand).build() {
 };
@@ -13391,10 +13697,10 @@ var CreateDocumentCommand = _CreateDocumentCommand;
 
 
 
-var _CreateMaintenanceWindowCommand = class _CreateMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreateMaintenanceWindowCommand = class _CreateMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreateMaintenanceWindow", {}).n("SSMClient", "CreateMaintenanceWindowCommand").f(CreateMaintenanceWindowRequestFilterSensitiveLog, void 0).ser(se_CreateMaintenanceWindowCommand).de(de_CreateMaintenanceWindowCommand).build() {
 };
@@ -13405,10 +13711,10 @@ var CreateMaintenanceWindowCommand = _CreateMaintenanceWindowCommand;
 
 
 
-var _CreateOpsItemCommand = class _CreateOpsItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreateOpsItemCommand = class _CreateOpsItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreateOpsItem", {}).n("SSMClient", "CreateOpsItemCommand").f(void 0, void 0).ser(se_CreateOpsItemCommand).de(de_CreateOpsItemCommand).build() {
 };
@@ -13419,10 +13725,10 @@ var CreateOpsItemCommand = _CreateOpsItemCommand;
 
 
 
-var _CreateOpsMetadataCommand = class _CreateOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreateOpsMetadataCommand = class _CreateOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreateOpsMetadata", {}).n("SSMClient", "CreateOpsMetadataCommand").f(void 0, void 0).ser(se_CreateOpsMetadataCommand).de(de_CreateOpsMetadataCommand).build() {
 };
@@ -13433,10 +13739,10 @@ var CreateOpsMetadataCommand = _CreateOpsMetadataCommand;
 
 
 
-var _CreatePatchBaselineCommand = class _CreatePatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreatePatchBaselineCommand = class _CreatePatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreatePatchBaseline", {}).n("SSMClient", "CreatePatchBaselineCommand").f(CreatePatchBaselineRequestFilterSensitiveLog, void 0).ser(se_CreatePatchBaselineCommand).de(de_CreatePatchBaselineCommand).build() {
 };
@@ -13447,10 +13753,10 @@ var CreatePatchBaselineCommand = _CreatePatchBaselineCommand;
 
 
 
-var _CreateResourceDataSyncCommand = class _CreateResourceDataSyncCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _CreateResourceDataSyncCommand = class _CreateResourceDataSyncCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "CreateResourceDataSync", {}).n("SSMClient", "CreateResourceDataSyncCommand").f(void 0, void 0).ser(se_CreateResourceDataSyncCommand).de(de_CreateResourceDataSyncCommand).build() {
 };
@@ -13461,10 +13767,10 @@ var CreateResourceDataSyncCommand = _CreateResourceDataSyncCommand;
 
 
 
-var _DeleteActivationCommand = class _DeleteActivationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteActivationCommand = class _DeleteActivationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteActivation", {}).n("SSMClient", "DeleteActivationCommand").f(void 0, void 0).ser(se_DeleteActivationCommand).de(de_DeleteActivationCommand).build() {
 };
@@ -13475,10 +13781,10 @@ var DeleteActivationCommand = _DeleteActivationCommand;
 
 
 
-var _DeleteAssociationCommand = class _DeleteAssociationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteAssociationCommand = class _DeleteAssociationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteAssociation", {}).n("SSMClient", "DeleteAssociationCommand").f(void 0, void 0).ser(se_DeleteAssociationCommand).de(de_DeleteAssociationCommand).build() {
 };
@@ -13489,10 +13795,10 @@ var DeleteAssociationCommand = _DeleteAssociationCommand;
 
 
 
-var _DeleteDocumentCommand = class _DeleteDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteDocumentCommand = class _DeleteDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteDocument", {}).n("SSMClient", "DeleteDocumentCommand").f(void 0, void 0).ser(se_DeleteDocumentCommand).de(de_DeleteDocumentCommand).build() {
 };
@@ -13503,10 +13809,10 @@ var DeleteDocumentCommand = _DeleteDocumentCommand;
 
 
 
-var _DeleteInventoryCommand = class _DeleteInventoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteInventoryCommand = class _DeleteInventoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteInventory", {}).n("SSMClient", "DeleteInventoryCommand").f(void 0, void 0).ser(se_DeleteInventoryCommand).de(de_DeleteInventoryCommand).build() {
 };
@@ -13517,10 +13823,10 @@ var DeleteInventoryCommand = _DeleteInventoryCommand;
 
 
 
-var _DeleteMaintenanceWindowCommand = class _DeleteMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteMaintenanceWindowCommand = class _DeleteMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteMaintenanceWindow", {}).n("SSMClient", "DeleteMaintenanceWindowCommand").f(void 0, void 0).ser(se_DeleteMaintenanceWindowCommand).de(de_DeleteMaintenanceWindowCommand).build() {
 };
@@ -13531,10 +13837,10 @@ var DeleteMaintenanceWindowCommand = _DeleteMaintenanceWindowCommand;
 
 
 
-var _DeleteOpsItemCommand = class _DeleteOpsItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteOpsItemCommand = class _DeleteOpsItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteOpsItem", {}).n("SSMClient", "DeleteOpsItemCommand").f(void 0, void 0).ser(se_DeleteOpsItemCommand).de(de_DeleteOpsItemCommand).build() {
 };
@@ -13545,10 +13851,10 @@ var DeleteOpsItemCommand = _DeleteOpsItemCommand;
 
 
 
-var _DeleteOpsMetadataCommand = class _DeleteOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteOpsMetadataCommand = class _DeleteOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteOpsMetadata", {}).n("SSMClient", "DeleteOpsMetadataCommand").f(void 0, void 0).ser(se_DeleteOpsMetadataCommand).de(de_DeleteOpsMetadataCommand).build() {
 };
@@ -13559,10 +13865,10 @@ var DeleteOpsMetadataCommand = _DeleteOpsMetadataCommand;
 
 
 
-var _DeleteParameterCommand = class _DeleteParameterCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteParameterCommand = class _DeleteParameterCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteParameter", {}).n("SSMClient", "DeleteParameterCommand").f(void 0, void 0).ser(se_DeleteParameterCommand).de(de_DeleteParameterCommand).build() {
 };
@@ -13573,10 +13879,10 @@ var DeleteParameterCommand = _DeleteParameterCommand;
 
 
 
-var _DeleteParametersCommand = class _DeleteParametersCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteParametersCommand = class _DeleteParametersCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteParameters", {}).n("SSMClient", "DeleteParametersCommand").f(void 0, void 0).ser(se_DeleteParametersCommand).de(de_DeleteParametersCommand).build() {
 };
@@ -13587,10 +13893,10 @@ var DeleteParametersCommand = _DeleteParametersCommand;
 
 
 
-var _DeletePatchBaselineCommand = class _DeletePatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeletePatchBaselineCommand = class _DeletePatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeletePatchBaseline", {}).n("SSMClient", "DeletePatchBaselineCommand").f(void 0, void 0).ser(se_DeletePatchBaselineCommand).de(de_DeletePatchBaselineCommand).build() {
 };
@@ -13601,10 +13907,10 @@ var DeletePatchBaselineCommand = _DeletePatchBaselineCommand;
 
 
 
-var _DeleteResourceDataSyncCommand = class _DeleteResourceDataSyncCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteResourceDataSyncCommand = class _DeleteResourceDataSyncCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteResourceDataSync", {}).n("SSMClient", "DeleteResourceDataSyncCommand").f(void 0, void 0).ser(se_DeleteResourceDataSyncCommand).de(de_DeleteResourceDataSyncCommand).build() {
 };
@@ -13615,10 +13921,10 @@ var DeleteResourceDataSyncCommand = _DeleteResourceDataSyncCommand;
 
 
 
-var _DeleteResourcePolicyCommand = class _DeleteResourcePolicyCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeleteResourcePolicyCommand = class _DeleteResourcePolicyCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeleteResourcePolicy", {}).n("SSMClient", "DeleteResourcePolicyCommand").f(void 0, void 0).ser(se_DeleteResourcePolicyCommand).de(de_DeleteResourcePolicyCommand).build() {
 };
@@ -13629,10 +13935,10 @@ var DeleteResourcePolicyCommand = _DeleteResourcePolicyCommand;
 
 
 
-var _DeregisterManagedInstanceCommand = class _DeregisterManagedInstanceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeregisterManagedInstanceCommand = class _DeregisterManagedInstanceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeregisterManagedInstance", {}).n("SSMClient", "DeregisterManagedInstanceCommand").f(void 0, void 0).ser(se_DeregisterManagedInstanceCommand).de(de_DeregisterManagedInstanceCommand).build() {
 };
@@ -13643,10 +13949,10 @@ var DeregisterManagedInstanceCommand = _DeregisterManagedInstanceCommand;
 
 
 
-var _DeregisterPatchBaselineForPatchGroupCommand = class _DeregisterPatchBaselineForPatchGroupCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeregisterPatchBaselineForPatchGroupCommand = class _DeregisterPatchBaselineForPatchGroupCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeregisterPatchBaselineForPatchGroup", {}).n("SSMClient", "DeregisterPatchBaselineForPatchGroupCommand").f(void 0, void 0).ser(se_DeregisterPatchBaselineForPatchGroupCommand).de(de_DeregisterPatchBaselineForPatchGroupCommand).build() {
 };
@@ -13657,10 +13963,10 @@ var DeregisterPatchBaselineForPatchGroupCommand = _DeregisterPatchBaselineForPat
 
 
 
-var _DeregisterTargetFromMaintenanceWindowCommand = class _DeregisterTargetFromMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeregisterTargetFromMaintenanceWindowCommand = class _DeregisterTargetFromMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeregisterTargetFromMaintenanceWindow", {}).n("SSMClient", "DeregisterTargetFromMaintenanceWindowCommand").f(void 0, void 0).ser(se_DeregisterTargetFromMaintenanceWindowCommand).de(de_DeregisterTargetFromMaintenanceWindowCommand).build() {
 };
@@ -13671,10 +13977,10 @@ var DeregisterTargetFromMaintenanceWindowCommand = _DeregisterTargetFromMaintena
 
 
 
-var _DeregisterTaskFromMaintenanceWindowCommand = class _DeregisterTaskFromMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DeregisterTaskFromMaintenanceWindowCommand = class _DeregisterTaskFromMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DeregisterTaskFromMaintenanceWindow", {}).n("SSMClient", "DeregisterTaskFromMaintenanceWindowCommand").f(void 0, void 0).ser(se_DeregisterTaskFromMaintenanceWindowCommand).de(de_DeregisterTaskFromMaintenanceWindowCommand).build() {
 };
@@ -13685,10 +13991,10 @@ var DeregisterTaskFromMaintenanceWindowCommand = _DeregisterTaskFromMaintenanceW
 
 
 
-var _DescribeActivationsCommand = class _DescribeActivationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeActivationsCommand = class _DescribeActivationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeActivations", {}).n("SSMClient", "DescribeActivationsCommand").f(void 0, void 0).ser(se_DescribeActivationsCommand).de(de_DescribeActivationsCommand).build() {
 };
@@ -13699,10 +14005,10 @@ var DescribeActivationsCommand = _DescribeActivationsCommand;
 
 
 
-var _DescribeAssociationCommand = class _DescribeAssociationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeAssociationCommand = class _DescribeAssociationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeAssociation", {}).n("SSMClient", "DescribeAssociationCommand").f(void 0, DescribeAssociationResultFilterSensitiveLog).ser(se_DescribeAssociationCommand).de(de_DescribeAssociationCommand).build() {
 };
@@ -13713,10 +14019,10 @@ var DescribeAssociationCommand = _DescribeAssociationCommand;
 
 
 
-var _DescribeAssociationExecutionsCommand = class _DescribeAssociationExecutionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeAssociationExecutionsCommand = class _DescribeAssociationExecutionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeAssociationExecutions", {}).n("SSMClient", "DescribeAssociationExecutionsCommand").f(void 0, void 0).ser(se_DescribeAssociationExecutionsCommand).de(de_DescribeAssociationExecutionsCommand).build() {
 };
@@ -13727,10 +14033,10 @@ var DescribeAssociationExecutionsCommand = _DescribeAssociationExecutionsCommand
 
 
 
-var _DescribeAssociationExecutionTargetsCommand = class _DescribeAssociationExecutionTargetsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeAssociationExecutionTargetsCommand = class _DescribeAssociationExecutionTargetsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeAssociationExecutionTargets", {}).n("SSMClient", "DescribeAssociationExecutionTargetsCommand").f(void 0, void 0).ser(se_DescribeAssociationExecutionTargetsCommand).de(de_DescribeAssociationExecutionTargetsCommand).build() {
 };
@@ -13741,10 +14047,10 @@ var DescribeAssociationExecutionTargetsCommand = _DescribeAssociationExecutionTa
 
 
 
-var _DescribeAutomationExecutionsCommand = class _DescribeAutomationExecutionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeAutomationExecutionsCommand = class _DescribeAutomationExecutionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeAutomationExecutions", {}).n("SSMClient", "DescribeAutomationExecutionsCommand").f(void 0, void 0).ser(se_DescribeAutomationExecutionsCommand).de(de_DescribeAutomationExecutionsCommand).build() {
 };
@@ -13755,10 +14061,10 @@ var DescribeAutomationExecutionsCommand = _DescribeAutomationExecutionsCommand;
 
 
 
-var _DescribeAutomationStepExecutionsCommand = class _DescribeAutomationStepExecutionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeAutomationStepExecutionsCommand = class _DescribeAutomationStepExecutionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeAutomationStepExecutions", {}).n("SSMClient", "DescribeAutomationStepExecutionsCommand").f(void 0, void 0).ser(se_DescribeAutomationStepExecutionsCommand).de(de_DescribeAutomationStepExecutionsCommand).build() {
 };
@@ -13769,10 +14075,10 @@ var DescribeAutomationStepExecutionsCommand = _DescribeAutomationStepExecutionsC
 
 
 
-var _DescribeAvailablePatchesCommand = class _DescribeAvailablePatchesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeAvailablePatchesCommand = class _DescribeAvailablePatchesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeAvailablePatches", {}).n("SSMClient", "DescribeAvailablePatchesCommand").f(void 0, void 0).ser(se_DescribeAvailablePatchesCommand).de(de_DescribeAvailablePatchesCommand).build() {
 };
@@ -13783,10 +14089,10 @@ var DescribeAvailablePatchesCommand = _DescribeAvailablePatchesCommand;
 
 
 
-var _DescribeDocumentCommand = class _DescribeDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeDocumentCommand = class _DescribeDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeDocument", {}).n("SSMClient", "DescribeDocumentCommand").f(void 0, void 0).ser(se_DescribeDocumentCommand).de(de_DescribeDocumentCommand).build() {
 };
@@ -13797,10 +14103,10 @@ var DescribeDocumentCommand = _DescribeDocumentCommand;
 
 
 
-var _DescribeDocumentPermissionCommand = class _DescribeDocumentPermissionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeDocumentPermissionCommand = class _DescribeDocumentPermissionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeDocumentPermission", {}).n("SSMClient", "DescribeDocumentPermissionCommand").f(void 0, void 0).ser(se_DescribeDocumentPermissionCommand).de(de_DescribeDocumentPermissionCommand).build() {
 };
@@ -13811,10 +14117,10 @@ var DescribeDocumentPermissionCommand = _DescribeDocumentPermissionCommand;
 
 
 
-var _DescribeEffectiveInstanceAssociationsCommand = class _DescribeEffectiveInstanceAssociationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeEffectiveInstanceAssociationsCommand = class _DescribeEffectiveInstanceAssociationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeEffectiveInstanceAssociations", {}).n("SSMClient", "DescribeEffectiveInstanceAssociationsCommand").f(void 0, void 0).ser(se_DescribeEffectiveInstanceAssociationsCommand).de(de_DescribeEffectiveInstanceAssociationsCommand).build() {
 };
@@ -13825,10 +14131,10 @@ var DescribeEffectiveInstanceAssociationsCommand = _DescribeEffectiveInstanceAss
 
 
 
-var _DescribeEffectivePatchesForPatchBaselineCommand = class _DescribeEffectivePatchesForPatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeEffectivePatchesForPatchBaselineCommand = class _DescribeEffectivePatchesForPatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeEffectivePatchesForPatchBaseline", {}).n("SSMClient", "DescribeEffectivePatchesForPatchBaselineCommand").f(void 0, void 0).ser(se_DescribeEffectivePatchesForPatchBaselineCommand).de(de_DescribeEffectivePatchesForPatchBaselineCommand).build() {
 };
@@ -13839,10 +14145,10 @@ var DescribeEffectivePatchesForPatchBaselineCommand = _DescribeEffectivePatchesF
 
 
 
-var _DescribeInstanceAssociationsStatusCommand = class _DescribeInstanceAssociationsStatusCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeInstanceAssociationsStatusCommand = class _DescribeInstanceAssociationsStatusCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeInstanceAssociationsStatus", {}).n("SSMClient", "DescribeInstanceAssociationsStatusCommand").f(void 0, void 0).ser(se_DescribeInstanceAssociationsStatusCommand).de(de_DescribeInstanceAssociationsStatusCommand).build() {
 };
@@ -13853,10 +14159,10 @@ var DescribeInstanceAssociationsStatusCommand = _DescribeInstanceAssociationsSta
 
 
 
-var _DescribeInstanceInformationCommand = class _DescribeInstanceInformationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeInstanceInformationCommand = class _DescribeInstanceInformationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeInstanceInformation", {}).n("SSMClient", "DescribeInstanceInformationCommand").f(void 0, DescribeInstanceInformationResultFilterSensitiveLog).ser(se_DescribeInstanceInformationCommand).de(de_DescribeInstanceInformationCommand).build() {
 };
@@ -13867,10 +14173,10 @@ var DescribeInstanceInformationCommand = _DescribeInstanceInformationCommand;
 
 
 
-var _DescribeInstancePatchesCommand = class _DescribeInstancePatchesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeInstancePatchesCommand = class _DescribeInstancePatchesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeInstancePatches", {}).n("SSMClient", "DescribeInstancePatchesCommand").f(void 0, void 0).ser(se_DescribeInstancePatchesCommand).de(de_DescribeInstancePatchesCommand).build() {
 };
@@ -13881,10 +14187,10 @@ var DescribeInstancePatchesCommand = _DescribeInstancePatchesCommand;
 
 
 
-var _DescribeInstancePatchStatesCommand = class _DescribeInstancePatchStatesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeInstancePatchStatesCommand = class _DescribeInstancePatchStatesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeInstancePatchStates", {}).n("SSMClient", "DescribeInstancePatchStatesCommand").f(void 0, DescribeInstancePatchStatesResultFilterSensitiveLog).ser(se_DescribeInstancePatchStatesCommand).de(de_DescribeInstancePatchStatesCommand).build() {
 };
@@ -13895,10 +14201,10 @@ var DescribeInstancePatchStatesCommand = _DescribeInstancePatchStatesCommand;
 
 
 
-var _DescribeInstancePatchStatesForPatchGroupCommand = class _DescribeInstancePatchStatesForPatchGroupCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeInstancePatchStatesForPatchGroupCommand = class _DescribeInstancePatchStatesForPatchGroupCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeInstancePatchStatesForPatchGroup", {}).n("SSMClient", "DescribeInstancePatchStatesForPatchGroupCommand").f(void 0, DescribeInstancePatchStatesForPatchGroupResultFilterSensitiveLog).ser(se_DescribeInstancePatchStatesForPatchGroupCommand).de(de_DescribeInstancePatchStatesForPatchGroupCommand).build() {
 };
@@ -13909,10 +14215,10 @@ var DescribeInstancePatchStatesForPatchGroupCommand = _DescribeInstancePatchStat
 
 
 
-var _DescribeInstancePropertiesCommand = class _DescribeInstancePropertiesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeInstancePropertiesCommand = class _DescribeInstancePropertiesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeInstanceProperties", {}).n("SSMClient", "DescribeInstancePropertiesCommand").f(void 0, DescribeInstancePropertiesResultFilterSensitiveLog).ser(se_DescribeInstancePropertiesCommand).de(de_DescribeInstancePropertiesCommand).build() {
 };
@@ -13923,10 +14229,10 @@ var DescribeInstancePropertiesCommand = _DescribeInstancePropertiesCommand;
 
 
 
-var _DescribeInventoryDeletionsCommand = class _DescribeInventoryDeletionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeInventoryDeletionsCommand = class _DescribeInventoryDeletionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeInventoryDeletions", {}).n("SSMClient", "DescribeInventoryDeletionsCommand").f(void 0, void 0).ser(se_DescribeInventoryDeletionsCommand).de(de_DescribeInventoryDeletionsCommand).build() {
 };
@@ -13937,10 +14243,10 @@ var DescribeInventoryDeletionsCommand = _DescribeInventoryDeletionsCommand;
 
 
 
-var _DescribeMaintenanceWindowExecutionsCommand = class _DescribeMaintenanceWindowExecutionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeMaintenanceWindowExecutionsCommand = class _DescribeMaintenanceWindowExecutionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeMaintenanceWindowExecutions", {}).n("SSMClient", "DescribeMaintenanceWindowExecutionsCommand").f(void 0, void 0).ser(se_DescribeMaintenanceWindowExecutionsCommand).de(de_DescribeMaintenanceWindowExecutionsCommand).build() {
 };
@@ -13951,10 +14257,10 @@ var DescribeMaintenanceWindowExecutionsCommand = _DescribeMaintenanceWindowExecu
 
 
 
-var _DescribeMaintenanceWindowExecutionTaskInvocationsCommand = class _DescribeMaintenanceWindowExecutionTaskInvocationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeMaintenanceWindowExecutionTaskInvocationsCommand = class _DescribeMaintenanceWindowExecutionTaskInvocationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeMaintenanceWindowExecutionTaskInvocations", {}).n("SSMClient", "DescribeMaintenanceWindowExecutionTaskInvocationsCommand").f(void 0, DescribeMaintenanceWindowExecutionTaskInvocationsResultFilterSensitiveLog).ser(se_DescribeMaintenanceWindowExecutionTaskInvocationsCommand).de(de_DescribeMaintenanceWindowExecutionTaskInvocationsCommand).build() {
 };
@@ -13965,10 +14271,10 @@ var DescribeMaintenanceWindowExecutionTaskInvocationsCommand = _DescribeMaintena
 
 
 
-var _DescribeMaintenanceWindowExecutionTasksCommand = class _DescribeMaintenanceWindowExecutionTasksCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeMaintenanceWindowExecutionTasksCommand = class _DescribeMaintenanceWindowExecutionTasksCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeMaintenanceWindowExecutionTasks", {}).n("SSMClient", "DescribeMaintenanceWindowExecutionTasksCommand").f(void 0, void 0).ser(se_DescribeMaintenanceWindowExecutionTasksCommand).de(de_DescribeMaintenanceWindowExecutionTasksCommand).build() {
 };
@@ -13979,10 +14285,10 @@ var DescribeMaintenanceWindowExecutionTasksCommand = _DescribeMaintenanceWindowE
 
 
 
-var _DescribeMaintenanceWindowScheduleCommand = class _DescribeMaintenanceWindowScheduleCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeMaintenanceWindowScheduleCommand = class _DescribeMaintenanceWindowScheduleCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeMaintenanceWindowSchedule", {}).n("SSMClient", "DescribeMaintenanceWindowScheduleCommand").f(void 0, void 0).ser(se_DescribeMaintenanceWindowScheduleCommand).de(de_DescribeMaintenanceWindowScheduleCommand).build() {
 };
@@ -13993,10 +14299,10 @@ var DescribeMaintenanceWindowScheduleCommand = _DescribeMaintenanceWindowSchedul
 
 
 
-var _DescribeMaintenanceWindowsCommand = class _DescribeMaintenanceWindowsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeMaintenanceWindowsCommand = class _DescribeMaintenanceWindowsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeMaintenanceWindows", {}).n("SSMClient", "DescribeMaintenanceWindowsCommand").f(void 0, DescribeMaintenanceWindowsResultFilterSensitiveLog).ser(se_DescribeMaintenanceWindowsCommand).de(de_DescribeMaintenanceWindowsCommand).build() {
 };
@@ -14007,10 +14313,10 @@ var DescribeMaintenanceWindowsCommand = _DescribeMaintenanceWindowsCommand;
 
 
 
-var _DescribeMaintenanceWindowsForTargetCommand = class _DescribeMaintenanceWindowsForTargetCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeMaintenanceWindowsForTargetCommand = class _DescribeMaintenanceWindowsForTargetCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeMaintenanceWindowsForTarget", {}).n("SSMClient", "DescribeMaintenanceWindowsForTargetCommand").f(void 0, void 0).ser(se_DescribeMaintenanceWindowsForTargetCommand).de(de_DescribeMaintenanceWindowsForTargetCommand).build() {
 };
@@ -14021,10 +14327,10 @@ var DescribeMaintenanceWindowsForTargetCommand = _DescribeMaintenanceWindowsForT
 
 
 
-var _DescribeMaintenanceWindowTargetsCommand = class _DescribeMaintenanceWindowTargetsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeMaintenanceWindowTargetsCommand = class _DescribeMaintenanceWindowTargetsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeMaintenanceWindowTargets", {}).n("SSMClient", "DescribeMaintenanceWindowTargetsCommand").f(void 0, DescribeMaintenanceWindowTargetsResultFilterSensitiveLog).ser(se_DescribeMaintenanceWindowTargetsCommand).de(de_DescribeMaintenanceWindowTargetsCommand).build() {
 };
@@ -14035,10 +14341,10 @@ var DescribeMaintenanceWindowTargetsCommand = _DescribeMaintenanceWindowTargetsC
 
 
 
-var _DescribeMaintenanceWindowTasksCommand = class _DescribeMaintenanceWindowTasksCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeMaintenanceWindowTasksCommand = class _DescribeMaintenanceWindowTasksCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeMaintenanceWindowTasks", {}).n("SSMClient", "DescribeMaintenanceWindowTasksCommand").f(void 0, DescribeMaintenanceWindowTasksResultFilterSensitiveLog).ser(se_DescribeMaintenanceWindowTasksCommand).de(de_DescribeMaintenanceWindowTasksCommand).build() {
 };
@@ -14049,10 +14355,10 @@ var DescribeMaintenanceWindowTasksCommand = _DescribeMaintenanceWindowTasksComma
 
 
 
-var _DescribeOpsItemsCommand = class _DescribeOpsItemsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeOpsItemsCommand = class _DescribeOpsItemsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeOpsItems", {}).n("SSMClient", "DescribeOpsItemsCommand").f(void 0, void 0).ser(se_DescribeOpsItemsCommand).de(de_DescribeOpsItemsCommand).build() {
 };
@@ -14063,10 +14369,10 @@ var DescribeOpsItemsCommand = _DescribeOpsItemsCommand;
 
 
 
-var _DescribeParametersCommand = class _DescribeParametersCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeParametersCommand = class _DescribeParametersCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeParameters", {}).n("SSMClient", "DescribeParametersCommand").f(void 0, void 0).ser(se_DescribeParametersCommand).de(de_DescribeParametersCommand).build() {
 };
@@ -14077,10 +14383,10 @@ var DescribeParametersCommand = _DescribeParametersCommand;
 
 
 
-var _DescribePatchBaselinesCommand = class _DescribePatchBaselinesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribePatchBaselinesCommand = class _DescribePatchBaselinesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribePatchBaselines", {}).n("SSMClient", "DescribePatchBaselinesCommand").f(void 0, void 0).ser(se_DescribePatchBaselinesCommand).de(de_DescribePatchBaselinesCommand).build() {
 };
@@ -14091,10 +14397,10 @@ var DescribePatchBaselinesCommand = _DescribePatchBaselinesCommand;
 
 
 
-var _DescribePatchGroupsCommand = class _DescribePatchGroupsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribePatchGroupsCommand = class _DescribePatchGroupsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribePatchGroups", {}).n("SSMClient", "DescribePatchGroupsCommand").f(void 0, void 0).ser(se_DescribePatchGroupsCommand).de(de_DescribePatchGroupsCommand).build() {
 };
@@ -14105,10 +14411,10 @@ var DescribePatchGroupsCommand = _DescribePatchGroupsCommand;
 
 
 
-var _DescribePatchGroupStateCommand = class _DescribePatchGroupStateCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribePatchGroupStateCommand = class _DescribePatchGroupStateCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribePatchGroupState", {}).n("SSMClient", "DescribePatchGroupStateCommand").f(void 0, void 0).ser(se_DescribePatchGroupStateCommand).de(de_DescribePatchGroupStateCommand).build() {
 };
@@ -14119,10 +14425,10 @@ var DescribePatchGroupStateCommand = _DescribePatchGroupStateCommand;
 
 
 
-var _DescribePatchPropertiesCommand = class _DescribePatchPropertiesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribePatchPropertiesCommand = class _DescribePatchPropertiesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribePatchProperties", {}).n("SSMClient", "DescribePatchPropertiesCommand").f(void 0, void 0).ser(se_DescribePatchPropertiesCommand).de(de_DescribePatchPropertiesCommand).build() {
 };
@@ -14133,10 +14439,10 @@ var DescribePatchPropertiesCommand = _DescribePatchPropertiesCommand;
 
 
 
-var _DescribeSessionsCommand = class _DescribeSessionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DescribeSessionsCommand = class _DescribeSessionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DescribeSessions", {}).n("SSMClient", "DescribeSessionsCommand").f(void 0, void 0).ser(se_DescribeSessionsCommand).de(de_DescribeSessionsCommand).build() {
 };
@@ -14147,10 +14453,10 @@ var DescribeSessionsCommand = _DescribeSessionsCommand;
 
 
 
-var _DisassociateOpsItemRelatedItemCommand = class _DisassociateOpsItemRelatedItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _DisassociateOpsItemRelatedItemCommand = class _DisassociateOpsItemRelatedItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "DisassociateOpsItemRelatedItem", {}).n("SSMClient", "DisassociateOpsItemRelatedItemCommand").f(void 0, void 0).ser(se_DisassociateOpsItemRelatedItemCommand).de(de_DisassociateOpsItemRelatedItemCommand).build() {
 };
@@ -14161,10 +14467,10 @@ var DisassociateOpsItemRelatedItemCommand = _DisassociateOpsItemRelatedItemComma
 
 
 
-var _GetAutomationExecutionCommand = class _GetAutomationExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetAutomationExecutionCommand = class _GetAutomationExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetAutomationExecution", {}).n("SSMClient", "GetAutomationExecutionCommand").f(void 0, void 0).ser(se_GetAutomationExecutionCommand).de(de_GetAutomationExecutionCommand).build() {
 };
@@ -14175,10 +14481,10 @@ var GetAutomationExecutionCommand = _GetAutomationExecutionCommand;
 
 
 
-var _GetCalendarStateCommand = class _GetCalendarStateCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetCalendarStateCommand = class _GetCalendarStateCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetCalendarState", {}).n("SSMClient", "GetCalendarStateCommand").f(void 0, void 0).ser(se_GetCalendarStateCommand).de(de_GetCalendarStateCommand).build() {
 };
@@ -14189,10 +14495,10 @@ var GetCalendarStateCommand = _GetCalendarStateCommand;
 
 
 
-var _GetCommandInvocationCommand = class _GetCommandInvocationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetCommandInvocationCommand = class _GetCommandInvocationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetCommandInvocation", {}).n("SSMClient", "GetCommandInvocationCommand").f(void 0, void 0).ser(se_GetCommandInvocationCommand).de(de_GetCommandInvocationCommand).build() {
 };
@@ -14203,10 +14509,10 @@ var GetCommandInvocationCommand = _GetCommandInvocationCommand;
 
 
 
-var _GetConnectionStatusCommand = class _GetConnectionStatusCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetConnectionStatusCommand = class _GetConnectionStatusCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetConnectionStatus", {}).n("SSMClient", "GetConnectionStatusCommand").f(void 0, void 0).ser(se_GetConnectionStatusCommand).de(de_GetConnectionStatusCommand).build() {
 };
@@ -14217,10 +14523,10 @@ var GetConnectionStatusCommand = _GetConnectionStatusCommand;
 
 
 
-var _GetDefaultPatchBaselineCommand = class _GetDefaultPatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetDefaultPatchBaselineCommand = class _GetDefaultPatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetDefaultPatchBaseline", {}).n("SSMClient", "GetDefaultPatchBaselineCommand").f(void 0, void 0).ser(se_GetDefaultPatchBaselineCommand).de(de_GetDefaultPatchBaselineCommand).build() {
 };
@@ -14231,10 +14537,10 @@ var GetDefaultPatchBaselineCommand = _GetDefaultPatchBaselineCommand;
 
 
 
-var _GetDeployablePatchSnapshotForInstanceCommand = class _GetDeployablePatchSnapshotForInstanceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetDeployablePatchSnapshotForInstanceCommand = class _GetDeployablePatchSnapshotForInstanceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetDeployablePatchSnapshotForInstance", {}).n("SSMClient", "GetDeployablePatchSnapshotForInstanceCommand").f(GetDeployablePatchSnapshotForInstanceRequestFilterSensitiveLog, void 0).ser(se_GetDeployablePatchSnapshotForInstanceCommand).de(de_GetDeployablePatchSnapshotForInstanceCommand).build() {
 };
@@ -14245,24 +14551,38 @@ var GetDeployablePatchSnapshotForInstanceCommand = _GetDeployablePatchSnapshotFo
 
 
 
-var _GetDocumentCommand = class _GetDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetDocumentCommand = class _GetDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetDocument", {}).n("SSMClient", "GetDocumentCommand").f(void 0, void 0).ser(se_GetDocumentCommand).de(de_GetDocumentCommand).build() {
 };
 __name(_GetDocumentCommand, "GetDocumentCommand");
 var GetDocumentCommand = _GetDocumentCommand;
 
+// src/commands/GetExecutionPreviewCommand.ts
+
+
+
+var _GetExecutionPreviewCommand = class _GetExecutionPreviewCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
+  return [
+    (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
+  ];
+}).s("AmazonSSM", "GetExecutionPreview", {}).n("SSMClient", "GetExecutionPreviewCommand").f(void 0, void 0).ser(se_GetExecutionPreviewCommand).de(de_GetExecutionPreviewCommand).build() {
+};
+__name(_GetExecutionPreviewCommand, "GetExecutionPreviewCommand");
+var GetExecutionPreviewCommand = _GetExecutionPreviewCommand;
+
 // src/commands/GetInventoryCommand.ts
 
 
 
-var _GetInventoryCommand = class _GetInventoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetInventoryCommand = class _GetInventoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetInventory", {}).n("SSMClient", "GetInventoryCommand").f(void 0, void 0).ser(se_GetInventoryCommand).de(de_GetInventoryCommand).build() {
 };
@@ -14273,10 +14593,10 @@ var GetInventoryCommand = _GetInventoryCommand;
 
 
 
-var _GetInventorySchemaCommand = class _GetInventorySchemaCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetInventorySchemaCommand = class _GetInventorySchemaCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetInventorySchema", {}).n("SSMClient", "GetInventorySchemaCommand").f(void 0, void 0).ser(se_GetInventorySchemaCommand).de(de_GetInventorySchemaCommand).build() {
 };
@@ -14287,10 +14607,10 @@ var GetInventorySchemaCommand = _GetInventorySchemaCommand;
 
 
 
-var _GetMaintenanceWindowCommand = class _GetMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetMaintenanceWindowCommand = class _GetMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetMaintenanceWindow", {}).n("SSMClient", "GetMaintenanceWindowCommand").f(void 0, GetMaintenanceWindowResultFilterSensitiveLog).ser(se_GetMaintenanceWindowCommand).de(de_GetMaintenanceWindowCommand).build() {
 };
@@ -14301,10 +14621,10 @@ var GetMaintenanceWindowCommand = _GetMaintenanceWindowCommand;
 
 
 
-var _GetMaintenanceWindowExecutionCommand = class _GetMaintenanceWindowExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetMaintenanceWindowExecutionCommand = class _GetMaintenanceWindowExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetMaintenanceWindowExecution", {}).n("SSMClient", "GetMaintenanceWindowExecutionCommand").f(void 0, void 0).ser(se_GetMaintenanceWindowExecutionCommand).de(de_GetMaintenanceWindowExecutionCommand).build() {
 };
@@ -14315,10 +14635,10 @@ var GetMaintenanceWindowExecutionCommand = _GetMaintenanceWindowExecutionCommand
 
 
 
-var _GetMaintenanceWindowExecutionTaskCommand = class _GetMaintenanceWindowExecutionTaskCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetMaintenanceWindowExecutionTaskCommand = class _GetMaintenanceWindowExecutionTaskCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetMaintenanceWindowExecutionTask", {}).n("SSMClient", "GetMaintenanceWindowExecutionTaskCommand").f(void 0, GetMaintenanceWindowExecutionTaskResultFilterSensitiveLog).ser(se_GetMaintenanceWindowExecutionTaskCommand).de(de_GetMaintenanceWindowExecutionTaskCommand).build() {
 };
@@ -14329,10 +14649,10 @@ var GetMaintenanceWindowExecutionTaskCommand = _GetMaintenanceWindowExecutionTas
 
 
 
-var _GetMaintenanceWindowExecutionTaskInvocationCommand = class _GetMaintenanceWindowExecutionTaskInvocationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetMaintenanceWindowExecutionTaskInvocationCommand = class _GetMaintenanceWindowExecutionTaskInvocationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetMaintenanceWindowExecutionTaskInvocation", {}).n("SSMClient", "GetMaintenanceWindowExecutionTaskInvocationCommand").f(void 0, GetMaintenanceWindowExecutionTaskInvocationResultFilterSensitiveLog).ser(se_GetMaintenanceWindowExecutionTaskInvocationCommand).de(de_GetMaintenanceWindowExecutionTaskInvocationCommand).build() {
 };
@@ -14343,10 +14663,10 @@ var GetMaintenanceWindowExecutionTaskInvocationCommand = _GetMaintenanceWindowEx
 
 
 
-var _GetMaintenanceWindowTaskCommand = class _GetMaintenanceWindowTaskCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetMaintenanceWindowTaskCommand = class _GetMaintenanceWindowTaskCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetMaintenanceWindowTask", {}).n("SSMClient", "GetMaintenanceWindowTaskCommand").f(void 0, GetMaintenanceWindowTaskResultFilterSensitiveLog).ser(se_GetMaintenanceWindowTaskCommand).de(de_GetMaintenanceWindowTaskCommand).build() {
 };
@@ -14357,10 +14677,10 @@ var GetMaintenanceWindowTaskCommand = _GetMaintenanceWindowTaskCommand;
 
 
 
-var _GetOpsItemCommand = class _GetOpsItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetOpsItemCommand = class _GetOpsItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetOpsItem", {}).n("SSMClient", "GetOpsItemCommand").f(void 0, void 0).ser(se_GetOpsItemCommand).de(de_GetOpsItemCommand).build() {
 };
@@ -14371,10 +14691,10 @@ var GetOpsItemCommand = _GetOpsItemCommand;
 
 
 
-var _GetOpsMetadataCommand = class _GetOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetOpsMetadataCommand = class _GetOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetOpsMetadata", {}).n("SSMClient", "GetOpsMetadataCommand").f(void 0, void 0).ser(se_GetOpsMetadataCommand).de(de_GetOpsMetadataCommand).build() {
 };
@@ -14385,10 +14705,10 @@ var GetOpsMetadataCommand = _GetOpsMetadataCommand;
 
 
 
-var _GetOpsSummaryCommand = class _GetOpsSummaryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetOpsSummaryCommand = class _GetOpsSummaryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetOpsSummary", {}).n("SSMClient", "GetOpsSummaryCommand").f(void 0, void 0).ser(se_GetOpsSummaryCommand).de(de_GetOpsSummaryCommand).build() {
 };
@@ -14399,10 +14719,10 @@ var GetOpsSummaryCommand = _GetOpsSummaryCommand;
 
 
 
-var _GetParameterCommand = class _GetParameterCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetParameterCommand = class _GetParameterCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetParameter", {}).n("SSMClient", "GetParameterCommand").f(void 0, GetParameterResultFilterSensitiveLog).ser(se_GetParameterCommand).de(de_GetParameterCommand).build() {
 };
@@ -14413,10 +14733,10 @@ var GetParameterCommand = _GetParameterCommand;
 
 
 
-var _GetParameterHistoryCommand = class _GetParameterHistoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetParameterHistoryCommand = class _GetParameterHistoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetParameterHistory", {}).n("SSMClient", "GetParameterHistoryCommand").f(void 0, GetParameterHistoryResultFilterSensitiveLog).ser(se_GetParameterHistoryCommand).de(de_GetParameterHistoryCommand).build() {
 };
@@ -14427,10 +14747,10 @@ var GetParameterHistoryCommand = _GetParameterHistoryCommand;
 
 
 
-var _GetParametersByPathCommand = class _GetParametersByPathCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetParametersByPathCommand = class _GetParametersByPathCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetParametersByPath", {}).n("SSMClient", "GetParametersByPathCommand").f(void 0, GetParametersByPathResultFilterSensitiveLog).ser(se_GetParametersByPathCommand).de(de_GetParametersByPathCommand).build() {
 };
@@ -14441,10 +14761,10 @@ var GetParametersByPathCommand = _GetParametersByPathCommand;
 
 
 
-var _GetParametersCommand = class _GetParametersCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetParametersCommand = class _GetParametersCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetParameters", {}).n("SSMClient", "GetParametersCommand").f(void 0, GetParametersResultFilterSensitiveLog).ser(se_GetParametersCommand).de(de_GetParametersCommand).build() {
 };
@@ -14455,10 +14775,10 @@ var GetParametersCommand = _GetParametersCommand;
 
 
 
-var _GetPatchBaselineCommand = class _GetPatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetPatchBaselineCommand = class _GetPatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetPatchBaseline", {}).n("SSMClient", "GetPatchBaselineCommand").f(void 0, GetPatchBaselineResultFilterSensitiveLog).ser(se_GetPatchBaselineCommand).de(de_GetPatchBaselineCommand).build() {
 };
@@ -14469,10 +14789,10 @@ var GetPatchBaselineCommand = _GetPatchBaselineCommand;
 
 
 
-var _GetPatchBaselineForPatchGroupCommand = class _GetPatchBaselineForPatchGroupCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetPatchBaselineForPatchGroupCommand = class _GetPatchBaselineForPatchGroupCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetPatchBaselineForPatchGroup", {}).n("SSMClient", "GetPatchBaselineForPatchGroupCommand").f(void 0, void 0).ser(se_GetPatchBaselineForPatchGroupCommand).de(de_GetPatchBaselineForPatchGroupCommand).build() {
 };
@@ -14483,10 +14803,10 @@ var GetPatchBaselineForPatchGroupCommand = _GetPatchBaselineForPatchGroupCommand
 
 
 
-var _GetResourcePoliciesCommand = class _GetResourcePoliciesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetResourcePoliciesCommand = class _GetResourcePoliciesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetResourcePolicies", {}).n("SSMClient", "GetResourcePoliciesCommand").f(void 0, void 0).ser(se_GetResourcePoliciesCommand).de(de_GetResourcePoliciesCommand).build() {
 };
@@ -14497,10 +14817,10 @@ var GetResourcePoliciesCommand = _GetResourcePoliciesCommand;
 
 
 
-var _GetServiceSettingCommand = class _GetServiceSettingCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _GetServiceSettingCommand = class _GetServiceSettingCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "GetServiceSetting", {}).n("SSMClient", "GetServiceSettingCommand").f(void 0, void 0).ser(se_GetServiceSettingCommand).de(de_GetServiceSettingCommand).build() {
 };
@@ -14511,10 +14831,10 @@ var GetServiceSettingCommand = _GetServiceSettingCommand;
 
 
 
-var _LabelParameterVersionCommand = class _LabelParameterVersionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _LabelParameterVersionCommand = class _LabelParameterVersionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "LabelParameterVersion", {}).n("SSMClient", "LabelParameterVersionCommand").f(void 0, void 0).ser(se_LabelParameterVersionCommand).de(de_LabelParameterVersionCommand).build() {
 };
@@ -14525,10 +14845,10 @@ var LabelParameterVersionCommand = _LabelParameterVersionCommand;
 
 
 
-var _ListAssociationsCommand = class _ListAssociationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListAssociationsCommand = class _ListAssociationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListAssociations", {}).n("SSMClient", "ListAssociationsCommand").f(void 0, void 0).ser(se_ListAssociationsCommand).de(de_ListAssociationsCommand).build() {
 };
@@ -14539,10 +14859,10 @@ var ListAssociationsCommand = _ListAssociationsCommand;
 
 
 
-var _ListAssociationVersionsCommand = class _ListAssociationVersionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListAssociationVersionsCommand = class _ListAssociationVersionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListAssociationVersions", {}).n("SSMClient", "ListAssociationVersionsCommand").f(void 0, ListAssociationVersionsResultFilterSensitiveLog).ser(se_ListAssociationVersionsCommand).de(de_ListAssociationVersionsCommand).build() {
 };
@@ -14553,10 +14873,10 @@ var ListAssociationVersionsCommand = _ListAssociationVersionsCommand;
 
 
 
-var _ListCommandInvocationsCommand = class _ListCommandInvocationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListCommandInvocationsCommand = class _ListCommandInvocationsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListCommandInvocations", {}).n("SSMClient", "ListCommandInvocationsCommand").f(void 0, void 0).ser(se_ListCommandInvocationsCommand).de(de_ListCommandInvocationsCommand).build() {
 };
@@ -14567,10 +14887,10 @@ var ListCommandInvocationsCommand = _ListCommandInvocationsCommand;
 
 
 
-var _ListCommandsCommand = class _ListCommandsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListCommandsCommand = class _ListCommandsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListCommands", {}).n("SSMClient", "ListCommandsCommand").f(void 0, ListCommandsResultFilterSensitiveLog).ser(se_ListCommandsCommand).de(de_ListCommandsCommand).build() {
 };
@@ -14581,10 +14901,10 @@ var ListCommandsCommand = _ListCommandsCommand;
 
 
 
-var _ListComplianceItemsCommand = class _ListComplianceItemsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListComplianceItemsCommand = class _ListComplianceItemsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListComplianceItems", {}).n("SSMClient", "ListComplianceItemsCommand").f(void 0, void 0).ser(se_ListComplianceItemsCommand).de(de_ListComplianceItemsCommand).build() {
 };
@@ -14595,10 +14915,10 @@ var ListComplianceItemsCommand = _ListComplianceItemsCommand;
 
 
 
-var _ListComplianceSummariesCommand = class _ListComplianceSummariesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListComplianceSummariesCommand = class _ListComplianceSummariesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListComplianceSummaries", {}).n("SSMClient", "ListComplianceSummariesCommand").f(void 0, void 0).ser(se_ListComplianceSummariesCommand).de(de_ListComplianceSummariesCommand).build() {
 };
@@ -14609,10 +14929,10 @@ var ListComplianceSummariesCommand = _ListComplianceSummariesCommand;
 
 
 
-var _ListDocumentMetadataHistoryCommand = class _ListDocumentMetadataHistoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListDocumentMetadataHistoryCommand = class _ListDocumentMetadataHistoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListDocumentMetadataHistory", {}).n("SSMClient", "ListDocumentMetadataHistoryCommand").f(void 0, void 0).ser(se_ListDocumentMetadataHistoryCommand).de(de_ListDocumentMetadataHistoryCommand).build() {
 };
@@ -14623,10 +14943,10 @@ var ListDocumentMetadataHistoryCommand = _ListDocumentMetadataHistoryCommand;
 
 
 
-var _ListDocumentsCommand = class _ListDocumentsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListDocumentsCommand = class _ListDocumentsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListDocuments", {}).n("SSMClient", "ListDocumentsCommand").f(void 0, void 0).ser(se_ListDocumentsCommand).de(de_ListDocumentsCommand).build() {
 };
@@ -14637,10 +14957,10 @@ var ListDocumentsCommand = _ListDocumentsCommand;
 
 
 
-var _ListDocumentVersionsCommand = class _ListDocumentVersionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListDocumentVersionsCommand = class _ListDocumentVersionsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListDocumentVersions", {}).n("SSMClient", "ListDocumentVersionsCommand").f(void 0, void 0).ser(se_ListDocumentVersionsCommand).de(de_ListDocumentVersionsCommand).build() {
 };
@@ -14651,24 +14971,52 @@ var ListDocumentVersionsCommand = _ListDocumentVersionsCommand;
 
 
 
-var _ListInventoryEntriesCommand = class _ListInventoryEntriesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListInventoryEntriesCommand = class _ListInventoryEntriesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListInventoryEntries", {}).n("SSMClient", "ListInventoryEntriesCommand").f(void 0, void 0).ser(se_ListInventoryEntriesCommand).de(de_ListInventoryEntriesCommand).build() {
 };
 __name(_ListInventoryEntriesCommand, "ListInventoryEntriesCommand");
 var ListInventoryEntriesCommand = _ListInventoryEntriesCommand;
 
+// src/commands/ListNodesCommand.ts
+
+
+
+var _ListNodesCommand = class _ListNodesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
+  return [
+    (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
+  ];
+}).s("AmazonSSM", "ListNodes", {}).n("SSMClient", "ListNodesCommand").f(void 0, ListNodesResultFilterSensitiveLog).ser(se_ListNodesCommand).de(de_ListNodesCommand).build() {
+};
+__name(_ListNodesCommand, "ListNodesCommand");
+var ListNodesCommand = _ListNodesCommand;
+
+// src/commands/ListNodesSummaryCommand.ts
+
+
+
+var _ListNodesSummaryCommand = class _ListNodesSummaryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
+  return [
+    (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
+  ];
+}).s("AmazonSSM", "ListNodesSummary", {}).n("SSMClient", "ListNodesSummaryCommand").f(void 0, void 0).ser(se_ListNodesSummaryCommand).de(de_ListNodesSummaryCommand).build() {
+};
+__name(_ListNodesSummaryCommand, "ListNodesSummaryCommand");
+var ListNodesSummaryCommand = _ListNodesSummaryCommand;
+
 // src/commands/ListOpsItemEventsCommand.ts
 
 
 
-var _ListOpsItemEventsCommand = class _ListOpsItemEventsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListOpsItemEventsCommand = class _ListOpsItemEventsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListOpsItemEvents", {}).n("SSMClient", "ListOpsItemEventsCommand").f(void 0, void 0).ser(se_ListOpsItemEventsCommand).de(de_ListOpsItemEventsCommand).build() {
 };
@@ -14679,10 +15027,10 @@ var ListOpsItemEventsCommand = _ListOpsItemEventsCommand;
 
 
 
-var _ListOpsItemRelatedItemsCommand = class _ListOpsItemRelatedItemsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListOpsItemRelatedItemsCommand = class _ListOpsItemRelatedItemsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListOpsItemRelatedItems", {}).n("SSMClient", "ListOpsItemRelatedItemsCommand").f(void 0, void 0).ser(se_ListOpsItemRelatedItemsCommand).de(de_ListOpsItemRelatedItemsCommand).build() {
 };
@@ -14693,10 +15041,10 @@ var ListOpsItemRelatedItemsCommand = _ListOpsItemRelatedItemsCommand;
 
 
 
-var _ListOpsMetadataCommand = class _ListOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListOpsMetadataCommand = class _ListOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListOpsMetadata", {}).n("SSMClient", "ListOpsMetadataCommand").f(void 0, void 0).ser(se_ListOpsMetadataCommand).de(de_ListOpsMetadataCommand).build() {
 };
@@ -14707,10 +15055,10 @@ var ListOpsMetadataCommand = _ListOpsMetadataCommand;
 
 
 
-var _ListResourceComplianceSummariesCommand = class _ListResourceComplianceSummariesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListResourceComplianceSummariesCommand = class _ListResourceComplianceSummariesCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListResourceComplianceSummaries", {}).n("SSMClient", "ListResourceComplianceSummariesCommand").f(void 0, void 0).ser(se_ListResourceComplianceSummariesCommand).de(de_ListResourceComplianceSummariesCommand).build() {
 };
@@ -14721,10 +15069,10 @@ var ListResourceComplianceSummariesCommand = _ListResourceComplianceSummariesCom
 
 
 
-var _ListResourceDataSyncCommand = class _ListResourceDataSyncCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListResourceDataSyncCommand = class _ListResourceDataSyncCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListResourceDataSync", {}).n("SSMClient", "ListResourceDataSyncCommand").f(void 0, void 0).ser(se_ListResourceDataSyncCommand).de(de_ListResourceDataSyncCommand).build() {
 };
@@ -14735,10 +15083,10 @@ var ListResourceDataSyncCommand = _ListResourceDataSyncCommand;
 
 
 
-var _ListTagsForResourceCommand = class _ListTagsForResourceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ListTagsForResourceCommand = class _ListTagsForResourceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ListTagsForResource", {}).n("SSMClient", "ListTagsForResourceCommand").f(void 0, void 0).ser(se_ListTagsForResourceCommand).de(de_ListTagsForResourceCommand).build() {
 };
@@ -14749,10 +15097,10 @@ var ListTagsForResourceCommand = _ListTagsForResourceCommand;
 
 
 
-var _ModifyDocumentPermissionCommand = class _ModifyDocumentPermissionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ModifyDocumentPermissionCommand = class _ModifyDocumentPermissionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ModifyDocumentPermission", {}).n("SSMClient", "ModifyDocumentPermissionCommand").f(void 0, void 0).ser(se_ModifyDocumentPermissionCommand).de(de_ModifyDocumentPermissionCommand).build() {
 };
@@ -14763,10 +15111,10 @@ var ModifyDocumentPermissionCommand = _ModifyDocumentPermissionCommand;
 
 
 
-var _PutComplianceItemsCommand = class _PutComplianceItemsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _PutComplianceItemsCommand = class _PutComplianceItemsCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "PutComplianceItems", {}).n("SSMClient", "PutComplianceItemsCommand").f(void 0, void 0).ser(se_PutComplianceItemsCommand).de(de_PutComplianceItemsCommand).build() {
 };
@@ -14777,10 +15125,10 @@ var PutComplianceItemsCommand = _PutComplianceItemsCommand;
 
 
 
-var _PutInventoryCommand = class _PutInventoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _PutInventoryCommand = class _PutInventoryCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "PutInventory", {}).n("SSMClient", "PutInventoryCommand").f(void 0, void 0).ser(se_PutInventoryCommand).de(de_PutInventoryCommand).build() {
 };
@@ -14791,10 +15139,10 @@ var PutInventoryCommand = _PutInventoryCommand;
 
 
 
-var _PutParameterCommand = class _PutParameterCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _PutParameterCommand = class _PutParameterCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "PutParameter", {}).n("SSMClient", "PutParameterCommand").f(PutParameterRequestFilterSensitiveLog, void 0).ser(se_PutParameterCommand).de(de_PutParameterCommand).build() {
 };
@@ -14805,10 +15153,10 @@ var PutParameterCommand = _PutParameterCommand;
 
 
 
-var _PutResourcePolicyCommand = class _PutResourcePolicyCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _PutResourcePolicyCommand = class _PutResourcePolicyCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "PutResourcePolicy", {}).n("SSMClient", "PutResourcePolicyCommand").f(void 0, void 0).ser(se_PutResourcePolicyCommand).de(de_PutResourcePolicyCommand).build() {
 };
@@ -14819,10 +15167,10 @@ var PutResourcePolicyCommand = _PutResourcePolicyCommand;
 
 
 
-var _RegisterDefaultPatchBaselineCommand = class _RegisterDefaultPatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _RegisterDefaultPatchBaselineCommand = class _RegisterDefaultPatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "RegisterDefaultPatchBaseline", {}).n("SSMClient", "RegisterDefaultPatchBaselineCommand").f(void 0, void 0).ser(se_RegisterDefaultPatchBaselineCommand).de(de_RegisterDefaultPatchBaselineCommand).build() {
 };
@@ -14833,10 +15181,10 @@ var RegisterDefaultPatchBaselineCommand = _RegisterDefaultPatchBaselineCommand;
 
 
 
-var _RegisterPatchBaselineForPatchGroupCommand = class _RegisterPatchBaselineForPatchGroupCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _RegisterPatchBaselineForPatchGroupCommand = class _RegisterPatchBaselineForPatchGroupCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "RegisterPatchBaselineForPatchGroup", {}).n("SSMClient", "RegisterPatchBaselineForPatchGroupCommand").f(void 0, void 0).ser(se_RegisterPatchBaselineForPatchGroupCommand).de(de_RegisterPatchBaselineForPatchGroupCommand).build() {
 };
@@ -14847,10 +15195,10 @@ var RegisterPatchBaselineForPatchGroupCommand = _RegisterPatchBaselineForPatchGr
 
 
 
-var _RegisterTargetWithMaintenanceWindowCommand = class _RegisterTargetWithMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _RegisterTargetWithMaintenanceWindowCommand = class _RegisterTargetWithMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "RegisterTargetWithMaintenanceWindow", {}).n("SSMClient", "RegisterTargetWithMaintenanceWindowCommand").f(RegisterTargetWithMaintenanceWindowRequestFilterSensitiveLog, void 0).ser(se_RegisterTargetWithMaintenanceWindowCommand).de(de_RegisterTargetWithMaintenanceWindowCommand).build() {
 };
@@ -14861,10 +15209,10 @@ var RegisterTargetWithMaintenanceWindowCommand = _RegisterTargetWithMaintenanceW
 
 
 
-var _RegisterTaskWithMaintenanceWindowCommand = class _RegisterTaskWithMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _RegisterTaskWithMaintenanceWindowCommand = class _RegisterTaskWithMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "RegisterTaskWithMaintenanceWindow", {}).n("SSMClient", "RegisterTaskWithMaintenanceWindowCommand").f(RegisterTaskWithMaintenanceWindowRequestFilterSensitiveLog, void 0).ser(se_RegisterTaskWithMaintenanceWindowCommand).de(de_RegisterTaskWithMaintenanceWindowCommand).build() {
 };
@@ -14875,10 +15223,10 @@ var RegisterTaskWithMaintenanceWindowCommand = _RegisterTaskWithMaintenanceWindo
 
 
 
-var _RemoveTagsFromResourceCommand = class _RemoveTagsFromResourceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _RemoveTagsFromResourceCommand = class _RemoveTagsFromResourceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "RemoveTagsFromResource", {}).n("SSMClient", "RemoveTagsFromResourceCommand").f(void 0, void 0).ser(se_RemoveTagsFromResourceCommand).de(de_RemoveTagsFromResourceCommand).build() {
 };
@@ -14889,10 +15237,10 @@ var RemoveTagsFromResourceCommand = _RemoveTagsFromResourceCommand;
 
 
 
-var _ResetServiceSettingCommand = class _ResetServiceSettingCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ResetServiceSettingCommand = class _ResetServiceSettingCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ResetServiceSetting", {}).n("SSMClient", "ResetServiceSettingCommand").f(void 0, void 0).ser(se_ResetServiceSettingCommand).de(de_ResetServiceSettingCommand).build() {
 };
@@ -14903,10 +15251,10 @@ var ResetServiceSettingCommand = _ResetServiceSettingCommand;
 
 
 
-var _ResumeSessionCommand = class _ResumeSessionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _ResumeSessionCommand = class _ResumeSessionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "ResumeSession", {}).n("SSMClient", "ResumeSessionCommand").f(void 0, void 0).ser(se_ResumeSessionCommand).de(de_ResumeSessionCommand).build() {
 };
@@ -14917,10 +15265,10 @@ var ResumeSessionCommand = _ResumeSessionCommand;
 
 
 
-var _SendAutomationSignalCommand = class _SendAutomationSignalCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _SendAutomationSignalCommand = class _SendAutomationSignalCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "SendAutomationSignal", {}).n("SSMClient", "SendAutomationSignalCommand").f(void 0, void 0).ser(se_SendAutomationSignalCommand).de(de_SendAutomationSignalCommand).build() {
 };
@@ -14931,10 +15279,10 @@ var SendAutomationSignalCommand = _SendAutomationSignalCommand;
 
 
 
-var _SendCommandCommand = class _SendCommandCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _SendCommandCommand = class _SendCommandCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "SendCommand", {}).n("SSMClient", "SendCommandCommand").f(SendCommandRequestFilterSensitiveLog, SendCommandResultFilterSensitiveLog).ser(se_SendCommandCommand).de(de_SendCommandCommand).build() {
 };
@@ -14945,10 +15293,10 @@ var SendCommandCommand = _SendCommandCommand;
 
 
 
-var _StartAssociationsOnceCommand = class _StartAssociationsOnceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _StartAssociationsOnceCommand = class _StartAssociationsOnceCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "StartAssociationsOnce", {}).n("SSMClient", "StartAssociationsOnceCommand").f(void 0, void 0).ser(se_StartAssociationsOnceCommand).de(de_StartAssociationsOnceCommand).build() {
 };
@@ -14959,10 +15307,10 @@ var StartAssociationsOnceCommand = _StartAssociationsOnceCommand;
 
 
 
-var _StartAutomationExecutionCommand = class _StartAutomationExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _StartAutomationExecutionCommand = class _StartAutomationExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "StartAutomationExecution", {}).n("SSMClient", "StartAutomationExecutionCommand").f(void 0, void 0).ser(se_StartAutomationExecutionCommand).de(de_StartAutomationExecutionCommand).build() {
 };
@@ -14973,24 +15321,38 @@ var StartAutomationExecutionCommand = _StartAutomationExecutionCommand;
 
 
 
-var _StartChangeRequestExecutionCommand = class _StartChangeRequestExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _StartChangeRequestExecutionCommand = class _StartChangeRequestExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "StartChangeRequestExecution", {}).n("SSMClient", "StartChangeRequestExecutionCommand").f(void 0, void 0).ser(se_StartChangeRequestExecutionCommand).de(de_StartChangeRequestExecutionCommand).build() {
 };
 __name(_StartChangeRequestExecutionCommand, "StartChangeRequestExecutionCommand");
 var StartChangeRequestExecutionCommand = _StartChangeRequestExecutionCommand;
 
+// src/commands/StartExecutionPreviewCommand.ts
+
+
+
+var _StartExecutionPreviewCommand = class _StartExecutionPreviewCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
+  return [
+    (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
+  ];
+}).s("AmazonSSM", "StartExecutionPreview", {}).n("SSMClient", "StartExecutionPreviewCommand").f(void 0, void 0).ser(se_StartExecutionPreviewCommand).de(de_StartExecutionPreviewCommand).build() {
+};
+__name(_StartExecutionPreviewCommand, "StartExecutionPreviewCommand");
+var StartExecutionPreviewCommand = _StartExecutionPreviewCommand;
+
 // src/commands/StartSessionCommand.ts
 
 
 
-var _StartSessionCommand = class _StartSessionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _StartSessionCommand = class _StartSessionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "StartSession", {}).n("SSMClient", "StartSessionCommand").f(void 0, void 0).ser(se_StartSessionCommand).de(de_StartSessionCommand).build() {
 };
@@ -15001,10 +15363,10 @@ var StartSessionCommand = _StartSessionCommand;
 
 
 
-var _StopAutomationExecutionCommand = class _StopAutomationExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _StopAutomationExecutionCommand = class _StopAutomationExecutionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "StopAutomationExecution", {}).n("SSMClient", "StopAutomationExecutionCommand").f(void 0, void 0).ser(se_StopAutomationExecutionCommand).de(de_StopAutomationExecutionCommand).build() {
 };
@@ -15015,10 +15377,10 @@ var StopAutomationExecutionCommand = _StopAutomationExecutionCommand;
 
 
 
-var _TerminateSessionCommand = class _TerminateSessionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _TerminateSessionCommand = class _TerminateSessionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "TerminateSession", {}).n("SSMClient", "TerminateSessionCommand").f(void 0, void 0).ser(se_TerminateSessionCommand).de(de_TerminateSessionCommand).build() {
 };
@@ -15029,10 +15391,10 @@ var TerminateSessionCommand = _TerminateSessionCommand;
 
 
 
-var _UnlabelParameterVersionCommand = class _UnlabelParameterVersionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UnlabelParameterVersionCommand = class _UnlabelParameterVersionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UnlabelParameterVersion", {}).n("SSMClient", "UnlabelParameterVersionCommand").f(void 0, void 0).ser(se_UnlabelParameterVersionCommand).de(de_UnlabelParameterVersionCommand).build() {
 };
@@ -15043,10 +15405,10 @@ var UnlabelParameterVersionCommand = _UnlabelParameterVersionCommand;
 
 
 
-var _UpdateAssociationCommand = class _UpdateAssociationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateAssociationCommand = class _UpdateAssociationCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateAssociation", {}).n("SSMClient", "UpdateAssociationCommand").f(UpdateAssociationRequestFilterSensitiveLog, UpdateAssociationResultFilterSensitiveLog).ser(se_UpdateAssociationCommand).de(de_UpdateAssociationCommand).build() {
 };
@@ -15057,10 +15419,10 @@ var UpdateAssociationCommand = _UpdateAssociationCommand;
 
 
 
-var _UpdateAssociationStatusCommand = class _UpdateAssociationStatusCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateAssociationStatusCommand = class _UpdateAssociationStatusCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateAssociationStatus", {}).n("SSMClient", "UpdateAssociationStatusCommand").f(void 0, UpdateAssociationStatusResultFilterSensitiveLog).ser(se_UpdateAssociationStatusCommand).de(de_UpdateAssociationStatusCommand).build() {
 };
@@ -15071,10 +15433,10 @@ var UpdateAssociationStatusCommand = _UpdateAssociationStatusCommand;
 
 
 
-var _UpdateDocumentCommand = class _UpdateDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateDocumentCommand = class _UpdateDocumentCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateDocument", {}).n("SSMClient", "UpdateDocumentCommand").f(void 0, void 0).ser(se_UpdateDocumentCommand).de(de_UpdateDocumentCommand).build() {
 };
@@ -15085,10 +15447,10 @@ var UpdateDocumentCommand = _UpdateDocumentCommand;
 
 
 
-var _UpdateDocumentDefaultVersionCommand = class _UpdateDocumentDefaultVersionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateDocumentDefaultVersionCommand = class _UpdateDocumentDefaultVersionCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateDocumentDefaultVersion", {}).n("SSMClient", "UpdateDocumentDefaultVersionCommand").f(void 0, void 0).ser(se_UpdateDocumentDefaultVersionCommand).de(de_UpdateDocumentDefaultVersionCommand).build() {
 };
@@ -15099,10 +15461,10 @@ var UpdateDocumentDefaultVersionCommand = _UpdateDocumentDefaultVersionCommand;
 
 
 
-var _UpdateDocumentMetadataCommand = class _UpdateDocumentMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateDocumentMetadataCommand = class _UpdateDocumentMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateDocumentMetadata", {}).n("SSMClient", "UpdateDocumentMetadataCommand").f(void 0, void 0).ser(se_UpdateDocumentMetadataCommand).de(de_UpdateDocumentMetadataCommand).build() {
 };
@@ -15113,10 +15475,10 @@ var UpdateDocumentMetadataCommand = _UpdateDocumentMetadataCommand;
 
 
 
-var _UpdateMaintenanceWindowCommand = class _UpdateMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateMaintenanceWindowCommand = class _UpdateMaintenanceWindowCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateMaintenanceWindow", {}).n("SSMClient", "UpdateMaintenanceWindowCommand").f(UpdateMaintenanceWindowRequestFilterSensitiveLog, UpdateMaintenanceWindowResultFilterSensitiveLog).ser(se_UpdateMaintenanceWindowCommand).de(de_UpdateMaintenanceWindowCommand).build() {
 };
@@ -15127,10 +15489,10 @@ var UpdateMaintenanceWindowCommand = _UpdateMaintenanceWindowCommand;
 
 
 
-var _UpdateMaintenanceWindowTargetCommand = class _UpdateMaintenanceWindowTargetCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateMaintenanceWindowTargetCommand = class _UpdateMaintenanceWindowTargetCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateMaintenanceWindowTarget", {}).n("SSMClient", "UpdateMaintenanceWindowTargetCommand").f(UpdateMaintenanceWindowTargetRequestFilterSensitiveLog, UpdateMaintenanceWindowTargetResultFilterSensitiveLog).ser(se_UpdateMaintenanceWindowTargetCommand).de(de_UpdateMaintenanceWindowTargetCommand).build() {
 };
@@ -15141,10 +15503,10 @@ var UpdateMaintenanceWindowTargetCommand = _UpdateMaintenanceWindowTargetCommand
 
 
 
-var _UpdateMaintenanceWindowTaskCommand = class _UpdateMaintenanceWindowTaskCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateMaintenanceWindowTaskCommand = class _UpdateMaintenanceWindowTaskCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateMaintenanceWindowTask", {}).n("SSMClient", "UpdateMaintenanceWindowTaskCommand").f(UpdateMaintenanceWindowTaskRequestFilterSensitiveLog, UpdateMaintenanceWindowTaskResultFilterSensitiveLog).ser(se_UpdateMaintenanceWindowTaskCommand).de(de_UpdateMaintenanceWindowTaskCommand).build() {
 };
@@ -15155,10 +15517,10 @@ var UpdateMaintenanceWindowTaskCommand = _UpdateMaintenanceWindowTaskCommand;
 
 
 
-var _UpdateManagedInstanceRoleCommand = class _UpdateManagedInstanceRoleCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateManagedInstanceRoleCommand = class _UpdateManagedInstanceRoleCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateManagedInstanceRole", {}).n("SSMClient", "UpdateManagedInstanceRoleCommand").f(void 0, void 0).ser(se_UpdateManagedInstanceRoleCommand).de(de_UpdateManagedInstanceRoleCommand).build() {
 };
@@ -15169,10 +15531,10 @@ var UpdateManagedInstanceRoleCommand = _UpdateManagedInstanceRoleCommand;
 
 
 
-var _UpdateOpsItemCommand = class _UpdateOpsItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateOpsItemCommand = class _UpdateOpsItemCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateOpsItem", {}).n("SSMClient", "UpdateOpsItemCommand").f(void 0, void 0).ser(se_UpdateOpsItemCommand).de(de_UpdateOpsItemCommand).build() {
 };
@@ -15183,10 +15545,10 @@ var UpdateOpsItemCommand = _UpdateOpsItemCommand;
 
 
 
-var _UpdateOpsMetadataCommand = class _UpdateOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateOpsMetadataCommand = class _UpdateOpsMetadataCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateOpsMetadata", {}).n("SSMClient", "UpdateOpsMetadataCommand").f(void 0, void 0).ser(se_UpdateOpsMetadataCommand).de(de_UpdateOpsMetadataCommand).build() {
 };
@@ -15197,10 +15559,10 @@ var UpdateOpsMetadataCommand = _UpdateOpsMetadataCommand;
 
 
 
-var _UpdatePatchBaselineCommand = class _UpdatePatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdatePatchBaselineCommand = class _UpdatePatchBaselineCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdatePatchBaseline", {}).n("SSMClient", "UpdatePatchBaselineCommand").f(UpdatePatchBaselineRequestFilterSensitiveLog, UpdatePatchBaselineResultFilterSensitiveLog).ser(se_UpdatePatchBaselineCommand).de(de_UpdatePatchBaselineCommand).build() {
 };
@@ -15211,10 +15573,10 @@ var UpdatePatchBaselineCommand = _UpdatePatchBaselineCommand;
 
 
 
-var _UpdateResourceDataSyncCommand = class _UpdateResourceDataSyncCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateResourceDataSyncCommand = class _UpdateResourceDataSyncCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateResourceDataSync", {}).n("SSMClient", "UpdateResourceDataSyncCommand").f(void 0, void 0).ser(se_UpdateResourceDataSyncCommand).de(de_UpdateResourceDataSyncCommand).build() {
 };
@@ -15225,10 +15587,10 @@ var UpdateResourceDataSyncCommand = _UpdateResourceDataSyncCommand;
 
 
 
-var _UpdateServiceSettingCommand = class _UpdateServiceSettingCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command2, cs, config, o) {
+var _UpdateServiceSettingCommand = class _UpdateServiceSettingCommand extends import_smithy_client.Command.classBuilder().ep(commonParams).m(function(Command3, cs, config, o) {
   return [
     (0, import_middleware_serde.getSerdePlugin)(config, this.serialize, this.deserialize),
-    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command2.getEndpointParameterInstructions())
+    (0, import_middleware_endpoint.getEndpointPlugin)(config, Command3.getEndpointParameterInstructions())
   ];
 }).s("AmazonSSM", "UpdateServiceSetting", {}).n("SSMClient", "UpdateServiceSettingCommand").f(void 0, void 0).ser(se_UpdateServiceSettingCommand).de(de_UpdateServiceSettingCommand).build() {
 };
@@ -15307,6 +15669,7 @@ var commands = {
   GetDefaultPatchBaselineCommand,
   GetDeployablePatchSnapshotForInstanceCommand,
   GetDocumentCommand,
+  GetExecutionPreviewCommand,
   GetInventoryCommand,
   GetInventorySchemaCommand,
   GetMaintenanceWindowCommand,
@@ -15336,6 +15699,8 @@ var commands = {
   ListDocumentsCommand,
   ListDocumentVersionsCommand,
   ListInventoryEntriesCommand,
+  ListNodesCommand,
+  ListNodesSummaryCommand,
   ListOpsItemEventsCommand,
   ListOpsItemRelatedItemsCommand,
   ListOpsMetadataCommand,
@@ -15359,6 +15724,7 @@ var commands = {
   StartAssociationsOnceCommand,
   StartAutomationExecutionCommand,
   StartChangeRequestExecutionCommand,
+  StartExecutionPreviewCommand,
   StartSessionCommand,
   StopAutomationExecutionCommand,
   TerminateSessionCommand,
@@ -15556,6 +15922,14 @@ var paginateListDocumentVersions = (0, import_core.createPaginator)(SSMClient, L
 
 var paginateListDocuments = (0, import_core.createPaginator)(SSMClient, ListDocumentsCommand, "NextToken", "NextToken", "MaxResults");
 
+// src/pagination/ListNodesPaginator.ts
+
+var paginateListNodes = (0, import_core.createPaginator)(SSMClient, ListNodesCommand, "NextToken", "NextToken", "MaxResults");
+
+// src/pagination/ListNodesSummaryPaginator.ts
+
+var paginateListNodesSummary = (0, import_core.createPaginator)(SSMClient, ListNodesSummaryCommand, "NextToken", "NextToken", "MaxResults");
+
 // src/pagination/ListOpsItemEventsPaginator.ts
 
 var paginateListOpsItemEvents = (0, import_core.createPaginator)(SSMClient, ListOpsItemEventsCommand, "NextToken", "NextToken", "MaxResults");
@@ -15680,7 +16054,7 @@ var waitUntilCommandExecuted = /* @__PURE__ */ __name(async (params, input) => {
 
 /***/ }),
 
-/***/ 1890:
+/***/ 3036:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -15688,21 +16062,21 @@ var waitUntilCommandExecuted = /* @__PURE__ */ __name(async (params, input) => {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const tslib_1 = __nccwpck_require__(1577);
-const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(42));
+const package_json_1 = tslib_1.__importDefault(__nccwpck_require__(40));
 const core_1 = __nccwpck_require__(2180);
 const credential_provider_node_1 = __nccwpck_require__(8322);
 const util_user_agent_node_1 = __nccwpck_require__(7280);
 const config_resolver_1 = __nccwpck_require__(5932);
 const hash_node_1 = __nccwpck_require__(6926);
-const middleware_retry_1 = __nccwpck_require__(1600);
+const middleware_retry_1 = __nccwpck_require__(6319);
 const node_config_provider_1 = __nccwpck_require__(4940);
 const node_http_handler_1 = __nccwpck_require__(5765);
 const util_body_length_node_1 = __nccwpck_require__(7605);
 const util_retry_1 = __nccwpck_require__(5574);
-const runtimeConfig_shared_1 = __nccwpck_require__(1659);
-const smithy_client_1 = __nccwpck_require__(5131);
-const util_defaults_mode_node_1 = __nccwpck_require__(6516);
-const smithy_client_2 = __nccwpck_require__(5131);
+const runtimeConfig_shared_1 = __nccwpck_require__(2653);
+const smithy_client_1 = __nccwpck_require__(1568);
+const util_defaults_mode_node_1 = __nccwpck_require__(125);
+const smithy_client_2 = __nccwpck_require__(1568);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
@@ -15738,7 +16112,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 /***/ }),
 
-/***/ 1659:
+/***/ 2653:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -15746,12 +16120,12 @@ exports.getRuntimeConfig = getRuntimeConfig;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const core_1 = __nccwpck_require__(2180);
-const smithy_client_1 = __nccwpck_require__(5131);
+const smithy_client_1 = __nccwpck_require__(1568);
 const url_parser_1 = __nccwpck_require__(1222);
 const util_base64_1 = __nccwpck_require__(1903);
 const util_utf8_1 = __nccwpck_require__(3919);
-const httpAuthSchemeProvider_1 = __nccwpck_require__(5787);
-const endpointResolver_1 = __nccwpck_require__(805);
+const httpAuthSchemeProvider_1 = __nccwpck_require__(4565);
+const endpointResolver_1 = __nccwpck_require__(5051);
 const getRuntimeConfig = (config) => {
     return {
         apiVersion: "2014-11-06",
@@ -15957,10 +16331,10 @@ var import_middleware_logger = __nccwpck_require__(3260);
 var import_middleware_recursion_detection = __nccwpck_require__(6972);
 var import_middleware_user_agent = __nccwpck_require__(5492);
 var import_config_resolver = __nccwpck_require__(5932);
-var import_core = __nccwpck_require__(7316);
+var import_core = __nccwpck_require__(9839);
 var import_middleware_content_length = __nccwpck_require__(8748);
-var import_middleware_endpoint = __nccwpck_require__(4792);
-var import_middleware_retry = __nccwpck_require__(1600);
+var import_middleware_endpoint = __nccwpck_require__(8853);
+var import_middleware_retry = __nccwpck_require__(6319);
 
 var import_httpAuthSchemeProvider = __nccwpck_require__(6487);
 
@@ -15986,7 +16360,7 @@ var import_runtimeConfig = __nccwpck_require__(6822);
 // src/runtimeExtensions.ts
 var import_region_config_resolver = __nccwpck_require__(8838);
 var import_protocol_http = __nccwpck_require__(4502);
-var import_smithy_client = __nccwpck_require__(5131);
+var import_smithy_client = __nccwpck_require__(1568);
 
 // src/auth/httpAuthExtensionConfiguration.ts
 var getHttpAuthExtensionConfiguration = /* @__PURE__ */ __name((runtimeConfig) => {
@@ -16937,15 +17311,15 @@ const credential_provider_node_1 = __nccwpck_require__(8322);
 const util_user_agent_node_1 = __nccwpck_require__(7280);
 const config_resolver_1 = __nccwpck_require__(5932);
 const hash_node_1 = __nccwpck_require__(6926);
-const middleware_retry_1 = __nccwpck_require__(1600);
+const middleware_retry_1 = __nccwpck_require__(6319);
 const node_config_provider_1 = __nccwpck_require__(4940);
 const node_http_handler_1 = __nccwpck_require__(5765);
 const util_body_length_node_1 = __nccwpck_require__(7605);
 const util_retry_1 = __nccwpck_require__(5574);
 const runtimeConfig_shared_1 = __nccwpck_require__(5631);
-const smithy_client_1 = __nccwpck_require__(5131);
-const util_defaults_mode_node_1 = __nccwpck_require__(6516);
-const smithy_client_2 = __nccwpck_require__(5131);
+const smithy_client_1 = __nccwpck_require__(1568);
+const util_defaults_mode_node_1 = __nccwpck_require__(125);
+const smithy_client_2 = __nccwpck_require__(1568);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
@@ -16989,8 +17363,8 @@ exports.getRuntimeConfig = getRuntimeConfig;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const core_1 = __nccwpck_require__(2180);
-const core_2 = __nccwpck_require__(7316);
-const smithy_client_1 = __nccwpck_require__(5131);
+const core_2 = __nccwpck_require__(9839);
+const smithy_client_1 = __nccwpck_require__(1568);
 const url_parser_1 = __nccwpck_require__(1222);
 const util_base64_1 = __nccwpck_require__(1903);
 const util_utf8_1 = __nccwpck_require__(3919);
@@ -17202,10 +17576,10 @@ var import_middleware_logger = __nccwpck_require__(3260);
 var import_middleware_recursion_detection = __nccwpck_require__(6972);
 var import_middleware_user_agent = __nccwpck_require__(5492);
 var import_config_resolver = __nccwpck_require__(5932);
-var import_core = __nccwpck_require__(7316);
+var import_core = __nccwpck_require__(9839);
 var import_middleware_content_length = __nccwpck_require__(8748);
-var import_middleware_endpoint = __nccwpck_require__(4792);
-var import_middleware_retry = __nccwpck_require__(1600);
+var import_middleware_endpoint = __nccwpck_require__(8853);
+var import_middleware_retry = __nccwpck_require__(6319);
 
 var import_httpAuthSchemeProvider = __nccwpck_require__(6007);
 
@@ -17231,7 +17605,7 @@ var import_runtimeConfig = __nccwpck_require__(3110);
 // src/runtimeExtensions.ts
 var import_region_config_resolver = __nccwpck_require__(8838);
 var import_protocol_http = __nccwpck_require__(4502);
-var import_smithy_client = __nccwpck_require__(5131);
+var import_smithy_client = __nccwpck_require__(1568);
 
 // src/auth/httpAuthExtensionConfiguration.ts
 var getHttpAuthExtensionConfiguration = /* @__PURE__ */ __name((runtimeConfig) => {
@@ -17756,15 +18130,15 @@ const core_1 = __nccwpck_require__(2180);
 const util_user_agent_node_1 = __nccwpck_require__(7280);
 const config_resolver_1 = __nccwpck_require__(5932);
 const hash_node_1 = __nccwpck_require__(6926);
-const middleware_retry_1 = __nccwpck_require__(1600);
+const middleware_retry_1 = __nccwpck_require__(6319);
 const node_config_provider_1 = __nccwpck_require__(4940);
 const node_http_handler_1 = __nccwpck_require__(5765);
 const util_body_length_node_1 = __nccwpck_require__(7605);
 const util_retry_1 = __nccwpck_require__(5574);
 const runtimeConfig_shared_1 = __nccwpck_require__(255);
-const smithy_client_1 = __nccwpck_require__(5131);
-const util_defaults_mode_node_1 = __nccwpck_require__(6516);
-const smithy_client_2 = __nccwpck_require__(5131);
+const smithy_client_1 = __nccwpck_require__(1568);
+const util_defaults_mode_node_1 = __nccwpck_require__(125);
+const smithy_client_2 = __nccwpck_require__(1568);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
@@ -17807,8 +18181,8 @@ exports.getRuntimeConfig = getRuntimeConfig;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const core_1 = __nccwpck_require__(2180);
-const core_2 = __nccwpck_require__(7316);
-const smithy_client_1 = __nccwpck_require__(5131);
+const core_2 = __nccwpck_require__(9839);
+const smithy_client_1 = __nccwpck_require__(1568);
 const url_parser_1 = __nccwpck_require__(1222);
 const util_base64_1 = __nccwpck_require__(1903);
 const util_utf8_1 = __nccwpck_require__(3919);
@@ -17859,11 +18233,11 @@ const middleware_logger_1 = __nccwpck_require__(3260);
 const middleware_recursion_detection_1 = __nccwpck_require__(6972);
 const middleware_user_agent_1 = __nccwpck_require__(5492);
 const config_resolver_1 = __nccwpck_require__(5932);
-const core_1 = __nccwpck_require__(7316);
+const core_1 = __nccwpck_require__(9839);
 const middleware_content_length_1 = __nccwpck_require__(8748);
-const middleware_endpoint_1 = __nccwpck_require__(4792);
-const middleware_retry_1 = __nccwpck_require__(1600);
-const smithy_client_1 = __nccwpck_require__(5131);
+const middleware_endpoint_1 = __nccwpck_require__(8853);
+const middleware_retry_1 = __nccwpck_require__(6319);
+const smithy_client_1 = __nccwpck_require__(1568);
 Object.defineProperty(exports, "__Client", ({ enumerable: true, get: function () { return smithy_client_1.Client; } }));
 const httpAuthSchemeProvider_1 = __nccwpck_require__(4593);
 const EndpointParameters_1 = __nccwpck_require__(9477);
@@ -18168,7 +18542,7 @@ __reExport(src_exports, __nccwpck_require__(8045), module.exports);
 
 
 // src/commands/AssumeRoleCommand.ts
-var import_middleware_endpoint = __nccwpck_require__(4792);
+var import_middleware_endpoint = __nccwpck_require__(8853);
 var import_middleware_serde = __nccwpck_require__(588);
 
 var import_EndpointParameters = __nccwpck_require__(9477);
@@ -18177,7 +18551,7 @@ var import_EndpointParameters = __nccwpck_require__(9477);
 
 
 // src/models/STSServiceException.ts
-var import_smithy_client = __nccwpck_require__(5131);
+var import_smithy_client = __nccwpck_require__(1568);
 var _STSServiceException = class _STSServiceException extends import_smithy_client.ServiceException {
   /**
    * @internal
@@ -19621,17 +19995,17 @@ const core_1 = __nccwpck_require__(2180);
 const credential_provider_node_1 = __nccwpck_require__(8322);
 const util_user_agent_node_1 = __nccwpck_require__(7280);
 const config_resolver_1 = __nccwpck_require__(5932);
-const core_2 = __nccwpck_require__(7316);
+const core_2 = __nccwpck_require__(9839);
 const hash_node_1 = __nccwpck_require__(6926);
-const middleware_retry_1 = __nccwpck_require__(1600);
+const middleware_retry_1 = __nccwpck_require__(6319);
 const node_config_provider_1 = __nccwpck_require__(4940);
 const node_http_handler_1 = __nccwpck_require__(5765);
 const util_body_length_node_1 = __nccwpck_require__(7605);
 const util_retry_1 = __nccwpck_require__(5574);
 const runtimeConfig_shared_1 = __nccwpck_require__(417);
-const smithy_client_1 = __nccwpck_require__(5131);
-const util_defaults_mode_node_1 = __nccwpck_require__(6516);
-const smithy_client_2 = __nccwpck_require__(5131);
+const smithy_client_1 = __nccwpck_require__(1568);
+const util_defaults_mode_node_1 = __nccwpck_require__(125);
+const smithy_client_2 = __nccwpck_require__(1568);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_2.emitWarningIfUnsupportedVersion)(process.version);
     const defaultsMode = (0, util_defaults_mode_node_1.resolveDefaultsModeConfig)(config);
@@ -19688,8 +20062,8 @@ exports.getRuntimeConfig = getRuntimeConfig;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const core_1 = __nccwpck_require__(2180);
-const core_2 = __nccwpck_require__(7316);
-const smithy_client_1 = __nccwpck_require__(5131);
+const core_2 = __nccwpck_require__(9839);
+const smithy_client_1 = __nccwpck_require__(1568);
 const url_parser_1 = __nccwpck_require__(1222);
 const util_base64_1 = __nccwpck_require__(1903);
 const util_utf8_1 = __nccwpck_require__(3919);
@@ -19737,7 +20111,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveRuntimeExtensions = void 0;
 const region_config_resolver_1 = __nccwpck_require__(8838);
 const protocol_http_1 = __nccwpck_require__(4502);
-const smithy_client_1 = __nccwpck_require__(5131);
+const smithy_client_1 = __nccwpck_require__(1568);
 const httpAuthExtensionConfiguration_1 = __nccwpck_require__(2674);
 const asPartial = (t) => t;
 const resolveRuntimeExtensions = (runtimeConfig, extensions) => {
@@ -20026,7 +20400,7 @@ __name(_AwsSdkSigV4ASigner, "AwsSdkSigV4ASigner");
 var AwsSdkSigV4ASigner = _AwsSdkSigV4ASigner;
 
 // src/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4AConfig.ts
-var import_core = __nccwpck_require__(7316);
+var import_core = __nccwpck_require__(9839);
 var import_property_provider = __nccwpck_require__(1035);
 var resolveAwsSdkSigV4AConfig = /* @__PURE__ */ __name((config) => {
   config.sigv4aSigningRegionSet = (0, import_core.normalizeProvider)(config.sigv4aSigningRegionSet);
@@ -20054,7 +20428,7 @@ var NODE_SIGV4A_CONFIG_OPTIONS = {
 
 // src/submodules/httpAuthSchemes/aws_sdk/resolveAwsSdkSigV4Config.ts
 var import_client = __nccwpck_require__(1564);
-var import_core2 = __nccwpck_require__(7316);
+var import_core2 = __nccwpck_require__(9839);
 var import_signature_v4 = __nccwpck_require__(1357);
 var resolveAwsSdkSigV4Config = /* @__PURE__ */ __name((config) => {
   let isUserSupplied = false;
@@ -20254,7 +20628,7 @@ var _toNum = /* @__PURE__ */ __name((val) => {
 }, "_toNum");
 
 // src/submodules/protocols/json/awsExpectUnion.ts
-var import_smithy_client = __nccwpck_require__(5131);
+var import_smithy_client = __nccwpck_require__(1568);
 var awsExpectUnion = /* @__PURE__ */ __name((value) => {
   if (value == null) {
     return void 0;
@@ -20266,7 +20640,7 @@ var awsExpectUnion = /* @__PURE__ */ __name((value) => {
 }, "awsExpectUnion");
 
 // src/submodules/protocols/common.ts
-var import_smithy_client2 = __nccwpck_require__(5131);
+var import_smithy_client2 = __nccwpck_require__(1568);
 var collectBodyString = /* @__PURE__ */ __name((streamBody, context) => (0, import_smithy_client2.collectBody)(streamBody, context).then((body) => context.utf8Encoder(body)), "collectBodyString");
 
 // src/submodules/protocols/json/parseJsonBody.ts
@@ -20321,7 +20695,7 @@ var loadRestJsonErrorCode = /* @__PURE__ */ __name((output, data) => {
 }, "loadRestJsonErrorCode");
 
 // src/submodules/protocols/xml/parseXmlBody.ts
-var import_smithy_client3 = __nccwpck_require__(5131);
+var import_smithy_client3 = __nccwpck_require__(1568);
 var import_fast_xml_parser = __nccwpck_require__(572);
 var parseXmlBody = /* @__PURE__ */ __name((streamBody, context) => collectBodyString(streamBody, context).then((encoded) => {
   if (encoded.length) {
@@ -20599,7 +20973,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getCredentials = exports.createGetRequest = void 0;
 const property_provider_1 = __nccwpck_require__(1035);
 const protocol_http_1 = __nccwpck_require__(4502);
-const smithy_client_1 = __nccwpck_require__(5131);
+const smithy_client_1 = __nccwpck_require__(1568);
 const util_stream_1 = __nccwpck_require__(1631);
 function createGetRequest(url) {
     return new protocol_http_1.HttpRequest({
@@ -21874,7 +22248,7 @@ __export(src_exports, {
 module.exports = __toCommonJS(src_exports);
 
 // src/configurations.ts
-var import_core = __nccwpck_require__(7316);
+var import_core = __nccwpck_require__(9839);
 var DEFAULT_UA_APP_ID = void 0;
 function isValidUserAgentAppId(appId) {
   if (appId === void 0) {
@@ -23144,7 +23518,7 @@ var getRegionInfo = /* @__PURE__ */ __name((region, {
 
 /***/ }),
 
-/***/ 7316:
+/***/ 9839:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var __defProp = Object.defineProperty;
@@ -23387,7 +23761,7 @@ var get = /* @__PURE__ */ __name((fromObject, path) => {
 }, "get");
 
 // src/protocols/requestBuilder.ts
-var import_protocols = __nccwpck_require__(2535);
+var import_protocols = __nccwpck_require__(7529);
 
 // src/setFeature.ts
 function setFeature(context, feature, value) {
@@ -23544,7 +23918,7 @@ var memoizeIdentityProvider = /* @__PURE__ */ __name((provider, isExpired, requi
 
 /***/ }),
 
-/***/ 2535:
+/***/ 7529:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var __defProp = Object.defineProperty;
@@ -24572,7 +24946,7 @@ var getContentLengthPlugin = /* @__PURE__ */ __name((options) => ({
 
 /***/ }),
 
-/***/ 5796:
+/***/ 8523:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24580,14 +24954,14 @@ var getContentLengthPlugin = /* @__PURE__ */ __name((options) => ({
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getEndpointFromConfig = void 0;
 const node_config_provider_1 = __nccwpck_require__(4940);
-const getEndpointUrlConfig_1 = __nccwpck_require__(7255);
+const getEndpointUrlConfig_1 = __nccwpck_require__(7454);
 const getEndpointFromConfig = async (serviceId) => (0, node_config_provider_1.loadConfig)((0, getEndpointUrlConfig_1.getEndpointUrlConfig)(serviceId !== null && serviceId !== void 0 ? serviceId : ""))();
 exports.getEndpointFromConfig = getEndpointFromConfig;
 
 
 /***/ }),
 
-/***/ 7255:
+/***/ 7454:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -24630,7 +25004,7 @@ exports.getEndpointUrlConfig = getEndpointUrlConfig;
 
 /***/ }),
 
-/***/ 4792:
+/***/ 8853:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var __defProp = Object.defineProperty;
@@ -24740,7 +25114,7 @@ var createConfigValueProvider = /* @__PURE__ */ __name((configKey, canonicalEndp
 }, "createConfigValueProvider");
 
 // src/adaptors/getEndpointFromInstructions.ts
-var import_getEndpointFromConfig = __nccwpck_require__(5796);
+var import_getEndpointFromConfig = __nccwpck_require__(8523);
 
 // src/adaptors/toEndpointV1.ts
 var import_url_parser = __nccwpck_require__(1222);
@@ -24804,7 +25178,7 @@ var resolveParams = /* @__PURE__ */ __name(async (commandInput, instructionsSupp
 }, "resolveParams");
 
 // src/endpointMiddleware.ts
-var import_core = __nccwpck_require__(7316);
+var import_core = __nccwpck_require__(9839);
 var import_util_middleware = __nccwpck_require__(798);
 var endpointMiddleware = /* @__PURE__ */ __name(({
   config,
@@ -24877,7 +25251,7 @@ var getEndpointPlugin = /* @__PURE__ */ __name((config, instructions) => ({
 
 // src/resolveEndpointConfig.ts
 
-var import_getEndpointFromConfig2 = __nccwpck_require__(5796);
+var import_getEndpointFromConfig2 = __nccwpck_require__(8523);
 var resolveEndpointConfig = /* @__PURE__ */ __name((input) => {
   const tls = input.tls ?? true;
   const { endpoint } = input;
@@ -24908,7 +25282,7 @@ var resolveEndpointConfig = /* @__PURE__ */ __name((input) => {
 
 /***/ }),
 
-/***/ 1600:
+/***/ 6319:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var __defProp = Object.defineProperty;
@@ -25206,10 +25580,10 @@ var getOmitRetryHeadersPlugin = /* @__PURE__ */ __name((options) => ({
 // src/retryMiddleware.ts
 
 
-var import_smithy_client = __nccwpck_require__(5131);
+var import_smithy_client = __nccwpck_require__(1568);
 
 
-var import_isStreamingPayload = __nccwpck_require__(7869);
+var import_isStreamingPayload = __nccwpck_require__(8374);
 var retryMiddleware = /* @__PURE__ */ __name((options) => (next, context) => async (args) => {
   var _a;
   let retryStrategy = await options.retryStrategy();
@@ -25321,7 +25695,7 @@ var getRetryAfterHint = /* @__PURE__ */ __name((response) => {
 
 /***/ }),
 
-/***/ 7869:
+/***/ 8374:
 /***/ ((__unused_webpack_module, exports, __nccwpck_require__) => {
 
 "use strict";
@@ -28181,7 +28555,7 @@ var getCanonicalHeaderList = /* @__PURE__ */ __name((headers) => Object.keys(hea
 
 /***/ }),
 
-/***/ 5131:
+/***/ 1568:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var __defProp = Object.defineProperty;
@@ -28322,7 +28696,7 @@ __name(_Client, "Client");
 var Client = _Client;
 
 // src/collect-stream-body.ts
-var import_protocols = __nccwpck_require__(2535);
+var import_protocols = __nccwpck_require__(7529);
 
 // src/command.ts
 
@@ -29891,7 +30265,7 @@ var SelectorType = /* @__PURE__ */ ((SelectorType2) => {
 
 /***/ }),
 
-/***/ 6516:
+/***/ 125:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
 var __create = Object.create;
@@ -63382,11 +63756,11 @@ module.exports = parseParams
 
 /***/ }),
 
-/***/ 42:
+/***/ 40:
 /***/ ((module) => {
 
 "use strict";
-module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.696.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline client-ssm","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/client-sso-oidc":"3.696.0","@aws-sdk/client-sts":"3.696.0","@aws-sdk/core":"3.696.0","@aws-sdk/credential-provider-node":"3.696.0","@aws-sdk/middleware-host-header":"3.696.0","@aws-sdk/middleware-logger":"3.696.0","@aws-sdk/middleware-recursion-detection":"3.696.0","@aws-sdk/middleware-user-agent":"3.696.0","@aws-sdk/region-config-resolver":"3.696.0","@aws-sdk/types":"3.696.0","@aws-sdk/util-endpoints":"3.696.0","@aws-sdk/util-user-agent-browser":"3.696.0","@aws-sdk/util-user-agent-node":"3.696.0","@smithy/config-resolver":"^3.0.12","@smithy/core":"^2.5.3","@smithy/fetch-http-handler":"^4.1.1","@smithy/hash-node":"^3.0.10","@smithy/invalid-dependency":"^3.0.10","@smithy/middleware-content-length":"^3.0.12","@smithy/middleware-endpoint":"^3.2.3","@smithy/middleware-retry":"^3.0.27","@smithy/middleware-serde":"^3.0.10","@smithy/middleware-stack":"^3.0.10","@smithy/node-config-provider":"^3.1.11","@smithy/node-http-handler":"^3.3.1","@smithy/protocol-http":"^4.1.7","@smithy/smithy-client":"^3.4.4","@smithy/types":"^3.7.1","@smithy/url-parser":"^3.0.10","@smithy/util-base64":"^3.0.0","@smithy/util-body-length-browser":"^3.0.0","@smithy/util-body-length-node":"^3.0.0","@smithy/util-defaults-mode-browser":"^3.0.27","@smithy/util-defaults-mode-node":"^3.0.27","@smithy/util-endpoints":"^2.1.6","@smithy/util-middleware":"^3.0.10","@smithy/util-retry":"^3.0.10","@smithy/util-utf8":"^3.0.0","@smithy/util-waiter":"^3.1.9","@types/uuid":"^9.0.1","tslib":"^2.6.2","uuid":"^9.0.1"},"devDependencies":{"@tsconfig/node16":"16.1.3","@types/node":"^16.18.96","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=16.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"name":"@aws-sdk/client-ssm","description":"AWS SDK for JavaScript Ssm Client for Node.js, Browser and React Native","version":"3.698.0","scripts":{"build":"concurrently \'yarn:build:cjs\' \'yarn:build:es\' \'yarn:build:types\'","build:cjs":"node ../../scripts/compilation/inline client-ssm","build:es":"tsc -p tsconfig.es.json","build:include:deps":"lerna run --scope $npm_package_name --include-dependencies build","build:types":"tsc -p tsconfig.types.json","build:types:downlevel":"downlevel-dts dist-types dist-types/ts3.4","clean":"rimraf ./dist-* && rimraf *.tsbuildinfo","extract:docs":"api-extractor run --local","generate:client":"node ../../scripts/generate-clients/single-service --solo ssm"},"main":"./dist-cjs/index.js","types":"./dist-types/index.d.ts","module":"./dist-es/index.js","sideEffects":false,"dependencies":{"@aws-crypto/sha256-browser":"5.2.0","@aws-crypto/sha256-js":"5.2.0","@aws-sdk/client-sso-oidc":"3.696.0","@aws-sdk/client-sts":"3.696.0","@aws-sdk/core":"3.696.0","@aws-sdk/credential-provider-node":"3.696.0","@aws-sdk/middleware-host-header":"3.696.0","@aws-sdk/middleware-logger":"3.696.0","@aws-sdk/middleware-recursion-detection":"3.696.0","@aws-sdk/middleware-user-agent":"3.696.0","@aws-sdk/region-config-resolver":"3.696.0","@aws-sdk/types":"3.696.0","@aws-sdk/util-endpoints":"3.696.0","@aws-sdk/util-user-agent-browser":"3.696.0","@aws-sdk/util-user-agent-node":"3.696.0","@smithy/config-resolver":"^3.0.12","@smithy/core":"^2.5.3","@smithy/fetch-http-handler":"^4.1.1","@smithy/hash-node":"^3.0.10","@smithy/invalid-dependency":"^3.0.10","@smithy/middleware-content-length":"^3.0.12","@smithy/middleware-endpoint":"^3.2.3","@smithy/middleware-retry":"^3.0.27","@smithy/middleware-serde":"^3.0.10","@smithy/middleware-stack":"^3.0.10","@smithy/node-config-provider":"^3.1.11","@smithy/node-http-handler":"^3.3.1","@smithy/protocol-http":"^4.1.7","@smithy/smithy-client":"^3.4.4","@smithy/types":"^3.7.1","@smithy/url-parser":"^3.0.10","@smithy/util-base64":"^3.0.0","@smithy/util-body-length-browser":"^3.0.0","@smithy/util-body-length-node":"^3.0.0","@smithy/util-defaults-mode-browser":"^3.0.27","@smithy/util-defaults-mode-node":"^3.0.27","@smithy/util-endpoints":"^2.1.6","@smithy/util-middleware":"^3.0.10","@smithy/util-retry":"^3.0.10","@smithy/util-utf8":"^3.0.0","@smithy/util-waiter":"^3.1.9","@types/uuid":"^9.0.1","tslib":"^2.6.2","uuid":"^9.0.1"},"devDependencies":{"@tsconfig/node16":"16.1.3","@types/node":"^16.18.96","concurrently":"7.0.0","downlevel-dts":"0.10.1","rimraf":"3.0.2","typescript":"~4.9.5"},"engines":{"node":">=16.0.0"},"typesVersions":{"<4.0":{"dist-types/*":["dist-types/ts3.4/*"]}},"files":["dist-*/**"],"author":{"name":"AWS SDK for JavaScript Team","url":"https://aws.amazon.com/javascript/"},"license":"Apache-2.0","browser":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.browser"},"react-native":{"./dist-es/runtimeConfig":"./dist-es/runtimeConfig.native"},"homepage":"https://github.com/aws/aws-sdk-js-v3/tree/main/clients/client-ssm","repository":{"type":"git","url":"https://github.com/aws/aws-sdk-js-v3.git","directory":"clients/client-ssm"}}');
 
 /***/ }),
 
