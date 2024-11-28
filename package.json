@@ -40,7 +40,7 @@
     "@swc/core": "^1.9.3",
     "@swc/helpers": "^0.5.15",
     "@swc/jest": "^0.2.37",
-    "@types/node": "^20.17.8",
+    "@types/node": "^20.17.9",
     "@vercel/ncc": "^0.38.3",
     "eslint": "^9.15.0",
     "eslint-import-resolver-typescript": "^3.6.3",
