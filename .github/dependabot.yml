@@ -4,21 +4,18 @@ updates:
     directory: /
     schedule:
       interval: daily
-
-  - package-ecosystem: npm
-    directory: /
-    schedule:
-      interval: daily
     groups:
-      app:
+      actions:
         patterns:
           - '*'
 
   - package-ecosystem: npm
-    directory: /__tests__/cdk/
+    directories:
+      - /
+      - /__tests__/cdk/
     schedule:
       interval: daily
     groups:
-      cdk:
+      npm:
         patterns:
           - '*'
