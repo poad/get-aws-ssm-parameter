@@ -23,6 +23,6 @@
   "inlineSourcesContent": true,
   "minify": true,
   "module": {
-    "type": "commonjs"
+    "type": "es6"
   }
 }
