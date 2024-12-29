@@ -1,5 +1,4 @@
 import * as core from '@actions/core';
-import 'source-map-support/register';
 import createClient from './client';
 
 function run(): void {
