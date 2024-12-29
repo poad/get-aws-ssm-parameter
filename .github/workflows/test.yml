@@ -76,10 +76,10 @@ jobs:
       run: bun run --bun lint
 
     - name: build
-      run: bun run --bun build
+      run: pnpm build
 
     - name: package
-      run: bun run --bun package
+      run: pnpm package
 
     - name: test
       run: bun run --bun test

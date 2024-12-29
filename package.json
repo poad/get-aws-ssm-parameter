@@ -6,10 +6,10 @@
   "type": "module",
   "main": "lib/main.js",
   "scripts": {
-    "build": "swc --delete-dir-on-start --extensions .ts src -d lib",
+    "build": "swc --delete-dir-on-start --extensions .ts src -d lib --strip-leading-paths",
     "lint": "eslint 'src/**/*.ts'",
     "lint-fix": "eslint 'src/**/*.ts' --fix",
-    "package": "ncc build --source-map --license licenses.txt",
+    "package": "ncc build --source-map --license licenses.txt -m -q --target es2023",
     "test": "vitest run"
   },
   "repository": {
@@ -48,6 +48,7 @@
     "regenerator-runtime": "^0.14.1",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.6",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8"
   },

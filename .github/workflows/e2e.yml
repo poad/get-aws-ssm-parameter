@@ -86,7 +86,6 @@ jobs:
       id: prepare-test-with-decryption
       run: aws ssm put-parameter --name '/get-aws-ssm-parameter/test-with-decryption' --value 'test-with-decryption' --type String --overwrite --region ${{ matrix.region }}
 
-
     - name: Run E2E test with decryption
       id: test-with-decryption
       uses: ./
