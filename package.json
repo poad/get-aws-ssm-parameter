@@ -6,10 +6,10 @@
   "type": "module",
   "main": "lib/main.js",
   "scripts": {
-    "build": "swc --delete-dir-on-start --extensions .ts src -d lib",
+    "build": "swc --delete-dir-on-start --extensions .ts src -d lib --strip-leading-paths",
     "lint": "eslint 'src/**/*.ts'",
     "lint-fix": "eslint 'src/**/*.ts' --fix",
-    "package": "ncc build --source-map --license licenses.txt",
+    "package": "ncc build --source-map --license licenses.txt -m -q --target es2023",
     "test": "vitest run"
   },
   "repository": {
@@ -35,10 +35,10 @@
     "@stylistic/eslint-plugin-js": "^2.12.1",
     "@stylistic/eslint-plugin-plus": "^2.12.1",
     "@stylistic/eslint-plugin-ts": "^2.12.1",
-    "@swc/cli": "^0.1.65",
+    "@swc/cli": "^0.5.2",
     "@swc/core": "^1.10.3",
     "@swc/helpers": "^0.5.15",
-    "@types/node": "^20.17.10",
+    "@types/node": "^22.10.2",
     "@vercel/ncc": "^0.38.3",
     "eslint": "^9.17.0",
     "eslint-import-resolver-typescript": "^3.7.0",
@@ -48,6 +48,7 @@
     "regenerator-runtime": "^0.14.1",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.2",
+    "vite": "^6.0.6",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8"
   },

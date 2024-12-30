@@ -37,11 +37,14 @@ jobs:
             - recursive: true
               args: [--no-frozen-lockfile, --strict-peer-dependencies]
 
-      - uses: oven-sh/setup-bun@v2
+      - name: Prepare
+        run: rm -rf dist
 
-      - name: Rebuild the dist/ directory
-        run: rm -rf dist && bun run --bun build && bun run --bun package
+      - name: Rebuild
+        run: pnpm build
 
+      - name: Package to the dist/ directory
+        run: pnpm package
 
       - name: Compare the expected and actual dist/ directories
         run: |
