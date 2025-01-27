@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   setup:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
 
     steps:
     - uses: actions/checkout@v4
@@ -44,7 +44,7 @@ jobs:
 
   test:
     needs: [setup]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04-arm
     strategy:
       matrix:
         region: [us-west-2, ap-northeast-1]
