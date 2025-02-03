@@ -30,7 +30,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-corepack use pnpm@latest && pnpm install -r && pnpm up -r
+corepack use pnpm@latest-10 && pnpm install -r && pnpm up -r
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit
