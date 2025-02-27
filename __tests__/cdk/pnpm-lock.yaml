@@ -22,11 +22,11 @@ importers:
         specifier: ^22.13.5
         version: 22.13.5
       aws-cdk:
-        specifier: ^2.1000.3
-        version: 2.1000.3
+        specifier: ^2.1001.0
+        version: 2.1001.0
       pnpm:
-        specifier: ^10.5.1
-        version: 10.5.1
+        specifier: ^10.5.2
+        version: 10.5.2
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.13.5)(typescript@5.7.3)
@@ -107,8 +107,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.1000.3:
-    resolution: {integrity: sha512-y0sU603gGWpVTwqDw9MKVHg3e1t49Mvve6t3YDOvjeKY195Vu6dgHlHjW4h8n1vX04r49NKfpoApG60V8sMbdw==}
+  aws-cdk@2.1001.0:
+    resolution: {integrity: sha512-Wp6fKNXcxBm+f8U1GkLV4gEgqq1pu5uwyDCMBg7ZB/6CtP+PsD/mPhuKyMULNWucDvYN8oy70XLOkMnxa3NWFw==}
     engines: {node: '>= 14.15.0'}
     hasBin: true
 
@@ -133,8 +133,8 @@ packages:
   make-error@1.3.6:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
 
-  pnpm@10.5.1:
-    resolution: {integrity: sha512-xCTAdr0lwaWxiMN7scpWzB4Tb79TDZi8syiZgqCP0lUnuMnE7BE75eM5PDmvBFId1ke88dCAHq+KxqexTaMTrw==}
+  pnpm@10.5.2:
+    resolution: {integrity: sha512-2p3CjNP/QNBZIYgjWrJdMgKt2KIHr77caCIg5KACn/v/RWIQK55uRrTj+ei9U+bQXeSFRLDFfUsBeeIsdtEZmw==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -222,7 +222,7 @@ snapshots:
       '@aws-cdk/cloud-assembly-schema': 39.2.20
       constructs: 10.4.2
 
-  aws-cdk@2.1000.3:
+  aws-cdk@2.1001.0:
     optionalDependencies:
       fsevents: 2.3.2
 
@@ -239,7 +239,7 @@ snapshots:
 
   make-error@1.3.6: {}
 
-  pnpm@10.5.1: {}
+  pnpm@10.5.2: {}
 
   source-map-support@0.5.21:
     dependencies:
