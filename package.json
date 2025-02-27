@@ -35,7 +35,7 @@
     "@stylistic/eslint-plugin-plus": "^4.1.0",
     "@stylistic/eslint-plugin-ts": "^4.1.0",
     "@swc/cli": "^0.6.0",
-    "@swc/core": "^1.11.1",
+    "@swc/core": "^1.11.4",
     "@swc/helpers": "^0.5.15",
     "@types/node": "^22.13.5",
     "@vercel/ncc": "^0.38.3",
