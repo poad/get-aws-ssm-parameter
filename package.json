@@ -37,7 +37,7 @@
     "@swc/cli": "^0.6.0",
     "@swc/core": "^1.11.16",
     "@swc/helpers": "^0.5.15",
-    "@types/node": "^22.13.16",
+    "@types/node": "^22.13.17",
     "@vercel/ncc": "^0.38.3",
     "eslint": "^9.23.0",
     "eslint-import-resolver-typescript": "^4.3.1",
