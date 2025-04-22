@@ -36,8 +36,8 @@ importers:
 
 packages:
 
-  '@aws-cdk/asset-awscli-v1@2.2.232':
-    resolution: {integrity: sha512-x9aFQG9gA+RgGj9bGB+WC6y1Nq2/Y8R2yXFoKWoQZOet8PRFJ8M5/FeXoh9XmdWI4weJVctLU4WTIve6rOvPtA==}
+  '@aws-cdk/asset-awscli-v1@2.2.233':
+    resolution: {integrity: sha512-OH5ZN1F/0wwOUwzVUSvE0/syUOi44H9the6IG16anlSptfeQ1fvduJazZAKRuJLtautPbiqxllyOrtWh6LhX8A==}
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0':
     resolution: {integrity: sha512-7bY3J8GCVxLupn/kNmpPc5VJz8grx+4RKfnnJiO1LG+uxkZfANZG3RMHhE+qQxxwkyQ9/MfPtTpf748UhR425A==}
@@ -177,7 +177,7 @@ packages:
 
 snapshots:
 
-  '@aws-cdk/asset-awscli-v1@2.2.232': {}
+  '@aws-cdk/asset-awscli-v1@2.2.233': {}
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.1.0': {}
 
@@ -218,7 +218,7 @@ snapshots:
 
   aws-cdk-lib@2.190.0(constructs@10.4.2):
     dependencies:
-      '@aws-cdk/asset-awscli-v1': 2.2.232
+      '@aws-cdk/asset-awscli-v1': 2.2.233
       '@aws-cdk/asset-node-proxy-agent-v6': 2.1.0
       '@aws-cdk/cloud-assembly-schema': 41.2.0
       constructs: 10.4.2
