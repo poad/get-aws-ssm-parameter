@@ -1,0 +1,12 @@
+packages:
+  - .
+  - __tests__/cdk
+onlyBuiltDependencies:
+  - '@swc/core'
+  - esbuild
+  - unrs-resolver
+
+enable-pre-post-scripts: true
+legacy-peer-deps: true
+auto-install-peers: true
+strict-peer-dependencies: false
