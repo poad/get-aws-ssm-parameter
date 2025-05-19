@@ -25,11 +25,11 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@aws-sdk/client-ssm": "^3.810.0",
+    "@aws-sdk/client-ssm": "^3.812.0",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
-    "@eslint/js": "^9.26.0",
+    "@eslint/js": "^9.27.0",
     "@stylistic/eslint-plugin": "^4.2.0",
     "@stylistic/eslint-plugin-js": "^4.2.0",
     "@stylistic/eslint-plugin-plus": "^4.2.0",
@@ -37,10 +37,10 @@
     "@swc/cli": "^0.7.7",
     "@swc/core": "^1.11.24",
     "@swc/helpers": "^0.5.17",
-    "@types/node": "^22.15.18",
+    "@types/node": "^22.15.19",
     "@vercel/ncc": "^0.38.3",
-    "eslint": "^9.26.0",
-    "eslint-import-resolver-typescript": "^4.3.4",
+    "eslint": "^9.27.0",
+    "eslint-import-resolver-typescript": "^4.3.5",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-promise": "^7.2.1",
     "js-yaml": "^4.1.0",
