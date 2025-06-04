@@ -25,15 +25,15 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@aws-sdk/client-ssm": "^3.821.0",
+    "@aws-sdk/client-ssm": "^3.823.0",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
-    "@stylistic/eslint-plugin": "^4.4.0",
-    "@stylistic/eslint-plugin-js": "^4.4.0",
-    "@stylistic/eslint-plugin-plus": "^4.4.0",
-    "@stylistic/eslint-plugin-ts": "^4.4.0",
+    "@stylistic/eslint-plugin": "^4.4.1",
+    "@stylistic/eslint-plugin-js": "^4.4.1",
+    "@stylistic/eslint-plugin-plus": "^4.4.1",
+    "@stylistic/eslint-plugin-ts": "^4.4.1",
     "@swc/cli": "^0.7.7",
     "@swc/core": "^1.11.29",
     "@swc/helpers": "^0.5.17",
@@ -50,7 +50,7 @@
     "typescript-eslint": "^8.33.1",
     "vite": "^6.3.5",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.0"
+    "vitest": "^3.2.1"
   },
   "engines": {
     "npm": "use pnpm please!",
