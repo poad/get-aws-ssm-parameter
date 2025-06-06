@@ -25,7 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@aws-sdk/client-ssm": "^3.823.0",
+    "@aws-sdk/client-ssm": "^3.825.0",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
@@ -37,10 +37,10 @@
     "@swc/cli": "^0.7.7",
     "@swc/core": "^1.11.31",
     "@swc/helpers": "^0.5.17",
-    "@types/node": "^22.15.29",
+    "@types/node": "^22.15.30",
     "@vercel/ncc": "^0.38.3",
     "eslint": "^9.28.0",
-    "eslint-import-resolver-typescript": "^4.4.2",
+    "eslint-import-resolver-typescript": "^4.4.3",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-promise": "^7.2.1",
     "js-yaml": "^4.1.0",
@@ -50,7 +50,7 @@
     "typescript-eslint": "^8.33.1",
     "vite": "^6.3.5",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.1"
+    "vitest": "^3.2.2"
   },
   "engines": {
     "npm": "use pnpm please!",
