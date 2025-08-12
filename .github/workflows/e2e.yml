@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-24.04-arm
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Use Node.js 22.x
       uses: actions/setup-node@v4
@@ -56,7 +56,7 @@ jobs:
         role-to-assume: ${{ secrets.AWS_OIDC_ROLE_ARN }}
         role-session-name: GitHubActions
         aws-region: ${{ matrix.region }}
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: Use Node.js 22.x
       uses: actions/setup-node@v4
