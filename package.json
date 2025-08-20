@@ -44,7 +44,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-promise": "^7.2.1",
     "js-yaml": "^4.1.0",
-    "pnpm": "^10.14.0",
+    "pnpm": "^10.15.0",
     "regenerator-runtime": "^0.14.1",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.40.0",
@@ -57,5 +57,5 @@
     "yarn": "use pnpm please!",
     "pnpm": ">=8.7.1"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.15.0"
 }
