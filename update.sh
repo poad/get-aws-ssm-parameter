@@ -14,7 +14,7 @@ if [ $result -ne 0 ]; then
 fi
 echo ""
 pwd
-npx -y pnpm@latest self-update && pnpm install -r && pnpm up -r && pnpm lint-fix && pnpm audit --fix && rm -rf dist && pnpm build && pnpm package
+npx -y pnpm@latest self-update && pnpm install -r && pnpm up -r && pnpm lint-fix && pnpm audit --fix && pnpm clean && pnpm build && pnpm package
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}" || exit

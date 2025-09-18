@@ -19,7 +19,7 @@
     },
     "keepClassNames": true
   },
-  "sourceMaps": true,
+  "sourceMaps": false,
   "inlineSourcesContent": true,
   "minify": true,
   "module": {

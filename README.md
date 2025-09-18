@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: 'Get value from Parameter Store'
       id: parameter
-      uses: poad/get-aws-ssm-parameter@v3.0.0
+      uses: poad/get-aws-ssm-parameter@v3.0.1
       with: 
         parameter-name: /example/parameter
         aws-region: us-west-2
