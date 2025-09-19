@@ -1,19 +1,15 @@
 // @ts-check
 
+import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
-import stylisticTs from '@stylistic/eslint-plugin-ts';
-import tseslint from 'typescript-eslint';
+import { parser, configs } from 'typescript-eslint';
 // @ts-ignore
 import importPlugin from 'eslint-plugin-import';
 
 import pluginPromise from 'eslint-plugin-promise'
 
-export default tseslint.config(
-  eslint.configs.recommended,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
-  pluginPromise.configs['flat/recommended'],
+export default defineConfig(
   {
     ignores: [
       '**/*.d.ts',
@@ -27,12 +23,15 @@ export default tseslint.config(
       'dist',
     ],
   },
+  eslint.configs.recommended,
+  ...configs.strict,
+  ...configs.stylistic,
+  pluginPromise.configs['flat/recommended'],
   {
     files: ['src/**/*.ts'],
-    ...importPlugin.flatConfigs.recommended,
-    ...importPlugin.flatConfigs.typescript,
+    extends: [importPlugin.flatConfigs.recommended, importPlugin.flatConfigs.typescript],
     languageOptions: {
-      parser: tseslint.parser,
+      parser,
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
@@ -44,15 +43,13 @@ export default tseslint.config(
     },
     plugins: {
       '@stylistic': stylistic,
-      '@stylistic/ts': stylisticTs,
     },
     rules: {
-      '@stylistic/semi': 'error',
-      '@stylistic/ts/indent': ['error', 2],
-      'comma-dangle': ['error', 'always-multiline'],
-      'arrow-parens': ['error', 'always'],
-      'indent': ['error', 2],
-      'quotes': ['error', 'single'],
+      '@stylistic/quotes': ['error', 'single'],
+      '@stylistic/semi': ['error', 'always'],
+      '@stylistic/indent': ['error', 2],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/arrow-parens': ['error', 'always'],
     },
   },
 );

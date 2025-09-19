@@ -7,9 +7,10 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "swc --delete-dir-on-start --extensions .ts src -d lib --strip-leading-paths",
+    "clean": "rimraf dist lib",
     "lint": "eslint 'src/**/*.ts'",
     "lint-fix": "eslint 'src/**/*.ts' --fix",
-    "package": "ncc build --source-map --license licenses.txt -m -q --target es2023",
+    "package": "ncc build --license licenses.txt -m -q --target es2023",
     "test": "vitest run"
   },
   "repository": {
@@ -31,13 +32,10 @@
   "devDependencies": {
     "@eslint/js": "^9.35.0",
     "@stylistic/eslint-plugin": "^5.3.1",
-    "@stylistic/eslint-plugin-js": "^4.4.1",
-    "@stylistic/eslint-plugin-plus": "^4.4.1",
-    "@stylistic/eslint-plugin-ts": "^4.4.1",
     "@swc/cli": "^0.7.8",
     "@swc/core": "^1.13.5",
     "@swc/helpers": "^0.5.17",
-    "@types/node": "^24.5.2",
+    "@types/node": "^24.5.1",
     "@vercel/ncc": "^0.38.3",
     "eslint": "^9.35.0",
     "eslint-import-resolver-typescript": "^4.4.4",
@@ -46,16 +44,17 @@
     "js-yaml": "^4.1.0",
     "pnpm": "^10.17.0",
     "regenerator-runtime": "^0.14.1",
+    "rimraf": "^6.0.1",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.44.0",
-    "vite": "^7.1.6",
+    "vite": "^7.1.5",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4"
   },
   "engines": {
     "npm": "use pnpm please!",
     "yarn": "use pnpm please!",
-    "pnpm": ">=8.7.1"
+    "pnpm": ">=10.17.0"
   },
   "packageManager": "pnpm@10.17.0"
 }
