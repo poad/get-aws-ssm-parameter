@@ -13,5 +13,5 @@ inputs:
     type: boolean
     description: 'Value specified for WithDecryption. Detail: https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetParameter.html#systemsmanager-GetParameter-request-WithDecryption'
 runs:
-  using: 'node20'
+  using: 'node24'
   main: 'dist/index.js'
