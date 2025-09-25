@@ -38,3 +38,7 @@ We welcome your interest in contributing to this project. Please read the [Contr
 ## License
 
 Any contributions made under this project will be governed by the [MIT License](LICENSE)
+
+## Security Policy
+
+See [SECURITY.md](./SECURITY.md).
