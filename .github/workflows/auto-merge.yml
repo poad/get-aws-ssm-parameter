@@ -4,16 +4,13 @@ on:
   pull_request:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 jobs:
   pull-request-auto-merge:
     if: ${{ !github.event.pull_request.draft }}
     runs-on: ubuntu-24.04-arm
     steps:
-      - uses: actions/checkout@v5
-
       - name: Enable auto-merge for Pull Request
         run: |
           gh pr review --approve "$PR_URL"
