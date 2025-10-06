@@ -82,7 +82,7 @@ importers:
   __tests__/cdk:
     dependencies:
       aws-cdk-lib:
-        specifier: ^2.218.0
+        specifier: ^2.219.0
         version: 2.219.0(constructs@10.4.2)
       constructs:
         specifier: ^10.4.2
