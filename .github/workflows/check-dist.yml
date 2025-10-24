@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   check-dist:
-    runs-on: ubuntu-24.04-arm
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
@@ -39,7 +39,7 @@ jobs:
         with:
           run_install: |
             - recursive: true
-              args: [--no-frozen-lockfile, --strict-peer-dependencies]
+              args: [--no-frozen-lockfile]
 
       - name: Prepare
         run: rm -rf dist
