@@ -1,10 +1,6 @@
 packages:
   - .
   - __tests__/cdk
-onlyBuiltDependencies:
-  - '@swc/core'
-  - esbuild
-  - unrs-resolver
 
 enablePrePostScripts: true
 legacyPeerDeps: true
