@@ -28,7 +28,7 @@ importers:
         specifier: ^0.7.8
         version: 0.7.8(@swc/core@1.13.5(@swc/helpers@0.5.17))
       '@swc/core':
-        specifier: 1.13.5
+        specifier: ^1.13.5
         version: 1.13.5(@swc/helpers@0.5.17)
       '@swc/helpers':
         specifier: ^0.5.17
@@ -76,7 +76,7 @@ importers:
         specifier: ^5.1.4
         version: 5.1.4(typescript@5.9.3)(vite@7.1.12(@types/node@24.9.1)(tsx@4.20.6))
       vitest:
-        specifier: ^4.0.2
+        specifier: ^4.0.3
         version: 4.0.3(@types/node@24.9.1)(tsx@4.20.6)
 
   __tests__/cdk:
