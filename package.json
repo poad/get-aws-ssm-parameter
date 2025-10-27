@@ -26,7 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@aws-sdk/client-ssm": "^3.914.0",
+    "@aws-sdk/client-ssm": "^3.917.0",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
@@ -49,7 +49,7 @@
     "typescript-eslint": "^8.46.2",
     "vite": "^7.1.12",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^4.0.1"
+    "vitest": "^4.0.3"
   },
   "engines": {
     "npm": "use pnpm please!",
