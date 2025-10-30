@@ -11,3 +11,4 @@ strictPeerDependencies: false
 minimumReleaseAge: 1440
 minimumReleaseAgeExclude:
  - pnpm
+ - '@swc/core'
