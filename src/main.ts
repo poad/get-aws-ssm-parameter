@@ -32,7 +32,7 @@ import createClient from './client.js';
  *
  * @throws エラーが発生した場合、アクションは失敗としてマークされます
  */
-function run(): void {
+const run = async (): Promise<void> => {
   try {
     // パラメータ名を取得（必須）
     const parameterName: string = core.getInput('parameter-name', {
@@ -51,16 +51,14 @@ function run(): void {
 
     // SSM クライアントを作成してパラメータ値を取得
     const client = createClient(region);
-    client
-      .getParameterValue(parameterName, decryption)
-      .then((value) => core.setOutput('value', value))
-      .catch((error) => {
-        if (error instanceof Error) core.setFailed(error.message);
-      });
+    const value = await client.getParameterValue(parameterName, decryption);
+    core.setOutput('value', value);
   } catch (error) {
     console.error(error);
     if (error instanceof Error) core.setFailed(error.message);
   }
-}
+};
 
-run();
+run().catch((error) => {
+  if (error instanceof Error) core.setFailed(error.message);
+});

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import * as cdk from "aws-cdk-lib";
-import { CdkStack } from "../lib/cdk-stack";
+import { CdkStack } from "../lib/cdk-stack.js";
 
 const app = new cdk.App();
 new CdkStack(app, "get-aws-ssm-parameter-test-stack-oregon", {

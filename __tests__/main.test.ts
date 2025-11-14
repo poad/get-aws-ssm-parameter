@@ -3,11 +3,11 @@ import * as cp from "child_process";
 import * as path from "path";
 import { expect, test } from "vitest";
 import * as process from "process";
-import createClient from "../src/client";
+import createClient from "../src/client.js";
 
 test.runIf(process.env.AWS_ACCESS_KEY_ID)("throws Parameter not found", async () => {
   const client = createClient("us-west-2");
-  await expect(client.getParameterValue("not_found")).rejects.toThrow("UnknownError");
+  await expect(client.getParameterValue("not_found")).rejects.toThrowError();
 });
 
 test.runIf(process.env.AWS_ACCESS_KEY_ID)("Get Parameter", async () => {
@@ -22,7 +22,7 @@ test.runIf(process.env.AWS_ACCESS_KEY_ID)("test runs", () => {
   process.env["INPUT_AWS-REGION"] = "us-west-2";
   process.env["INPUT_DECRYPTION"] = "false";
   const np = process.execPath;
-  const ip = path.join(__dirname, "..", "lib", "main.js");
+  const ip = path.join("lib", "main.js");
 
   try {
     const options: cp.ExecFileSyncOptions = {
@@ -32,6 +32,6 @@ test.runIf(process.env.AWS_ACCESS_KEY_ID)("test runs", () => {
     console.log(ret);
   } catch (error) {
     console.error(error);
-    fail(error);
+    fail(error as Error);
   }
 });

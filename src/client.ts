@@ -11,7 +11,7 @@
  */
 import * as ssm from '@aws-sdk/client-ssm';
 
-function createClient(region: string) {
+const createClient = (region: string) => {
   const client = new ssm.SSMClient({
     region,
   });
@@ -30,10 +30,10 @@ function createClient(region: string) {
    * // SecureStringパラメータの取得
    * const secret = await getParameterValue('/app/dev/db-password', true);
    */
-  async function getParameterValue(
+  const getParameterValue = async (
     parameterName: string,
     secure?: boolean,
-  ): Promise<string | undefined> {
+  ): Promise<string | undefined> => {
     const resp = await client.send(
       new ssm.GetParameterCommand({
         Name: parameterName,
