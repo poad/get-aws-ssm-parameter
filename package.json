@@ -7,7 +7,7 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "swc --delete-dir-on-start --extensions .ts src -d lib --strip-leading-paths",
-    "clean": "rimraf dist lib",
+    "clean": "rm -rf dist lib",
     "lint": "eslint 'src/**/*.ts'",
     "lint-fix": "eslint 'src/**/*.ts' --fix",
     "package": "ncc build --license licenses.txt -m -q --target es2023",
@@ -44,7 +44,6 @@
     "js-yaml": "^4.1.1",
     "pnpm": "^10.22.0",
     "regenerator-runtime": "^0.14.1",
-    "rimraf": "^6.1.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.2",

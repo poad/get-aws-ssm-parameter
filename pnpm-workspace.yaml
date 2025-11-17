@@ -2,12 +2,18 @@ packages:
   - .
   - __tests__/cdk
 
-enablePrePostScripts: true
-legacyPeerDeps: true
 autoInstallPeers: true
-strictPeerDependencies: false
 
-# one day
+enablePrePostScripts: true
+
+legacyPeerDeps: true
+
 minimumReleaseAge: 1440
+
 minimumReleaseAgeExclude:
- - pnpm
+  - pnpm
+
+overrides:
+  glob@>=10.3.7 <=11.0.3: '>=11.1.0'
+
+strictPeerDependencies: false
