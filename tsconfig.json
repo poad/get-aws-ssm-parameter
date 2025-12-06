@@ -12,7 +12,7 @@
       "DOM"
     ],
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "outDir": "./dist",
     "esModuleInterop": true,
     "skipLibCheck": true,
