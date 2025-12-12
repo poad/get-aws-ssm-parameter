@@ -8,7 +8,7 @@ export const modules = {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.checkUrl = void 0;
-const property_provider_1 = __webpack_require__(7717);
+const property_provider_1 = __webpack_require__(98);
 const LOOPBACK_CIDR_IPv4 = "127.0.0.0/8";
 const LOOPBACK_CIDR_IPv6 = "::1/128";
 const ECS_CONTAINER_HOST = "169.254.170.2";
@@ -64,7 +64,7 @@ exports.fromHttp = void 0;
 const tslib_1 = __webpack_require__(7892);
 const client_1 = __webpack_require__(4484);
 const node_http_handler_1 = __webpack_require__(4654);
-const property_provider_1 = __webpack_require__(7717);
+const property_provider_1 = __webpack_require__(98);
 const promises_1 = tslib_1.__importDefault(__webpack_require__(1943));
 const checkUrl_1 = __webpack_require__(8558);
 const requestHelpers_1 = __webpack_require__(6829);
@@ -139,7 +139,7 @@ exports.fromHttp = fromHttp;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createGetRequest = createGetRequest;
 exports.getCredentials = getCredentials;
-const property_provider_1 = __webpack_require__(7717);
+const property_provider_1 = __webpack_require__(98);
 const protocol_http_1 = __webpack_require__(1034);
 const smithy_client_1 = __webpack_require__(4037);
 const util_stream_1 = __webpack_require__(2938);

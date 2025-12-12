@@ -9,7 +9,7 @@ export const modules = {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveHttpAuthSchemeConfig = exports.defaultSSOHttpAuthSchemeProvider = exports.defaultSSOHttpAuthSchemeParametersProvider = void 0;
 const core_1 = __webpack_require__(9740);
-const util_middleware_1 = __webpack_require__(1202);
+const util_middleware_1 = __webpack_require__(8821);
 const defaultSSOHttpAuthSchemeParametersProvider = async (config, context, input) => {
     return {
         operation: (0, util_middleware_1.getSmithyContext)(context).operation,
@@ -641,7 +641,7 @@ exports.getRuntimeConfig = getRuntimeConfig;
 
 var protocolHttp = __webpack_require__(1034);
 var core = __webpack_require__(12);
-var propertyProvider = __webpack_require__(7717);
+var propertyProvider = __webpack_require__(98);
 var client = __webpack_require__(4484);
 var signatureV4 = __webpack_require__(3492);
 
@@ -946,7 +946,7 @@ exports.validateSigningProperties = validateSigningProperties;
 var __webpack_unused_export__;
 
 
-var propertyProvider = __webpack_require__(7717);
+var propertyProvider = __webpack_require__(98);
 var sharedIniFileLoader = __webpack_require__(2787);
 var client = __webpack_require__(4484);
 var tokenProviders = __webpack_require__(5053);
@@ -1166,7 +1166,7 @@ Object.defineProperty(exports, "SSOClient", ({
 
 var client = __webpack_require__(4484);
 var httpAuthSchemes = __webpack_require__(1511);
-var propertyProvider = __webpack_require__(7717);
+var propertyProvider = __webpack_require__(98);
 var sharedIniFileLoader = __webpack_require__(2787);
 var fs = __webpack_require__(9896);
 

@@ -8,7 +8,7 @@ export const modules = {
 
 
 var sharedIniFileLoader = __webpack_require__(2787);
-var propertyProvider = __webpack_require__(7717);
+var propertyProvider = __webpack_require__(98);
 var client = __webpack_require__(4484);
 var credentialProviderLogin = __webpack_require__(4269);
 
@@ -241,7 +241,7 @@ exports.fromIni = fromIni;
 
 
 var client = __webpack_require__(4484);
-var propertyProvider = __webpack_require__(7717);
+var propertyProvider = __webpack_require__(98);
 var sharedIniFileLoader = __webpack_require__(2787);
 var protocolHttp = __webpack_require__(1034);
 var node_crypto = __webpack_require__(7598);

@@ -8,8 +8,8 @@ export const modules = {
 
 
 var sharedIniFileLoader = __webpack_require__(2787);
-var propertyProvider = __webpack_require__(7717);
-var child_process = __webpack_require__(7698);
+var propertyProvider = __webpack_require__(98);
+var child_process = __webpack_require__(5317);
 var util = __webpack_require__(9023);
 var client = __webpack_require__(4484);
 

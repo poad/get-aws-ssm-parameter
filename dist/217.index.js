@@ -9,7 +9,7 @@ export const modules = {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromTokenFile = void 0;
 const client_1 = __webpack_require__(4484);
-const property_provider_1 = __webpack_require__(7717);
+const property_provider_1 = __webpack_require__(98);
 const shared_ini_file_loader_1 = __webpack_require__(2787);
 const fs_1 = __webpack_require__(9896);
 const fromWebToken_1 = __webpack_require__(6086);
@@ -256,7 +256,7 @@ exports.resolveHttpAuthRuntimeConfig = resolveHttpAuthRuntimeConfig;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveHttpAuthSchemeConfig = exports.resolveStsAuthConfig = exports.defaultSTSHttpAuthSchemeProvider = exports.defaultSTSHttpAuthSchemeParametersProvider = void 0;
 const core_1 = __webpack_require__(9740);
-const util_middleware_1 = __webpack_require__(1202);
+const util_middleware_1 = __webpack_require__(8821);
 const STSClient_1 = __webpack_require__(3227);
 const defaultSTSHttpAuthSchemeParametersProvider = async (config, context, input) => {
     return {
