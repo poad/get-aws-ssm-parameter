@@ -15,5 +15,6 @@ minimumReleaseAgeExclude:
 
 overrides:
   glob@>=10.3.7 <=11.0.3: '>=11.1.0'
+  undici@<6.23.0: '>=6.23.0'
 
 strictPeerDependencies: false
