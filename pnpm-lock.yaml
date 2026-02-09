@@ -30,8 +30,8 @@ importers:
         specifier: ^5.7.1
         version: 5.7.1(eslint@9.39.2)
       '@swc/cli':
-        specifier: ^0.7.10
-        version: 0.7.10(@swc/core@1.15.11(@swc/helpers@0.5.18))
+        specifier: ^0.8.0
+        version: 0.8.0(@swc/core@1.15.11(@swc/helpers@0.5.18))
       '@swc/core':
         specifier: ^1.15.11
         version: 1.15.11(@swc/helpers@0.5.18)
@@ -60,8 +60,8 @@ importers:
         specifier: ^4.1.1
         version: 4.1.1
       pnpm:
-        specifier: ^10.29.1
-        version: 10.29.1
+        specifier: ^10.29.2
+        version: 10.29.2
       regenerator-runtime:
         specifier: ^0.14.1
         version: 0.14.1
@@ -918,13 +918,13 @@ packages:
     peerDependencies:
       eslint: '>=9.0.0'
 
-  '@swc/cli@0.7.10':
-    resolution: {integrity: sha512-QQ36Q1VwGTT2YzvMeNe/j1x4DKS277DscNhWc57dIwQn//C+zAgvuSupMB/XkmYqPKQX+8hjn5/cHRJrMvWy0Q==}
-    engines: {node: '>= 16.14.0'}
+  '@swc/cli@0.8.0':
+    resolution: {integrity: sha512-vzUkYzlqLe9dC+B0ZIH62CzfSZOCTjIsmquYyyyi45JCm1xmRfLDKeEeMrEPPyTWnEEN84e4iVd49Tgqa+2GaA==}
+    engines: {node: '>= 20.19.0'}
     hasBin: true
     peerDependencies:
       '@swc/core': ^1.2.66
-      chokidar: ^4.0.1
+      chokidar: ^5.0.0
     peerDependenciesMeta:
       chokidar:
         optional: true
@@ -2187,8 +2187,8 @@ packages:
   piscina@4.9.2:
     resolution: {integrity: sha512-Fq0FERJWFEUpB4eSY59wSNwXD4RYqR+nR/WiEVcZW8IWfVBxJJafcgTEZDQo8k3w0sUarJ8RyVbbUF4GQ2LGbQ==}
 
-  pnpm@10.29.1:
-    resolution: {integrity: sha512-SNriM2NaZFdoowKNGVRcrMFohjnusfNzTkLW1rlxr78iqhrJr1Khc9nDogwVhXz6QA8ZmU15ovYm/Mc/zNqbvA==}
+  pnpm@10.29.2:
+    resolution: {integrity: sha512-vvQ/p1nZH9LaSzGaWg0T73pFu5haPXNCBYRw+dIFGjuoZ05ilnJlRobvlEOtE6gtor657rPgIhyHuBVP/510uA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -3640,7 +3640,7 @@ snapshots:
       estraverse: 5.3.0
       picomatch: 4.0.3
 
-  '@swc/cli@0.7.10(@swc/core@1.15.11(@swc/helpers@0.5.18))':
+  '@swc/cli@0.8.0(@swc/core@1.15.11(@swc/helpers@0.5.18))':
     dependencies:
       '@swc/core': 1.15.11(@swc/helpers@0.5.18)
       '@swc/counter': 0.1.3
@@ -5043,7 +5043,7 @@ snapshots:
     optionalDependencies:
       '@napi-rs/nice': 1.1.1
 
-  pnpm@10.29.1: {}
+  pnpm@10.29.2: {}
 
   possible-typed-array-names@1.1.0: {}
 
