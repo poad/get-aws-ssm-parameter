@@ -30,14 +30,14 @@
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.7.1",
     "@swc/cli": "^0.8.0",
     "@swc/core": "^1.15.11",
     "@swc/helpers": "^0.5.18",
     "@types/node": "^25.2.1",
     "@vercel/ncc": "^0.38.4",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-promise": "^7.2.1",
