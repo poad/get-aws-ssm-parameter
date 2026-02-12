@@ -63,7 +63,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromHttp = void 0;
 const tslib_1 = __webpack_require__(7892);
 const client_1 = __webpack_require__(1634);
-const node_http_handler_1 = __webpack_require__(4986);
+const node_http_handler_1 = __webpack_require__(848);
 const property_provider_1 = __webpack_require__(5169);
 const promises_1 = tslib_1.__importDefault(__webpack_require__(1943));
 const checkUrl_1 = __webpack_require__(1631);
@@ -141,8 +141,8 @@ exports.createGetRequest = createGetRequest;
 exports.getCredentials = getCredentials;
 const property_provider_1 = __webpack_require__(5169);
 const protocol_http_1 = __webpack_require__(9953);
-const smithy_client_1 = __webpack_require__(4869);
-const util_stream_1 = __webpack_require__(2830);
+const smithy_client_1 = __webpack_require__(8125);
+const util_stream_1 = __webpack_require__(1279);
 function createGetRequest(url) {
     return new protocol_http_1.HttpRequest({
         protocol: url.protocol,
