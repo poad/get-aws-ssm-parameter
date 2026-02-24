@@ -133,12 +133,12 @@ var middlewareLogger = __webpack_require__(8193);
 var middlewareRecursionDetection = __webpack_require__(9225);
 var middlewareUserAgent = __webpack_require__(6498);
 var configResolver = __webpack_require__(705);
-var core = __webpack_require__(6723);
-var schema = __webpack_require__(1687);
+var core = __webpack_require__(1698);
+var schema = __webpack_require__(7194);
 var middlewareContentLength = __webpack_require__(9097);
-var middlewareEndpoint = __webpack_require__(4426);
-var middlewareRetry = __webpack_require__(5687);
-var smithyClient = __webpack_require__(6152);
+var middlewareEndpoint = __webpack_require__(6554);
+var middlewareRetry = __webpack_require__(2752);
+var smithyClient = __webpack_require__(3265);
 var httpAuthSchemeProvider = __webpack_require__(3682);
 var runtimeConfig = __webpack_require__(2211);
 var regionConfigResolver = __webpack_require__(8151);
@@ -349,7 +349,7 @@ Object.keys(errors).forEach(function (k) {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SSOServiceException = exports.__ServiceException = void 0;
-const smithy_client_1 = __webpack_require__(6152);
+const smithy_client_1 = __webpack_require__(3265);
 Object.defineProperty(exports, "__ServiceException", ({ enumerable: true, get: function () { return smithy_client_1.ServiceException; } }));
 class SSOServiceException extends smithy_client_1.ServiceException {
     constructor(options) {
@@ -437,12 +437,12 @@ const core_1 = __webpack_require__(1883);
 const util_user_agent_node_1 = __webpack_require__(3357);
 const config_resolver_1 = __webpack_require__(705);
 const hash_node_1 = __webpack_require__(2869);
-const middleware_retry_1 = __webpack_require__(5687);
+const middleware_retry_1 = __webpack_require__(2752);
 const node_config_provider_1 = __webpack_require__(6068);
 const node_http_handler_1 = __webpack_require__(848);
-const smithy_client_1 = __webpack_require__(6152);
+const smithy_client_1 = __webpack_require__(3265);
 const util_body_length_node_1 = __webpack_require__(7062);
-const util_defaults_mode_node_1 = __webpack_require__(6503);
+const util_defaults_mode_node_1 = __webpack_require__(6030);
 const util_retry_1 = __webpack_require__(9093);
 const runtimeConfig_shared_1 = __webpack_require__(6848);
 const getRuntimeConfig = (config) => {
@@ -491,8 +491,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const core_1 = __webpack_require__(1883);
 const protocols_1 = __webpack_require__(5437);
-const core_2 = __webpack_require__(6723);
-const smithy_client_1 = __webpack_require__(6152);
+const core_2 = __webpack_require__(1698);
+const smithy_client_1 = __webpack_require__(3265);
 const url_parser_1 = __webpack_require__(8149);
 const util_base64_1 = __webpack_require__(1532);
 const util_utf8_1 = __webpack_require__(5579);
@@ -596,7 +596,7 @@ const _sAK = "secretAccessKey";
 const _sT = "sessionToken";
 const _xasbt = "x-amz-sso_bearer_token";
 const n0 = "com.amazonaws.sso";
-const schema_1 = __webpack_require__(1687);
+const schema_1 = __webpack_require__(7194);
 const errors_1 = __webpack_require__(8693);
 const SSOServiceException_1 = __webpack_require__(3715);
 const _s_registry = schema_1.TypeRegistry.for(_s);
@@ -713,7 +713,7 @@ exports.Logout$ = [9, n0, _L,
 
 
 var protocolHttp = __webpack_require__(9953);
-var core = __webpack_require__(6723);
+var core = __webpack_require__(1698);
 var propertyProvider = __webpack_require__(5169);
 var client = __webpack_require__(2507);
 var signatureV4 = __webpack_require__(3293);

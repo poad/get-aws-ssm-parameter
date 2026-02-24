@@ -141,8 +141,8 @@ exports.createGetRequest = createGetRequest;
 exports.getCredentials = getCredentials;
 const property_provider_1 = __webpack_require__(5169);
 const protocol_http_1 = __webpack_require__(9953);
-const smithy_client_1 = __webpack_require__(6152);
-const util_stream_1 = __webpack_require__(1279);
+const smithy_client_1 = __webpack_require__(3265);
+const util_stream_1 = __webpack_require__(2732);
 function createGetRequest(url) {
     return new protocol_http_1.HttpRequest({
         protocol: url.protocol,
