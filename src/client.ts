@@ -11,6 +11,13 @@
  */
 import * as ssm from '@aws-sdk/client-ssm';
 
+export class ParameterNotFoundError extends Error {
+  constructor(parameterName: string) {
+    super(`Parameter '${parameterName}' not found`);
+    this.name = 'ParameterNotFoundError';
+  }
+}
+
 const createClient = (region: string) => {
   const client = new ssm.SSMClient({
     region,
@@ -34,16 +41,23 @@ const createClient = (region: string) => {
     parameterName: string,
     secure?: boolean,
   ): Promise<string | undefined> => {
-    const resp = await client.send(
-      new ssm.GetParameterCommand({
-        Name: parameterName,
-        WithDecryption: secure,
-      }),
-    );
-    if (resp.Parameter) {
-      return resp.Parameter.Value;
+    try {
+      const resp = await client.send(
+        new ssm.GetParameterCommand({
+          Name: parameterName,
+          WithDecryption: secure,
+        }),
+      );
+      if (resp.Parameter) {
+        return resp.Parameter.Value;
+      }
+      return undefined;
+    } catch (error) {
+      if (error instanceof Error && error.name === 'ParameterNotFound') {
+        throw new ParameterNotFoundError(parameterName);
+      }
+      throw error;
     }
-    return undefined;
   };
 
   return {

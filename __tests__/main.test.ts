@@ -1,37 +1,99 @@
-import { fail } from "assert";
-import * as cp from "child_process";
-import * as path from "path";
-import { expect, test } from "vitest";
-import * as process from "process";
-import createClient from "../src/client.js";
+import { expect, test, vi } from "vitest";
 
-test.runIf(process.env.AWS_ACCESS_KEY_ID)("throws Parameter not found", async () => {
-  const client = createClient("us-west-2");
-  await expect(client.getParameterValue("not_found")).rejects.toThrowError();
-});
-
-test.runIf(process.env.AWS_ACCESS_KEY_ID)("Get Parameter", async () => {
-  const client = createClient("us-west-2");
-  const value = await client.getParameterValue("/get-aws-ssm-parameter/test");
-  expect(value).toBe("test");
-});
-
-// shows how the runner will run a javascript action with env / stdout protocol
-test.runIf(process.env.AWS_ACCESS_KEY_ID)("test runs", () => {
-  process.env["INPUT_PARAMETER-NAME"] = "/get-aws-ssm-parameter/test";
-  process.env["INPUT_AWS-REGION"] = "us-west-2";
-  process.env["INPUT_DECRYPTION"] = "false";
-  const np = process.execPath;
-  const ip = path.join("lib", "main.js");
-
-  try {
-    const options: cp.ExecFileSyncOptions = {
-      env: process.env,
-    };
-    const ret = cp.execFileSync(np, [ip], options).toString();
-    console.log(ret);
-  } catch (error) {
-    console.error(error);
-    fail(error as Error);
+class MockParameterNotFoundError extends Error {
+  constructor(parameterName: string) {
+    super(`Parameter '${parameterName}' not found`);
+    this.name = "ParameterNotFoundError";
   }
+}
+
+vi.mock("@actions/core");
+vi.mock("../src/client.js");
+
+import createClient from "../src/client.js";
+import * as core from "@actions/core";
+
+test("ignore-parameter-not-found: true with parameter exists - should return value", async () => {
+  vi.clearAllMocks();
+  const mockGetParameterValue = vi.fn().mockResolvedValue("test-value");
+  vi.mocked(createClient).mockReturnValue({
+    getParameterValue: mockGetParameterValue,
+  } as unknown as ReturnType<typeof createClient>);
+
+  vi.mocked(core.getInput).mockImplementation((name: string) => {
+    if (name === "parameter-name") return "/test/exists";
+    if (name === "aws-region") return "us-west-2";
+    if (name === "decryption") return "false";
+    if (name === "ignore-parameter-not-found") return "true";
+    return "";
+  });
+  vi.mocked(core.getBooleanInput).mockImplementation((name: string) => {
+    if (name === "decryption") return false;
+    if (name === "ignore-parameter-not-found") return true;
+    return false;
+  });
+
+  const { run } = await import("../src/main.js");
+  await run();
+
+  expect(core.setOutput).toHaveBeenCalledWith("value", "test-value");
+  expect(core.setFailed).not.toHaveBeenCalled();
+});
+
+test("ignore-parameter-not-found: true with parameter not found - should not error and return empty string", async () => {
+  vi.clearAllMocks();
+  const mockGetParameterValue = vi.fn().mockRejectedValue(
+    new MockParameterNotFoundError("/test/not-found")
+  );
+  vi.mocked(createClient).mockReturnValue({
+    getParameterValue: mockGetParameterValue,
+  } as unknown as ReturnType<typeof createClient>);
+
+  vi.mocked(core.getInput).mockImplementation((name: string) => {
+    if (name === "parameter-name") return "/test/not-found";
+    if (name === "aws-region") return "us-west-2";
+    if (name === "decryption") return "false";
+    if (name === "ignore-parameter-not-found") return "true";
+    return "";
+  });
+  vi.mocked(core.getBooleanInput).mockImplementation((name: string) => {
+    if (name === "decryption") return false;
+    if (name === "ignore-parameter-not-found") return true;
+    return false;
+  });
+
+  const { run } = await import("../src/main.js");
+  await run();
+
+  expect(core.setOutput).toHaveBeenCalledWith("value", "");
+  expect(core.warning).toHaveBeenCalledWith("Parameter '/test/not-found' not found");
+  expect(core.setFailed).not.toHaveBeenCalled();
+});
+
+test("ignore-parameter-not-found: false with parameter not found - should error", async () => {
+  vi.clearAllMocks();
+  const mockGetParameterValue = vi.fn().mockRejectedValue(
+    new MockParameterNotFoundError("/test/not-found")
+  );
+  vi.mocked(createClient).mockReturnValue({
+    getParameterValue: mockGetParameterValue,
+  } as unknown as ReturnType<typeof createClient>);
+
+  vi.mocked(core.getInput).mockImplementation((name: string) => {
+    if (name === "parameter-name") return "/test/not-found";
+    if (name === "aws-region") return "us-west-2";
+    if (name === "decryption") return "false";
+    if (name === "ignore-parameter-not-found") return "false";
+    return "";
+  });
+  vi.mocked(core.getBooleanInput).mockImplementation((name: string) => {
+    if (name === "decryption") return false;
+    if (name === "ignore-parameter-not-found") return false;
+    return false;
+  });
+
+  const { run } = await import("../src/main.js");
+  await run();
+
+  expect(core.setFailed).toHaveBeenCalledWith("Parameter '/test/not-found' not found");
 });

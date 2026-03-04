@@ -1,19 +1,17 @@
-// @ts-check
-
 import { defineConfig } from 'eslint/config';
 import eslint from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import { parser, configs } from 'typescript-eslint';
-// @ts-ignore
 import importPlugin from 'eslint-plugin-import';
 
+// @ts-expect-error ignore type errors
 import pluginPromise from 'eslint-plugin-promise'
 
 export default defineConfig(
   {
     ignores: [
       '**/*.d.ts',
-      '*.{js,jsx}',
+      '**/*.js',
       'src/tsconfig.json',
       'src/stories',
       '**/*.css',

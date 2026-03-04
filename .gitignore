@@ -98,4 +98,5 @@ lib/**/*
 node_modules
 .swc
 
-!eslint.config.js
+eslint.config.js
+eslint.config.d.ts

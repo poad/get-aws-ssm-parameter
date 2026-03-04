@@ -12,6 +12,11 @@ inputs:
     required: true
     type: boolean
     description: 'Value specified for WithDecryption. Detail: https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetParameter.html#systemsmanager-GetParameter-request-WithDecryption'
+  ignore-parameter-not-found:
+    required: false
+    type: boolean
+    default: false
+    description: 'If true, the action will not fail when the specified parameter does not exist'
 runs:
   using: 'node24'
   main: 'dist/index.js'

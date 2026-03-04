@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: 'Get value from Parameter Store'
       id: parameter
-      uses: poad/get-aws-ssm-parameter@v3.0.1
+      uses: poad/get-aws-ssm-parameter@v3.1.0
       with: 
         parameter-name: /example/parameter
         aws-region: us-west-2
@@ -23,9 +23,41 @@ jobs:
       run: echo ${{ steps.parameter.outputs.value }}
 ```
 
+### Ignoring parameter not found error
+
+When `ignore-parameter-not-found` is set to `true`, the action will not fail even if the specified parameter does not exist. The output `value` will be an empty string.
+
+```yaml
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Get value from Parameter Store (may not exist)'
+      id: parameter
+      uses: poad/get-aws-ssm-parameter@v3.1.0
+      with: 
+        parameter-name: /example/optional-parameter
+        aws-region: us-west-2
+        decryption: false
+        ignore-parameter-not-found: true
+  
+    - name: 'Check if parameter exists'
+      run: |
+        if [ -n "${{ steps.parameter.outputs.value }}" ]; then
+          echo "Parameter exists: ${{ steps.parameter.outputs.value }}"
+        else
+          echo "Parameter does not exist"
+        fi
+```
+
 ## Additional Arguments
 
-See [action.yml](action.yml) for more details.
+| Name | Required | Default | Description |
+| ---- | -------- | ------- | ----------- |
+| `parameter-name` | true | - | Parameter name |
+| `aws-region` | true | - | AWS region |
+| `decryption` | true | false | Value specified for WithDecryption |
+| `ignore-parameter-not-found` | false | false | If true, the action will not fail when the specified parameter does not exist |
 
 ## Outputs
 

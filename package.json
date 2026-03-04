@@ -1,6 +1,6 @@
 {
   "name": "get-aws-ssm-parameter",
-  "version": "0.0.1",
+  "version": "3.1.0",
   "private": true,
   "description": "Get AWS SSM Parameter action",
   "type": "module",
@@ -8,8 +8,8 @@
   "scripts": {
     "build": "swc --delete-dir-on-start --extensions .ts src -d lib --strip-leading-paths",
     "clean": "rm -rf dist lib",
-    "lint": "eslint 'src/**/*.ts'",
-    "lint-fix": "eslint 'src/**/*.ts' --fix",
+    "lint": "eslint",
+    "lint-fix": "eslint --fix",
     "package": "ncc build --license licenses.txt -m -q --target es2023",
     "test": "vitest run"
   },
@@ -41,6 +41,7 @@
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-promise": "^7.2.1",
+    "jiti": "^2.6.1",
     "js-yaml": "^4.1.1",
     "pnpm": "^10.30.3",
     "regenerator-runtime": "^0.14.1",
