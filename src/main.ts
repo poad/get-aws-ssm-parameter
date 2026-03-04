@@ -49,10 +49,27 @@ const run = async (): Promise<void> => {
     const decryption = core.getBooleanInput('decryption');
     core.debug(`decryption is ${decryption} `);
 
+    // パラメータが見つからないエラーを無視するフラグを取得
+    const ignoreParameterNotFound = core.getBooleanInput('ignore-parameter-not-found');
+    core.debug(`ignore-parameter-not-found is ${ignoreParameterNotFound} `);
+
     // SSM クライアントを作成してパラメータ値を取得
     const client = createClient(region);
-    const value = await client.getParameterValue(parameterName, decryption);
-    core.setOutput('value', value);
+    try {
+      const value = await client.getParameterValue(parameterName, decryption);
+      core.setOutput('value', value ?? '');
+    } catch (error) {
+      if (
+        ignoreParameterNotFound &&
+        error instanceof Error &&
+        error.name === 'ParameterNotFoundError'
+      ) {
+        core.warning(error.message);
+        core.setOutput('value', '');
+        return;
+      }
+      throw error;
+    }
   } catch (error) {
     console.error(error);
     if (error instanceof Error) core.setFailed(error.message);
@@ -62,3 +79,5 @@ const run = async (): Promise<void> => {
 run().catch((error) => {
   if (error instanceof Error) core.setFailed(error.message);
 });
+
+export { run };

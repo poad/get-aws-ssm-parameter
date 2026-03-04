@@ -99,3 +99,40 @@ jobs:
 
     - name: verify value with decryption
       run: if [ ${{ steps.test-with-decryption.outputs.value }} != 'test-with-decryption' ]; then exit 1; fi
+
+    - name: Run E2E test with ignore-parameter-not-found (parameter exists)
+      id: test-ignore-exists
+      uses: ./
+      with:
+        parameter-name: /get-aws-ssm-parameter/test
+        aws-region: ${{ matrix.region }}
+        decryption: false
+        ignore-parameter-not-found: true
+
+    - name: verify value with ignore-parameter-not-found (exists)
+      run: if [ ${{ steps.test-ignore-exists.outputs.value }} != 'test' ]; then exit 1; fi
+
+    - name: Run E2E test with ignore-parameter-not-found (parameter not found)
+      id: test-ignore-not-found
+      uses: ./
+      with:
+        parameter-name: /get-aws-ssm-parameter/non-existent-param
+        aws-region: ${{ matrix.region }}
+        decryption: false
+        ignore-parameter-not-found: true
+
+    - name: verify value with ignore-parameter-not-found (not found)
+      run: if [ ${{ steps.test-ignore-not-found.outputs.value }} != '' ]; then exit 1; fi
+
+    - name: Run E2E test without ignore-parameter-not-found (parameter not found - should fail)
+      id: test-no-ignore-not-found
+      continue-on-error: true
+      uses: ./
+      with:
+        parameter-name: /get-aws-ssm-parameter/non-existent-param
+        aws-region: ${{ matrix.region }}
+        decryption: false
+        ignore-parameter-not-found: false
+
+    - name: verify failure (without ignore-parameter-not-found)
+      run: if [ ${{ steps.test-no-ignore-not-found.outcome }} != 'failure' ]; then exit 1; fi
