@@ -1,0 +1,9 @@
+fail_fast: true
+
+repos:
+-   repo: local
+    hooks:
+    - id: re-build
+      name: run re-build
+      entry: rm -rf dist && pnpm all && git add dist
+      language: system
