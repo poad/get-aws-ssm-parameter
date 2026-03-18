@@ -13,12 +13,12 @@ const middleware_logger_1 = __webpack_require__(6626);
 const middleware_recursion_detection_1 = __webpack_require__(1788);
 const middleware_user_agent_1 = __webpack_require__(5307);
 const config_resolver_1 = __webpack_require__(5579);
-const core_1 = __webpack_require__(6577);
-const schema_1 = __webpack_require__(8797);
+const core_1 = __webpack_require__(4918);
+const schema_1 = __webpack_require__(2566);
 const middleware_content_length_1 = __webpack_require__(5700);
-const middleware_endpoint_1 = __webpack_require__(1540);
-const middleware_retry_1 = __webpack_require__(5063);
-const smithy_client_1 = __webpack_require__(4301);
+const middleware_endpoint_1 = __webpack_require__(4469);
+const middleware_retry_1 = __webpack_require__(3838);
+const smithy_client_1 = __webpack_require__(3108);
 Object.defineProperty(exports, "__Client", ({ enumerable: true, get: function () { return smithy_client_1.Client; } }));
 const httpAuthSchemeProvider_1 = __webpack_require__(4739);
 const EndpointParameters_1 = __webpack_require__(4611);
@@ -391,8 +391,8 @@ exports.ruleSet = _data;
 
 
 var STSClient = __webpack_require__(1667);
-var smithyClient = __webpack_require__(4301);
-var middlewareEndpoint = __webpack_require__(1540);
+var smithyClient = __webpack_require__(3108);
+var middlewareEndpoint = __webpack_require__(4469);
 var EndpointParameters = __webpack_require__(4611);
 var schemas_0 = __webpack_require__(2188);
 var errors = __webpack_require__(5312);
@@ -600,7 +600,7 @@ Object.keys(errors).forEach(function (k) {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.STSServiceException = exports.__ServiceException = void 0;
-const smithy_client_1 = __webpack_require__(4301);
+const smithy_client_1 = __webpack_require__(3108);
 Object.defineProperty(exports, "__ServiceException", ({ enumerable: true, get: function () { return smithy_client_1.ServiceException; } }));
 class STSServiceException extends smithy_client_1.ServiceException {
     constructor(options) {
@@ -726,14 +726,14 @@ const package_json_1 = tslib_1.__importDefault(__webpack_require__(54));
 const core_1 = __webpack_require__(5811);
 const util_user_agent_node_1 = __webpack_require__(1210);
 const config_resolver_1 = __webpack_require__(5579);
-const core_2 = __webpack_require__(6577);
+const core_2 = __webpack_require__(4918);
 const hash_node_1 = __webpack_require__(8300);
-const middleware_retry_1 = __webpack_require__(5063);
+const middleware_retry_1 = __webpack_require__(3838);
 const node_config_provider_1 = __webpack_require__(1125);
-const node_http_handler_1 = __webpack_require__(7566);
-const smithy_client_1 = __webpack_require__(4301);
+const node_http_handler_1 = __webpack_require__(5422);
+const smithy_client_1 = __webpack_require__(3108);
 const util_body_length_node_1 = __webpack_require__(6000);
-const util_defaults_mode_node_1 = __webpack_require__(395);
+const util_defaults_mode_node_1 = __webpack_require__(8124);
 const util_retry_1 = __webpack_require__(2346);
 const runtimeConfig_shared_1 = __webpack_require__(6851);
 const getRuntimeConfig = (config) => {
@@ -797,8 +797,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const core_1 = __webpack_require__(5811);
 const protocols_1 = __webpack_require__(3173);
-const core_2 = __webpack_require__(6577);
-const smithy_client_1 = __webpack_require__(4301);
+const core_2 = __webpack_require__(4918);
+const smithy_client_1 = __webpack_require__(3108);
 const url_parser_1 = __webpack_require__(4418);
 const util_base64_1 = __webpack_require__(3158);
 const util_utf8_1 = __webpack_require__(8165);
@@ -854,7 +854,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveRuntimeExtensions = void 0;
 const region_config_resolver_1 = __webpack_require__(3766);
 const protocol_http_1 = __webpack_require__(9228);
-const smithy_client_1 = __webpack_require__(4301);
+const smithy_client_1 = __webpack_require__(3108);
 const httpAuthExtensionConfiguration_1 = __webpack_require__(7644);
 const resolveRuntimeExtensions = (runtimeConfig, extensions) => {
     const extensionConfiguration = Object.assign((0, region_config_resolver_1.getAwsRegionExtensionConfiguration)(runtimeConfig), (0, smithy_client_1.getDefaultExtensionConfiguration)(runtimeConfig), (0, protocol_http_1.getHttpHandlerExtensionConfiguration)(runtimeConfig), (0, httpAuthExtensionConfiguration_1.getHttpAuthExtensionConfiguration)(runtimeConfig));
@@ -931,7 +931,7 @@ const _pDLT = "policyDescriptorListType";
 const _s = "smithy.ts.sdk.synthetic.com.amazonaws.sts";
 const _tLT = "tagListType";
 const n0 = "com.amazonaws.sts";
-const schema_1 = __webpack_require__(8797);
+const schema_1 = __webpack_require__(2566);
 const errors_1 = __webpack_require__(5312);
 const STSServiceException_1 = __webpack_require__(7816);
 const _s_registry = schema_1.TypeRegistry.for(_s);
