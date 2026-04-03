@@ -2,18 +2,18 @@ packages:
   - .
   - __tests__/cdk
 
-autoInstallPeers: true
-
-enablePrePostScripts: true
-
-legacyPeerDeps: true
-
-minimumReleaseAge: 1440
+minimumReleaseAge: 10080 # 7 days in minutes
+minimumReleaseAgeExclude:
+  - lodash@4.18.1
+  - lodash-es@4.18.1
 
 overrides:
-  brace-expansion@<1.1.13: '>=1.1.13'
-  brace-expansion@>=2.0.0 <2.0.3: '>=2.0.3'
-  fast-xml-parser@>=4.0.0-beta.3 <=5.5.6: '>=5.5.7'
+  chokidar: '>=5'
+  eslint-import-resolver-typescript: '>=4'
   file-type@>=13.0.0 <21.3.1: '>=21.3.1'
+  file-type@>=20.0.0 <=21.3.1: '>=21.3.2'
+  lodash@<=4.17.23: '>=4.18.0'
+  lodash@>=4.0.0 <=4.17.23: '>=4.18.0'
+  semver: '>=7'
 
-strictPeerDependencies: false
+trustPolicy: no-downgrade

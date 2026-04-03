@@ -1,16 +1,12 @@
-/// <reference types="vitest" />
 import { defineConfig } from 'vitest/config';
-import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [
-    tsconfigPaths({
-      projects: ['tsconfig-test.json']
-    })
-  ],
+  resolve: {
+    tsconfigPaths: true,
+  },
   test: {
     coverage: {
-      reporter: ['json', 'html', 'cobertura']
-    }
+      reporter: ['json', 'html', 'cobertura'],
+    },
   },
 });

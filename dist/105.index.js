@@ -67,7 +67,7 @@ const node_http_handler_1 = __webpack_require__(5422);
 const property_provider_1 = __webpack_require__(4036);
 const promises_1 = tslib_1.__importDefault(__webpack_require__(1455));
 const checkUrl_1 = __webpack_require__(577);
-const requestHelpers_1 = __webpack_require__(974);
+const requestHelpers_1 = __webpack_require__(8593);
 const retry_wrapper_1 = __webpack_require__(4582);
 const AWS_CONTAINER_CREDENTIALS_RELATIVE_URI = "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI";
 const DEFAULT_LINK_LOCAL_HOST = "http://169.254.170.2";
@@ -132,7 +132,7 @@ exports.fromHttp = fromHttp;
 
 /***/ }),
 
-/***/ 974:
+/***/ 8593:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 

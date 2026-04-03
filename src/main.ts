@@ -12,8 +12,8 @@
  *   aws-region: 'us-east-1'
  *   decryption: true
  */
-import * as core from '@actions/core';
 import createClient from './client.js';
+import * as core from '@actions/core';
 
 /**
  * アクションのメインロジックを実行します。

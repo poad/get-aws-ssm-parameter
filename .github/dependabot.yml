@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: daily
     cooldown:
-      default-days: 3
+      default-days: 7
     groups:
       actions:
         patterns:
@@ -18,7 +18,7 @@ updates:
     schedule:
       interval: daily
     cooldown:
-      default-days: 3
+      default-days: 7
       exclude:
         - 'pnpm'
     groups:
