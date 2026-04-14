@@ -8,7 +8,7 @@ export const modules = {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.checkUrl = void 0;
-const property_provider_1 = __webpack_require__(4036);
+const property_provider_1 = __webpack_require__(8991);
 const LOOPBACK_CIDR_IPv4 = "127.0.0.0/8";
 const LOOPBACK_CIDR_IPv6 = "::1/128";
 const ECS_CONTAINER_HOST = "169.254.170.2";
@@ -63,8 +63,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromHttp = void 0;
 const tslib_1 = __webpack_require__(7892);
 const client_1 = __webpack_require__(2497);
-const node_http_handler_1 = __webpack_require__(4893);
-const property_provider_1 = __webpack_require__(4036);
+const node_http_handler_1 = __webpack_require__(3516);
+const property_provider_1 = __webpack_require__(8991);
 const promises_1 = tslib_1.__importDefault(__webpack_require__(1455));
 const checkUrl_1 = __webpack_require__(6892);
 const requestHelpers_1 = __webpack_require__(3715);
@@ -139,10 +139,10 @@ exports.fromHttp = fromHttp;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createGetRequest = createGetRequest;
 exports.getCredentials = getCredentials;
-const property_provider_1 = __webpack_require__(4036);
-const protocol_http_1 = __webpack_require__(9228);
-const smithy_client_1 = __webpack_require__(4998);
-const util_stream_1 = __webpack_require__(2013);
+const property_provider_1 = __webpack_require__(8991);
+const protocol_http_1 = __webpack_require__(839);
+const smithy_client_1 = __webpack_require__(7841);
+const util_stream_1 = __webpack_require__(6120);
 function createGetRequest(url) {
     return new protocol_http_1.HttpRequest({
         protocol: url.protocol,

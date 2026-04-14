@@ -8,8 +8,8 @@ export const modules = {
 var __webpack_unused_export__;
 
 
-var propertyProvider = __webpack_require__(4036);
-var sharedIniFileLoader = __webpack_require__(7016);
+var propertyProvider = __webpack_require__(8991);
+var sharedIniFileLoader = __webpack_require__(3083);
 var client = __webpack_require__(2497);
 var tokenProviders = __webpack_require__(5290);
 
@@ -224,7 +224,7 @@ exports.SSOClient = sso.SSOClient;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.resolveHttpAuthSchemeConfig = exports.defaultSSOHttpAuthSchemeProvider = exports.defaultSSOHttpAuthSchemeParametersProvider = void 0;
 const httpAuthSchemes_1 = __webpack_require__(5748);
-const util_middleware_1 = __webpack_require__(5496);
+const util_middleware_1 = __webpack_require__(5723);
 const defaultSSOHttpAuthSchemeParametersProvider = async (config, context, input) => {
     return {
         operation: (0, util_middleware_1.getSmithyContext)(context).operation,
@@ -287,7 +287,7 @@ exports.resolveHttpAuthSchemeConfig = resolveHttpAuthSchemeConfig;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __webpack_require__(3237);
-const util_endpoints_2 = __webpack_require__(9356);
+const util_endpoints_2 = __webpack_require__(6771);
 const ruleset_1 = __webpack_require__(1803);
 const cache = new util_endpoints_2.EndpointCache({
     size: 50,
@@ -427,17 +427,17 @@ var middlewareHostHeader = __webpack_require__(4736);
 var middlewareLogger = __webpack_require__(6626);
 var middlewareRecursionDetection = __webpack_require__(2575);
 var middlewareUserAgent = __webpack_require__(6386);
-var configResolver = __webpack_require__(6477);
-var core = __webpack_require__(7271);
-var schema = __webpack_require__(6483);
-var middlewareContentLength = __webpack_require__(5700);
-var middlewareEndpoint = __webpack_require__(3691);
-var middlewareRetry = __webpack_require__(4355);
-var smithyClient = __webpack_require__(4998);
+var configResolver = __webpack_require__(9320);
+var core = __webpack_require__(8764);
+var schema = __webpack_require__(6324);
+var middlewareContentLength = __webpack_require__(4291);
+var middlewareEndpoint = __webpack_require__(8848);
+var middlewareRetry = __webpack_require__(390);
+var smithyClient = __webpack_require__(7841);
 var httpAuthSchemeProvider = __webpack_require__(3484);
 var runtimeConfig = __webpack_require__(1525);
 var regionConfigResolver = __webpack_require__(2585);
-var protocolHttp = __webpack_require__(9228);
+var protocolHttp = __webpack_require__(839);
 var schemas_0 = __webpack_require__(4119);
 var errors = __webpack_require__(1395);
 var SSOServiceException = __webpack_require__(4985);
@@ -591,7 +591,7 @@ Object.keys(errors).forEach(function (k) {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SSOServiceException = exports.__ServiceException = void 0;
-const smithy_client_1 = __webpack_require__(4998);
+const smithy_client_1 = __webpack_require__(7841);
 Object.defineProperty(exports, "__ServiceException", ({ enumerable: true, get: function () { return smithy_client_1.ServiceException; } }));
 class SSOServiceException extends smithy_client_1.ServiceException {
     constructor(options) {
@@ -678,15 +678,15 @@ const package_json_1 = tslib_1.__importDefault(__webpack_require__(6270));
 const client_1 = __webpack_require__(2497);
 const httpAuthSchemes_1 = __webpack_require__(5748);
 const util_user_agent_node_1 = __webpack_require__(1164);
-const config_resolver_1 = __webpack_require__(6477);
-const hash_node_1 = __webpack_require__(8300);
-const middleware_retry_1 = __webpack_require__(4355);
-const node_config_provider_1 = __webpack_require__(1125);
-const node_http_handler_1 = __webpack_require__(4893);
-const smithy_client_1 = __webpack_require__(4998);
+const config_resolver_1 = __webpack_require__(9320);
+const hash_node_1 = __webpack_require__(51);
+const middleware_retry_1 = __webpack_require__(390);
+const node_config_provider_1 = __webpack_require__(6636);
+const node_http_handler_1 = __webpack_require__(3516);
+const smithy_client_1 = __webpack_require__(7841);
 const util_body_length_node_1 = __webpack_require__(6000);
-const util_defaults_mode_node_1 = __webpack_require__(527);
-const util_retry_1 = __webpack_require__(6923);
+const util_defaults_mode_node_1 = __webpack_require__(7456);
+const util_retry_1 = __webpack_require__(600);
 const runtimeConfig_shared_1 = __webpack_require__(6506);
 const getRuntimeConfig = (config) => {
     (0, smithy_client_1.emitWarningIfUnsupportedVersion)(process.version);
@@ -736,9 +736,9 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.getRuntimeConfig = void 0;
 const httpAuthSchemes_1 = __webpack_require__(5748);
 const protocols_1 = __webpack_require__(9543);
-const core_1 = __webpack_require__(7271);
-const smithy_client_1 = __webpack_require__(4998);
-const url_parser_1 = __webpack_require__(4418);
+const core_1 = __webpack_require__(8764);
+const smithy_client_1 = __webpack_require__(7841);
+const url_parser_1 = __webpack_require__(5643);
 const util_base64_1 = __webpack_require__(3158);
 const util_utf8_1 = __webpack_require__(8165);
 const httpAuthSchemeProvider_1 = __webpack_require__(3484);
@@ -821,7 +821,7 @@ const _sAK = "secretAccessKey";
 const _sT = "sessionToken";
 const _xasbt = "x-amz-sso_bearer_token";
 const n0 = "com.amazonaws.sso";
-const schema_1 = __webpack_require__(6483);
+const schema_1 = __webpack_require__(6324);
 const errors_1 = __webpack_require__(1395);
 const SSOServiceException_1 = __webpack_require__(4985);
 const _s_registry = schema_1.TypeRegistry.for(_s);
@@ -888,8 +888,8 @@ exports.GetRoleCredentials$ = [
 
 var client = __webpack_require__(2497);
 var httpAuthSchemes = __webpack_require__(5748);
-var propertyProvider = __webpack_require__(4036);
-var sharedIniFileLoader = __webpack_require__(7016);
+var propertyProvider = __webpack_require__(8991);
+var sharedIniFileLoader = __webpack_require__(3083);
 var node_fs = __webpack_require__(3024);
 
 const fromEnvSigningName = ({ logger, signingName } = {}) => async () => {
