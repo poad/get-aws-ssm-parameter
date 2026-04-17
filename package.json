@@ -27,7 +27,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^3.0.0",
-    "@aws-sdk/client-ssm": "^3.1027.0",
+    "@aws-sdk/client-ssm": "^3.1028.0",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
@@ -37,7 +37,7 @@
     "@swc/cli": "^0.8.1",
     "@swc/core": "^1.15.24",
     "@swc/helpers": "^0.5.21",
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "@vercel/ncc": "^0.38.4",
     "eslint": "^10.2.0",
     "eslint-import-resolver-typescript": "^4.4.4",
