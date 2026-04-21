@@ -12,7 +12,7 @@ const middleware_host_header_1 = __webpack_require__(1783);
 const middleware_logger_1 = __webpack_require__(991);
 const middleware_recursion_detection_1 = __webpack_require__(1257);
 const middleware_user_agent_1 = __webpack_require__(7619);
-const config_resolver_1 = __webpack_require__(9320);
+const config_resolver_1 = __webpack_require__(6167);
 const core_1 = __webpack_require__(8764);
 const schema_1 = __webpack_require__(6324);
 const middleware_content_length_1 = __webpack_require__(4291);
@@ -215,7 +215,7 @@ exports.commonParams = {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultEndpointResolver = void 0;
 const util_endpoints_1 = __webpack_require__(4812);
-const util_endpoints_2 = __webpack_require__(6771);
+const util_endpoints_2 = __webpack_require__(5540);
 const ruleset_1 = __webpack_require__(9201);
 const cache = new util_endpoints_2.EndpointCache({
     size: 50,
@@ -726,7 +726,7 @@ const package_json_1 = tslib_1.__importDefault(__webpack_require__(3363));
 const client_1 = __webpack_require__(9418);
 const httpAuthSchemes_1 = __webpack_require__(3989);
 const util_user_agent_node_1 = __webpack_require__(1927);
-const config_resolver_1 = __webpack_require__(9320);
+const config_resolver_1 = __webpack_require__(6167);
 const core_1 = __webpack_require__(8764);
 const hash_node_1 = __webpack_require__(51);
 const middleware_retry_1 = __webpack_require__(9215);
@@ -734,7 +734,7 @@ const node_config_provider_1 = __webpack_require__(6636);
 const node_http_handler_1 = __webpack_require__(3516);
 const smithy_client_1 = __webpack_require__(7841);
 const util_body_length_node_1 = __webpack_require__(6000);
-const util_defaults_mode_node_1 = __webpack_require__(7456);
+const util_defaults_mode_node_1 = __webpack_require__(9646);
 const util_retry_1 = __webpack_require__(4505);
 const runtimeConfig_shared_1 = __webpack_require__(5984);
 const getRuntimeConfig = (config) => {
