@@ -5,8 +5,7 @@ CUR=$(pwd)
 CURRENT=$(cd "$(dirname "$0")" || exit;pwd)
 echo "${CURRENT}"
 
-result=$(cd "${CURRENT}" || exit)
-if [ "$result" -ne 0 ]; then
+if ! (cd "${CURRENT}" || exit); then
   cd "${CUR}" || exit
   exit "$result"
 fi
