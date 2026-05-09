@@ -11,9 +11,13 @@ blockExoticSubdeps: true
 
 minimumReleaseAge: 10080 # 7 days in minutes
 
+minimumReleaseAgeExclude:
+  - fast-xml-builder@1.1.7
+
 overrides:
   chokidar: '>=5'
   eslint-import-resolver-typescript: '^4.4.4'
+  fast-xml-builder@<=1.1.6: ^1.1.7
   semver: '>=7'
 
 trustPolicy: no-downgrade
