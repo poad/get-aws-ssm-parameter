@@ -8,7 +8,7 @@ export const modules = {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.checkUrl = void 0;
-const property_provider_1 = __webpack_require__(7930);
+const property_provider_1 = __webpack_require__(4717);
 const LOOPBACK_CIDR_IPv4 = "127.0.0.0/8";
 const LOOPBACK_CIDR_IPv6 = "::1/128";
 const ECS_CONTAINER_HOST = "169.254.170.2";
@@ -63,8 +63,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromHttp = void 0;
 const tslib_1 = __webpack_require__(7892);
 const client_1 = __webpack_require__(7838);
-const node_http_handler_1 = __webpack_require__(6144);
-const property_provider_1 = __webpack_require__(7930);
+const node_http_handler_1 = __webpack_require__(6763);
+const property_provider_1 = __webpack_require__(4717);
 const promises_1 = tslib_1.__importDefault(__webpack_require__(1455));
 const checkUrl_1 = __webpack_require__(7837);
 const requestHelpers_1 = __webpack_require__(3178);
@@ -139,10 +139,10 @@ exports.fromHttp = fromHttp;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createGetRequest = createGetRequest;
 exports.getCredentials = getCredentials;
-const property_provider_1 = __webpack_require__(7930);
-const protocol_http_1 = __webpack_require__(9526);
-const smithy_client_1 = __webpack_require__(3684);
-const util_stream_1 = __webpack_require__(3353);
+const property_provider_1 = __webpack_require__(4717);
+const protocol_http_1 = __webpack_require__(3643);
+const smithy_client_1 = __webpack_require__(4074);
+const util_stream_1 = __webpack_require__(3578);
 function createGetRequest(url) {
     return new protocol_http_1.HttpRequest({
         protocol: url.protocol,
@@ -225,6 +225,27 @@ __webpack_unused_export__ = ({ value: true });
 exports.fromHttp = void 0;
 var fromHttp_1 = __webpack_require__(4592);
 Object.defineProperty(exports, "fromHttp", ({ enumerable: true, get: function () { return fromHttp_1.fromHttp; } }));
+
+
+/***/ }),
+
+/***/ 3578:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.isBlob = exports.isReadableStream = exports.splitStream = exports.sdkStreamMixin = exports.headStream = exports.getAwsChunkedEncodingStream = exports.createBufferedReadable = exports.createChecksumStream = exports.ChecksumStream = exports.Uint8ArrayBlobAdapter = void 0;
+var serde_1 = __webpack_require__(4053);
+Object.defineProperty(exports, "Uint8ArrayBlobAdapter", ({ enumerable: true, get: function () { return serde_1.Uint8ArrayBlobAdapter; } }));
+Object.defineProperty(exports, "ChecksumStream", ({ enumerable: true, get: function () { return serde_1.ChecksumStream; } }));
+Object.defineProperty(exports, "createChecksumStream", ({ enumerable: true, get: function () { return serde_1.createChecksumStream; } }));
+Object.defineProperty(exports, "createBufferedReadable", ({ enumerable: true, get: function () { return serde_1.createBufferedReadable; } }));
+Object.defineProperty(exports, "getAwsChunkedEncodingStream", ({ enumerable: true, get: function () { return serde_1.getAwsChunkedEncodingStream; } }));
+Object.defineProperty(exports, "headStream", ({ enumerable: true, get: function () { return serde_1.headStream; } }));
+Object.defineProperty(exports, "sdkStreamMixin", ({ enumerable: true, get: function () { return serde_1.sdkStreamMixin; } }));
+Object.defineProperty(exports, "splitStream", ({ enumerable: true, get: function () { return serde_1.splitStream; } }));
+Object.defineProperty(exports, "isReadableStream", ({ enumerable: true, get: function () { return serde_1.isReadableStream; } }));
+Object.defineProperty(exports, "isBlob", ({ enumerable: true, get: function () { return serde_1.isBlob; } }));
 
 
 /***/ })

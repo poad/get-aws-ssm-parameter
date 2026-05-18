@@ -7,8 +7,8 @@ export const modules = {
 
 
 
-var sharedIniFileLoader = __webpack_require__(9498);
-var propertyProvider = __webpack_require__(7930);
+var sharedIniFileLoader = __webpack_require__(263);
+var propertyProvider = __webpack_require__(4717);
 var client = __webpack_require__(7838);
 var credentialProviderLogin = __webpack_require__(7751);
 
@@ -16,13 +16,13 @@ const resolveCredentialSource = (credentialSource, profileName, logger) => {
     const sourceProvidersMap = {
         EcsContainer: async (options) => {
             const { fromHttp } = await __webpack_require__.e(/* import() */ 277).then(__webpack_require__.bind(__webpack_require__, 8277));
-            const { fromContainerMetadata } = await __webpack_require__.e(/* import() */ 480).then(__webpack_require__.t.bind(__webpack_require__, 9480, 19));
+            const { fromContainerMetadata } = await __webpack_require__.e(/* import() */ 385).then(__webpack_require__.t.bind(__webpack_require__, 8385, 19));
             logger?.debug("@aws-sdk/credential-provider-ini - credential_source is EcsContainer");
             return async () => propertyProvider.chain(fromHttp(options ?? {}), fromContainerMetadata(options))().then(setNamedProvider);
         },
         Ec2InstanceMetadata: async (options) => {
             logger?.debug("@aws-sdk/credential-provider-ini - credential_source is Ec2InstanceMetadata");
-            const { fromInstanceMetadata } = await __webpack_require__.e(/* import() */ 480).then(__webpack_require__.t.bind(__webpack_require__, 9480, 19));
+            const { fromInstanceMetadata } = await __webpack_require__.e(/* import() */ 385).then(__webpack_require__.t.bind(__webpack_require__, 8385, 19));
             return async () => fromInstanceMetadata(options)().then(setNamedProvider);
         },
         Environment: async (options) => {
@@ -239,9 +239,9 @@ exports.fromIni = fromIni;
 
 
 var client = __webpack_require__(7838);
-var propertyProvider = __webpack_require__(7930);
-var sharedIniFileLoader = __webpack_require__(9498);
-var protocolHttp = __webpack_require__(9526);
+var propertyProvider = __webpack_require__(4717);
+var sharedIniFileLoader = __webpack_require__(263);
+var protocolHttp = __webpack_require__(3643);
 var node_crypto = __webpack_require__(7598);
 var node_fs = __webpack_require__(3024);
 var node_os = __webpack_require__(8161);
