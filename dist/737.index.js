@@ -193,7 +193,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.uint32ArrayFrom = exports.numToUint8 = exports.isEmptyData = exports.convertToBuffer = void 0;
 var convertToBuffer_1 = __webpack_require__(8267);
 Object.defineProperty(exports, "convertToBuffer", ({ enumerable: true, get: function () { return convertToBuffer_1.convertToBuffer; } }));
-var isEmptyData_1 = __webpack_require__(8978);
+var isEmptyData_1 = __webpack_require__(6597);
 Object.defineProperty(exports, "isEmptyData", ({ enumerable: true, get: function () { return isEmptyData_1.isEmptyData; } }));
 var numToUint8_1 = __webpack_require__(2732);
 Object.defineProperty(exports, "numToUint8", ({ enumerable: true, get: function () { return numToUint8_1.numToUint8; } }));
@@ -203,7 +203,7 @@ Object.defineProperty(exports, "uint32ArrayFrom", ({ enumerable: true, get: func
 
 /***/ }),
 
-/***/ 8978:
+/***/ 6597:
 /***/ ((__unused_webpack_module, exports) => {
 
 
