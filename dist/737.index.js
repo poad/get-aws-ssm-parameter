@@ -161,7 +161,7 @@ Object.defineProperty(exports, "AwsCrc32", ({ enumerable: true, get: function ()
 // SPDX-License-Identifier: Apache-2.0
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.convertToBuffer = void 0;
-var util_utf8_1 = __webpack_require__(5714);
+var util_utf8_1 = __webpack_require__(3333);
 // Quick polyfill
 var fromUtf8 = typeof Buffer !== "undefined" && Buffer.from
     ? function (input) { return Buffer.from(input, "utf8"); }
@@ -193,7 +193,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.uint32ArrayFrom = exports.numToUint8 = exports.isEmptyData = exports.convertToBuffer = void 0;
 var convertToBuffer_1 = __webpack_require__(8267);
 Object.defineProperty(exports, "convertToBuffer", ({ enumerable: true, get: function () { return convertToBuffer_1.convertToBuffer; } }));
-var isEmptyData_1 = __webpack_require__(6597);
+var isEmptyData_1 = __webpack_require__(8978);
 Object.defineProperty(exports, "isEmptyData", ({ enumerable: true, get: function () { return isEmptyData_1.isEmptyData; } }));
 var numToUint8_1 = __webpack_require__(2732);
 Object.defineProperty(exports, "numToUint8", ({ enumerable: true, get: function () { return numToUint8_1.numToUint8; } }));
@@ -203,7 +203,7 @@ Object.defineProperty(exports, "uint32ArrayFrom", ({ enumerable: true, get: func
 
 /***/ }),
 
-/***/ 6597:
+/***/ 8978:
 /***/ ((__unused_webpack_module, exports) => {
 
 
@@ -1256,7 +1256,7 @@ var fromString = /* @__PURE__ */ __name((input, encoding) => {
 
 /***/ }),
 
-/***/ 5714:
+/***/ 3333:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var __defProp = Object.defineProperty;
