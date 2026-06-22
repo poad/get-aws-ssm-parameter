@@ -17,7 +17,7 @@ fi
 echo ""
 pwd
 
-if ! (rm -rf dist && pnx -y pnpm@latest self-update && pnpm install -r && pnpm up -r && pnpm audit --fix override && pnpm up -r && pnpm lint-fix && pnpm install -r --no-frozen-lockfile && pnpm clean && pnpm build && pnpm package && git add dist); then
+if ! (rm -rf dist && pnx -y pnpm@latest self-update && pnpm clean --lockfile && pnpm install -r && pnpm up -r && pnpm audit --fix override && pnpm up -r && pnpm lint-fix && pnpm install -r --no-frozen-lockfile && pnpm clean && pnpm build && pnpm package && git add dist); then
   cd "${CUR}" || exit
   exit 1
 fi
