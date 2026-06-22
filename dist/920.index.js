@@ -7,7 +7,7 @@ export const modules = {
 
 
 
-var config = __webpack_require__(6245);
+var config = __webpack_require__(8156);
 var client = __webpack_require__(460);
 var credentialProviderLogin = __webpack_require__(9803);
 
@@ -15,13 +15,13 @@ const resolveCredentialSource = (credentialSource, profileName, logger) => {
     const sourceProvidersMap = {
         EcsContainer: async (options) => {
             const { fromHttp } = await __webpack_require__.e(/* import() */ 664).then(__webpack_require__.t.bind(__webpack_require__, 4664, 19));
-            const { fromContainerMetadata } = await __webpack_require__.e(/* import() */ 964).then(__webpack_require__.t.bind(__webpack_require__, 9964, 19));
+            const { fromContainerMetadata } = await __webpack_require__.e(/* import() */ 409).then(__webpack_require__.t.bind(__webpack_require__, 6409, 19));
             logger?.debug("@aws-sdk/credential-provider-ini - credential_source is EcsContainer");
             return async () => config.chain(fromHttp(options ?? {}), fromContainerMetadata(options))().then(setNamedProvider);
         },
         Ec2InstanceMetadata: async (options) => {
             logger?.debug("@aws-sdk/credential-provider-ini - credential_source is Ec2InstanceMetadata");
-            const { fromInstanceMetadata } = await __webpack_require__.e(/* import() */ 964).then(__webpack_require__.t.bind(__webpack_require__, 9964, 19));
+            const { fromInstanceMetadata } = await __webpack_require__.e(/* import() */ 409).then(__webpack_require__.t.bind(__webpack_require__, 6409, 19));
             return async () => fromInstanceMetadata(options)().then(setNamedProvider);
         },
         Environment: async (options) => {
@@ -238,8 +238,8 @@ exports.fromIni = fromIni;
 
 
 var client = __webpack_require__(460);
-var config = __webpack_require__(6245);
-var protocols = __webpack_require__(8760);
+var config = __webpack_require__(8156);
+var protocols = __webpack_require__(6991);
 var node_crypto = __webpack_require__(7598);
 var node_fs = __webpack_require__(3024);
 var node_os = __webpack_require__(8161);

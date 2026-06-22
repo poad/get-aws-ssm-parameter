@@ -8,7 +8,7 @@ export const modules = {
 var __webpack_unused_export__;
 
 
-var config = __webpack_require__(6245);
+var config = __webpack_require__(8156);
 var client = __webpack_require__(460);
 var tokenProviders = __webpack_require__(3905);
 
@@ -225,16 +225,16 @@ exports.SSOClient = sso.SSOClient;
 
 
 var client$1 = __webpack_require__(460);
-var core = __webpack_require__(7616);
-var client = __webpack_require__(2736);
-var config = __webpack_require__(6245);
-var endpoints = __webpack_require__(5535);
-var protocols = __webpack_require__(8760);
-var retry = __webpack_require__(3971);
-var schema = __webpack_require__(7376);
+var core = __webpack_require__(1169);
+var client = __webpack_require__(1929);
+var config = __webpack_require__(8156);
+var endpoints = __webpack_require__(4148);
+var protocols = __webpack_require__(6991);
+var retry = __webpack_require__(8256);
+var schema = __webpack_require__(5037);
 var httpAuthSchemes = __webpack_require__(6431);
-var serde = __webpack_require__(4640);
-var nodeHttpHandler = __webpack_require__(9169);
+var serde = __webpack_require__(9655);
+var nodeHttpHandler = __webpack_require__(7908);
 var protocols$1 = __webpack_require__(6772);
 
 const defaultSSOHttpAuthSchemeParametersProvider = async (config, context, input) => {
@@ -705,7 +705,7 @@ exports.errorTypeRegistries = errorTypeRegistries;
 
 var client = __webpack_require__(460);
 var httpAuthSchemes = __webpack_require__(6431);
-var config = __webpack_require__(6245);
+var config = __webpack_require__(8156);
 var node_fs = __webpack_require__(3024);
 
 const fromEnvSigningName = ({ logger, signingName } = {}) => async () => {

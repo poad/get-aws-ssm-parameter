@@ -8,7 +8,7 @@ export const modules = {
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.checkUrl = void 0;
-const config_1 = __webpack_require__(6245);
+const config_1 = __webpack_require__(8156);
 const LOOPBACK_CIDR_IPv4 = "127.0.0.0/8";
 const LOOPBACK_CIDR_IPv6 = "::1/128";
 const ECS_CONTAINER_HOST = "169.254.170.2";
@@ -63,8 +63,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromHttp = void 0;
 const tslib_1 = __webpack_require__(7892);
 const client_1 = __webpack_require__(460);
-const config_1 = __webpack_require__(6245);
-const node_http_handler_1 = __webpack_require__(9169);
+const config_1 = __webpack_require__(8156);
+const node_http_handler_1 = __webpack_require__(7908);
 const promises_1 = tslib_1.__importDefault(__webpack_require__(1455));
 const checkUrl_1 = __webpack_require__(2244);
 const requestHelpers_1 = __webpack_require__(2475);
@@ -145,10 +145,10 @@ exports.fromHttp = fromHttp;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createGetRequest = createGetRequest;
 exports.getCredentials = getCredentials;
-const config_1 = __webpack_require__(6245);
-const protocols_1 = __webpack_require__(8760);
-const serde_1 = __webpack_require__(4640);
-const serde_2 = __webpack_require__(4640);
+const config_1 = __webpack_require__(8156);
+const protocols_1 = __webpack_require__(6991);
+const serde_1 = __webpack_require__(9655);
+const serde_2 = __webpack_require__(9655);
 function createGetRequest(url) {
     return new protocols_1.HttpRequest({
         protocol: url.protocol,

@@ -9,7 +9,7 @@ export const modules = {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.fromTokenFile = void 0;
 const client_1 = __webpack_require__(460);
-const config_1 = __webpack_require__(6245);
+const config_1 = __webpack_require__(8156);
 const node_fs_1 = __webpack_require__(3024);
 const fromWebToken_1 = __webpack_require__(6728);
 const ENV_TOKEN_FILE = "AWS_WEB_IDENTITY_TOKEN_FILE";

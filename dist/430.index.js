@@ -9,17 +9,17 @@ var __webpack_unused_export__;
 
 
 var client$1 = __webpack_require__(460);
-var core = __webpack_require__(7616);
-var client = __webpack_require__(2736);
-var config = __webpack_require__(6245);
-var endpoints = __webpack_require__(5535);
-var protocols = __webpack_require__(8760);
-var retry = __webpack_require__(3971);
-var schema = __webpack_require__(7376);
+var core = __webpack_require__(1169);
+var client = __webpack_require__(1929);
+var config = __webpack_require__(8156);
+var endpoints = __webpack_require__(4148);
+var protocols = __webpack_require__(6991);
+var retry = __webpack_require__(8256);
+var schema = __webpack_require__(5037);
 var httpAuthSchemes = __webpack_require__(6431);
 var signatureV4MultiRegion = __webpack_require__(3027);
-var serde = __webpack_require__(4640);
-var nodeHttpHandler = __webpack_require__(9169);
+var serde = __webpack_require__(9655);
+var nodeHttpHandler = __webpack_require__(7908);
 var protocols$1 = __webpack_require__(6772);
 
 const q = "ref";
@@ -907,7 +907,7 @@ exports.getDefaultRoleAssumerWithWebIdentity = getDefaultRoleAssumerWithWebIdent
 
 
 
-var signatureV4 = __webpack_require__(2820);
+var signatureV4 = __webpack_require__(6649);
 
 const signatureV4CrtContainer = {
     CrtSignerV4: null,
