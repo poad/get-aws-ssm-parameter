@@ -21,11 +21,6 @@ updates:
       default-days: 7
       exclude:
         - 'pnpm'
-    ignore:
-      - dependency-name: '@types/node'
-        version-requirements:
-          - from-version: 25.0.0
-            to-version: 25.99.99
     groups:
       npm:
         patterns:
