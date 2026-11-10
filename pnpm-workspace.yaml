@@ -12,17 +12,28 @@ blockExoticSubdeps: true
 minimumReleaseAge: 10080 # 7 days in minutes
 
 minimumReleaseAgeExclude:
-  - pnpm@11.8.0
-  - undici@6.27.0
-  - brace-expansion@5.0.8
+  - pnpm@12.19.0
+  - '@rolldown/binding-android-arm64@1.1.7'
+  - '@rolldown/binding-darwin-arm64@1.1.7'
+  - '@rolldown/binding-darwin-x64@1.1.7'
+  - '@rolldown/binding-freebsd-x64@1.1.7'
+  - '@rolldown/binding-linux-arm-gnueabihf@1.1.7'
+  - '@rolldown/binding-linux-arm64-gnu@1.1.7'
+  - '@rolldown/binding-linux-arm64-musl@1.1.7'
+  - '@rolldown/binding-linux-ppc64-gnu@1.1.7'
+  - '@rolldown/binding-linux-s390x-gnu@1.1.7'
+  - '@rolldown/binding-linux-x64-gnu@1.1.7'
+  - '@rolldown/binding-linux-x64-musl@1.1.7'
+  - '@rolldown/binding-openharmony-arm64@1.1.7'
+  - '@rolldown/binding-wasm32-wasi@1.1.7'
+  - '@rolldown/binding-win32-arm64-msvc@1.1.7'
+  - '@rolldown/binding-win32-x64-msvc@1.1.7'
+  - '@rolldown/pluginutils@1.1.0'
+  - rolldown@1.1.7
 
 overrides:
-  brace-expansion@<=5.0.7: ^5.0.8
   chokidar: '>=5'
-  esbuild@>=0.17.0 <0.28.1: ^0.28.1
-  esbuild@>=0.27.3 <0.28.1: ^0.28.1
-  eslint-import-resolver-typescript: '^4.4.5'
+  minimatch@>=7.0.0 <11.0.1: ^11.0.1
   semver: '>=7'
-  undici@<6.27.0: ^6.27.0
 
 trustPolicy: no-downgrade
