@@ -8,8 +8,9 @@
   "scripts": {
     "build": "swc --delete-dir-on-start --extensions .ts src -d lib --strip-leading-paths",
     "clean": "rm -rf dist lib",
-    "lint": "eslint",
-    "lint-fix": "eslint --fix",
+    "lint": "oxlint",
+    "lint-fix": "oxlint --fix",
+    "format": "oxfmt --check",
     "package": "ncc build --license licenses.txt -m -q --target es2023",
     "test": "vitest run",
     "all": "pnpm build && pnpm package"
@@ -27,27 +28,19 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^3.0.1",
-    "@aws-sdk/client-ssm": "^3.1161.0",
+    "@aws-sdk/client-ssm": "^3.1162.0",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@stylistic/eslint-plugin": "^5.10.0",
     "@swc/cli": "^0.8.2",
-    "@swc/core": "^1.16.21",
+    "@swc/core": "^1.16.22",
     "@swc/helpers": "^0.5.24",
     "@types/node": "^26.6.6",
     "@vercel/ncc": "^0.45.0",
-    "eslint": "^10.14.0",
-    "eslint-import-resolver-typescript": "^4.4.5",
-    "eslint-plugin-import-x": "^4.17.1",
-    "eslint-plugin-promise": "^7.3.0",
-    "jiti": "^2.7.0",
-    "js-yaml": "^5.5.0",
-    "regenerator-runtime": "^0.14.1",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.72.1",
-    "vite": "^8.3.5",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.91.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6",
     "vitest": "^5.1.0"
   },
   "devEngines": {
@@ -58,7 +51,7 @@
     },
     "runtime": {
       "name": "node",
-      "version": "^26.13.0",
+      "version": "^26.13.1",
       "onFail": "download"
     }
   }

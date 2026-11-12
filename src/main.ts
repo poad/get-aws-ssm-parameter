@@ -13,6 +13,7 @@
  *   decryption: true
  */
 import createClient from './client.js';
+
 import * as core from '@actions/core';
 
 /**
@@ -43,7 +44,7 @@ const run = async (): Promise<void> => {
 
     // リージョンを取得（オプション）
     const region: string = core.getInput('aws-region');
-    core.debug(region ? `region is ${region} ` : 'Use the credential\'s region');
+    core.debug(region ? `region is ${region} ` : "Use the credential's region");
 
     // 復号化フラグを取得
     const decryption = core.getBooleanInput('decryption');
@@ -76,8 +77,10 @@ const run = async (): Promise<void> => {
   }
 };
 
-run().catch((error) => {
+try {
+  await run();
+} catch (error) {
   if (error instanceof Error) core.setFailed(error.message);
-});
+}
 
 export { run };

@@ -1,0 +1,17 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "categories": {
+    "correctness": "error"
+  },
+  "plugins": ["promise", "typescript"],
+  "ignorePatterns": ["**/*.d.ts", "__tests__/**.ts", "**/*.css", "out", "cdk.out", "dist"],
+  "rules": {
+    "promise/always-return": "error",
+    "promise/catch-or-return": "error",
+    "promise/no-new-statics": "error",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "promise/prefer-await-to-then": "error",
+    "promise/prefer-await-to-callbacks": "error"
+  }
+}
