@@ -12,7 +12,7 @@ blockExoticSubdeps: true
 minimumReleaseAge: 10080 # 7 days in minutes
 
 minimumReleaseAgeExclude:
-  - pnpm@12.19.0
+  - pnpm@12.20.0
   - '@rolldown/binding-android-arm64@1.1.7'
   - '@rolldown/binding-darwin-arm64@1.1.7'
   - '@rolldown/binding-darwin-x64@1.1.7'
