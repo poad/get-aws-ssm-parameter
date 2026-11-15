@@ -7,7 +7,7 @@
   "main": "lib/main.js",
   "scripts": {
     "build": "swc --delete-dir-on-start --extensions .ts src -d lib --strip-leading-paths",
-    "clean": "rm -rf dist lib",
+    "build:clean": "rm -rf dist lib",
     "lint": "oxlint",
     "lint-fix": "oxlint --fix",
     "format": "oxfmt --check",
@@ -28,7 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^3.0.1",
-    "@aws-sdk/client-ssm": "^3.1163.0",
+    "@aws-sdk/client-ssm": "^3.1164.0",
     "source-map-support": "^0.5.21"
   },
   "devDependencies": {
@@ -37,8 +37,8 @@
     "@swc/helpers": "^0.5.24",
     "@types/node": "^26.6.6",
     "@vercel/ncc": "^0.45.0",
-    "oxfmt": "^0.78.0",
-    "oxlint": "^1.91.0",
+    "oxfmt": "^0.77.0",
+    "oxlint": "^1.92.0",
     "typescript": "^7.0.2",
     "vite": "^8.3.6",
     "vitest": "^5.1.0"
@@ -46,7 +46,7 @@
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "12.20.0",
+      "version": "12.21.0",
       "onFail": "download"
     },
     "runtime": {

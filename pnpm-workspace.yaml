@@ -12,44 +12,7 @@ blockExoticSubdeps: true
 minimumReleaseAge: 10080 # 7 days in minutes
 
 minimumReleaseAgeExclude:
-  - pnpm@12.20.0
-  - '@rolldown/binding-android-arm64@1.1.7'
-  - '@rolldown/binding-darwin-arm64@1.1.7'
-  - '@rolldown/binding-darwin-x64@1.1.7'
-  - '@rolldown/binding-freebsd-x64@1.1.7'
-  - '@rolldown/binding-linux-arm-gnueabihf@1.1.7'
-  - '@rolldown/binding-linux-arm64-gnu@1.1.7'
-  - '@rolldown/binding-linux-arm64-musl@1.1.7'
-  - '@rolldown/binding-linux-ppc64-gnu@1.1.7'
-  - '@rolldown/binding-linux-s390x-gnu@1.1.7'
-  - '@rolldown/binding-linux-x64-gnu@1.1.7'
-  - '@rolldown/binding-linux-x64-musl@1.1.7'
-  - '@rolldown/binding-openharmony-arm64@1.1.7'
-  - '@rolldown/binding-wasm32-wasi@1.1.7'
-  - '@rolldown/binding-win32-arm64-msvc@1.1.7'
-  - '@rolldown/binding-win32-x64-msvc@1.1.7'
-  - '@rolldown/pluginutils@1.1.0'
-  - rolldown@1.1.7
-  - oxfmt@0.78.0
-  - '@oxfmt/binding-android-arm-eabi@0.78.0'
-  - '@oxfmt/binding-android-arm64@0.78.0'
-  - '@oxfmt/binding-darwin-arm64@0.78.0'
-  - '@oxfmt/binding-darwin-x64@0.78.0'
-  - '@oxfmt/binding-freebsd-x64@0.78.0'
-  - '@oxfmt/binding-linux-arm-gnueabihf@0.78.0'
-  - '@oxfmt/binding-linux-arm-musleabihf@0.78.0'
-  - '@oxfmt/binding-linux-arm64-gnu@0.78.0'
-  - '@oxfmt/binding-linux-arm64-musl@0.78.0'
-  - '@oxfmt/binding-linux-ppc64-gnu@0.78.0'
-  - '@oxfmt/binding-linux-riscv64-gnu@0.78.0'
-  - '@oxfmt/binding-linux-riscv64-musl@0.78.0'
-  - '@oxfmt/binding-linux-s390x-gnu@0.78.0'
-  - '@oxfmt/binding-linux-x64-gnu@0.78.0'
-  - '@oxfmt/binding-linux-x64-musl@0.78.0'
-  - '@oxfmt/binding-openharmony-arm64@0.78.0'
-  - '@oxfmt/binding-win32-arm64-msvc@0.78.0'
-  - '@oxfmt/binding-win32-ia32-msvc@0.78.0'
-  - '@oxfmt/binding-win32-x64-msvc@0.78.0'
+  - pnpm@12.21.0
 
 overrides:
   chokidar: '>=5'
