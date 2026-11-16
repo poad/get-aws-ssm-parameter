@@ -37,10 +37,10 @@
     "@swc/helpers": "^0.5.24",
     "@types/node": "^26.6.6",
     "@vercel/ncc": "^0.45.0",
-    "oxfmt": "^0.77.0",
-    "oxlint": "^1.92.0",
+    "oxfmt": "^0.78.0",
+    "oxlint": "^1.93.0",
     "typescript": "^7.0.2",
-    "vite": "^8.3.6",
+    "vite": "^8.3.7",
     "vitest": "^5.1.0"
   },
   "devEngines": {
