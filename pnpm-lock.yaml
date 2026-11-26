@@ -194,8 +194,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       '@aws-sdk/client-ssm':
-        specifier: ^3.1171.0
-        version: 3.1171.0
+        specifier: ^3.1172.0
+        version: 3.1172.0
       source-map-support:
         specifier: ^0.5.21
         version: 0.5.21
@@ -247,8 +247,8 @@ importers:
         specifier: ^26.6.6
         version: 26.6.6
       aws-cdk:
-        specifier: ^2.1148.1
-        version: 2.1148.1
+        specifier: ^2.1149.0
+        version: 2.1149.0
       tsx:
         specifier: ^4.23.15
         version: 4.23.15
@@ -283,8 +283,8 @@ packages:
       - jsonschema
       - semver
 
-  '@aws-sdk/client-ssm@3.1171.0':
-    resolution: {integrity: sha512-LfnOfMSzvp6XKq7RpMB+/36SbNgbOElrx7Z5VNLeve2Y2+nnsxPQahjUYuKp+SZwYydZenqgtrWE/IV2c4KsuQ==}
+  '@aws-sdk/client-ssm@3.1172.0':
+    resolution: {integrity: sha512-1wtJ+tJuTTmFm/4sXB0DpierSCphrOvLaGNpcDShvqD/Q+fy1+OuLeAXWkz0X6UrzfvRjr9Ig8D37QpebKHE8w==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/core@3.981.0':
@@ -1366,8 +1366,8 @@ packages:
       - yaml
       - mime-types
 
-  aws-cdk@2.1148.1:
-    resolution: {integrity: sha512-K3d02L17IwmAuiBWNuX1DzYhKUs9GrKYI7bZnGJfJ1bKz9ymXFxfudBOL3rUb8JAusDNSULiQU2fsJH7kyY2XA==}
+  aws-cdk@2.1149.0:
+    resolution: {integrity: sha512-Cj6iGj/lVCf8iSFNZeSjpTbh42yO1uINg9pSYcBJ3wfTwWRk0xQGu2YAi/iON+RWEWGJlJNT+TNewBx05Wd9Sw==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
 
@@ -2220,7 +2220,7 @@ snapshots:
 
   '@aws-cdk/cloud-assembly-schema@55.6.0': {}
 
-  '@aws-sdk/client-ssm@3.1171.0':
+  '@aws-sdk/client-ssm@3.1172.0':
     dependencies:
       '@aws-sdk/core': 3.981.0
       '@aws-sdk/credential-provider-node': 3.972.97
@@ -3045,7 +3045,7 @@ snapshots:
       '@aws-cdk/cloud-assembly-schema': 55.6.0
       constructs: 10.8.1
 
-  aws-cdk@2.1148.1: {}
+  aws-cdk@2.1149.0: {}
 
   b4a@1.9.0: {}
 
