@@ -194,8 +194,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       '@aws-sdk/client-ssm':
-        specifier: ^3.1172.0
-        version: 3.1172.0
+        specifier: ^3.1173.0
+        version: 3.1173.0
       source-map-support:
         specifier: ^0.5.21
         version: 0.5.21
@@ -283,8 +283,8 @@ packages:
       - jsonschema
       - semver
 
-  '@aws-sdk/client-ssm@3.1172.0':
-    resolution: {integrity: sha512-1wtJ+tJuTTmFm/4sXB0DpierSCphrOvLaGNpcDShvqD/Q+fy1+OuLeAXWkz0X6UrzfvRjr9Ig8D37QpebKHE8w==}
+  '@aws-sdk/client-ssm@3.1173.0':
+    resolution: {integrity: sha512-gZEvAy0R8+ti549fVUxlBM5JNGjv8njKVwQjj5nEcrVg1cCV3eJQnDq45RkIIyVmF3lRwnmBq7HqTXNGGXdZNA==}
     engines: {node: '>=20.0.0'}
 
   '@aws-sdk/core@3.981.0':
@@ -2220,7 +2220,7 @@ snapshots:
 
   '@aws-cdk/cloud-assembly-schema@55.6.0': {}
 
-  '@aws-sdk/client-ssm@3.1172.0':
+  '@aws-sdk/client-ssm@3.1173.0':
     dependencies:
       '@aws-sdk/core': 3.981.0
       '@aws-sdk/credential-provider-node': 3.972.97
